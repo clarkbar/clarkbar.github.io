@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T18:20:31+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.4</span><span class="period">.</span>
+</h6>
+<p>Let \(x_{1}=1\) and \(x_{n+1}=1+\sqrt{x_{n}}\) for \(n \geq 1\text{.}\) Prove that \((x_{n})\) converges and find its limit.</p>
+<p>As before we first give ourselves a sneak preview of what the limit \(L\) must satisfy if we assume it exists. By the rules for limits we must have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+L=\lim_{n\rightarrow\infty}x_{n} =\lim_{n\rightarrow\infty}x_{n+1}=\lim_{n\rightarrow\infty}(1+\sqrt{x_{n}})=1+\sqrt{L}\text{.}\tag{8.2.1}
+\end{equation}
+</div>
+<p>So \(L\) must satisfy \((L-1)^2 = L\text{,}\) i.e. \(L^2 -3L +1=0\text{,}\) i.e. \((L-\frac{3}{2})^2 = \frac{5}{4}\text{,}\) and this equation has solutions \(L = \frac{3 \pm \sqrt{5}}{2}\text{.}\) Both of these are positive but \(\frac{3 -\sqrt{5}}{2} \lt 1 \lt \frac{3 + \sqrt{5}}{2}\text{.}\) Now \(x_1 = 1\) and it's easily proved by induction that \(x_n \geq 1\) for all \(n\text{.}\) So <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">if</dfn> \((x_n)\) converges, it <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">must</dfn> converge to \(\frac{3 + \sqrt{5}}{2}\text{.}\)</p>
+<p>We hope that \((x_n)\)is increasing, so if we prove it is also bounded, the MCT will imply it converges, and by what we have said above, the limit must be \(\frac{3 + \sqrt{5}}{2}\text{.}\)</p>
+<p>Let us prove it is increasing by using induction. We want that \(x_{n+1}\geq x_{n}\) for all \(n\in\mathbb{N}\text{.}\) For the base case, we have \(x_{2} = 1+\sqrt{1} &gt; 1 = x_1\text{.}\) For the inductive step, assume for a certain \(n\in\mathbb{N}\) that \(x_{n+1}\geq x_{n}\text{.}\) Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_{n+2}-x_{n+1} =1+\sqrt{x_{n+1}}-(1+\sqrt{x_{n}}) =\sqrt{x_{n+1}}-\sqrt{x_{n}}
+\end{equation*}
+</div>
+<p class="continuation">and since \(x_{n+1}\geq x_{n}\) by the inductive hypothesis, we then also have \(\sqrt{x_{n+1}}\geq \sqrt{x_{n}}\) by Proposition 3.5. So the above displayed expression is non-negative, and thus \(x_{n+2}\geq x_{n+1}\text{.}\) This proves the inductive step and hence that \((x_n)\) is increasing.</p>
+<p>Now we need show it is bounded above. Since we expect it to converge to \(L = \frac{3 + \sqrt{5}}{2}\text{,}\) it makes sense to try to show that this \(L\) is an upper bound. Let us prove that \(x_{n}\leq L\) for all \(n\in\mathbb{N}\) by induction. We can verify the base case \(x_{1}=1\leq L\) is already true. For the inductive step, it turns out that the actual value of \(L\) won't be as useful as the identity \(L=1+\sqrt{L}\) we derived in equation <a class="xref" data-knowl="./knowl/e_L_sqrtL_1.html" title="Equation 8.2.1">(8.2.1)</a>. Assume we have proved \(x_{n}\leq L\) for some \(n\text{.}\) Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_{n+1}=1+\sqrt{x_{n}}\leq 1+\sqrt{L}=L\text{.}
+\end{equation*}
+</div>
+<p>This proves the inductive step, and hence proves that \(x_{n}\leq L\) for all \(n\text{.}\) Hence, \((x_n)\) is bounded above and is increasing, so the MCT implies it converges. As we showed above, it must converge to \(L = \frac{3 + \sqrt{5}}{2}\text{.}\)</p></article><span class="incontext"><a href="iterativelydefinedsequences.html#ex_1_sqrt_x_">in-context</a></span>
+</body>
+</html>

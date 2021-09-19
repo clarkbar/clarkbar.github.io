@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T18:20:22+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Iteratively defined sequences</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(	\newcommand{\andeq}{\text{\qquad and\qquad}}
+	\newcommand{\respectively}[1]{\text{\qquad(respectively,\quad}{#1}\text{\quad)}}
+	\newcommand{\resp}[1]{\text{\qquad(resp.,\quad}{#1}\text{\quad)}}
+
+	\newcommand{\comma}{\rlap{\ ,}}
+	\newcommand{\period}{\rlap{\ .}}
+	\newcommand{\semicolon}{\rlap{\ ;}}
+
+  
+
+  \newcommand{\mathup}[1]{\mathrm{#1}}
+  \newcommand{\mathbfup}[1]{\mathbf{#1}}
+  
+  \renewcommand{\AA}{\mathbfit{A}}
+  \newcommand{\BB}{\mathbfit{B}}
+  \newcommand{\CC}{\mathbfit{C}}
+  \newcommand{\DD}{\mathbfit{D}}
+  \newcommand{\EE}{\mathbfit{E}}
+  \newcommand{\FF}{\mathbfit{F}}
+  \newcommand{\GG}{\mathbfit{G}}
+  \newcommand{\HH}{\mathbfit{H}}
+  \newcommand{\II}{\mathbfit{I}}
+  \newcommand{\JJ}{\mathbfit{J}}
+  \newcommand{\KK}{\mathbfit{K}}
+  \newcommand{\LL}{\mathbfit{L}}
+  \newcommand{\MM}{\mathbfit{M}}
+  \newcommand{\NN}{\mathbfit{N}}
+  \newcommand{\OO}{\mathbfit{O}}
+  \newcommand{\PP}{\mathbfit{P}}
+  \newcommand{\QQ}{\mathbfit{Q}}
+  \newcommand{\RR}{\mathbfit{R}}
+  \renewcommand{\SS}{\mathbfit{S}}
+  \newcommand{\TT}{\mathbfit{T}}
+  \newcommand{\UU}{\mathbfit{U}}
+  \newcommand{\VV}{\mathbfit{V}}
+  \newcommand{\WW}{\mathbfit{W}}
+  \newcommand{\XX}{\mathbfit{X}}
+  \newcommand{\YY}{\mathbfit{Y}}
+  \newcommand{\ZZ}{\mathbfit{Z}}
+  
+  \let\Gammaup\Gamma
+  \let\Deltaup\Delta
+  \let\Thetaup\Theta
+  \let\Lambdaup\Lambda
+  \let\Xiup\Xi
+  \let\Piup\Pi
+  \let\Sigmaup\Sigma
+  \let\Upsilonup\Upsilon
+  \let\Phiup\Phi
+  \let\Psiup\Psi
+  \let\Omegaup\Omega
+  
+  \renewcommand{\Gamma}{\mathit{\Gammaup}}
+  \renewcommand{\Delta}{\mathit{\Deltaup}}
+  \renewcommand{\Theta}{\mathit{\Thetaup}}
+  \renewcommand{\Lambda}{\mathit{\Lambdaup}}
+  \renewcommand{\Xi}{\mathit{\Xiup}}
+  \renewcommand{\Pi}{\mathit{\Piup}}
+  \renewcommand{\Sigma}{\mathit{\Sigmaup}}
+  \renewcommand{\Upsilon}{\mathit{\Upsilonup}}
+  \renewcommand{\Phi}{\mathit{\Phiup}}
+  \renewcommand{\Psi}{\mathit{\Psiup}}
+  \renewcommand{\Omega}{\mathit{\Omegaup}}
+  
+	
+
+	\renewcommand{\epsilon}{\varepsilon}
+  \newcommand{\el}{\ell}
+	\renewcommand{\phi}{\varphi}
+
+	\newcommand{\mfa}{\mathfrak{a}}
+	\newcommand{\mfb}{\mathfrak{b}}
+	\newcommand{\mfc}{\mathfrak{c}}
+	\newcommand{\mfd}{\mathfrak{d}}
+	\newcommand{\mfe}{\mathfrak{e}}
+	\newcommand{\mff}{\mathfrak{f}}
+	\newcommand{\mfg}{\mathfrak{g}}
+	\newcommand{\mfh}{\mathfrak{h}}
+	\newcommand{\mfi}{\mathfrak{i}}
+	\newcommand{\mfj}{\mathfrak{j}}
+	\newcommand{\mfk}{\mathfrak{k}}
+	\newcommand{\mfl}{\mathfrak{l}}
+	\newcommand{\mfm}{\mathfrak{m}}
+	\newcommand{\mfn}{\mathfrak{n}}
+	\newcommand{\mfo}{\mathfrak{o}}
+	\newcommand{\mfp}{\mathfrak{p}}
+	\newcommand{\mfq}{\mathfrak{q}}
+	\newcommand{\mfr}{\mathfrak{r}}
+	\newcommand{\mfs}{\mathfrak{s}}
+	\newcommand{\mft}{\mathfrak{t}}
+	\newcommand{\mfu}{\mathfrak{u}}
+	\newcommand{\mfv}{\mathfrak{v}}
+	\newcommand{\mfw}{\mathfrak{w}}
+	\newcommand{\mfx}{\mathfrak{x}}
+	\newcommand{\mfy}{\mathfrak{y}}
+	\newcommand{\mfz}{\mathfrak{z}}
+
+	\newcommand{\ahat}{\hat{a}}
+	\newcommand{\bhat}{\hat{b}}
+	\newcommand{\chat}{\hat{c}}
+	\newcommand{\dhat}{\hat{d}}
+	\newcommand{\ehat}{\hat{e}}
+	\newcommand{\fhat}{\hat{f}}
+	\newcommand{\ghat}{\hat{g}}
+	\newcommand{\hhat}{\hat{h}}
+	\newcommand{\ihat}{\hat{\i}}
+	\newcommand{\jhat}{\hat{\j}}
+	\newcommand{\khat}{\hat{k}}
+	\newcommand{\elhat}{\hat{\el}}
+	\newcommand{\mhat}{\hat{m}}
+	\newcommand{\nhat}{\hat{n}}
+	\newcommand{\ohat}{\hat{o}}
+	\newcommand{\phat}{\hat{p}}
+	\newcommand{\qhat}{\hat{q}}
+	\newcommand{\rhat}{\hat{r}}
+	\newcommand{\shat}{\hat{s}}
+	\newcommand{\that}{\hat{t}}
+	\newcommand{\uhat}{\hat{u}}
+	\newcommand{\vhat}{\hat{v}}
+	\newcommand{\what}{\hat{w}}
+	\newcommand{\xhat}{\hat{x}}
+	\newcommand{\yhat}{\hat{y}}
+	\newcommand{\zhat}{\hat{z}}
+
+	\newcommand{\alphahat}{\hat{\alpha}}
+	\newcommand{\betahat}{\hat{\beta}}
+	\newcommand{\gammahat}{\hat{\gamma}}
+	\newcommand{\deltahat}{\hat{\delta}}
+	\newcommand{\epsilonhat}{\hat{\epsilon}}
+	\newcommand{\zetahat}{\hat{\zeta}}
+	\newcommand{\etahat}{\hat{\eta}}
+	\newcommand{\thetahat}{\hat{\theta}}
+	\newcommand{\iotahat}{\hat{\iota}}
+	\newcommand{\kappahat}{\hat{\kappa}}
+	\newcommand{\lambdahat}{\hat{\lambda}}
+	\newcommand{\muhat}{\hat{\mu}}
+	\newcommand{\nuhat}{\hat{\nu}}
+	\newcommand{\xihat}{\hat{\xi}}
+	\newcommand{\pihat}{\hat{\pi}}
+	\newcommand{\rhohat}{\hat{\rho}}
+	\newcommand{\sigmahat}{\hat{\sigma}}
+	\newcommand{\tauhat}{\hat{\tau}}
+	\newcommand{\upsilonhat}{\hat{\upsilon}}
+	\newcommand{\phihat}{\hat{\phi}}
+	\newcommand{\chihat}{\hat{\chi}}
+	\newcommand{\psihat}{\hat{\psi}}
+	\newcommand{\omegahat}{\hat{\omega}}
+
+	\newcommand{\Ahat}{\hat{A}}
+	\newcommand{\Bhat}{\hat{B}}
+	\newcommand{\Chat}{\hat{C}}
+	\newcommand{\Dhat}{\hat{D}}
+	\newcommand{\Ehat}{\hat{E}}
+	\newcommand{\Fhat}{\hat{F}}
+	\newcommand{\Ghat}{\hat{G}}
+	\newcommand{\Hhat}{\hat{H}}
+	\newcommand{\Ihat}{\hat{I}}
+	\newcommand{\Jhat}{\hat{J}}
+	\newcommand{\Khat}{\hat{K}}
+	\newcommand{\Lhat}{\hat{L}}
+	\newcommand{\Mhat}{\hat{M}}
+	\newcommand{\Nhat}{\hat{N}}
+	\newcommand{\Ohat}{\hat{O}}
+	\newcommand{\Phat}{\hat{P}}
+	\newcommand{\Qhat}{\hat{Q}}
+	\newcommand{\Rhat}{\hat{R}}
+	\newcommand{\Shat}{\hat{S}}
+	\newcommand{\That}{\hat{T}}
+	\newcommand{\Uhat}{\hat{U}}
+	\newcommand{\Vhat}{\hat{V}}
+	\newcommand{\What}{\hat{W}}
+	\newcommand{\Xhat}{\hat{X}}
+	\newcommand{\Yhat}{\hat{Y}}
+	\newcommand{\Zhat}{\hat{Z}}
+
+	\newcommand{\Gammahat}{\hat{\Gamma}}
+	\newcommand{\Deltahat}{\hat{\Delta}}
+	\newcommand{\Thetahat}{\hat{\Theta}}
+	\newcommand{\Lambdahat}{\hat{\Lambda}}
+	\newcommand{\Xihat}{\hat{\Xi}}
+	\newcommand{\Pihat}{\hat{\Pi}}
+	\newcommand{\Sigmahat}{\hat{\Sigma}}
+	\newcommand{\Upsilonhat}{\hat{\Upsilon}}
+	\newcommand{\Phihat}{\hat{\Phi}}
+	\newcommand{\Chihat}{\hat{\Chi}}
+	\newcommand{\Psihat}{\hat{\Psi}}
+	\newcommand{\Omegahat}{\hat{\Omega}}
+
+	\newcommand{\atilde}{\tilde{a}}
+	\newcommand{\btilde}{\tilde{b}}
+	\newcommand{\ctilde}{\tilde{c}}
+	\newcommand{\dtilde}{\tilde{d}}
+	\newcommand{\etilde}{\tilde{e}}
+	\newcommand{\ftilde}{\tilde{f}}
+	\newcommand{\gtilde}{\tilde{g}}
+	\newcommand{\htilde}{\tilde{h}}
+	\newcommand{\itilde}{\tilde{\i}}
+	\newcommand{\jtilde}{\tilde{\j}}
+	\newcommand{\ktilde}{\tilde{k}}
+	\newcommand{\eltilde}{\tilde{\el}}
+	\newcommand{\mtilde}{\tilde{m}}
+	\newcommand{\ntilde}{\tilde{n}}
+	\newcommand{\otilde}{\tilde{o}}
+	\newcommand{\ptilde}{\tilde{p}}
+	\newcommand{\qtilde}{\tilde{q}}
+	\newcommand{\rtilde}{\tilde{r}}
+	\newcommand{\stilde}{\tilde{s}}
+	\newcommand{\ttilde}{\tilde{t}}
+	\newcommand{\utilde}{\tilde{u}}
+	\newcommand{\vtilde}{\tilde{v}}
+	\newcommand{\wtilde}{\tilde{w}}
+	\newcommand{\xtilde}{\tilde{x}}
+	\newcommand{\ytilde}{\tilde{y}}
+	\newcommand{\ztilde}{\tilde{z}}
+
+	\newcommand{\alphatilde}{\tilde{\alpha}}
+	\newcommand{\betatilde}{\tilde{\beta}}
+	\newcommand{\gammatilde}{\tilde{\gamma}}
+	\newcommand{\deltatilde}{\tilde{\delta}}
+	\newcommand{\epsilontilde}{\tilde{\epsilon}}
+	\newcommand{\zetatilde}{\tilde{\zeta}}
+	\newcommand{\etatilde}{\tilde{\eta}}
+	\newcommand{\thetatilde}{\tilde{\theta}}
+	\newcommand{\iotatilde}{\tilde{\iota}}
+	\newcommand{\kappatilde}{\tilde{\kappa}}
+	\newcommand{\lambdatilde}{\tilde{\lambda}}
+	\newcommand{\mutilde}{\tilde{\mu}}
+	\newcommand{\nutilde}{\tilde{\nu}}
+	\newcommand{\xitilde}{\tilde{\xi}}
+	\newcommand{\pitilde}{\tilde{\pi}}
+	\newcommand{\rhotilde}{\tilde{\rho}}
+	\newcommand{\sigmatilde}{\tilde{\sigma}}
+	\newcommand{\tautilde}{\tilde{\tau}}
+	\newcommand{\upsilontilde}{\tilde{\upsilon}}
+	\newcommand{\phitilde}{\tilde{\phi}}
+	\newcommand{\chitilde}{\tilde{\chi}}
+	\newcommand{\psitilde}{\tilde{\psi}}
+	\newcommand{\omegatilde}{\tilde{\omega}}
+
+	\newcommand{\Atilde}{\widetilde{A}}
+	\newcommand{\Btilde}{\widetilde{B}}
+	\newcommand{\Ctilde}{\widetilde{C}}
+	\newcommand{\Dtilde}{\widetilde{D}}
+	\newcommand{\Etilde}{\widetilde{E}}
+	\newcommand{\Ftilde}{\widetilde{F}}
+	\newcommand{\Gtilde}{\widetilde{G}}
+	\newcommand{\Htilde}{\widetilde{H}}
+	\newcommand{\Itilde}{\widetilde{I}}
+	\newcommand{\Jtilde}{\widetilde{J}}
+	\newcommand{\Ktilde}{\widetilde{K}}
+	\newcommand{\Ltilde}{\widetilde{L}}
+	\newcommand{\Mtilde}{\widetilde{M}}
+	\newcommand{\Ntilde}{\widetilde{N}}
+	\newcommand{\Otilde}{\widetilde{O}}
+	\newcommand{\Ptilde}{\widetilde{P}}
+	\newcommand{\Qtilde}{\widetilde{Q}}
+	\newcommand{\Rtilde}{\widetilde{R}}
+	\newcommand{\Stilde}{\widetilde{S}}
+	\newcommand{\Ttilde}{\widetilde{T}}
+	\newcommand{\Utilde}{\widetilde{U}}
+	\newcommand{\Vtilde}{\widetilde{V}}
+	\newcommand{\Wtilde}{\widetilde{W}}
+	\newcommand{\Xtilde}{\widetilde{X}}
+	\newcommand{\Ytilde}{\widetilde{Y}}
+	\newcommand{\Ztilde}{\widetilde{Z}}
+
+	\newcommand{\Gammatilde}{\widetilde{\Gamma}}
+	\newcommand{\Deltatilde}{\widetilde{\Delta}}
+	\newcommand{\Thetatilde}{\widetilde{\Theta}}
+	\newcommand{\Lambdatilde}{\widetilde{\Lambda}}
+	\newcommand{\Xitilde}{\widetilde{\Xi}}
+	\newcommand{\Pitilde}{\widetilde{\Pi}}
+	\newcommand{\Sigmatilde}{\widetilde{\Sigma}}
+	\newcommand{\Upsilontilde}{\widetilde{\Upsilon}}
+	\newcommand{\Phitilde}{\widetilde{\Phi}}
+	\newcommand{\Chitilde}{\widetilde{\Chi}}
+	\newcommand{\Psitilde}{\widetilde{\Psi}}
+	\newcommand{\Omegatilde}{\widetilde{\Omega}}
+
+	
+
+	\DeclareMathOperator{\Aut}{Aut}
+	\DeclareMathOperator{\End}{End}
+	\DeclareMathOperator{\Equival}{Equiv}
+	\DeclareMathOperator{\Fun}{Fun}
+	\newcommand{\Funcross}{\Fun^{\cross}}
+	\newcommand{\Functs}{\Fun^{\cts}}
+	\newcommand{\Funpyk}{\Functs}
+	\newcommand{\Funlowerstar}{\Fun_{\ast}}
+	\newcommand{\Funupperstar}{\Fun^{\ast}}
+	\DeclareMathOperator{\Hom}{Hom}
+	\newcommand{\HOM}{\ensuremath{\textup{\textsc{Hom}}}}
+	\DeclareMathOperator{\Isom}{Isom}
+	\DeclareMathOperator{\Map}{Map}
+	\DeclareMathOperator{\Mor}{Mor}
+	\newcommand{\MOR}{\ensuremath{\textup{\textsc{Mor}}}}
+
+	\DeclareMathOperator{\GL}{GL}
+	\DeclareMathOperator{\PSL}{PSL}
+	\DeclareMathOperator{\PSO}{PSO}
+	\DeclareMathOperator{\PSp}{PSp}
+	\DeclareMathOperator{\PSU}{PSU}
+	\DeclareMathOperator{\SL}{SL}
+	\DeclareMathOperator{\SO}{SO}
+	\DeclareMathOperator{\Sp}{Sp}
+	\DeclareMathOperator{\SU}{SU}
+
+	\DeclareMathOperator{\cofib}{cofib}
+	\DeclareMathOperator{\coker}{coker}
+	\DeclareMathOperator*{\colim}{colim}
+	\DeclareMathOperator*{\hocolim}{hocolim}
+	\DeclareMathOperator*{\holim}{holim}
+	\DeclareMathOperator{\fib}{fib}
+
+	\DeclareMathOperator{\Nerve}{N}
+	\DeclareMathOperator{\trun}{\uptau}
+
+	\DeclareMathOperator{\cosk}{ck}
+	\DeclareMathOperator{\creff}{cr}
+	\DeclareMathOperator{\ev}{ev}
+	\DeclareMathOperator{\id}{id}
+	\DeclareMathOperator{\pr}{pr}
+	\DeclareMathOperator{\rk}{rk}
+	\DeclareMathOperator{\sd}{sd}
+	\DeclareMathOperator{\sk}{sk}
+	\DeclareMathOperator{\specpos}{sp}
+	\newcommand{\sdop}{\sd^{\op}}
+
+	
+
+	\newcommand{\paren}[1]{\left(#1\right)}
+	\newcommand{\angs}[1]{\langle #1 \rangle}
+  \newcommand{\quine}[1]{\ulcorner #1 \urcorner}
+	\newcommand{\ultimes}{\,\underline{\times}\,}
+	\newcommand{\horn}[2]{\upLambda_{#1}^{#2}}
+
+	
+
+	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
+
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
+\def\LUB{{ LUB}}
+\renewcommand{\sectionmark}[1]{{}}
+\def\GLB{{ GLB}}
+\renewcommand{\headrulewidth}{0.5pt}
+\def\ve{\varepsilon}
+\renewcommand{\footrulewidth}{0pt}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\headrulewidth}{0pt}
+\def\R{\mathbb{R}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
+\def\LUB{{ LUB}}
+\newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
+\def\ve{\epsilon}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\LUB{{ LUB}}
+\def\easylemma{the Linear Combination Lemma}
+\def\lcm{ lcm}
+\def\cl{{ cl}}
+\newcommand{\thepartimage}{}
+\newcommand{\thechapterimage}{}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\N{{\mathbb{N}}}
+\def\Q{{\mathbb{Q}}}
+\def\C{{\mathbb{C}}}
+\def\hcf{{ hcf}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">An Invitation to Pure Mathematics:</span> <span class="subtitle">Accelerated Proofs and Problem Solving 2021</span></a></h1>
+<p class="byline">Instructor: Clark Barwick</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="monotoneconvergencesection.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="monotoneconvergence.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="monotoneexercises.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="monotoneconvergencesection.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="monotoneconvergence.html" title="Up">Up</a><a class="next-button button toolbar-item" href="monotoneexercises.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic"><span class="codenumber">1</span> <span class="title">Foundations of mathematics</span></a><ul>
+<li><a href="sets.html" data-scroll="sets">A first look at the theory of sets</a></li>
+<li><a href="logicalstatements.html" data-scroll="logicalstatements">Logical Statements</a></li>
+<li><a href="conjunction.html" data-scroll="conjunction">Conjunction</a></li>
+<li><a href="intersection.html" data-scroll="intersection">Intersection</a></li>
+<li><a href="disjunction.html" data-scroll="disjunction">Disjunction</a></li>
+<li><a href="union.html" data-scroll="union">Union</a></li>
+<li><a href="negation.html" data-scroll="negation">Negation</a></li>
+<li><a href="complements.html" data-scroll="complements">Complements</a></li>
+<li><a href="conditionals.html" data-scroll="conditionals">Conditionals</a></li>
+<li><a href="logicalequivalence.html" data-scroll="logicalequivalence">Logical equivalence</a></li>
+<li><a href="proofbycontradiction.html" data-scroll="proofbycontradiction">Proof by Contradiction</a></li>
+<li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
+<li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
+<li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and relations</span></a><ul>
+<li><a href="cartesianproducts.html" data-scroll="cartesianproducts">Cartesian products</a></li>
+<li><a href="maps.html" data-scroll="maps">Maps</a></li>
+<li><a href="injectivesurjective.html" data-scroll="injectivesurjective">Injective and surjective</a></li>
+<li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
+<li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
+<li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
+<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a></li>
+<li class="link"><a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a></li>
+<li class="link">
+<a href="induction.html" data-scroll="induction"><span class="codenumber">5</span> <span class="title">Induction</span></a><ul>
+<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on \(\Sigma\) notation</a></li>
+<li><a href="inductionsection.html" data-scroll="inductionsection">Induction</a></li>
+<li><a href="stronginduction.html" data-scroll="stronginduction">Strong Mathematical Induction</a></li>
+<li><a href="inequalitiesredux.html" data-scroll="inequalitiesredux">Inequalities revisited</a></li>
+<li><a href="inductionexercises.html" data-scroll="inductionexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="upperbounds.html" data-scroll="upperbounds"><span class="codenumber">6</span> <span class="title">Upper Bounds and Least Upper Bounds</span></a><ul>
+<li><a href="upperlowerbounds.html" data-scroll="upperlowerbounds">Upper and Lower Bounds</a></li>
+<li><a href="sups.html" data-scroll="sups">Least Upper Bounds</a></li>
+<li><a href="upperboundsexercises.html" data-scroll="upperboundsexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">7</span> <span class="title">Sequences and limits</span></a></li>
+<li class="link">
+<a href="monotoneconvergence.html" data-scroll="monotoneconvergence"><span class="codenumber">8</span> <span class="title">The Monotone Convergence Theorem</span></a><ul>
+<li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection">The Monotone Convergence Theorem</a></li>
+<li><a href="iterativelydefinedsequences.html" data-scroll="iterativelydefinedsequences" class="active">Iteratively defined sequences</a></li>
+<li><a href="monotoneexercises.html" data-scroll="monotoneexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">9</span> <span class="title">Decimals and Series</span></a></li>
+<li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">10</span> <span class="title">Complex Numbers</span></a></li>
+<li class="link">
+<a href="polynomials.html" data-scroll="polynomials"><span class="codenumber">11</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="introtopolynomials.html" data-scroll="introtopolynomials">Introduction</a></li>
+<li><a href="factoringpolynomials.html" data-scroll="factoringpolynomials">Factoring Polynomials</a></li>
+<li><a href="realpolynomials.html" data-scroll="realpolynomials">Real Polynomials</a></li>
+<li><a href="rootcoefficienttheorem.html" data-scroll="rootcoefficienttheorem">Root-Coefficient Theorem</a></li>
+<li><a href="polynomialsexercises.html" data-scroll="polynomialsexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="integers"><span class="codenumber">12</span> <span class="title">Multiplicative theory of integers</span></a><ul>
+<li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
+<li><a href="euclideanalgo.html" data-scroll="euclideanalgo">The GCD and the Euclidean Algorithm</a></li>
+<li><a href="bezoutcorollaries.html" data-scroll="bezoutcorollaries">Corollaries of Bezout's Identity and the Linear Combination Lemma</a></li>
+<li><a href="fundamentaltheoremofarithmetic.html" data-scroll="fundamentaltheoremofarithmetic">The Fundamental Theorem of Arithmetic (FTA)</a></li>
+<li><a href="findingdivisors.html" data-scroll="findingdivisors">Finding divisors via FTA</a></li>
+<li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
+<li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
+<li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
+<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="modular.html" data-scroll="modular"><span class="codenumber">13</span> <span class="title">Modular Arithmetic</span></a><ul>
+<li><a href="arithmeticmodm.html" data-scroll="arithmeticmodm">Arithmetic modulo \(m\)</a></li>
+<li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
+<li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
+<li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
+<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="infinitecardinals.html" data-scroll="infinitecardinals"><span class="codenumber">14</span> <span class="title">Applications: What's bigger than \(\infty\text{?}\)*</span></a></li>
+<li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">15</span> <span class="title">Counting</span></a></li>
+<li class="link"><a href="permutations.html" data-scroll="permutations"><span class="codenumber">16</span> <span class="title">Permutations</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="iterativelydefinedsequences"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.2</span> <span class="title">Iteratively defined sequences</span>
+</h2>
+<p id="p-637">Iteratively or recursively defined sequences are those where the value of \(x_{n+1}\) is specified in terms of previous values of the sequence \(x_1, \dots, x_n\text{,}\) (most usually just in terms of \(x_n\)).</p>
+<article class="example example-like" id="example-58"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-58"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-58"><article class="example example-like"><p id="p-638">In high school you may have met recursively defined sequences of the form \(x_1 = c\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+x_{n+1} = a x_n +b \; \mbox{ for }  \; n \geq 1
+\end{equation*}
+</div>
+<p class="continuation">where \(a, b, c \in \mathbb{R}\text{.}\) Show that when \(|a| \lt  1\text{,}\) \((x_n)\) converges and find its limit. Show that when \(|a|&gt;1\text{,}\) \((x_n)\) diverges. What happens when \(a = \pm 1\text{?}\)</p>
+<p id="p-639"><em class="emphasis">Solution:</em> Let's first give ourselves a sneak preview of what \(L\) might be in terms of \(a,b\) and \(c\text{.}\) By the rules for limits, <dfn class="terminology">if</dfn> the sequence \((x_n)\) converges to \(L\text{,}\) then \(L\) <dfn class="terminology">must</dfn> satisfy \(L = aL + b\text{,}\) or equivalently \(L = \frac{b}{1-a}\text{.}\) Since we cannot divide by \(0\text{,}\) this already shows us that the case \(a=1\) is special.</p>
+<p id="p-640">Indeed, if \(a = 1\text{,}\) then \(L = aL + b\) becomes \(L = L + b\text{,}\) and unless \(b=0\) this cannot hold. So when \(a =1\text{,}\) the sequence diverges in the case that \(b \neq 0\text{,}\) and is the constant sequence \(x_n = c\) in the case that \(b = 0\text{.}\)</p>
+<p id="p-641">Now suppose \(a \neq 1\text{.}\) Since we are guessing the limit to be \(\frac{b}{1-a}\text{,}\) it makes sense to set \(y_n = x_n - \frac{b}{1-a}\) and to re-write the basic equation \(x_{n+1} = a x_n +b\) in the equivalent form \(y_{n+1} = a y_n\text{.}\) This in turn the same as \(y_n = (c - \frac{b}{1-a})a^{n-1}\text{,}\) as is easily established by induction. If \(|a|&gt;1\text{,}\) \(|y_n|\) diverges to \(+\infty\) and so \((x_n)\) also diverges; if \(|a| \lt 1\text{,}\) then \(y_n \to 0\) as we have already seen in a previous example, and this is the same as \(x_n \to \frac{b}{1-a}\text{.}\) The remaining case \(a= -1\) we leave as an exercise.</p></article></div>
+<p id="p-642">The MCT is especially useful for proving convergence of some (but not all) iteratively or recursively defined sequences.</p>
+<article class="example example-like" id="example-59"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-59"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-59"><article class="example example-like"><p id="p-643">In 60AD, the Greek mathematician Hero of Alexandria wanted to approximate \(\sqrt{2}\) with rational numbers. He came up with the following recurrence relation, now called <dfn class="terminology">Heron's Method</dfn>, for computing \(\sqrt{2}\text{.}\) Let \(x_{1}=2\) and for each \(n\in\mathbb{N}\text{,}\) let</p>
+<div class="displaymath">
+\begin{equation*}
+x_{n+1}=\frac{1}{2}\left(x_{n}+\frac{2}{x_{n}}\right)\text{.}
+\end{equation*}
+</div>
+<p id="p-644">Let us imagine that we knew that \((x_n)\) converged to something, \(L\text{.}\) What must \(L\) satisfy? Well, by the rules for limits, since \(x_{n+1} \to L\) too, and assuming that \(L \neq 0\text{,}\) it must satisfy</p>
+<div class="displaymath">
+\begin{equation*}
+L=\frac{1}{2}\left(L+\frac{2}{L}\right)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">or \(2L =L + \frac{2}{L}\text{,}\) or \(L = \frac{L}{2}\text{,}\) which is the same as \(L^2 = 2\text{,}\) or \(L = \pm\sqrt{2}\text{.}\) We want to narrow this down so that the only possibility is \(L = + \sqrt{2}\text{,}\) and also so that we do indeed know that \((x_n)\) converges. Given that \(x_1 = 2 &gt; \sqrt{2}\text{,}\) it makes sense to try to show that \((x_n)\) is decreasing, and is bounded below by \(\sqrt{2}\text{,}\) which is the same thing as \(x_n &gt; 0\) and \(x_n^2 \geq 2\) for all \(n\text{.}\) Once we have this, the MCT will imply that \((x_n)\) does indeed converge to some number \(L\text{,}\) which must then satisfy \(L \geq 0\) and \(L^2 = 2\text{,}\) thus indeed \(L = + \sqrt{2}\text{.}\)</p>
+<p id="p-645">Let's do a bit of experimentation to see whether \((x_n)\) is decreasing or not by computing a few values (which you can do on a calculator or writing a simple program):</p>
+<div class="displaymath">
+\begin{equation*}
+x_{1}=2,\;\; x_{2} = \frac{1}{2}\left(2+\frac{2}{2}\right) = \frac{3}{2}, \;\; x_{3}=\frac{1}{2}\left(\frac{3}{2}+\frac{2}{3/2}\right) = \frac{17}{12}, \;\; x_{4} = \frac{237}{408}\text{.}
+\end{equation*}
+</div>
+<p id="p-646">Since \(2 &gt; 3/2 &gt; 17/12 &gt; 237/408\text{,}\) we see that</p>
+<div class="displaymath">
+\begin{equation*}
+x_1 &gt; x_2 &gt; x_3 &gt; x_4\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and this suggests that the sequence might indeed be decreasing. Let's try to prove this. This is the same thing as showing \(x_{n}-x_{n+1}\geq 0\text{,}\) so let's look at this difference:</p>
+<div class="displaymath">
+\begin{equation*}
+x_{n}-x_{n+1}=x_{n}-\frac{1}{2}\left(x_{n}+\frac{2}{x_{n}}\right) =\frac{x_{n}^{2}-2}{2x_{n}}\text{.}
+\end{equation*}
+</div>
+<p id="p-647">Thus, we just need to show that this last term is non-negative. The \(x_{n}\) are always positive, this is established by induction: \(x_1&gt;0\text{,}\) and if \(x_n&gt;0\text{,}\) then we see that \(x_{n+1}&gt;0\) also straight from the definition. Hence, we just need to show that \(x_{n}^{2}\geq 2\) for all \(n\geq 1\text{.}\) This we also prove by induction! If \(n=1\) then \(x_{1}=2\text{,}\) and for \(n&gt;1\text{,}\) it follows from the fact that for \(x \neq 0\)</p>
+<div class="displaymath">
+\begin{equation*}
+\left(\frac{1}{2}\left(x+\frac{2}{x}\right)\right)^2 \geq 2\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which, finally, is something that we can just check directly:</p>
+<div class="displaymath">
+\begin{equation*}
+\left(\frac{1}{2}\left(x+\frac{2}{x}\right)\right)^2 \geq 2 \iff \left(x+\frac{2}{x}\right)^2 \geq 8 \iff x^2 + \frac{4}{x^2} + 4 \geq 8 \iff \frac{(x^2 - 2)^2}{x^2} \geq 0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and the last statement is clearly true. Hence, we conclude that the sequence \((x_n)\) is decreasing.</p>
+<p id="p-648">Notice that in proving that \((x_n)\) is decreasing we have already established that \(x_n &gt; 0\) and \(x_n^2 \geq 2\) for all \(n\text{!}\) Thus we immediately conclude from the earlier remarks that \((x_n)\) converges to \(L= +\sqrt{2}\text{!}\)</p></article></div>
+<article class="problem example-like" id="problem-1"><a data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-1"><h6 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-1"><article class="problem example-like"><p id="p-649">How might you modify Heron's formula to construct a sequence of rational numbers converging to \(\sqrt{7}\text{?}\) or to \(\sqrt{51}\text{?}\)</p></article></div>
+<p id="p-650">Note from the above argument that induction is a really helpful tool to have at our disposal when we are dealing with recursively defined sequences. We see this again in the next example.</p>
+<p id="p-651">The previous example had the feature that the relevant boundedness of the sequence was immediate: the terms were all positive (hence bounded below by zero). Let's do an example where the relevant boundedness is not so immediate:</p>
+<article class="example example-like" id="ex_1_sqrt_x_"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex_1_sqrt_x_"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex_1_sqrt_x_"><article class="example example-like"><p id="p-652">Let \(x_{1}=1\) and \(x_{n+1}=1+\sqrt{x_{n}}\) for \(n \geq 1\text{.}\) Prove that \((x_{n})\) converges and find its limit.</p>
+<p id="p-653">As before we first give ourselves a sneak preview of what the limit \(L\) must satisfy if we assume it exists. By the rules for limits we must have</p>
+<div class="displaymath">
+\begin{equation}
+L=\lim_{n\rightarrow\infty}x_{n} =\lim_{n\rightarrow\infty}x_{n+1}=\lim_{n\rightarrow\infty}(1+\sqrt{x_{n}})=1+\sqrt{L}\text{.}\label{e_L_sqrtL_1}\tag{8.2.1}
+\end{equation}
+</div>
+<p id="p-654">So \(L\) must satisfy \((L-1)^2 = L\text{,}\) i.e. \(L^2 -3L +1=0\text{,}\) i.e. \((L-\frac{3}{2})^2 = \frac{5}{4}\text{,}\) and this equation has solutions \(L = \frac{3 \pm \sqrt{5}}{2}\text{.}\) Both of these are positive but \(\frac{3 -\sqrt{5}}{2} \lt 1 \lt \frac{3 + \sqrt{5}}{2}\text{.}\) Now \(x_1 = 1\) and it's easily proved by induction that \(x_n \geq 1\) for all \(n\text{.}\) So <dfn class="terminology">if</dfn> \((x_n)\) converges, it <dfn class="terminology">must</dfn> converge to \(\frac{3 + \sqrt{5}}{2}\text{.}\)</p>
+<p id="p-655">We hope that \((x_n)\)is increasing, so if we prove it is also bounded, the MCT will imply it converges, and by what we have said above, the limit must be \(\frac{3 + \sqrt{5}}{2}\text{.}\)</p>
+<p id="p-656">Let us prove it is increasing by using induction. We want that \(x_{n+1}\geq x_{n}\) for all \(n\in\mathbb{N}\text{.}\) For the base case, we have \(x_{2} = 1+\sqrt{1} &gt; 1 = x_1\text{.}\) For the inductive step, assume for a certain \(n\in\mathbb{N}\) that \(x_{n+1}\geq x_{n}\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+x_{n+2}-x_{n+1} =1+\sqrt{x_{n+1}}-(1+\sqrt{x_{n}}) =\sqrt{x_{n+1}}-\sqrt{x_{n}}
+\end{equation*}
+</div>
+<p class="continuation">and since \(x_{n+1}\geq x_{n}\) by the inductive hypothesis, we then also have \(\sqrt{x_{n+1}}\geq \sqrt{x_{n}}\) by Proposition 3.5. So the above displayed expression is non-negative, and thus \(x_{n+2}\geq x_{n+1}\text{.}\) This proves the inductive step and hence that \((x_n)\) is increasing.</p>
+<p id="p-657">Now we need show it is bounded above. Since we expect it to converge to \(L = \frac{3 + \sqrt{5}}{2}\text{,}\) it makes sense to try to show that this \(L\) is an upper bound. Let us prove that \(x_{n}\leq L\) for all \(n\in\mathbb{N}\) by induction. We can verify the base case \(x_{1}=1\leq L\) is already true. For the inductive step, it turns out that the actual value of \(L\) won't be as useful as the identity \(L=1+\sqrt{L}\) we derived in equation <a class="xref" data-knowl="./knowl/e_L_sqrtL_1.html" title="Equation 8.2.1">(8.2.1)</a>. Assume we have proved \(x_{n}\leq L\) for some \(n\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+x_{n+1}=1+\sqrt{x_{n}}\leq 1+\sqrt{L}=L\text{.}
+\end{equation*}
+</div>
+<p id="p-658">This proves the inductive step, and hence proves that \(x_{n}\leq L\) for all \(n\text{.}\) Hence, \((x_n)\) is bounded above and is increasing, so the MCT implies it converges. As we showed above, it must converge to \(L = \frac{3 + \sqrt{5}}{2}\text{.}\)</p></article></div></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T18:23:33+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Maps</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(	\newcommand{\andeq}{\text{\qquad and\qquad}}
+	\newcommand{\respectively}[1]{\text{\qquad(respectively,\quad}{#1}\text{\quad)}}
+	\newcommand{\resp}[1]{\text{\qquad(resp.,\quad}{#1}\text{\quad)}}
+
+	\newcommand{\comma}{\rlap{\ ,}}
+	\newcommand{\period}{\rlap{\ .}}
+	\newcommand{\semicolon}{\rlap{\ ;}}
+
+  
+
+  \newcommand{\mathup}[1]{\mathrm{#1}}
+  \newcommand{\mathbfup}[1]{\mathbf{#1}}
+  
+  \renewcommand{\AA}{\mathbfit{A}}
+  \newcommand{\BB}{\mathbfit{B}}
+  \newcommand{\CC}{\mathbfit{C}}
+  \newcommand{\DD}{\mathbfit{D}}
+  \newcommand{\EE}{\mathbfit{E}}
+  \newcommand{\FF}{\mathbfit{F}}
+  \newcommand{\GG}{\mathbfit{G}}
+  \newcommand{\HH}{\mathbfit{H}}
+  \newcommand{\II}{\mathbfit{I}}
+  \newcommand{\JJ}{\mathbfit{J}}
+  \newcommand{\KK}{\mathbfit{K}}
+  \newcommand{\LL}{\mathbfit{L}}
+  \newcommand{\MM}{\mathbfit{M}}
+  \newcommand{\NN}{\mathbfit{N}}
+  \newcommand{\OO}{\mathbfit{O}}
+  \newcommand{\PP}{\mathbfit{P}}
+  \newcommand{\QQ}{\mathbfit{Q}}
+  \newcommand{\RR}{\mathbfit{R}}
+  \renewcommand{\SS}{\mathbfit{S}}
+  \newcommand{\TT}{\mathbfit{T}}
+  \newcommand{\UU}{\mathbfit{U}}
+  \newcommand{\VV}{\mathbfit{V}}
+  \newcommand{\WW}{\mathbfit{W}}
+  \newcommand{\XX}{\mathbfit{X}}
+  \newcommand{\YY}{\mathbfit{Y}}
+  \newcommand{\ZZ}{\mathbfit{Z}}
+  
+  \let\Gammaup\Gamma
+  \let\Deltaup\Delta
+  \let\Thetaup\Theta
+  \let\Lambdaup\Lambda
+  \let\Xiup\Xi
+  \let\Piup\Pi
+  \let\Sigmaup\Sigma
+  \let\Upsilonup\Upsilon
+  \let\Phiup\Phi
+  \let\Psiup\Psi
+  \let\Omegaup\Omega
+  
+  \renewcommand{\Gamma}{\mathit{\Gammaup}}
+  \renewcommand{\Delta}{\mathit{\Deltaup}}
+  \renewcommand{\Theta}{\mathit{\Thetaup}}
+  \renewcommand{\Lambda}{\mathit{\Lambdaup}}
+  \renewcommand{\Xi}{\mathit{\Xiup}}
+  \renewcommand{\Pi}{\mathit{\Piup}}
+  \renewcommand{\Sigma}{\mathit{\Sigmaup}}
+  \renewcommand{\Upsilon}{\mathit{\Upsilonup}}
+  \renewcommand{\Phi}{\mathit{\Phiup}}
+  \renewcommand{\Psi}{\mathit{\Psiup}}
+  \renewcommand{\Omega}{\mathit{\Omegaup}}
+  
+	
+
+	\renewcommand{\epsilon}{\varepsilon}
+  \newcommand{\el}{\ell}
+	\renewcommand{\phi}{\varphi}
+
+	\newcommand{\mfa}{\mathfrak{a}}
+	\newcommand{\mfb}{\mathfrak{b}}
+	\newcommand{\mfc}{\mathfrak{c}}
+	\newcommand{\mfd}{\mathfrak{d}}
+	\newcommand{\mfe}{\mathfrak{e}}
+	\newcommand{\mff}{\mathfrak{f}}
+	\newcommand{\mfg}{\mathfrak{g}}
+	\newcommand{\mfh}{\mathfrak{h}}
+	\newcommand{\mfi}{\mathfrak{i}}
+	\newcommand{\mfj}{\mathfrak{j}}
+	\newcommand{\mfk}{\mathfrak{k}}
+	\newcommand{\mfl}{\mathfrak{l}}
+	\newcommand{\mfm}{\mathfrak{m}}
+	\newcommand{\mfn}{\mathfrak{n}}
+	\newcommand{\mfo}{\mathfrak{o}}
+	\newcommand{\mfp}{\mathfrak{p}}
+	\newcommand{\mfq}{\mathfrak{q}}
+	\newcommand{\mfr}{\mathfrak{r}}
+	\newcommand{\mfs}{\mathfrak{s}}
+	\newcommand{\mft}{\mathfrak{t}}
+	\newcommand{\mfu}{\mathfrak{u}}
+	\newcommand{\mfv}{\mathfrak{v}}
+	\newcommand{\mfw}{\mathfrak{w}}
+	\newcommand{\mfx}{\mathfrak{x}}
+	\newcommand{\mfy}{\mathfrak{y}}
+	\newcommand{\mfz}{\mathfrak{z}}
+
+	\newcommand{\ahat}{\hat{a}}
+	\newcommand{\bhat}{\hat{b}}
+	\newcommand{\chat}{\hat{c}}
+	\newcommand{\dhat}{\hat{d}}
+	\newcommand{\ehat}{\hat{e}}
+	\newcommand{\fhat}{\hat{f}}
+	\newcommand{\ghat}{\hat{g}}
+	\newcommand{\hhat}{\hat{h}}
+	\newcommand{\ihat}{\hat{\i}}
+	\newcommand{\jhat}{\hat{\j}}
+	\newcommand{\khat}{\hat{k}}
+	\newcommand{\elhat}{\hat{\el}}
+	\newcommand{\mhat}{\hat{m}}
+	\newcommand{\nhat}{\hat{n}}
+	\newcommand{\ohat}{\hat{o}}
+	\newcommand{\phat}{\hat{p}}
+	\newcommand{\qhat}{\hat{q}}
+	\newcommand{\rhat}{\hat{r}}
+	\newcommand{\shat}{\hat{s}}
+	\newcommand{\that}{\hat{t}}
+	\newcommand{\uhat}{\hat{u}}
+	\newcommand{\vhat}{\hat{v}}
+	\newcommand{\what}{\hat{w}}
+	\newcommand{\xhat}{\hat{x}}
+	\newcommand{\yhat}{\hat{y}}
+	\newcommand{\zhat}{\hat{z}}
+
+	\newcommand{\alphahat}{\hat{\alpha}}
+	\newcommand{\betahat}{\hat{\beta}}
+	\newcommand{\gammahat}{\hat{\gamma}}
+	\newcommand{\deltahat}{\hat{\delta}}
+	\newcommand{\epsilonhat}{\hat{\epsilon}}
+	\newcommand{\zetahat}{\hat{\zeta}}
+	\newcommand{\etahat}{\hat{\eta}}
+	\newcommand{\thetahat}{\hat{\theta}}
+	\newcommand{\iotahat}{\hat{\iota}}
+	\newcommand{\kappahat}{\hat{\kappa}}
+	\newcommand{\lambdahat}{\hat{\lambda}}
+	\newcommand{\muhat}{\hat{\mu}}
+	\newcommand{\nuhat}{\hat{\nu}}
+	\newcommand{\xihat}{\hat{\xi}}
+	\newcommand{\pihat}{\hat{\pi}}
+	\newcommand{\rhohat}{\hat{\rho}}
+	\newcommand{\sigmahat}{\hat{\sigma}}
+	\newcommand{\tauhat}{\hat{\tau}}
+	\newcommand{\upsilonhat}{\hat{\upsilon}}
+	\newcommand{\phihat}{\hat{\phi}}
+	\newcommand{\chihat}{\hat{\chi}}
+	\newcommand{\psihat}{\hat{\psi}}
+	\newcommand{\omegahat}{\hat{\omega}}
+
+	\newcommand{\Ahat}{\hat{A}}
+	\newcommand{\Bhat}{\hat{B}}
+	\newcommand{\Chat}{\hat{C}}
+	\newcommand{\Dhat}{\hat{D}}
+	\newcommand{\Ehat}{\hat{E}}
+	\newcommand{\Fhat}{\hat{F}}
+	\newcommand{\Ghat}{\hat{G}}
+	\newcommand{\Hhat}{\hat{H}}
+	\newcommand{\Ihat}{\hat{I}}
+	\newcommand{\Jhat}{\hat{J}}
+	\newcommand{\Khat}{\hat{K}}
+	\newcommand{\Lhat}{\hat{L}}
+	\newcommand{\Mhat}{\hat{M}}
+	\newcommand{\Nhat}{\hat{N}}
+	\newcommand{\Ohat}{\hat{O}}
+	\newcommand{\Phat}{\hat{P}}
+	\newcommand{\Qhat}{\hat{Q}}
+	\newcommand{\Rhat}{\hat{R}}
+	\newcommand{\Shat}{\hat{S}}
+	\newcommand{\That}{\hat{T}}
+	\newcommand{\Uhat}{\hat{U}}
+	\newcommand{\Vhat}{\hat{V}}
+	\newcommand{\What}{\hat{W}}
+	\newcommand{\Xhat}{\hat{X}}
+	\newcommand{\Yhat}{\hat{Y}}
+	\newcommand{\Zhat}{\hat{Z}}
+
+	\newcommand{\Gammahat}{\hat{\Gamma}}
+	\newcommand{\Deltahat}{\hat{\Delta}}
+	\newcommand{\Thetahat}{\hat{\Theta}}
+	\newcommand{\Lambdahat}{\hat{\Lambda}}
+	\newcommand{\Xihat}{\hat{\Xi}}
+	\newcommand{\Pihat}{\hat{\Pi}}
+	\newcommand{\Sigmahat}{\hat{\Sigma}}
+	\newcommand{\Upsilonhat}{\hat{\Upsilon}}
+	\newcommand{\Phihat}{\hat{\Phi}}
+	\newcommand{\Chihat}{\hat{\Chi}}
+	\newcommand{\Psihat}{\hat{\Psi}}
+	\newcommand{\Omegahat}{\hat{\Omega}}
+
+	\newcommand{\atilde}{\tilde{a}}
+	\newcommand{\btilde}{\tilde{b}}
+	\newcommand{\ctilde}{\tilde{c}}
+	\newcommand{\dtilde}{\tilde{d}}
+	\newcommand{\etilde}{\tilde{e}}
+	\newcommand{\ftilde}{\tilde{f}}
+	\newcommand{\gtilde}{\tilde{g}}
+	\newcommand{\htilde}{\tilde{h}}
+	\newcommand{\itilde}{\tilde{\i}}
+	\newcommand{\jtilde}{\tilde{\j}}
+	\newcommand{\ktilde}{\tilde{k}}
+	\newcommand{\eltilde}{\tilde{\el}}
+	\newcommand{\mtilde}{\tilde{m}}
+	\newcommand{\ntilde}{\tilde{n}}
+	\newcommand{\otilde}{\tilde{o}}
+	\newcommand{\ptilde}{\tilde{p}}
+	\newcommand{\qtilde}{\tilde{q}}
+	\newcommand{\rtilde}{\tilde{r}}
+	\newcommand{\stilde}{\tilde{s}}
+	\newcommand{\ttilde}{\tilde{t}}
+	\newcommand{\utilde}{\tilde{u}}
+	\newcommand{\vtilde}{\tilde{v}}
+	\newcommand{\wtilde}{\tilde{w}}
+	\newcommand{\xtilde}{\tilde{x}}
+	\newcommand{\ytilde}{\tilde{y}}
+	\newcommand{\ztilde}{\tilde{z}}
+
+	\newcommand{\alphatilde}{\tilde{\alpha}}
+	\newcommand{\betatilde}{\tilde{\beta}}
+	\newcommand{\gammatilde}{\tilde{\gamma}}
+	\newcommand{\deltatilde}{\tilde{\delta}}
+	\newcommand{\epsilontilde}{\tilde{\epsilon}}
+	\newcommand{\zetatilde}{\tilde{\zeta}}
+	\newcommand{\etatilde}{\tilde{\eta}}
+	\newcommand{\thetatilde}{\tilde{\theta}}
+	\newcommand{\iotatilde}{\tilde{\iota}}
+	\newcommand{\kappatilde}{\tilde{\kappa}}
+	\newcommand{\lambdatilde}{\tilde{\lambda}}
+	\newcommand{\mutilde}{\tilde{\mu}}
+	\newcommand{\nutilde}{\tilde{\nu}}
+	\newcommand{\xitilde}{\tilde{\xi}}
+	\newcommand{\pitilde}{\tilde{\pi}}
+	\newcommand{\rhotilde}{\tilde{\rho}}
+	\newcommand{\sigmatilde}{\tilde{\sigma}}
+	\newcommand{\tautilde}{\tilde{\tau}}
+	\newcommand{\upsilontilde}{\tilde{\upsilon}}
+	\newcommand{\phitilde}{\tilde{\phi}}
+	\newcommand{\chitilde}{\tilde{\chi}}
+	\newcommand{\psitilde}{\tilde{\psi}}
+	\newcommand{\omegatilde}{\tilde{\omega}}
+
+	\newcommand{\Atilde}{\widetilde{A}}
+	\newcommand{\Btilde}{\widetilde{B}}
+	\newcommand{\Ctilde}{\widetilde{C}}
+	\newcommand{\Dtilde}{\widetilde{D}}
+	\newcommand{\Etilde}{\widetilde{E}}
+	\newcommand{\Ftilde}{\widetilde{F}}
+	\newcommand{\Gtilde}{\widetilde{G}}
+	\newcommand{\Htilde}{\widetilde{H}}
+	\newcommand{\Itilde}{\widetilde{I}}
+	\newcommand{\Jtilde}{\widetilde{J}}
+	\newcommand{\Ktilde}{\widetilde{K}}
+	\newcommand{\Ltilde}{\widetilde{L}}
+	\newcommand{\Mtilde}{\widetilde{M}}
+	\newcommand{\Ntilde}{\widetilde{N}}
+	\newcommand{\Otilde}{\widetilde{O}}
+	\newcommand{\Ptilde}{\widetilde{P}}
+	\newcommand{\Qtilde}{\widetilde{Q}}
+	\newcommand{\Rtilde}{\widetilde{R}}
+	\newcommand{\Stilde}{\widetilde{S}}
+	\newcommand{\Ttilde}{\widetilde{T}}
+	\newcommand{\Utilde}{\widetilde{U}}
+	\newcommand{\Vtilde}{\widetilde{V}}
+	\newcommand{\Wtilde}{\widetilde{W}}
+	\newcommand{\Xtilde}{\widetilde{X}}
+	\newcommand{\Ytilde}{\widetilde{Y}}
+	\newcommand{\Ztilde}{\widetilde{Z}}
+
+	\newcommand{\Gammatilde}{\widetilde{\Gamma}}
+	\newcommand{\Deltatilde}{\widetilde{\Delta}}
+	\newcommand{\Thetatilde}{\widetilde{\Theta}}
+	\newcommand{\Lambdatilde}{\widetilde{\Lambda}}
+	\newcommand{\Xitilde}{\widetilde{\Xi}}
+	\newcommand{\Pitilde}{\widetilde{\Pi}}
+	\newcommand{\Sigmatilde}{\widetilde{\Sigma}}
+	\newcommand{\Upsilontilde}{\widetilde{\Upsilon}}
+	\newcommand{\Phitilde}{\widetilde{\Phi}}
+	\newcommand{\Chitilde}{\widetilde{\Chi}}
+	\newcommand{\Psitilde}{\widetilde{\Psi}}
+	\newcommand{\Omegatilde}{\widetilde{\Omega}}
+
+	
+
+	\DeclareMathOperator{\Aut}{Aut}
+	\DeclareMathOperator{\End}{End}
+	\DeclareMathOperator{\Equival}{Equiv}
+	\DeclareMathOperator{\Fun}{Fun}
+	\newcommand{\Funcross}{\Fun^{\cross}}
+	\newcommand{\Functs}{\Fun^{\cts}}
+	\newcommand{\Funpyk}{\Functs}
+	\newcommand{\Funlowerstar}{\Fun_{\ast}}
+	\newcommand{\Funupperstar}{\Fun^{\ast}}
+	\DeclareMathOperator{\Hom}{Hom}
+	\newcommand{\HOM}{\ensuremath{\textup{\textsc{Hom}}}}
+	\DeclareMathOperator{\Isom}{Isom}
+	\DeclareMathOperator{\Map}{Map}
+	\DeclareMathOperator{\Mor}{Mor}
+	\newcommand{\MOR}{\ensuremath{\textup{\textsc{Mor}}}}
+
+	\DeclareMathOperator{\GL}{GL}
+	\DeclareMathOperator{\PSL}{PSL}
+	\DeclareMathOperator{\PSO}{PSO}
+	\DeclareMathOperator{\PSp}{PSp}
+	\DeclareMathOperator{\PSU}{PSU}
+	\DeclareMathOperator{\SL}{SL}
+	\DeclareMathOperator{\SO}{SO}
+	\DeclareMathOperator{\Sp}{Sp}
+	\DeclareMathOperator{\SU}{SU}
+
+	\DeclareMathOperator{\cofib}{cofib}
+	\DeclareMathOperator{\coker}{coker}
+	\DeclareMathOperator*{\colim}{colim}
+	\DeclareMathOperator*{\hocolim}{hocolim}
+	\DeclareMathOperator*{\holim}{holim}
+	\DeclareMathOperator{\fib}{fib}
+
+	\DeclareMathOperator{\Nerve}{N}
+	\DeclareMathOperator{\trun}{\uptau}
+
+	\DeclareMathOperator{\cosk}{ck}
+	\DeclareMathOperator{\creff}{cr}
+	\DeclareMathOperator{\ev}{ev}
+	\DeclareMathOperator{\id}{id}
+	\DeclareMathOperator{\pr}{pr}
+	\DeclareMathOperator{\rk}{rk}
+	\DeclareMathOperator{\sd}{sd}
+	\DeclareMathOperator{\sk}{sk}
+	\DeclareMathOperator{\specpos}{sp}
+	\newcommand{\sdop}{\sd^{\op}}
+
+	
+
+	\newcommand{\paren}[1]{\left(#1\right)}
+	\newcommand{\angs}[1]{\langle #1 \rangle}
+  \newcommand{\quine}[1]{\ulcorner #1 \urcorner}
+	\newcommand{\ultimes}{\,\underline{\times}\,}
+	\newcommand{\horn}[2]{\upLambda_{#1}^{#2}}
+
+	
+
+	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
+
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
+\def\LUB{{ LUB}}
+\renewcommand{\sectionmark}[1]{{}}
+\def\GLB{{ GLB}}
+\renewcommand{\headrulewidth}{0.5pt}
+\def\ve{\varepsilon}
+\renewcommand{\footrulewidth}{0pt}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\headrulewidth}{0pt}
+\def\R{\mathbb{R}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
+\def\LUB{{ LUB}}
+\newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
+\def\ve{\epsilon}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\LUB{{ LUB}}
+\def\easylemma{the Linear Combination Lemma}
+\def\lcm{ lcm}
+\def\cl{{ cl}}
+\newcommand{\thepartimage}{}
+\newcommand{\thechapterimage}{}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\N{{\mathbb{N}}}
+\def\Q{{\mathbb{Q}}}
+\def\C{{\mathbb{C}}}
+\def\hcf{{ hcf}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">An Invitation to Pure Mathematics:</span> <span class="subtitle">Accelerated Proofs and Problem Solving 2021</span></a></h1>
+<p class="byline">Instructor: Clark Barwick</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="cartesianproducts.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="moresets.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="injectivesurjective.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="cartesianproducts.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="moresets.html" title="Up">Up</a><a class="next-button button toolbar-item" href="injectivesurjective.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic"><span class="codenumber">1</span> <span class="title">Foundations of mathematics</span></a><ul>
+<li><a href="sets.html" data-scroll="sets">A first look at the theory of sets</a></li>
+<li><a href="logicalstatements.html" data-scroll="logicalstatements">Logical Statements</a></li>
+<li><a href="conjunction.html" data-scroll="conjunction">Conjunction</a></li>
+<li><a href="intersection.html" data-scroll="intersection">Intersection</a></li>
+<li><a href="disjunction.html" data-scroll="disjunction">Disjunction</a></li>
+<li><a href="union.html" data-scroll="union">Union</a></li>
+<li><a href="negation.html" data-scroll="negation">Negation</a></li>
+<li><a href="complements.html" data-scroll="complements">Complements</a></li>
+<li><a href="conditionals.html" data-scroll="conditionals">Conditionals</a></li>
+<li><a href="logicalequivalence.html" data-scroll="logicalequivalence">Logical equivalence</a></li>
+<li><a href="proofbycontradiction.html" data-scroll="proofbycontradiction">Proof by Contradiction</a></li>
+<li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
+<li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
+<li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and relations</span></a><ul>
+<li><a href="cartesianproducts.html" data-scroll="cartesianproducts">Cartesian products</a></li>
+<li><a href="maps.html" data-scroll="maps" class="active">Maps</a></li>
+<li><a href="injectivesurjective.html" data-scroll="injectivesurjective">Injective and surjective</a></li>
+<li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
+<li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
+<li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
+<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a></li>
+<li class="link"><a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a></li>
+<li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a></li>
+<li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
+<li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a></li>
+<li class="link">
+<a href="integers.html" data-scroll="integers"><span class="codenumber">8</span> <span class="title">Multiplicative theory of integers</span></a><ul>
+<li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
+<li><a href="euclideanalgo.html" data-scroll="euclideanalgo">The GCD and the Euclidean Algorithm</a></li>
+<li><a href="bezoutcorollaries.html" data-scroll="bezoutcorollaries">Corollaries of Bezout's Identity and the Linear Combination Lemma</a></li>
+<li><a href="fundamentaltheoremofarithmetic.html" data-scroll="fundamentaltheoremofarithmetic">The Fundamental Theorem of Arithmetic (FTA)</a></li>
+<li><a href="findingdivisors.html" data-scroll="findingdivisors">Finding divisors via FTA</a></li>
+<li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
+<li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
+<li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
+<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="modular.html" data-scroll="modular"><span class="codenumber">9</span> <span class="title">Modular Arithmetic</span></a><ul>
+<li><a href="arithmeticmodm.html" data-scroll="arithmeticmodm">Arithmetic modulo \(m\)</a></li>
+<li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
+<li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
+<li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
+<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">10</span> <span class="title">Counting</span></a></li>
+<li class="link"><a href="permutations.html" data-scroll="permutations"><span class="codenumber">11</span> <span class="title">Permutations</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="maps"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Maps</span>
+</h2>
+<article class="warning remark-like" id="warning-2"><h6 class="heading">
+<span class="type">Warning</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-246">Many students find this bit of material pretty abstract when they first encounter it. It takes a few tries to get the real feeling that you've “really” understood the definition of maps. My suggestion is to have in your mind as many examples and nonexamples of maps as you can get, and when you hear a statement about maps, try to think about what it says in the examples you have!</p></article><p id="p-247">The real point of defining things as we have is so we can talk about <dfn class="terminology">maps</dfn> as soon as possible. Maps — aka <dfn class="terminology">set maps</dfn>, <dfn class="terminology">mappings</dfn>, <dfn class="terminology">functions</dfn> — are an important notion in set theory. The idea is that a map \(f\colon S \to T\) is a way of taking each element \(s\in S\) and associating one and only one element \(f(s)\in T\) thereto.</p>
+<article class="definition definition-like" id="definition-16"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-248">Let \(X\) and \(Y\) be two sets. A <dfn class="terminology">map</dfn> or <dfn class="terminology">function</dfn> \(f\) from \(X\) to \(Y\text{,}\) denoted \(f\colon S\to T\text{,}\) is a subset \(\Gamma(f) \subseteq X \times Y\) such that for every \(x \in X\text{,}\) there exists a unique \(f(x) \in Y\) such that \((x,f(x)) \in \Gamma(f)\text{.}\) The set \(X\) is called the <dfn class="terminology">domain</dfn> or <dfn class="terminology">source</dfn> of \(f\text{,}\) and \(Y\) is the <dfn class="terminology">codomain</dfn> or <dfn class="terminology">target</dfn> of \(f\text{.}\) The subset \(\Gamma(f)\) is called the <dfn class="terminology">graph</dfn> of \(f\text{.}\)</p></article><p id="p-249">In practice, the way we describe maps is pretty relaxed. We typically identify the source \(X\) and the target \(Y\text{,}\) and then we provide a <dfn class="terminology">rule</dfn> for sending elements of \(X\) to the associated elements of \(Y\text{.}\) The idea is that for every \(x \in X\text{,}\) we have to specify a unique \(f(x) \in Y\) attached to \(x\) in the sense that \((x, f(x)) \in \Gamma(f)\text{.}\)</p>
+<article class="example example-like" id="example-29"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-29"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">An example and a nonexample of maps.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-29"><article class="example example-like"><p id="p-250">We can define a map \(f \colon \NN_0\rightarrow \NN_0\) by the rule \(f(m)=m^2-4\text{.}\) What this means is that the graph of \(f\) is the subset \(\Gamma(f) = \{(m,n) \in \NN_0\times\NN_0 : n = m^2-4\}\text{.}\) Note that for each \(m \in \NN_0\text{,}\) there is a unique element \(n \in \NN_0\) such that \(n=m^2-4\text{.}\)</p>
+<p id="p-251">On the other hand, it is not sensible to define a map \(g \colon \NN_0 \to \NN_0\) by a rule like \(m=g(m)^2-2g(m)+2\text{.}\) This would have graph \(\Gamma(g) = \{(m,n) \in \NN_0\times\NN_0 : m = n^2-2n+2\}\text{,}\) but the trouble here is twofold.</p>
+<ol class="decimal">
+<li id="li-43">
+<p id="p-252">First, there are some natural numbers \(m\) such that there is no natural number \(n\) for which \(m = n^2-2n+2\text{.}\) For example, there is no natural number \(n\) such that \(n^2-2n+2=0\text{.}\) (To prove this, let \(n\in \NN_0\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+n^2-2n+2 = n^2 -2n + 1+1 = (n-1)^2 + 1 \geq 1 + 1 = 2\text{,}
+\end{equation*}
+</div>
+<p class="continuation">since \((n-1)^2\geq 0\text{.}\))</p>
+</li>
+<li id="li-44"><p id="p-253">Second, there are natural numbers \(m\) such that there exists <dfn class="terminology">more than one</dfn> natural number \(n\) such that \(m = n^2-2n+2\text{.}\) (Note that \((0,2)\) and \((2,2)\) both lie in \(\Gamma(g)\text{.}\))</p></li>
+</ol></article></div>
+<article class="example example-like" id="example-30"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-30"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">A preview of modular arithmetic.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-30"><article class="example example-like"><p id="p-254">Let \(n\) be a natural number. Recall that \(n = \{0,1,\dots,n-1\}\text{.}\) Then we may define a map \(\mu \colon \NN_0 \to n\) by the rule that for any integer \(m\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\mu(m) = m\mbox{ mod } n\text{.}
+\end{equation*}
+</div>
+<p id="p-255">In other words, \(\mu(m)\) is the remainder of \(m\) after dividing by \(n\text{.}\) To say it differently, \((m,r)\in \Gamma(\mu)\) if and only if \((\exists d \in \NN_0)(m=nd+r)\text{.}\)</p></article></div>
+<p id="p-256">Sometimes, it's handy to use the following notation: we may define a map \(f \colon S \to T\) by the <dfn class="terminology">assignment</dfn></p>
+<div class="displaymath">
+\begin{equation*}
+s \mapsto \text{ [some formula involving \(s\)]. }
+\end{equation*}
+</div>
+<article class="example example-like" id="example-31"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-31"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">An example involving the real numbers.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-31"><article class="example example-like"><p id="p-257">Let \(\RR\) denote the set of real numbers. We may define a map \(e \colon \RR \to \RR\) by the rule</p>
+<div class="displaymath">
+\begin{equation*}
+x \mapsto -x^2\text{.}
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="example-32"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-32"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Cases in defining a function.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-32"><article class="example example-like"><p id="p-258">Let's define a map \(f \colon \NN_0 \to \{\text{red},\text{blue}\}\text{.}\) We can daydream of such a map as painting some natural numbers red and others blue. Defining \(f\) is really the same thing as declaring which natural numbers to paint red, and which to paint blue, in such a way as to ensure that every natural number is painted at least one of these colors, and no natural number is painted both of these colors. Here's a valid way to describe a map \(f\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \begin{cases}
+\text{red} \amp \text{if }x\text{ is even;} \\
+\text{blue} \amp \text{if }x\text{ is odd.}
+\end{cases}
+\end{equation*}
+</div>
+<p id="p-259">Here's a definition that does not work:</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \begin{cases}
+\text{red} \amp \text{if }x\text{ is even;} \\
+\text{blue} \amp \text{if }3\text{ divides }x \text{.}
+\end{cases}
+\end{equation*}
+</div>
+<p class="continuation">This doesn't work for two reasons: first, there are natural numbers \(x\) that are neither even nor divisible by \(3\) (like \(5\)); second, there are natural numbers \(x\) that are divisible by both even and divisible by \(3\) (like \(6\)). This rule avoids painting some numbers altogether, and paints other numbers two different colors.</p></article></div>
+<article class="example example-like" id="example-33"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-33"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">The inclusion map and the identity map.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-33"><article class="example example-like"><p id="p-260">Let \(T\) be a set, and let \(S \subseteq T\) be a subset. Then there is a map \(i \colon S \to T\) given by the rule \(i(x)=x\text{.}\) This is called the <dfn class="terminology">inclusion map</dfn>. In the particular case in which \(S=T\text{,}\) the map \(i\) is called the <dfn class="terminology">identity</dfn> map \(\mathrm{id} \colon S \to S\text{.}\)</p></article></div>
+<article class="example example-like" id="example-34"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-34"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Maps to and from the empty set.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-34"><article class="example example-like"><p id="p-261">Let \(X\) be any set. Since \(\varnothing \subseteq X\text{,}\) it follows that we alwaays have an inclusion map \(\varnothing \to X\text{.}\) This is in fact the <em class="emphasis">only</em> map \(\varnothing \to X\text{.}\)</p>
+<p id="p-262">On the other hand, let's contemplate the maps \(X \to \varnothing\text{.}\) If \(X=\varnothing\text{,}\) then we have the identity map, but if \(X\neq\varnothing\text{,}\) then there is no map \(X \to \varnothing\text{.}\) After all, if \(X\neq\varnothing\text{,}\) then there is an element \(x \in X\text{.}\) But there's nowhere to send \(x\text{!}\)</p></article></div>
+<p id="p-263">Maps can be <dfn class="terminology">composed</dfn>. If \(f\colon S \to T\) is a map, and \(g\colon T \to U\) is another, then you can <dfn class="terminology">do \(f\) first, and then do \(g\)</dfn>. That is, one can form a new map \(g\circ f\colon S \to U\) such that for any \(s\in S\text{,}\) one has</p>
+<div class="displaymath">
+\begin{equation*}
+(g\circ f)(s)= g(f(s))\text{.}
+\end{equation*}
+</div>
+<p id="p-264">More formally, the graph \(\Gamma(g\circ f)\) is given by</p>
+<div class="displaymath">
+\begin{equation*}
+\Gamma(g\circ f)=\{(s,u)\in S\times U : (\exists t\in T)((s,t)\in\Gamma(f)\wedge(t,u)\in\Gamma(g))\}\text{.}
+\end{equation*}
+</div>
+<p id="p-265">It is easy enough to see that \(g\circ\mathrm{id}=g\) and \(\mathrm{id}\circ f=f\text{,}\) and moreover composition is associative, so that \((h\circ g)\circ f=h\circ(g\circ f)\text{.}\)</p></section></div></main>
+</div>
+</body>
+</html>

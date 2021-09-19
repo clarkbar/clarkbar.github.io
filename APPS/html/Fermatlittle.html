@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T18:23:35+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Fermat's Little Theorem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(	\newcommand{\andeq}{\text{\qquad and\qquad}}
+	\newcommand{\respectively}[1]{\text{\qquad(respectively,\quad}{#1}\text{\quad)}}
+	\newcommand{\resp}[1]{\text{\qquad(resp.,\quad}{#1}\text{\quad)}}
+
+	\newcommand{\comma}{\rlap{\ ,}}
+	\newcommand{\period}{\rlap{\ .}}
+	\newcommand{\semicolon}{\rlap{\ ;}}
+
+  
+
+  \newcommand{\mathup}[1]{\mathrm{#1}}
+  \newcommand{\mathbfup}[1]{\mathbf{#1}}
+  
+  \renewcommand{\AA}{\mathbfit{A}}
+  \newcommand{\BB}{\mathbfit{B}}
+  \newcommand{\CC}{\mathbfit{C}}
+  \newcommand{\DD}{\mathbfit{D}}
+  \newcommand{\EE}{\mathbfit{E}}
+  \newcommand{\FF}{\mathbfit{F}}
+  \newcommand{\GG}{\mathbfit{G}}
+  \newcommand{\HH}{\mathbfit{H}}
+  \newcommand{\II}{\mathbfit{I}}
+  \newcommand{\JJ}{\mathbfit{J}}
+  \newcommand{\KK}{\mathbfit{K}}
+  \newcommand{\LL}{\mathbfit{L}}
+  \newcommand{\MM}{\mathbfit{M}}
+  \newcommand{\NN}{\mathbfit{N}}
+  \newcommand{\OO}{\mathbfit{O}}
+  \newcommand{\PP}{\mathbfit{P}}
+  \newcommand{\QQ}{\mathbfit{Q}}
+  \newcommand{\RR}{\mathbfit{R}}
+  \renewcommand{\SS}{\mathbfit{S}}
+  \newcommand{\TT}{\mathbfit{T}}
+  \newcommand{\UU}{\mathbfit{U}}
+  \newcommand{\VV}{\mathbfit{V}}
+  \newcommand{\WW}{\mathbfit{W}}
+  \newcommand{\XX}{\mathbfit{X}}
+  \newcommand{\YY}{\mathbfit{Y}}
+  \newcommand{\ZZ}{\mathbfit{Z}}
+  
+  \let\Gammaup\Gamma
+  \let\Deltaup\Delta
+  \let\Thetaup\Theta
+  \let\Lambdaup\Lambda
+  \let\Xiup\Xi
+  \let\Piup\Pi
+  \let\Sigmaup\Sigma
+  \let\Upsilonup\Upsilon
+  \let\Phiup\Phi
+  \let\Psiup\Psi
+  \let\Omegaup\Omega
+  
+  \renewcommand{\Gamma}{\mathit{\Gammaup}}
+  \renewcommand{\Delta}{\mathit{\Deltaup}}
+  \renewcommand{\Theta}{\mathit{\Thetaup}}
+  \renewcommand{\Lambda}{\mathit{\Lambdaup}}
+  \renewcommand{\Xi}{\mathit{\Xiup}}
+  \renewcommand{\Pi}{\mathit{\Piup}}
+  \renewcommand{\Sigma}{\mathit{\Sigmaup}}
+  \renewcommand{\Upsilon}{\mathit{\Upsilonup}}
+  \renewcommand{\Phi}{\mathit{\Phiup}}
+  \renewcommand{\Psi}{\mathit{\Psiup}}
+  \renewcommand{\Omega}{\mathit{\Omegaup}}
+  
+	
+
+	\renewcommand{\epsilon}{\varepsilon}
+  \newcommand{\el}{\ell}
+	\renewcommand{\phi}{\varphi}
+
+	\newcommand{\mfa}{\mathfrak{a}}
+	\newcommand{\mfb}{\mathfrak{b}}
+	\newcommand{\mfc}{\mathfrak{c}}
+	\newcommand{\mfd}{\mathfrak{d}}
+	\newcommand{\mfe}{\mathfrak{e}}
+	\newcommand{\mff}{\mathfrak{f}}
+	\newcommand{\mfg}{\mathfrak{g}}
+	\newcommand{\mfh}{\mathfrak{h}}
+	\newcommand{\mfi}{\mathfrak{i}}
+	\newcommand{\mfj}{\mathfrak{j}}
+	\newcommand{\mfk}{\mathfrak{k}}
+	\newcommand{\mfl}{\mathfrak{l}}
+	\newcommand{\mfm}{\mathfrak{m}}
+	\newcommand{\mfn}{\mathfrak{n}}
+	\newcommand{\mfo}{\mathfrak{o}}
+	\newcommand{\mfp}{\mathfrak{p}}
+	\newcommand{\mfq}{\mathfrak{q}}
+	\newcommand{\mfr}{\mathfrak{r}}
+	\newcommand{\mfs}{\mathfrak{s}}
+	\newcommand{\mft}{\mathfrak{t}}
+	\newcommand{\mfu}{\mathfrak{u}}
+	\newcommand{\mfv}{\mathfrak{v}}
+	\newcommand{\mfw}{\mathfrak{w}}
+	\newcommand{\mfx}{\mathfrak{x}}
+	\newcommand{\mfy}{\mathfrak{y}}
+	\newcommand{\mfz}{\mathfrak{z}}
+
+	\newcommand{\ahat}{\hat{a}}
+	\newcommand{\bhat}{\hat{b}}
+	\newcommand{\chat}{\hat{c}}
+	\newcommand{\dhat}{\hat{d}}
+	\newcommand{\ehat}{\hat{e}}
+	\newcommand{\fhat}{\hat{f}}
+	\newcommand{\ghat}{\hat{g}}
+	\newcommand{\hhat}{\hat{h}}
+	\newcommand{\ihat}{\hat{\i}}
+	\newcommand{\jhat}{\hat{\j}}
+	\newcommand{\khat}{\hat{k}}
+	\newcommand{\elhat}{\hat{\el}}
+	\newcommand{\mhat}{\hat{m}}
+	\newcommand{\nhat}{\hat{n}}
+	\newcommand{\ohat}{\hat{o}}
+	\newcommand{\phat}{\hat{p}}
+	\newcommand{\qhat}{\hat{q}}
+	\newcommand{\rhat}{\hat{r}}
+	\newcommand{\shat}{\hat{s}}
+	\newcommand{\that}{\hat{t}}
+	\newcommand{\uhat}{\hat{u}}
+	\newcommand{\vhat}{\hat{v}}
+	\newcommand{\what}{\hat{w}}
+	\newcommand{\xhat}{\hat{x}}
+	\newcommand{\yhat}{\hat{y}}
+	\newcommand{\zhat}{\hat{z}}
+
+	\newcommand{\alphahat}{\hat{\alpha}}
+	\newcommand{\betahat}{\hat{\beta}}
+	\newcommand{\gammahat}{\hat{\gamma}}
+	\newcommand{\deltahat}{\hat{\delta}}
+	\newcommand{\epsilonhat}{\hat{\epsilon}}
+	\newcommand{\zetahat}{\hat{\zeta}}
+	\newcommand{\etahat}{\hat{\eta}}
+	\newcommand{\thetahat}{\hat{\theta}}
+	\newcommand{\iotahat}{\hat{\iota}}
+	\newcommand{\kappahat}{\hat{\kappa}}
+	\newcommand{\lambdahat}{\hat{\lambda}}
+	\newcommand{\muhat}{\hat{\mu}}
+	\newcommand{\nuhat}{\hat{\nu}}
+	\newcommand{\xihat}{\hat{\xi}}
+	\newcommand{\pihat}{\hat{\pi}}
+	\newcommand{\rhohat}{\hat{\rho}}
+	\newcommand{\sigmahat}{\hat{\sigma}}
+	\newcommand{\tauhat}{\hat{\tau}}
+	\newcommand{\upsilonhat}{\hat{\upsilon}}
+	\newcommand{\phihat}{\hat{\phi}}
+	\newcommand{\chihat}{\hat{\chi}}
+	\newcommand{\psihat}{\hat{\psi}}
+	\newcommand{\omegahat}{\hat{\omega}}
+
+	\newcommand{\Ahat}{\hat{A}}
+	\newcommand{\Bhat}{\hat{B}}
+	\newcommand{\Chat}{\hat{C}}
+	\newcommand{\Dhat}{\hat{D}}
+	\newcommand{\Ehat}{\hat{E}}
+	\newcommand{\Fhat}{\hat{F}}
+	\newcommand{\Ghat}{\hat{G}}
+	\newcommand{\Hhat}{\hat{H}}
+	\newcommand{\Ihat}{\hat{I}}
+	\newcommand{\Jhat}{\hat{J}}
+	\newcommand{\Khat}{\hat{K}}
+	\newcommand{\Lhat}{\hat{L}}
+	\newcommand{\Mhat}{\hat{M}}
+	\newcommand{\Nhat}{\hat{N}}
+	\newcommand{\Ohat}{\hat{O}}
+	\newcommand{\Phat}{\hat{P}}
+	\newcommand{\Qhat}{\hat{Q}}
+	\newcommand{\Rhat}{\hat{R}}
+	\newcommand{\Shat}{\hat{S}}
+	\newcommand{\That}{\hat{T}}
+	\newcommand{\Uhat}{\hat{U}}
+	\newcommand{\Vhat}{\hat{V}}
+	\newcommand{\What}{\hat{W}}
+	\newcommand{\Xhat}{\hat{X}}
+	\newcommand{\Yhat}{\hat{Y}}
+	\newcommand{\Zhat}{\hat{Z}}
+
+	\newcommand{\Gammahat}{\hat{\Gamma}}
+	\newcommand{\Deltahat}{\hat{\Delta}}
+	\newcommand{\Thetahat}{\hat{\Theta}}
+	\newcommand{\Lambdahat}{\hat{\Lambda}}
+	\newcommand{\Xihat}{\hat{\Xi}}
+	\newcommand{\Pihat}{\hat{\Pi}}
+	\newcommand{\Sigmahat}{\hat{\Sigma}}
+	\newcommand{\Upsilonhat}{\hat{\Upsilon}}
+	\newcommand{\Phihat}{\hat{\Phi}}
+	\newcommand{\Chihat}{\hat{\Chi}}
+	\newcommand{\Psihat}{\hat{\Psi}}
+	\newcommand{\Omegahat}{\hat{\Omega}}
+
+	\newcommand{\atilde}{\tilde{a}}
+	\newcommand{\btilde}{\tilde{b}}
+	\newcommand{\ctilde}{\tilde{c}}
+	\newcommand{\dtilde}{\tilde{d}}
+	\newcommand{\etilde}{\tilde{e}}
+	\newcommand{\ftilde}{\tilde{f}}
+	\newcommand{\gtilde}{\tilde{g}}
+	\newcommand{\htilde}{\tilde{h}}
+	\newcommand{\itilde}{\tilde{\i}}
+	\newcommand{\jtilde}{\tilde{\j}}
+	\newcommand{\ktilde}{\tilde{k}}
+	\newcommand{\eltilde}{\tilde{\el}}
+	\newcommand{\mtilde}{\tilde{m}}
+	\newcommand{\ntilde}{\tilde{n}}
+	\newcommand{\otilde}{\tilde{o}}
+	\newcommand{\ptilde}{\tilde{p}}
+	\newcommand{\qtilde}{\tilde{q}}
+	\newcommand{\rtilde}{\tilde{r}}
+	\newcommand{\stilde}{\tilde{s}}
+	\newcommand{\ttilde}{\tilde{t}}
+	\newcommand{\utilde}{\tilde{u}}
+	\newcommand{\vtilde}{\tilde{v}}
+	\newcommand{\wtilde}{\tilde{w}}
+	\newcommand{\xtilde}{\tilde{x}}
+	\newcommand{\ytilde}{\tilde{y}}
+	\newcommand{\ztilde}{\tilde{z}}
+
+	\newcommand{\alphatilde}{\tilde{\alpha}}
+	\newcommand{\betatilde}{\tilde{\beta}}
+	\newcommand{\gammatilde}{\tilde{\gamma}}
+	\newcommand{\deltatilde}{\tilde{\delta}}
+	\newcommand{\epsilontilde}{\tilde{\epsilon}}
+	\newcommand{\zetatilde}{\tilde{\zeta}}
+	\newcommand{\etatilde}{\tilde{\eta}}
+	\newcommand{\thetatilde}{\tilde{\theta}}
+	\newcommand{\iotatilde}{\tilde{\iota}}
+	\newcommand{\kappatilde}{\tilde{\kappa}}
+	\newcommand{\lambdatilde}{\tilde{\lambda}}
+	\newcommand{\mutilde}{\tilde{\mu}}
+	\newcommand{\nutilde}{\tilde{\nu}}
+	\newcommand{\xitilde}{\tilde{\xi}}
+	\newcommand{\pitilde}{\tilde{\pi}}
+	\newcommand{\rhotilde}{\tilde{\rho}}
+	\newcommand{\sigmatilde}{\tilde{\sigma}}
+	\newcommand{\tautilde}{\tilde{\tau}}
+	\newcommand{\upsilontilde}{\tilde{\upsilon}}
+	\newcommand{\phitilde}{\tilde{\phi}}
+	\newcommand{\chitilde}{\tilde{\chi}}
+	\newcommand{\psitilde}{\tilde{\psi}}
+	\newcommand{\omegatilde}{\tilde{\omega}}
+
+	\newcommand{\Atilde}{\widetilde{A}}
+	\newcommand{\Btilde}{\widetilde{B}}
+	\newcommand{\Ctilde}{\widetilde{C}}
+	\newcommand{\Dtilde}{\widetilde{D}}
+	\newcommand{\Etilde}{\widetilde{E}}
+	\newcommand{\Ftilde}{\widetilde{F}}
+	\newcommand{\Gtilde}{\widetilde{G}}
+	\newcommand{\Htilde}{\widetilde{H}}
+	\newcommand{\Itilde}{\widetilde{I}}
+	\newcommand{\Jtilde}{\widetilde{J}}
+	\newcommand{\Ktilde}{\widetilde{K}}
+	\newcommand{\Ltilde}{\widetilde{L}}
+	\newcommand{\Mtilde}{\widetilde{M}}
+	\newcommand{\Ntilde}{\widetilde{N}}
+	\newcommand{\Otilde}{\widetilde{O}}
+	\newcommand{\Ptilde}{\widetilde{P}}
+	\newcommand{\Qtilde}{\widetilde{Q}}
+	\newcommand{\Rtilde}{\widetilde{R}}
+	\newcommand{\Stilde}{\widetilde{S}}
+	\newcommand{\Ttilde}{\widetilde{T}}
+	\newcommand{\Utilde}{\widetilde{U}}
+	\newcommand{\Vtilde}{\widetilde{V}}
+	\newcommand{\Wtilde}{\widetilde{W}}
+	\newcommand{\Xtilde}{\widetilde{X}}
+	\newcommand{\Ytilde}{\widetilde{Y}}
+	\newcommand{\Ztilde}{\widetilde{Z}}
+
+	\newcommand{\Gammatilde}{\widetilde{\Gamma}}
+	\newcommand{\Deltatilde}{\widetilde{\Delta}}
+	\newcommand{\Thetatilde}{\widetilde{\Theta}}
+	\newcommand{\Lambdatilde}{\widetilde{\Lambda}}
+	\newcommand{\Xitilde}{\widetilde{\Xi}}
+	\newcommand{\Pitilde}{\widetilde{\Pi}}
+	\newcommand{\Sigmatilde}{\widetilde{\Sigma}}
+	\newcommand{\Upsilontilde}{\widetilde{\Upsilon}}
+	\newcommand{\Phitilde}{\widetilde{\Phi}}
+	\newcommand{\Chitilde}{\widetilde{\Chi}}
+	\newcommand{\Psitilde}{\widetilde{\Psi}}
+	\newcommand{\Omegatilde}{\widetilde{\Omega}}
+
+	
+
+	\DeclareMathOperator{\Aut}{Aut}
+	\DeclareMathOperator{\End}{End}
+	\DeclareMathOperator{\Equival}{Equiv}
+	\DeclareMathOperator{\Fun}{Fun}
+	\newcommand{\Funcross}{\Fun^{\cross}}
+	\newcommand{\Functs}{\Fun^{\cts}}
+	\newcommand{\Funpyk}{\Functs}
+	\newcommand{\Funlowerstar}{\Fun_{\ast}}
+	\newcommand{\Funupperstar}{\Fun^{\ast}}
+	\DeclareMathOperator{\Hom}{Hom}
+	\newcommand{\HOM}{\ensuremath{\textup{\textsc{Hom}}}}
+	\DeclareMathOperator{\Isom}{Isom}
+	\DeclareMathOperator{\Map}{Map}
+	\DeclareMathOperator{\Mor}{Mor}
+	\newcommand{\MOR}{\ensuremath{\textup{\textsc{Mor}}}}
+
+	\DeclareMathOperator{\GL}{GL}
+	\DeclareMathOperator{\PSL}{PSL}
+	\DeclareMathOperator{\PSO}{PSO}
+	\DeclareMathOperator{\PSp}{PSp}
+	\DeclareMathOperator{\PSU}{PSU}
+	\DeclareMathOperator{\SL}{SL}
+	\DeclareMathOperator{\SO}{SO}
+	\DeclareMathOperator{\Sp}{Sp}
+	\DeclareMathOperator{\SU}{SU}
+
+	\DeclareMathOperator{\cofib}{cofib}
+	\DeclareMathOperator{\coker}{coker}
+	\DeclareMathOperator*{\colim}{colim}
+	\DeclareMathOperator*{\hocolim}{hocolim}
+	\DeclareMathOperator*{\holim}{holim}
+	\DeclareMathOperator{\fib}{fib}
+
+	\DeclareMathOperator{\Nerve}{N}
+	\DeclareMathOperator{\trun}{\uptau}
+
+	\DeclareMathOperator{\cosk}{ck}
+	\DeclareMathOperator{\creff}{cr}
+	\DeclareMathOperator{\ev}{ev}
+	\DeclareMathOperator{\id}{id}
+	\DeclareMathOperator{\pr}{pr}
+	\DeclareMathOperator{\rk}{rk}
+	\DeclareMathOperator{\sd}{sd}
+	\DeclareMathOperator{\sk}{sk}
+	\DeclareMathOperator{\specpos}{sp}
+	\newcommand{\sdop}{\sd^{\op}}
+
+	
+
+	\newcommand{\paren}[1]{\left(#1\right)}
+	\newcommand{\angs}[1]{\langle #1 \rangle}
+  \newcommand{\quine}[1]{\ulcorner #1 \urcorner}
+	\newcommand{\ultimes}{\,\underline{\times}\,}
+	\newcommand{\horn}[2]{\upLambda_{#1}^{#2}}
+
+	
+
+	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
+
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
+\def\LUB{{ LUB}}
+\renewcommand{\sectionmark}[1]{{}}
+\def\GLB{{ GLB}}
+\renewcommand{\headrulewidth}{0.5pt}
+\def\ve{\varepsilon}
+\renewcommand{\footrulewidth}{0pt}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\headrulewidth}{0pt}
+\def\R{\mathbb{R}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
+\def\LUB{{ LUB}}
+\newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
+\def\ve{\epsilon}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\LUB{{ LUB}}
+\def\easylemma{the Linear Combination Lemma}
+\def\lcm{ lcm}
+\def\cl{{ cl}}
+\newcommand{\thepartimage}{}
+\newcommand{\thechapterimage}{}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\N{{\mathbb{N}}}
+\def\Q{{\mathbb{Q}}}
+\def\C{{\mathbb{C}}}
+\def\hcf{{ hcf}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">An Invitation to Pure Mathematics:</span> <span class="subtitle">Accelerated Proofs and Problem Solving 2021</span></a></h1>
+<p class="byline">Instructor: Clark Barwick</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Zmodm.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="modular.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="modularexercises.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Zmodm.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="modular.html" title="Up">Up</a><a class="next-button button toolbar-item" href="modularexercises.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic"><span class="codenumber">1</span> <span class="title">Foundations of mathematics</span></a><ul>
+<li><a href="sets.html" data-scroll="sets">A first look at the theory of sets</a></li>
+<li><a href="logicalstatements.html" data-scroll="logicalstatements">Logical Statements</a></li>
+<li><a href="conjunction.html" data-scroll="conjunction">Conjunction</a></li>
+<li><a href="intersection.html" data-scroll="intersection">Intersection</a></li>
+<li><a href="disjunction.html" data-scroll="disjunction">Disjunction</a></li>
+<li><a href="union.html" data-scroll="union">Union</a></li>
+<li><a href="negation.html" data-scroll="negation">Negation</a></li>
+<li><a href="complements.html" data-scroll="complements">Complements</a></li>
+<li><a href="conditionals.html" data-scroll="conditionals">Conditionals</a></li>
+<li><a href="logicalequivalence.html" data-scroll="logicalequivalence">Logical equivalence</a></li>
+<li><a href="proofbycontradiction.html" data-scroll="proofbycontradiction">Proof by Contradiction</a></li>
+<li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
+<li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
+<li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and relations</span></a><ul>
+<li><a href="cartesianproducts.html" data-scroll="cartesianproducts">Cartesian products</a></li>
+<li><a href="maps.html" data-scroll="maps">Maps</a></li>
+<li><a href="injectivesurjective.html" data-scroll="injectivesurjective">Injective and surjective</a></li>
+<li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
+<li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
+<li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
+<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a></li>
+<li class="link"><a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a></li>
+<li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a></li>
+<li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
+<li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a></li>
+<li class="link">
+<a href="integers.html" data-scroll="integers"><span class="codenumber">8</span> <span class="title">Multiplicative theory of integers</span></a><ul>
+<li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
+<li><a href="euclideanalgo.html" data-scroll="euclideanalgo">The GCD and the Euclidean Algorithm</a></li>
+<li><a href="bezoutcorollaries.html" data-scroll="bezoutcorollaries">Corollaries of Bezout's Identity and the Linear Combination Lemma</a></li>
+<li><a href="fundamentaltheoremofarithmetic.html" data-scroll="fundamentaltheoremofarithmetic">The Fundamental Theorem of Arithmetic (FTA)</a></li>
+<li><a href="findingdivisors.html" data-scroll="findingdivisors">Finding divisors via FTA</a></li>
+<li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
+<li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
+<li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
+<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="modular.html" data-scroll="modular"><span class="codenumber">9</span> <span class="title">Modular Arithmetic</span></a><ul>
+<li><a href="arithmeticmodm.html" data-scroll="arithmeticmodm">Arithmetic modulo \(m\)</a></li>
+<li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
+<li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
+<li><a href="Fermatlittle.html" data-scroll="Fermatlittle" class="active">Fermat's Little Theorem</a></li>
+<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">10</span> <span class="title">Counting</span></a></li>
+<li class="link"><a href="permutations.html" data-scroll="permutations"><span class="codenumber">11</span> <span class="title">Permutations</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Fermatlittle"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">9.4</span> <span class="title">Fermat's Little Theorem</span>
+</h2>
+<section class="introduction" id="introduction-11"><p id="p-819">The great thing about congruence is that arithmetic becomes easier since you can replace big numbers with smaller numbers that are congruent. The following is a little but powerful theorem due to Fermat that allows you to eliminate large powers if you are working modulo some prime.</p>
+<article class="theorem theorem-like" id="theorem-17"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Fermat's Little Theorem (FLT).</span>
+</h6>
+<p id="p-820">Let \(a\) be an integer, and let \(p\) be a prime number. If \(p\) does not divide \(a\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+a^{p-1} = 1 \mod p\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-36"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-36"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-36"><article class="hiddenproof"><p id="p-821">Without loss of generality, we may assume that \(a \in \{1,\dots,p-1\}\text{.}\) We consider the numbers \(a,2a,3a,\dots,(p-1)a\text{.}\) We first observe that each of these numbers is distinct modulo \(p\text{;}\) that is, for each \(c,d\in \mathbb{Z}/p\text{,}\) one has \(ca = da\mod p\) if and only if \(c=d\text{.}\) This follows from <a class="xref" data-knowl="./knowl/p_xa_ya-x_a.html" title="Proposition 9.1.6">Proposition 9.1.6</a>.</p>
+<p id="p-822">If \(\overline{a},\overline{2a}, \dots, \overline{(p-1)a}\) are the remainders of \(a,2a,\dots,(p-1)a\) after dividing by \(p\text{,}\) then we deduce that the sets \(\{\overline{a},\overline{2a}, \dots, \overline{(p-1)a}\}\) and \(\{1,2,\dots,p-1\}\) are equal Consequently,</p>
+<div class="displaymath">
+\begin{equation*}
+a\cdot 2a \cdots (p-1)a = \overline{a}\cdot\overline{2a}\cdot \cdots\cdot \overline{(p-1)a} = 1\cdot 2 \cdots \cdot (p-1) \mod p\text{.}
+\end{equation*}
+</div>
+<p id="p-823">Thus</p>
+<div class="displaymath">
+\begin{equation*}
+(p-1)!a^{p-1} = (p-1)!\mod p\text{.}
+\end{equation*}
+</div>
+<p id="p-824">Now since \(p\) does not divide \((p-1)!\text{,}\) <a class="xref" data-knowl="./knowl/p_xa_ya-x_a.html" title="Proposition 9.1.6">Proposition 9.1.6</a> implies that \(a^{p-1} = 1 \mod p\text{,}\) as desired.</p></article></div>
+<article class="example example-like" id="example-70"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-70"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-70"><article class="example example-like"><p id="p-825">Find \(5^{100}\mod 7\text{.}\)</p>
+<p id="p-826">Since \(7\) does not divide \(5\text{,}\) the FLT says \(5^{6} = 1\mod 7\text{.}\) Thus, we can shave off any power of \(5\) from \(5^{100}\) that is a multiple of \(6\text{.}\) Thus,</p>
+<div class="displaymath">
+\begin{equation*}
+5^{100} = 5^{96}5^{4}=(5^{6})^{16}5^{4} = 1^{16}5^{4}= 5^{4}\text{.}
+\end{equation*}
+</div>
+<p id="p-827">Then the rest is as before:</p>
+<div class="displaymath">
+\begin{align*}
+5^{2} \amp  =25 = 4\mod 7\\
+5^{4} \amp  =(5^{2})^{2} = 4^{2}=16 = 2\mod 7\text{.}
+\end{align*}
+</div></article></div>
+<p id="p-828">Fermat's Little Theorem gives us a way of solving a large class of polynomial equations mod \(m\text{:}\)</p>
+<article class="theorem theorem-like" id="t_x_n_bmodp"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.4.3</span><span class="period">.</span>
+</h6>
+<p id="p-829">Let \(n\in\mathbb{N}\) and \(p\) be a prime number. Assume \(n\) and \(p-1\) are coprime and \(p\) does not divide \(b\text{.}\) Then the equation</p>
+<div class="displaymath">
+\begin{equation}
+x^{n} = b\mod p\text{.}\label{e_x_n_bmodp}\tag{9.4.1}
+\end{equation}
+</div>
+<p class="continuation">has exactly one solution \(x\in \{1,\dots,p-1\}\text{.}\)</p></article><article class="hiddenproof" id="proof-37"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-37"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-37"><article class="hiddenproof"><p id="p-830">Since \(n\) and \(p-1\) are coprime, there are integers \(s,t\) so that \(sn+t(p-1)=1\text{.}\)</p>
+<p id="p-831">Let us prove the uniqueness. If \(x_1,x_2 \in \{1,\dots,p-1\}\) are two such solutions, then \(x_1^n=x_2^n \mod p\text{,}\) and so for \(i \in \{1,2\}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+x_i = x_i^{sn+t(p-1)} = x_i^{sn}x_i^{t(p-1)} = b^s(x_i^t)^{p-1} \mod p\text{.}
+\end{equation*}
+</div>
+<p id="p-832">Since \(p\) does not divide \(x_i^t\text{,}\) Fermat's Little Theorem that each \(x_i = b^s \mod p\text{,}\) whence \(x_1=x_2\text{.}\)</p>
+<p id="p-833">Now let us prove the existence. Let \(x\) be the remainder after dividing \(b^s\) by \(p\text{.}\) Now in \(\mathbb{Z}/p\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+x^{n}  = (b^{s})^{n}=b^{ns}  = b^{1-t(p-1)}=b\cdot (b^{p-1})^{-t}\text{.}
+\end{equation*}
+</div>
+<p id="p-834">(Note that this makes sense, since \(p\) does not divide \(b\text{,}\) so \(b\) is invertible.) Since \(p\) does not divide \(b\text{,}\) Fermat's Little Theorem implies that \(x^n = b \mod p\text{.}\)</p></article></div>
+<p id="p-835">Notice that even though the choice of \(s, t\) is not unique, the remainder after dividing \(b^s\) by \(p\) <dfn class="terminology">is</dfn> unique. In other words, if \(s_1,t_1,s_2,t_2\) are integers such that for \(i \in \{1,2\}\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+s_in+t_i(p-1)=1\text{,}
+\end{equation*}
+</div>
+<p class="continuation">then \(b^{s_1} = b^{s_2} \mod p\text{.}\) To see this directly, note that in \(\mathbb{Z}/p\text{,}\) we have by FLT:</p>
+<div class="displaymath">
+\begin{equation*}
+b^{s_1} = (b^{s_1})^{s_2n+t_2(p-1)} = b^{s_1s_2}(b^{s_1t_2})^{p-1}=b^{s_1s_2}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and by the same reasoning:</p>
+<div class="displaymath">
+\begin{equation*}
+b^{s_2} = (b^{s_2})^{s_1n+t_1(p-1)} = b^{s_1s_2}(b^{s_2t_1})^{p-1}=b^{s_1s_2}\text{.}
+\end{equation*}
+</div>
+<p id="p-836">We now have a blueprint to how to solve equations of the form <a class="xref" data-knowl="./knowl/e_x_n_bmodp.html" title="Equation 9.4.1">(9.4.1)</a> when \(n\) and \(p-1\) are coprime and \(p\) does not divide \(b\text{.}\)</p>
+<article class="example example-like" id="example-71"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-71"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-71"><article class="example example-like"><p id="p-837">Find \(x\in\{0,1,...16\}\) so that \(x^{7} = 4\mod 17\text{.}\)</p>
+<p id="p-838">Since \(\gcd(7,17-1)=\gcd(7,16)=1\text{,}\) we can use the Euclidean Algorithm to show that \(7\cdot 7=1+3\cdot 16\text{.}\) Thus, if \(x\) solves the above equation, then \(4 = x^{7}\text{,}\) and so</p>
+<div class="displaymath">
+\begin{equation*}
+4^{7} = (x^{7})^{7} = x^{7\cdot 7} = x^{1+3\cdot 16} = x\cdot (x^{16})^{3} = x\cdot (1)^{3} = x\text{.}
+\end{equation*}
+</div>
+<p id="p-839">Thus, \(x = 4^{7}\text{,}\) so we need to find a representative in \(\{0,1,...,16\}\text{.}\) Note that \(4^{2}=16 = -1\mod 17\text{,}\) so</p>
+<div class="displaymath">
+\begin{equation*}
+4^{7}=(4^{2})^{3} \cdot 4 = (-1)^{3} \cdot 4 =-4 = 13\mod 17\text{.}
+\end{equation*}
+</div>
+<p id="p-840">Thus, \(x=13\) is the unique solution in \(\{0,1,...,16\}\text{.}\)</p></article></div>
+<p id="p-841">Not all polynomial equations can be solved using the above method:</p>
+<article class="example example-like" id="example-72"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-72"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-72"><article class="example example-like"><p id="p-842">Find a solution to \(x^{22} = 3 \mod 11\text{.}\)</p>
+<p id="p-843">Note that \(\gcd(22,11-1)=\gcd(22,10)=2\text{,}\) so we can't use the method in <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a>. However, let's suppose \(x\) is a solution to the above equation and try to narrow down what it must be. Note that \(11\) does not divide \(x\) (otherwise \(x^{22} = 0\)). Thus, FLT implies \(x^{10} = 1 \mod 11\text{.}\) Hence,</p>
+<div class="displaymath">
+\begin{equation*}
+x^{22}=x^{2}(x^{10})^{2}   = x^{2}\text{.}
+\end{equation*}
+</div>
+<p id="p-844">Now we just need to solve \(x^{2} = 3 \mod 11\text{.}\) Again, \(\gcd(2,11-1)=\gcd(2,10)=2\text{,}\) so we still can't use the method of <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a>. But now the power \(2\) is small enough we can just try values \(x\in \{0,1,...,10\}\) and see what works:</p>
+<ul class="disc">
+<li id="li-214"><p id="p-845">\(\displaystyle 1^{2}=1\)</p></li>
+<li id="li-215"><p id="p-846">\(\displaystyle 2^{2}=4\)</p></li>
+<li id="li-216"><p id="p-847">\(\displaystyle 3^{2}=9\)</p></li>
+<li id="li-217"><p id="p-848">\(4^{2}=16 = 5 \mod 11\text{.}\)</p></li>
+<li id="li-218"><p id="p-849">\(5^{2}=25 = 3\mod 11\text{.}\)</p></li>
+</ul>
+<p id="p-850">Thus, \(x=5\) is a solution to \(x^{22} = 3 \mod 11\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+5^{22}=5^{2}(5^{10})^{2} = 3\cdot (1)^{2}=3\text{.}
+\end{equation*}
+</div>
+<p id="p-851">Note that if we can't use <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a>, then the solution may not be unique. In this example, note that \(x=6\) is also a solution</p></article></div>
+<article class="example example-like" id="example-73"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-73"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.6</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-73"><article class="example example-like"><p id="p-852">Find \(x\in\{0,1,...,10\}\) that solves \(x^{3} = 9 \mod 11\text{.}\)</p>
+<p id="p-853">Note \(\gcd(3,11-1)=\gcd(3,10)=1\text{,}\) so this tells us that the method of <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a> should work in finding the unique solution. Note also that \(7\cdot 3 = 21=1+2\cdot 10\text{.}\) Thus, if \(x\) is the solution, then \(9 = x^{3}\mod 11\) implies</p>
+<div class="displaymath">
+\begin{equation*}
+9^{7} = (x^{3})^{7} =x^{3\cdot 7} =x^{1+2\cdot 10} =x\cdot (x^{10})^{2} = x\cdot(1)^{2} =x \mod 11\text{.}
+\end{equation*}
+</div>
+<p id="p-854">Thus, \(x = 9^{7}\text{.}\) Now we must find \(x\in \{0,1,...,10\}\) so that \(x = 9^{7}\text{.}\)</p>
+<ul class="disc">
+<li id="li-219"><p id="p-855">\(\displaystyle 9^{2}=81 = 4 \mod 11\)</p></li>
+<li id="li-220"><p id="p-856">\(9^{4}=(9^{2})^{2} = 4^{2} =16 = 5\mod 11\text{.}\)</p></li>
+<li id="li-221"><p id="p-857">\(9^{7}=9^{4}\cdot 9^{2}\cdot 9 = 5\cdot 4\cdot 9 =180 =176+4 = 4\mod 11\text{.}\)</p></li>
+</ul>
+<p id="p-858">Thus, \(x=4\) is the solution. We can also check \(4^{3}=64=55+9 = 9\mod 11\text{.}\)</p></article></div></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">9.4.1</span> <span class="title">Diophantine equations</span>
+</h3>
+<p id="p-859">As congruences relate to divisibility, we can also use them to solve diophantine equations.</p>
+<article class="example example-like" id="example-74"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-74"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.7</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-74"><article class="example example-like"><p id="p-860">What are the integer solutions to \(9x^{2}+9x+2=y^{4}\text{?}\)</p>
+<p id="p-861">We will present two methods for comparison, first using the usual divisbility methods from last week, and then a second method using modular arithmetic.</p>
+<p id="p-862"><em class="emphasis">Method 1:</em> If \(x,y\) are integer solutions, then</p>
+<div class="displaymath">
+\begin{equation*}
+y^{4}=9x^{2}+9x+2 =(3x+2)(3x+1)\text{.}
+\end{equation*}
+</div>
+<p id="p-863">Since \(y^{4}\geq 0\text{,}\) we know \(3x+1,3x+2&gt; 0\) or \(\lt 0\text{.}\) First assume \(&gt;0\text{.}\) They are coprime since \(\gcd(3x+1,3x+2)\) divides \((3x+2)-(3x+1)=1\text{.}\) Thus, \(3x+1=a^{4}\) and \(3x+2=b^{4}\) for some integers \(a\) and \(b\text{.}\) (We can assume they are non-negative). But then \(b^{4}-a^{4} =3x+2-(3x+1) =1\text{.}\) This is only possible if \((a,b)=(0,1)\) (exercise :). We can't have \(a=0\) since then \(3x+1=0\text{,}\) which is impossible if \(x\) is an integer. The same happens if \(3x+1,3x+2\lt 0\text{.}\) Thus, there are no solutions.</p>
+<p id="p-864">As you can see, the above solution is quite long (and we didn't do some of the details). Now let's instead use modular arithmetic for a shorter proof:</p>
+<p id="p-865"><em class="emphasis">Method 2:</em> If \(x,y\) are integer solutions to \(9x^{2}+9x+2=y^{4}\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+y^{4}=9x^{2}+9x+2 = 2\mod 3\text{.}
+\end{equation*}
+</div>
+<p id="p-866">Let \(z\in \{0,1,2\}\) be such that \(z = y\mod 3\text{,}\) then \(z^{4} = y^{4} = 2\mod 3\text{.}\) So let's test some \(z\)'s!</p>
+<ul class="disc">
+<li id="li-222"><p id="p-867">\(\displaystyle 0^{4}=0\)</p></li>
+<li id="li-223"><p id="p-868">\(\displaystyle 1^{4}=1\)</p></li>
+<li id="li-224"><p id="p-869">\(2^{4}=16 = 1 \mod 3\text{.}\)</p></li>
+</ul>
+<p id="p-870">So there are no \(z\in \{0,1,2\}\) so that \(z^{4} = 2 \mod 3\text{.}\) Thus, there are no integer solutions to \(9x^{2}+9x+2=y^{4}\text{.}\)</p></article></div></section></section></div></main>
+</div>
+</body>
+</html>

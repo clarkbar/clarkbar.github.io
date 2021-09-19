@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T13:29:58+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p>There are \({n \choose k}\) ways of picking numbers \(\{a_{1},...,a_{k}\}\) in \(\{1,2,...,n\}\text{.}\) Now we count how many cycles there are on these numbers via the multiplication principle. For a cycle \(f=(f_{1} \; \cdots  f_{k})\) with \(f_{i}\in  \{a_{1},...,a_{k}\}\text{,}\) remember that we also have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f=(f_{2} \; f_{3}\cdots f_{k} \; f_{1}) =(f_{3} \; f_{4} \cdots f_{k} \; f_{1} \; f_{2})\cdots
+\end{equation*}
+</div>
+<p class="continuation">and so we can assume that \(f_{1} = a_{1}\text{,}\) otherwise we can shift the numbers in the cycle as above until the first term in parentheses is \(a_{1}\text{.}\) Then there are \(k-1\) choices for what \(f_{2}\) can be, and after picking that there are \(k-2\) choices for what \(f_{3}\) can be, and so on. Thus, by the multiplication principle, there are \(k(k-1)(k-2)\cdots 1=(k-1)!\) many cycles using the numbers \(\{a_{1},...,a_{k}\}\text{,}\) and thus there are</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+{n \choose k} (k-1)!
+\end{equation*}
+</div>
+<p class="continuation">many \(k\) cylces in \(S_{n}\text{.}\)</p>
+</div></body>
+</html>

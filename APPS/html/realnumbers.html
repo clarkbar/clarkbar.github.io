@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T13:29:12+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Reals</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(	\newcommand{\andeq}{\text{\qquad and\qquad}}
+	\newcommand{\respectively}[1]{\text{\qquad(respectively,\quad}{#1}\text{\quad)}}
+	\newcommand{\resp}[1]{\text{\qquad(resp.,\quad}{#1}\text{\quad)}}
+
+	\newcommand{\comma}{\rlap{\ ,}}
+	\newcommand{\period}{\rlap{\ .}}
+	\newcommand{\semicolon}{\rlap{\ ;}}
+
+  
+
+  \newcommand{\mathup}[1]{\mathrm{#1}}
+  \newcommand{\mathbfup}[1]{\mathbf{#1}}
+  
+  \renewcommand{\AA}{\mathbfit{A}}
+  \newcommand{\BB}{\mathbfit{B}}
+  \newcommand{\CC}{\mathbfit{C}}
+  \newcommand{\DD}{\mathbfit{D}}
+  \newcommand{\EE}{\mathbfit{E}}
+  \newcommand{\FF}{\mathbfit{F}}
+  \newcommand{\GG}{\mathbfit{G}}
+  \newcommand{\HH}{\mathbfit{H}}
+  \newcommand{\II}{\mathbfit{I}}
+  \newcommand{\JJ}{\mathbfit{J}}
+  \newcommand{\KK}{\mathbfit{K}}
+  \newcommand{\LL}{\mathbfit{L}}
+  \newcommand{\MM}{\mathbfit{M}}
+  \newcommand{\NN}{\mathbfit{N}}
+  \newcommand{\OO}{\mathbfit{O}}
+  \newcommand{\PP}{\mathbfit{P}}
+  \newcommand{\QQ}{\mathbfit{Q}}
+  \newcommand{\RR}{\mathbfit{R}}
+  \renewcommand{\SS}{\mathbfit{S}}
+  \newcommand{\TT}{\mathbfit{T}}
+  \newcommand{\UU}{\mathbfit{U}}
+  \newcommand{\VV}{\mathbfit{V}}
+  \newcommand{\WW}{\mathbfit{W}}
+  \newcommand{\XX}{\mathbfit{X}}
+  \newcommand{\YY}{\mathbfit{Y}}
+  \newcommand{\ZZ}{\mathbfit{Z}}
+  
+  \let\Gammaup\Gamma
+  \let\Deltaup\Delta
+  \let\Thetaup\Theta
+  \let\Lambdaup\Lambda
+  \let\Xiup\Xi
+  \let\Piup\Pi
+  \let\Sigmaup\Sigma
+  \let\Upsilonup\Upsilon
+  \let\Phiup\Phi
+  \let\Psiup\Psi
+  \let\Omegaup\Omega
+  
+  \renewcommand{\Gamma}{\mathit{\Gammaup}}
+  \renewcommand{\Delta}{\mathit{\Deltaup}}
+  \renewcommand{\Theta}{\mathit{\Thetaup}}
+  \renewcommand{\Lambda}{\mathit{\Lambdaup}}
+  \renewcommand{\Xi}{\mathit{\Xiup}}
+  \renewcommand{\Pi}{\mathit{\Piup}}
+  \renewcommand{\Sigma}{\mathit{\Sigmaup}}
+  \renewcommand{\Upsilon}{\mathit{\Upsilonup}}
+  \renewcommand{\Phi}{\mathit{\Phiup}}
+  \renewcommand{\Psi}{\mathit{\Psiup}}
+  \renewcommand{\Omega}{\mathit{\Omegaup}}
+  
+	
+
+	\renewcommand{\epsilon}{\varepsilon}
+  \newcommand{\el}{\ell}
+	\renewcommand{\phi}{\varphi}
+
+	\newcommand{\mfa}{\mathfrak{a}}
+	\newcommand{\mfb}{\mathfrak{b}}
+	\newcommand{\mfc}{\mathfrak{c}}
+	\newcommand{\mfd}{\mathfrak{d}}
+	\newcommand{\mfe}{\mathfrak{e}}
+	\newcommand{\mff}{\mathfrak{f}}
+	\newcommand{\mfg}{\mathfrak{g}}
+	\newcommand{\mfh}{\mathfrak{h}}
+	\newcommand{\mfi}{\mathfrak{i}}
+	\newcommand{\mfj}{\mathfrak{j}}
+	\newcommand{\mfk}{\mathfrak{k}}
+	\newcommand{\mfl}{\mathfrak{l}}
+	\newcommand{\mfm}{\mathfrak{m}}
+	\newcommand{\mfn}{\mathfrak{n}}
+	\newcommand{\mfo}{\mathfrak{o}}
+	\newcommand{\mfp}{\mathfrak{p}}
+	\newcommand{\mfq}{\mathfrak{q}}
+	\newcommand{\mfr}{\mathfrak{r}}
+	\newcommand{\mfs}{\mathfrak{s}}
+	\newcommand{\mft}{\mathfrak{t}}
+	\newcommand{\mfu}{\mathfrak{u}}
+	\newcommand{\mfv}{\mathfrak{v}}
+	\newcommand{\mfw}{\mathfrak{w}}
+	\newcommand{\mfx}{\mathfrak{x}}
+	\newcommand{\mfy}{\mathfrak{y}}
+	\newcommand{\mfz}{\mathfrak{z}}
+
+	\newcommand{\ahat}{\hat{a}}
+	\newcommand{\bhat}{\hat{b}}
+	\newcommand{\chat}{\hat{c}}
+	\newcommand{\dhat}{\hat{d}}
+	\newcommand{\ehat}{\hat{e}}
+	\newcommand{\fhat}{\hat{f}}
+	\newcommand{\ghat}{\hat{g}}
+	\newcommand{\hhat}{\hat{h}}
+	\newcommand{\ihat}{\hat{\i}}
+	\newcommand{\jhat}{\hat{\j}}
+	\newcommand{\khat}{\hat{k}}
+	\newcommand{\elhat}{\hat{\el}}
+	\newcommand{\mhat}{\hat{m}}
+	\newcommand{\nhat}{\hat{n}}
+	\newcommand{\ohat}{\hat{o}}
+	\newcommand{\phat}{\hat{p}}
+	\newcommand{\qhat}{\hat{q}}
+	\newcommand{\rhat}{\hat{r}}
+	\newcommand{\shat}{\hat{s}}
+	\newcommand{\that}{\hat{t}}
+	\newcommand{\uhat}{\hat{u}}
+	\newcommand{\vhat}{\hat{v}}
+	\newcommand{\what}{\hat{w}}
+	\newcommand{\xhat}{\hat{x}}
+	\newcommand{\yhat}{\hat{y}}
+	\newcommand{\zhat}{\hat{z}}
+
+	\newcommand{\alphahat}{\hat{\alpha}}
+	\newcommand{\betahat}{\hat{\beta}}
+	\newcommand{\gammahat}{\hat{\gamma}}
+	\newcommand{\deltahat}{\hat{\delta}}
+	\newcommand{\epsilonhat}{\hat{\epsilon}}
+	\newcommand{\zetahat}{\hat{\zeta}}
+	\newcommand{\etahat}{\hat{\eta}}
+	\newcommand{\thetahat}{\hat{\theta}}
+	\newcommand{\iotahat}{\hat{\iota}}
+	\newcommand{\kappahat}{\hat{\kappa}}
+	\newcommand{\lambdahat}{\hat{\lambda}}
+	\newcommand{\muhat}{\hat{\mu}}
+	\newcommand{\nuhat}{\hat{\nu}}
+	\newcommand{\xihat}{\hat{\xi}}
+	\newcommand{\pihat}{\hat{\pi}}
+	\newcommand{\rhohat}{\hat{\rho}}
+	\newcommand{\sigmahat}{\hat{\sigma}}
+	\newcommand{\tauhat}{\hat{\tau}}
+	\newcommand{\upsilonhat}{\hat{\upsilon}}
+	\newcommand{\phihat}{\hat{\phi}}
+	\newcommand{\chihat}{\hat{\chi}}
+	\newcommand{\psihat}{\hat{\psi}}
+	\newcommand{\omegahat}{\hat{\omega}}
+
+	\newcommand{\Ahat}{\hat{A}}
+	\newcommand{\Bhat}{\hat{B}}
+	\newcommand{\Chat}{\hat{C}}
+	\newcommand{\Dhat}{\hat{D}}
+	\newcommand{\Ehat}{\hat{E}}
+	\newcommand{\Fhat}{\hat{F}}
+	\newcommand{\Ghat}{\hat{G}}
+	\newcommand{\Hhat}{\hat{H}}
+	\newcommand{\Ihat}{\hat{I}}
+	\newcommand{\Jhat}{\hat{J}}
+	\newcommand{\Khat}{\hat{K}}
+	\newcommand{\Lhat}{\hat{L}}
+	\newcommand{\Mhat}{\hat{M}}
+	\newcommand{\Nhat}{\hat{N}}
+	\newcommand{\Ohat}{\hat{O}}
+	\newcommand{\Phat}{\hat{P}}
+	\newcommand{\Qhat}{\hat{Q}}
+	\newcommand{\Rhat}{\hat{R}}
+	\newcommand{\Shat}{\hat{S}}
+	\newcommand{\That}{\hat{T}}
+	\newcommand{\Uhat}{\hat{U}}
+	\newcommand{\Vhat}{\hat{V}}
+	\newcommand{\What}{\hat{W}}
+	\newcommand{\Xhat}{\hat{X}}
+	\newcommand{\Yhat}{\hat{Y}}
+	\newcommand{\Zhat}{\hat{Z}}
+
+	\newcommand{\Gammahat}{\hat{\Gamma}}
+	\newcommand{\Deltahat}{\hat{\Delta}}
+	\newcommand{\Thetahat}{\hat{\Theta}}
+	\newcommand{\Lambdahat}{\hat{\Lambda}}
+	\newcommand{\Xihat}{\hat{\Xi}}
+	\newcommand{\Pihat}{\hat{\Pi}}
+	\newcommand{\Sigmahat}{\hat{\Sigma}}
+	\newcommand{\Upsilonhat}{\hat{\Upsilon}}
+	\newcommand{\Phihat}{\hat{\Phi}}
+	\newcommand{\Chihat}{\hat{\Chi}}
+	\newcommand{\Psihat}{\hat{\Psi}}
+	\newcommand{\Omegahat}{\hat{\Omega}}
+
+	\newcommand{\atilde}{\tilde{a}}
+	\newcommand{\btilde}{\tilde{b}}
+	\newcommand{\ctilde}{\tilde{c}}
+	\newcommand{\dtilde}{\tilde{d}}
+	\newcommand{\etilde}{\tilde{e}}
+	\newcommand{\ftilde}{\tilde{f}}
+	\newcommand{\gtilde}{\tilde{g}}
+	\newcommand{\htilde}{\tilde{h}}
+	\newcommand{\itilde}{\tilde{\i}}
+	\newcommand{\jtilde}{\tilde{\j}}
+	\newcommand{\ktilde}{\tilde{k}}
+	\newcommand{\eltilde}{\tilde{\el}}
+	\newcommand{\mtilde}{\tilde{m}}
+	\newcommand{\ntilde}{\tilde{n}}
+	\newcommand{\otilde}{\tilde{o}}
+	\newcommand{\ptilde}{\tilde{p}}
+	\newcommand{\qtilde}{\tilde{q}}
+	\newcommand{\rtilde}{\tilde{r}}
+	\newcommand{\stilde}{\tilde{s}}
+	\newcommand{\ttilde}{\tilde{t}}
+	\newcommand{\utilde}{\tilde{u}}
+	\newcommand{\vtilde}{\tilde{v}}
+	\newcommand{\wtilde}{\tilde{w}}
+	\newcommand{\xtilde}{\tilde{x}}
+	\newcommand{\ytilde}{\tilde{y}}
+	\newcommand{\ztilde}{\tilde{z}}
+
+	\newcommand{\alphatilde}{\tilde{\alpha}}
+	\newcommand{\betatilde}{\tilde{\beta}}
+	\newcommand{\gammatilde}{\tilde{\gamma}}
+	\newcommand{\deltatilde}{\tilde{\delta}}
+	\newcommand{\epsilontilde}{\tilde{\epsilon}}
+	\newcommand{\zetatilde}{\tilde{\zeta}}
+	\newcommand{\etatilde}{\tilde{\eta}}
+	\newcommand{\thetatilde}{\tilde{\theta}}
+	\newcommand{\iotatilde}{\tilde{\iota}}
+	\newcommand{\kappatilde}{\tilde{\kappa}}
+	\newcommand{\lambdatilde}{\tilde{\lambda}}
+	\newcommand{\mutilde}{\tilde{\mu}}
+	\newcommand{\nutilde}{\tilde{\nu}}
+	\newcommand{\xitilde}{\tilde{\xi}}
+	\newcommand{\pitilde}{\tilde{\pi}}
+	\newcommand{\rhotilde}{\tilde{\rho}}
+	\newcommand{\sigmatilde}{\tilde{\sigma}}
+	\newcommand{\tautilde}{\tilde{\tau}}
+	\newcommand{\upsilontilde}{\tilde{\upsilon}}
+	\newcommand{\phitilde}{\tilde{\phi}}
+	\newcommand{\chitilde}{\tilde{\chi}}
+	\newcommand{\psitilde}{\tilde{\psi}}
+	\newcommand{\omegatilde}{\tilde{\omega}}
+
+	\newcommand{\Atilde}{\widetilde{A}}
+	\newcommand{\Btilde}{\widetilde{B}}
+	\newcommand{\Ctilde}{\widetilde{C}}
+	\newcommand{\Dtilde}{\widetilde{D}}
+	\newcommand{\Etilde}{\widetilde{E}}
+	\newcommand{\Ftilde}{\widetilde{F}}
+	\newcommand{\Gtilde}{\widetilde{G}}
+	\newcommand{\Htilde}{\widetilde{H}}
+	\newcommand{\Itilde}{\widetilde{I}}
+	\newcommand{\Jtilde}{\widetilde{J}}
+	\newcommand{\Ktilde}{\widetilde{K}}
+	\newcommand{\Ltilde}{\widetilde{L}}
+	\newcommand{\Mtilde}{\widetilde{M}}
+	\newcommand{\Ntilde}{\widetilde{N}}
+	\newcommand{\Otilde}{\widetilde{O}}
+	\newcommand{\Ptilde}{\widetilde{P}}
+	\newcommand{\Qtilde}{\widetilde{Q}}
+	\newcommand{\Rtilde}{\widetilde{R}}
+	\newcommand{\Stilde}{\widetilde{S}}
+	\newcommand{\Ttilde}{\widetilde{T}}
+	\newcommand{\Utilde}{\widetilde{U}}
+	\newcommand{\Vtilde}{\widetilde{V}}
+	\newcommand{\Wtilde}{\widetilde{W}}
+	\newcommand{\Xtilde}{\widetilde{X}}
+	\newcommand{\Ytilde}{\widetilde{Y}}
+	\newcommand{\Ztilde}{\widetilde{Z}}
+
+	\newcommand{\Gammatilde}{\widetilde{\Gamma}}
+	\newcommand{\Deltatilde}{\widetilde{\Delta}}
+	\newcommand{\Thetatilde}{\widetilde{\Theta}}
+	\newcommand{\Lambdatilde}{\widetilde{\Lambda}}
+	\newcommand{\Xitilde}{\widetilde{\Xi}}
+	\newcommand{\Pitilde}{\widetilde{\Pi}}
+	\newcommand{\Sigmatilde}{\widetilde{\Sigma}}
+	\newcommand{\Upsilontilde}{\widetilde{\Upsilon}}
+	\newcommand{\Phitilde}{\widetilde{\Phi}}
+	\newcommand{\Chitilde}{\widetilde{\Chi}}
+	\newcommand{\Psitilde}{\widetilde{\Psi}}
+	\newcommand{\Omegatilde}{\widetilde{\Omega}}
+
+	
+
+	\DeclareMathOperator{\Aut}{Aut}
+	\DeclareMathOperator{\End}{End}
+	\DeclareMathOperator{\Equival}{Equiv}
+	\DeclareMathOperator{\Fun}{Fun}
+	\newcommand{\Funcross}{\Fun^{\cross}}
+	\newcommand{\Functs}{\Fun^{\cts}}
+	\newcommand{\Funpyk}{\Functs}
+	\newcommand{\Funlowerstar}{\Fun_{\ast}}
+	\newcommand{\Funupperstar}{\Fun^{\ast}}
+	\DeclareMathOperator{\Hom}{Hom}
+	\newcommand{\HOM}{\ensuremath{\textup{\textsc{Hom}}}}
+	\DeclareMathOperator{\Isom}{Isom}
+	\DeclareMathOperator{\Map}{Map}
+	\DeclareMathOperator{\Mor}{Mor}
+	\newcommand{\MOR}{\ensuremath{\textup{\textsc{Mor}}}}
+
+	\DeclareMathOperator{\GL}{GL}
+	\DeclareMathOperator{\PSL}{PSL}
+	\DeclareMathOperator{\PSO}{PSO}
+	\DeclareMathOperator{\PSp}{PSp}
+	\DeclareMathOperator{\PSU}{PSU}
+	\DeclareMathOperator{\SL}{SL}
+	\DeclareMathOperator{\SO}{SO}
+	\DeclareMathOperator{\Sp}{Sp}
+	\DeclareMathOperator{\SU}{SU}
+
+	\DeclareMathOperator{\cofib}{cofib}
+	\DeclareMathOperator{\coker}{coker}
+	\DeclareMathOperator*{\colim}{colim}
+	\DeclareMathOperator*{\hocolim}{hocolim}
+	\DeclareMathOperator*{\holim}{holim}
+	\DeclareMathOperator{\fib}{fib}
+
+	\DeclareMathOperator{\Nerve}{N}
+	\DeclareMathOperator{\trun}{\uptau}
+
+	\DeclareMathOperator{\cosk}{ck}
+	\DeclareMathOperator{\creff}{cr}
+	\DeclareMathOperator{\ev}{ev}
+	\DeclareMathOperator{\id}{id}
+	\DeclareMathOperator{\pr}{pr}
+	\DeclareMathOperator{\rk}{rk}
+	\DeclareMathOperator{\sd}{sd}
+	\DeclareMathOperator{\sk}{sk}
+	\DeclareMathOperator{\specpos}{sp}
+	\newcommand{\sdop}{\sd^{\op}}
+
+	
+
+	\newcommand{\paren}[1]{\left(#1\right)}
+	\newcommand{\angs}[1]{\langle #1 \rangle}
+  \newcommand{\quine}[1]{\ulcorner #1 \urcorner}
+	\newcommand{\ultimes}{\,\underline{\times}\,}
+	\newcommand{\horn}[2]{\upLambda_{#1}^{#2}}
+
+	
+
+	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
+
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
+\def\LUB{{ LUB}}
+\renewcommand{\sectionmark}[1]{{}}
+\def\GLB{{ GLB}}
+\renewcommand{\headrulewidth}{0.5pt}
+\def\ve{\varepsilon}
+\renewcommand{\footrulewidth}{0pt}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\headrulewidth}{0pt}
+\def\R{\mathbb{R}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
+\def\LUB{{ LUB}}
+\newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
+\def\ve{\epsilon}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\LUB{{ LUB}}
+\def\easylemma{the Linear Combination Lemma}
+\def\lcm{ lcm}
+\def\cl{{ cl}}
+\newcommand{\thepartimage}{}
+\newcommand{\thechapterimage}{}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\N{{\mathbb{N}}}
+\def\Q{{\mathbb{Q}}}
+\def\C{{\mathbb{C}}}
+\def\hcf{{ hcf}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">An Invitation to Pure Mathematics:</span> <span class="subtitle">Accelerated Proofs and Problem Solving 2021</span></a></h1>
+<p class="byline">Instructor: Clark Barwick</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="realline.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="realline.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="archimedeanproperty.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="realline.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="realline.html" title="Up">Up</a><a class="next-button button toolbar-item" href="archimedeanproperty.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic"><span class="codenumber">1</span> <span class="title">Foundations of mathematics</span></a><ul>
+<li><a href="sets.html" data-scroll="sets">A first look at the theory of sets</a></li>
+<li><a href="logicalstatements.html" data-scroll="logicalstatements">Logical Statements</a></li>
+<li><a href="conjunction.html" data-scroll="conjunction">Conjunction</a></li>
+<li><a href="intersection.html" data-scroll="intersection">Intersection</a></li>
+<li><a href="disjunction.html" data-scroll="disjunction">Disjunction</a></li>
+<li><a href="union.html" data-scroll="union">Union</a></li>
+<li><a href="negation.html" data-scroll="negation">Negation</a></li>
+<li><a href="complements.html" data-scroll="complements">Complements</a></li>
+<li><a href="conditionals.html" data-scroll="conditionals">Conditionals</a></li>
+<li><a href="logicalequivalence.html" data-scroll="logicalequivalence">Logical equivalence</a></li>
+<li><a href="proofbycontradiction.html" data-scroll="proofbycontradiction">Proof by Contradiction</a></li>
+<li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
+<li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
+<li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and equivalence relations</span></a><ul>
+<li><a href="cartesianproducts.html" data-scroll="cartesianproducts">Cartesian products</a></li>
+<li><a href="maps.html" data-scroll="maps">Maps</a></li>
+<li><a href="injectivesurjective.html" data-scroll="injectivesurjective">Injective and surjective</a></li>
+<li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
+<li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
+<li><a href="sizesofsets.html" data-scroll="sizesofsets">Comparing sizes of sets with functions</a></li>
+<li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
+<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">The Real Line</span></a><ul>
+<li><a href="realnumbers.html" data-scroll="realnumbers" class="active">The Reals</a></li>
+<li><a href="archimedeanproperty.html" data-scroll="archimedeanproperty">The integers and the Archimedean Property</a></li>
+<li><a href="rationals.html" data-scroll="rationals">The rationals and irrationals</a></li>
+<li><a href="roots.html" data-scroll="roots">Roots</a></li>
+<li><a href="realexercises.html" data-scroll="realexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a><ul>
+<li><a href="orderaxioms.html" data-scroll="orderaxioms">The axioms for order</a></li>
+<li><a href="separatingproducts.html" data-scroll="separatingproducts">Separating products</a></li>
+<li><a href="absolutevalues.html" data-scroll="absolutevalues">Absolute Values</a></li>
+<li><a href="homogeneity.html" data-scroll="homogeneity">Homogeneity and inequalities</a></li>
+<li><a href="inequalitiesexercises.html" data-scroll="inequalitiesexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="induction.html" data-scroll="induction"><span class="codenumber">5</span> <span class="title">Induction</span></a><ul>
+<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on \(\Sigma\) notation</a></li>
+<li><a href="inductionsection.html" data-scroll="inductionsection">Induction</a></li>
+<li><a href="stronginduction.html" data-scroll="stronginduction">Strong Mathematical Induction</a></li>
+<li><a href="inequalitiesredux.html" data-scroll="inequalitiesredux">Inequalities revisited</a></li>
+<li><a href="inductionexercises.html" data-scroll="inductionexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="upperbounds.html" data-scroll="upperbounds"><span class="codenumber">6</span> <span class="title">Upper Bounds and Least Upper Bounds</span></a><ul>
+<li><a href="upperlowerbounds.html" data-scroll="upperlowerbounds">Upper and Lower Bounds</a></li>
+<li><a href="sups.html" data-scroll="sups">Least Upper Bounds</a></li>
+<li><a href="upperboundsexercises.html" data-scroll="upperboundsexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="limits.html" data-scroll="limits"><span class="codenumber">7</span> <span class="title">Limits</span></a><ul>
+<li><a href="epsilondefinitionoflimit.html" data-scroll="epsilondefinitionoflimit">Motivation and the \(\epsilon-N\) definition of a limit</a></li>
+<li><a href="rulesforlimits.html" data-scroll="rulesforlimits">Rules for Limits</a></li>
+<li><a href="existenceofroots.html" data-scroll="existenceofroots">Application: the existence of roots.</a></li>
+<li><a href="infinitelimits.html" data-scroll="infinitelimits">Infinite limits</a></li>
+<li><a href="limitsexercises.html" data-scroll="limitsexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="monotoneconvergence.html" data-scroll="monotoneconvergence"><span class="codenumber">8</span> <span class="title">The Monotone Convergence Theorem</span></a><ul>
+<li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection">The Monotone Convergence Theorem</a></li>
+<li><a href="iterativelydefinedsequences.html" data-scroll="iterativelydefinedsequences">Iteratively defined sequences</a></li>
+<li><a href="monotoneexercises.html" data-scroll="monotoneexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">9</span> <span class="title">Decimals and Series</span></a><ul>
+<li><a href="decimals.html" data-scroll="decimals">Decimals</a></li>
+<li><a href="series.html" data-scroll="series">Infinite Series</a></li>
+<li><a href="numbere.html" data-scroll="numbere">The number \(e\)</a></li>
+<li><a href="decimalsseriesexercises.html" data-scroll="decimalsseriesexercises">Exercises</a></li>
+<li><a href="eisirrational.html" data-scroll="eisirrational">*Appendix: irrationality of \(e\)</a></li>
+<li><a href="subsequences.html" data-scroll="subsequences">Subsequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">10</span> <span class="title">Complex Numbers</span></a><ul>
+<li><a href="complexnumberssection.html" data-scroll="complexnumberssection">Complex Numbers</a></li>
+<li><a href="cartesianandpolar.html" data-scroll="cartesianandpolar">Cartesian and Polar form</a></li>
+<li><a href="geometryandarithmeticofC.html" data-scroll="geometryandarithmeticofC">Geometry and arithmetic in \​(\mathbb{C}\)</a></li>
+<li><a href="exponentialform.html" data-scroll="exponentialform">Exponential form</a></li>
+<li><a href="rootsof1.html" data-scroll="rootsof1">Roots of Unity</a></li>
+<li><a href="complexnumbersexercises.html" data-scroll="complexnumbersexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="polynomials.html" data-scroll="polynomials"><span class="codenumber">11</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="introtopolynomials.html" data-scroll="introtopolynomials">Introduction</a></li>
+<li><a href="factoringpolynomials.html" data-scroll="factoringpolynomials">Factoring Polynomials</a></li>
+<li><a href="realpolynomials.html" data-scroll="realpolynomials">Real Polynomials</a></li>
+<li><a href="rootcoefficienttheorem.html" data-scroll="rootcoefficienttheorem">Root-Coefficient Theorem</a></li>
+<li><a href="polynomialsexercises.html" data-scroll="polynomialsexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="integers"><span class="codenumber">12</span> <span class="title">Integers</span></a><ul>
+<li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
+<li><a href="euclideanalgo.html" data-scroll="euclideanalgo">The GCD and the Euclidean Algorithm</a></li>
+<li><a href="bezoutcorollaries.html" data-scroll="bezoutcorollaries">Corollaries of Bezout's Identity and the Linear Combination Lemma</a></li>
+<li><a href="fundamentaltheoremofarithmetic.html" data-scroll="fundamentaltheoremofarithmetic">The Fundamental Theorem of Arithmetic (FTA)</a></li>
+<li><a href="findingdivisors.html" data-scroll="findingdivisors">Finding divisors via FTA</a></li>
+<li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
+<li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
+<li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
+<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="modular.html" data-scroll="modular"><span class="codenumber">13</span> <span class="title">Modular Arithmetic</span></a><ul>
+<li><a href="arithmeticmodm.html" data-scroll="arithmeticmodm">Arithmetic modulo \(m\)</a></li>
+<li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
+<li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
+<li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
+<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="infinitecardinals.html" data-scroll="infinitecardinals"><span class="codenumber">14</span> <span class="title">Applications: What's bigger than \(\infty\text{?}\)*</span></a></li>
+<li class="link">
+<a href="counting.html" data-scroll="counting"><span class="codenumber">15</span> <span class="title">Counting</span></a><ul>
+<li><a href="multiplicationprinciple.html" data-scroll="multiplicationprinciple">The Multiplication Principle</a></li>
+<li><a href="correspendenceandovercounting.html" data-scroll="correspendenceandovercounting">Correspondence and overcounting</a></li>
+<li><a href="countingsubsets.html" data-scroll="countingsubsets">Counting subsets</a></li>
+<li><a href="countingpartitions.html" data-scroll="countingpartitions">Counting partitions</a></li>
+<li><a href="binomialmultinomial.html" data-scroll="binomialmultinomial">The Binomial and Multinomial Theorems</a></li>
+<li><a href="inclusionexclusion.html" data-scroll="inclusionexclusion">Inclusion-Exclusion</a></li>
+<li><a href="countingexercises.html" data-scroll="countingexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="permutations.html" data-scroll="permutations"><span class="codenumber">16</span> <span class="title">Permutations</span></a><ul>
+<li><a href="permutationssection.html" data-scroll="permutationssection">Permutations</a></li>
+<li><a href="tablenotation.html" data-scroll="tablenotation">Table Notation</a></li>
+<li><a href="compositionandidentity.html" data-scroll="compositionandidentity">Composition and identity</a></li>
+<li><a href="inverseofpermutation.html" data-scroll="inverseofpermutation">Inverse permutations</a></li>
+<li><a href="section-92.html" data-scroll="section-92">Powers</a></li>
+<li><a href="cycles.html" data-scroll="cycles">Cycles</a></li>
+<li><a href="cyclenotation.html" data-scroll="cyclenotation">Cycle Notation</a></li>
+<li><a href="section-95.html" data-scroll="section-95">Order of a permutation</a></li>
+<li><a href="evenandoddpermutations.html" data-scroll="evenandoddpermutations">Even and Odd permutations</a></li>
+<li><a href="permutationexercises.html" data-scroll="permutationexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="realnumbers"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">The Reals</span>
+</h2>
+<p id="p-417">In this course, our aim is to derive as many useful tools and theorems as we can from the fewest assumptions. We could spend a whole year (or years!) on the foundations of mathematics, and try to make sense of, for example, what the number 2 is, but instead we will take for granted the existence the <dfn class="terminology">real</dfn> numbers \(\mathbb{R}\) that you are all familiar with from school. We assume that, if an expression contains a term \(x\) and \(x=y\text{,}\) we can replace \(x\) with \(y\) in that expression. For example, \(3+(5-1)=3+4\) since \(5-1=4\text{.}\)</p>
+<p id="p-418">We will also assume we have the familiar addition operation “\(+\)” and multiplication operation “\(\cdot\)” that combines two numbers \(a\) and \(b\) to make another real number \(a+b\) and \(a\cdot b=ab\) respectively, and which make \(\mathbb{R}\) into what we call a “field”:</p>
+<article class="definition definition-like" id="definition-25"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-419">A <dfn class="terminology">field</dfn> is a set \(F\) along with operations \(+\) and \(\cdot\) so that the following hold:</p>
+<ul class="disc"><li id="li-99">
+<h6 class="heading"><span class="title">\textbf{Rules of Addition \(+\text{:}\)}.</span></h6>
+<p id="p-420">For \(a,b,c\in F\text{,}\)</p>
+<ul class="circle">
+<li id="li-100">
+<h6 class="heading"><span class="title">(A0).</span></h6>
+<p id="p-421">\(\displaystyle a+b\in F\)</p>
+</li>
+<li id="li-101">
+<h6 class="heading"><span class="title">(A1).</span></h6>
+<p id="p-422">Commutativity: \(a+b=b+a\text{.}\)</p>
+</li>
+<li id="li-102">
+<h6 class="heading"><span class="title">(A2).</span></h6>
+<p id="p-423">Associativity: \(a+(b+c)=(a+b)+c\text{.}\)</p>
+</li>
+<li id="li-103">
+<h6 class="heading"><span class="title">(A3).</span></h6>
+<p id="p-424">There is an element \(0\in F\) so that \(0+a=a\) for all \(a\in F\text{.}\)</p>
+</li>
+<li id="li-104">
+<h6 class="heading"><span class="title">(A4).</span></h6>
+<p id="p-425">There is an element we denote \(-a\in F\) so that \(a+(-a)=0\text{.}\) We write \(b+(-a)=b-a\) for short.</p>
+</li>
+</ul>
+</li></ul>
+<ul class="disc"><li id="li-105">
+<h6 class="heading"><span class="title">\textbf{Rules of Multiplication \(\cdot\text{:}\)}.</span></h6>
+<p id="p-426">For \(a,b,c\in F\text{,}\)</p>
+<ul class="circle">
+<li id="li-106">
+<h6 class="heading"><span class="title">(M0).</span></h6>
+<p id="p-427">\(\displaystyle a\cdot b\in F\)</p>
+</li>
+<li id="li-107">
+<h6 class="heading"><span class="title">(M1).</span></h6>
+<p id="p-428">Commutativity: \(a\cdot b=b\cdot a\)</p>
+</li>
+<li id="li-108">
+<h6 class="heading"><span class="title">(M2).</span></h6>
+<p id="p-429">Associativity: \(a\cdot (b\cdot c)=(a\cdot b)\cdot c\)</p>
+</li>
+<li id="li-109">
+<h6 class="heading"><span class="title">(M3).</span></h6>
+<p id="p-430">There is an element \(1\in F\) so that \(1\cdot a=a\)</p>
+</li>
+<li id="li-110">
+<h6 class="heading"><span class="title">(M4).</span></h6>
+<p id="p-431">If \(a\neq 0\text{,}\) there is a number we denote \(\frac{1}{a}\) so that \(a\cdot\frac{1}{a}=1\text{.}\) We write \(\frac{1}{a}\cdot b=\frac{b}{a}\) for short.</p>
+</li>
+<li id="li-111">
+<h6 class="heading"><span class="title">(M5).</span></h6>
+<p id="p-432">Distribution: \(a\cdot (b+c)=a\cdot b+a\cdot c\text{.}\)</p>
+</li>
+</ul>
+</li></ul></article><p id="p-433">We will frequently write \(ab\) for \(a\cdot b\) when there is no chance of ambiguity, so for example, “\(a\) times \(b\)” can be write \(ab\) or \(a\cdot b\text{,}\) but “\(2\) times \(3\)” must be written \(2\cdot 3\) to avoid confusion with the number \(23\text{.}\)</p>
+<p id="p-434">We will take as an <dfn class="terminology">axiom</dfn> that the real numbers \(\mathbb{R}\) form a field with the usual addition and multiplication operations, that is, we assume they hold without proof. There are many other fields apart from the reals, and we will see a few more in this class (you will learn about more interesting ones in future algebra classes).</p>
+<p id="p-435">Without these rules it would be hard to solve any equations. For example, if we want to solve \(3x+2=2x+5\text{,}\) what rules do we need? Below we prove some propositions using only the axioms above that list the “moves” we would usually make in solving such an equation.</p>
+<article class="proposition theorem-like" id="p_field-consequences"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
+</h6>
+<p id="p-436">The properties (A0),...,(A4) above imply that, for \(x,y,z\in \mathbb{R}\text{,}\)</p>
+<ol class="lower-alpha">
+<li id="li-112"><p id="p-437">\(x+y=x+z\) if and only if \(y=z\)</p></li>
+<li id="li-113"><p id="p-438">If \(x+y=x\text{,}\) then \(y=0\)</p></li>
+<li id="li-114"><p id="p-439">If \(x+y=0\text{,}\) then \(x=-y\)</p></li>
+<li id="li-115"><p id="p-440">\(-(-x)=x\text{.}\)</p></li>
+</ol></article><article class="hiddenproof" id="proof-10"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><ol class="lower-alpha">
+<li id="li-116">
+<p id="p-441">If \(y=z\text{,}\) then we can just substitute \(y\) with \(z\) in \(x+y\) to get that this equals \(x+z\text{.}\) Conversely, if \(x+y=x+z\text{,}\) then</p>
+<div class="displaymath">
+\begin{align*}
+y \amp  \stackrel{(A3)}{=}y+0\stackrel{(A4)}{=}y+(x-x)\stackrel{(A2)}{=}(y+x)-x\stackrel{(A1)}{=}(x+y)-x =(x+z)-x\stackrel{(A1)}{=}(z+x)-x\\
+\amp \stackrel{(A2)}{=}z+(x-x) \stackrel{(A4)}{=}z+0 \stackrel{(A3)}{=}z\text{.}
+\end{align*}
+</div>
+</li>
+<li id="li-117"><p id="p-442">If \(x+y=x\text{,}\) then by (A3), \(x+y=x=x+0\text{,}\) so (a) (with \(z=0\)) implies \(y=0\text{.}\)</p></li>
+<li id="li-118">
+<p id="p-443">If \(x+y=0\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+x+y=0 \stackrel{(A4)}{=}y+(-y)
+\end{equation*}
+</div>
+<p class="continuation">and so (a) (with \(z=-y\)) implies \(x=-y\text{.}\)</p>
+</li>
+<li id="li-119">
+<p id="p-444">By definition,</p>
+<div class="displaymath">
+\begin{equation*}
+-x+-(-x)\stackrel{(A4)}{=} 0\stackrel{(A2)}{=}x-x \stackrel{(A1)}{=}-x+x
+\end{equation*}
+</div>
+<p class="continuation">so (a) implies \(-(-x)=x\text{.}\)</p>
+</li>
+</ol></article></div>
+<p id="p-445">Try this proposition on your own (the proof is very similar to the above):</p>
+<article class="proposition theorem-like" id="proposition-2"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
+</h6>
+<p id="p-446">The properties (M0),...,(M5) imply that, for \(x,y,z\in \mathbb{R}\text{,}\) if \(x\neq 0\text{,}\)</p>
+<ol class="lower-alpha">
+<li id="li-120"><p id="p-447">\(xy=xz\) if and only if \(y=z\)</p></li>
+<li id="li-121"><p id="p-448">If \(xy=x\text{,}\) then \(y=1\)</p></li>
+<li id="li-122"><p id="p-449">If \(xy=1\text{,}\) then \(y=\frac{1}{x}\)</p></li>
+<li id="li-123"><p id="p-450">\(1/(1/x)=x\text{.}\)</p></li>
+</ol></article><p id="p-451">We mention a few more useful facts about the reals. Again, they look obvious, but it takes some work to show that they are derived from the property that \(\mathbb{R}\) being a field. We leave their proofs as an exercise, but remember to use the above axioms and propositions that we have proved so far:</p>
+<article class="proposition theorem-like" id="p_0x_0"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
+</h6>
+<p id="p-452">For \(x,y\in \mathbb{R}\text{,}\)</p>
+<ol class="lower-alpha">
+<li id="li-124"><p id="p-453">\(0\cdot x=0\text{.}\)</p></li>
+<li id="li-125"><p id="p-454">If \(x\neq 0\neq y\text{,}\) then \(xy\neq 0\text{.}\)</p></li>
+<li id="li-126"><p id="p-455">\((-x)y=-(xy)=x(-y)\text{.}\)</p></li>
+<li id="li-127"><p id="p-456">\((-x)(-y)=xy\text{.}\)</p></li>
+</ol></article></section></div></main>
+</div>
+</body>
+</html>

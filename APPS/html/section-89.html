@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-14T11:27:45+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Powers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
+\def\LUB{{ LUB}}
+\renewcommand{\sectionmark}[1]{{}}
+\def\GLB{{ GLB}}
+\renewcommand{\headrulewidth}{0.5pt}
+\def\ve{\varepsilon}
+\renewcommand{\footrulewidth}{0pt}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\headrulewidth}{0pt}
+\def\R{\mathbb{R}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
+\def\LUB{{ LUB}}
+\newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
+\def\ve{\epsilon}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\LUB{{ LUB}}
+\def\easylemma{the Linear Combination Lemma}
+\def\lcm{ lcm}
+\def\cl{{ cl}}
+\newcommand{\thepartimage}{}
+\newcommand{\thechapterimage}{}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\N{{\mathbb{N}}}
+\def\Q{{\mathbb{Q}}}
+\def\C{{\mathbb{C}}}
+\def\hcf{{ hcf}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">An Invitation to Pure Mathematics:</span> <span class="subtitle">Accelerated Proofs and Problem Solving 2021</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="inverseofpermutation.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="permutations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="cycles.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="inverseofpermutation.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="permutations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="cycles.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link">
+<a href="logic.html" data-scroll="logic"><span class="codenumber">1</span> <span class="title">Logic</span></a><ul>
+<li><a href="sets.html" data-scroll="sets">A first look at the theory of sets</a></li>
+<li><a href="logicalstatements.html" data-scroll="logicalstatements">Logical Statements</a></li>
+<li><a href="conjunction.html" data-scroll="conjunction">Conjunction</a></li>
+<li><a href="intersection.html" data-scroll="intersection">Intersection</a></li>
+<li><a href="disjunction.html" data-scroll="disjunction">Disjunction</a></li>
+<li><a href="union.html" data-scroll="union">Union</a></li>
+<li><a href="negation.html" data-scroll="negation">Negation</a></li>
+<li><a href="complements.html" data-scroll="complements">Complements</a></li>
+<li><a href="conditionals.html" data-scroll="conditionals">Conditionals</a></li>
+<li><a href="logicalequivalence.html" data-scroll="logicalequivalence">Logical equivalence</a></li>
+<li><a href="proofbycontradiction.html" data-scroll="proofbycontradiction">Proof by Contradiction</a></li>
+<li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="realline.html" data-scroll="realline"><span class="codenumber">2</span> <span class="title">The Real Line</span></a><ul>
+<li><a href="realnumbers.html" data-scroll="realnumbers">The Reals</a></li>
+<li><a href="archimedeanproperty.html" data-scroll="archimedeanproperty">The integers and the Archimedean Property</a></li>
+<li><a href="rationals.html" data-scroll="rationals">The rationals and irrationals</a></li>
+<li><a href="roots.html" data-scroll="roots">Roots</a></li>
+<li><a href="realexercises.html" data-scroll="realexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">3</span> <span class="title">Inequalities</span></a><ul>
+<li><a href="orderaxioms.html" data-scroll="orderaxioms">The axioms for order</a></li>
+<li><a href="separatingproducts.html" data-scroll="separatingproducts">Separating products</a></li>
+<li><a href="absolutevalues.html" data-scroll="absolutevalues">Absolute Values</a></li>
+<li><a href="homogeneity.html" data-scroll="homogeneity">Homogeneity and inequalities</a></li>
+<li><a href="inequalitiesexercises.html" data-scroll="inequalitiesexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="induction.html" data-scroll="induction"><span class="codenumber">4</span> <span class="title">Induction</span></a><ul>
+<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on \(\Sigma\) notation</a></li>
+<li><a href="inductionsection.html" data-scroll="inductionsection">Induction</a></li>
+<li><a href="stronginduction.html" data-scroll="stronginduction">Strong Mathematical Induction</a></li>
+<li><a href="inequalitiesredux.html" data-scroll="inequalitiesredux">Inequalities revisited</a></li>
+<li><a href="inductionexercises.html" data-scroll="inductionexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="upperbounds.html" data-scroll="upperbounds"><span class="codenumber">5</span> <span class="title">Upper Bounds and Least Upper Bounds</span></a><ul>
+<li><a href="upperlowerbounds.html" data-scroll="upperlowerbounds">Upper and Lower Bounds</a></li>
+<li><a href="sups.html" data-scroll="sups">Least Upper Bounds</a></li>
+<li><a href="upperboundsexercises.html" data-scroll="upperboundsexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="limits.html" data-scroll="limits"><span class="codenumber">6</span> <span class="title">Limits</span></a><ul>
+<li><a href="epsilondefinitionoflimit.html" data-scroll="epsilondefinitionoflimit">Motivation and the \(\epsilon-N\) definition of a limit</a></li>
+<li><a href="rulesforlimits.html" data-scroll="rulesforlimits">Rules for Limits</a></li>
+<li><a href="existenceofroots.html" data-scroll="existenceofroots">Application: the existence of roots.</a></li>
+<li><a href="infinitelimits.html" data-scroll="infinitelimits">Infinite limits</a></li>
+<li><a href="limitsexercises.html" data-scroll="limitsexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="monotoneconvergence.html" data-scroll="monotoneconvergence"><span class="codenumber">7</span> <span class="title">The Monotone Convergence Theorem</span></a><ul>
+<li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection">The Monotone Convergence Theorem</a></li>
+<li><a href="iterativelydefinedsequences.html" data-scroll="iterativelydefinedsequences">Iteratively defined sequences</a></li>
+<li><a href="monotoneexercises.html" data-scroll="monotoneexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">8</span> <span class="title">Decimals and Series</span></a><ul>
+<li><a href="decimals.html" data-scroll="decimals">Decimals</a></li>
+<li><a href="series.html" data-scroll="series">Infinite Series</a></li>
+<li><a href="numbere.html" data-scroll="numbere">The number \(e\)</a></li>
+<li><a href="decimalsseriesexercises.html" data-scroll="decimalsseriesexercises">Exercises</a></li>
+<li><a href="eisirrational.html" data-scroll="eisirrational">*Appendix: irrationality of \(e\)</a></li>
+<li><a href="subsequences.html" data-scroll="subsequences">Subsequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">9</span> <span class="title">Complex Numbers</span></a><ul>
+<li><a href="complexnumberssection.html" data-scroll="complexnumberssection">Complex Numbers</a></li>
+<li><a href="cartesianandpolar.html" data-scroll="cartesianandpolar">Cartesian and Polar form</a></li>
+<li><a href="geometryandarithmeticofC.html" data-scroll="geometryandarithmeticofC">Geometry and arithmetic in \​(\mathbb{C}\)</a></li>
+<li><a href="exponentialform.html" data-scroll="exponentialform">Exponential form</a></li>
+<li><a href="rootsof1.html" data-scroll="rootsof1">Roots of Unity</a></li>
+<li><a href="complexnumbersexercises.html" data-scroll="complexnumbersexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="polynomials.html" data-scroll="polynomials"><span class="codenumber">10</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="introtopolynomials.html" data-scroll="introtopolynomials">Introduction</a></li>
+<li><a href="factoringpolynomials.html" data-scroll="factoringpolynomials">Factoring Polynomials</a></li>
+<li><a href="realpolynomials.html" data-scroll="realpolynomials">Real Polynomials</a></li>
+<li><a href="rootcoefficienttheorem.html" data-scroll="rootcoefficienttheorem">Root-Coefficient Theorem</a></li>
+<li><a href="polynomialsexercises.html" data-scroll="polynomialsexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="integers"><span class="codenumber">11</span> <span class="title">Integers</span></a><ul>
+<li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
+<li><a href="euclideanalgo.html" data-scroll="euclideanalgo">The GCD and the Euclidean Algorithm</a></li>
+<li><a href="bezoutcorollaries.html" data-scroll="bezoutcorollaries">Corollaries of Bezout's Identity and the Linear Combination Lemma</a></li>
+<li><a href="fundamentaltheoremofarithmetic.html" data-scroll="fundamentaltheoremofarithmetic">The Fundamental Theorem of Arithmetic (FTA)</a></li>
+<li><a href="findingdivisors.html" data-scroll="findingdivisors">Finding divisors via FTA</a></li>
+<li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
+<li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
+<li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
+<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="modular.html" data-scroll="modular"><span class="codenumber">12</span> <span class="title">Modular Arithmetic</span></a><ul>
+<li><a href="arithmeticmodm.html" data-scroll="arithmeticmodm">Arithmetic modulo \(m\)</a></li>
+<li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
+<li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
+<li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
+<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="moresets.html" data-scroll="moresets"><span class="codenumber">13</span> <span class="title">More set theory and Equivalence relations</span></a><ul>
+<li><a href="cartesianproducts.html" data-scroll="cartesianproducts">Cartesian products</a></li>
+<li><a href="maps.html" data-scroll="maps">Maps</a></li>
+<li><a href="injectivesurjective.html" data-scroll="injectivesurjective">Injective and surjective</a></li>
+<li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
+<li><a href="sizesofsets.html" data-scroll="sizesofsets">Comparing sizes of sets with functions</a></li>
+<li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
+<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="infinitecardinals.html" data-scroll="infinitecardinals"><span class="codenumber">14</span> <span class="title">Applications: What's bigger than \(\infty\text{?}\)*</span></a></li>
+<li class="link">
+<a href="counting.html" data-scroll="counting"><span class="codenumber">15</span> <span class="title">Counting</span></a><ul>
+<li><a href="multiplicationprinciple.html" data-scroll="multiplicationprinciple">The Multiplication Principle</a></li>
+<li><a href="correspendenceandovercounting.html" data-scroll="correspendenceandovercounting">Correspondence and overcounting</a></li>
+<li><a href="countingsubsets.html" data-scroll="countingsubsets">Counting subsets</a></li>
+<li><a href="countingpartitions.html" data-scroll="countingpartitions">Counting partitions</a></li>
+<li><a href="binomialmultinomial.html" data-scroll="binomialmultinomial">The Binomial and Multinomial Theorems</a></li>
+<li><a href="inclusionexclusion.html" data-scroll="inclusionexclusion">Inclusion-Exclusion</a></li>
+<li><a href="countingexercises.html" data-scroll="countingexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="permutations.html" data-scroll="permutations"><span class="codenumber">16</span> <span class="title">Permutations</span></a><ul>
+<li><a href="permutationssection.html" data-scroll="permutationssection">Permutations</a></li>
+<li><a href="tablenotation.html" data-scroll="tablenotation">Table Notation</a></li>
+<li><a href="compositionandidentity.html" data-scroll="compositionandidentity">Composition and identity</a></li>
+<li><a href="inverseofpermutation.html" data-scroll="inverseofpermutation">Inverse permutations</a></li>
+<li><a href="section-89.html" data-scroll="section-89" class="active">Powers</a></li>
+<li><a href="cycles.html" data-scroll="cycles">Cycles</a></li>
+<li><a href="cyclenotation.html" data-scroll="cyclenotation">Cycle Notation</a></li>
+<li><a href="section-92.html" data-scroll="section-92">Order of a permutation</a></li>
+<li><a href="evenandoddpermutations.html" data-scroll="evenandoddpermutations">Even and Odd permutations</a></li>
+<li><a href="permutationexercises.html" data-scroll="permutationexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-89"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">16.5</span> <span class="title">Powers</span>
+</h2>
+<p id="p-2031">Let \(f\) be any permutation in \(\mathrm{S}_n\text{,}\) let \(m\) be any positive integer. Let</p>
+<div class="displaymath">
+\begin{equation*}
+f^{m}=\underbrace{f\circ f\circ f\circ\cdots\circ f\circ f}_{m\ \mathrm{times}}\text{.}
+\end{equation*}
+</div>
+<p id="p-2032">We also let \(f^{-m}=(f^{-1})^m\text{,}\) and \(f^{0}=\iota\text{.}\) Then we have the familiar power rules for compositions as we do for multiplication: for \(r,s\in\mathbb{Z}\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+f^{r}f^{s}=f^{r+s}\  \text{ and } \  \Big(f^{r}\Big)^{s}=f^{rs}\text{.}
+\end{equation*}
+</div>
+<article class="example example-like" id="example-113"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-113"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">16.5.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-113"><article class="example example-like"><p id="p-2033">Let \(f=\left(\begin{matrix}1 \amp  2 \amp  3 \amp  4 \amp  5\cr2 \amp  3 \amp  4 \amp  5 \amp  1\cr \end{matrix} \right)\in\mathrm{S}_5\text{.}\) Then, one can check</p>
+<div class="displaymath">
+\begin{equation*}
+f^{-1}=\left(\begin{matrix}1 \amp  2 \amp  3 \amp  4 \amp  5\cr5 \amp  1 \amp  2 \amp  3 \amp  4\cr \end{matrix} \right),\  f^{0}=\iota,\  f^{1}= f,\  f^{2}=\left(\begin{matrix}1 \amp  2 \amp  3 \amp  4 \amp  5\cr3 \amp  4 \amp  5 \amp  1 \amp  2\cr \end{matrix} \right)\text{,}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+f^{3}=\left(\begin{matrix}1 \amp  2 \amp  3 \amp  4 \amp  5\cr4 \amp  5 \amp  1 \amp  2 \amp  3\cr \end{matrix} \right),\ f^{4}= f^{-1},\ f^{5} = \iota,  f^{6}= f,  f^{7}= f^2,  \ldots\text{.}
+\end{equation*}
+</div></article></div>
+<article class="exercise exercise-like" id="exercise-159"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-159"><h6 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">16.5.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-159"><article class="exercise exercise-like"><p id="p-2034">Let \(f=\left(\begin{matrix}1 \amp 2 \amp 3 \amp 4 \amp 5\cr2 \amp 1 \amp 3 \amp 4 \amp 5\cr \end{matrix} \right)\in\mathrm{S}_5\text{.}\) What is \(f^{2019}\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-182" id="solution-182"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-182"><div class="solution solution-like">
+<p id="p-2035">Since \(f^{2}=\iota\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{f\circ f\circ f\circ\cdots\circ f\circ f}_{2019\ \mathrm{times}}=\underbrace{f\circ f\circ f\circ\cdots\circ f\circ f}_{1009\times 2\ \mathrm{times}}\circ f
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+=\Big(f\circ f\Big)^{1009}\circ f=\iota^{1009}\circ f= f\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+<p id="p-2036">Let us summarize some of the properties about permutations in \(\mathrm{S}_{n}\) we have proved.</p>
+<article class="lemma theorem-like" id="lemma-16"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">16.5.3</span><span class="period">.</span>
+</h6>
+<p id="p-2037">The set \(\mathrm{S}_n\) equipped with the composition rule \(\circ\) has the following properties:</p>
+<ul class="disc">
+<li id="li-411"><p id="p-2038"><em class="emphasis">Closure</em>: for any \(f\) and \(g\) in \(\mathrm{S}_n\text{,}\) one has \(f\circ g\in\mathrm{S}_n\text{,}\)</p></li>
+<li id="li-412">
+<p id="p-2039"><em class="emphasis">Associativity</em>: for any \(f\text{,}\) \(g\text{,}\) and \(h\) in \(\mathrm{S}_n\text{,}\) one has</p>
+<div class="displaymath">
+\begin{equation*}
+f\circ \Big(g\circ h\Big)=\Big(f\circ g\Big)\circ h\text{,}
+\end{equation*}
+</div>
+</li>
+<li id="li-413">
+<p id="p-2040"><em class="emphasis">Identity element</em>: there is unique permutation \(\iota\in\mathrm{S}_n\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+f\circ\iota=\iota\circ f=f
+\end{equation*}
+</div>
+<p class="continuation">for any \(f\in\mathrm{S}_n\) (and we call \(\iota\) the identity permutation),</p>
+</li>
+<li id="li-414">
+<p id="p-2041"><em class="emphasis">Inverse</em>: for any \(f\in\mathrm{S}_n\text{,}\) there is unique \(f^{-1}\in\mathrm{S}_n\)  such that</p>
+<div class="displaymath">
+\begin{equation*}
+f\circ f^{-1}=f^{-1}\circ f=\iota\text{.}
+\end{equation*}
+</div>
+</li>
+</ul></article><p id="p-2042">In <dfn class="terminology">Fundamentals of Pure Math</dfn> (FPM), you will learn more about <dfn class="terminology">groups</dfn>, which are sets equipped with the above structure, that is, a way of composing elements that satisfies the above properties. We have seen several examples so far:</p>
+<ul class="disc">
+<li id="li-415"><p id="p-2043">real numbers equipped with \(+\text{,}\)</p></li>
+<li id="li-416"><p id="p-2044">non-zero real numbers equipped with \(\cdot\) (i.e. multiplication),</p></li>
+<li id="li-417"><p id="p-2045">complex numbers equipped with \(+\text{,}\)</p></li>
+<li id="li-418"><p id="p-2046">non-zero complex numbers equipped with \(\cdot\text{,}\)</p></li>
+<li id="li-419"><p id="p-2047">\(n\)-th root of unity equipped with \(\cdot\text{,}\)</p></li>
+<li id="li-420"><p id="p-2048">\(\mathbb{Z}_n\) equipped with \(+\text{,}\)</p></li>
+<li id="li-421"><p id="p-2049">\(\mathbb{Z}_n\) equipped with \(\cdot\) if \(n\) is prime (in which case every element has an inverse),</p></li>
+</ul></section></div></main>
+</div>
+</body>
+</html>

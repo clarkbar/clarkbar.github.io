@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T13:29:43+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
+<p>Let</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+S=\{x \; | \; \mbox{ there are infinitely many \(n\in\mathbb{N}\) so that } x_n\geq x\}
+\end{equation*}
+</div>
+<p class="continuation">and set \(L=\LUB (S)\text{.}\) Since \((x_n)\) is bounded, \(\LUB(S)\) exists. By <a class="xref" data-knowl="./knowl/p_lim-points.html" title="Proposition 9.6.3">Proposition 9.6.3</a>, \(L\) is a limit point if we can verify the following:</p>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Claim:</em> For all \(\epsilon&gt;0\) and \(N\in\mathbb{N}\) there is \(n&gt;N\) so that \(|x_{n}-L|\lt \epsilon\text{.}\)</p>
+<p>We prove by contradiction. Suppose instead that there exists \(\epsilon&gt;0\) and \(N\in\mathbb{N}\) so that \(|x_{n}-L|\geq \epsilon\) for all \(n&gt; N\text{.}\) In other words, there are at most \(N\) many integers \(n\) (hence only finitely many) for which \(|x_{n}-L|\lt \epsilon\text{,}\) or equivalently</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+L-\epsilon\lt x_n\lt L+\epsilon\text{.}\tag{9.6.2}
+\end{equation}
+</div>
+<p>Since \(L+\epsilon&gt;L=\LUB(S)\) and \(\LUB(S)\) is an upper bound for \(S\text{,}\) we can't have \(L+\epsilon\in S\text{,}\) so by the definition of \(S\text{,}\) there are only finitely many \(n\in\mathbb{N}\) so that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+x_n\geq L+\epsilon\tag{9.6.3}
+\end{equation}
+</div>
+<p>Thus, there are only finitely many \(n\) satisfying <a class="xref" data-knowl="./knowl/e_finitely-many-betweenL-eL_e.html" title="Equation 9.6.2">(9.6.2)</a> or <a class="xref" data-knowl="./knowl/e_finitely-many-aboveL_e.html" title="Equation 9.6.3">(9.6.3)</a>, so there can only be finitely many \(n\) so that \(x_n&gt;L-\epsilon\text{.}\) But then \(L-\epsilon\geq \LUB(S)\text{,}\) since if \(L-\epsilon\lt \LUB(S)\text{,}\) by definition of the LUB, \(L-\epsilon\) is not an upper bound for \(S\text{,}\) so there is \(t&gt;L-\epsilon\) so that there are infinitely many \(x_n\geq t\text{,}\) which is impossible since there are only finitely many \(x_n&gt;\epsilon\text{.}\) Thus, \(L-\epsilon\geq \LUB(S)=L\text{,}\) which is a contradiction. This proves the claim, and thus \(L\) is a limit point.</p></article><span class="incontext"><a href="subsequences.html#proof-51">in-context</a></span>
+</body>
+</html>

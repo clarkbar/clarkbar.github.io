@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T13:29:55+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
+<p>Suppose the inductive hyothesis holds for some \(k\geq 2\) and all \(n\text{.}\) Picking an ordered partition \((A_{1}, \dots,A_{k+1})\) with \(|A_{i}|=r_i\) and \(r_{1}+\cdots + r_{k+1}=n\) is the same as picking an \(r_{k+1}\)-member subset \(A_{k+1}\) of \(S\text{,}\) and, for each such, then picking an ordered partition \(A_1, \dots , A_k\) of the remaining \((n - r_{k+1})\)-member set with \(A_i = r_i\) for \(1 \leq i \leq k\text{.}\) By the Multiplication Principle the number of ways of doing this is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+{ n \choose r_{k+1}} \times  {n- r_{k+1} \choose r_1, \dots , r_{k}}
+\end{equation*}
+</div>
+<p class="continuation">which, by the inductive hypothesis, is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+{ n \choose r_{k+1}} \times \frac{(n- r_{k+1})!}{ r_1! \dots r_{k}!}= \frac{n!}{(n-r_{k+1})! r_{k+1}!}\frac{(n- r_{k+1})!}{ r_1! \dots r_{k}!}= \frac{n!}{r_{1}!r_{2}!\cdots r_{k+1}!}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">completing the inductive step.</p>
+<span class="incontext"><a href="countingpartitions.html#p-1998">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T18:23:36+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example example-like"><p>Let's define a map \(f \colon \NN_0 \to \{\text{red},\text{blue}\}\text{.}\) We can daydream of such a map as painting some natural numbers red and others blue. Defining \(f\) is really the same thing as declaring which natural numbers to paint red, and which to paint blue, in such a way as to ensure that every natural number is painted at least one of these colors, and no natural number is painted both of these colors. Here's a valid way to describe a map \(f\text{:}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f(x) = \begin{cases}
+\text{red} \amp \text{if }x\text{ is even;} \\
+\text{blue} \amp \text{if }x\text{ is odd.}
+\end{cases}
+\end{equation*}
+</div>
+<p>Here's a definition that does not work:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f(x) = \begin{cases}
+\text{red} \amp \text{if }x\text{ is even;} \\
+\text{blue} \amp \text{if }3\text{ divides }x \text{.}
+\end{cases}
+\end{equation*}
+</div>
+<p class="continuation">This doesn't work for two reasons: first, there are natural numbers \(x\) that are neither even nor divisible by \(3\) (like \(5\)); second, there are natural numbers \(x\) that are divisible by both even and divisible by \(3\) (like \(6\)). This rule avoids painting some numbers altogether, and paints other numbers two different colors.</p></article></body>
+</html>

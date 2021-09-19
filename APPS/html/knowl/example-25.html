@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T18:23:36+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.12.3</span><span class="period">.</span><span class="space"> </span><span class="title">Every natural number has a successor.</span>
+</h6>
+<p>Let's define the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">successor</dfn> to a natural number \(n\) as the smallest natural number that is larger than \(n\text{.}\) Let's consider the sentence “every natural number has a successor.”</p>
+<p>Let's unpack this sentence in stages. First, we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\forall n \in \NN)(\text{ there is a natural number \(k\) such that \(k\) is a successor to \(n\) } )\text{.}
+\end{equation*}
+</div>
+<p>What we have there in parentheses can itself be unpacked; now our sentence is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\forall n \in \NN)(\exists k \in \NN)(\text{ \(k\) is a successor to \(n\) } )\text{.}
+\end{equation*}
+</div>
+<p>Going even farther, this becomes</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\forall n \in \NN)(\exists k \in \NN)(\forall m \in \NN)((m&gt;n) \implies (n\lt k\leq m))\text{.}
+\end{equation*}
+</div>
+<p>This is about as unpacked as you can get.</p>
+<p>The advantage of unpacking sentences like this is that you can now prove this claim by following the order of the quantifiers, from left to right:</p>
+<ol class="lower-alpha">
+<li><p>The first quantifier is universal, so the first sentence of our proof has to be: “Let \(n \in \NN\text{.}\)”</p></li>
+<li><p>The second quantifier is existential, so we have to <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">specify</dfn> or <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">construct</dfn> the successor \(k\text{.}\) We are free to <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">use</dfn> \(n\) in our definition of \(k\) (in this case we'll <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">have</dfn> to), and our \(k\) will be defined so that the condition that “for any natural number \(m&gt;n\text{,}\) one has \(n\lt k\leq m\)” holds.</p></li>
+<li><p>Finally, we have to prove that condition, which is our third quantifier, which is universal. So that means we have to begin this portion of the proof with the words: “Let \(m \in \NN\text{.}\)”</p></li>
+</ol>
+<p>Follow that recipe to write a proof of this statement.</p>
+<div class="solutions"><a class="solution-knowl original" data-knowl="./knowl/solution-5-hidden.html" title="Solution 1.12.3.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution.</span> </a></div></article><span class="incontext"><a href="quantifiers.html#example-25">in-context</a></span>
+</body>
+</html>

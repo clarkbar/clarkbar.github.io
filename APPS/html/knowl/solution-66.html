@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T18:20:32+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
+</h6>
+<p>We note that this is easily completely factorized over the complex numbers. Let \(\xi = e^{\frac{2\pi i}{10}}\text{,}\) then the \(5\)th roots of unity are \(1,\xi,\xi^2, \xi^3,\xi^4\text{.}\) By examining these numbers, we can see that \(\xi^{4}=\overline{\xi}\) and \(\xi^{3} = \overline{\xi}^{2}\text{.}\) Thus,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x^5+1 = (x+1)\underbrace{(x-\xi)(x-\bar{\xi})}_{\textrm{conjugate} }\underbrace{(x-\xi^2)(x-\bar{\xi}^2)}_{\textrm{conjugate} }\text{.}
+\end{equation*}
+</div>
+<p>If we collect into pairs the terms which involve a root and its conjugate, we obtain real polynomials.</p>
+<p>We compute:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(x-\xi)(x-\bar{\xi}) = x^2 - (\xi+\bar{\xi})x + \xi\bar{\xi} = x^2 - 2\cos(\frac{2\pi}{5})x+1 = x^2 +\frac{1-\sqrt{5}}{2}x+1\text{.}
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(x-\xi^2)(x-\bar{\xi}^2) = x^2 -(\xi^2 + \bar{\xi}^2)x + \xi^2\bar{\xi}^2 = x^2 - 2\cos(\frac{4\pi}{5})x+1 = x^2 +\frac{1+\sqrt{5}}{2}x+1.\text{,}
+\end{equation*}
+</div>
+<p>Hence,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x^5 = \left(x^2 +\frac{1-\sqrt{5}}{2}x+1\right) \left(x^2 +\frac{1+\sqrt{5}}{2}x+1\right)\text{.}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="polynomialsexercises.html#solution-66">in-context</a></span>
+</body>
+</html>

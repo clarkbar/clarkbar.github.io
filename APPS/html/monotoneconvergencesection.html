@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T18:20:22+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Monotone Convergence Theorem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(	\newcommand{\andeq}{\text{\qquad and\qquad}}
+	\newcommand{\respectively}[1]{\text{\qquad(respectively,\quad}{#1}\text{\quad)}}
+	\newcommand{\resp}[1]{\text{\qquad(resp.,\quad}{#1}\text{\quad)}}
+
+	\newcommand{\comma}{\rlap{\ ,}}
+	\newcommand{\period}{\rlap{\ .}}
+	\newcommand{\semicolon}{\rlap{\ ;}}
+
+  
+
+  \newcommand{\mathup}[1]{\mathrm{#1}}
+  \newcommand{\mathbfup}[1]{\mathbf{#1}}
+  
+  \renewcommand{\AA}{\mathbfit{A}}
+  \newcommand{\BB}{\mathbfit{B}}
+  \newcommand{\CC}{\mathbfit{C}}
+  \newcommand{\DD}{\mathbfit{D}}
+  \newcommand{\EE}{\mathbfit{E}}
+  \newcommand{\FF}{\mathbfit{F}}
+  \newcommand{\GG}{\mathbfit{G}}
+  \newcommand{\HH}{\mathbfit{H}}
+  \newcommand{\II}{\mathbfit{I}}
+  \newcommand{\JJ}{\mathbfit{J}}
+  \newcommand{\KK}{\mathbfit{K}}
+  \newcommand{\LL}{\mathbfit{L}}
+  \newcommand{\MM}{\mathbfit{M}}
+  \newcommand{\NN}{\mathbfit{N}}
+  \newcommand{\OO}{\mathbfit{O}}
+  \newcommand{\PP}{\mathbfit{P}}
+  \newcommand{\QQ}{\mathbfit{Q}}
+  \newcommand{\RR}{\mathbfit{R}}
+  \renewcommand{\SS}{\mathbfit{S}}
+  \newcommand{\TT}{\mathbfit{T}}
+  \newcommand{\UU}{\mathbfit{U}}
+  \newcommand{\VV}{\mathbfit{V}}
+  \newcommand{\WW}{\mathbfit{W}}
+  \newcommand{\XX}{\mathbfit{X}}
+  \newcommand{\YY}{\mathbfit{Y}}
+  \newcommand{\ZZ}{\mathbfit{Z}}
+  
+  \let\Gammaup\Gamma
+  \let\Deltaup\Delta
+  \let\Thetaup\Theta
+  \let\Lambdaup\Lambda
+  \let\Xiup\Xi
+  \let\Piup\Pi
+  \let\Sigmaup\Sigma
+  \let\Upsilonup\Upsilon
+  \let\Phiup\Phi
+  \let\Psiup\Psi
+  \let\Omegaup\Omega
+  
+  \renewcommand{\Gamma}{\mathit{\Gammaup}}
+  \renewcommand{\Delta}{\mathit{\Deltaup}}
+  \renewcommand{\Theta}{\mathit{\Thetaup}}
+  \renewcommand{\Lambda}{\mathit{\Lambdaup}}
+  \renewcommand{\Xi}{\mathit{\Xiup}}
+  \renewcommand{\Pi}{\mathit{\Piup}}
+  \renewcommand{\Sigma}{\mathit{\Sigmaup}}
+  \renewcommand{\Upsilon}{\mathit{\Upsilonup}}
+  \renewcommand{\Phi}{\mathit{\Phiup}}
+  \renewcommand{\Psi}{\mathit{\Psiup}}
+  \renewcommand{\Omega}{\mathit{\Omegaup}}
+  
+	
+
+	\renewcommand{\epsilon}{\varepsilon}
+  \newcommand{\el}{\ell}
+	\renewcommand{\phi}{\varphi}
+
+	\newcommand{\mfa}{\mathfrak{a}}
+	\newcommand{\mfb}{\mathfrak{b}}
+	\newcommand{\mfc}{\mathfrak{c}}
+	\newcommand{\mfd}{\mathfrak{d}}
+	\newcommand{\mfe}{\mathfrak{e}}
+	\newcommand{\mff}{\mathfrak{f}}
+	\newcommand{\mfg}{\mathfrak{g}}
+	\newcommand{\mfh}{\mathfrak{h}}
+	\newcommand{\mfi}{\mathfrak{i}}
+	\newcommand{\mfj}{\mathfrak{j}}
+	\newcommand{\mfk}{\mathfrak{k}}
+	\newcommand{\mfl}{\mathfrak{l}}
+	\newcommand{\mfm}{\mathfrak{m}}
+	\newcommand{\mfn}{\mathfrak{n}}
+	\newcommand{\mfo}{\mathfrak{o}}
+	\newcommand{\mfp}{\mathfrak{p}}
+	\newcommand{\mfq}{\mathfrak{q}}
+	\newcommand{\mfr}{\mathfrak{r}}
+	\newcommand{\mfs}{\mathfrak{s}}
+	\newcommand{\mft}{\mathfrak{t}}
+	\newcommand{\mfu}{\mathfrak{u}}
+	\newcommand{\mfv}{\mathfrak{v}}
+	\newcommand{\mfw}{\mathfrak{w}}
+	\newcommand{\mfx}{\mathfrak{x}}
+	\newcommand{\mfy}{\mathfrak{y}}
+	\newcommand{\mfz}{\mathfrak{z}}
+
+	\newcommand{\ahat}{\hat{a}}
+	\newcommand{\bhat}{\hat{b}}
+	\newcommand{\chat}{\hat{c}}
+	\newcommand{\dhat}{\hat{d}}
+	\newcommand{\ehat}{\hat{e}}
+	\newcommand{\fhat}{\hat{f}}
+	\newcommand{\ghat}{\hat{g}}
+	\newcommand{\hhat}{\hat{h}}
+	\newcommand{\ihat}{\hat{\i}}
+	\newcommand{\jhat}{\hat{\j}}
+	\newcommand{\khat}{\hat{k}}
+	\newcommand{\elhat}{\hat{\el}}
+	\newcommand{\mhat}{\hat{m}}
+	\newcommand{\nhat}{\hat{n}}
+	\newcommand{\ohat}{\hat{o}}
+	\newcommand{\phat}{\hat{p}}
+	\newcommand{\qhat}{\hat{q}}
+	\newcommand{\rhat}{\hat{r}}
+	\newcommand{\shat}{\hat{s}}
+	\newcommand{\that}{\hat{t}}
+	\newcommand{\uhat}{\hat{u}}
+	\newcommand{\vhat}{\hat{v}}
+	\newcommand{\what}{\hat{w}}
+	\newcommand{\xhat}{\hat{x}}
+	\newcommand{\yhat}{\hat{y}}
+	\newcommand{\zhat}{\hat{z}}
+
+	\newcommand{\alphahat}{\hat{\alpha}}
+	\newcommand{\betahat}{\hat{\beta}}
+	\newcommand{\gammahat}{\hat{\gamma}}
+	\newcommand{\deltahat}{\hat{\delta}}
+	\newcommand{\epsilonhat}{\hat{\epsilon}}
+	\newcommand{\zetahat}{\hat{\zeta}}
+	\newcommand{\etahat}{\hat{\eta}}
+	\newcommand{\thetahat}{\hat{\theta}}
+	\newcommand{\iotahat}{\hat{\iota}}
+	\newcommand{\kappahat}{\hat{\kappa}}
+	\newcommand{\lambdahat}{\hat{\lambda}}
+	\newcommand{\muhat}{\hat{\mu}}
+	\newcommand{\nuhat}{\hat{\nu}}
+	\newcommand{\xihat}{\hat{\xi}}
+	\newcommand{\pihat}{\hat{\pi}}
+	\newcommand{\rhohat}{\hat{\rho}}
+	\newcommand{\sigmahat}{\hat{\sigma}}
+	\newcommand{\tauhat}{\hat{\tau}}
+	\newcommand{\upsilonhat}{\hat{\upsilon}}
+	\newcommand{\phihat}{\hat{\phi}}
+	\newcommand{\chihat}{\hat{\chi}}
+	\newcommand{\psihat}{\hat{\psi}}
+	\newcommand{\omegahat}{\hat{\omega}}
+
+	\newcommand{\Ahat}{\hat{A}}
+	\newcommand{\Bhat}{\hat{B}}
+	\newcommand{\Chat}{\hat{C}}
+	\newcommand{\Dhat}{\hat{D}}
+	\newcommand{\Ehat}{\hat{E}}
+	\newcommand{\Fhat}{\hat{F}}
+	\newcommand{\Ghat}{\hat{G}}
+	\newcommand{\Hhat}{\hat{H}}
+	\newcommand{\Ihat}{\hat{I}}
+	\newcommand{\Jhat}{\hat{J}}
+	\newcommand{\Khat}{\hat{K}}
+	\newcommand{\Lhat}{\hat{L}}
+	\newcommand{\Mhat}{\hat{M}}
+	\newcommand{\Nhat}{\hat{N}}
+	\newcommand{\Ohat}{\hat{O}}
+	\newcommand{\Phat}{\hat{P}}
+	\newcommand{\Qhat}{\hat{Q}}
+	\newcommand{\Rhat}{\hat{R}}
+	\newcommand{\Shat}{\hat{S}}
+	\newcommand{\That}{\hat{T}}
+	\newcommand{\Uhat}{\hat{U}}
+	\newcommand{\Vhat}{\hat{V}}
+	\newcommand{\What}{\hat{W}}
+	\newcommand{\Xhat}{\hat{X}}
+	\newcommand{\Yhat}{\hat{Y}}
+	\newcommand{\Zhat}{\hat{Z}}
+
+	\newcommand{\Gammahat}{\hat{\Gamma}}
+	\newcommand{\Deltahat}{\hat{\Delta}}
+	\newcommand{\Thetahat}{\hat{\Theta}}
+	\newcommand{\Lambdahat}{\hat{\Lambda}}
+	\newcommand{\Xihat}{\hat{\Xi}}
+	\newcommand{\Pihat}{\hat{\Pi}}
+	\newcommand{\Sigmahat}{\hat{\Sigma}}
+	\newcommand{\Upsilonhat}{\hat{\Upsilon}}
+	\newcommand{\Phihat}{\hat{\Phi}}
+	\newcommand{\Chihat}{\hat{\Chi}}
+	\newcommand{\Psihat}{\hat{\Psi}}
+	\newcommand{\Omegahat}{\hat{\Omega}}
+
+	\newcommand{\atilde}{\tilde{a}}
+	\newcommand{\btilde}{\tilde{b}}
+	\newcommand{\ctilde}{\tilde{c}}
+	\newcommand{\dtilde}{\tilde{d}}
+	\newcommand{\etilde}{\tilde{e}}
+	\newcommand{\ftilde}{\tilde{f}}
+	\newcommand{\gtilde}{\tilde{g}}
+	\newcommand{\htilde}{\tilde{h}}
+	\newcommand{\itilde}{\tilde{\i}}
+	\newcommand{\jtilde}{\tilde{\j}}
+	\newcommand{\ktilde}{\tilde{k}}
+	\newcommand{\eltilde}{\tilde{\el}}
+	\newcommand{\mtilde}{\tilde{m}}
+	\newcommand{\ntilde}{\tilde{n}}
+	\newcommand{\otilde}{\tilde{o}}
+	\newcommand{\ptilde}{\tilde{p}}
+	\newcommand{\qtilde}{\tilde{q}}
+	\newcommand{\rtilde}{\tilde{r}}
+	\newcommand{\stilde}{\tilde{s}}
+	\newcommand{\ttilde}{\tilde{t}}
+	\newcommand{\utilde}{\tilde{u}}
+	\newcommand{\vtilde}{\tilde{v}}
+	\newcommand{\wtilde}{\tilde{w}}
+	\newcommand{\xtilde}{\tilde{x}}
+	\newcommand{\ytilde}{\tilde{y}}
+	\newcommand{\ztilde}{\tilde{z}}
+
+	\newcommand{\alphatilde}{\tilde{\alpha}}
+	\newcommand{\betatilde}{\tilde{\beta}}
+	\newcommand{\gammatilde}{\tilde{\gamma}}
+	\newcommand{\deltatilde}{\tilde{\delta}}
+	\newcommand{\epsilontilde}{\tilde{\epsilon}}
+	\newcommand{\zetatilde}{\tilde{\zeta}}
+	\newcommand{\etatilde}{\tilde{\eta}}
+	\newcommand{\thetatilde}{\tilde{\theta}}
+	\newcommand{\iotatilde}{\tilde{\iota}}
+	\newcommand{\kappatilde}{\tilde{\kappa}}
+	\newcommand{\lambdatilde}{\tilde{\lambda}}
+	\newcommand{\mutilde}{\tilde{\mu}}
+	\newcommand{\nutilde}{\tilde{\nu}}
+	\newcommand{\xitilde}{\tilde{\xi}}
+	\newcommand{\pitilde}{\tilde{\pi}}
+	\newcommand{\rhotilde}{\tilde{\rho}}
+	\newcommand{\sigmatilde}{\tilde{\sigma}}
+	\newcommand{\tautilde}{\tilde{\tau}}
+	\newcommand{\upsilontilde}{\tilde{\upsilon}}
+	\newcommand{\phitilde}{\tilde{\phi}}
+	\newcommand{\chitilde}{\tilde{\chi}}
+	\newcommand{\psitilde}{\tilde{\psi}}
+	\newcommand{\omegatilde}{\tilde{\omega}}
+
+	\newcommand{\Atilde}{\widetilde{A}}
+	\newcommand{\Btilde}{\widetilde{B}}
+	\newcommand{\Ctilde}{\widetilde{C}}
+	\newcommand{\Dtilde}{\widetilde{D}}
+	\newcommand{\Etilde}{\widetilde{E}}
+	\newcommand{\Ftilde}{\widetilde{F}}
+	\newcommand{\Gtilde}{\widetilde{G}}
+	\newcommand{\Htilde}{\widetilde{H}}
+	\newcommand{\Itilde}{\widetilde{I}}
+	\newcommand{\Jtilde}{\widetilde{J}}
+	\newcommand{\Ktilde}{\widetilde{K}}
+	\newcommand{\Ltilde}{\widetilde{L}}
+	\newcommand{\Mtilde}{\widetilde{M}}
+	\newcommand{\Ntilde}{\widetilde{N}}
+	\newcommand{\Otilde}{\widetilde{O}}
+	\newcommand{\Ptilde}{\widetilde{P}}
+	\newcommand{\Qtilde}{\widetilde{Q}}
+	\newcommand{\Rtilde}{\widetilde{R}}
+	\newcommand{\Stilde}{\widetilde{S}}
+	\newcommand{\Ttilde}{\widetilde{T}}
+	\newcommand{\Utilde}{\widetilde{U}}
+	\newcommand{\Vtilde}{\widetilde{V}}
+	\newcommand{\Wtilde}{\widetilde{W}}
+	\newcommand{\Xtilde}{\widetilde{X}}
+	\newcommand{\Ytilde}{\widetilde{Y}}
+	\newcommand{\Ztilde}{\widetilde{Z}}
+
+	\newcommand{\Gammatilde}{\widetilde{\Gamma}}
+	\newcommand{\Deltatilde}{\widetilde{\Delta}}
+	\newcommand{\Thetatilde}{\widetilde{\Theta}}
+	\newcommand{\Lambdatilde}{\widetilde{\Lambda}}
+	\newcommand{\Xitilde}{\widetilde{\Xi}}
+	\newcommand{\Pitilde}{\widetilde{\Pi}}
+	\newcommand{\Sigmatilde}{\widetilde{\Sigma}}
+	\newcommand{\Upsilontilde}{\widetilde{\Upsilon}}
+	\newcommand{\Phitilde}{\widetilde{\Phi}}
+	\newcommand{\Chitilde}{\widetilde{\Chi}}
+	\newcommand{\Psitilde}{\widetilde{\Psi}}
+	\newcommand{\Omegatilde}{\widetilde{\Omega}}
+
+	
+
+	\DeclareMathOperator{\Aut}{Aut}
+	\DeclareMathOperator{\End}{End}
+	\DeclareMathOperator{\Equival}{Equiv}
+	\DeclareMathOperator{\Fun}{Fun}
+	\newcommand{\Funcross}{\Fun^{\cross}}
+	\newcommand{\Functs}{\Fun^{\cts}}
+	\newcommand{\Funpyk}{\Functs}
+	\newcommand{\Funlowerstar}{\Fun_{\ast}}
+	\newcommand{\Funupperstar}{\Fun^{\ast}}
+	\DeclareMathOperator{\Hom}{Hom}
+	\newcommand{\HOM}{\ensuremath{\textup{\textsc{Hom}}}}
+	\DeclareMathOperator{\Isom}{Isom}
+	\DeclareMathOperator{\Map}{Map}
+	\DeclareMathOperator{\Mor}{Mor}
+	\newcommand{\MOR}{\ensuremath{\textup{\textsc{Mor}}}}
+
+	\DeclareMathOperator{\GL}{GL}
+	\DeclareMathOperator{\PSL}{PSL}
+	\DeclareMathOperator{\PSO}{PSO}
+	\DeclareMathOperator{\PSp}{PSp}
+	\DeclareMathOperator{\PSU}{PSU}
+	\DeclareMathOperator{\SL}{SL}
+	\DeclareMathOperator{\SO}{SO}
+	\DeclareMathOperator{\Sp}{Sp}
+	\DeclareMathOperator{\SU}{SU}
+
+	\DeclareMathOperator{\cofib}{cofib}
+	\DeclareMathOperator{\coker}{coker}
+	\DeclareMathOperator*{\colim}{colim}
+	\DeclareMathOperator*{\hocolim}{hocolim}
+	\DeclareMathOperator*{\holim}{holim}
+	\DeclareMathOperator{\fib}{fib}
+
+	\DeclareMathOperator{\Nerve}{N}
+	\DeclareMathOperator{\trun}{\uptau}
+
+	\DeclareMathOperator{\cosk}{ck}
+	\DeclareMathOperator{\creff}{cr}
+	\DeclareMathOperator{\ev}{ev}
+	\DeclareMathOperator{\id}{id}
+	\DeclareMathOperator{\pr}{pr}
+	\DeclareMathOperator{\rk}{rk}
+	\DeclareMathOperator{\sd}{sd}
+	\DeclareMathOperator{\sk}{sk}
+	\DeclareMathOperator{\specpos}{sp}
+	\newcommand{\sdop}{\sd^{\op}}
+
+	
+
+	\newcommand{\paren}[1]{\left(#1\right)}
+	\newcommand{\angs}[1]{\langle #1 \rangle}
+  \newcommand{\quine}[1]{\ulcorner #1 \urcorner}
+	\newcommand{\ultimes}{\,\underline{\times}\,}
+	\newcommand{\horn}[2]{\upLambda_{#1}^{#2}}
+
+	
+
+	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
+
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
+\def\LUB{{ LUB}}
+\renewcommand{\sectionmark}[1]{{}}
+\def\GLB{{ GLB}}
+\renewcommand{\headrulewidth}{0.5pt}
+\def\ve{\varepsilon}
+\renewcommand{\footrulewidth}{0pt}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\headrulewidth}{0pt}
+\def\R{\mathbb{R}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
+\def\LUB{{ LUB}}
+\newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
+\def\ve{\epsilon}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\limn{\lim_{n\rightarrow\infty}}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\def\LUB{{ LUB}}
+\def\easylemma{the Linear Combination Lemma}
+\def\lcm{ lcm}
+\def\cl{{ cl}}
+\newcommand{\thepartimage}{}
+\newcommand{\thechapterimage}{}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\N{{\mathbb{N}}}
+\def\Q{{\mathbb{Q}}}
+\def\C{{\mathbb{C}}}
+\def\hcf{{ hcf}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">An Invitation to Pure Mathematics:</span> <span class="subtitle">Accelerated Proofs and Problem Solving 2021</span></a></h1>
+<p class="byline">Instructor: Clark Barwick</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="monotoneconvergence.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="monotoneconvergence.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="iterativelydefinedsequences.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="monotoneconvergence.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="monotoneconvergence.html" title="Up">Up</a><a class="next-button button toolbar-item" href="iterativelydefinedsequences.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic"><span class="codenumber">1</span> <span class="title">Foundations of mathematics</span></a><ul>
+<li><a href="sets.html" data-scroll="sets">A first look at the theory of sets</a></li>
+<li><a href="logicalstatements.html" data-scroll="logicalstatements">Logical Statements</a></li>
+<li><a href="conjunction.html" data-scroll="conjunction">Conjunction</a></li>
+<li><a href="intersection.html" data-scroll="intersection">Intersection</a></li>
+<li><a href="disjunction.html" data-scroll="disjunction">Disjunction</a></li>
+<li><a href="union.html" data-scroll="union">Union</a></li>
+<li><a href="negation.html" data-scroll="negation">Negation</a></li>
+<li><a href="complements.html" data-scroll="complements">Complements</a></li>
+<li><a href="conditionals.html" data-scroll="conditionals">Conditionals</a></li>
+<li><a href="logicalequivalence.html" data-scroll="logicalequivalence">Logical equivalence</a></li>
+<li><a href="proofbycontradiction.html" data-scroll="proofbycontradiction">Proof by Contradiction</a></li>
+<li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
+<li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
+<li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and relations</span></a><ul>
+<li><a href="cartesianproducts.html" data-scroll="cartesianproducts">Cartesian products</a></li>
+<li><a href="maps.html" data-scroll="maps">Maps</a></li>
+<li><a href="injectivesurjective.html" data-scroll="injectivesurjective">Injective and surjective</a></li>
+<li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
+<li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
+<li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
+<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a></li>
+<li class="link"><a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a></li>
+<li class="link">
+<a href="induction.html" data-scroll="induction"><span class="codenumber">5</span> <span class="title">Induction</span></a><ul>
+<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on \(\Sigma\) notation</a></li>
+<li><a href="inductionsection.html" data-scroll="inductionsection">Induction</a></li>
+<li><a href="stronginduction.html" data-scroll="stronginduction">Strong Mathematical Induction</a></li>
+<li><a href="inequalitiesredux.html" data-scroll="inequalitiesredux">Inequalities revisited</a></li>
+<li><a href="inductionexercises.html" data-scroll="inductionexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="upperbounds.html" data-scroll="upperbounds"><span class="codenumber">6</span> <span class="title">Upper Bounds and Least Upper Bounds</span></a><ul>
+<li><a href="upperlowerbounds.html" data-scroll="upperlowerbounds">Upper and Lower Bounds</a></li>
+<li><a href="sups.html" data-scroll="sups">Least Upper Bounds</a></li>
+<li><a href="upperboundsexercises.html" data-scroll="upperboundsexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">7</span> <span class="title">Sequences and limits</span></a></li>
+<li class="link">
+<a href="monotoneconvergence.html" data-scroll="monotoneconvergence"><span class="codenumber">8</span> <span class="title">The Monotone Convergence Theorem</span></a><ul>
+<li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection" class="active">The Monotone Convergence Theorem</a></li>
+<li><a href="iterativelydefinedsequences.html" data-scroll="iterativelydefinedsequences">Iteratively defined sequences</a></li>
+<li><a href="monotoneexercises.html" data-scroll="monotoneexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">9</span> <span class="title">Decimals and Series</span></a></li>
+<li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">10</span> <span class="title">Complex Numbers</span></a></li>
+<li class="link">
+<a href="polynomials.html" data-scroll="polynomials"><span class="codenumber">11</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="introtopolynomials.html" data-scroll="introtopolynomials">Introduction</a></li>
+<li><a href="factoringpolynomials.html" data-scroll="factoringpolynomials">Factoring Polynomials</a></li>
+<li><a href="realpolynomials.html" data-scroll="realpolynomials">Real Polynomials</a></li>
+<li><a href="rootcoefficienttheorem.html" data-scroll="rootcoefficienttheorem">Root-Coefficient Theorem</a></li>
+<li><a href="polynomialsexercises.html" data-scroll="polynomialsexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="integers.html" data-scroll="integers"><span class="codenumber">12</span> <span class="title">Multiplicative theory of integers</span></a><ul>
+<li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
+<li><a href="euclideanalgo.html" data-scroll="euclideanalgo">The GCD and the Euclidean Algorithm</a></li>
+<li><a href="bezoutcorollaries.html" data-scroll="bezoutcorollaries">Corollaries of Bezout's Identity and the Linear Combination Lemma</a></li>
+<li><a href="fundamentaltheoremofarithmetic.html" data-scroll="fundamentaltheoremofarithmetic">The Fundamental Theorem of Arithmetic (FTA)</a></li>
+<li><a href="findingdivisors.html" data-scroll="findingdivisors">Finding divisors via FTA</a></li>
+<li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
+<li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
+<li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
+<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="modular.html" data-scroll="modular"><span class="codenumber">13</span> <span class="title">Modular Arithmetic</span></a><ul>
+<li><a href="arithmeticmodm.html" data-scroll="arithmeticmodm">Arithmetic modulo \(m\)</a></li>
+<li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
+<li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
+<li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
+<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
+</ul>
+</li>
+<li class="link"><a href="infinitecardinals.html" data-scroll="infinitecardinals"><span class="codenumber">14</span> <span class="title">Applications: What's bigger than \(\infty\text{?}\)*</span></a></li>
+<li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">15</span> <span class="title">Counting</span></a></li>
+<li class="link"><a href="permutations.html" data-scroll="permutations"><span class="codenumber">16</span> <span class="title">Permutations</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="monotoneconvergencesection"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.1</span> <span class="title">The Monotone Convergence Theorem</span>
+</h2>
+<article class="definition definition-like" id="definition-30"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-615">A sequence \((a_{n})_{n=1}^{\infty}\) is <dfn class="terminology">increasing</dfn> if \(a_{n+1}\geq a_{n}\) for all \(n\text{.}\) It is <dfn class="terminology">decreasing</dfn> if \(a_{n+1}\leq a_{n}\) for all \(n\text{.}\) We say \((a_{n})\) is <dfn class="terminology">monotonic</dfn> if it is either increasing or decreasing.</p></article><p id="p-616"><em class="emphasis">Exercise:</em> Give an example of an increasing sequence. Give an example of a sequence which is not monotonic. Give an example of a sequence which is both increasing and decreasing.</p>
+<p id="p-617">Monotonic sequences are especially important for us because we have:</p>
+<article class="theorem theorem-like" id="theorem-9"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Monotone Convergence Theorem (MCT).</span>
+</h6>
+<p id="p-618">Let \((a_{n})\) be an increasing sequence of real numbers that is bounded above (i.e. there is \(M\) so that \(a_{n}\leq M\) for all \(n\)). Then \((a_{n})\) converges to some limit. If \((a_{n})\) is decreasing sequence and is bounded below, then \((a_{n})\) converges to some limit.</p></article><article class="hiddenproof" id="proof-14"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><p id="p-619">We begin with the first part. Assume that \((a_n)\) is increasing and bounded above. Notice that we are not told what its limit is going to be. This has to come out of our argument somehow, and the first job is to find a candidate for it.</p>
+<p id="p-620">Since \((a_{n})\) is bounded above, this means that the set<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a> \(\{a_{n}\; | \; n\in\mathbb{N}\}\) is bounded above. Thus, by the Completeness Axiom, the set has an LUB, call it \(L\text{.}\) We claim that</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}a_{n}=L\text{.}
+\end{equation*}
+</div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">Note the distinction between the sequence \((a_n)\text{,}\) in which the order of members is important, and the set \(\{ a_n\}\text{,}\) in which it isn't important or even recorded.</div></div>
+<p id="p-621">We begin the proof of the claim. Let \(\ve&gt;0\text{,}\) we wish to show there is \(N\in\mathbb{N}\) so that</p>
+<div class="displaymath">
+\begin{equation*}
+|a_{n}-L|\lt \ve
+\end{equation*}
+</div>
+<p class="continuation">for all \(n&gt; N\text{,}\) or equivalently,</p>
+<div class="displaymath">
+\begin{equation}
+L-\ve\lt a_{n}\lt L+\ve\text{.}\label{e_L-e_a_L_e}\tag{8.1.1}
+\end{equation}
+</div>
+<p id="p-622">Since \(L\) is an upper bound for \(\{a_{n}\; | \; n\in\mathbb{N}\}\text{,}\) we know \(a_{n}\leq L\lt L+\ve\) for all \(n\text{,}\) thus dealing with the second inequality in <a class="xref" data-knowl="./knowl/e_L-e_a_L_e.html" title="Equation 8.1.1">(8.1.1)</a>. Therefore, it suffices to show that there is \(N\in\mathbb{N}\) so that for all \(n&gt; N\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+L-\ve\lt a_{n}\text{.}
+\end{equation*}
+</div>
+<p id="p-623">Since \(L\) is the LUB for \(\{a_{n}\; | \; n\in\mathbb{N}\}\text{,}\) this means that \(L-\ve\) is not an upper bound for this set, so there exists an integer \(N\) so that \(a_{N}&gt;L-\ve\text{.}\) Since the sequence is increasing, this means that for all \(n&gt; N\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+a_{n} \geq a_N &gt; L - \epsilon\text{.}
+\end{equation*}
+</div>
+<p id="p-624">This shows <a class="xref" data-knowl="./knowl/e_L-e_a_L_e.html" title="Equation 8.1.1">(8.1.1)</a> holds for all \(n&gt;N\) and completes the proof.</p>
+<p id="p-625">We leave the proof of the second part to the reader. (Why is it an easy consequence of the first part?)</p></article></div>
+<p id="p-626"><em class="emphasis">Question:</em> What if a sequence \((a_n)\) is bounded above but only satisfies \(a_{n+1} \geq a_{n}\) for all \(n &gt; 100\text{.}\) Can you still conclude that it converges?</p>
+<p id="p-627">Thus, if you can show that a sequence is bounded and increasing, you can deduce that it has a limit, and in some cases this, together with the rules for limits that we discussed last week, allows you to figure out what the limit actually is.</p>
+<p id="p-628">Let us look at some examples.</p>
+<article class="example example-like" id="example-55"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-55"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-55"><article class="example example-like"><p id="p-629">Let \(a_n= \frac{n-1}{n}\text{.}\) Then \((a_n)\) is increasing since \(\frac{n}{n+1} \geq \frac{n-1}{n} \iff n^2 \geq (n+1)(n-1) = n^2 -1\text{,}\) which is true for all \(n\text{.}\) \((a_n)\) is also bounded above by \(1\text{.}\) The MCT tells us that \((a_n)\) converges to some \(L \leq 1\text{.}\) (In fact we don't need the MCT for this example because \(a_n = 1 - 1/n \to 1 - 0 = 1\) by the rules for limits, but it nevertheless illustrates the general point.)</p></article></div>
+<p id="p-630">The next example can also be done by bare hands, but we use it to introduce a general technique which will be very useful to us: <dfn class="terminology">finding a simple equation which any potential limit <em class="emphasis">must</em> satisfy.</dfn></p>
+<article class="example example-like" id="ex_power"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex_power"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex_power"><article class="example example-like"><p id="p-631">If \(0\lt a\lt 1\text{,}\) show that the sequence \((a^n)_{n=1}^\infty\) converges and \(\lim_{n\rightarrow\infty} a^{n}=0\text{.}\)</p>
+<p id="p-632"><em class="emphasis">Solution:</em> Since \(a^n\) is a product of positive numbers, it is positive, so the sequence \((a^{n})_{n=1}^{\infty}\) is bounded below by \(0\text{.}\) Moreover, since \(a\lt 1\text{,}\) \(a^{n+1}=a\cdot a^{n}\lt a^{n}\text{,}\) so the sequence is decreasing. By the MCT, it has a limit \(L\text{.}\) To find \(L\text{,}\) we will find a simple equation which \(L\) must satisfy — in this case \(aL = L\text{.}\) Recall that if \((a_{n})\) is a convergent sequence, then \((a_{n+1})\) also converges, and indeed converges to the same limit (see the exercises from last week). Thus, by the rules for limits,</p>
+<div class="displaymath">
+\begin{equation*}
+L=\limn a^{n} = \limn a^{n+1}=\limn a^{n} =a\limn a^{n}=aL\text{,}
+\end{equation*}
+</div>
+<p class="continuation">as we claimed. Therefore \(L(a-1) =0\) and since \(a \neq 1\) we must have \(L =0\text{,}\) and we are done.</p></article></div>
+<p id="p-633">In this example, we used the rules for limits, together with the fact that if \((x_n)\) converges, then \((x_{n+1})\) also converges to the same limit. In the next example we instead use the fact that if \(x_n \to L\text{,}\) then \(x_{2n} \to L\) too (see <a class="xref" data-knowl="./knowl/four.html" title="Checkpoint 8.3.4">Exercise 8.3.4</a>).</p>
+<article class="example example-like" id="abcdefg"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-abcdefg"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-abcdefg"><article class="example example-like"><p id="p-634">\label{2^{1/n}} Let \(a_n = 2^{1/n}\text{.}\) Show that \((a_n)\) converges and find its limit.</p>
+<p id="p-635"><em class="emphasis">Solution:</em> We notice that \(2^{1/n} \geq 1\) for all \(n\) (since this is equivalent to \(2 \geq 1^n = 1\)) and also that \(2^{1/(n+1)} \leq 2^{1/n}\) for all \(n\) (since this is equivalent to \(2^n \leq 2^{n+1}\)). Therefore \((a_n)\) is a decreasing sequence which is bounded below by \(1\text{.}\) Consequently, by the MCT, it converges to some number \(L\) which satisfies \(L\geq1\) (and \(L\lt 2\)). Consider the sequence \(b_n = 2^{1/2n}\text{.}\) It runs through alternate values of \(a_n\text{,}\) and so \(b_n \to L\) also as \(n \to \infty\text{.}\) But \(b_n^2 = a_n\text{,}\) so by the rules for limits we must have \(L^2 = L\text{,}\) or \(L(L-1) =0\text{,}\) meaning either \(L=0\) or \(L=1\text{.}\) Since \(1 \leq L \lt 2\) the only possibility is \(L = 1\text{.}\)</p></article></div>
+<p id="p-636">Sometimes it can be helpful to find the possible limits \(L\) <dfn class="terminology">before</dfn> establishing monotonicity and boundedness. Indeed, knowing possible values of \(L\) can help us to know what we are looking for in seeking to establish monotonicity and boundedness.</p></section></div></main>
+</div>
+</body>
+</html>

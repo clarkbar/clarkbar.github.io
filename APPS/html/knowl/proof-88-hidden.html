@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T13:29:54+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>We prove this by induction on \(n\text{.}\) For \(n\in \mathbb{N}\text{,}\) let \(P(n)\) be the claim that, if \(P\) is a process consisting of \(n\) stages such that at each stage \(i\text{,}\) there are \(a_{i}\) choices we can make, then there are \(a_{1}\cdots a_{n}\) outcomes.</p>
+<ul class="disc">
+<li>
+<h6 class="heading"><span class="title">\textbf{Base case:}.</span></h6>
+<p>If \(n=1\text{,}\) then \(P\) is a process of one stage where there are just \(a_{1}\) choices, and so there are only \(a_{1}\) many outcomes. This proves the base case.</p>
+</li>
+<li>
+<h6 class="heading"><span class="title">\textbf{Inductive step:}.</span></h6>
+<p>Suppose \(P(n)\) is true for some \(n\in \mathbb{N}\text{.}\) Suppose now \(P\) is a process with \(n+1\) stages and the \(i\)th stage has \(a_{i}\) choices. Note that if we stop the process before the last stage, we will have performed a process with \(n\) stages and for each \(i=1, \dots ,n\text{,}\) there are \(a_{i}\) choices. Then the induction hypothesis implies that there are \(a_{1}\cdots a_{n}\) outcomes. However, for each outcome of the first \(n\) stages, there are now \(a_{n+1}\) choices we can make. So the total number of outcomes after the \(n+1\) stage is the total number of outcomes after \(n\) steps times the total number of outcomes that can happen from each of those outcomes, that is \((a_{1}\cdots a_{n})\cdot a_{n+1}\text{.}\) This proves \(P(n+1)\) and finishes the proof.</p>
+</li>
+</ul></article></body>
+</html>

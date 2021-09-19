@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T18:23:36+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="example example-like"><p>Consider the statement</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\forall n \in \NN)(\exists m \in \NN)(m^2 = n)\text{.}
+\end{equation*}
+</div>
+<p>This statement isn't true, so let's write down its negation.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\neg(\forall n\in\NN)(\exists m\in\NN)(m^2=n)
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\Updownarrow
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\exists n\in\NN)(\neg(\exists m\in\NN)(m^2=n))
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\Updownarrow
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\exists n\in\NN)(\forall m\in\NN)\neg(m^2=n)
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\Updownarrow
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\exists n\in\NN)(\forall m\in\NN)(m^2\neq n)\text{.}
+\end{equation*}
+</div>
+<p>The reason it's important to be able to do this is that if our aim is to <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">disprove</dfn> the sentence \((\forall n \in \NN)(\exists m \in \NN)(m^2 = n)\text{,}\) then this unpacking shows us what we need to do. We have to <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">specify</dfn> or <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">construct</dfn> a natural number \(n\text{;}\) let's take \(n=2\text{.}\) Then we have to show that for every natural number \(m\text{,}\) it is not the case that \(m^2 = n\text{.}\) In this case, we can note that \(1^2 = 1 \lt 2\text{,}\) and for any natural number \(m \geq 2\text{,}\) we have \(m^2 &gt; 2^2 = 4 &gt; 2\text{.}\)</p></article></body>
+</html>

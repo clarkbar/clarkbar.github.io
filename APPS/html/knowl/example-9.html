@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T18:23:35+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">The importance of being parenthesized.</span>
+</h6>
+<p>The previous example brings up a critical issue. <blockquote class="blockquote">We must write our connectives carefully!</blockquote> For example, consider the statement <blockquote class="blockquote">“\(57\) is prime or \(2\) is even and \(937\) is prime.”</blockquote></p>
+<p>What do we mean by this statement? As written, it's ambiguous, and that ambiguity affects the truth-value!</p>
+<p>Parentheses clarify things: the statement <blockquote class="blockquote">“(\(937\) is prime or \(2\) is even) and \(57\) is prime”</blockquote> is false, whereas the statement <blockquote class="blockquote">“\(937\) is prime or (\(2\) is even and \(57\) is prime)”</blockquote> is true.</p>
+<p>Here's the truth table for \(\quine{\phi \vee (\psi \wedge \chi)}\text{;}\) notice the differences from the truth table for \(\quine{(\phi \vee \psi) \wedge \chi}\) above:</p>
+<div class="tabular-box natural-width"><table xmlns:svg="http://www.w3.org/2000/svg" class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(\phi\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\psi\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\chi\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\quine{\psi \wedge \chi}\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(\quine{\phi \vee (\psi \wedge \chi)}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div></article><span class="incontext"><a href="disjunction.html#example-9">in-context</a></span>
+</body>
+</html>

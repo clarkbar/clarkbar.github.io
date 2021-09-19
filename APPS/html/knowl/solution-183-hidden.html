@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T13:29:56+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p>First we do the algebraic argument:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+k\binom{n}{k} =\frac{k\cdot n!}{(n-k)!k!} = \frac{n!}{(n-k)!(k-1)!}  = \frac{n\cdot (n-1)!}{(n-k)!(k-1)!}
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+=\frac{n\cdot (n-1)!}{((n-1)-(k-1))!(k-1)!} = n\binom{n-1}{k-1}\text{.}
+\end{equation*}
+</div>
+<p>Now we give a combinatorial proof. We need to find a common thing these two numbers are counting, or that they count two sets that are in one-to-one correspondence. If you see a term with a product, it might mean that it is counting some set using the Multiplication Principle. In fact, the left side counts the number of ways of pairing a set \(A\) of size \(k\) with an element \(a\in A\text{,}\) i.e. the set of pairs \((a,A)\) where \(A\subseteq S\text{,}\) \(|A|=k\text{,}\) and \(a\in A\text{.}\) Let's see if the right side is in one-to-one correspondence with this set. Note that \(n\) is the number of ways of picking one element \(a\in S\text{,}\) and \(\binom{n-1}{k-1}\) is the number of ways of picking a subset \(B\) of size \(k-1\) from the remaining \(n-1\) elements of \(S\text{,}\) i.e. this counts the set of pairs \((a,B)\) where \(a\in S\text{,}\) \(|B|=k-1\text{,}\) and \(a\not\in B\text{.}\) But each such pair is in one-to-one correspondence with a pair \((a,A)\) (where \(a\in A\) and \(|A|=k\) as before by setting \(A=B\cup \{a\}\text{.}\) Thus, these sets of pairs are in one-to-one correspondence and so they have the same number. This proves the formula.</p>
+</div></body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T13:29:58+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">
+<p>Let \(f\in S_{n}\text{.}\) Since \(f\) is a composition of cycles by Proposition 20.3, we just need to show that each cycle is a composition of functions in \(S\text{.}\) So let \((a_{1}....a_{r})\) be one of the cycles. The claim will follow from the following subclaim:</p>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Subclaim:</em> If \((a_{1}...a_{r})\) is an \(r\)-cycle, then it is a composition of functions from \(S\text{.}\)</p>
+<p>Note that by the proof of <a class="xref" data-knowl="./knowl/l_prodof2cycles.html" title="Lemma 16.9.1">Lemma 16.9.1</a> (Proposition 20.6 in the book),</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(a_{1}\; \cdots \; a_{r}) = (a_{1} \; a_{r})\cdots (a_{1}\; a_{2})\text{,}
+\end{equation*}
+</div>
+<p>Thus, it suffices to show that the cycles \((1 \; j)\) where \(1\lt j\leq n\) are compositions of functions from \(S\text{.}\) We will prove this by induction on \(j=2,...,n\text{.}\)</p>
+<p>If \(j=2\text{,}\) then this is immediate since \((1\;2)\in S\) already. This proves the base case. Now we prove the induction step. Assume we have shown that \((1\; j)\) is a composition of functions from \(S\) for some \(1\lt j\lt n\text{.}\) Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(1 \; j+1) = (1 \; j)(j\; j+1)(1 \; j)\text{.}
+\end{equation*}
+</div>
+<p>We already have \((j\; j+1)\in S\text{,}\) and \((1\; j)\) is a composition of functions from \(S\) by the induction hypothesis, hence so is \((1 \; j+1)\text{,}\) which proves the induction step.</p>
+</div></body>
+</html>

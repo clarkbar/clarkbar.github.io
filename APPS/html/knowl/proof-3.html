@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T18:23:36+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
+<p>We begin with the forward direction; that is, we shall show first that if \(\neg(\phi \vee \psi)\text{,}\) then \((\neg{\phi}) \wedge (\neg{\psi})\text{.}\) So let us assume \(\neg(\phi \vee \psi)\text{.}\) We aim to prove that both \(\neg{\phi}\) and \(\neg{\psi}\text{.}\)</p>
+<p>In other words, we need to show that \(\phi\) is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">false</dfn>. So we want to prove that \(\phi\) implies something we know to be false. In our case, we are assuming that \(\neg(\phi \vee \psi)\text{,}\) so we know \(\quine{\phi \vee \psi}\) to be false. This is great news: if \(\phi\) is true, then certainly \(\quine{\phi \vee \psi}\) is true. That is, \(\phi \implies (\phi \vee \psi)\text{.}\) Since we know that \(\quine{\phi \vee \psi}\) is false, that implies that \(\phi\) is false as well. Thus \(\quine{\neg{\phi}}\) holds. Similarly, \(\psi \implies (\phi \vee \psi)\text{,}\) but that contradicts our assumption that \(\quine{\neg(\phi \vee \psi)}\) is true. Thus \(\quine{\neg{\psi}}\) holds.</p>
+<p>Now let's reverse directions; that is, let's show that if \((\neg{\phi}) \wedge (\neg{\psi})\text{,}\) then \(\neg(\phi \vee \psi)\text{.}\) So let us assume that both \(\neg{\phi}\) and \(\neg{\psi}\text{.}\) We aim to prove that \(\neg(\phi \vee \psi)\text{.}\)</p>
+<p>In other words, we need to show that \(\quine{\phi \vee \psi}\) is <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">false</em>. If \(\phi \vee \psi\text{,}\) there are two options:</p>
+<ul class="disc">
+<li><p>One possibility is that \(\phi\) is true. But this would contradict our assumption that \(\quine{\neg{\phi}}\) is true.</p></li>
+<li><p>So that leaves the other possibility, which is that \(\psi\) is true. But that contradicts our other assumption, that \(\quine{\neg{\psi}}\) is true.</p></li>
+</ul>
+<p>Either way, we arrive at a contradiction, and so \(\quine{\phi\vee \psi}\) is indeed false.</p></article><span class="incontext"><a href="proofbycontradiction.html#proof-3">in-context</a></span>
+</body>
+</html>

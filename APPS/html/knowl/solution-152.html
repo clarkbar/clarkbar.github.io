@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T13:29:50+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">[STRUCT].0.1</span><span class="period">.</span>
+</h6>
+<p>For part (a), the fact that \(|a+b\sqrt{-5}|=\sqrt{a^{2}+5b^{2}}\) juts follows from the definition of the modulus of a complex number. In particular, if \(z=a+b\sqrt{-5}\) has modulus 1, then \(1=|z|^{2}=a^{2}+5b^{2}\text{,}\) and the only way this can happen is if \(b=0\) and \(a=1\) (since a and b are integers).</p>
+<p>For part b, we can prove this by strong induction on \(|z|^2\text{.}\) If \(|z|^2=1\text{,}\) then \(z\) must be \(\pm 1\text{,}\) which is a primo (since if we have \(xy=z\text{,}\) then \(1=|z|=|xy|=|x||y|\text{,}\) so \(|x|=|y|=1\text{,}\) and hence \(x,y=\pm 1\text{,}\) that is, they are both equal to plus or minus z).</p>
+<p>Now suppose we know that claim b holds for all \(z\) with \(|z|^2\leq n\) for some integer \(n\text{.}\) Let \(z\) now be an element with \(|z|^2=n+1\text{.}\) If it is not primo, then there is a way of writing z as \(xy\) where neither x or y are equal to plus or minus z, so in particular, neither of them are \(\pm 1\) either. By part (a), since neither of them are 1, then \(|x|,|y|&gt;1\text{,}\) and \(|z|=|xy|=|x||y|\text{,}\) so \(1\lt |x|^2=|z|^2/|y|^2\lt |z|^2=n+1\text{.}\) Thus, \(x\) can be factored into a product of primos by the induction hypothesis, and y can be similarly. This proves the induction step.</p>
+<p>For c, note that 2 is primo since otherwise 2 can be written as a product of two numbers with modulus less than 2, but then they must have modulus 1, and so they must be \(\pm1\text{,}\) which is impossible.</p>
+<p>3 is primo since if it were the product of two numbers xy with modulus less than 3, then they would have to either be \(\pm 1\) or \(\pm 2\text{,}\) which don't multiply up to 3.</p>
+<p>\(1+\sqrt{-5}\) is primo since, if it were written as a product \(xy\) with neither of x or y equal to 1 or \(1+\sqrt{-5}\text{,}\) notice that \(|x|\cdot |y|=|xy|=|1+\sqrt{-5}|=\sqrt{1+5}=\sqrt{6}\text{,}\) so \(|x|,|y|\leq \sqrt{6}\text{,}\) and the only numbers for which this holds are \(\pm 1\) and \(\pm 2\text{.}\)</p>
+</div>
+<span class="incontext"><a href="numbertheoryexercises.html#solution-152">in-context</a></span>
+</body>
+</html>

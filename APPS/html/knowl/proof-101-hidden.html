@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T13:29:57+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>Let \(f=(a_{1}\; a_{2}\; \cdots \; a_{r}\}\) and \(g=(b_{1}\; b_{2}\; \cdots \; b_{s}\}\) where \(\{a_{1},...,a_{r}\}\) and \(\{b_{1},...,b_{s}\}\) are disjoint sets in \(\{1,2,...,n\}\text{.}\) Let us look at the charts for \(f\) and \(f\circ g\text{,}\) but ordering the first row so that they begin with \(a_{1},...,a_{r},b_{1},...,b_{s}\text{:}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left(\begin{array}{c|ccccccccccc} k \amp  a_1 \amp  a_2 \amp  \cdots  \amp   a_{r-1} \amp   a_r \amp  b_{1} \amp  b_{2} \amp  ...  \amp  b_{s-1} \amp   b_{s} \amp  ... \\ g(k) \amp  a_1 \amp  a_2 \amp  \cdots  \amp   a_{r-1} \amp   a_r \amp  b_{2} \amp  b_{3} \amp  ...  \amp  b_{s} \amp   b_{1} \amp  ... \\ f(g(k)) \amp  a_2 \amp  a_3 \amp  \cdots  \amp   a_{r} \amp   a_1 \amp  b_{2} \amp  b_{3} \amp  ...  \amp  b_{s} \amp   b_{1} \amp  ... \end{array} \right)
+\end{equation*}
+</div>
+<p>Above, the final numbers in “\(..\text{.}\)” are the remaining integers \(\{1,2,...,n\}\) not in either \(\{a_{1},...,a_{r}\}\) or \(\{b_{1},...,b_{s}\}\text{,}\) and for \(k\) in this range, we have \(f(k)=g(k)=k\text{.}\) Notice that since the \(a\)'s are not in \(\{b_{1},...,b_{s}\}\text{,}\) \(g\) fixes the numbers \(a_{1},...,a_{r}\) (that is, \(g(a_{i})=a_{i}\) for \(i=1,...,r\)) and then cycles through the \(b\)'s. Similarly, since the \(b\)'s are not in \(\{a_{1},...,a_{r}\}\text{,}\) \(f\) fixes the numbers \(b_{1},...,b_{s}\) (that is, \(f(b_{i})=b_{i}\) for \(i=1,...,s\)) and then cycles through the \(a\)'s. Thus, we get that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+fg=  \left(\begin{array}{c|cccccccccc} a_1 \amp  a_2 \amp  \cdots  \amp   a_{r-1} \amp   a_r \amp  b_{1} \amp  b_{2} \amp  ...  \amp  b_{r-1} \amp   b_{r} \amp  ... \\ a_2 \amp  a_3 \amp  \cdots  \amp   a_{r} \amp   a_1 \amp  b_{2} \amp  b_{3} \amp  ...  \amp  b_{r} \amp   b_{1} \amp  ... \end{array} \right)\text{.}
+\end{equation*}
+</div>
+<p>Notice that if we did the exact same computation but with \(gf\) instead of \(fg\text{,}\) we would get the same chart, thus \(fg=gf\text{.}\)</p></article></body>
+</html>

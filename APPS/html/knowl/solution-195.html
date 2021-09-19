@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-09-18T13:29:59+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">16.10.6.1</span><span class="period">.</span>
+</h6>
+<p>(a) Clearly \(y\sim y\) since \(y=\iota y\iota^{-1}\text{,}\) so \(\sim\) is reflexive. If \(y\sim z\text{,}\) then \(y=xzx^{-1}\) for some \(x\in S_{n}\text{.}\) Composing both sides on the left with \(x^{-1}\text{,}\) we get \(x^{-1}y=zx^{-1}\text{,}\) and then composing again on the right gives \(x^{-1}yx=z\text{,}\) and so \(z\) is a conjugate of \(y\text{,}\) hence \(z\sim y\) and we have reflexivity. Finally, if \(y\sim z\) and \(z\sim w\text{,}\) then \(y=xzx^{-1}\) and \(z=sws^{-1}\) for some \(x,s\in S_{n}\text{.}\) Then \(y=xzx^{-1} = xswx^{-1}s^{-1} = xsw(xs)^{-1}\text{,}\) so \(y\sim w\text{.}\) This proves transitivity.</p>
+<p>(b) Let \(F(y)=xyx^{-1}\text{.}\) Then \(F\) is surjective since, for every \(y\in S_{n}\text{,}\) \(y=F(x^{-1}yx)\text{.}\) It is injective since, if \(xyx^{-1}=xzx^{-1}\text{,}\) then we can compose both sides on the left with \(x^{-1}\) to get \(yx^{-1}=zx^{-1}\text{,}\) and then compose with \(x\) on the right to get \(y=z\text{.}\)</p>
+<p>(c) If we plug in \(x(a_{i})\) (this is the function \(x\) evaluated at \(a_{i}\)), we get \(xcx^{-1}(x(a_{i}))=xc(a_{i})=x(a_{i+1})\) if \(i\lt k\) and when \(i=k\text{,}\) \(xcx^{-1}(x(a_{k}))=xc(a_{k})=x(a_{1})\text{.}\) Thus, \(xcx^{-1}=(x(a_{1})...x(a_{k}))\text{.}\)</p>
+<p>In particular, \(xcx^{-1}\) is a cycle of the same length.</p>
+<p>(d) If \(y,z\) are conjugates, then they have the same cycle-shape. If \(z=xyx^{-1}\text{,}\) and \(y\in S_{n}\) decomposes into disjoint cycles \(y=c_{1}\cdots c_{k}\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+xyx^{-1}=xc_{1}x^{-1} xc_{2}x^{-1}\cdots xc_{k}x^{-1}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so \(xyx^{-1}\) is also a composition of cycles of the same lengths, and so it has the same cycle-shape as \(y\text{.}\)</p>
+<p>If \(y\) and \(z\) have the same cycle shape, then they are also conjugate. To see this, note that if \(y=c_1...c_{r}\) is a product of disjoint cycles, we can write \(z=d_{1}...d_{r}\) as a product of cycles so that \(d_{i}\) has the same length as \(c_{i}\text{.}\) If \(c_{i}=(a_{i,1}...a_{i,k_i})\) and \(d_{i}=(b_{i,j},...,b_{i,k_{i}})\text{,}\) define \(x\in S_{n}\) so that \(x(a_{i,j})=b_{i,j}\text{.}\) Then \(xc_ix^{-1}=(x(a_{i,1})...x(a_{i,k_i}))=(b_{i,1},...,b_{i,k_{i}})=d_i\text{,}\) and so \(xyx^{-1}=z\text{.}\)</p>
+</div>
+<span class="incontext"><a href="permutationexercises.html#solution-195">in-context</a></span>
+</body>
+</html>
