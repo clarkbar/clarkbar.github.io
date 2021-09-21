@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:23:33+01:00       *-->
+<!--*       on 2021-09-21T12:53:48+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -390,38 +390,11 @@
 
 	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
 
-\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
-\def\LUB{{ LUB}}
-\renewcommand{\sectionmark}[1]{{}}
-\def\GLB{{ GLB}}
-\renewcommand{\headrulewidth}{0.5pt}
-\def\ve{\varepsilon}
-\renewcommand{\footrulewidth}{0pt}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\headrulewidth}{0pt}
-\def\R{\mathbb{R}}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
-\def\LUB{{ LUB}}
 \newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
-\def\ve{\epsilon}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\LUB{{ LUB}}
-\def\easylemma{the Linear Combination Lemma}
-\def\lcm{ lcm}
-\def\cl{{ cl}}
-\newcommand{\thepartimage}{}
-\newcommand{\thechapterimage}{}
-\def\R{\mathbb{R}}
-\def\Z{\mathbb{Z}}
-\def\N{{\mathbb{N}}}
-\def\Q{{\mathbb{Q}}}
-\def\C{{\mathbb{C}}}
-\def\hcf{{ hcf}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -464,7 +437,7 @@
 <li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
 <li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
 <li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
-<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Week 1 Exercises, due 28 September 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -475,7 +448,6 @@
 <li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
 <li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages" class="active">Images and preimages</a></li>
 <li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
-<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
 </ul>
 </li>
 <li class="link"><a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a></li>
@@ -493,7 +465,6 @@
 <li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
 <li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
 <li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
-<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
 </ul>
 </li>
 <li class="link">
@@ -502,7 +473,6 @@
 <li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
 <li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
 <li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
-<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
 </ul>
 </li>
 <li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">10</span> <span class="title">Counting</span></a></li>
@@ -517,26 +487,26 @@
 <article class="definition definition-like" id="definition-20"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span>
 </h6>
-<p id="p-315">If \(f\colon X\rightarrow Y\) is a map and \(A\subseteq X\) is a subset, then the <dfn class="terminology">image of \(A\)</dfn> under \(f\) is the set</p>
+<p id="p-301">If \(f\colon X\rightarrow Y\) is a map and \(A\subseteq X\) is a subset, then the <dfn class="terminology">image of \(A\)</dfn> under \(f\) is the set</p>
 <div class="displaymath">
 \begin{equation*}
 f(A)=\{f(x):x\in A\} \subseteq Y\text{.}
 \end{equation*}
 </div>
-<p id="p-316">If \(B\subseteq Y\text{,}\) the <dfn class="terminology">preimage of \(B\)</dfn> under \(f\) is</p>
+<p id="p-302">If \(B\subseteq Y\text{,}\) the <dfn class="terminology">preimage of \(B\)</dfn> under \(f\) is</p>
 <div class="displaymath">
 \begin{equation*}
 f^{-1}(B)=\{x\in X: f(x)\in B\} \subseteq X\text{.}
 \end{equation*}
-</div></article><p id="p-317">Some authors call the preimage the <dfn class="terminology">inverse image</dfn>.</p>
+</div></article><p id="p-303">Some authors call the preimage the <dfn class="terminology">inverse image</dfn>.</p>
 <article class="warning remark-like" id="warning-4"><h6 class="heading">
 <span class="type">Warning</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
 </h6>
-<p id="p-318">This notation is a little ambiguous since we have already let \(f^{-1}\) denote the inverse of a bijective function \(f\text{,}\) whereas now we are using it to denote the preimage of a set under a function \(f\) that might not be bijective.</p>
-<p id="p-319">Notice, however, that an author's meaning can be deciphered from context: if \(f\colon X\rightarrow Y\) is a map, and one writes \(f^{-1}(y)\) for an <dfn class="terminology">element</dfn> \(y\in Y\text{,}\) you'll know they are referring to \(f^{-1}\) as a function. If one writes \(f^{-1}(A)\) for a <dfn class="terminology">set \(A\)</dfn>, you'll know they are talking about the <dfn class="terminology">preimage</dfn> as defined above.</p>
-<p id="p-320">Notice also that if \(f\) is bijective — so that the function \(f^{-1}\) exists in the first place — then there are two ways of reading what \(f^{-1}(A)\) means: it is the image of \(A\) under \(f^{-1}\text{,}\) and it is the preimage of \(A\) under \(f\text{,}\) but in this case, these two are the same set, so there is no ambiguity!</p></article><article class="example example-like" id="example-42"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-42"><h6 class="heading">
+<p id="p-304">This notation is a little ambiguous since we have already let \(f^{-1}\) denote the inverse of a bijective function \(f\text{,}\) whereas now we are using it to denote the preimage of a set under a function \(f\) that might not be bijective.</p>
+<p id="p-305">Notice, however, that an author's meaning can be deciphered from context: if \(f\colon X\rightarrow Y\) is a map, and one writes \(f^{-1}(y)\) for an <dfn class="terminology">element</dfn> \(y\in Y\text{,}\) you'll know they are referring to \(f^{-1}\) as a function. If one writes \(f^{-1}(A)\) for a <dfn class="terminology">set \(A\)</dfn>, you'll know they are talking about the <dfn class="terminology">preimage</dfn> as defined above.</p>
+<p id="p-306">Notice also that if \(f\) is bijective — so that the function \(f^{-1}\) exists in the first place — then there are two ways of reading what \(f^{-1}(A)\) means: it is the image of \(A\) under \(f^{-1}\text{,}\) and it is the preimage of \(A\) under \(f\text{,}\) but in this case, these two are the same set, so there is no ambiguity!</p></article><article class="example example-like" id="example-42"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-42"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Even and odd.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-42"><article class="example example-like"><p id="p-321">If \(f\colon\NN_0\rightarrow \NN_0\) is \(f(n)=n+1\text{,}\) and \(A=\{2n:n\in\NN_0\}\) is the set of even integers, then the image of \(A\) under \(f\) is</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-42"><article class="example example-like"><p id="p-307">If \(f\colon\NN_0\rightarrow \NN_0\) is \(f(n)=n+1\text{,}\) and \(A=\{2n:n\in\NN_0\}\) is the set of even integers, then the image of \(A\) under \(f\) is</p>
 <div class="displaymath">
 \begin{equation*}
 f(A)=\{f(n):n\in A\} = \{f(2n): n\in\NN_0\} = \{2n+1:n\in\NN_0\}\text{,}
@@ -546,7 +516,7 @@ f(A)=\{f(n):n\in A\} = \{f(2n): n\in\NN_0\} = \{2n+1:n\in\NN_0\}\text{,}
 <article class="theorem theorem-like" id="theorem-6"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.5.4</span><span class="period">.</span>
 </h6>
-<p id="p-322">Let \(f\colon X\rightarrow Y\) be a function and \(A,B\subseteq Y\text{.}\) Then</p>
+<p id="p-308">Let \(f\colon X\rightarrow Y\) be a function and \(A,B\subseteq Y\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 f^{-1}(A\cap B)=f^{-1}(A)\cap f^{-1}(B)
@@ -557,18 +527,18 @@ f^{-1}(A\cap B)=f^{-1}(A)\cap f^{-1}(B)
 \begin{equation*}
 f^{-1}(A\cup B)=f^{-1}(A)\cup f^{-1}(B)
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-6"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-323">To show the first equality, note that \(x\in f^{-1}(A\cap B)\) if and only if \(f(x)\in A\cap B\text{,}\) that is, \(f(x)\in A\) and \(f(x)\in B\text{,}\) which is true if and only if \(x\in f^{-1}(A)\) and \(x\in f^{-1}(B)\text{,}\) that is, if and only if \(x\in f^{-1}(A)\cap f^{-1}(B)\text{.}\) Thus, \(f^{-1}(A\cap B)=f^{-1}(A)\cap f^{-1}(B)\text{.}\) The second equation has a similar proof (basically just change the “and's” to “or's”).</p></article></div>
+</div></article><article class="hiddenproof" id="proof-6"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-309">To show the first equality, note that \(x\in f^{-1}(A\cap B)\) if and only if \(f(x)\in A\cap B\text{,}\) that is, \(f(x)\in A\) and \(f(x)\in B\text{,}\) which is true if and only if \(x\in f^{-1}(A)\) and \(x\in f^{-1}(B)\text{,}\) that is, if and only if \(x\in f^{-1}(A)\cap f^{-1}(B)\text{.}\) Thus, \(f^{-1}(A\cap B)=f^{-1}(A)\cap f^{-1}(B)\text{.}\) The second equation has a similar proof (basically just change the “and's” to “or's”).</p></article></div>
 <article class="definition definition-like" id="definition-21"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.5</span><span class="period">.</span>
 </h6>
-<p id="p-324">Let \(X\) and \(Y\) be sets, and let \(f\colon X \to Y\) be a map. If \(y \in Y\text{,}\) then the <dfn class="terminology">fiber</dfn> of \(f\) over \(y\) is the preimage</p>
+<p id="p-310">Let \(X\) and \(Y\) be sets, and let \(f\colon X \to Y\) be a map. If \(y \in Y\text{,}\) then the <dfn class="terminology">fiber</dfn> of \(f\) over \(y\) is the preimage</p>
 <div class="displaymath">
 \begin{equation*}
 f^{-1}\{y\} = \{x \in X : f(x) = y\}
 \end{equation*}
 </div></article><article class="example example-like" id="example-43"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-43"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.6</span><span class="period">.</span><span class="space"> </span><span class="title">Fibers as solutions.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-43"><article class="example example-like"><p id="p-325">Consider the map \(f \colon \NN_0 \to \NN_0\) given by the formula \(f(m) = m^2 - 2m + 2\text{.}\) For any natural number \(n\text{,}\) the fiber over \(n\) is the set</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-43"><article class="example example-like"><p id="p-311">Consider the map \(f \colon \NN_0 \to \NN_0\) given by the formula \(f(m) = m^2 - 2m + 2\text{.}\) For any natural number \(n\text{,}\) the fiber over \(n\) is the set</p>
 <div class="displaymath">
 \begin{equation*}
 f^{-1}(n) = \{m\in\NN_0 : m^2-2m+2 = n\}\text{,}
@@ -587,8 +557,8 @@ f^{-1}\{5\} \amp= \{3\}
 </div></article></div>
 <article class="example example-like" id="example-44"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-44"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Fibers, injectivity, and surjectivity.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-44"><article class="example example-like"><p id="p-326">Let \(f \colon X \to Y \) be a map. Then \(f\) is injective if and only if, for every element \(y \in Y\text{,}\) the fiber \(f^{-1}\{y\}\) is a finite set of cardinality no greater than \(1\text{.}\) The map \(f\) is surjective if and only if, for every element \(y \in Y\text{,}\) the fiber \(f^{-1}\{y\}\) is nonempty.</p></article></div>
-<p id="p-327">Let \(X\) and \(Y\) be sets, and let \(f\colon X \to Y\) be a map. If \(y,z\in Y\) are elements such that \(y \neq z\text{,}\) then it follows from the theorem above that the fibers over \(y\) and \(z\) are disjoint; that is,</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-44"><article class="example example-like"><p id="p-312">Let \(f \colon X \to Y \) be a map. Then \(f\) is injective if and only if, for every element \(y \in Y\text{,}\) the fiber \(f^{-1}\{y\}\) is a finite set of cardinality no greater than \(1\text{.}\) The map \(f\) is surjective if and only if, for every element \(y \in Y\text{,}\) the fiber \(f^{-1}\{y\}\) is nonempty.</p></article></div>
+<p id="p-313">Let \(X\) and \(Y\) be sets, and let \(f\colon X \to Y\) be a map. If \(y,z\in Y\) are elements such that \(y \neq z\text{,}\) then it follows from the theorem above that the fibers over \(y\) and \(z\) are disjoint; that is,</p>
 <div class="displaymath">
 \begin{equation*}
 f^\{-1\}\{y\} \cap f^\{-1\}\{z\} = \varnothing\text{.}
@@ -600,7 +570,7 @@ f^\{-1\}\{y\} \cap f^\{-1\}\{z\} = \varnothing\text{.}
 X = f^\{-1\}\{y_1\} \cup f^\{-1\}\{y_2\} \cup \cdots \cup f^\{-1\}\{y_n\}\text{.}
 \end{equation*}
 </div>
-<p id="p-328">Let's write \(X_i = f^{-1}\{y_i\}\text{.}\) Thus we may think of \(f\) as <dfn class="terminology">partitioning</dfn> \(X\) into the \(n\) disjoint subsets \(X_1, X_2, \dots, X_n\text{.}\) The final observation from the previous section gives us a tremendously useful formula:</p>
+<p id="p-314">Let's write \(X_i = f^{-1}\{y_i\}\text{.}\) Thus we may think of \(f\) as <dfn class="terminology">partitioning</dfn> \(X\) into the \(n\) disjoint subsets \(X_1, X_2, \dots, X_n\text{.}\) The final observation from the previous section gives us a tremendously useful formula:</p>
 <div class="displaymath">
 \begin{equation*}
 |X| = |X_1| + |X_2| + \cdots + |X_n|\text{,}

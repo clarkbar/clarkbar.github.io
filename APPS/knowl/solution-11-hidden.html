@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:23:37+01:00       *-->
+<!--*       on 2021-09-21T12:53:52+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,16 +13,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p>We can form the composition of \(f \colon A \to B\) and \(g \colon C \to D\) if and only if \(B=C\text{.}\) In some of the above examples we have that \(B \subset C\text{.}\) In this case, although we can morally do the composition, in practice we would need to do the composition \(g \circ f' \circ f \colon A \to D\) where \(f' \colon B \to C\) is defined by \(f'(x)=x\text{.}\)</p>
-<p>Therefore the valid compositions are</p>
-<ol class="lower-alpha">
-<li><p>\(f_2 \circ f_1 \colon \R \to \Z\) defined by \(f_2 \circ f_1(x) = \lfloor x \rfloor + 1\text{.}\) This is not 1-1 since 1 and 1.5 have the same image. It is onto, because \(n-1\) maps to \(n\) for every \(n \in \Z\text{.}\)</p></li>
-<li><p>\(f_2 \circ f_2 \colon \Z \to\Z\) defined by \(f_2 \circ f_2(x) = x+2\text{.}\) It is both 1-1 and onto, so is a bijection. Its inverse is the function \(f'\colon \Z \to \Z\) defined by \(f'(x) = x-2\text{.}\)</p></li>
-<li><p>\(f_2 \circ f_3 \colon \Z \times \Z \to \Z\) defined by \(f_2 \circ f_3(x,y) = xy+1\text{.}\) Not 1-1, since \((1,1)\) and \((-1,-1)\) have the same image. It is onto, since \((x-1,1)\) maps to \(x\) for all \(x \in \Z\text{.}\)</p></li>
-<li><p>\(f_3 \circ f_4 \colon \R \to \Z\) defined by \(f_3 \circ f_4 (x) = \lfloor x \rfloor \lceil x \rceil\text{.}\) Not 1-1, since 0.1 and 0.2 have the same image. Not onto, because we can only get products of consecutive integers. So, for example, there is no \(x\) which maps to \(14 = 2 \times 7\text{.}\)</p></li>
-<li><p>\(f_6 \circ f_5 \colon \{1,\dots, 10\} \to \{1,\dots, 10\}\) defined by \(f_6 \circ f_5(x) = \begin{cases}10 \amp \text{ if } x \text{ is even } \\7 \amp \text{ if } x \text{ is odd } \end{cases}\text{.}\) This is not 1-1 since 2 and 4 have the same image. It is not onto because nothing maps to 1.</p></li>
-<li><p>\(f_5 \circ f_6 \colon \{0,1\} \to \{0,1\}\) defined by \(f_5 \circ f_6(0) = 0\text{,}\) \(f_5 \circ f_6(1) = 1\text{.}\) This is both 1-1 and onto and is its own inverse function. (So just because \(f \circ g\) is bijective, doesn't mean \(g \circ f\) is bijective!)</p></li>
-</ol>
-</div></body>
+<body><div class="solution solution-like"><p>An element \(y\in\mathbb{Z}/{81}\) is invertible if and only if \(x\) and \(81\) are coprime. The is possible if and only if \(3\) does not divide \(y\text{.}\) The number of numbers in \(\{0,1,...,80\}\) divisible by \(3\) is \(\frac{81}{3}=27\text{,}\) so the number of invertible elements is \(81-27 = 54\text{.}\)</p></div></body>
 </html>

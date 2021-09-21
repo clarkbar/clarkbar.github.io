@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:23:37+01:00       *-->
+<!--*       on 2021-09-21T12:53:50+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>If \(f \colon S \to T\) is a bijection, then there exists a map \(g \colon T \to S\) such that \(g \circ f = \mathrm{id}\text{,}\) and \(f \circ g = \mathrm{id}\text{.}\) To prove this, let us construct \(g\text{:}\) the function \(f\) gives us a subset \(\Gamma(f) \subseteq S \times T\) such that for any \(s \in S\text{,}\) there exists a unique \(t \in T\) such that \((s, t) \in \Gamma(f)\text{.}\) So now let's define \(g = (T, S, \Gamma(g))\text{,}\) where \(\Gamma(g) = \{ (t,s) \in T \times S : (s, t) \in \Gamma(f) \}\text{.}\) Of course \(\Gamma(g)\) makes perfect sense as a subset, but we aren't done: we have to show it is a map from \(S\) to \(T\text{.}\) For this we can use the fact that, since \(f\) is a bijection, for every \(t \in T\text{,}\) there exists a unique \(s \in S\) such that \((s,t) \in \Gamma(f)\text{.}\) In other words, for every \(t \in T\text{,}\) there exists a unique \(s \in S\) such that \((t,s) \in \Gamma(g)\text{.}\) Thus if \(t \in T\text{,}\) then \(g(t) \in S\) is the unique element such that \(f(g(t) = t\text{.}\) Thus \(f \circ g = \mathrm{id}\text{.}\) To see that \(g \circ f = \mathrm{id}\text{,}\) let \(s \in S\text{;}\) then \(g(f(s)) \in S\) is the unique element such that \(f(g(f(s))) = f(s)\text{.}\) But since this element of \(S\) is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">unique</dfn> with this property, it follows that \(g(f(s)) = s\text{.}\)</p>
-<span class="incontext"><a href="injectivesurjective.html#p-293">in-context</a></span>
+<p>Let us prove the first claim by induction on \(m\text{.}\) If \(m=0\text{,}\) then no matter what \(n\) is, \(m \leq n\text{.}\) Now let \(m\in\NN_0\text{,}\) and assume that for any \(n \in \NN_0\text{,}\) if there exists an injective map \(f \colon m \to n\text{,}\) then \(m \leq n\text{.}\) We now aim to show that for any \(n\in \NN_0\text{,}\) if there exists an injective map \(f \colon m+1 \to n\text{,}\) then \(m+1 \leq n\text{.}\) So let \(n \NN_0\text{,}\) and let \(f \colon m+1 \to n\) be an injective map. Note that \(n\neq 0\text{;}\) indeed, if \(n=0\text{,}\) then \(m+1 = 0 \text{,}\) which is impossible since \(0\) is not a successor of any natural number. Thus \(n \in \NN\text{.}\) Now let \(k = f(m) \in n\text{.}\) Note that since \(f \) is an injection, it follows that there is no element \(i \in m-1\) such that \(f(i)=k\text{.}\) Hence we may define a map \(g \colon m \to n-1\) as follows: for any \(i \in m\text{,}\) let</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+g(i) = \begin{cases}
+f(i) \amp \text{ if } f(i)\lt k;\\
+f(i)-1 \amp \text{ if } f(i)\gt k.
+\end{cases}
+\end{equation*}
+</div>
+<p class="continuation">The map \(g\) is again an injection. (Confirm this!) Now by our induction hypothesis, it follows that \(m \leq n-1\text{,}\) whence it follows that \(m+1 \leq n\text{,}\) as desired.</p>
+<span class="incontext"><a href="cardinalities.html#p-293">in-context</a></span>
 </body>
 </html>

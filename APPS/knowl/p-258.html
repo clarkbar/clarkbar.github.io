@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:23:36+01:00       *-->
+<!--*       on 2021-09-21T12:53:50+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let's define a map \(f \colon \NN_0 \to \{\text{red},\text{blue}\}\text{.}\) We can daydream of such a map as painting some natural numbers red and others blue. Defining \(f\) is really the same thing as declaring which natural numbers to paint red, and which to paint blue, in such a way as to ensure that every natural number is painted at least one of these colors, and no natural number is painted both of these colors. Here's a valid way to describe a map \(f\text{:}\)</p>
+<p>The function \(f\colon\NN\rightarrow \NN\) defined by \(f(n)=n^2\) is injective. To see this, let \(x,y\in\NN\) be such that \(f(x)=f(y)\text{.}\) Then \(x^2=y^2\text{,}\) and so</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-f(x) = \begin{cases}
-\text{red} \amp \text{if }x\text{ is even;} \\
-\text{blue} \amp \text{if }x\text{ is odd.}
-\end{cases}
+0=x^2-y^2=(x-y)(x+y)
 \end{equation*}
 </div>
-<span class="incontext"><a href="maps.html#p-258">in-context</a></span>
+<p class="continuation">and since \(x+y&gt;0\text{,}\) this means that \(x-y=0\text{,}\) i.e. \(x=y\text{.}\) Thus \(f\) is injective. (It is not surjective since there is no \(n\) so that \(f(n)=2\text{.}\))</p>
+<span class="incontext"><a href="injectivesurjective.html#p-258">in-context</a></span>
 </body>
 </html>

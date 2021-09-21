@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:23:36+01:00       *-->
+<!--*       on 2021-09-21T12:53:50+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,17 @@
 </head>
 <body>
 <article class="li"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Item</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
 </h6>
-<p>the map \(f\) is bijective (or a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">bijection</dfn> or a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">one-to-one correspondence</dfn>) if and only if it is injective and surjective.</p></article><span class="incontext"><a href="injectivesurjective.html#li-47">in-context</a></span>
+<p>Let us prove the first claim by induction on \(m\text{.}\) If \(m=0\text{,}\) then no matter what \(n\) is, \(m \leq n\text{.}\) Now let \(m\in\NN_0\text{,}\) and assume that for any \(n \in \NN_0\text{,}\) if there exists an injective map \(f \colon m \to n\text{,}\) then \(m \leq n\text{.}\) We now aim to show that for any \(n\in \NN_0\text{,}\) if there exists an injective map \(f \colon m+1 \to n\text{,}\) then \(m+1 \leq n\text{.}\) So let \(n \NN_0\text{,}\) and let \(f \colon m+1 \to n\) be an injective map. Note that \(n\neq 0\text{;}\) indeed, if \(n=0\text{,}\) then \(m+1 = 0 \text{,}\) which is impossible since \(0\) is not a successor of any natural number. Thus \(n \in \NN\text{.}\) Now let \(k = f(m) \in n\text{.}\) Note that since \(f \) is an injection, it follows that there is no element \(i \in m-1\) such that \(f(i)=k\text{.}\) Hence we may define a map \(g \colon m \to n-1\) as follows: for any \(i \in m\text{,}\) let</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+g(i) = \begin{cases}
+f(i) \amp \text{ if } f(i)\lt k;\\
+f(i)-1 \amp \text{ if } f(i)\gt k.
+\end{cases}
+\end{equation*}
+</div>
+<p class="continuation">The map \(g\) is again an injection. (Confirm this!) Now by our induction hypothesis, it follows that \(m \leq n-1\text{,}\) whence it follows that \(m+1 \leq n\text{,}\) as desired.</p></article><span class="incontext"><a href="cardinalities.html#li-47">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:23:33+01:00       *-->
+<!--*       on 2021-09-21T12:53:48+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -390,38 +390,11 @@
 
 	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
 
-\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
-\def\LUB{{ LUB}}
-\renewcommand{\sectionmark}[1]{{}}
-\def\GLB{{ GLB}}
-\renewcommand{\headrulewidth}{0.5pt}
-\def\ve{\varepsilon}
-\renewcommand{\footrulewidth}{0pt}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\headrulewidth}{0pt}
-\def\R{\mathbb{R}}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
-\def\LUB{{ LUB}}
 \newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
-\def\ve{\epsilon}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\LUB{{ LUB}}
-\def\easylemma{the Linear Combination Lemma}
-\def\lcm{ lcm}
-\def\cl{{ cl}}
-\newcommand{\thepartimage}{}
-\newcommand{\thechapterimage}{}
-\def\R{\mathbb{R}}
-\def\Z{\mathbb{Z}}
-\def\N{{\mathbb{N}}}
-\def\Q{{\mathbb{Q}}}
-\def\C{{\mathbb{C}}}
-\def\hcf{{ hcf}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -464,7 +437,7 @@
 <li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
 <li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
 <li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
-<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Week 1 Exercises, due 28 September 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -475,7 +448,6 @@
 <li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
 <li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
 <li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
-<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
 </ul>
 </li>
 <li class="link"><a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a></li>
@@ -493,7 +465,6 @@
 <li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
 <li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
 <li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
-<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
 </ul>
 </li>
 <li class="link">
@@ -502,7 +473,6 @@
 <li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
 <li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
 <li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
-<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
 </ul>
 </li>
 <li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">10</span> <span class="title">Counting</span></a></li>
@@ -517,18 +487,18 @@
 <article class="definition definition-like" id="definition-17"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
 </h6>
-<p id="p-266">Let \(f \colon X\rightarrow Y\) be a function. We say that</p>
+<p id="p-252">Let \(f \colon X\rightarrow Y\) be a function. We say that</p>
 <ul class="disc">
-<li id="li-45">
-<p id="p-267">the map \(f\) is <dfn class="terminology">surjective</dfn> (or a <dfn class="terminology">surjection</dfn> or <dfn class="terminology">onto</dfn>) if and only if</p>
+<li id="li-35">
+<p id="p-253">the map \(f\) is <dfn class="terminology">surjective</dfn> (or a <dfn class="terminology">surjection</dfn> or <dfn class="terminology">onto</dfn>) if and only if</p>
 <div class="displaymath">
 \begin{equation*}
 (\forall y\in Y)(\exists x\in X)(f(x)=y);
 \end{equation*}
 </div>
 </li>
-<li id="li-46">
-<p id="p-268">the map \(f\) is <dfn class="terminology">injective</dfn> (or an <dfn class="terminology">injection</dfn> or <dfn class="terminology">one-to-one</dfn>) if and only if</p>
+<li id="li-36">
+<p id="p-254">the map \(f\) is <dfn class="terminology">injective</dfn> (or an <dfn class="terminology">injection</dfn> or <dfn class="terminology">one-to-one</dfn>) if and only if</p>
 <div class="displaymath">
 \begin{equation*}
 (\forall x,y\in X)((f(x)=f(y)) \implies (x=y));
@@ -536,52 +506,52 @@
 </div>
 <p class="continuation">and</p>
 </li>
-<li id="li-47"><p id="p-269">the map \(f\) is bijective (or a <dfn class="terminology">bijection</dfn> or a <dfn class="terminology">one-to-one correspondence</dfn>) if and only if it is injective and surjective.</p></li>
-</ul></article><p id="p-270">Let \(f \colon X \to Y\) be a map. The map \(f\) is an <dfn class="terminology">injection</dfn> if and only if, for every element \(y \in Y\text{,}\) there exists at most one element \(x \in X\) such that \(y =f(x)\text{.}\) The map \(f\) is a <dfn class="terminology">surjection</dfn> if and only if, for every element \(y \in Y\text{,}\) there exists at <dfn class="terminology">least</dfn> one element \(x \in X\) such that \(y = f(x)\text{.}\) Finally, the map \(f\) is a <dfn class="terminology">bijection</dfn> if and only if, for every element \(y\in Y\text{,}\) there exists <dfn class="terminology">exactly one</dfn> element \(x \in X\) such that \(y = f(x)\text{.}\)</p>
+<li id="li-37"><p id="p-255">the map \(f\) is bijective (or a <dfn class="terminology">bijection</dfn> or a <dfn class="terminology">one-to-one correspondence</dfn>) if and only if it is injective and surjective.</p></li>
+</ul></article><p id="p-256">Let \(f \colon X \to Y\) be a map. The map \(f\) is an <dfn class="terminology">injection</dfn> if and only if, for every element \(y \in Y\text{,}\) there exists at most one element \(x \in X\) such that \(y =f(x)\text{.}\) The map \(f\) is a <dfn class="terminology">surjection</dfn> if and only if, for every element \(y \in Y\text{,}\) there exists at <dfn class="terminology">least</dfn> one element \(x \in X\) such that \(y = f(x)\text{.}\) Finally, the map \(f\) is a <dfn class="terminology">bijection</dfn> if and only if, for every element \(y\in Y\text{,}\) there exists <dfn class="terminology">exactly one</dfn> element \(x \in X\) such that \(y = f(x)\text{.}\)</p>
 <article class="note remark-like" id="note-2"><h6 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-271">When proving that a function \(f:X\rightarrow Y\) is injective, start by assuming \(x,y\in X\) are elements such that \(f(x)=f(y)\) and show that this implies \(x=y\text{.}\) To show a function is not injective, you just need to find one pair \(x,y\in X\) such that \(x\neq y\) even though \(f(x)=f(y)\text{.}\)</p></article><article class="example example-like" id="example-35"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-35"><h6 class="heading">
+<p id="p-257">When proving that a function \(f:X\rightarrow Y\) is injective, start by assuming \(x,y\in X\) are elements such that \(f(x)=f(y)\) and show that this implies \(x=y\text{.}\) To show a function is not injective, you just need to find one pair \(x,y\in X\) such that \(x\neq y\) even though \(f(x)=f(y)\text{.}\)</p></article><article class="example example-like" id="example-35"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-35"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Injectivity depends on the declared source.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><p id="p-272">The function \(f\colon\NN\rightarrow \NN\) defined by \(f(n)=n^2\) is injective. To see this, let \(x,y\in\NN\) be such that \(f(x)=f(y)\text{.}\) Then \(x^2=y^2\text{,}\) and so</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><p id="p-258">The function \(f\colon\NN\rightarrow \NN\) defined by \(f(n)=n^2\) is injective. To see this, let \(x,y\in\NN\) be such that \(f(x)=f(y)\text{.}\) Then \(x^2=y^2\text{,}\) and so</p>
 <div class="displaymath">
 \begin{equation*}
 0=x^2-y^2=(x-y)(x+y)
 \end{equation*}
 </div>
 <p class="continuation">and since \(x+y&gt;0\text{,}\) this means that \(x-y=0\text{,}\) i.e. \(x=y\text{.}\) Thus \(f\) is injective. (It is not surjective since there is no \(n\) so that \(f(n)=2\text{.}\))</p>
-<p id="p-273">If we change the domain from \(\NN_0\) to \(\ZZ\text{,}\) then the map \(f\colon\ZZ\rightarrow \NN_0\) defined by \(f(m)=m^2\) is no longer injective, because \(f(-1)=f(1)\text{.}\)</p></article></div>
+<p id="p-259">If we change the domain from \(\NN_0\) to \(\ZZ\text{,}\) then the map \(f\colon\ZZ\rightarrow \NN_0\) defined by \(f(m)=m^2\) is no longer injective, because \(f(-1)=f(1)\text{.}\)</p></article></div>
 <article class="note remark-like" id="note-3"><h6 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-274">When proving that a function \(f\colon X\rightarrow Y\) is surjective, start by assuming \(y\) is some element of \(Y\) and show that there must be an \(x\in X\) with \(f(x)=y\text{.}\) To show it is not surjective, you just need to exhibit one \(y\in Y\) for which \(f(x)\neq y\) for all \(x\in X\text{.}\)</p></article><article class="example example-like" id="example-36"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-36"><h6 class="heading">
+<p id="p-260">When proving that a function \(f\colon X\rightarrow Y\) is surjective, start by assuming \(y\) is some element of \(Y\) and show that there must be an \(x\in X\) with \(f(x)=y\text{.}\) To show it is not surjective, you just need to exhibit one \(y\in Y\) for which \(f(x)\neq y\) for all \(x\in X\text{.}\)</p></article><article class="example example-like" id="example-36"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-36"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Surjectivity depends on the declared source and target.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-36"><article class="example example-like"><p id="p-275">Let \(g \colon \NN_0 \to \NN_0\) be the map defined by the rule \(g(m)=3m\text{.}\) This is not surjective, since there are natural numbers that are not divisible by \(3\text{.}\)</p>
-<p id="p-276">We can fix this by altering the target of our map. Let \(S = \{n \in \NN_0 : n \text{ is divisible by }3\}\text{.}\) Then if we define \(g\colon \NN_0 \to S\) by the rule \(g(m)=3m\text{,}\) it is surjective.</p>
-<p id="p-277">We can mess this up again by altering the source of our map. If we define \(g\colon \NN \to S\) by the rule \(g(m)=3m\text{,}\) it is no longer surjective, because \(0 \in S\) is not hit by \(g\text{.}\)</p>
-<p id="p-278">The lesson here is that the surjectivity of a map depends critically on the declared domain and codomain of the map!</p></article></div>
-<p id="p-279">The proof of the following result is a good one to study, since it showcases how to prove injectivity and surjectivity for functions.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-36"><article class="example example-like"><p id="p-261">Let \(g \colon \NN_0 \to \NN_0\) be the map defined by the rule \(g(m)=3m\text{.}\) This is not surjective, since there are natural numbers that are not divisible by \(3\text{.}\)</p>
+<p id="p-262">We can fix this by altering the target of our map. Let \(S = \{n \in \NN_0 : n \text{ is divisible by }3\}\text{.}\) Then if we define \(g\colon \NN_0 \to S\) by the rule \(g(m)=3m\text{,}\) it is surjective.</p>
+<p id="p-263">We can mess this up again by altering the source of our map. If we define \(g\colon \NN \to S\) by the rule \(g(m)=3m\text{,}\) it is no longer surjective, because \(0 \in S\) is not hit by \(g\text{.}\)</p>
+<p id="p-264">The lesson here is that the surjectivity of a map depends critically on the declared domain and codomain of the map!</p></article></div>
+<p id="p-265">The proof of the following result is a good one to study, since it showcases how to prove injectivity and surjectivity for functions.</p>
 <article class="theorem theorem-like" id="theorem-4"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
 </h6>
-<p id="p-280">Let \(f:X\rightarrow Y\) and \(g:Y\rightarrow Z\) be functions.</p>
+<p id="p-266">Let \(f:X\rightarrow Y\) and \(g:Y\rightarrow Z\) be functions.</p>
 <ol class="decimal">
-<li id="li-48"><p id="p-281">If \(f\) and \(g\) are injective, so is \(g\circ f\text{.}\)</p></li>
-<li id="li-49"><p id="p-282">If \(f\) and \(g\) are surjective, so is \(g\circ f\text{.}\)</p></li>
-<li id="li-50"><p id="p-283">If \(f\) and \(g\) are bijective, so is \(g\circ f\text{.}\)</p></li>
-</ol></article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-284">Let \(f:X\rightarrow Y\) and \(g:Y\rightarrow Z\) be functions.</p>
+<li id="li-38"><p id="p-267">If \(f\) and \(g\) are injective, so is \(g\circ f\text{.}\)</p></li>
+<li id="li-39"><p id="p-268">If \(f\) and \(g\) are surjective, so is \(g\circ f\text{.}\)</p></li>
+<li id="li-40"><p id="p-269">If \(f\) and \(g\) are bijective, so is \(g\circ f\text{.}\)</p></li>
+</ol></article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-270">Let \(f:X\rightarrow Y\) and \(g:Y\rightarrow Z\) be functions.</p>
 <ol class="decimal">
-<li id="li-51"><p id="p-285">Suppose \(f\) and \(g\) are injective. To show that \(g\circ f\) is injective, we need to show that if \(g\circ f(x)=g\circ f(y)\text{,}\) then \(x=y\text{.}\) So suppose \(x,y\in X\) are so that \(g\circ f(x)=g\circ f(y)\text{.}\) Then \(g(f(x))=g(f(y))\text{.}\) Since \(g\) is injective, this means \(f(x)=f(y)\text{;}\) since \(f\) is injective, this implies \(x=y\text{,}\) as desired. This completes the proof that \(g\circ f\) is injective.</p></li>
-<li id="li-52"><p id="p-286">Now suppose \(f\) and \(g\) are surjective. To show that \(g\circ f\) is surjective, we need to show that for all \(z\in Z\text{,}\) there is \(x\in X\) so that \(z=g\circ f(x)=g(f(x))\text{.}\) Since \(g\) is surjective, there is \(y\in Y\) so that \(z=g(y)\text{;}\) since \(f\) is surjective, there is \(x\in X\) so that \(f(x)=y\text{,}\) and so \(g(f(x))=g(y)=z\text{,}\) as desired. This finishes the proof that \(g\circ f\) is surjective.</p></li>
-<li id="li-53"><p id="p-287">If \(g\) and \(f\) are bijective, then they are both injective and surjective, so by the previous two cases, \(g\circ f\) is also both injective and surjective, hence \(g\circ f\) is bijective.</p></li>
+<li id="li-41"><p id="p-271">Suppose \(f\) and \(g\) are injective. To show that \(g\circ f\) is injective, we need to show that if \(g\circ f(x)=g\circ f(y)\text{,}\) then \(x=y\text{.}\) So suppose \(x,y\in X\) are so that \(g\circ f(x)=g\circ f(y)\text{.}\) Then \(g(f(x))=g(f(y))\text{.}\) Since \(g\) is injective, this means \(f(x)=f(y)\text{;}\) since \(f\) is injective, this implies \(x=y\text{,}\) as desired. This completes the proof that \(g\circ f\) is injective.</p></li>
+<li id="li-42"><p id="p-272">Now suppose \(f\) and \(g\) are surjective. To show that \(g\circ f\) is surjective, we need to show that for all \(z\in Z\text{,}\) there is \(x\in X\) so that \(z=g\circ f(x)=g(f(x))\text{.}\) Since \(g\) is surjective, there is \(y\in Y\) so that \(z=g(y)\text{;}\) since \(f\) is surjective, there is \(x\in X\) so that \(f(x)=y\text{,}\) and so \(g(f(x))=g(y)=z\text{,}\) as desired. This finishes the proof that \(g\circ f\) is surjective.</p></li>
+<li id="li-43"><p id="p-273">If \(g\) and \(f\) are bijective, then they are both injective and surjective, so by the previous two cases, \(g\circ f\) is also both injective and surjective, hence \(g\circ f\) is bijective.</p></li>
 </ol></article></div>
-<p id="p-288">When mathematicians are presented with a set, for many purposes, they won't be too very worried about what the elements are, but what structures they have. The idea is that a bijection of sets is meant to be a <dfn class="terminology">mere labelling</dfn> of the elements of a set \(S\) by the elements of a set \(T\text{.}\) That labelling is meant to be a perfect match of information: you should never use the same label twice, and all the labels should be used. So a <dfn class="terminology">bijection</dfn> of sets is a map \(f\colon S \to T\) such that for any \(t\in T\text{,}\) there exists a unique \(s\in S\) such that \(f(s)=t\text{.}\)</p>
+<p id="p-274">When mathematicians are presented with a set, for many purposes, they won't be too very worried about what the elements are, but what structures they have. The idea is that a bijection of sets is meant to be a <dfn class="terminology">mere labelling</dfn> of the elements of a set \(S\) by the elements of a set \(T\text{.}\) That labelling is meant to be a perfect match of information: you should never use the same label twice, and all the labels should be used. So a <dfn class="terminology">bijection</dfn> of sets is a map \(f\colon S \to T\) such that for any \(t\in T\text{,}\) there exists a unique \(s\in S\) such that \(f(s)=t\text{.}\)</p>
 <article class="example example-like" id="example-37"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-37"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">The swap.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-37"><article class="example example-like"><p id="p-289">Let \(S\) and \(T\) be two sets. There is a bijection \(\sigma \colon S \times T \to T \times S\text{,}\) which is given by \(\sigma(s,t) = (t,s)\text{.}\)</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-37"><article class="example example-like"><p id="p-275">Let \(S\) and \(T\) be two sets. There is a bijection \(\sigma \colon S \times T \to T \times S\text{,}\) which is given by \(\sigma(s,t) = (t,s)\text{.}\)</p></article></div>
 <article class="example example-like" id="example-38"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-38"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">A first example of counting.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-38"><article class="example example-like"><p id="p-290">Let \(S = \{7, \text{the Battle of Hastings}, \pi\}\text{.}\) We can see that it has three elements, but what do we mean by this? Recall that \(3=\{0,1,2\}\text{.}\) So we can define a bijection \(f \colon S \to 3\) by the rule</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-38"><article class="example example-like"><p id="p-276">Let \(S = \{7, \text{the Battle of Hastings}, \pi\}\text{.}\) We can see that it has three elements, but what do we mean by this? Recall that \(3=\{0,1,2\}\text{.}\) So we can define a bijection \(f \colon S \to 3\) by the rule</p>
 <div class="displaymath">
 \begin{align*}
 7 \amp\mapsto 0\\
@@ -592,14 +562,14 @@
 <p class="continuation">This is <dfn class="terminology">counting</dfn>: we establish a bijection between a natural number \(n\) and the set whose elements we're trying to count. We'll see more about counting in the next section.</p></article></div>
 <article class="example example-like" id="example-39"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-39"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">The natural numbers and the positive natural numbers.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-39"><article class="example example-like"><p id="p-291">Here is an interesting bijection: let us define \(S \colon \NN_0 \to \NN\) by the rule \(S(m) = m+1\text{.}\)</p>
-<p id="p-292">The reason this is interesting is that \(\NN \subset \NN_0\text{.}\) If we had a <dfn class="terminology">finite</dfn> set, we couldn't do this: you can't define a bijection between a finite set and a proper subset; there just isn't enough room. But the set \(\NN_0\) is different. This will actually serve as a good recipe for defining <dfn class="terminology">infinite sets</dfn>.</p></article></div>
-<p id="p-293">If \(f \colon S \to T\) is a bijection, then there exists a map \(g \colon T \to S\) such that \(g \circ f = \mathrm{id}\text{,}\) and \(f \circ g = \mathrm{id}\text{.}\) To prove this, let us construct \(g\text{:}\) the function \(f\) gives us a subset \(\Gamma(f) \subseteq S \times T\) such that for any \(s \in S\text{,}\) there exists a unique \(t \in T\) such that \((s, t) \in \Gamma(f)\text{.}\) So now let's define \(g = (T, S, \Gamma(g))\text{,}\) where \(\Gamma(g) = \{ (t,s) \in T \times S : (s, t) \in \Gamma(f) \}\text{.}\) Of course \(\Gamma(g)\) makes perfect sense as a subset, but we aren't done: we have to show it is a map from \(S\) to \(T\text{.}\) For this we can use the fact that, since \(f\) is a bijection, for every \(t \in T\text{,}\) there exists a unique \(s \in S\) such that \((s,t) \in \Gamma(f)\text{.}\) In other words, for every \(t \in T\text{,}\) there exists a unique \(s \in S\) such that \((t,s) \in \Gamma(g)\text{.}\) Thus if \(t \in T\text{,}\) then \(g(t) \in S\) is the unique element such that \(f(g(t) = t\text{.}\) Thus \(f \circ g = \mathrm{id}\text{.}\) To see that \(g \circ f = \mathrm{id}\text{,}\) let \(s \in S\text{;}\) then \(g(f(s)) \in S\) is the unique element such that \(f(g(f(s))) = f(s)\text{.}\) But since this element of \(S\) is <dfn class="terminology">unique</dfn> with this property, it follows that \(g(f(s)) = s\text{.}\)</p>
-<p id="p-294">The converse is also correct: if \(f \colon S \to T\) is a map such that there exists a function \(g \colon T \to S\) such that \(g \circ f =\mathrm{id}\) and \(f \circ g = \mathrm{id}\text{,}\) then \(f\) is a bijection. Indeed, let \(t \in T\) be an element; we aim to prove that there exists a unique element \(s \in S\) such that \(t = f(s)\text{.}\) The function \(g\) provides us with exactly such an element: \(g(t) \in T\) is an element, and \(t = f(g(t))\text{.}\) Now suppose that \(s'\in S\) is an element such that \(t = f(s')\text{;}\) we see that \(g(t) = g(f(s')) = s'\text{,}\) so we have the uniqueness we sought!</p>
-<p id="p-295">In this case, we say that \(g\) is the <dfn class="terminology">inverse</dfn> of \(f\text{,}\) and we sometimes write \(f^{-1}\) for \(g\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-39"><article class="example example-like"><p id="p-277">Here is an interesting bijection: let us define \(S \colon \NN_0 \to \NN\) by the rule \(S(m) = m+1\text{.}\)</p>
+<p id="p-278">The reason this is interesting is that \(\NN \subset \NN_0\text{.}\) If we had a <dfn class="terminology">finite</dfn> set, we couldn't do this: you can't define a bijection between a finite set and a proper subset; there just isn't enough room. But the set \(\NN_0\) is different. This will actually serve as a good recipe for defining <dfn class="terminology">infinite sets</dfn>.</p></article></div>
+<p id="p-279">If \(f \colon S \to T\) is a bijection, then there exists a map \(g \colon T \to S\) such that \(g \circ f = \mathrm{id}\text{,}\) and \(f \circ g = \mathrm{id}\text{.}\) To prove this, let us construct \(g\text{:}\) the function \(f\) gives us a subset \(\Gamma(f) \subseteq S \times T\) such that for any \(s \in S\text{,}\) there exists a unique \(t \in T\) such that \((s, t) \in \Gamma(f)\text{.}\) So now let's define \(g = (T, S, \Gamma(g))\text{,}\) where \(\Gamma(g) = \{ (t,s) \in T \times S : (s, t) \in \Gamma(f) \}\text{.}\) Of course \(\Gamma(g)\) makes perfect sense as a subset, but we aren't done: we have to show it is a map from \(S\) to \(T\text{.}\) For this we can use the fact that, since \(f\) is a bijection, for every \(t \in T\text{,}\) there exists a unique \(s \in S\) such that \((s,t) \in \Gamma(f)\text{.}\) In other words, for every \(t \in T\text{,}\) there exists a unique \(s \in S\) such that \((t,s) \in \Gamma(g)\text{.}\) Thus if \(t \in T\text{,}\) then \(g(t) \in S\) is the unique element such that \(f(g(t) = t\text{.}\) Thus \(f \circ g = \mathrm{id}\text{.}\) To see that \(g \circ f = \mathrm{id}\text{,}\) let \(s \in S\text{;}\) then \(g(f(s)) \in S\) is the unique element such that \(f(g(f(s))) = f(s)\text{.}\) But since this element of \(S\) is <dfn class="terminology">unique</dfn> with this property, it follows that \(g(f(s)) = s\text{.}\)</p>
+<p id="p-280">The converse is also correct: if \(f \colon S \to T\) is a map such that there exists a function \(g \colon T \to S\) such that \(g \circ f =\mathrm{id}\) and \(f \circ g = \mathrm{id}\text{,}\) then \(f\) is a bijection. Indeed, let \(t \in T\) be an element; we aim to prove that there exists a unique element \(s \in S\) such that \(t = f(s)\text{.}\) The function \(g\) provides us with exactly such an element: \(g(t) \in T\) is an element, and \(t = f(g(t))\text{.}\) Now suppose that \(s'\in S\) is an element such that \(t = f(s')\text{;}\) we see that \(g(t) = g(f(s')) = s'\text{,}\) so we have the uniqueness we sought!</p>
+<p id="p-281">In this case, we say that \(g\) is the <dfn class="terminology">inverse</dfn> of \(f\text{,}\) and we sometimes write \(f^{-1}\) for \(g\text{.}\)</p>
 <article class="example example-like" id="example-40"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-40"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">More on counting.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-40"><article class="example example-like"><p id="p-296">Let's return to our set \(S = \{7, \text{the Battle of Hastings}, \pi\}\text{.}\) Recall that \(3=\{0,1,2\}\text{.}\) We defined a bijection \(f \colon S \to 3\) by the rule</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-40"><article class="example example-like"><p id="p-282">Let's return to our set \(S = \{7, \text{the Battle of Hastings}, \pi\}\text{.}\) Recall that \(3=\{0,1,2\}\text{.}\) We defined a bijection \(f \colon S \to 3\) by the rule</p>
 <div class="displaymath">
 \begin{align*}
 7 \amp\mapsto 0\\
@@ -617,7 +587,7 @@
 </div></article></div>
 <article class="example example-like" id="example-41"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-41"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">The natural numbers and the positive natural numbers again.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-41"><article class="example example-like"><p id="p-297">We defined the bijection \(S \colon \NN_0 \to \NN\) by the rule \(S(m) = m+1\text{.}\) The inverse \(S^{-1} \colon \NN \to \NN_0\) is given by the rule \(S^{-1}(m)=m-1\text{.}\)</p></article></div></section></div></main>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-41"><article class="example example-like"><p id="p-283">We defined the bijection \(S \colon \NN_0 \to \NN\) by the rule \(S(m) = m+1\text{.}\) The inverse \(S^{-1} \colon \NN \to \NN_0\) is given by the rule \(S^{-1}(m)=m-1\text{.}\)</p></article></div></section></div></main>
 </div>
 </body>
 </html>
