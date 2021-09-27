@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-19T11:40:32+01:00       *-->
+<!--*       on 2021-09-27T08:44:18+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,26 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(S_1, \dots, S_n \subseteq \PP^1_{\RR}\) be a collection of subsets of \(\PP^1_{\RR}\text{,}\) and let \(L \in \PP^1_{\RR}\text{.}\) If \(L\) is close to \(S_1 \cup \cdots \cup S_n\text{,}\) then a Pigeonhole argument like the one given in <a class="xref" data-knowl="./knowl/prp_key_properties_of_tau.html" title="Proposition 1.1.4">Proposition 1.1.4</a> ensures that \(L\) is close to \(S_1 \cup \cdots \cup S_n\text{.}\) <aside class="aside aside-like"><p>Fill in the details here! Often, in writing, mathematicians say something like, “by the same argument …,” or “by the standard argument …,” or even, “it is obvious that….” This can be a little annoying (and I don't recommend calling very many things “obvious”), but it is a good opportunity for you to take a moment to sort through the details yourself.</p></aside> If \(L\) is close to some \(S_i\text{,}\) then it is certainly close to \(S_1 \cup \cdots \cup S_n\text{.}\)</p>
+<p>A <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">topology</dfn> on a set \(X\) is a map</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tau \colon \PP(X) \to \PP(X)
+\end{equation*}
+</div>
+<p class="continuation">such that the following conditions hold.</p>
+<ol class="decimal">
+<li><p>For any \(S \in \PP(X)\text{,}\) one has \(S \subseteq \tau(S)\text{.}\) In particular, \(\tau(X) = X\text{.}\)</p></li>
+<li>
+<p>For any finite subset \(\Sigma \subseteq \PP(X)\text{,}\) one has</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tau \left( \bigcup_{ S \in \Sigma} S \right) = \bigcup_{ S \in \Sigma } \tau(S)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">In particular, <aside class="aside aside-like"><p>An empty union \(\bigcup_{S \in \varnothing} Y_S\) is empty.</p></aside> \(\tau (\emptyset) = \emptyset\text{.}\) Also, observe that \(\tau\) is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">inclusion-preserving</dfn>; that is, if \(S \subseteq T\text{,}\) then \(\tau(S) \subseteq \tau(T)\text{.}\)</p>
+</li>
+<li><p>For any \(S \in \PP(X)\text{,}\) one has \(\tau( \tau( S ) ) = \tau( S )\text{.}\)</p></li>
+</ol>
 <span class="incontext"><a href="sec_topologies.html#p-217">in-context</a></span>
 </body>
 </html>

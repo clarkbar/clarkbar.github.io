@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-19T11:40:33+01:00       *-->
+<!--*       on 2021-09-27T08:44:19+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,24 +15,7 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The definition of the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">product topology</dfn> is engineered precisely so that a continuous map into the product is determined by each of its continuous components. More precisely, for any indexed family of topological spaces \(\{X_a\}_{a\in A}\text{,}\) the product</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\prod_{a\in A}X_a
-\end{equation*}
-</div>
-<p class="continuation">is a set equipped with continuous projection maps</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\pi_b\colon\fromto{\prod_{a\in A}X_a}{X_b}\text{,}
-\end{equation*}
-</div>
-<p class="continuation">one for every \(b\in A\text{,}\) which together <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">determine</em> the maps into \(\prod_{a\in A}X_a\text{.}\) That is, composition with the projections induce a bijection</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\prod_{a\in A}\pi_{a}\circ -\colon\fromto{\Map\left(Y,\prod_{a\in A}X_a\right)}{\prod_{a\in A}\Map(Y,X_a)}\text{,}
-\end{equation*}
-</div>
-<span class="incontext"><a href="sec_products.html#p-444">in-context</a></span>
+<p>Let \(A = (A,\delta)\) be a discrete topological space. Suppose \(f\colon\fromto{X}{A}\) a continuous map. Then we have a bijection \(G \colon \coprod_{a\in A}f^{-1}\{a\} \to X\text{.}\) Let us show that this is a homeomorphism, where the right hand side is given the coproduct topology (and the fibers \(f^{-1}\{a\} \subseteq X\) are given the subspace topology). By construction, the map \(G\) is continuous. It remains to show that \(G^{-1}\) is continuous; let \(U \subseteq \coprod_{a\in A}f^{-1}\{a\}\) be an open subset. Then \(U \cap f^{-1}\{a\}\) is open in \(f^{-1}\{a\}\text{,}\) and so since \(U\) is the union of these intersections, it suffices to prove that any open subset of \(f^{-1}\{a\}\) is open in \(X\text{.}\) Indeed, this is true, since \(f^{-1}\{a\}\) is itself open.</p>
+<span class="incontext"><a href="sec_quotient_spaces.html#p-444">in-context</a></span>
 </body>
 </html>

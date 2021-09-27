@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-19T11:40:31+01:00       *-->
+<!--*       on 2021-09-27T08:44:17+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -400,7 +400,7 @@
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="book-1.html"><span class="title">Topology</span></a></h1>
+<h1 class="heading"><a href="book-1.html"><span class="title">Topology:</span> <span class="subtitle">General Topology 2021</span></a></h1>
 <p class="byline">Clark Barwick</p>
 </div>
 </div></div>
@@ -420,6 +420,7 @@
 <li><a href="sec_basic_definitions.html" data-scroll="sec_basic_definitions">Basic definitions</a></li>
 <li><a href="sec_continuity_for_subspaces_of_euclidean_space.html" data-scroll="sec_continuity_for_subspaces_of_euclidean_space">Continuity</a></li>
 <li><a href="sec_connectedness_for_subspaces_of_euclidean_space.html" data-scroll="sec_connectedness_for_subspaces_of_euclidean_space">Connectedness</a></li>
+<li><a href="sec_subspaces_exercises.html" data-scroll="sec_subspaces_exercises">Problem set 1, due 5 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -467,33 +468,33 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec_products_of_sets"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.11</span> <span class="title">Products of sets</span>
 </h2>
-<p id="p-644">An <dfn class="terminology">indexed set</dfn> is really just another name for a map</p>
-<aside class="aside aside-like" id="aside-58"><p id="p-645">Remember that every element of every set is itself a set; thus the elements of \(\Xi\) are sets as well!</p></aside><p id="p-646">\(U\colon A \to \Xi\text{;}\) we typically abuse notation and write \(U_a\) instead of \(U(a)\text{,}\) and we write \((U_a)_{a\in A}\) for the map \(U\text{.}\) The union of the indexed set \((U_a)_{a\in A}\) will mean the union of the set \(\{U_a : a\in A\}\text{:}\)</p>
+<p id="p-658">An <dfn class="terminology">indexed set</dfn> is really just another name for a map</p>
+<aside class="aside aside-like" id="aside-58"><p id="p-659">Remember that every element of every set is itself a set; thus the elements of \(\Xi\) are sets as well!</p></aside><p id="p-660">\(U\colon A \to \Xi\text{;}\) we typically abuse notation and write \(U_a\) instead of \(U(a)\text{,}\) and we write \((U_a)_{a\in A}\) for the map \(U\text{.}\) The union of the indexed set \((U_a)_{a\in A}\) will mean the union of the set \(\{U_a : a\in A\}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \bigcup_{a\in A}U_a\coloneq\bigcup\{U_a : a\in A\}\text{.}
 \end{equation*}
 </div>
-<p id="p-647">It may seem a bit silly to belabour this point, but the purpose will, we hope, become clear.</p>
-<p id="p-648">For any indexed set \((U_a)_{a\in A}\text{,}\) the <dfn class="terminology">product</dfn> is the set</p>
+<p id="p-661">It may seem a bit silly to belabour this point, but the purpose will, we hope, become clear.</p>
+<p id="p-662">For any indexed set \((U_a)_{a\in A}\text{,}\) the <dfn class="terminology">product</dfn> is the set</p>
 <div class="displaymath">
 \begin{equation*}
 \prod_{a\in A} U_a \coloneq \left\{x \in \Map\left(A,\bigcup_{a\in A}U_a\right) : (\forall a\in A)\ x(a)\in U_a\right\}\text{.}
 \end{equation*}
 </div>
-<p id="p-649">An element of \(\prod_{a \in A} U_a\) is thus a map \(x \colon A \to \bigcup_{a \in A} U_a\) such that for every \(a \in A\text{,}\) one has \(x(a) \in U_a\text{.}\) One usually writes \(x_a\) instead of \(x(a)\text{,}\) and one often writes \(x = (x_a)_{a\in A}\text{.}\)</p>
-<article class="example example-like" id="example-73"><h6 class="heading">
+<p id="p-663">An element of \(\prod_{a \in A} U_a\) is thus a map \(x \colon A \to \bigcup_{a \in A} U_a\) such that for every \(a \in A\text{,}\) one has \(x(a) \in U_a\text{.}\) One usually writes \(x_a\) instead of \(x(a)\text{,}\) and one often writes \(x = (x_a)_{a\in A}\text{.}\)</p>
+<article class="example example-like" id="example-73"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-73"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.11.1</span><span class="period">.</span>
-</h6>
-<p id="p-650">When \(A = \{1,2\}\text{,}\) an indexed set consists of two sets \(U_1\) and \(U_2\text{.}\) The product \(\prod_{a \in \{1,2\}} U_a\) thus consists of pairs \((x_1, x_2)\) with \(x_1 \in U_1\) and \(x_2 \in U_2\text{.}\) The assignment \((x_1,x_2) \mapsto \angs{x_1,x_2}\) is a bijection \(\prod_{a \in \{1,2\}} U_a \to U_1 \times U_2\text{.}\) Most mathematicians are happy to pretend as if there is no difference between these sets; indeed, there is no <em class="emphasis">interesting</em> difference!</p></article><p id="p-651">More generally, we think of the product \(\prod_{a\in A} U_a\) as the set of ordered “\(A\)-tuples”.</p>
-<p id="p-652">For every \(b\in A\text{,}\) there is an attached map</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-73"><article class="example example-like"><p id="p-664">When \(A = \{1,2\}\text{,}\) an indexed set consists of two sets \(U_1\) and \(U_2\text{.}\) The product \(\prod_{a \in \{1,2\}} U_a\) thus consists of pairs \((x_1, x_2)\) with \(x_1 \in U_1\) and \(x_2 \in U_2\text{.}\) The assignment \((x_1,x_2) \mapsto \angs{x_1,x_2}\) is a bijection \(\prod_{a \in \{1,2\}} U_a \to U_1 \times U_2\text{.}\) Most mathematicians are happy to pretend as if there is no difference between these sets; indeed, there is no <em class="emphasis">interesting</em> difference!</p></article></div>
+<p id="p-665">More generally, we think of the product \(\prod_{a\in A} U_a\) as the set of ordered “\(A\)-tuples”.</p>
+<p id="p-666">For every \(b\in A\text{,}\) there is an attached map</p>
 <div class="displaymath">
 \begin{equation*}
 \pi_b \colon \prod_{a\in A}U_a \to U_b
 \end{equation*}
 </div>
 <p class="continuation">given by the assignment \(x \mapsto x_b\text{,}\) called the <dfn class="terminology">projection</dfn> onto the \(b\)-th factor.</p>
-<p id="p-653">For every set \(S\text{,}\) every indexed set \(\{U_a\}_{a\in A}\text{,}\) and every indexed set \(\left\{f_a\colon\fromto{S}{U_a}\right\}\) of maps, there exists a unique map</p>
+<p id="p-667">For every set \(S\text{,}\) every indexed set \(\{U_a\}_{a\in A}\text{,}\) and every indexed set \(\left\{f_a\colon\fromto{S}{U_a}\right\}\) of maps, there exists a unique map</p>
 <div class="displaymath">
 \begin{equation*}
 f\colon S \to \prod_{a\in A}U_a
