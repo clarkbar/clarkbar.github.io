@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-21T12:53:52+01:00       *-->
+<!--*       on 2021-09-30T13:14:42+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,12 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>An integer \(x\) is a solution to \(ax = b\mod m\) if and only if \(ax=b-my\) for some integer \(y\text{.}\) In other words, \(ax = b\mod m\) has a solution if and only if \(b\) can be written as \(ax + my\) for some integers \(x\) and \(y\text{.}\)</p>
-<span class="incontext"><a href="linearequationsmodm.html#p-606">in-context</a></span>
+<p>This result proves that many of the algebraic manipulations we enjoy performing on integers — addition, subtraction, and multiplication — can be done modulo \(m\) systematically. This simplifies many challenging-looking problems. Let's revisit our earlier example: is \(30^{99}+61^{100}\) divisible by 31? Note that \(30=31-1=-1\mod 31\) and \(61=2\cdot 31-1=-1\mod 31\text{,}\) and so</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+30^{99}+61^{100} = (-1)^{99}+(-1)^{100}=-1+1=0 \mod 31\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="arithmeticmodm.html#p-606">in-context</a></span>
 </body>
 </html>
