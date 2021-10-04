@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T13:29:12+01:00       *-->
+<!--*       on 2021-10-04T13:29:11+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>The Reals</title>
+<title>Completeness and the real numbers</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>window.MathJax = {
@@ -347,16 +347,6 @@
 	\DeclareMathOperator{\Mor}{Mor}
 	\newcommand{\MOR}{\ensuremath{\textup{\textsc{Mor}}}}
 
-	\DeclareMathOperator{\GL}{GL}
-	\DeclareMathOperator{\PSL}{PSL}
-	\DeclareMathOperator{\PSO}{PSO}
-	\DeclareMathOperator{\PSp}{PSp}
-	\DeclareMathOperator{\PSU}{PSU}
-	\DeclareMathOperator{\SL}{SL}
-	\DeclareMathOperator{\SO}{SO}
-	\DeclareMathOperator{\Sp}{Sp}
-	\DeclareMathOperator{\SU}{SU}
-
 	\DeclareMathOperator{\cofib}{cofib}
 	\DeclareMathOperator{\coker}{coker}
 	\DeclareMathOperator*{\colim}{colim}
@@ -390,38 +380,11 @@
 
 	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
 
-\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
-\def\LUB{{ LUB}}
-\renewcommand{\sectionmark}[1]{{}}
-\def\GLB{{ GLB}}
-\renewcommand{\headrulewidth}{0.5pt}
-\def\ve{\varepsilon}
-\renewcommand{\footrulewidth}{0pt}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\headrulewidth}{0pt}
-\def\R{\mathbb{R}}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
-\def\LUB{{ LUB}}
 \newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
-\def\ve{\epsilon}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\LUB{{ LUB}}
-\def\easylemma{the Linear Combination Lemma}
-\def\lcm{ lcm}
-\def\cl{{ cl}}
-\newcommand{\thepartimage}{}
-\newcommand{\thechapterimage}{}
-\def\R{\mathbb{R}}
-\def\Z{\mathbb{Z}}
-\def\N{{\mathbb{N}}}
-\def\Q{{\mathbb{Q}}}
-\def\C{{\mathbb{C}}}
-\def\hcf{{ hcf}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -434,10 +397,10 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="realline.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="realline.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="archimedeanproperty.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="orderedfields.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="realline.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="inequalities.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="realline.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="realline.html" title="Up">Up</a><a class="next-button button toolbar-item" href="archimedeanproperty.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="orderedfields.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="realline.html" title="Up">Up</a><a class="next-button button toolbar-item" href="inequalities.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -464,102 +427,34 @@
 <li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
 <li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
 <li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
-<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Week 1 Exercises, due 28 September 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and equivalence relations</span></a><ul>
+<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and relations</span></a><ul>
 <li><a href="cartesianproducts.html" data-scroll="cartesianproducts">Cartesian products</a></li>
 <li><a href="maps.html" data-scroll="maps">Maps</a></li>
 <li><a href="injectivesurjective.html" data-scroll="injectivesurjective">Injective and surjective</a></li>
 <li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
 <li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
-<li><a href="sizesofsets.html" data-scroll="sizesofsets">Comparing sizes of sets with functions</a></li>
 <li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
-<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
+<li><a href="mapsexercises.html" data-scroll="mapsexercises">Week 2 Exercises, due 5 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">The Real Line</span></a><ul>
-<li><a href="realnumbers.html" data-scroll="realnumbers" class="active">The Reals</a></li>
-<li><a href="archimedeanproperty.html" data-scroll="archimedeanproperty">The integers and the Archimedean Property</a></li>
-<li><a href="rationals.html" data-scroll="rationals">The rationals and irrationals</a></li>
-<li><a href="roots.html" data-scroll="roots">Roots</a></li>
-<li><a href="realexercises.html" data-scroll="realexercises">Exercises</a></li>
+<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a><ul>
+<li><a href="integer_sec.html" data-scroll="integer_sec">The integers</a></li>
+<li><a href="rationals.html" data-scroll="rationals">The rational numbers</a></li>
+<li><a href="orderedfields.html" data-scroll="orderedfields">Ordered fields</a></li>
+<li><a href="realnumbers.html" data-scroll="realnumbers" class="active">Completeness and the real numbers</a></li>
 </ul>
 </li>
+<li class="link"><a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a></li>
+<li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a></li>
+<li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
+<li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a></li>
 <li class="link">
-<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a><ul>
-<li><a href="orderaxioms.html" data-scroll="orderaxioms">The axioms for order</a></li>
-<li><a href="separatingproducts.html" data-scroll="separatingproducts">Separating products</a></li>
-<li><a href="absolutevalues.html" data-scroll="absolutevalues">Absolute Values</a></li>
-<li><a href="homogeneity.html" data-scroll="homogeneity">Homogeneity and inequalities</a></li>
-<li><a href="inequalitiesexercises.html" data-scroll="inequalitiesexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="induction.html" data-scroll="induction"><span class="codenumber">5</span> <span class="title">Induction</span></a><ul>
-<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on \(\Sigma\) notation</a></li>
-<li><a href="inductionsection.html" data-scroll="inductionsection">Induction</a></li>
-<li><a href="stronginduction.html" data-scroll="stronginduction">Strong Mathematical Induction</a></li>
-<li><a href="inequalitiesredux.html" data-scroll="inequalitiesredux">Inequalities revisited</a></li>
-<li><a href="inductionexercises.html" data-scroll="inductionexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="upperbounds.html" data-scroll="upperbounds"><span class="codenumber">6</span> <span class="title">Upper Bounds and Least Upper Bounds</span></a><ul>
-<li><a href="upperlowerbounds.html" data-scroll="upperlowerbounds">Upper and Lower Bounds</a></li>
-<li><a href="sups.html" data-scroll="sups">Least Upper Bounds</a></li>
-<li><a href="upperboundsexercises.html" data-scroll="upperboundsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="limits.html" data-scroll="limits"><span class="codenumber">7</span> <span class="title">Limits</span></a><ul>
-<li><a href="epsilondefinitionoflimit.html" data-scroll="epsilondefinitionoflimit">Motivation and the \(\epsilon-N\) definition of a limit</a></li>
-<li><a href="rulesforlimits.html" data-scroll="rulesforlimits">Rules for Limits</a></li>
-<li><a href="existenceofroots.html" data-scroll="existenceofroots">Application: the existence of roots.</a></li>
-<li><a href="infinitelimits.html" data-scroll="infinitelimits">Infinite limits</a></li>
-<li><a href="limitsexercises.html" data-scroll="limitsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="monotoneconvergence.html" data-scroll="monotoneconvergence"><span class="codenumber">8</span> <span class="title">The Monotone Convergence Theorem</span></a><ul>
-<li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection">The Monotone Convergence Theorem</a></li>
-<li><a href="iterativelydefinedsequences.html" data-scroll="iterativelydefinedsequences">Iteratively defined sequences</a></li>
-<li><a href="monotoneexercises.html" data-scroll="monotoneexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">9</span> <span class="title">Decimals and Series</span></a><ul>
-<li><a href="decimals.html" data-scroll="decimals">Decimals</a></li>
-<li><a href="series.html" data-scroll="series">Infinite Series</a></li>
-<li><a href="numbere.html" data-scroll="numbere">The number \(e\)</a></li>
-<li><a href="decimalsseriesexercises.html" data-scroll="decimalsseriesexercises">Exercises</a></li>
-<li><a href="eisirrational.html" data-scroll="eisirrational">*Appendix: irrationality of \(e\)</a></li>
-<li><a href="subsequences.html" data-scroll="subsequences">Subsequences</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">10</span> <span class="title">Complex Numbers</span></a><ul>
-<li><a href="complexnumberssection.html" data-scroll="complexnumberssection">Complex Numbers</a></li>
-<li><a href="cartesianandpolar.html" data-scroll="cartesianandpolar">Cartesian and Polar form</a></li>
-<li><a href="geometryandarithmeticofC.html" data-scroll="geometryandarithmeticofC">Geometry and arithmetic in \​(\mathbb{C}\)</a></li>
-<li><a href="exponentialform.html" data-scroll="exponentialform">Exponential form</a></li>
-<li><a href="rootsof1.html" data-scroll="rootsof1">Roots of Unity</a></li>
-<li><a href="complexnumbersexercises.html" data-scroll="complexnumbersexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="polynomials.html" data-scroll="polynomials"><span class="codenumber">11</span> <span class="title">Polynomials</span></a><ul>
-<li><a href="introtopolynomials.html" data-scroll="introtopolynomials">Introduction</a></li>
-<li><a href="factoringpolynomials.html" data-scroll="factoringpolynomials">Factoring Polynomials</a></li>
-<li><a href="realpolynomials.html" data-scroll="realpolynomials">Real Polynomials</a></li>
-<li><a href="rootcoefficienttheorem.html" data-scroll="rootcoefficienttheorem">Root-Coefficient Theorem</a></li>
-<li><a href="polynomialsexercises.html" data-scroll="polynomialsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="integers.html" data-scroll="integers"><span class="codenumber">12</span> <span class="title">Integers</span></a><ul>
+<a href="integers.html" data-scroll="integers"><span class="codenumber">8</span> <span class="title">Multiplicative theory of integers</span></a><ul>
 <li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
 <li><a href="euclideanalgo.html" data-scroll="euclideanalgo">The GCD and the Euclidean Algorithm</a></li>
 <li><a href="bezoutcorollaries.html" data-scroll="bezoutcorollaries">Corollaries of Bezout's Identity and the Linear Combination Lemma</a></li>
@@ -568,175 +463,88 @@
 <li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
 <li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
 <li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
-<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="modular.html" data-scroll="modular"><span class="codenumber">13</span> <span class="title">Modular Arithmetic</span></a><ul>
+<a href="modular.html" data-scroll="modular"><span class="codenumber">9</span> <span class="title">Modular Arithmetic</span></a><ul>
 <li><a href="arithmeticmodm.html" data-scroll="arithmeticmodm">Arithmetic modulo \(m\)</a></li>
 <li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
 <li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
 <li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
-<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
 </ul>
 </li>
-<li class="link"><a href="infinitecardinals.html" data-scroll="infinitecardinals"><span class="codenumber">14</span> <span class="title">Applications: What's bigger than \(\infty\text{?}\)*</span></a></li>
-<li class="link">
-<a href="counting.html" data-scroll="counting"><span class="codenumber">15</span> <span class="title">Counting</span></a><ul>
-<li><a href="multiplicationprinciple.html" data-scroll="multiplicationprinciple">The Multiplication Principle</a></li>
-<li><a href="correspendenceandovercounting.html" data-scroll="correspendenceandovercounting">Correspondence and overcounting</a></li>
-<li><a href="countingsubsets.html" data-scroll="countingsubsets">Counting subsets</a></li>
-<li><a href="countingpartitions.html" data-scroll="countingpartitions">Counting partitions</a></li>
-<li><a href="binomialmultinomial.html" data-scroll="binomialmultinomial">The Binomial and Multinomial Theorems</a></li>
-<li><a href="inclusionexclusion.html" data-scroll="inclusionexclusion">Inclusion-Exclusion</a></li>
-<li><a href="countingexercises.html" data-scroll="countingexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="permutations.html" data-scroll="permutations"><span class="codenumber">16</span> <span class="title">Permutations</span></a><ul>
-<li><a href="permutationssection.html" data-scroll="permutationssection">Permutations</a></li>
-<li><a href="tablenotation.html" data-scroll="tablenotation">Table Notation</a></li>
-<li><a href="compositionandidentity.html" data-scroll="compositionandidentity">Composition and identity</a></li>
-<li><a href="inverseofpermutation.html" data-scroll="inverseofpermutation">Inverse permutations</a></li>
-<li><a href="section-92.html" data-scroll="section-92">Powers</a></li>
-<li><a href="cycles.html" data-scroll="cycles">Cycles</a></li>
-<li><a href="cyclenotation.html" data-scroll="cyclenotation">Cycle Notation</a></li>
-<li><a href="section-95.html" data-scroll="section-95">Order of a permutation</a></li>
-<li><a href="evenandoddpermutations.html" data-scroll="evenandoddpermutations">Even and Odd permutations</a></li>
-<li><a href="permutationexercises.html" data-scroll="permutationexercises">Exercises</a></li>
-</ul>
-</li>
+<li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">10</span> <span class="title">Counting</span></a></li>
+<li class="link"><a href="permutations.html" data-scroll="permutations"><span class="codenumber">11</span> <span class="title">Permutations</span></a></li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="realnumbers"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">The Reals</span>
+<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Completeness and the real numbers</span>
 </h2>
-<p id="p-417">In this course, our aim is to derive as many useful tools and theorems as we can from the fewest assumptions. We could spend a whole year (or years!) on the foundations of mathematics, and try to make sense of, for example, what the number 2 is, but instead we will take for granted the existence the <dfn class="terminology">real</dfn> numbers \(\mathbb{R}\) that you are all familiar with from school. We assume that, if an expression contains a term \(x\) and \(x=y\text{,}\) we can replace \(x\) with \(y\) in that expression. For example, \(3+(5-1)=3+4\) since \(5-1=4\text{.}\)</p>
-<p id="p-418">We will also assume we have the familiar addition operation “\(+\)” and multiplication operation “\(\cdot\)” that combines two numbers \(a\) and \(b\) to make another real number \(a+b\) and \(a\cdot b=ab\) respectively, and which make \(\mathbb{R}\) into what we call a “field”:</p>
-<article class="definition definition-like" id="definition-25"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
+<article class="definition definition-like" id="definition-34"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Completeness.</span>
 </h6>
-<p id="p-419">A <dfn class="terminology">field</dfn> is a set \(F\) along with operations \(+\) and \(\cdot\) so that the following hold:</p>
-<ul class="disc"><li id="li-99">
-<h6 class="heading"><span class="title">\textbf{Rules of Addition \(+\text{:}\)}.</span></h6>
-<p id="p-420">For \(a,b,c\in F\text{,}\)</p>
-<ul class="circle">
-<li id="li-100">
-<h6 class="heading"><span class="title">(A0).</span></h6>
-<p id="p-421">\(\displaystyle a+b\in F\)</p>
-</li>
-<li id="li-101">
-<h6 class="heading"><span class="title">(A1).</span></h6>
-<p id="p-422">Commutativity: \(a+b=b+a\text{.}\)</p>
-</li>
-<li id="li-102">
-<h6 class="heading"><span class="title">(A2).</span></h6>
-<p id="p-423">Associativity: \(a+(b+c)=(a+b)+c\text{.}\)</p>
-</li>
-<li id="li-103">
-<h6 class="heading"><span class="title">(A3).</span></h6>
-<p id="p-424">There is an element \(0\in F\) so that \(0+a=a\) for all \(a\in F\text{.}\)</p>
-</li>
-<li id="li-104">
-<h6 class="heading"><span class="title">(A4).</span></h6>
-<p id="p-425">There is an element we denote \(-a\in F\) so that \(a+(-a)=0\text{.}\) We write \(b+(-a)=b-a\) for short.</p>
-</li>
-</ul>
-</li></ul>
-<ul class="disc"><li id="li-105">
-<h6 class="heading"><span class="title">\textbf{Rules of Multiplication \(\cdot\text{:}\)}.</span></h6>
-<p id="p-426">For \(a,b,c\in F\text{,}\)</p>
-<ul class="circle">
-<li id="li-106">
-<h6 class="heading"><span class="title">(M0).</span></h6>
-<p id="p-427">\(\displaystyle a\cdot b\in F\)</p>
-</li>
-<li id="li-107">
-<h6 class="heading"><span class="title">(M1).</span></h6>
-<p id="p-428">Commutativity: \(a\cdot b=b\cdot a\)</p>
-</li>
-<li id="li-108">
-<h6 class="heading"><span class="title">(M2).</span></h6>
-<p id="p-429">Associativity: \(a\cdot (b\cdot c)=(a\cdot b)\cdot c\)</p>
-</li>
-<li id="li-109">
-<h6 class="heading"><span class="title">(M3).</span></h6>
-<p id="p-430">There is an element \(1\in F\) so that \(1\cdot a=a\)</p>
-</li>
-<li id="li-110">
-<h6 class="heading"><span class="title">(M4).</span></h6>
-<p id="p-431">If \(a\neq 0\text{,}\) there is a number we denote \(\frac{1}{a}\) so that \(a\cdot\frac{1}{a}=1\text{.}\) We write \(\frac{1}{a}\cdot b=\frac{b}{a}\) for short.</p>
-</li>
-<li id="li-111">
-<h6 class="heading"><span class="title">(M5).</span></h6>
-<p id="p-432">Distribution: \(a\cdot (b+c)=a\cdot b+a\cdot c\text{.}\)</p>
-</li>
-</ul>
-</li></ul></article><p id="p-433">We will frequently write \(ab\) for \(a\cdot b\) when there is no chance of ambiguity, so for example, “\(a\) times \(b\)” can be write \(ab\) or \(a\cdot b\text{,}\) but “\(2\) times \(3\)” must be written \(2\cdot 3\) to avoid confusion with the number \(23\text{.}\)</p>
-<p id="p-434">We will take as an <dfn class="terminology">axiom</dfn> that the real numbers \(\mathbb{R}\) form a field with the usual addition and multiplication operations, that is, we assume they hold without proof. There are many other fields apart from the reals, and we will see a few more in this class (you will learn about more interesting ones in future algebra classes).</p>
-<p id="p-435">Without these rules it would be hard to solve any equations. For example, if we want to solve \(3x+2=2x+5\text{,}\) what rules do we need? Below we prove some propositions using only the axioms above that list the “moves” we would usually make in solving such an equation.</p>
-<article class="proposition theorem-like" id="p_field-consequences"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
+<p id="p-398">A totally ordered set \((S,\lt)\) is <dfn class="terminology">complete</dfn> if and only if, for every subset \(T \subseteq S\) with an upper bound in \(S\text{,}\) there is a supremum of \(T\) in \(S\text{.}\)</p></article><p id="p-399">Equivalently, \(S\) is complete if and only if every subset of \(S\) that has a lower bound has an infimum. We have seen above that \(\QQ\) is not complete. Nevertheless, we can complete \(\QQ\text{.}\)</p>
+<article class="theorem theorem-like" id="theorem-7"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
 </h6>
-<p id="p-436">The properties (A0),...,(A4) above imply that, for \(x,y,z\in \mathbb{R}\text{,}\)</p>
-<ol class="lower-alpha">
-<li id="li-112"><p id="p-437">\(x+y=x+z\) if and only if \(y=z\)</p></li>
-<li id="li-113"><p id="p-438">If \(x+y=x\text{,}\) then \(y=0\)</p></li>
-<li id="li-114"><p id="p-439">If \(x+y=0\text{,}\) then \(x=-y\)</p></li>
-<li id="li-115"><p id="p-440">\(-(-x)=x\text{.}\)</p></li>
-</ol></article><article class="hiddenproof" id="proof-10"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><ol class="lower-alpha">
-<li id="li-116">
-<p id="p-441">If \(y=z\text{,}\) then we can just substitute \(y\) with \(z\) in \(x+y\) to get that this equals \(x+z\text{.}\) Conversely, if \(x+y=x+z\text{,}\) then</p>
-<div class="displaymath">
-\begin{align*}
-y \amp  \stackrel{(A3)}{=}y+0\stackrel{(A4)}{=}y+(x-x)\stackrel{(A2)}{=}(y+x)-x\stackrel{(A1)}{=}(x+y)-x =(x+z)-x\stackrel{(A1)}{=}(z+x)-x\\
-\amp \stackrel{(A2)}{=}z+(x-x) \stackrel{(A4)}{=}z+0 \stackrel{(A3)}{=}z\text{.}
-\end{align*}
-</div>
-</li>
-<li id="li-117"><p id="p-442">If \(x+y=x\text{,}\) then by (A3), \(x+y=x=x+0\text{,}\) so (a) (with \(z=0\)) implies \(y=0\text{.}\)</p></li>
-<li id="li-118">
-<p id="p-443">If \(x+y=0\text{,}\) then</p>
+<p id="p-400">There exists a complete ordered field. Furthermore, it is unique in the following sense: if \(F\) and \(F'\) are complete ordered fields, then there exists a unique bijection \(\phi \colon F \to F'\) such that</p>
+<ol class="decimal">
+<li id="li-74"><p id="p-derived-li-74">\(\phi(0)=0\text{.}\)</p></li>
+<li id="li-75"><p id="p-derived-li-75">\(\phi(1)=1\text{.}\)</p></li>
+<li id="li-76"><p id="p-derived-li-76">For every \(x,y\in F\text{,}\) one has \(\phi(x+y)=\phi(x)+\phi(y)\text{.}\)</p></li>
+<li id="li-77"><p id="p-derived-li-77">For every \(x,y\in F\text{,}\) one has \(\phi(x\times y)=\phi(x)\times\phi(y)\text{.}\)</p></li>
+<li id="li-78"><p id="p-derived-li-78">For every \(x,y\in F\text{,}\) if \(x\lt y\text{,}\) then \(\phi(x)\lt \phi(y)\text{.}\)</p></li>
+</ol></article><p id="p-401">We won't prove this theorem, as the proof is quite long and tedious, and there's not much to be learned from it. So there is a complete ordered field, which, up to a simple renaming of the elements, is unique. We call it \(\RR\) or <dfn class="terminology">the real line</dfn>, and we call its elements <dfn class="terminology">real numbers</dfn>.</p>
+<p id="p-402">This \(\RR\) contains a copy of the natural numbers: \(0\) and \(1\) are in there because of the field axioms. Note that \(0 \lt 1\text{.}\) (Why?) for every natural number \(n\text{,}\) if we can regard \(n\) as a real number, then we can regard the successor of \(n\) as the real number \(n+1\text{.}\)</p>
+<p id="p-403">Since \(\RR\) is a field, we can take the additive inverses of the natural numbers to get a copy of \(\ZZ\) lying in \(\RR\text{.}\) We can also take products of integers and multiplicative inverses of integers to get a copy of \(\QQ\) lying in \(\RR\text{.}\)</p>
+<p id="p-404">We are happy to pretend that we have literal inclusions</p>
 <div class="displaymath">
 \begin{equation*}
-x+y=0 \stackrel{(A4)}{=}y+(-y)
+\NN \subset \NN_0 \subset \ZZ \subset \QQ \subset \RR\text{.}
 \end{equation*}
 </div>
-<p class="continuation">and so (a) (with \(z=-y\)) implies \(x=-y\text{.}\)</p>
-</li>
-<li id="li-119">
-<p id="p-444">By definition,</p>
+<p class="continuation">The following theorem implies that there are <em class="emphasis">enough</em> natural numbers. This will be used to show that in fact every real number can be arbitrarily well approximated by rational numbers.</p>
+<article class="theorem theorem-like" id="theorem-8"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">No infinite real numbers.</span>
+</h6>
+<p id="p-405">Let \(x\in\RR\text{.}\) Then there exists a natural number \(n\) such that \(n&gt;x\text{.}\)</p></article><article class="hiddenproof" id="proof-7"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><p id="p-406">Suppose not. Then \(x\) is an upper bound for \(\NN_0 \subseteq\RR\text{.}\) By completeness, it follows that there is a real number \(N = \sup\NN_0\text{.}\) Now consider \(N-1\text{;}\) for any natural number \(n\text{,}\) the real number \(n+1\) is also a natural number, and therefore \(n+1\leq N\text{,}\) so \(n\leq N-1\text{.}\) Thus \(N-1\) is also an upper bound for \(\NN_0\text{.}\) But this contradicts the fact that \(N\) is a least upper bound.</p></article></div>
+<article class="theorem theorem-like" id="theorem-9"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Archimedean property.</span>
+</h6>
+<p id="p-407">If \(x,y\in\RR\) are positive real numbers, then there exists a natural number \(n\in\NN_0\) such that \(ny \gt x\text{.}\)</p></article><article class="hiddenproof" id="proof-8"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><p id="p-408">By the previous theorem, choose a natural number \(n\gt x/y\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="theorem-10"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Square roots.</span>
+</h6>
+<p id="p-409">If \(x\in\RR\) and \(x\geq 0\text{,}\) then there exists a unique \(y \in \RR\) such that \(y\geq 0\) and \(y^2=x\text{.}\)</p></article><article class="hiddenproof" id="proof-9"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><p id="p-410">Let's prove the existence first. Consider the set \(S = \{z\in \RR : (z \geq 0)\wedge (z^2\geq x)\}\text{.}\) Observe that \(S\) has a lower bound, namely \(0\text{.}\) Now by completeness, we may define \(y = \inf S\text{.}\) We claim that \(y^2=x\text{.}\) Suppose not; then either \(y^2 \gt x\) or \(y^2 \lt x\text{.}\)</p>
+<p id="p-411">If \(y^2\gt x\text{,}\) then use the Archimedean property to find a natural number \(n\) such that</p>
 <div class="displaymath">
 \begin{equation*}
--x+-(-x)\stackrel{(A4)}{=} 0\stackrel{(A2)}{=}x-x \stackrel{(A1)}{=}-x+x
+n(y^2-x) \gt 2y
 \end{equation*}
 </div>
-<p class="continuation">so (a) implies \(-(-x)=x\text{.}\)</p>
-</li>
-</ol></article></div>
-<p id="p-445">Try this proposition on your own (the proof is very similar to the above):</p>
-<article class="proposition theorem-like" id="proposition-2"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
-</h6>
-<p id="p-446">The properties (M0),...,(M5) imply that, for \(x,y,z\in \mathbb{R}\text{,}\) if \(x\neq 0\text{,}\)</p>
-<ol class="lower-alpha">
-<li id="li-120"><p id="p-447">\(xy=xz\) if and only if \(y=z\)</p></li>
-<li id="li-121"><p id="p-448">If \(xy=x\text{,}\) then \(y=1\)</p></li>
-<li id="li-122"><p id="p-449">If \(xy=1\text{,}\) then \(y=\frac{1}{x}\)</p></li>
-<li id="li-123"><p id="p-450">\(1/(1/x)=x\text{.}\)</p></li>
-</ol></article><p id="p-451">We mention a few more useful facts about the reals. Again, they look obvious, but it takes some work to show that they are derived from the property that \(\mathbb{R}\) being a field. We leave their proofs as an exercise, but remember to use the above axioms and propositions that we have proved so far:</p>
-<article class="proposition theorem-like" id="p_0x_0"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
-</h6>
-<p id="p-452">For \(x,y\in \mathbb{R}\text{,}\)</p>
-<ol class="lower-alpha">
-<li id="li-124"><p id="p-453">\(0\cdot x=0\text{.}\)</p></li>
-<li id="li-125"><p id="p-454">If \(x\neq 0\neq y\text{,}\) then \(xy\neq 0\text{.}\)</p></li>
-<li id="li-126"><p id="p-455">\((-x)y=-(xy)=x(-y)\text{.}\)</p></li>
-<li id="li-127"><p id="p-456">\((-x)(-y)=xy\text{.}\)</p></li>
-</ol></article></section></div></main>
+<p class="continuation">Thus \(y^2-(2/n)y\gt x\text{.}\) Now let \(u=y-1/n\text{.}\) We have</p>
+<div class="displaymath">
+\begin{equation*}
+u^2 = (y-1/n)^2 = y^2-(2/n)y+1/n^2 \gt y^2 - (2/n)y \gt x\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Thus \(u\in S\text{,}\) and this contradicts our assumption that \(y\) is a lower bound.</p>
+<p id="p-412">If on the other hand \(y^2\lt x\text{,}\) then use the Archimedean property to find a natural number \(n\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+n(x-y^2) \gt 2y+1
+\end{equation*}
+</div>
+<p class="continuation">Thus \(y^2+(2/n)y+1/n^2 \lt y^2+(2/n)y+1/n \lt x\text{.}\) Now let \(u=y+1/n\text{.}\) We have</p>
+<div class="displaymath">
+\begin{equation*}
+u^2 = (y+1/n)^2 = y^2+(2/n)y+1/n^2 \lt x\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now if \(z\in S\text{,}\) then \(z^2&gt;u^2\text{.}\) This implies that \(u\lt z\text{.}\) (Indeed if \(u \geq z\text{,}\) then \(u^2\geq z^2\text{.}\)) Thus \(u \) is a lower bound for \(S\text{,}\) which contradicts our assumption that \(y\) is the greatest lower bound.</p>
+<p id="p-413">This shows that \(y^2=x\text{.}\) Now, to prove uniqueness, suppose \(v\geq0\) is a positive real number; if \(v\lt y\text{,}\) then \(v^2 \lt y^2 = x\text{,}\) and if \(y\lt v\text{,}\) then \(y^2 \lt v^2\text{.}\) Hence \(v^2=y^2\) if and only if \(v=y\text{.}\)</p></article></div></section></div></main>
 </div>
 </body>
 </html>

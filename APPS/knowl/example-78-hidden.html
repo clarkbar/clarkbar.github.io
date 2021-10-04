@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:20:34+01:00       *-->
+<!--*       on 2021-10-04T13:29:16+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,17 +13,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><p>What are all the divisors of \(360\text{?}\)</p>
-<p>First, we find the prime factorization of \(360\text{:}\) we can see that \(36=4\cdot 9=2^2\cdot 3^2\text{,}\) and so \(360 = 10\cdot 2^2\cdot 3^2 = 2^3\cdot 3^2\cdot 5\text{.}\) To list all the divisors, we just have to look at the values \(2^j\cdot 3^{k}\cdot 5^{\ell}\) where \(0\leq j\leq 3\text{,}\) \(0\leq k\leq 2\text{,}\) and \(0\leq \ell\leq 1\text{.}\) The possible powers of \(2\) are \(1, \; 2, \; 4, \; 8\text{,}\) and the possible powers of \(3\) are \(1,3,9\text{,}\) so we multiply the powers of two by these to get</p>
+<body><article class="example example-like"><p>Find \(x\in\{0,1,...,10\}\) that solves \(x^{3} = 9 \mod 11\text{.}\)</p>
+<p>Note \(\gcd(3,11-1)=\gcd(3,10)=1\text{,}\) so this tells us that the method of <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a> should work in finding the unique solution. Note also that \(7\cdot 3 = 21=1+2\cdot 10\text{.}\) Thus, if \(x\) is the solution, then \(9 = x^{3}\mod 11\) implies</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\begin{array}{cccc} 1, \amp   2, \amp   4, \amp   8, \\ 3, \amp  6, \amp   12, \amp   24, \\ 9, \amp   18, \amp   36, \amp   72. \end{array}
+9^{7} = (x^{3})^{7} =x^{3\cdot 7} =x^{1+2\cdot 10} =x\cdot (x^{10})^{2} = x\cdot(1)^{2} =x \mod 11\text{.}
 \end{equation*}
 </div>
-<p>The possible powers of \(5\) are just \(1\) and \(5\text{,}\) so we can just multiply these numbers by \(1\) and \(5\) to get</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\begin{array}{cccccccccccc} 1, \amp   2, \amp   4, \amp   8, \amp  3, \amp  6, \amp   12, \amp   24, \amp   9, \amp   18, \amp   36, \amp   72, \\ 5, \amp   10, \amp   20, \amp   40, \amp  15, \amp  30, \amp  60,  \amp   120, \amp   45, \amp   90, \amp   180, \amp   360. \end{array}
-\end{equation*}
-</div></article></body>
+<p>Thus, \(x = 9^{7}\text{.}\) Now we must find \(x\in \{0,1,...,10\}\) so that \(x = 9^{7}\text{.}\)</p>
+<ul class="disc">
+<li><p>\(\displaystyle 9^{2}=81 = 4 \mod 11\)</p></li>
+<li><p>\(9^{4}=(9^{2})^{2} = 4^{2} =16 = 5\mod 11\text{.}\)</p></li>
+<li><p>\(9^{7}=9^{4}\cdot 9^{2}\cdot 9 = 5\cdot 4\cdot 9 =180 =176+4 = 4\mod 11\text{.}\)</p></li>
+</ul>
+<p>Thus, \(x=4\) is the solution. We can also check \(4^{3}=64=55+9 = 9\mod 11\text{.}\)</p></article></body>
 </html>

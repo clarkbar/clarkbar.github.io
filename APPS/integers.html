@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-01T14:55:27+01:00       *-->
+<!--*       on 2021-10-04T13:29:11+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -441,7 +441,14 @@
 <li><a href="mapsexercises.html" data-scroll="mapsexercises">Week 2 Exercises, due 5 October 2021</a></li>
 </ul>
 </li>
-<li class="link"><a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a></li>
+<li class="link">
+<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a><ul>
+<li><a href="integer_sec.html" data-scroll="integer_sec">The integers</a></li>
+<li><a href="rationals.html" data-scroll="rationals">The rational numbers</a></li>
+<li><a href="orderedfields.html" data-scroll="orderedfields">Ordered fields</a></li>
+<li><a href="realnumbers.html" data-scroll="realnumbers">Completeness and the real numbers</a></li>
+</ul>
+</li>
 <li class="link"><a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a></li>
 <li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a></li>
 <li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
@@ -475,30 +482,30 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="chapter" id="integers"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">8</span> <span class="title">Multiplicative theory of integers</span>
 </h2>
-<section class="introduction" id="introduction-11"><p id="p-362">This week we will study the integers, particularly the techniques of studying divisibility, the highest common factor, and prime factorization.</p>
-<p id="p-363">These techniques are especially useful for solving <dfn class="terminology">diophantine equations</dfn>, which are polynomial equations where we seek <dfn class="terminology">integer</dfn> solutions. The most famous diophantine equation is</p>
+<section class="introduction" id="introduction-11"><p id="p-423">This week we will study the integers, particularly the techniques of studying divisibility, the highest common factor, and prime factorization.</p>
+<p id="p-424">These techniques are especially useful for solving <dfn class="terminology">diophantine equations</dfn>, which are polynomial equations where we seek <dfn class="terminology">integer</dfn> solutions. The most famous diophantine equation is</p>
 <div class="displaymath">
 \begin{equation*}
 x^{n}+y^{n}=z^{n}
 \end{equation*}
 </div>
-<p id="p-364">It was famously claimed by Fermat (without proof) that there are solutions \(x,y,z,n\in\NN\) only if \(n=1\) or \(n=2\text{.}\) It wasn't until 1994 when Andrew Wiles actually gave a proof.</p>
-<p id="p-365">This week's set of tools are also useful when we are trying to show at a diophantine <dfn class="terminology">can't</dfn> be solved. You have seen one such proof before: that \(\sqrt{2}\) is irrational. Let's recall the proof briefly:</p>
-<p id="p-366">Suppose there was a rational number \(\frac{m}{n}\) (where \(m\) and \(n\) are reduced in the sense that they have no common divisors apart from \(1\)) so that \(\left(\frac{m}{n}\right)^2=2\text{,}\) then \(m^2=2n^2\text{.}\) This means that \(m^2\) is even. Then \(m\) must be even since, if instead \(m=2k+1\) for some integer \(k\text{,}\) then \(m^2=(2k+1)^2=4(k^2+k)+1\text{,}\) which is odd, a contradiction. Hence, \(m=2k\) for some integer \(k\text{,}\) and so</p>
+<p id="p-425">It was famously claimed by Fermat (without proof) that there are solutions \(x,y,z,n\in\NN\) only if \(n=1\) or \(n=2\text{.}\) It wasn't until 1994 when Andrew Wiles actually gave a proof.</p>
+<p id="p-426">This week's set of tools are also useful when we are trying to show at a diophantine <dfn class="terminology">can't</dfn> be solved. You have seen one such proof before: that \(\sqrt{2}\) is irrational. Let's recall the proof briefly:</p>
+<p id="p-427">Suppose there was a rational number \(\frac{m}{n}\) (where \(m\) and \(n\) are reduced in the sense that they have no common divisors apart from \(1\)) so that \(\left(\frac{m}{n}\right)^2=2\text{,}\) then \(m^2=2n^2\text{.}\) This means that \(m^2\) is even. Then \(m\) must be even since, if instead \(m=2k+1\) for some integer \(k\text{,}\) then \(m^2=(2k+1)^2=4(k^2+k)+1\text{,}\) which is odd, a contradiction. Hence, \(m=2k\) for some integer \(k\text{,}\) and so</p>
 <div class="displaymath">
 \begin{equation*}
 2n^2=m^2=(2k)^2=4k^2
 \end{equation*}
 </div>
 <p class="continuation">and so \(n^2=2k^2\text{,}\) and using a similar reasoning, we get that \(n\) must also be even, which is a contradiction since we assumed \(m\) and \(n\) had no common factors, but now we have shown they are both divisible by \(2\text{.}\)</p>
-<p id="p-367">The important feature of the proof was to use the <dfn class="terminology">coprimality</dfn> of \(m\) and \(n\text{,}\) that is, that they share no common divisors, as well as the fact that if \(m^2\) is divisible by \(2\) (that is, if \(m^2\) was even, then so was \(m\)). If we want to generalize this proof, we will need to develop these tools about divisibility and coprimality. Later, we will in fact show that \(\sqrt{n}\) is rational exactly when \(n=m^2\) for some integer \(m\text{.}\)</p>
-<p id="p-368">As motivation for the techniques we develop along the way, we will show how they can be used to solve various diophantine equations. As a special final application of these techniques, we'll also classify all <dfn class="terminology">Pythagorean Triples</dfn>, that is, integers \(x,y,z\) so that</p>
+<p id="p-428">The important feature of the proof was to use the <dfn class="terminology">coprimality</dfn> of \(m\) and \(n\text{,}\) that is, that they share no common divisors, as well as the fact that if \(m^2\) is divisible by \(2\) (that is, if \(m^2\) was even, then so was \(m\)). If we want to generalize this proof, we will need to develop these tools about divisibility and coprimality. Later, we will in fact show that \(\sqrt{n}\) is rational exactly when \(n=m^2\) for some integer \(m\text{.}\)</p>
+<p id="p-429">As motivation for the techniques we develop along the way, we will show how they can be used to solve various diophantine equations. As a special final application of these techniques, we'll also classify all <dfn class="terminology">Pythagorean Triples</dfn>, that is, integers \(x,y,z\) so that</p>
 <div class="displaymath">
 \begin{equation*}
 x^2+y^2=z^2\text{.}
 \end{equation*}
 </div>
-<p id="p-369">If you like the material from this week, you might enjoy taking <dfn class="terminology">Introduction to Number Theory</dfn> (4th year).</p></section><nav class="summary-links"><ul>
+<p id="p-430">If you like the material from this week, you might enjoy taking <dfn class="terminology">Introduction to Number Theory</dfn> (4th year).</p></section><nav class="summary-links"><ul>
 <li><a href="remainders.html"><span class="codenumber">8.1</span> <span class="title">Remainders and divisibility</span></a></li>
 <li><a href="euclideanalgo.html"><span class="codenumber">8.2</span> <span class="title">The GCD and the Euclidean Algorithm</span></a></li>
 <li><a href="bezoutcorollaries.html"><span class="codenumber">8.3</span> <span class="title">Corollaries of Bezout's Identity and the Linear Combination Lemma</span></a></li>

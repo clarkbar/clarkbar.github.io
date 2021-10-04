@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-01T14:55:30+01:00       *-->
+<!--*       on 2021-10-04T13:29:14+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,17 +15,26 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>By the Euclidean algorithm, we can find integers \(s,t\in\mathbb{Z}\text{,}\) such that</p>
+<p>We prove existence and uniqueness separately.</p>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Existence:</em> Let \(q\) be the largest integer for which \(qa\leq b\text{.}\) Let \(r=b-qa\geq 0\text{.}\) Then we must also have \(r\lt a\text{,}\) since if \(r\geq a\text{,}\) then \(b-qa\geq a\text{,}\) and so \(b-(q+1)a\geq 0\text{,}\) which contradicts \(q\) being the largest integer for which \(qa\leq b\text{.}\) This shows the existence of a pair \((q,r)\) satisfying the theorem.</p>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Uniqueness:</em> Assume that \((q',r')\) is a pair of integers such that \(b=q'a+r'\) and \(0\leq r'\lt a\text{.}\) Then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-d=sa+tb\tag{8.2.1}
-\end{equation}
+\begin{equation*}
+0=b-b=q'a+r'-qa-r = (q'-q)a+(r'-r)\text{,}
+\end{equation*}
 </div>
-<p>Since \(0\lt d\leq a,b\text{,}\) at most one of \(s\) and \(t\) can be positive, and at most one can be non-positive (i.e. zero or negative). If it happens that \(t\) is negative, then we will have produced the desired expression for \(d\) (by writing \(d=sa - (-t)b\)).</p>
-<p>In case \(t\) is non-negative, we can apply the following observation:</p>
-<article class="lemma theorem-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.2.19</span><span class="period">.</span>
-</h6>
-<p>The integers \(s\) and \(t\) satisfy Equation <a class="xref" data-knowl="./knowl/gcdeqn.html" title="Equation 8.2.1">(8.2.1)</a> if, and only if, the integers \(s+kb\) and \(t-ka\) do as well, for any integer \(k\text{.}\)</p></article><article class="hiddenproof"><a class="proof-knowl original" data-knowl="./knowl/proof-11-hidden.html" title="Proof 8.2.18.1.1.1"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><p>Choosing \(k\) sufficiently large, we can replace \(t\) by \(t-ka\) so that it is negative. It follows then that \(s+kb\) is positive.</p></article><span class="incontext"><a href="euclideanalgo.html#proof-10">in-context</a></span>
+<p class="continuation">and so</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+r'-r=(q-q')a\text{.}
+\end{equation*}
+</div>
+<p>Since \(0\leq r,r'\lt a\text{,}\) we know \(|r-r'|\lt a\text{.}\) Thus</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a&gt;|r-r'|=|(q-q')a|=|q-q'|\cdot a\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which implies that \(1&gt;|q-q'|\text{.}\) Since \(|q-q'|\) is a nonnegative integer, it therefore follows that \(q=q'\text{.}\)</p></article><span class="incontext"><a href="remainders.html#proof-10">in-context</a></span>
 </body>
 </html>
