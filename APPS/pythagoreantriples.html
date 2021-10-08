@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-04T13:29:12+01:00       *-->
+<!--*       on 2021-10-08T17:07:58+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -447,6 +447,7 @@
 <li><a href="rationals.html" data-scroll="rationals">The rational numbers</a></li>
 <li><a href="orderedfields.html" data-scroll="orderedfields">Ordered fields</a></li>
 <li><a href="realnumbers.html" data-scroll="realnumbers">Completeness and the real numbers</a></li>
+<li><a href="reallineexercises.html" data-scroll="reallineexercises">Week 3 Exercise, due 12 October 2021</a></li>
 </ul>
 </li>
 <li class="link"><a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a></li>
@@ -482,18 +483,18 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="pythagoreantriples"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.8</span> <span class="title">Application: Pythagorean Triples*</span>
 </h2>
-<p id="p-631">In this section we will classify all Pythagorean Triples, that is, all positive integer solutions to</p>
+<p id="p-633">In this section we will classify all Pythagorean Triples, that is, all positive integer solutions to</p>
 <div class="displaymath">
 \begin{equation*}
 x^2+y^2=z^2\text{.}
 \end{equation*}
 </div>
-<p id="p-632">This is a bit more involved than other diophantine problems and harder to figure out on your own on a homework problem (so it is not required reading), but we'll give a proof here since it's a neat application of what we've learned and can test your knowledge of the material in this chapter.</p>
-<p id="p-633">We narrow down the solutions in a few steps:</p>
+<p id="p-634">This is a bit more involved than other diophantine problems and harder to figure out on your own on a homework problem (so it is not required reading), but we'll give a proof here since it's a neat application of what we've learned and can test your knowledge of the material in this chapter.</p>
+<p id="p-635">We narrow down the solutions in a few steps:</p>
 <ul class="disc">
-<li id="li-142"><p id="p-634">If \(x=0\text{,}\) then we must have \(y^2=z^2\text{,}\) and so \(y=\pm z\text{.}\) Thus, we know all solutions if \(x=0\text{,}\) so let's assume \(x&gt; 0\text{.}\) Similarly, we can assume \(y,z&gt; 0\text{.}\)</p></li>
+<li id="li-142"><p id="p-636">If \(x=0\text{,}\) then we must have \(y^2=z^2\text{,}\) and so \(y=\pm z\text{.}\) Thus, we know all solutions if \(x=0\text{,}\) so let's assume \(x&gt; 0\text{.}\) Similarly, we can assume \(y,z&gt; 0\text{.}\)</p></li>
 <li id="li-143">
-<p id="p-635">We can assume that \(x,y\) and \(z\) are coprime (that is, no two of them share a common factor other than \(1\)). To see this, suppose \(d=\gcd(x,y)\text{.}\) Then \(a=x/d\) and \(b=y/d\) are coprime, and then</p>
+<p id="p-637">We can assume that \(x,y\) and \(z\) are coprime (that is, no two of them share a common factor other than \(1\)). To see this, suppose \(d=\gcd(x,y)\text{.}\) Then \(a=x/d\) and \(b=y/d\) are coprime, and then</p>
 <div class="displaymath">
 \begin{equation*}
 z^2= x^2+y^2 = d^2(a^2+b^2)\text{.}
@@ -501,9 +502,9 @@ z^2= x^2+y^2 = d^2(a^2+b^2)\text{.}
 </div>
 <p class="continuation">By <a class="xref" data-knowl="./knowl/t_abn.html" title="Theorem 8.7.2">Theorem 8.7.2</a>, \(a^2+b^2=c^2\) for some integer \(c\text{,}\) and so \(z^2=d^2 c^2=(cd)^2\text{.}\) Hence, \((x,y,z)=(da,db,dc)\) for some other Pythagorean Triple \((a,b,c)\) where \(a\) and \(b\) are coprime. Thus, if we find all solutions \((x,y,z)\) where \(x\) and \(y\) are coprime, then all other solutions are multiples of these. A similar proof shows that all solutions will be multiples of solutions where \(x\) and \(z\) are coprime and where \(y\) and \(z\) are coprime.</p>
 </li>
-<li id="li-144"><p id="p-636">Thus, assume \(x,y\text{,}\) and \(z\) are coprime and positive solutions to \(x^2+y^2=z^2\text{.}\) Then either \(x\) or \(y\) is odd, assume it is \(x\text{.}\)</p></li>
+<li id="li-144"><p id="p-638">Thus, assume \(x,y\text{,}\) and \(z\) are coprime and positive solutions to \(x^2+y^2=z^2\text{.}\) Then either \(x\) or \(y\) is odd, assume it is \(x\text{.}\)</p></li>
 <li id="li-145">
-<p id="p-637">We now claim \(z+y\) and \(z-y\) are coprime. Suppose not. Then there is a prime \(q\) that divides them both. But then</p>
+<p id="p-639">We now claim \(z+y\) and \(z-y\) are coprime. Suppose not. Then there is a prime \(q\) that divides them both. But then</p>
 <div class="displaymath">
 \begin{equation*}
 q\text{ divides } (z+y)-(z-y) = 2y,\;\; q\text{ divides }  (z+y)+(z-y) = 2z\text{.}
@@ -518,7 +519,7 @@ q\text{ divides } (z+y)-(z-y) = 2y,\;\; q\text{ divides }  (z+y)+(z-y) = 2z\text
 <p class="continuation">which implies \(x\) is even, a contradiction.</p>
 </li>
 <li id="li-146">
-<p id="p-638">Since \(z\pm y\) are coprime and \(x^{2}=(z+y)(z-y)\text{,}\) we know that \(z+y=s^{2}\) and \(z-y=t^{2}\) for some integers \(s\) and \(t\) by <a class="xref" data-knowl="./knowl/t_abn.html" title="Theorem 8.7.2">Theorem 8.7.2</a>. Hence,</p>
+<p id="p-640">Since \(z\pm y\) are coprime and \(x^{2}=(z+y)(z-y)\text{,}\) we know that \(z+y=s^{2}\) and \(z-y=t^{2}\) for some integers \(s\) and \(t\) by <a class="xref" data-knowl="./knowl/t_abn.html" title="Theorem 8.7.2">Theorem 8.7.2</a>. Hence,</p>
 <div class="displaymath">
 \begin{equation*}
 z=\frac{z+y+z-y}{2} = \frac{s^{2}+t^{2}}{2}
@@ -538,7 +539,7 @@ x^{2} =(z-y)(z+y) = s^{2}t^{2}\text{.}
 </div>
 </li>
 <li id="li-147">
-<p id="p-639">Finally, we now recall that all solutions are multiples of these soluitions, thus all Pythagorean Triples are of the form</p>
+<p id="p-641">Finally, we now recall that all solutions are multiples of these soluitions, thus all Pythagorean Triples are of the form</p>
 <div class="displaymath">
 \begin{equation*}
 (x,y,z) = \left( as t, a\frac{s^2-t^2}{2}, a\frac{s^{2}+t^{2}}{2}\right)
