@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-08T17:08:01+01:00       *-->
+<!--*       on 2021-10-11T12:33:47+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,11 +13,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><p>We allow ourselves the flexibility to speak of the gcd of negative integers as well as positive ones, but we notice that</p>
+<body><article class="example example-like"><p>Show that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\gcd(a,b) = \gcd(a,-b) = \gcd(-a,b) = \gcd(-a,-b)\text{.}
+\frac{a+b}{2} \leq \left(\frac{a^2+b^2}{2}\right)^{\frac{1}{2}}\text{.}
 \end{equation*}
 </div>
-<p>(So for instance \(\gcd(-6,-27) = \gcd(6, 27) = 3\text{.}\)) As a result, we will mostly focus on the gcd of natural numbers.</p></article></body>
+<p>Which of our above inequalities should we try using? <a class="xref" data-knowl="./knowl/l_little-amgm.html" title="Lemma 4.4.1">Lemma 4.4.1</a> and AM-GM don't seem relevant since we don't have something like \(ab\) on the left, so let's see if we can use the Cauchy-Schwarz inequality: Rewrite \(\frac{a+b}{2}=a\cdot \frac{1}{2} +b\cdot\frac{1}{2}\text{,}\) then the Cauchy Schwarz inequality implies:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{a+b}{2} = a\cdot\frac{1}{2} + b\cdot\frac{1}{2} \leq \sqrt{a^2+b^2}\sqrt{\frac{1}{2^{2}}+\frac{1}{2^{2}}} =\left(\frac{a^2+b^2}{2}\right)^{\frac{1}{2}}\text{.}
+\end{equation*}
+</div></article></body>
 </html>

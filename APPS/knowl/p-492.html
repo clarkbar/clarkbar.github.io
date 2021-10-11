@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-08T17:08:01+01:00       *-->
+<!--*       on 2021-10-11T12:33:47+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We divide \(6\) by \(4\) to get \(1\) with a remainder of \(r_8 = 2\text{.}\)</p>
-<span class="incontext"><a href="euclideanalgo.html#p-492">in-context</a></span>
+<p>Let \(a=\sqrt{x_1^2+\cdots+x_n^2}\text{,}\) and let \(b=\sqrt{y_1^2+\cdots+y_n^2}\text{.}\) We aim to show that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{x_1y_1}{ab}+\cdots+\frac{x_ny_n}{ab} \leq 1
+\end{equation*}
+</div>
+<p class="continuation">Now by the AM/GM Inequality, we have, for each \(i\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{x_iy_i}{ab} \leq \frac{1}{2}\left(\frac{x_i^2}{a^2}+\frac{y_i^2}{b^2}\right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now if we sum these over all \(i\text{,}\) the right hand side becomes</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{1}{2}\left(\frac{x_1^2}{a^2}+\frac{y_1^2}{b^2}\right)+\cdots+\frac{1}{2}\left(\frac{x_n^2}{a^2}+\frac{y_n^2}{b^2}\right) = \frac{1}{2}\left(\frac{x_1^2+\cdots+x_n^2}{a^2}+\frac{y_1^2+\cdots+y_n^2}{b^2}\right) = 1\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and so the proof is complete.</p>
+<span class="incontext"><a href="separatingproducts.html#p-492">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-08T17:08:03+01:00       *-->
+<!--*       on 2021-10-11T12:33:49+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,5 +13,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><p>An element \(y\in\mathbb{Z}/{81}\) is invertible if and only if \(x\) and \(81\) are coprime. The is possible if and only if \(3\) does not divide \(y\text{.}\) The number of numbers in \(\{0,1,...,80\}\) divisible by \(3\) is \(\frac{81}{3}=27\text{,}\) so the number of invertible elements is \(81-27 = 54\text{.}\)</p></div></body>
+<body><div class="solution solution-like">
+<p>Since \(\gcd(7,12)=1\text{,}\) we can use the Euclidean Algorithm:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+12-7 = 5 \ \ \text{ and  }  7-5 = 2 \ \ \text{ and  }  5-2\cdot 2 = 1\text{.}
+\end{equation*}
+</div>
+<p>We find</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+1 = 5 - 2\cdot 2 = 3\cdot 5 - 2\cdot 7 = 3\cdot 12 - 5\cdot 7\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so by multiplying by \(8\text{,}\) we get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+8 = 24 \cdot 12 - 40 \cdot 7\text{.}
+\end{equation*}
+</div>
+<p>Thus \(x = -40\) is a solution, and so is \(8 = -40 \mod 12\text{.}\)</p>
+</div></body>
 </html>

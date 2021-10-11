@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-08T17:08:01+01:00       *-->
+<!--*       on 2021-10-11T12:33:46+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>For two integers \(a\) and \(b\) we say <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">\(a\) divides \(b\)</dfn> if there is an integer \(c\) so that \(b=ac\text{.}\)</p>
-<span class="incontext"><a href="remainders.html#p-439">in-context</a></span>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Induction Step:</em> Let \(n\in \NN\text{.}\) Assume \(\phi(n)\) holds and consider</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\sum_{k=1}^{n+1}k =\left( \sum_{k=1}^{n} k\right) + (n+1)  = \frac{n(n+1)}{2} +(n+1) = \frac{(n+1)(n+2)}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">where we used the induction hypothesis \(\phi(n)\) to replace \(\sum_{k=1}^{n} k\) with \(\frac{n(n+1)}{2}\text{.}\) Hence \(\sum_{k=1}^{n+1}k=\frac{(n+1)(n+2)}{2}\) which proves the implication \(\phi(n)\implies \phi(n+1)\text{.}\)</p>
+<span class="incontext"><a href="inductionsection.html#p-439">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:20:34+01:00       *-->
+<!--*       on 2021-10-11T12:33:49+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,26 +13,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><p>Find all integer solutions to \(4x^2=y^3+1\text{.}\)</p>
-<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Reductions:</em> If \((x,y)\) is a solution, then \((-x,y)\) is also a solution, so we can assume \(x\geq 0\text{.}\) If \(x=0\text{,}\) then \(y^3=-1\text{,}\) which is only possible if \(y=-1\text{.}\) So now we can assume \(x&gt;0\text{.}\) But then \(y^3+1=4x^2\geq 4\text{,}\) so we must have \(y&gt;0\) as well.</p>
-<p>We are now left to finding all integer solutions \(x,y&gt;0\text{.}\) Observe that</p>
+<body><article class="example example-like"><p>Find \(x\in\{0,1,...,10\}\) that solves \(x^{3} = 9 \mod 11\text{.}\)</p>
+<p>Note \(\gcd(3,11-1)=\gcd(3,10)=1\text{,}\) so this tells us that the method of <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a> should work in finding the unique solution. Note also that \(7\cdot 3 = 21=1+2\cdot 10\text{.}\) Thus, if \(x\) is the solution, then \(9 = x^{3}\mod 11\) implies</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-y^3=4x^2-1=(2x-1)(2x+1)\text{.}
+9^{7} = (x^{3})^{7} =x^{3\cdot 7} =x^{1+2\cdot 10} =x\cdot (x^{10})^{2} = x\cdot(1)^{2} =x \mod 11\text{.}
 \end{equation*}
 </div>
-<p>By The Linear Combination Lemma, the gcd of \(2x-1\) and \(2x+1\) must divide \(2x+1-(2x-1)=2\text{,}\) so the gcd is either \(1\) or \(2\text{.}\) However, since both of these numbers are odd, the gcd must actually be \(1\text{.}\) Hence, \(2x\pm 1\) are coprime.</p>
-<p>By <a class="xref" data-knowl="./knowl/t_abn.html" title="Theorem 12.7.2">Theorem 12.7.2</a>, \(2x\pm 1\) are both cubes. Thus, there are \(m,n\in\mathbb{Z}\) so that \(m^3=2x+1\) and \(n^3=2x-1\text{.}\) Since \(x\) is a positive integer, so are \(m^3\) and \(n^3\text{,}\) and thus so are \(m\) and \(n\text{.}\) Then</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-2=2x+1-(2x-1)=m^3-n^3=(m-n)(m^2+mn+n^2)\text{,}
-\end{equation*}
-</div>
-<p class="continuation">so \(m-n\) divides \(2\text{,}\) hence it is either \(1\) or \(2\) (since \(m&gt;n\)). If it is \(1\text{,}\) then \(m=n+1\text{,}\) and so by the above equation</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-2=m^3-n^3=(n+1)^3-n^3=3n^2+3n+1\geq 3\cdot 1^2+3\cdot 1 + 1 = 7
-\end{equation*}
-</div>
-<p class="continuation">which is a contradiction. The case that \(m-n=1\) can be handled similarly. Thus, there are <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">no integer solutions</dfn> to \(4x^2=y^3+1\) when \(x&gt;0\text{.}\) Thus, the only integer solution is \((x,y)=(0,-1)\text{.}\)</p></article></body>
+<p>Thus, \(x = 9^{7}\text{.}\) Now we must find \(x\in \{0,1,...,10\}\) so that \(x = 9^{7}\text{.}\)</p>
+<ul class="disc">
+<li><p>\(\displaystyle 9^{2}=81 = 4 \mod 11\)</p></li>
+<li><p>\(9^{4}=(9^{2})^{2} = 4^{2} =16 = 5\mod 11\text{.}\)</p></li>
+<li><p>\(9^{7}=9^{4}\cdot 9^{2}\cdot 9 = 5\cdot 4\cdot 9 =180 =176+4 = 4\mod 11\text{.}\)</p></li>
+</ul>
+<p>Thus, \(x=4\) is the solution. We can also check \(4^{3}=64=55+9 = 9\mod 11\text{.}\)</p></article></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-08T17:08:02+01:00       *-->
+<!--*       on 2021-10-11T12:33:48+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,13 +13,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>An integer \(x\) is a solution to \(ax = b\mod m\) if and only if \(ax=b-my\) for some integer \(y\text{.}\) In other words, \(ax = b\mod m\) has a solution if and only if \(b\) can be written as \(ax + my\) for some integers \(x\) and \(y\text{.}\)</p>
-<p>If \(b = ax+my\text{,}\) then the Linear Combination Lemma ensures that \(\gcd(a,m)\) divides \(b\text{.}\)</p>
-<p>Conversely, assume that \(\gcd(a,m)\) divides \(b\text{,}\) so that \(b = h\gcd(a,m)\) for some integer \(h\text{.}\) Bezout's identity implies that there exist integers \(x'\) and \(y'\) such that \(\gcd(a,m)=ax'+my'\text{.}\) Hence if \(x = hx'\) and \(y=hy'\text{,}\) then</p>
+<body><article class="hiddenproof"><ul class="disc">
+<li>
+<p>(\(\impliedby\)): If <a class="xref" data-knowl="./knowl/e_m_p1___pk.html" title="Equation 8.5.1">(8.5.1)</a> holds, then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-b = h\gcd(a,m) = ax + my\text{,}
+n=m \cdot  p_1^{b_1-a_{1}}\cdots p_k^{b_k-a_{k}} \;\;\; \Longrightarrow \;\;\; m \text{ divides } n\text{.}
 \end{equation*}
 </div>
-<p class="continuation">as desired.</p></article></body>
+</li>
+<li>
+<p>(\(\implies\)): Suppose \(m\) divides \(n\text{,}\) then \(n=mc\) fr some positive integer \(c\text{.}\) Then \(m\) and \(n\) have prime decompositions whose product is the prime decomposition for \(n\) as shown below:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\underbrace{p_1^{a_1}\cdots p_k^{a_k}}_n = \underbrace{q_1^{c_1}\cdots q_l^{c_l}}_m\underbrace{r_1^{d_1}\cdots r_s^{d_s}}_c\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The FTA implies each \(q_i\) and \(r_i\) equals to some \(p_j\text{.}\) To ease notation, we'll assume \(q_{i}=r_{i}=p_{i}\) for all \(i\text{,}\) but that \(c_{i}=0\) if \(p_{i}\) didn't appear as one of the primes \(q_{i}\) originally, and similarly for the \(d_{i}\text{.}\) Then the product above is in fact</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\underbrace{p_1^{a_1}\cdots p_k^{a_k}}_n = {q_1^{c_1}\cdots q_l^{c_l}}{r_1^{d_1}\cdots r_s^{d_s}} =p_{1}^{c_{1}+d_{1}}\cdots p_{k}^{c_{k}+d_{k}}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The FTA now implies each power \(c_i+d_i\) equals to \(a_j\text{.}\) In particular, this means \(m=p_{1}^{c_{1}}\cdots p_{k}^{c_{k}}\) where \(0\leq c_{k}\leq a_{k}\text{.}\)</p>
+</li>
+</ul></article></body>
 </html>

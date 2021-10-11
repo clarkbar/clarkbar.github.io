@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T13:29:13+01:00       *-->
+<!--*       on 2021-10-11T12:33:43+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -347,16 +347,6 @@
 	\DeclareMathOperator{\Mor}{Mor}
 	\newcommand{\MOR}{\ensuremath{\textup{\textsc{Mor}}}}
 
-	\DeclareMathOperator{\GL}{GL}
-	\DeclareMathOperator{\PSL}{PSL}
-	\DeclareMathOperator{\PSO}{PSO}
-	\DeclareMathOperator{\PSp}{PSp}
-	\DeclareMathOperator{\PSU}{PSU}
-	\DeclareMathOperator{\SL}{SL}
-	\DeclareMathOperator{\SO}{SO}
-	\DeclareMathOperator{\Sp}{Sp}
-	\DeclareMathOperator{\SU}{SU}
-
 	\DeclareMathOperator{\cofib}{cofib}
 	\DeclareMathOperator{\coker}{coker}
 	\DeclareMathOperator*{\colim}{colim}
@@ -390,38 +380,11 @@
 
 	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
 
-\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
-\def\LUB{{ LUB}}
-\renewcommand{\sectionmark}[1]{{}}
-\def\GLB{{ GLB}}
-\renewcommand{\headrulewidth}{0.5pt}
-\def\ve{\varepsilon}
-\renewcommand{\footrulewidth}{0pt}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\headrulewidth}{0pt}
-\def\R{\mathbb{R}}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
-\def\LUB{{ LUB}}
 \newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
-\def\ve{\epsilon}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\LUB{{ LUB}}
-\def\easylemma{the Linear Combination Lemma}
-\def\lcm{ lcm}
-\def\cl{{ cl}}
-\newcommand{\thepartimage}{}
-\newcommand{\thechapterimage}{}
-\def\R{\mathbb{R}}
-\def\Z{\mathbb{Z}}
-\def\N{{\mathbb{N}}}
-\def\Q{{\mathbb{Q}}}
-\def\C{{\mathbb{C}}}
-\def\hcf{{ hcf}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -434,10 +397,10 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="rationals.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="realline.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="realexercises.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="inductionsection.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="inequalities.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="separatingproducts.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="rationals.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="realline.html" title="Up">Up</a><a class="next-button button toolbar-item" href="realexercises.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="inductionsection.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="inequalities.html" title="Up">Up</a><a class="next-button button toolbar-item" href="separatingproducts.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -464,102 +427,42 @@
 <li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
 <li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
 <li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
-<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Week 1 Exercises, due 28 September 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and equivalence relations</span></a><ul>
+<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and relations</span></a><ul>
 <li><a href="cartesianproducts.html" data-scroll="cartesianproducts">Cartesian products</a></li>
 <li><a href="maps.html" data-scroll="maps">Maps</a></li>
 <li><a href="injectivesurjective.html" data-scroll="injectivesurjective">Injective and surjective</a></li>
 <li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
 <li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
-<li><a href="sizesofsets.html" data-scroll="sizesofsets">Comparing sizes of sets with functions</a></li>
 <li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
-<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
+<li><a href="mapsexercises.html" data-scroll="mapsexercises">Week 2 Exercises, due 5 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">The Real Line</span></a><ul>
-<li><a href="realnumbers.html" data-scroll="realnumbers">The Reals</a></li>
-<li><a href="archimedeanproperty.html" data-scroll="archimedeanproperty">The integers and the Archimedean Property</a></li>
-<li><a href="rationals.html" data-scroll="rationals">The rationals and irrationals</a></li>
-<li><a href="roots.html" data-scroll="roots" class="active">Roots</a></li>
-<li><a href="realexercises.html" data-scroll="realexercises">Exercises</a></li>
+<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a><ul>
+<li><a href="integer_sec.html" data-scroll="integer_sec">The integers</a></li>
+<li><a href="rationals.html" data-scroll="rationals">The rational numbers</a></li>
+<li><a href="orderedfields.html" data-scroll="orderedfields">Ordered fields</a></li>
+<li><a href="realnumbers.html" data-scroll="realnumbers">Completeness and the real numbers</a></li>
+<li><a href="reallineexercises.html" data-scroll="reallineexercises">Week 3 Exercise, due 12 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a><ul>
-<li><a href="orderaxioms.html" data-scroll="orderaxioms">The axioms for order</a></li>
-<li><a href="separatingproducts.html" data-scroll="separatingproducts">Separating products</a></li>
-<li><a href="absolutevalues.html" data-scroll="absolutevalues">Absolute Values</a></li>
-<li><a href="homogeneity.html" data-scroll="homogeneity">Homogeneity and inequalities</a></li>
-<li><a href="inequalitiesexercises.html" data-scroll="inequalitiesexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="induction.html" data-scroll="induction"><span class="codenumber">5</span> <span class="title">Induction</span></a><ul>
-<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on \(\Sigma\) notation</a></li>
+<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Induction and inequalities</span></a><ul>
+<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on summation notation</a></li>
 <li><a href="inductionsection.html" data-scroll="inductionsection">Induction</a></li>
-<li><a href="stronginduction.html" data-scroll="stronginduction">Strong Mathematical Induction</a></li>
-<li><a href="inequalitiesredux.html" data-scroll="inequalitiesredux">Inequalities revisited</a></li>
-<li><a href="inductionexercises.html" data-scroll="inductionexercises">Exercises</a></li>
+<li><a href="roots.html" data-scroll="roots" class="active">Roots</a></li>
+<li><a href="separatingproducts.html" data-scroll="separatingproducts">AM/GM Inequality and Cauchy-Schwarz</a></li>
 </ul>
 </li>
+<li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a></li>
+<li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
+<li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a></li>
 <li class="link">
-<a href="upperbounds.html" data-scroll="upperbounds"><span class="codenumber">6</span> <span class="title">Upper Bounds and Least Upper Bounds</span></a><ul>
-<li><a href="upperlowerbounds.html" data-scroll="upperlowerbounds">Upper and Lower Bounds</a></li>
-<li><a href="sups.html" data-scroll="sups">Least Upper Bounds</a></li>
-<li><a href="upperboundsexercises.html" data-scroll="upperboundsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="limits.html" data-scroll="limits"><span class="codenumber">7</span> <span class="title">Limits</span></a><ul>
-<li><a href="epsilondefinitionoflimit.html" data-scroll="epsilondefinitionoflimit">Motivation and the \(\epsilon-N\) definition of a limit</a></li>
-<li><a href="rulesforlimits.html" data-scroll="rulesforlimits">Rules for Limits</a></li>
-<li><a href="existenceofroots.html" data-scroll="existenceofroots">Application: the existence of roots.</a></li>
-<li><a href="infinitelimits.html" data-scroll="infinitelimits">Infinite limits</a></li>
-<li><a href="limitsexercises.html" data-scroll="limitsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="monotoneconvergence.html" data-scroll="monotoneconvergence"><span class="codenumber">8</span> <span class="title">The Monotone Convergence Theorem</span></a><ul>
-<li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection">The Monotone Convergence Theorem</a></li>
-<li><a href="iterativelydefinedsequences.html" data-scroll="iterativelydefinedsequences">Iteratively defined sequences</a></li>
-<li><a href="monotoneexercises.html" data-scroll="monotoneexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">9</span> <span class="title">Decimals and Series</span></a><ul>
-<li><a href="decimals.html" data-scroll="decimals">Decimals</a></li>
-<li><a href="series.html" data-scroll="series">Infinite Series</a></li>
-<li><a href="numbere.html" data-scroll="numbere">The number \(e\)</a></li>
-<li><a href="decimalsseriesexercises.html" data-scroll="decimalsseriesexercises">Exercises</a></li>
-<li><a href="eisirrational.html" data-scroll="eisirrational">*Appendix: irrationality of \(e\)</a></li>
-<li><a href="subsequences.html" data-scroll="subsequences">Subsequences</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">10</span> <span class="title">Complex Numbers</span></a><ul>
-<li><a href="complexnumberssection.html" data-scroll="complexnumberssection">Complex Numbers</a></li>
-<li><a href="cartesianandpolar.html" data-scroll="cartesianandpolar">Cartesian and Polar form</a></li>
-<li><a href="geometryandarithmeticofC.html" data-scroll="geometryandarithmeticofC">Geometry and arithmetic in \​(\mathbb{C}\)</a></li>
-<li><a href="exponentialform.html" data-scroll="exponentialform">Exponential form</a></li>
-<li><a href="rootsof1.html" data-scroll="rootsof1">Roots of Unity</a></li>
-<li><a href="complexnumbersexercises.html" data-scroll="complexnumbersexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="polynomials.html" data-scroll="polynomials"><span class="codenumber">11</span> <span class="title">Polynomials</span></a><ul>
-<li><a href="introtopolynomials.html" data-scroll="introtopolynomials">Introduction</a></li>
-<li><a href="factoringpolynomials.html" data-scroll="factoringpolynomials">Factoring Polynomials</a></li>
-<li><a href="realpolynomials.html" data-scroll="realpolynomials">Real Polynomials</a></li>
-<li><a href="rootcoefficienttheorem.html" data-scroll="rootcoefficienttheorem">Root-Coefficient Theorem</a></li>
-<li><a href="polynomialsexercises.html" data-scroll="polynomialsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="integers.html" data-scroll="integers"><span class="codenumber">12</span> <span class="title">Integers</span></a><ul>
+<a href="integers.html" data-scroll="integers"><span class="codenumber">8</span> <span class="title">Multiplicative theory of integers</span></a><ul>
 <li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
 <li><a href="euclideanalgo.html" data-scroll="euclideanalgo">The GCD and the Euclidean Algorithm</a></li>
 <li><a href="bezoutcorollaries.html" data-scroll="bezoutcorollaries">Corollaries of Bezout's Identity and the Linear Combination Lemma</a></li>
@@ -568,130 +471,63 @@
 <li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
 <li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
 <li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
-<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="modular.html" data-scroll="modular"><span class="codenumber">13</span> <span class="title">Modular Arithmetic</span></a><ul>
+<a href="modular.html" data-scroll="modular"><span class="codenumber">9</span> <span class="title">Modular Arithmetic</span></a><ul>
 <li><a href="arithmeticmodm.html" data-scroll="arithmeticmodm">Arithmetic modulo \(m\)</a></li>
 <li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
 <li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
 <li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
-<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
 </ul>
 </li>
-<li class="link"><a href="infinitecardinals.html" data-scroll="infinitecardinals"><span class="codenumber">14</span> <span class="title">Applications: What's bigger than \(\infty\text{?}\)*</span></a></li>
-<li class="link">
-<a href="counting.html" data-scroll="counting"><span class="codenumber">15</span> <span class="title">Counting</span></a><ul>
-<li><a href="multiplicationprinciple.html" data-scroll="multiplicationprinciple">The Multiplication Principle</a></li>
-<li><a href="correspendenceandovercounting.html" data-scroll="correspendenceandovercounting">Correspondence and overcounting</a></li>
-<li><a href="countingsubsets.html" data-scroll="countingsubsets">Counting subsets</a></li>
-<li><a href="countingpartitions.html" data-scroll="countingpartitions">Counting partitions</a></li>
-<li><a href="binomialmultinomial.html" data-scroll="binomialmultinomial">The Binomial and Multinomial Theorems</a></li>
-<li><a href="inclusionexclusion.html" data-scroll="inclusionexclusion">Inclusion-Exclusion</a></li>
-<li><a href="countingexercises.html" data-scroll="countingexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="permutations.html" data-scroll="permutations"><span class="codenumber">16</span> <span class="title">Permutations</span></a><ul>
-<li><a href="permutationssection.html" data-scroll="permutationssection">Permutations</a></li>
-<li><a href="tablenotation.html" data-scroll="tablenotation">Table Notation</a></li>
-<li><a href="compositionandidentity.html" data-scroll="compositionandidentity">Composition and identity</a></li>
-<li><a href="inverseofpermutation.html" data-scroll="inverseofpermutation">Inverse permutations</a></li>
-<li><a href="section-92.html" data-scroll="section-92">Powers</a></li>
-<li><a href="cycles.html" data-scroll="cycles">Cycles</a></li>
-<li><a href="cyclenotation.html" data-scroll="cyclenotation">Cycle Notation</a></li>
-<li><a href="section-95.html" data-scroll="section-95">Order of a permutation</a></li>
-<li><a href="evenandoddpermutations.html" data-scroll="evenandoddpermutations">Even and Odd permutations</a></li>
-<li><a href="permutationexercises.html" data-scroll="permutationexercises">Exercises</a></li>
-</ul>
-</li>
+<li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">10</span> <span class="title">Counting</span></a></li>
+<li class="link"><a href="permutations.html" data-scroll="permutations"><span class="codenumber">11</span> <span class="title">Permutations</span></a></li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="roots"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Roots</span>
+<span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Roots</span>
 </h2>
-<p id="p-482">In this class we will be working a lot with roots of numbers like \(\sqrt{2}\text{,}\) but like \(\sqrt{2}\text{,}\) that they exist at all takes justification. This is given in the following proposition whose proof we postpone until Week 3. Recall that \(y^n=y\cdot y\cdots y\) with \(n\) \(y\)'s in the product.</p>
+<p id="p-461">In this class we will be working a lot with roots of numbers like \(\sqrt{2}\text{,}\) but like \(\sqrt{2}\text{,}\) that they exist at all takes justification.</p>
+<article class="lemma theorem-like" id="raisingpowerspreservesorder"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-462">Let \(x,y\geq 0\text{,}\) and let \(n\in\NN\text{,}\) Then \(x \lt y\) if and only if \(x^n \lt y^n\text{.}\)</p></article><article class="hiddenproof" id="proof-12"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><p id="p-463">We proceed by induction on \(n\text{.}\) When \(n=1\text{,}\) this is immediate. Now assume that our claim holds for \(n=k\text{;}\) we aim to prove the claim for \(n=k+1\text{.}\) If \(x\lt y\text{,}\) then \(x^k \lt y^k\text{,}\) and so \(x^{k+1} \lt y^{k+1}\text{.}\) Conversely, if \(x \geq y\text{,}\) then either \(x=y\text{,}\) in which case \(x^{k+1}=y^{k+1}\text{,}\) or else \(y \lt x\text{,}\) in which case \(y^{k+1} \lt x^{k+1}\text{.}\)</p></article></div>
+<article class="lemma theorem-like" id="raisingpowersiscontinuous"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-464">Let \(x,y\geq 0\text{,}\) and let \(n\in\NN\text{,}\) Then if \(y^n \lt x\text{,}\) then there is \(z\in\RR\) such that \(y\lt z\) and \(z^n \lt x\text{.}\)</p></article><article class="hiddenproof" id="proof-13"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><p id="p-465">We proceed by induction on \(n\text{.}\) When \(n=1\text{,}\) this follows from the Week 3 Exercise. Now assume that the claim holds for \(n=k\text{;}\) we aim to prove the claim for \(n=k+1\text{.}\) If \(y^{k+1}\lt x\text{,}\) then \(y^k \lt x/y\text{,}\) and so by hypothesis, there is a real number \(z_0\) such that \(y\lt z_0\) and \(z_0^k \lt x/y\text{.}\) Thus \(y\lt x/z_0^k\text{,}\) so there exists a real number \(z_1\) such that \(y\lt z_1\lt x/z_0^k\text{.}\) Now if \(z\) is the lesser of \(z_0\) or \(z_1\text{,}\) then \(y\lt z\text{,}\) and \(z^k \lt x\text{.}\)</p></article></div>
 <article class="proposition theorem-like" id="p_roots-exist"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-483">Given \(x&gt;0\) and \(n\in\mathbb{N}\text{,}\) there is a unique \(y&gt;0\) so that \(y^n=x\text{,}\) and we write this number \(y\) as \(y=x^{\frac{1}{n}}\text{.}\)</p></article><p id="p-484">We can define more generally any rational root: if \(\frac{m}{n}&gt;0\) is rational and \(x&gt;0\text{,}\) we define</p>
+<p id="p-466">Given \(x&gt;0\) and \(n\in\NN\text{,}\) there is a unique \(y&gt;0\) so that \(y^n=x\text{,}\) and we write this number \(y\) as \(y=x^{\frac{1}{n}}\text{.}\)</p></article><article class="hiddenproof" id="proof-14"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><p id="p-467">Let us prove the uniqueness first. Let \(y_1,y_2\gt 0\) be real numbers such that \(y_1^n=y_2^n=x\text{.}\) Using <a class="xref" data-knowl="./knowl/raisingpowerspreservesorder.html" title="Lemma 4.3.1">Lemma 4.3.1</a>, we find that if \(y_1&gt;y_2\text{,}\) then \(y_1^n&gt;y_2^n\text{,}\) and if \(y_1 \lt y_2\text{,}\) then \(y_1^n \lt y_2^n\text{.}\)</p>
+<p id="p-468">We now aim to show that such a real number \(y\) exists. Consider the set</p>
+<div class="displaymath">
+\begin{equation*}
+S = \{z\in \RR : (z&gt;0)\wedge(z^n\geq x)\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The set \(S\) is nonempty<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a>, and by definition, \(0\) is a lower bound for \(S\text{.}\) Hence we may define \(y=\inf S\text{,}\) which is nonnegative. We now aim to prove that \(y^n=x\text{.}\)</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">Why?</div></div>
+<p id="p-469">If \(y^n \lt x\text{,}\) then by <a class="xref" data-knowl="./knowl/raisingpowersiscontinuous.html" title="Lemma 4.3.2">Lemma 4.3.2</a>, there exists a real number \(z\) such that \(y\lt z\) and \(z^n\lt x\text{.}\) It follows from <a class="xref" data-knowl="./knowl/raisingpowerspreservesorder.html" title="Lemma 4.3.1">Lemma 4.3.1</a> that \(z\) is a lower bound for \(S\text{,}\) but this now contradicts the fact that \(y\) is the greatest lower bound of  \(S\text{.}\)</p>
+<p id="p-470">On the other hand, if \(y^n \gt x\text{,}\) then \((1/y)^n \lt 1/x\text{,}\) so there exists a real number \(z\) such that \(1/y \lt z\) and \(z^n \lt 1/x\text{.}\) Thus \((1/z)^n \gt x\text{,}\) whence \(1/z \in S\text{.}\) But \(y \gt 1/z\text{,}\) which contradicts the fact that \(y\) is a lower bound for \(S\text{.}\)</p></article></div>
+<p id="p-471">We can now define any rational power of a positive number: if \(\frac{m}{n}&gt;0\) is rational and \(x&gt;0\text{,}\) we define</p>
 <div class="displaymath">
 \begin{equation}
-x^{\frac{m}{n}} = \left(x^{\frac{1}{n}}\right)^{m}=\underbrace{x^{\frac{1}{n}}\cdots x^{\frac{1}{n}}}_{m\mbox{ times} }\text{.}\label{e_x_m_n}\tag{3.4.1}
+x^{\frac{m}{n}} = \left(x^{\frac{1}{n}}\right)^m\text{.}\label{e_x_m_n}\tag{4.3.1}
 \end{equation}
 </div>
-<article class="proposition theorem-like" id="proposition-6"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span>
+<article class="proposition theorem-like" id="proposition-3"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-485">Let \(x&gt;0\) and \(p,q\in \mathbb{Q}\text{.}\) Then</p>
+<p id="p-472">Let \(x&gt;0\) and \(p,q\in \QQ\text{.}\) Then</p>
 <ol class="lower-alpha">
-<li id="li-131"><p id="p-486">\(\displaystyle x^{p}x^q=x^{p+q}\)</p></li>
-<li id="li-132"><p id="p-487">\(\displaystyle (x^{p})^{q}=x^{pq}\)</p></li>
-<li id="li-133"><p id="p-488">\((xy)^{p}=x^p y^p\text{.}\)</p></li>
-</ol></article><article class="note remark-like" id="note-5"><h6 class="heading">
-<span class="type">Note</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Try special cases.</span>
-</h6>
-<p id="p-489">When given something to prove as above, it might not be clear how to get started, but you don't have to prove everything on the first try! Try first proving the statement in some easier cases, and then see if you can adjust your proof or even use your easy cases to prove the general case.</p></article><article class="hiddenproof" id="proof-14"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><ol class="lower-alpha">
-<li id="li-134">
-<p id="p-490">First notice that this holds when \(p\) and \(q\) are integers, since then</p>
-<div class="displaymath">
-\begin{equation*}
-x^{p+q}=\underbrace{x\cdot x\cdots x}_{\mbox{\(p+q\) times} } =\underbrace{x\cdot x\cdots x}_{\mbox{\(p\) times} }\cdot \underbrace{x\cdot x\cdots x}_{\mbox{\(q\) times} } = x^{p}x^{q}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Now suppose \(p=\frac{a}{b}\) and \(q=\frac{c}{d}\) are two positive rationals and \(x&gt;0\text{.}\) Then</p>
-<div class="displaymath">
-\begin{align*}
-x^{p+q} \amp  =x^{\frac{a}{b}+\frac{c}{d}} =x^{\frac{ad+bc}{bd}} \stackrel{(2.4.1)}{=} \left(x^{\frac{1}{bd}}\right)^{ad+bc} =\left(x^{\frac{1}{bd}}\right)^{ad}\left(x^{\frac{1}{bd}}\right)^{bc} \stackrel{(2.4.1)}{=}x^{\frac{ad}{bd}}x^{\frac{bc}{bd}}=x^{\frac{a}{b}}x^{\frac{c}{d}}=x^{p}x^{q}
-\end{align*}
-</div>
-<p class="continuation">where in the fourth equation we used the integer case we proved earlier.</p>
-</li>
-<li id="li-135">
-<p id="p-491">Let's first prove the slightly simpler case that</p>
-<div class="displaymath">
-\begin{equation}
-\left(x^{\frac{a}{b}}\right)^{\frac{1}{d}}=x^{\frac{a}{b}\cdot\frac{1}{d}}\text{.}\label{e_x_abd}\tag{3.4.2}
-\end{equation}
-</div>
-<p class="continuation">By <a class="xref" data-knowl="./knowl/p_roots-exist.html" title="Proposition 3.4.1">Proposition 3.4.1</a>, for the right side to equal the \(d\)th root on the left, we need to show \((x^{\frac{a}{b}\frac{1}{d}})^{d} = x^{\frac{a}{b}}\text{:}\)</p>
-<div class="displaymath">
-\begin{equation*}
-\left(x^{\frac{a}{b}\frac{1}{d}}\right)^{d} =\left(x^{\frac{a}{bd}}\right)^{d} \stackrel{(2.4.1)}{=} \left(\left(x^{\frac{1}{bd}}\right)^{a}\right)^{d} =\left(x^{\frac{1}{bd}}\right)^{ad} \stackrel{(2.4.1)}{=}x^{\frac{ad}{bd}}=x^{\frac{a}{b}}\text{,}
-\end{equation*}
-</div>
-<p class="continuation">and so <a class="xref" data-knowl="./knowl/e_x_abd.html" title="Equation 3.4.2">(3.4.2)</a> follows. Now we prove the full case: if \(p=\frac{a}{b}\) and \(q=\frac{c}{d}\text{,}\) then</p>
-<div class="displaymath">
-\begin{equation*}
-(x^{p})^{q} = \left(x^{\frac{a}{b}}\right)^{\frac{c}{d}} \stackrel{(2.4.1)}{=}\left( \left(x^{\frac{a}{b}}\right)^{\frac{1}{d}}\right)^{c} \stackrel{(2.4.2)}{=}\left(x^{\frac{a}{bd}}\right)^{c} \stackrel{(2.4.1)}{=} x^{\frac{ac}{bd}}=x^{pq}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">This proves (b).</p>
-</li>
-<li id="li-136">
-<p id="p-492">Let's first consider trying to show \((xy)^{\frac{1}{b}}=x^{\frac{1}{b}}y^{\frac{1}{b}}\text{.}\) By <a class="xref" data-knowl="./knowl/p_roots-exist.html" title="Proposition 3.4.1">Proposition 3.4.1</a>, we just need to show that \((x^{\frac{1}{b}}y^{\frac{1}{b}})^{b}=xy\text{.}\) If we take \(x^{\frac{1}{b}}y^{\frac{1}{b}}\) times itself \(b\) times, and rearrange the terms so that all the \(x^{\frac{1}{b}}\)'s are on the left, we get</p>
-<div class="displaymath">
-\begin{equation*}
-(x^{\frac{1}{b}}y^{\frac{1}{b}})^{b} =x^{\frac{1}{b}}y^{\frac{1}{b}}  x^{\frac{1}{b}}y^{\frac{1}{b}}  \cdots x^{\frac{1}{b}}y^{\frac{1}{b}} =\underbrace{x^{\frac{1}{b}}\cdots x^{\frac{1}{b}}}_{b\mbox{ times} }\underbrace{y^{\frac{1}{b}}\cdots y^{\frac{1}{b}}}_{b\mbox{ times} } =(x^{\frac{1}{b}})^{b}(y^{\frac{1}{b}})^{b}=x\cdot y\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Now let's try the general case: If \(p=\frac{a}{b}\text{,}\) then by the case we just proved:</p>
-<div class="displaymath">
-\begin{equation*}
-(xy)^{\frac{a}{b}} \stackrel{(2.4.1)}{=} \left((xy)^{\frac{1}{b}}\right)^{a} =\left(x^{\frac{1}{b}}y^{\frac{1}{b}}\right)^{a}
-\end{equation*}
-</div>
-<p class="continuation">Just as before, if we take \(x^{\frac{1}{b}}y^{\frac{1}{b}}\) times itself \(a\) times and then move all the \(x^{\frac{1}{b}}\)'s to the left, we get that the above is</p>
-<div class="displaymath">
-\begin{equation*}
-=(x^{\frac{1}{b}})^{a}(y^{\frac{1}{b}})^{a} \stackrel{(2.4.1)}{=} x^{\frac{a}{b}}y^{\frac{a}{b}}=x^{p}y^{p}\text{.}
-\end{equation*}
-</div>
-</li>
-</ol></article></div></section></div></main>
+<li id="li-97"><p id="p-473">\(\displaystyle x^{p}x^q=x^{p+q}\)</p></li>
+<li id="li-98"><p id="p-474">\(\displaystyle (x^{p})^{q}=x^{pq}\)</p></li>
+<li id="li-99"><p id="p-475">\((xy)^{p}=x^p y^p\text{.}\)</p></li>
+</ol></article></section></div></main>
 </div>
 </body>
 </html>

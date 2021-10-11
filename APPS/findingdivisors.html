@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-08T17:07:58+01:00       *-->
+<!--*       on 2021-10-11T12:33:44+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -450,7 +450,14 @@
 <li><a href="reallineexercises.html" data-scroll="reallineexercises">Week 3 Exercise, due 12 October 2021</a></li>
 </ul>
 </li>
-<li class="link"><a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a></li>
+<li class="link">
+<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Induction and inequalities</span></a><ul>
+<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on summation notation</a></li>
+<li><a href="inductionsection.html" data-scroll="inductionsection">Induction</a></li>
+<li><a href="roots.html" data-scroll="roots">Roots</a></li>
+<li><a href="separatingproducts.html" data-scroll="separatingproducts">AM/GM Inequality and Cauchy-Schwarz</a></li>
+</ul>
+</li>
 <li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a></li>
 <li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
 <li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a></li>
@@ -483,26 +490,26 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="findingdivisors"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.5</span> <span class="title">Finding divisors via FTA</span>
 </h2>
-<p id="p-597">If we know the prime decompositions of two integers \(m\) and \(n\text{,}\) it is easy to tell whether \(m\) divides \(n\text{:}\)</p>
-<article class="theorem theorem-like" id="theorem-14"><h6 class="heading">
+<p id="p-676">If we know the prime decompositions of two integers \(m\) and \(n\text{,}\) it is easy to tell whether \(m\) divides \(n\text{:}\)</p>
+<article class="theorem theorem-like" id="theorem-19"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.5.1</span><span class="period">.</span>
 </h6>
-<p id="p-598">Let \(n=p_1^{a_1}\cdots p_k^{a_k}\) be a prime decomposition (i.e. \(p_i\)s are prime, \(p_1\lt \cdots \lt p_k\text{,}\) and \(a_i&gt;0\)). Then \(m\) divides \(n\) if, and only if:</p>
+<p id="p-677">Let \(n=p_1^{a_1}\cdots p_k^{a_k}\) be a prime decomposition (i.e. \(p_i\)s are prime, \(p_1\lt \cdots \lt p_k\text{,}\) and \(a_i&gt;0\)). Then \(m\) divides \(n\) if, and only if:</p>
 <div class="displaymath">
 \begin{equation}
 m = p_1^{b_1}\cdots p_k^{b_k},  \textrm{with each }\text{.}\label{e_m_p1___pk}\tag{8.5.1}
 \end{equation}
-</div></article><article class="hiddenproof" id="proof-22"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof"><ul class="disc">
-<li id="li-137">
-<p id="p-599">(\(\impliedby\)): If <a class="xref" data-knowl="./knowl/e_m_p1___pk.html" title="Equation 8.5.1">(8.5.1)</a> holds, then</p>
+</div></article><article class="hiddenproof" id="proof-30"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-30"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><ul class="disc">
+<li id="li-158">
+<p id="p-678">(\(\impliedby\)): If <a class="xref" data-knowl="./knowl/e_m_p1___pk.html" title="Equation 8.5.1">(8.5.1)</a> holds, then</p>
 <div class="displaymath">
 \begin{equation*}
 n=m \cdot  p_1^{b_1-a_{1}}\cdots p_k^{b_k-a_{k}} \;\;\; \Longrightarrow \;\;\; m \text{ divides } n\text{.}
 \end{equation*}
 </div>
 </li>
-<li id="li-138">
-<p id="p-600">(\(\implies\)): Suppose \(m\) divides \(n\text{,}\) then \(n=mc\) fr some positive integer \(c\text{.}\) Then \(m\) and \(n\) have prime decompositions whose product is the prime decomposition for \(n\) as shown below:</p>
+<li id="li-159">
+<p id="p-679">(\(\implies\)): Suppose \(m\) divides \(n\text{,}\) then \(n=mc\) fr some positive integer \(c\text{.}\) Then \(m\) and \(n\) have prime decompositions whose product is the prime decomposition for \(n\) as shown below:</p>
 <div class="displaymath">
 \begin{equation*}
 \underbrace{p_1^{a_1}\cdots p_k^{a_k}}_n = \underbrace{q_1^{c_1}\cdots q_l^{c_l}}_m\underbrace{r_1^{d_1}\cdots r_s^{d_s}}_c\text{.}
@@ -517,16 +524,16 @@ n=m \cdot  p_1^{b_1-a_{1}}\cdots p_k^{b_k-a_{k}} \;\;\; \Longrightarrow \;\;\; m
 <p class="continuation">The FTA now implies each power \(c_i+d_i\) equals to \(a_j\text{.}\) In particular, this means \(m=p_{1}^{c_{1}}\cdots p_{k}^{c_{k}}\) where \(0\leq c_{k}\leq a_{k}\text{.}\)</p>
 </li>
 </ul></article></div>
-<article class="example example-like" id="example-67"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-67"><h6 class="heading">
+<article class="example example-like" id="example-69"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-69"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.5.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-67"><article class="example example-like"><p id="p-601">What are all the divisors of \(360\text{?}\)</p>
-<p id="p-602">First, we find the prime factorization of \(360\text{:}\) we can see that \(36=4\cdot 9=2^2\cdot 3^2\text{,}\) and so \(360 = 10\cdot 2^2\cdot 3^2 = 2^3\cdot 3^2\cdot 5\text{.}\) To list all the divisors, we just have to look at the values \(2^j\cdot 3^{k}\cdot 5^{\ell}\) where \(0\leq j\leq 3\text{,}\) \(0\leq k\leq 2\text{,}\) and \(0\leq \ell\leq 1\text{.}\) The possible powers of \(2\) are \(1, \; 2, \; 4, \; 8\text{,}\) and the possible powers of \(3\) are \(1,3,9\text{,}\) so we multiply the powers of two by these to get</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-69"><article class="example example-like"><p id="p-680">What are all the divisors of \(360\text{?}\)</p>
+<p id="p-681">First, we find the prime factorization of \(360\text{:}\) we can see that \(36=4\cdot 9=2^2\cdot 3^2\text{,}\) and so \(360 = 10\cdot 2^2\cdot 3^2 = 2^3\cdot 3^2\cdot 5\text{.}\) To list all the divisors, we just have to look at the values \(2^j\cdot 3^{k}\cdot 5^{\ell}\) where \(0\leq j\leq 3\text{,}\) \(0\leq k\leq 2\text{,}\) and \(0\leq \ell\leq 1\text{.}\) The possible powers of \(2\) are \(1, \; 2, \; 4, \; 8\text{,}\) and the possible powers of \(3\) are \(1,3,9\text{,}\) so we multiply the powers of two by these to get</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{cccc} 1, \amp   2, \amp   4, \amp   8, \\ 3, \amp  6, \amp   12, \amp   24, \\ 9, \amp   18, \amp   36, \amp   72. \end{array}
 \end{equation*}
 </div>
-<p id="p-603">The possible powers of \(5\) are just \(1\) and \(5\text{,}\) so we can just multiply these numbers by \(1\) and \(5\) to get</p>
+<p id="p-682">The possible powers of \(5\) are just \(1\) and \(5\text{,}\) so we can just multiply these numbers by \(1\) and \(5\) to get</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{cccccccccccc} 1, \amp   2, \amp   4, \amp   8, \amp  3, \amp  6, \amp   12, \amp   24, \amp   9, \amp   18, \amp   36, \amp   72, \\ 5, \amp   10, \amp   20, \amp   40, \amp  15, \amp  30, \amp  60,  \amp   120, \amp   45, \amp   90, \amp   180, \amp   360. \end{array}

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-08T17:08:01+01:00       *-->
+<!--*       on 2021-10-11T12:33:46+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(a\text{,}\) \(b\text{,}\) and \(d\) be integers. If \(d\) divides both \(a\) and \(b\text{,}\) then \(d\) divides every integer linear combination of \(a\) and \(b\text{.}\) In other words, for every pair of integers \(m,n\in\mathbb{Z}\text{,}\) the integer \(d\) also divides \(ma + nb\text{.}\)</p>
-<span class="incontext"><a href="euclideanalgo.html#p-454">in-context</a></span>
+<p>The second equation follows from the first (just by adding \(1\)), so we just need to prove the first. We prove this by induction.</p>
+<ul class="disc">
+<li>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Base case:</em> If \(N=1\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{x-x^{2}}{1-x} = \frac{x(1-x)}{1-x}=x=\sum_{n=1}^{1} x^{n}\text{.}
+\end{equation*}
+</div>
+</li>
+<li>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Induction Step:</em> Let \(N\in\NN\text{,}\) and suppose <a class="xref" data-knowl="./knowl/e_gs.html" title="Equation 4.2.1">(4.2.1)</a> holds for some \(N\text{.}\) Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\sum_{n=1}^{N+1} x^{n} =x^{N+1}+ \sum_{n=1}^{N} x^{n} =x^{N+1} + \frac{x-x^{N+1}}{1-x} =\frac{x^{N+1}-x^{N+2}}{1-x} + \frac{x-x^{N+1}}{1-x} =\frac{x-x^{N+2}}{1-x}\text{.}
+\end{equation*}
+</div>
+</li>
+</ul>
+<span class="incontext"><a href="inductionsection.html#p-454">in-context</a></span>
 </body>
 </html>

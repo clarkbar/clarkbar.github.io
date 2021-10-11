@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-08T17:08:02+01:00       *-->
+<!--*       on 2021-10-11T12:33:47+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,6 +15,32 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>By Bezout's Identity, there are integers \(s\) and \(t\) such that \(\gcd(a,c)=sa+tc\text{.}\) Then as \(d\) divides \(a\) and \(d\) divides \(b\text{,}\) we have \(d\) divides \(\gcd(a,c)\) by the Linear Combination Lemma.</p></article><span class="incontext"><a href="bezoutcorollaries.html#proof-16">in-context</a></span>
+<p>Write \(a = (x_1 + \cdots + x_n)/n\) for the arithmetic mean. First, let us consider the case in which we have \(x_1=\cdots=x_n=a\text{.}\) In that case, we have equality, because both the arithmetic and geometric means are equal to \(a\text{.}\) In particular, the claim is true for \(n=1\text{.}\)</p>
+<p>Now for an induction argument, we may assume that the claim holds for \(n=k\text{,}\) where \(k\in\NN\text{,}\) and we aim to prove it for \(n=k+1\text{.}\) Furthermore, we may assume that at least two of the \(x_i\) are unequal to \(a\text{;}\) in particular \(a&gt;0\text{.}\) Since one of these must be larger than \(a\) and the other must be smaller, we are free to assume that \(x_k\lt a\) and \(x_{k+1}\gt a\text{.}\) We aim to show that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_1x_2\cdots x_{k+1} \lt a^{k+1}\text{.}
+\end{equation*}
+</div>
+<p>If any of the \(x_i\)s are zero, then the geometric mean vanishes, so we have our strict inequality.</p>
+<p>Now set \(\xi_k = x_k + x_{k+1}-a\text{;}\) note that \(\xi_k &gt; 0\text{.}\) Now \(a = (x_1+x_2+\cdots +x_{k-1}+\xi_k)/k\text{.}\) So by hypothesis, we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_1x_2\cdots x_{k-1}\xi_k \leq a^k\text{,}
+\end{equation*}
+</div>
+<p class="continuation">with equality if and only if \(x_1=x_2=\cdots=x_{k-1}=\xi_k\text{.}\) Now note that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+0 \lt (a-x_k)(x_{k+1}-a) = (x_k + x_{k+1}-a)a - x_kx_{k+1} = \xi_ka-x_kx_{k+1}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so we deduce that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_1x_2\cdots x_{k-1}x_kx_{k+1} \lt x_1x_2\cdots x_{k-1}\xi_ka \leq a^ka = a^{k+1}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">as desired.</p></article><span class="incontext"><a href="separatingproducts.html#proof-16">in-context</a></span>
 </body>
 </html>

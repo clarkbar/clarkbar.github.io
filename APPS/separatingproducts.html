@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T13:29:13+01:00       *-->
+<!--*       on 2021-10-11T12:33:43+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Separating products</title>
+<title>AM/GM Inequality and Cauchy-Schwarz</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>window.MathJax = {
@@ -347,16 +347,6 @@
 	\DeclareMathOperator{\Mor}{Mor}
 	\newcommand{\MOR}{\ensuremath{\textup{\textsc{Mor}}}}
 
-	\DeclareMathOperator{\GL}{GL}
-	\DeclareMathOperator{\PSL}{PSL}
-	\DeclareMathOperator{\PSO}{PSO}
-	\DeclareMathOperator{\PSp}{PSp}
-	\DeclareMathOperator{\PSU}{PSU}
-	\DeclareMathOperator{\SL}{SL}
-	\DeclareMathOperator{\SO}{SO}
-	\DeclareMathOperator{\Sp}{Sp}
-	\DeclareMathOperator{\SU}{SU}
-
 	\DeclareMathOperator{\cofib}{cofib}
 	\DeclareMathOperator{\coker}{coker}
 	\DeclareMathOperator*{\colim}{colim}
@@ -390,38 +380,11 @@
 
 	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
 
-\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
-\def\LUB{{ LUB}}
-\renewcommand{\sectionmark}[1]{{}}
-\def\GLB{{ GLB}}
-\renewcommand{\headrulewidth}{0.5pt}
-\def\ve{\varepsilon}
-\renewcommand{\footrulewidth}{0pt}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\headrulewidth}{0pt}
-\def\R{\mathbb{R}}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
-\def\LUB{{ LUB}}
 \newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
-\def\ve{\epsilon}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\LUB{{ LUB}}
-\def\easylemma{the Linear Combination Lemma}
-\def\lcm{ lcm}
-\def\cl{{ cl}}
-\newcommand{\thepartimage}{}
-\newcommand{\thechapterimage}{}
-\def\R{\mathbb{R}}
-\def\Z{\mathbb{Z}}
-\def\N{{\mathbb{N}}}
-\def\Q{{\mathbb{Q}}}
-\def\C{{\mathbb{C}}}
-\def\hcf{{ hcf}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -434,10 +397,10 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="orderaxioms.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="inequalities.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="absolutevalues.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="roots.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="inequalities.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="limits.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="orderaxioms.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="inequalities.html" title="Up">Up</a><a class="next-button button toolbar-item" href="absolutevalues.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="roots.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="inequalities.html" title="Up">Up</a><a class="next-button button toolbar-item" href="limits.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -464,102 +427,42 @@
 <li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
 <li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
 <li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
-<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Week 1 Exercises, due 28 September 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and equivalence relations</span></a><ul>
+<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and relations</span></a><ul>
 <li><a href="cartesianproducts.html" data-scroll="cartesianproducts">Cartesian products</a></li>
 <li><a href="maps.html" data-scroll="maps">Maps</a></li>
 <li><a href="injectivesurjective.html" data-scroll="injectivesurjective">Injective and surjective</a></li>
 <li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
 <li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
-<li><a href="sizesofsets.html" data-scroll="sizesofsets">Comparing sizes of sets with functions</a></li>
 <li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
-<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
+<li><a href="mapsexercises.html" data-scroll="mapsexercises">Week 2 Exercises, due 5 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">The Real Line</span></a><ul>
-<li><a href="realnumbers.html" data-scroll="realnumbers">The Reals</a></li>
-<li><a href="archimedeanproperty.html" data-scroll="archimedeanproperty">The integers and the Archimedean Property</a></li>
-<li><a href="rationals.html" data-scroll="rationals">The rationals and irrationals</a></li>
-<li><a href="roots.html" data-scroll="roots">Roots</a></li>
-<li><a href="realexercises.html" data-scroll="realexercises">Exercises</a></li>
+<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a><ul>
+<li><a href="integer_sec.html" data-scroll="integer_sec">The integers</a></li>
+<li><a href="rationals.html" data-scroll="rationals">The rational numbers</a></li>
+<li><a href="orderedfields.html" data-scroll="orderedfields">Ordered fields</a></li>
+<li><a href="realnumbers.html" data-scroll="realnumbers">Completeness and the real numbers</a></li>
+<li><a href="reallineexercises.html" data-scroll="reallineexercises">Week 3 Exercise, due 12 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a><ul>
-<li><a href="orderaxioms.html" data-scroll="orderaxioms">The axioms for order</a></li>
-<li><a href="separatingproducts.html" data-scroll="separatingproducts" class="active">Separating products</a></li>
-<li><a href="absolutevalues.html" data-scroll="absolutevalues">Absolute Values</a></li>
-<li><a href="homogeneity.html" data-scroll="homogeneity">Homogeneity and inequalities</a></li>
-<li><a href="inequalitiesexercises.html" data-scroll="inequalitiesexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="induction.html" data-scroll="induction"><span class="codenumber">5</span> <span class="title">Induction</span></a><ul>
-<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on \(\Sigma\) notation</a></li>
+<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Induction and inequalities</span></a><ul>
+<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on summation notation</a></li>
 <li><a href="inductionsection.html" data-scroll="inductionsection">Induction</a></li>
-<li><a href="stronginduction.html" data-scroll="stronginduction">Strong Mathematical Induction</a></li>
-<li><a href="inequalitiesredux.html" data-scroll="inequalitiesredux">Inequalities revisited</a></li>
-<li><a href="inductionexercises.html" data-scroll="inductionexercises">Exercises</a></li>
+<li><a href="roots.html" data-scroll="roots">Roots</a></li>
+<li><a href="separatingproducts.html" data-scroll="separatingproducts" class="active">AM/GM Inequality and Cauchy-Schwarz</a></li>
 </ul>
 </li>
+<li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a></li>
+<li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
+<li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a></li>
 <li class="link">
-<a href="upperbounds.html" data-scroll="upperbounds"><span class="codenumber">6</span> <span class="title">Upper Bounds and Least Upper Bounds</span></a><ul>
-<li><a href="upperlowerbounds.html" data-scroll="upperlowerbounds">Upper and Lower Bounds</a></li>
-<li><a href="sups.html" data-scroll="sups">Least Upper Bounds</a></li>
-<li><a href="upperboundsexercises.html" data-scroll="upperboundsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="limits.html" data-scroll="limits"><span class="codenumber">7</span> <span class="title">Limits</span></a><ul>
-<li><a href="epsilondefinitionoflimit.html" data-scroll="epsilondefinitionoflimit">Motivation and the \(\epsilon-N\) definition of a limit</a></li>
-<li><a href="rulesforlimits.html" data-scroll="rulesforlimits">Rules for Limits</a></li>
-<li><a href="existenceofroots.html" data-scroll="existenceofroots">Application: the existence of roots.</a></li>
-<li><a href="infinitelimits.html" data-scroll="infinitelimits">Infinite limits</a></li>
-<li><a href="limitsexercises.html" data-scroll="limitsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="monotoneconvergence.html" data-scroll="monotoneconvergence"><span class="codenumber">8</span> <span class="title">The Monotone Convergence Theorem</span></a><ul>
-<li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection">The Monotone Convergence Theorem</a></li>
-<li><a href="iterativelydefinedsequences.html" data-scroll="iterativelydefinedsequences">Iteratively defined sequences</a></li>
-<li><a href="monotoneexercises.html" data-scroll="monotoneexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">9</span> <span class="title">Decimals and Series</span></a><ul>
-<li><a href="decimals.html" data-scroll="decimals">Decimals</a></li>
-<li><a href="series.html" data-scroll="series">Infinite Series</a></li>
-<li><a href="numbere.html" data-scroll="numbere">The number \(e\)</a></li>
-<li><a href="decimalsseriesexercises.html" data-scroll="decimalsseriesexercises">Exercises</a></li>
-<li><a href="eisirrational.html" data-scroll="eisirrational">*Appendix: irrationality of \(e\)</a></li>
-<li><a href="subsequences.html" data-scroll="subsequences">Subsequences</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">10</span> <span class="title">Complex Numbers</span></a><ul>
-<li><a href="complexnumberssection.html" data-scroll="complexnumberssection">Complex Numbers</a></li>
-<li><a href="cartesianandpolar.html" data-scroll="cartesianandpolar">Cartesian and Polar form</a></li>
-<li><a href="geometryandarithmeticofC.html" data-scroll="geometryandarithmeticofC">Geometry and arithmetic in \​(\mathbb{C}\)</a></li>
-<li><a href="exponentialform.html" data-scroll="exponentialform">Exponential form</a></li>
-<li><a href="rootsof1.html" data-scroll="rootsof1">Roots of Unity</a></li>
-<li><a href="complexnumbersexercises.html" data-scroll="complexnumbersexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="polynomials.html" data-scroll="polynomials"><span class="codenumber">11</span> <span class="title">Polynomials</span></a><ul>
-<li><a href="introtopolynomials.html" data-scroll="introtopolynomials">Introduction</a></li>
-<li><a href="factoringpolynomials.html" data-scroll="factoringpolynomials">Factoring Polynomials</a></li>
-<li><a href="realpolynomials.html" data-scroll="realpolynomials">Real Polynomials</a></li>
-<li><a href="rootcoefficienttheorem.html" data-scroll="rootcoefficienttheorem">Root-Coefficient Theorem</a></li>
-<li><a href="polynomialsexercises.html" data-scroll="polynomialsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="integers.html" data-scroll="integers"><span class="codenumber">12</span> <span class="title">Integers</span></a><ul>
+<a href="integers.html" data-scroll="integers"><span class="codenumber">8</span> <span class="title">Multiplicative theory of integers</span></a><ul>
 <li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
 <li><a href="euclideanalgo.html" data-scroll="euclideanalgo">The GCD and the Euclidean Algorithm</a></li>
 <li><a href="bezoutcorollaries.html" data-scroll="bezoutcorollaries">Corollaries of Bezout's Identity and the Linear Combination Lemma</a></li>
@@ -568,154 +471,138 @@
 <li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
 <li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
 <li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
-<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="modular.html" data-scroll="modular"><span class="codenumber">13</span> <span class="title">Modular Arithmetic</span></a><ul>
+<a href="modular.html" data-scroll="modular"><span class="codenumber">9</span> <span class="title">Modular Arithmetic</span></a><ul>
 <li><a href="arithmeticmodm.html" data-scroll="arithmeticmodm">Arithmetic modulo \(m\)</a></li>
 <li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
 <li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
 <li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
-<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
 </ul>
 </li>
-<li class="link"><a href="infinitecardinals.html" data-scroll="infinitecardinals"><span class="codenumber">14</span> <span class="title">Applications: What's bigger than \(\infty\text{?}\)*</span></a></li>
-<li class="link">
-<a href="counting.html" data-scroll="counting"><span class="codenumber">15</span> <span class="title">Counting</span></a><ul>
-<li><a href="multiplicationprinciple.html" data-scroll="multiplicationprinciple">The Multiplication Principle</a></li>
-<li><a href="correspendenceandovercounting.html" data-scroll="correspendenceandovercounting">Correspondence and overcounting</a></li>
-<li><a href="countingsubsets.html" data-scroll="countingsubsets">Counting subsets</a></li>
-<li><a href="countingpartitions.html" data-scroll="countingpartitions">Counting partitions</a></li>
-<li><a href="binomialmultinomial.html" data-scroll="binomialmultinomial">The Binomial and Multinomial Theorems</a></li>
-<li><a href="inclusionexclusion.html" data-scroll="inclusionexclusion">Inclusion-Exclusion</a></li>
-<li><a href="countingexercises.html" data-scroll="countingexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="permutations.html" data-scroll="permutations"><span class="codenumber">16</span> <span class="title">Permutations</span></a><ul>
-<li><a href="permutationssection.html" data-scroll="permutationssection">Permutations</a></li>
-<li><a href="tablenotation.html" data-scroll="tablenotation">Table Notation</a></li>
-<li><a href="compositionandidentity.html" data-scroll="compositionandidentity">Composition and identity</a></li>
-<li><a href="inverseofpermutation.html" data-scroll="inverseofpermutation">Inverse permutations</a></li>
-<li><a href="section-92.html" data-scroll="section-92">Powers</a></li>
-<li><a href="cycles.html" data-scroll="cycles">Cycles</a></li>
-<li><a href="cyclenotation.html" data-scroll="cyclenotation">Cycle Notation</a></li>
-<li><a href="section-95.html" data-scroll="section-95">Order of a permutation</a></li>
-<li><a href="evenandoddpermutations.html" data-scroll="evenandoddpermutations">Even and Odd permutations</a></li>
-<li><a href="permutationexercises.html" data-scroll="permutationexercises">Exercises</a></li>
-</ul>
-</li>
+<li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">10</span> <span class="title">Counting</span></a></li>
+<li class="link"><a href="permutations.html" data-scroll="permutations"><span class="codenumber">11</span> <span class="title">Permutations</span></a></li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="separatingproducts"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Separating products</span>
+<span class="type">Section</span> <span class="codenumber">4.4</span> <span class="title">AM/GM Inequality and Cauchy-Schwarz</span>
 </h2>
-<p id="p-540">In this section we cover some very useful inequalities that allow us to essentially separate terms in a product. They all stem from the following lemma:</p>
+<p id="p-476">In this section we cover some very useful inequalities that allow us to separate terms in a product. As a warm-up, let's begin with the following.</p>
 <article class="lemma theorem-like" id="l_little-amgm"><h6 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span>
 </h6>
-<p id="p-541">For \(u,v\in\mathbb{R}\text{,}\)</p>
+<p id="p-477">Let \(u,v\in\RR\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 uv \leq \frac{u^2+v^2}{2}\text{.}
 \end{equation*}
-</div></article><p id="p-542">Notice that on one side of the above inequality, the terms \(u\) and \(v\) are multiplied together, and on the other side, they are separate (but now squared).</p>
-<article class="hiddenproof" id="proof-20"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof"><p id="p-543">Since\((u-v)^2\geq 0\text{,}\) we get</p>
+</div></article><p id="p-478">Notice that on one side of the above inequality, the terms \(u\) and \(v\) are multiplied together, and on the other side, they are separate (but now squared).</p>
+<article class="hiddenproof" id="proof-15"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><p id="p-479">Since\((u-v)^2\geq 0\text{,}\) we get</p>
 <div class="displaymath">
 \begin{equation*}
 0\leq (u-v)^2 =u^2-2uv + v^2\text{.}
 \end{equation*}
 </div>
-<p id="p-544">So by (R3), we can add \(2uv\) to both sides to get</p>
+<p id="p-480">So we can add \(2uv\) to both sides to get</p>
 <div class="displaymath">
 \begin{equation*}
 2uv \leq u^2+v^2
 \end{equation*}
 </div>
-<p class="continuation">and then by (R4), we can multiply both sides by \(\frac{1}{2}\) to get \(uv \leq \frac{u^2+v^2}{2}\) as desired.</p></article></div>
+<p class="continuation">and then we can multiply both sides by \(\frac{1}{2}\) to get \(uv \leq \frac{u^2+v^2}{2}\) as desired.</p></article></div>
 <article class="exercise exercise-like" id="ex_uv_u_2_v_2_2"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-ex_uv_u_2_v_2_2"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex_uv_u_2_v_2_2"><article class="exercise exercise-like"><p id="p-545">When does equality hold in the previous lemma? That is, when do we have \(uv = \frac{u^2+v^2}{2}\text{?}\)</p>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex_uv_u_2_v_2_2"><article class="exercise exercise-like"><p id="p-481">When does equality hold in the previous lemma? That is, when do we have \(uv = \frac{u^2+v^2}{2}\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-30" id="solution-30"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like">
-<p id="p-546">Let's retrace the proof of <a class="xref" data-knowl="./knowl/l_little-amgm.html" title="Lemma 4.2.1">Lemma 4.2.1</a> backwards trying to use only equalities:</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-482">Let's retrace the proof of <a class="xref" data-knowl="./knowl/l_little-amgm.html" title="Lemma 4.4.1">Lemma 4.4.1</a> backwards trying to use only equalities. If \(2uv=u^2+v^2\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
-uv = \frac{u^2+v^2}{2} \;\;\; \Longleftrightarrow \;\;\; 2uv = u^2+v^2 \;\;\; \Longleftrightarrow \;\;\; 0=u^2+v^2-2uv = (u-v)^{2}
+0 = 2+v^2-2uv = (u-v)^{2}\text{,}
 \end{equation*}
 </div>
 <p class="continuation">and this last equality holds if and only if \(u=v\text{.}\)</p>
 </div></div>
 </div></article></div>
-<p id="p-547">From this, we get the famous {Arithmetic Mean-Geometric Mean (AM-GM) inequality}:</p>
+<p id="p-483">From this, we deduce the famous <dfn class="terminology">Arithmetic Mean-Geometric Mean inequality</dfn>:</p>
 <article class="theorem theorem-like" id="t_AM-GM"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">AM-GM Inequality.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">AM/GM Inequality.</span>
 </h6>
-<p id="p-548">Let \(n\in\mathbb{N}\) and \(x_{1},...,x_{n}\geq 0\text{.}\) Then</p>
+<p id="p-484">Let \(n\in\NN\text{,}\) and let \(x_{1},\dots,x_{n}\geq 0\) be nonnegative real numbers. Then</p>
 <div class="displaymath">
 \begin{equation*}
-(x_{1}\cdot x_{2}\cdots x_{n})^{\frac{1}{n}}\leq \frac{x_{1}+\cdots + x_{n}}{n}\text{.}
+(x_{1}x_{2}\cdots x_{n})^{\frac{1}{n}}\leq \frac{x_{1}+\cdots + x_{n}}{n}\text{,}
 \end{equation*}
-</div></article><p id="p-549">That is, the <dfn class="terminology">geometric mean</dfn> on the left is at most the <dfn class="terminology">arithmetic mean</dfn> on the right.</p>
-<article class="hiddenproof" id="proof-21"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-21"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof"><p id="p-550">The \(n=2\) case follows from <a class="xref" data-knowl="./knowl/l_little-amgm.html" title="Lemma 4.2.1">Lemma 4.2.1</a>: if we set \(u=\sqrt{x_{1}}\) and \(v=\sqrt{x_{2}}\text{,}\) then</p>
-<div class="displaymath">
-\begin{equation}
-(x_{1}x_{2})^{\frac{1}{2}}=uv\leq \frac{u^2+v^2}{2} = \frac{x_{1}+x_{2}}{2}\text{.}\label{e_x1x2_1_2_x1_x2_2}\tag{4.2.1}
-\end{equation}
 </div>
-<p id="p-551">For the \(n&gt;2\) case, see <a class="xref" data-knowl="./knowl/ex_AMGM.html" title="Checkpoint 5.5.10">Exercise 5.5.10</a>.</p></article></div>
-<article class="exercise exercise-like" id="exercise-27"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-27"><h6 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-27"><article class="exercise exercise-like"><p id="p-552">For \(x_{1},x_{2}\geq 0\text{,}\) when do we have \((x_{1}x_{2})^{\frac{1}{2}}= \frac{x_{1}+x_{2}}{2}\text{?}\)</p>
-<div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like"><p id="p-553">If there is equality, that means there is equality in <a class="xref" data-knowl="./knowl/e_x1x2_1_2_x1_x2_2.html" title="Equation 4.2.1">(4.2.1)</a>, and by <a class="xref" data-knowl="./knowl/ex_uv_u_2_v_2_2.html" title="Checkpoint 4.2.2">Exercise 4.2.2</a>, this holds if and only if \(u=v\text{,}\) that is, if \(\sqrt{x_{1}}=\sqrt{x_{2}}\text{,}\) which holds if and only if \(x_{1}=x_{2}\text{.}\)</p></div></div>
-</div></article></div>
-<p id="p-554">The next useful inequality is the <dfn class="terminology">Cauchy-Schwarz</dfn> inequality:</p>
-<article class="theorem theorem-like" id="theorem-11"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Cauchy-Schwarz Inequality.</span>
+<p class="continuation">with equality if and only if \(x_1=x_2=\cdots=x_n\text{.}\)</p></article><p id="p-485">That is, the <dfn class="terminology">geometric mean</dfn> on the left is at most the <dfn class="terminology">arithmetic mean</dfn> on the right.</p>
+<article class="hiddenproof" id="proof-16"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><p id="p-486">Write \(a = (x_1 + \cdots + x_n)/n\) for the arithmetic mean. First, let us consider the case in which we have \(x_1=\cdots=x_n=a\text{.}\) In that case, we have equality, because both the arithmetic and geometric means are equal to \(a\text{.}\) In particular, the claim is true for \(n=1\text{.}\)</p>
+<p id="p-487">Now for an induction argument, we may assume that the claim holds for \(n=k\text{,}\) where \(k\in\NN\text{,}\) and we aim to prove it for \(n=k+1\text{.}\) Furthermore, we may assume that at least two of the \(x_i\) are unequal to \(a\text{;}\) in particular \(a&gt;0\text{.}\) Since one of these must be larger than \(a\) and the other must be smaller, we are free to assume that \(x_k\lt a\) and \(x_{k+1}\gt a\text{.}\) We aim to show that</p>
+<div class="displaymath">
+\begin{equation*}
+x_1x_2\cdots x_{k+1} \lt a^{k+1}\text{.}
+\end{equation*}
+</div>
+<p id="p-488">If any of the \(x_i\)s are zero, then the geometric mean vanishes, so we have our strict inequality.</p>
+<p id="p-489">Now set \(\xi_k = x_k + x_{k+1}-a\text{;}\) note that \(\xi_k &gt; 0\text{.}\) Now \(a = (x_1+x_2+\cdots +x_{k-1}+\xi_k)/k\text{.}\) So by hypothesis, we have</p>
+<div class="displaymath">
+\begin{equation*}
+x_1x_2\cdots x_{k-1}\xi_k \leq a^k\text{,}
+\end{equation*}
+</div>
+<p class="continuation">with equality if and only if \(x_1=x_2=\cdots=x_{k-1}=\xi_k\text{.}\) Now note that</p>
+<div class="displaymath">
+\begin{equation*}
+0 \lt (a-x_k)(x_{k+1}-a) = (x_k + x_{k+1}-a)a - x_kx_{k+1} = \xi_ka-x_kx_{k+1}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so we deduce that</p>
+<div class="displaymath">
+\begin{equation*}
+x_1x_2\cdots x_{k-1}x_kx_{k+1} \lt x_1x_2\cdots x_{k-1}\xi_ka \leq a^ka = a^{k+1}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">as desired.</p></article></div>
+<p id="p-490">The next useful inequality is the <dfn class="terminology">Cauchy-Schwarz</dfn> inequality:</p>
+<article class="theorem theorem-like" id="theorem-15"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Cauchy-Schwarz Inequality.</span>
 </h6>
-<p id="p-555">Let \(n\in\mathbb{N}\text{,}\) \(x_{1},...,x_{n},y_{1},...,y_{n}\in\mathbb{R}\text{.}\) Then</p>
+<p id="p-491">Let \(n\in\NN\text{,}\) and let \(x_{1},\dots,x_{n},y_{1},\dots,y_{n}\in\RR\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 x_{1}y_{1}+\cdots + x_{n}y_{n} \leq \sqrt{x_{1}^2+\cdots + x_{n}^{2}} \sqrt{y_{1}^2+\cdots + y_{n}^{2}}\text{.}
 \end{equation*}
-</div></article><p id="p-556">Why is this useful? On the left we have a <dfn class="terminology">mixed</dfn> product of \(x\)-terms and \(y\)-terms, and we are able to relate it to a product of two terms where now the \(x\)'s and \(y\)'s are <dfn class="terminology">separated</dfn>.</p>
-<p id="p-557">We'll just prove the \(n=2\) case for now and return to the general case later. Note that</p>
+</div></article><article class="hiddenproof" id="proof-17"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><p id="p-492">Let \(a=\sqrt{x_1^2+\cdots+x_n^2}\text{,}\) and let \(b=\sqrt{y_1^2+\cdots+y_n^2}\text{.}\) We aim to show that</p>
 <div class="displaymath">
 \begin{equation*}
-(x_{1}y_{1}+x_{2}y_{2})^2 =x_{1}^2y_{1}^2+x_{2}^2y_{2}^2+2x_{1}y_{1}x_{2}y_{2}
+\frac{x_1y_1}{ab}+\cdots+\frac{x_ny_n}{ab} \leq 1
 \end{equation*}
 </div>
-<p class="continuation">and using <a class="xref" data-knowl="./knowl/l_little-amgm.html" title="Lemma 4.2.1">Lemma 4.2.1</a> on the second term with \(u=x_{1}y_{2}\) and \(v=x_{2}y_{1}\text{,}\) this above is at most</p>
+<p class="continuation">Now by the AM/GM Inequality, we have, for each \(i\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
-\leq x_{1}^2y_{1}^2+x_{2}^2y_{2}^2+2\frac{(x_{1}y_{2})^2+(x_{2}y_{1})^2}{2} =x_{1}^2y_{1}^2+x_{2}^2y_{2}^2+x_{1}^2y_{2}^2+x_{2}^2y_{1}^2 =(x_{1}^2+x_{2}^2)(y_{1}^2+y_{2}^2)
+\frac{x_iy_i}{ab} \leq \frac{1}{2}\left(\frac{x_i^2}{a^2}+\frac{y_i^2}{b^2}\right)\text{.}
 \end{equation*}
 </div>
-<p id="p-558">Thus we have shown</p>
+<p class="continuation">Now if we sum these over all \(i\text{,}\) the right hand side becomes</p>
 <div class="displaymath">
 \begin{equation*}
-(x_{1}y_{1}+x_{2}y_{2})^2\leq (x_{1}^2+x_{2}^2)(y_{1}^2+y_{2}^2) =\left(\sqrt{x_{1}^2+x_{2}^2}\sqrt{y_{1}^2+y_{2}^2}\right)^{2}
+\frac{1}{2}\left(\frac{x_1^2}{a^2}+\frac{y_1^2}{b^2}\right)+\cdots+\frac{1}{2}\left(\frac{x_n^2}{a^2}+\frac{y_n^2}{b^2}\right) = \frac{1}{2}\left(\frac{x_1^2+\cdots+x_n^2}{a^2}+\frac{y_1^2+\cdots+y_n^2}{b^2}\right) = 1\text{,}
 \end{equation*}
 </div>
-<p class="continuation">and now by <a class="xref" data-knowl="./knowl/p_u_2_v_2.html" title="Proposition 4.1.7">Proposition 4.1.7</a>, we get</p>
-<div class="displaymath">
-\begin{equation*}
-x_{1}y_{1}+x_{2}y_{2}\leq\sqrt{x_{1}^2+x_{2}^2}\sqrt{y_{1}^2+y_{2}^2}\text{.}
-\end{equation*}
-</div>
-<article class="example example-like" id="example-48"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-48"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-48"><article class="example example-like"><p id="p-559">Show that</p>
+<p class="continuation">and so the proof is complete.</p></article></div>
+<p id="p-493">Why is this useful? On the left we have a <dfn class="terminology">mixed</dfn> product of \(x\)-terms and \(y\)-terms, and we are able to relate it to a product of two terms where now the \(x\)'s and \(y\)'s are <dfn class="terminology">separated</dfn>.</p>
+<article class="example example-like" id="example-54"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-54"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-54"><article class="example example-like"><p id="p-494">Show that</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{a+b}{2} \leq \left(\frac{a^2+b^2}{2}\right)^{\frac{1}{2}}\text{.}
 \end{equation*}
 </div>
-<p id="p-560">Which of our above inequalities should we try using? <a class="xref" data-knowl="./knowl/l_little-amgm.html" title="Lemma 4.2.1">Lemma 4.2.1</a> and AM-GM don't seem relevant since we don't have something like \(ab\) on the left, so let's see if we can use the Cauchy-Schwarz inequality: Rewrite \(\frac{a+b}{2}=a\cdot \frac{1}{2} +b\cdot\frac{1}{2}\text{,}\) then the Cauchy Schwarz inequality implies:</p>
+<p id="p-495">Which of our above inequalities should we try using? <a class="xref" data-knowl="./knowl/l_little-amgm.html" title="Lemma 4.4.1">Lemma 4.4.1</a> and AM-GM don't seem relevant since we don't have something like \(ab\) on the left, so let's see if we can use the Cauchy-Schwarz inequality: Rewrite \(\frac{a+b}{2}=a\cdot \frac{1}{2} +b\cdot\frac{1}{2}\text{,}\) then the Cauchy Schwarz inequality implies:</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{a+b}{2} = a\cdot\frac{1}{2} + b\cdot\frac{1}{2} \leq \sqrt{a^2+b^2}\sqrt{\frac{1}{2^{2}}+\frac{1}{2^{2}}} =\left(\frac{a^2+b^2}{2}\right)^{\frac{1}{2}}\text{.}
