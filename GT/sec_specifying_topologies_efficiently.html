@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-27T08:44:16+01:00       *-->
+<!--*       on 2021-10-11T23:56:36+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -421,6 +421,7 @@
 <li><a href="sec_continuity_for_subspaces_of_euclidean_space.html" data-scroll="sec_continuity_for_subspaces_of_euclidean_space">Continuity</a></li>
 <li><a href="sec_connectedness_for_subspaces_of_euclidean_space.html" data-scroll="sec_connectedness_for_subspaces_of_euclidean_space">Connectedness</a></li>
 <li><a href="sec_subspaces_exercises.html" data-scroll="sec_subspaces_exercises">Problem set 1, due 5 October 2021</a></li>
+<li><a href="sec_subspaces_exercises_2.html" data-scroll="sec_subspaces_exercises_2">Problem set 2, due 19 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -468,28 +469,28 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec_specifying_topologies_efficiently"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Specifying topologies efficiently</span>
 </h2>
-<p id="p-366">A common way of specifying a topology is to speak of the <em class="emphasis">coarsest topology such that blah</em> or the <em class="emphasis">finest topology such that blah</em>. Specifying a topology this way has its pluses and minuses: on one hand, these properties often make it easy to verify features of these topologies, but on the other hand, one has to do the work to actually confirm that a finest or coarsest topology with the given property exists. Let's do some of that work now.</p>
+<p id="p-369">A common way of specifying a topology is to speak of the <em class="emphasis">coarsest topology such that blah</em> or the <em class="emphasis">finest topology such that blah</em>. Specifying a topology this way has its pluses and minuses: on one hand, these properties often make it easy to verify features of these topologies, but on the other hand, one has to do the work to actually confirm that a finest or coarsest topology with the given property exists. Let's do some of that work now.</p>
 <div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-6" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/F_k2S4N0CIs?&amp;modestbranding=1&amp;rel=0"></iframe></div>
 <article class="example example-like" id="example-35"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-35"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><p id="p-367">Let \(X\) be a topological space, and let \(Y\subseteq X\) is a subspace, then \(Y\) has the coarsest topology such that the inclusion map \(\into{Y}{X}\) is continuous.</p></article></div>
-<p id="p-368">Here's a handy fact of set theory that we'll be using a lot in this section. Let \(X\) be a set, and let \(A \subseteq \PP(X)\) be a collection of subsets of \(X\text{.}\) Then the following are equivalent for a subset \(U \subseteq X\text{:}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-35"><article class="example example-like"><p id="p-370">Let \(X\) be a topological space, and let \(Y\subseteq X\) is a subspace, then \(Y\) has the coarsest topology such that the inclusion map \(\into{Y}{X}\) is continuous.</p></article></div>
+<p id="p-371">Here's a handy fact of set theory that we'll be using a lot in this section. Let \(X\) be a set, and let \(A \subseteq \PP(X)\) be a collection of subsets of \(X\text{.}\) Then the following are equivalent for a subset \(U \subseteq X\text{:}\)</p>
 <ul class="disc">
-<li id="li-104"><p id="p-369">The set \(U\) can be expressed as the union of elements of \(A\text{.}\)</p></li>
-<li id="li-105"><p id="p-370">For every point \(u \in U\text{,}\) there exists an element \(V \in A\) such that \(u \in V \subseteq U\text{.}\)</p></li>
+<li id="li-104"><p id="p-372">The set \(U\) can be expressed as the union of elements of \(A\text{.}\)</p></li>
+<li id="li-105"><p id="p-373">For every point \(u \in U\text{,}\) there exists an element \(V \in A\) such that \(u \in V \subseteq U\text{.}\)</p></li>
 </ul>
 <article class="proposition theorem-like" id="proposition-10"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-371">Suppose \(X\) a set, and suppose \(B\subseteq\PP(X)\text{.}\) Then there is a unique coarsest topology \(\tau_B\) on \(X\) such that every element of \(B\) is open.</p></article><article class="hiddenproof" id="proof-12"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><p id="p-372">Let's define \(O\subseteq\PP(X)\) as the collection of all those subsets \(U\subseteq X\) such that for any point \(x\in U\text{,}\) there exist finitely many elements \(V_1,\dots,V_n\in B\) such that \(x\in V_1\cap\cdots\cap V_n\subseteq U\text{.}\) It is easy to see that \(O\) is a system of open sets for a topology on \(X\text{.}\) We claim that this is the desired topology \(\tau_B\text{.}\) Indeed, every element of \(B\) is an element of \(O\text{,}\) and at the same time, every element of \(O\) is a union of finite intersections of elements of \(B\text{,}\) and hence must be open in any topology in which the elements of \(B\) are open.</p></article></div>
+<p id="p-374">Suppose \(X\) a set, and suppose \(B\subseteq\PP(X)\text{.}\) Then there is a unique coarsest topology \(\tau_B\) on \(X\) such that every element of \(B\) is open.</p></article><article class="hiddenproof" id="proof-12"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><p id="p-375">Let's define \(O\subseteq\PP(X)\) as the collection of all those subsets \(U\subseteq X\) such that for any point \(x\in U\text{,}\) there exist finitely many elements \(V_1,\dots,V_n\in B\) such that \(x\in V_1\cap\cdots\cap V_n\subseteq U\text{.}\) It is easy to see that \(O\) is a system of open sets for a topology on \(X\text{.}\) We claim that this is the desired topology \(\tau_B\text{.}\) Indeed, every element of \(B\) is an element of \(O\text{,}\) and at the same time, every element of \(O\) is a union of finite intersections of elements of \(B\text{,}\) and hence must be open in any topology in which the elements of \(B\) are open.</p></article></div>
 <article class="definition definition-like" id="definition-13"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
 </h6>
-<p id="p-373">In the situation of the previous exercise, one says that \(B\) <dfn class="terminology">generates</dfn> the topology on \(X\) or that \(B\) is a <dfn class="terminology">subbase</dfn></p>
-<aside class="aside aside-like" id="aside-33"><p id="p-374">Some authors require additionally that \(B\) <em class="emphasis">cover</em> \(X\text{;}\) that is, that \(\cup B=X\text{.}\) Not us, though.</p></aside><p id="p-375">for the topology on \(X\text{.}\)</p></article><article class="proposition theorem-like" id="proposition-11"><h6 class="heading">
+<p id="p-376">In the situation of the previous exercise, one says that \(B\) <dfn class="terminology">generates</dfn> the topology on \(X\) or that \(B\) is a <dfn class="terminology">subbase</dfn></p>
+<aside class="aside aside-like" id="aside-33"><p id="p-377">Some authors require additionally that \(B\) <em class="emphasis">cover</em> \(X\text{;}\) that is, that \(\cup B=X\text{.}\) Not us, though.</p></aside><p id="p-378">for the topology on \(X\text{.}\)</p></article><article class="proposition theorem-like" id="proposition-11"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.4</span><span class="period">.</span>
 </h6>
-<p id="p-376">Let \(X\) be a set, and let \(F \coloneq \left\{ f_{\alpha} \colon \fromto{X}{Y_{\alpha}} \right\}_{\alpha\in A}\) be a family of maps. Suppose that each target \(Y_{\alpha}\) is equipped with a topology \(\tau_{\alpha}\text{.}\) Then there exists a unique coarsest topology on \(X\) such that each \(f_{\alpha}\) is continuous. This is called the <dfn class="terminology">initial topology</dfn> on \(X\) with respect to \(F\text{.}\)</p></article><article class="hiddenproof" id="proof-13"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><p id="p-377">The desired topology on \(X\) is the one generated by the set</p>
+<p id="p-379">Let \(X\) be a set, and let \(F \coloneq \left\{ f_{\alpha} \colon \fromto{X}{Y_{\alpha}} \right\}_{\alpha\in A}\) be a family of maps. Suppose that each target \(Y_{\alpha}\) is equipped with a topology \(\tau_{\alpha}\text{.}\) Then there exists a unique coarsest topology on \(X\) such that each \(f_{\alpha}\) is continuous. This is called the <dfn class="terminology">initial topology</dfn> on \(X\) with respect to \(F\text{.}\)</p></article><article class="hiddenproof" id="proof-13"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><p id="p-380">The desired topology on \(X\) is the one generated by the set</p>
 <div class="displaymath">
 \begin{equation*}
 \{f_{\alpha}^{-1}(U) : (\alpha\in A)\wedge(U\subseteq Y_{\alpha}\text{ is open } ) \}\text{.}
@@ -498,30 +499,30 @@
 <article class="proposition theorem-like" id="proposition-12"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.5</span><span class="period">.</span>
 </h6>
-<p id="p-378">Let \(X\) be a set, and let \(F \coloneq \left\{ f_{\alpha} \colon \fromto{X}{Y_{\alpha}} \right\}_{\alpha\in A}\) be an indexed family of maps. Suppose that each target \(Y_{\alpha}\) is equipped with a topology \(\tau_{\alpha}\text{,}\) and equip \(X\) with the initial topology with respect to \(F\text{.}\) For any topological space \(X'\text{,}\) a map \(g \colon \fromto{X'}{X}\) is continuous if and only if, for each \(\alpha\in A\text{,}\) the composite \(f_{\alpha}\circ g\) is continuous.</p></article><article class="hiddenproof" id="proof-14"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><p id="p-379">If \(g\) is continuous, then since the composition of continuous maps is continuous, it follows that each \(f_{\alpha} \circ g\) is continuous too.</p>
-<p id="p-380">Conversely, let us assume that each \(f_{\alpha} \circ g\) is continuous. Now let \(U \subseteq X\) be an open set. Since \(X\) has the initial topology with respect to \(F\text{,}\) it follows that \(U\) is a union of finite intersections of sets of the form \(f_{\alpha}^{-1}(V)\) for \(\alpha \in A\) and \(V \subseteq Y_{\alpha}\) open. Consequently, \(g^{-1}(U)\) is a union of finite intersections of sets of the form \(g^{-1}(f_{\alpha}^{-1}(V))\) for \(\alpha \in A\) and \(V \subseteq Y_{\alpha}\text{.}\) Since \(f_{\alpha} \circ g\) is continuous, it follows that \(g^{-1}(U)\) is open.</p></article></div>
-<p id="p-381">Dually, but simpler, suppose \(X\) a set, and suppose \(F \coloneq \{ f_{\alpha} \colon \fromto{Y_{\alpha}}{X} \}_{\alpha\in A}\) an indexed family of maps. Suppose that each source \(Y_{\alpha}\) is endowed with a topology \(\tau_{\alpha}\text{.}\)</p>
+<p id="p-381">Let \(X\) be a set, and let \(F \coloneq \left\{ f_{\alpha} \colon \fromto{X}{Y_{\alpha}} \right\}_{\alpha\in A}\) be an indexed family of maps. Suppose that each target \(Y_{\alpha}\) is equipped with a topology \(\tau_{\alpha}\text{,}\) and equip \(X\) with the initial topology with respect to \(F\text{.}\) For any topological space \(X'\text{,}\) a map \(g \colon \fromto{X'}{X}\) is continuous if and only if, for each \(\alpha\in A\text{,}\) the composite \(f_{\alpha}\circ g\) is continuous.</p></article><article class="hiddenproof" id="proof-14"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><p id="p-382">If \(g\) is continuous, then since the composition of continuous maps is continuous, it follows that each \(f_{\alpha} \circ g\) is continuous too.</p>
+<p id="p-383">Conversely, let us assume that each \(f_{\alpha} \circ g\) is continuous. Now let \(U \subseteq X\) be an open set. Since \(X\) has the initial topology with respect to \(F\text{,}\) it follows that \(U\) is a union of finite intersections of sets of the form \(f_{\alpha}^{-1}(V)\) for \(\alpha \in A\) and \(V \subseteq Y_{\alpha}\) open. Consequently, \(g^{-1}(U)\) is a union of finite intersections of sets of the form \(g^{-1}(f_{\alpha}^{-1}(V))\) for \(\alpha \in A\) and \(V \subseteq Y_{\alpha}\text{.}\) Since \(f_{\alpha} \circ g\) is continuous, it follows that \(g^{-1}(U)\) is open.</p></article></div>
+<p id="p-384">Dually, but simpler, suppose \(X\) a set, and suppose \(F \coloneq \{ f_{\alpha} \colon \fromto{Y_{\alpha}}{X} \}_{\alpha\in A}\) an indexed family of maps. Suppose that each source \(Y_{\alpha}\) is endowed with a topology \(\tau_{\alpha}\text{.}\)</p>
 <ul class="disc">
-<li id="li-106"><p id="p-382">There exists a unique finest topology on \(X\) relative to which every map of \(F\) is continuous. This is called the <dfn class="terminology">final topology</dfn> with respect to \(F\text{.}\) A subset \(U \subseteq X\) is open with respect to the final topology if and only if, for every \(\alpha \in A\text{,}\) the inverse image \(f_{\alpha}^{-1}(U) \subseteq Y_{\alpha}\) is open.</p></li>
-<li id="li-107"><p id="p-383">A map \(g\colon\fromto{X}{X'}\) is continuous if and only if, for each \(\alpha\in A\text{,}\) the composite \(g\circ f_{\alpha}\) is continuous.</p></li>
+<li id="li-106"><p id="p-385">There exists a unique finest topology on \(X\) relative to which every map of \(F\) is continuous. This is called the <dfn class="terminology">final topology</dfn> with respect to \(F\text{.}\) A subset \(U \subseteq X\) is open with respect to the final topology if and only if, for every \(\alpha \in A\text{,}\) the inverse image \(f_{\alpha}^{-1}(U) \subseteq Y_{\alpha}\) is open.</p></li>
+<li id="li-107"><p id="p-386">A map \(g\colon\fromto{X}{X'}\) is continuous if and only if, for each \(\alpha\in A\text{,}\) the composite \(g\circ f_{\alpha}\) is continuous.</p></li>
 </ul>
 <article class="example example-like" id="example-36"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-36"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-36"><article class="example example-like"><p id="p-384">Each of the following sets form a subbase for the standard topology on \(\RR\text{;}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-36"><article class="example example-like"><p id="p-387">Each of the following sets form a subbase for the standard topology on \(\RR\text{;}\)</p>
 <ul class="disc">
-<li id="li-108"><p id="p-385">the set of all open subsets of \(\RR\text{;}\)</p></li>
-<li id="li-109"><p id="p-386">the set \(\left\{\left]a,b\right[ : a,b\in\RR\right\}\) of open intervals; and</p></li>
-<li id="li-110"><p id="p-387">the set \(\left\{\left]a,+\infty\right[ : a\in\RR\}\cup\{\left]-\infty,b\right[ : b\in\RR\right\}\) of open rays.</p></li>
+<li id="li-108"><p id="p-388">the set of all open subsets of \(\RR\text{;}\)</p></li>
+<li id="li-109"><p id="p-389">the set \(\left\{\left]a,b\right[ : a,b\in\RR\right\}\) of open intervals; and</p></li>
+<li id="li-110"><p id="p-390">the set \(\left\{\left]a,+\infty\right[ : a\in\RR\}\cup\{\left]-\infty,b\right[ : b\in\RR\right\}\) of open rays.</p></li>
 </ul></article></div>
 <article class="example example-like" id="example-37"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-37"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-37"><article class="example example-like"><p id="p-388">Let \(X \subseteq \RR^n\) be a subspace of Euclidean space. The set \(\{B(x,\varepsilon) : x\in X,\ \varepsilon&gt;0\}\) is a subbase for the induced topology on \(X\text{.}\)</p></article></div>
-<p id="p-389">If \(B\) is a subbase for a topology, then any open set in that topology is a union of finite intersections of subbase elements. One might wish for a better subbase with enough sets therein to ensure that every open set can be written as a union of elements of that subbase.</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-37"><article class="example example-like"><p id="p-391">Let \(X \subseteq \RR^n\) be a subspace of Euclidean space. The set \(\{B(x,\varepsilon) : x\in X,\ \varepsilon&gt;0\}\) is a subbase for the induced topology on \(X\text{.}\)</p></article></div>
+<p id="p-392">If \(B\) is a subbase for a topology, then any open set in that topology is a union of finite intersections of subbase elements. One might wish for a better subbase with enough sets therein to ensure that every open set can be written as a union of elements of that subbase.</p>
 <article class="definition definition-like" id="definition-14"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.3.8</span><span class="period">.</span>
 </h6>
-<p id="p-390">Let \(X\) be a topological space. Let \(x\in X\) be a point. Then a <dfn class="terminology">local base</dfn> at \(x\in X\) is a set \(N_x\) of open neighbourhoods of \(x\) with the following property: For any open neighbourhood \(W\) of \(x\text{,}\) there is an open neighbourhood \(V\in N_x\) with \(V\subseteq W\text{.}\)</p>
-<p id="p-391">A <dfn class="terminology">base</dfn> for \(X\) is a collection \(B\) of open sets such that for any point \(x\in X\text{,}\) the set</p>
+<p id="p-393">Let \(X\) be a topological space. Let \(x\in X\) be a point. Then a <dfn class="terminology">local base</dfn> at \(x\in X\) is a set \(N_x\) of open neighbourhoods of \(x\) with the following property: For any open neighbourhood \(W\) of \(x\text{,}\) there is an open neighbourhood \(V\in N_x\) with \(V\subseteq W\text{.}\)</p>
+<p id="p-394">A <dfn class="terminology">base</dfn> for \(X\) is a collection \(B\) of open sets such that for any point \(x\in X\text{,}\) the set</p>
 <div class="displaymath">
 \begin{equation*}
 B_x \coloneq \{ U\in B : x\in U \}
@@ -530,24 +531,24 @@ B_x \coloneq \{ U\in B : x\in U \}
 <p class="continuation">is a local base at \(x\in X\text{.}\)</p></article><article class="proposition theorem-like" id="proposition-13"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.9</span><span class="period">.</span>
 </h6>
-<p id="p-392">Let \(X\) be a topological space, let \(x\in X\) be a point, and let \(N_x\) be a local base at \(x\text{.}\) Then \(x\) is close to a subset \(S\subseteq X\) if and only if, for any \(V\in N_x\text{,}\) the intersection \(S\cap V\neq\varnothing\text{.}\)</p></article><article class="proposition theorem-like" id="thm_baseopens"><h6 class="heading">
+<p id="p-395">Let \(X\) be a topological space, let \(x\in X\) be a point, and let \(N_x\) be a local base at \(x\text{.}\) Then \(x\) is close to a subset \(S\subseteq X\) if and only if, for any \(V\in N_x\text{,}\) the intersection \(S\cap V\neq\varnothing\text{.}\)</p></article><article class="proposition theorem-like" id="thm_baseopens"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.10</span><span class="period">.</span>
 </h6>
-<p id="p-393">Let \(X\) be a topological space, and let \(B\) be a base for the topology. Then the following are equivalent for a subset \(U\subseteq X\text{.}\)</p>
+<p id="p-396">Let \(X\) be a topological space, and let \(B\) be a base for the topology. Then the following are equivalent for a subset \(U\subseteq X\text{.}\)</p>
 <ul class="disc">
-<li id="li-111"><p id="p-394">The set \(U\) is open in \(X\text{.}\)</p></li>
-<li id="li-112"><p id="p-395">For any point \(x\in U\text{,}\) there exists an element \(V\in B_x\) such that \(V\subset U\text{.}\)</p></li>
-<li id="li-113"><p id="p-396">The set \(U\) can be written as the union of elements of \(B\text{.}\)</p></li>
+<li id="li-111"><p id="p-397">The set \(U\) is open in \(X\text{.}\)</p></li>
+<li id="li-112"><p id="p-398">For any point \(x\in U\text{,}\) there exists an element \(V\in B_x\) such that \(V\subset U\text{.}\)</p></li>
+<li id="li-113"><p id="p-399">The set \(U\) can be written as the union of elements of \(B\text{.}\)</p></li>
 </ul></article><article class="proposition theorem-like" id="prp_basesrecog"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.3.11</span><span class="period">.</span>
 </h6>
-<p id="p-397">Let \(X\) be a topological space. Then a set \(B\) of open sets is a base for the topology if and only if the following conditions are satisfied.</p>
+<p id="p-400">Let \(X\) be a topological space. Then a set \(B\) of open sets is a base for the topology if and only if the following conditions are satisfied.</p>
 <ul class="disc">
-<li id="li-114"><p id="p-398">The elements of \(B\) cover \(X\text{.}\)</p></li>
-<li id="li-115"><p id="p-399">For any \(U,V\in B\) and any element \(x\in U\cap V\text{,}\) there is an element \(W\in B_x\) such that \(W\subseteq U\cap V\text{.}\)</p></li>
+<li id="li-114"><p id="p-401">The elements of \(B\) cover \(X\text{.}\)</p></li>
+<li id="li-115"><p id="p-402">For any \(U,V\in B\) and any element \(x\in U\cap V\text{,}\) there is an element \(W\in B_x\) such that \(W\subseteq U\cap V\text{.}\)</p></li>
 </ul></article><article class="example example-like" id="example-38"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-38"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.12</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-38"><article class="example example-like"><p id="p-400">Let \(X \subseteq \RR^n\) be a subspace of Euclidean space. Then the set</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-38"><article class="example example-like"><p id="p-403">Let \(X \subseteq \RR^n\) be a subspace of Euclidean space. Then the set</p>
 <div class="displaymath">
 \begin{equation*}
 \{ B(x,\varepsilon) : (x\in X) \wedge (\epsilon&gt;0) \}
@@ -556,7 +557,7 @@ B_x \coloneq \{ U\in B : x\in U \}
 <p class="continuation">is a base for the induced topology on \(X\text{.}\)</p></article></div>
 <article class="example example-like" id="example-39"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-39"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.13</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-39"><article class="example example-like"><p id="p-401">Let \(X\) be a set with two topologies \(\tau_1\) and \(\tau_2\text{;}\) let \(B_1\) be a base for \((X,\tau_1)\text{,}\) and let \(B_2\) be a base for \((X,\tau_2)\text{.}\) Show that \(\tau_1\) is finer than \(\tau_2\) if and only if, for every point \(x\in X\) and every element \(U\in(B_2)_x\text{,}\) there exists an element \(V\in(B_1)_x\) such that \(V\subseteq U\text{.}\)</p></article></div></section></div></main>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-39"><article class="example example-like"><p id="p-404">Let \(X\) be a set with two topologies \(\tau_1\) and \(\tau_2\text{;}\) let \(B_1\) be a base for \((X,\tau_1)\text{,}\) and let \(B_2\) be a base for \((X,\tau_2)\text{.}\) Show that \(\tau_1\) is finer than \(\tau_2\) if and only if, for every point \(x\in X\) and every element \(U\in(B_2)_x\text{,}\) there exists an element \(V\in(B_1)_x\) such that \(V\subseteq U\text{.}\)</p></article></div></section></div></main>
 </div>
 </body>
 </html>

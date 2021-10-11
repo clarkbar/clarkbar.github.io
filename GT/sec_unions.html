@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-27T08:44:17+01:00       *-->
+<!--*       on 2021-10-11T23:56:37+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -421,6 +421,7 @@
 <li><a href="sec_continuity_for_subspaces_of_euclidean_space.html" data-scroll="sec_continuity_for_subspaces_of_euclidean_space">Continuity</a></li>
 <li><a href="sec_connectedness_for_subspaces_of_euclidean_space.html" data-scroll="sec_connectedness_for_subspaces_of_euclidean_space">Connectedness</a></li>
 <li><a href="sec_subspaces_exercises.html" data-scroll="sec_subspaces_exercises">Problem set 1, due 5 October 2021</a></li>
+<li><a href="sec_subspaces_exercises_2.html" data-scroll="sec_subspaces_exercises_2">Problem set 2, due 19 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -468,17 +469,17 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec_unions"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Unions</span>
 </h2>
-<p id="p-595">For any set \(X\text{,}\) we also permit ourselves to form the <dfn class="terminology">union</dfn> \(\cup X\text{.}\) This is the set whose elements are the elements of the elements of \(X\text{;}\) that is, \(A\in\cup X\) if and only if there exists an element \(S\in X\) such that \(A\in S\text{.}\) If \(X=\{A,B\}\text{,}\) then we write</p>
-<aside class="aside aside-like" id="aside-55"><p id="p-596">This \(\cup X\) notation may be unfamiliar to you. You might be happier with something like \(\bigcup_{S \in X} S\text{,}\) which means the same thing. The \(\cup X\) notation is standard in set theory, however.</p></aside><p id="p-597">\(A\cup B\) for \(\cup X\text{.}\)</p>
+<p id="p-598">For any set \(X\text{,}\) we also permit ourselves to form the <dfn class="terminology">union</dfn> \(\cup X\text{.}\) This is the set whose elements are the elements of the elements of \(X\text{;}\) that is, \(A\in\cup X\) if and only if there exists an element \(S\in X\) such that \(A\in S\text{.}\) If \(X=\{A,B\}\text{,}\) then we write</p>
+<aside class="aside aside-like" id="aside-55"><p id="p-599">This \(\cup X\) notation may be unfamiliar to you. You might be happier with something like \(\bigcup_{S \in X} S\text{,}\) which means the same thing. The \(\cup X\) notation is standard in set theory, however.</p></aside><p id="p-600">\(A\cup B\) for \(\cup X\text{.}\)</p>
 <article class="example example-like" id="example-66"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-66"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-66"><article class="example example-like"><p id="p-598">We can start building the <dfn class="terminology">finite von Neumann ordinals</dfn> according to the following recipe: first, \(0\coloneq\varnothing\text{.}\) Then, for every von Neumann ordinal \(n\text{,}\) one can create its <dfn class="terminology">successor von Neumann ordinal</dfn></p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-66"><article class="example example-like"><p id="p-601">We can start building the <dfn class="terminology">finite von Neumann ordinals</dfn> according to the following recipe: first, \(0\coloneq\varnothing\text{.}\) Then, for every von Neumann ordinal \(n\text{,}\) one can create its <dfn class="terminology">successor von Neumann ordinal</dfn></p>
 <div class="displaymath">
 \begin{equation*}
 n+1\coloneq n\cup\{n\}\text{.}
 \end{equation*}
 </div>
-<p id="p-599">So the first few von Neumann ordinals look like this:</p>
+<p id="p-602">So the first few von Neumann ordinals look like this:</p>
 <div class="displaymath">
 \begin{align*}
 0 \amp  \coloneq \varnothing;\\
@@ -489,19 +490,19 @@ n+1\coloneq n\cup\{n\}\text{.}
 \amp  \textit{etc.}
 \end{align*}
 </div>
-<p id="p-600">If \(n\) is a finite von Neumann ordinal, then for every \(\alpha,\beta\in n\text{,}\) exactly one of the following is the case:</p>
+<p id="p-603">If \(n\) is a finite von Neumann ordinal, then for every \(\alpha,\beta\in n\text{,}\) exactly one of the following is the case:</p>
 <div class="displaymath">
 \begin{equation*}
 \alpha\in\beta ; \qquad \alpha=\beta ;  \textit{or}  \alpha \ni \beta\text{.}
 \end{equation*}
 </div></article></div>
-<p id="p-601">The axioms then let you build the first <dfn class="terminology">infinite von Neumann ordinal</dfn> \(\omega\text{,}\) which is the set of all the finite von Neumann ordinals. Once you have that, you can build the successor to \(\omega\text{:}\)</p>
+<p id="p-604">The axioms then let you build the first <dfn class="terminology">infinite von Neumann ordinal</dfn> \(\omega\text{,}\) which is the set of all the finite von Neumann ordinals. Once you have that, you can build the successor to \(\omega\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \omega+1\coloneq\omega\cup\{\omega\}\text{.}
 \end{equation*}
 </div>
-<p id="p-602"><em class="emphasis">Wait, isn't that like \(\infty+1\text{?}\) Isn't that \(\infty\) again?</em> That sort of thing is true if you're talking about <dfn class="terminology">cardinals</dfn>. Here, we're talking about <dfn class="terminology">ordinals</dfn>, and the distinction is important. We'll get into this more when we talk about number systems in the next section. But we absolutely can construct</p>
+<p id="p-605"><em class="emphasis">Wait, isn't that like \(\infty+1\text{?}\) Isn't that \(\infty\) again?</em> That sort of thing is true if you're talking about <dfn class="terminology">cardinals</dfn>. Here, we're talking about <dfn class="terminology">ordinals</dfn>, and the distinction is important. We'll get into this more when we talk about number systems in the next section. But we absolutely can construct</p>
 <div class="displaymath">
 \begin{equation*}
 \omega+1,\omega+2,\dots,2\omega=\omega+\omega\text{,}
@@ -513,11 +514,11 @@ n+1\coloneq n\cup\{n\}\text{.}
 \{0,1,2,\dots,\omega,\omega+1,\omega+2,\dots\}\text{.}
 \end{equation*}
 </div>
-<p id="p-603">Likewise, you can build \(3\omega,4\omega,\dots\text{,}\) and then even \(\omega^2,\omega^3,\dots\text{,}\) and even \(\omega^\omega\text{.}\) The key point is that each ordinal is the set of all the ordinals smaller than it. We'll investigate this more deeply in the next section.</p>
-<p id="p-604">A key construction for building “big” sets is the <em class="emphasis">power set</em> construction. To explain, a <dfn class="terminology">subset</dfn> of a set \(X\) is a set \(S\) such that for any \(s\in S\text{,}\) one has \(s\in X\) as well; in this case, we write \(S\subseteq X\text{.}\) The axioms of set theory permit us to form the <dfn class="terminology">power set</dfn> \(\PP(X)\text{,}\) which is the set of all subsets of \(X\text{,}\) so that \(S\in\PP(X)\) if and only if \(S\subseteq X\text{.}\)</p>
+<p id="p-606">Likewise, you can build \(3\omega,4\omega,\dots\text{,}\) and then even \(\omega^2,\omega^3,\dots\text{,}\) and even \(\omega^\omega\text{.}\) The key point is that each ordinal is the set of all the ordinals smaller than it. We'll investigate this more deeply in the next section.</p>
+<p id="p-607">A key construction for building “big” sets is the <em class="emphasis">power set</em> construction. To explain, a <dfn class="terminology">subset</dfn> of a set \(X\) is a set \(S\) such that for any \(s\in S\text{,}\) one has \(s\in X\) as well; in this case, we write \(S\subseteq X\text{.}\) The axioms of set theory permit us to form the <dfn class="terminology">power set</dfn> \(\PP(X)\text{,}\) which is the set of all subsets of \(X\text{,}\) so that \(S\in\PP(X)\) if and only if \(S\subseteq X\text{.}\)</p>
 <article class="example example-like" id="example-67"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-67"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-67"><article class="example example-like"><p id="p-605">The set \(\PP(\varnothing)\) is \(\{\varnothing\}\text{.}\) The set \(\PP(\PP(\varnothing))\) is \(\{\varnothing, \{\varnothing\}\}\text{.}\)</p></article></div></section></div></main>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-67"><article class="example example-like"><p id="p-608">The set \(\PP(\varnothing)\) is \(\{\varnothing\}\text{.}\) The set \(\PP(\PP(\varnothing))\) is \(\{\varnothing, \{\varnothing\}\}\text{.}\)</p></article></div></section></div></main>
 </div>
 </body>
 </html>

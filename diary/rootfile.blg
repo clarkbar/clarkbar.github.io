@@ -1,0 +1,5 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'rootfile.blg'
+[50] biber:340> INFO - === Mon Oct 11, 2021, 22:45:34
+[59] Biber.pm:415> INFO - Reading 'rootfile.bcf'
+[110] Utils.pm:395> WARN - No data sources defined!

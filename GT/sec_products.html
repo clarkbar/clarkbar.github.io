@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-27T08:44:16+01:00       *-->
+<!--*       on 2021-10-11T23:56:36+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -421,6 +421,7 @@
 <li><a href="sec_continuity_for_subspaces_of_euclidean_space.html" data-scroll="sec_continuity_for_subspaces_of_euclidean_space">Continuity</a></li>
 <li><a href="sec_connectedness_for_subspaces_of_euclidean_space.html" data-scroll="sec_connectedness_for_subspaces_of_euclidean_space">Connectedness</a></li>
 <li><a href="sec_subspaces_exercises.html" data-scroll="sec_subspaces_exercises">Problem set 1, due 5 October 2021</a></li>
+<li><a href="sec_subspaces_exercises_2.html" data-scroll="sec_subspaces_exercises_2">Problem set 2, due 19 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -469,7 +470,7 @@
 <span class="type">Section</span> <span class="codenumber">2.5</span> <span class="title">Products</span>
 </h2>
 <div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe id="video-8" class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/-4STGd2iRKs?&amp;modestbranding=1&amp;rel=0"></iframe></div>
-<p id="p-455">The definition of a <dfn class="terminology">product of sets</dfn> is engineered precisely so that a map into the product is determined by each of its components. More precisely, for any indexed family of sets \(\{X_a\}_{a\in A}\text{,}\) the product</p>
+<p id="p-458">The definition of a <dfn class="terminology">product of sets</dfn> is engineered precisely so that a map into the product is determined by each of its components. More precisely, for any indexed family of sets \(\{X_a\}_{a\in A}\text{,}\) the product</p>
 <div class="displaymath">
 \begin{equation*}
 \prod_{a\in A}X_a
@@ -487,11 +488,11 @@
 \prod_{a\in A}\pi_{a}\circ -\colon\fromto{\Map\left(Y,\prod_{a\in A}X_a\right)}{\prod_{a\in A}\Map(Y,X_a)}\text{.}
 \end{equation*}
 </div>
-<p id="p-456">If the sets \(X_a\) are all endowed with topologies, then we would like to topologise the product \(\prod_{a\in A}X_a\) so that the same thing will happen with <em class="emphasis">continuous</em> maps. That is, we would like to ensure that a map \(f\colon\fromto{Y}{\prod_{a\in A}X_a}\) is continuous if and only if, for every \(a\in A\text{,}\) the composite map \(\pi_a\circ f\colon\fromto{Y}{X_a}\) is continuous. But we know just how to arrange that:</p>
+<p id="p-459">If the sets \(X_a\) are all endowed with topologies, then we would like to topologise the product \(\prod_{a\in A}X_a\) so that the same thing will happen with <em class="emphasis">continuous</em> maps. That is, we would like to ensure that a map \(f\colon\fromto{Y}{\prod_{a\in A}X_a}\) is continuous if and only if, for every \(a\in A\text{,}\) the composite map \(\pi_a\circ f\colon\fromto{Y}{X_a}\) is continuous. But we know just how to arrange that:</p>
 <article class="definition definition-like" id="definition-18"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span>
 </h6>
-<p id="p-457">Let \(\{(X_a,\tau_a)\}_{a\in A}\) be a family of topological spaces. Then the <dfn class="terminology">product topology</dfn> \(\prod_{a\in A}\tau_a\) on \(\prod_{a\in A}X_a\) is the initial topology with respect to the set \(\{\pi_a\}_{\alpha\in A}\text{.}\)</p></article><p id="p-458">The definition of the <dfn class="terminology">product topology</dfn> is engineered precisely so that a continuous map into the product is determined by each of its continuous components. More precisely, for any indexed family of topological spaces \(\{X_a\}_{a\in A}\text{,}\) the product</p>
+<p id="p-460">Let \(\{(X_a,\tau_a)\}_{a\in A}\) be a family of topological spaces. Then the <dfn class="terminology">product topology</dfn> \(\prod_{a\in A}\tau_a\) on \(\prod_{a\in A}X_a\) is the initial topology with respect to the set \(\{\pi_a\}_{\alpha\in A}\text{.}\)</p></article><p id="p-461">The definition of the <dfn class="terminology">product topology</dfn> is engineered precisely so that a continuous map into the product is determined by each of its continuous components. More precisely, for any indexed family of topological spaces \(\{X_a\}_{a\in A}\text{,}\) the product</p>
 <div class="displaymath">
 \begin{equation*}
 \prod_{a\in A}X_a
@@ -511,7 +512,7 @@
 </div>
 <article class="example example-like" id="example-47"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-47"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-47"><article class="example example-like"><p id="p-459">In particular, for any set \(A\) and any topological space \(X\text{,}\) we may contemplate the product topology on the set \(\Map(A,X)\text{.}\) We write in particular</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-47"><article class="example example-like"><p id="p-462">In particular, for any set \(A\) and any topological space \(X\text{,}\) we may contemplate the product topology on the set \(\Map(A,X)\text{.}\) We write in particular</p>
 <div class="displaymath">
 \begin{equation*}
 X^n\coloneq\Map(\{1,\dots,n\},X)\ \ \text{ and } X^{\omega}\coloneq\Map(\NN,X)\text{.}
@@ -520,7 +521,7 @@ X^n\coloneq\Map(\{1,\dots,n\},X)\ \ \text{ and } X^{\omega}\coloneq\Map(\NN,X)\t
 <article class="proposition theorem-like" id="proposition-16"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span>
 </h6>
-<p id="p-460">For any \(n\geq 0\text{,}\) the product topology on \(\RR^n\) coincides with the standard topology (from the Euclidean metric).</p></article><article class="hiddenproof" id="proof-15"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><p id="p-461">The product topology on \(\RR^n\) is generated by sets of the form \(\RR\times\cdots\times \left]a,b\right[\times\RR\times\cdots\times\RR\text{.}\) Consequently, the sets of the form \(C(x,\varepsilon) \coloneq \prod_{i=1}^n\left]x_i-\varepsilon,x_i+\varepsilon\right[\) are a base for the product topology. Now for any \(x \in \RR^n\text{,}\) and for any \(\varepsilon&gt;0\text{,}\) the exists a \(\delta&gt;0\) such that</p>
+<p id="p-463">For any \(n\geq 0\text{,}\) the product topology on \(\RR^n\) coincides with the standard topology (from the Euclidean metric).</p></article><article class="hiddenproof" id="proof-15"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><p id="p-464">The product topology on \(\RR^n\) is generated by sets of the form \(\RR\times\cdots\times \left]a,b\right[\times\RR\times\cdots\times\RR\text{.}\) Consequently, the sets of the form \(C(x,\varepsilon) \coloneq \prod_{i=1}^n\left]x_i-\varepsilon,x_i+\varepsilon\right[\) are a base for the product topology. Now for any \(x \in \RR^n\text{,}\) and for any \(\varepsilon&gt;0\text{,}\) the exists a \(\delta&gt;0\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 B(x,\delta) \subseteq C(x,\varepsilon)\text{,}
@@ -532,23 +533,23 @@ B(x,\delta) \subseteq C(x,\varepsilon)\text{,}
 C(x,\delta) \subseteq B(x,\varepsilon)\text{.}
 \end{equation*}
 </div>
-<p id="p-462">Since the subsets \(C(x, \varepsilon)\) generate the product topology, and the subsets \(B(x,\varepsilon)\) generate the standard topology, the two topologies coincide.</p></article></div>
+<p id="p-465">Since the subsets \(C(x, \varepsilon)\) generate the product topology, and the subsets \(B(x,\varepsilon)\) generate the standard topology, the two topologies coincide.</p></article></div>
 <article class="warning remark-like" id="warning-1"><h6 class="heading">
 <span class="type">Warning</span><span class="space"> </span><span class="codenumber">2.5.4</span><span class="period">.</span>
 </h6>
-<p id="p-463">Consider the product topological space</p>
+<p id="p-466">Consider the product topological space</p>
 <div class="displaymath">
 \begin{equation*}
 \RR^{\omega} = \Map(\NN,\RR) = \prod_{n \in \NN} \RR\text{.}
 \end{equation*}
 </div>
-<p id="p-464">This topology has a base</p>
+<p id="p-467">This topology has a base</p>
 <div class="displaymath">
 \begin{equation*}
 \left\{ \prod_{i=0}^N \left]a_i, b_i\right[ \times \prod_{i=N+1}^{\infty} \RR \right\}\text{.}
 \end{equation*}
 </div>
-<p id="p-465">Consequently, if \(U\) is an open subset of \(\RR^{\omega}\text{,}\) then for any point \(x \in U\text{,}\) there exists \(N \in \NN\) such that any point of the form</p>
+<p id="p-468">Consequently, if \(U\) is an open subset of \(\RR^{\omega}\text{,}\) then for any point \(x \in U\text{,}\) there exists \(N \in \NN\) such that any point of the form</p>
 <div class="displaymath">
 \begin{equation*}
 (x_0,x_1,\dots,x_N,y_{N+1},y_{N+2},\dots)
@@ -562,7 +563,7 @@ C(x,\delta) \subseteq B(x,\varepsilon)\text{.}
 </div>
 <p class="continuation">is not open!</p></article><article class="example example-like" id="example-48"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-48"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-48"><article class="example example-like"><p id="p-466">If \(S_1,\dots,S_n\) is a finite collection of discrete topological spaces, then the product</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-48"><article class="example example-like"><p id="p-469">If \(S_1,\dots,S_n\) is a finite collection of discrete topological spaces, then the product</p>
 <div class="displaymath">
 \begin{equation*}
 \prod_{i=1}^n S_i = S_1 \times \cdots \times S_n
@@ -573,25 +574,25 @@ x_n)\}\) is open as well.</p></article></div>
 <article class="warning remark-like" id="warning-2"><h6 class="heading">
 <span class="type">Warning</span><span class="space"> </span><span class="codenumber">2.5.6</span><span class="period">.</span>
 </h6>
-<p id="p-467">If \(\{S_i\}_{i\in\NN}\) is a countable family of discrete finite sets of cardinality at least \(2\text{,}\) the product \(S \coloneq \prod_{i \in \NN} S_i\) is not discrete: if \((x_0, x_1, \dots) \in S\) is a point, then the open sets are unions of sets of the form</p>
+<p id="p-470">If \(\{S_i\}_{i\in\NN}\) is a countable family of discrete finite sets of cardinality at least \(2\text{,}\) the product \(S \coloneq \prod_{i \in \NN} S_i\) is not discrete: if \((x_0, x_1, \dots) \in S\) is a point, then the open sets are unions of sets of the form</p>
 <div class="displaymath">
 \begin{equation*}
 \{x_0\} \times \cdots \times \{x_N\} \times \prod_{i=N+1}^{\infty} S_i\text{,}
 \end{equation*}
 </div>
 <p class="continuation">so that no singleton is open. In fact, it is always homeomorphic to our old pal the Cantor space \(C\) — irrespective of which finite sets \(S_i\) are chosen!</p>
-<aside class="aside aside-like" id="aside-38"><p id="p-468">This is not obvious, or even easy to prove. I personally found this fact totally implausible the first time I read it.</p></aside></article><p id="p-469">There is a <em class="emphasis">relative</em> form of the product as well.</p>
+<aside class="aside aside-like" id="aside-38"><p id="p-471">This is not obvious, or even easy to prove. I personally found this fact totally implausible the first time I read it.</p></aside></article><p id="p-472">There is a <em class="emphasis">relative</em> form of the product as well.</p>
 <article class="definition definition-like" id="definition-19"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.7</span><span class="period">.</span>
 </h6>
-<p id="p-470">Let \(U\text{,}\) \(V\text{,}\) and \(X\) be three topological spaces, and let \(f\colon\fromto{U}{X}\) and \(g\colon\fromto{V}{X}\) two continuous maps. Then the <dfn class="terminology">fiber product</dfn></p>
-<aside class="aside aside-like" id="aside-39"><p id="p-471">Please notice that this notation is a little sloppy. The fiber product \(U \times_X V\) depends on the maps \(f\) and \(g\text{.}\) If one needs to make the choice of maps explicit, one may write</p>
+<p id="p-473">Let \(U\text{,}\) \(V\text{,}\) and \(X\) be three topological spaces, and let \(f\colon\fromto{U}{X}\) and \(g\colon\fromto{V}{X}\) two continuous maps. Then the <dfn class="terminology">fiber product</dfn></p>
+<aside class="aside aside-like" id="aside-39"><p id="p-474">Please notice that this notation is a little sloppy. The fiber product \(U \times_X V\) depends on the maps \(f\) and \(g\text{.}\) If one needs to make the choice of maps explicit, one may write</p>
 <div class="displaymath">
 \begin{equation*}
 U \operatorname{\times}_{f,X,g} V\text{,}
 \end{equation*}
 </div>
-<p class="continuation">which is a bit busy, but very clear!</p></aside><p id="p-472">\(U\times_XV\) is the subspace</p>
+<p class="continuation">which is a bit busy, but very clear!</p></aside><p id="p-475">\(U\times_XV\) is the subspace</p>
 <div class="displaymath">
 \begin{equation*}
 \left\{(u,v)\in U\times V : f(u)=g(v)\right\}
@@ -605,16 +606,16 @@ U \operatorname{\times}_{f,X,g} V\text{,}
 </div>
 <p class="continuation">is sometimes called a <dfn class="terminology">pullback square</dfn>.</p></article><article class="example example-like" id="example-49"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-49"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-49"><article class="example example-like"><p id="p-473">As a special case of this construction, if \(V\) is a subspace of \(X\) and if \(g\) is the inclusion map \(V \inclusion X\text{,}\) then the fiber product \(U \times_X V\) is homeomorphic to the subspace \(f^{-1}(V) \subseteq X\text{.}\) In particular, if \(V = \{x\}\) for some \(x\in X\text{,}\) then the fiber product \(U \times_X V\) is the fiber \(f^{-1}\{x\}\text{.}\)</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-49"><article class="example example-like"><p id="p-476">As a special case of this construction, if \(V\) is a subspace of \(X\) and if \(g\) is the inclusion map \(V \inclusion X\text{,}\) then the fiber product \(U \times_X V\) is homeomorphic to the subspace \(f^{-1}(V) \subseteq X\text{.}\) In particular, if \(V = \{x\}\) for some \(x\in X\text{,}\) then the fiber product \(U \times_X V\) is the fiber \(f^{-1}\{x\}\text{.}\)</p></article></div>
 <article class="example example-like" id="example-50"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-50"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-50"><article class="example example-like"><p id="p-474">Let \(f \colon X \to Y\) be a continuous map of topological spaces. Then the <dfn class="terminology">graph</dfn> of \(f\) is the fiber product</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-50"><article class="example example-like"><p id="p-477">Let \(f \colon X \to Y\) be a continuous map of topological spaces. Then the <dfn class="terminology">graph</dfn> of \(f\) is the fiber product</p>
 <div class="displaymath">
 \begin{equation*}
 \Gamma(f) \coloneq X \operatorname{\times}_{f,Y,\id} Y \subseteq X \times Y\text{.}
 \end{equation*}
 </div>
-<p id="p-475">The projection map \(\pr_1 \colon \Gamma(f) \to X\) is a homeomorphism.</p></article></div></section></div></main>
+<p id="p-478">The projection map \(\pr_1 \colon \Gamma(f) \to X\) is a homeomorphism.</p></article></div></section></div></main>
 </div>
 </body>
 </html>
