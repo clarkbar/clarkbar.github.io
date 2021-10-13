@@ -1,14 +1,14 @@
 # Fdb version 3
-["biber rootfile"] 1633988733 "rootfile.bcf" "rootfile.bbl" "rootfile" 1633992546
-  "rootfile.bcf" 1633992546 106819 be3187ca21d6ef862f592d7db12702bf "xelatex"
+["biber rootfile"] 1633988733 "rootfile.bcf" "rootfile.bbl" "rootfile" 1634093674
+  "rootfile.bcf" 1634093673 106819 be3187ca21d6ef862f592d7db12702bf "xelatex"
   (generated)
   "rootfile.blg"
   "rootfile.bbl"
-["xdvipdfmx"] 1633992546 "rootfile.xdv" "rootfile.pdf" "rootfile" 1633992546
-  "rootfile.xdv" 1633992546 13208 a17f2b572ea412986ae43b9a893577a1 "xelatex"
+["xdvipdfmx"] 1634093673 "rootfile.xdv" "rootfile.pdf" "rootfile" 1634093674
+  "rootfile.xdv" 1634093673 39172 d1a1500627f12640a3d20f8084f3c889 "xelatex"
   (generated)
   "rootfile.pdf"
-["xelatex"] 1633992543 "rootfile.tex" "rootfile.xdv" "rootfile" 1633992546
+["xelatex"] 1634093671 "rootfile.tex" "rootfile.xdv" "rootfile" 1634093674
   "/dev/null" 1630339755 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/clarkbar/texmf/tex/latex/commonstuff/boilerart.sty" 1599981791 9071 43d2984fc3982aa8e31536136f39281b ""
   "/home/clarkbar/texmf/tex/latex/commonstuff/citationscheme.sty" 1586049184 7126 2b28bb7ae98284cc8b3f1b8a3d94b6a0 ""
@@ -19,7 +19,9 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm" 1136768653 1508 3b32edd0d68f6498a5a375e78f9edc5e ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm" 1136768653 1528 e2423ae06dc7dee599cceb79d1c9dc32 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm" 1229303445 688 37338d6ab346c2f1466b29e195316aa4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1229303445 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1229303445 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
@@ -250,18 +252,19 @@
   "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
   "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1627776780 5131495 bf5f58471fc258f7c60c809c6e4b8214 ""
   "/usr/local/texlive/2021/texmf.cnf" 1619147540 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "2021/October/11.tex" 1633992533 642 2d05ba7428e301531cb7ffd867d9fafe ""
+  "2021/October/11.tex" 1634027393 1516 01062f3c9d6f982045f49a3791d8862f ""
+  "2021/October/12.tex" 1634093670 1705 5e7867fdf43e4993f4ae419c1131328f ""
   "2021/October/flag.tex" 1633991554 3 2228e977ebea8966e27929f43e39cb67 ""
-  "rootfile.aux" 1633992546 1423 ac5f745d8573bf5c1a4b4574039ec744 "xelatex"
+  "rootfile.aux" 1634093673 1423 ac5f745d8573bf5c1a4b4574039ec744 "xelatex"
   "rootfile.bbl" 1633988734 0 d41d8cd98f00b204e9800998ecf8427e "biber rootfile"
-  "rootfile.run.xml" 1633992546 2351 2b56bda537baa0eff1ae98936ed39085 "xelatex"
-  "rootfile.tex" 1633992542 4148 58d8ffff1690dd8e87e5ef2b10f0b123 ""
-  "rootfile.toc" 1633992546 286 e0a8c18ae7258298c57ca5e284953be6 "xelatex"
+  "rootfile.run.xml" 1634093673 2351 2b56bda537baa0eff1ae98936ed39085 "xelatex"
+  "rootfile.tex" 1634045448 4163 9b6008dc9e84e217dcd1fca85fcd93a8 ""
+  "rootfile.toc" 1634093673 286 e0a8c18ae7258298c57ca5e284953be6 "xelatex"
   (generated)
-  "rootfile.run.xml"
-  "rootfile.log"
-  "rootfile.xdv"
-  "rootfile.toc"
   "rootfile.thm"
   "rootfile.aux"
   "rootfile.bcf"
+  "rootfile.toc"
+  "rootfile.xdv"
+  "rootfile.log"
+  "rootfile.run.xml"

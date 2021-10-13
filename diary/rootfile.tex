@@ -53,7 +53,7 @@
 %-------------------------------------------------------------------%
 
 \newenvironment{loggentry}[2]% date, heading
-{\noindent\textbf{#2}\marginnote{#1}\par}{\vspace{0.5cm}}
+{\noindent\textbf{#2}\marginnote{\textbf{#1}}\par}{\vspace{0.5cm}}
 
 \def\?#1{}
 
@@ -94,7 +94,7 @@
 				\read\mysource to \firstline
 				\closein\mysource
 				\xdef\writetitle{1}
-				\begin{loggentry}{\Year\ \Month\ \Day}{\firstline} 
+				\begin{loggentry}{---\Day\ \Month\ \Year---}{\firstline} 
 					\xdef\writetitle{0}
 					\input{\Year/\Month/\Day}
 				\end{loggentry} 
