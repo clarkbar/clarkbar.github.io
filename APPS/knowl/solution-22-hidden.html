@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:23:39+01:00       *-->
+<!--*       on 2021-10-14T11:34:25+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,14 +13,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><ul class="disc">
-<li>
-<h6 class="heading"><span class="title">(i).</span></h6>
-<p>Since \(a\) and \(b\) are coprime, we can find integers \(s\) and \(t\) so that \(sa + tb = 1\text{.}\) If \(a\) divides \(c\) then we can write \(c = ax\text{,}\) and if \(b\) divides \(c\) then we can write \(c = by\) for some \(x,y \in \Z\text{.}\) Then \(c = csa + ctb = (by)sa + (ax)tb = (ab)sy + (ab)xt\text{,}\) so \(ab\) divides \(c\text{.}\)</p>
-</li>
-<li>
-<h6 class="heading"><span class="title">(ii).</span></h6>
-<p>As in (i), \(c = csa + ctb\text{.}\) If \(a\) divides \(bc\) then write \(az = bc\) for some integer \(z\text{,}\) and then we have \(c = csa + t(az) = a(cs + tz)\text{,}\) so \(a\) divides \(c\text{.}\)</p>
-</li>
-</ul></div></body>
+<body><div class="solution solution-like">
+<p>Since \(\gcd(7,12)=1\text{,}\) we can use the Euclidean Algorithm:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+12-7 = 5 \ \ \text{ and  }  7-5 = 2 \ \ \text{ and  }  5-2\cdot 2 = 1\text{.}
+\end{equation*}
+</div>
+<p>We find</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+1 = 5 - 2\cdot 2 = 3\cdot 5 - 2\cdot 7 = 3\cdot 12 - 5\cdot 7\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so by multiplying by \(8\text{,}\) we get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+8 = 24 \cdot 12 - 40 \cdot 7\text{.}
+\end{equation*}
+</div>
+<p>Thus \(x = -40\) is a solution, and so is \(8 = -40 \mod 12\text{.}\)</p>
+</div></body>
 </html>

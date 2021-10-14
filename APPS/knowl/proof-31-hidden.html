@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-11T12:33:48+01:00       *-->
+<!--*       on 2021-10-14T11:48:16+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,43 +13,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>Since \(r\) is rational, there are integers \(a'\) and \(b'\) such that \(r = \frac{a'}{b'}\text{,}\) with \(b' \neq 0\text{.}\) Without loss of generality, we may assume that \(b'&gt;0\text{.}\) If we find \(-r = \frac{a}{b}\) with \(a\) and \(b\) coprime, then \(r = \frac{-a}{b}\) with \(-a\) and \(b\) coprime, so we may assume that \(r\geq 0\text{.}\)</p>
-<p>Now let \(p_1, \cdots,
-p_k\) be the prime numbers that divide either \(a'\) or \(b'\text{.}\) We may therefore write</p>
+<body><article class="hiddenproof"><ul class="disc">
+<li>
+<p>(\(\impliedby\)): If <a class="xref" data-knowl="./knowl/e_m_p1___pk.html" title="Equation 8.5.1">(8.5.1)</a> holds, then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-a' = p_1^{m_1}\cdots p_k^{m_k} \ \ \text{ and  }  b' = q_1^{n_1}\cdots q_k^{n_k}\text{,}
+n=m \cdot  p_1^{b_1-a_{1}}\cdots p_k^{b_k-a_{k}} \;\;\; \Longrightarrow \;\;\; m \text{ divides } n\text{.}
 \end{equation*}
 </div>
-<p class="continuation">where each exponent \(m_i\) and \(n_i\) is nonnegative. Now for each \(i\text{,}\) let</p>
+</li>
+<li>
+<p>(\(\implies\)): Suppose \(m\) divides \(n\text{,}\) then \(n=mc\) fr some positive integer \(c\text{.}\) Then \(m\) and \(n\) have prime decompositions whose product is the prime decomposition for \(n\) as shown below:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-s_i = \max(m_i-n_i, 0)\ \ \text{ and  } t_i = \max(n_i-m_i, 0)\text{.}
+\underbrace{p_1^{a_1}\cdots p_k^{a_k}}_n = \underbrace{q_1^{c_1}\cdots q_l^{c_l}}_m\underbrace{r_1^{d_1}\cdots r_s^{d_s}}_c\text{.}
 \end{equation*}
 </div>
-<p>Thus for each \(i\text{,}\) at most one of \(s_i\) and \(t_i\) is nonzero, and</p>
+<p class="continuation">The FTA implies each \(q_i\) and \(r_i\) equals to some \(p_j\text{.}\) To ease notation, we'll assume \(q_{i}=r_{i}=p_{i}\) for all \(i\text{,}\) but that \(c_{i}=0\) if \(p_{i}\) didn't appear as one of the primes \(q_{i}\) originally, and similarly for the \(d_{i}\text{.}\) Then the product above is in fact</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\frac{p_i^{m_i}}{q_i^{n_i}} = \frac{p_i^{s_i}}{q_i^{t_i}}\text{.}
+\underbrace{p_1^{a_1}\cdots p_k^{a_k}}_n = {q_1^{c_1}\cdots q_l^{c_l}}{r_1^{d_1}\cdots r_s^{d_s}} =p_{1}^{c_{1}+d_{1}}\cdots p_{k}^{c_{k}+d_{k}}\text{.}
 \end{equation*}
 </div>
-<p>Thus we set</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-a = p_1^{s_1}\cdots p_r^{s_k} \ \ \text{ and  }  b = q_1^{t_1}\cdots q_k^{t_k}\text{,}
-\end{equation*}
-</div>
-<p class="continuation">and we find that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-r = \frac{a'}{b'} = \frac{a}{b}\text{.}
-\end{equation*}
-</div>
-<p>Now</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\gcd(a,b) = p_1^{\min(s_1,t_1)}\cdots p_r^{\min(s_k,t_k)} = p_1^0\cdots p_r^0 = 1. \qedhere
-\end{equation*}
-</div>
-<p>Now let us prove that \(a\) and \(b\) are unique with this property. If \(c\) and \(d\) are coprime integers with \(d \geq 1\text{,}\) and if \(r = \frac{c}{d}\text{,}\) then \(ad = bc\text{.}\) Since \(a\) and \(b\) are coprime, it follows that \(b\) divides \(d\text{,}\) and since \(c\) and \(d\) are coprime, it follows that \(d\) divides \(b\text{.}\) Thus \(d=b\text{,}\) and so \(a=c\) as well.</p></article></body>
+<p class="continuation">The FTA now implies each power \(c_i+d_i\) equals to \(a_j\text{.}\) In particular, this means \(m=p_{1}^{c_{1}}\cdots p_{k}^{c_{k}}\) where \(0\leq c_{k}\leq a_{k}\text{.}\)</p>
+</li>
+</ul></article></body>
 </html>

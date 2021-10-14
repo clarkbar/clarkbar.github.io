@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-11T12:33:44+01:00       *-->
+<!--*       on 2021-10-14T11:48:12+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -456,6 +456,8 @@
 <li><a href="inductionsection.html" data-scroll="inductionsection">Induction</a></li>
 <li><a href="roots.html" data-scroll="roots">Roots</a></li>
 <li><a href="separatingproducts.html" data-scroll="separatingproducts">AM/GM Inequality and Cauchy-Schwarz</a></li>
+<li><a href="inequalitiesexercises.html" data-scroll="inequalitiesexercises">Some sample exercises</a></li>
+<li><a href="ineqhandin.html" data-scroll="ineqhandin">Week 4 exercises, due 19 October 2021</a></li>
 </ul>
 </li>
 <li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a></li>
@@ -493,32 +495,32 @@
 <article class="theorem theorem-like" id="t_perfectsquare"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.7.1</span><span class="period">.</span>
 </h6>
-<p id="p-699">Let \(n\) be a positive integer. Then \(\sqrt{n}\in\mathbb{Q}\) if and only if \(n\) is a perfect square, that is, \(n=m^2\) for some integer \(m\text{.}\)</p></article><article class="hiddenproof" id="proof-32"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><p id="p-700">Suppose \(\sqrt{n}\in\mathbb{Q}\text{.}\) Thus \(\sqrt{n} = \frac{a}{b}\text{,}\) and \(\frac{a^2}{b^2} = n\text{.}\) By <a class="xref" data-knowl="./knowl/lem_rationalsascoprimefractions.html" title="Lemma 8.6.4">Lemma 8.6.4</a>, we may assume that \(a\) and \(b\) are coprime and positive. Now since \(n = \frac{n}{1}\text{,}\) the uniqueness of <a class="xref" data-knowl="./knowl/lem_rationalsascoprimefractions.html" title="Lemma 8.6.4">Lemma 8.6.4</a> implies that \(b^2=1\text{.}\) Since \(b\) is positive, it follows that \(b = 1\text{.}\)</p></article></div>
-<p id="p-701">Below, we say an integer \(a\) is an <dfn class="terminology">\(n\)th power</dfn> if \(a=b^n\) for some integer \(b\text{.}\)</p>
+<p id="p-733">Let \(n\) be a positive integer. Then \(\sqrt{n}\in\mathbb{Q}\) if and only if \(n\) is a perfect square, that is, \(n=m^2\) for some integer \(m\text{.}\)</p></article><article class="hiddenproof" id="proof-33"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><p id="p-734">Suppose \(\sqrt{n}\in\mathbb{Q}\text{.}\) Thus \(\sqrt{n} = \frac{a}{b}\text{,}\) and \(\frac{a^2}{b^2} = n\text{.}\) By <a class="xref" data-knowl="./knowl/lem_rationalsascoprimefractions.html" title="Lemma 8.6.4">Lemma 8.6.4</a>, we may assume that \(a\) and \(b\) are coprime and positive. Now since \(n = \frac{n}{1}\text{,}\) the uniqueness of <a class="xref" data-knowl="./knowl/lem_rationalsascoprimefractions.html" title="Lemma 8.6.4">Lemma 8.6.4</a> implies that \(b^2=1\text{.}\) Since \(b\) is positive, it follows that \(b = 1\text{.}\)</p></article></div>
+<p id="p-735">Below, we say an integer \(a\) is an <dfn class="terminology">\(n\)th power</dfn> if \(a=b^n\) for some integer \(b\text{.}\)</p>
 <article class="theorem theorem-like" id="t_abn"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.7.2</span><span class="period">.</span>
 </h6>
-<p id="p-702">If \(a,b\in\mathbb{N}\) are coprime, and \(ab\) is an \(n\)th power, then so are \(a\) and \(b\text{.}\)</p></article><article class="hiddenproof" id="proof-33"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><p id="p-703">If \(a=1\text{,}\) then we have \(ab=b\) is an \(n\)th power, so the theorem is trivial in this case, and similarly if \(b=1\text{,}\) so we can assume \(a,b \geq 2\text{,}\) so we can apply the FTA.</p>
-<p id="p-704">Let \(a=p_{1}^{r_{1}}\cdots p_{k}^{r_{k}}\) and \(b=q_{1}^{s_{1}}\cdots q_{\ell}^{s_{\ell}}\) be the prime factorizations of \(a\) and \(b\text{.}\) Since \(a\) and \(b\) are coprime, they share no common prime factors, so \(p_{i}\neq q_{j}\) for all \(j\text{.}\) By assumption \(ab=c^n\) for some \(c\text{.}\) Let \(w_{1}^{t_{1}}\cdots w_{j}^{t_{j}}\) be the prime facorization for \(c\text{,}\) then</p>
+<p id="p-736">If \(a,b\in\mathbb{N}\) are coprime, and \(ab\) is an \(n\)th power, then so are \(a\) and \(b\text{.}\)</p></article><article class="hiddenproof" id="proof-34"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><p id="p-737">If \(a=1\text{,}\) then we have \(ab=b\) is an \(n\)th power, so the theorem is trivial in this case, and similarly if \(b=1\text{,}\) so we can assume \(a,b \geq 2\text{,}\) so we can apply the FTA.</p>
+<p id="p-738">Let \(a=p_{1}^{r_{1}}\cdots p_{k}^{r_{k}}\) and \(b=q_{1}^{s_{1}}\cdots q_{\ell}^{s_{\ell}}\) be the prime factorizations of \(a\) and \(b\text{.}\) Since \(a\) and \(b\) are coprime, they share no common prime factors, so \(p_{i}\neq q_{j}\) for all \(j\text{.}\) By assumption \(ab=c^n\) for some \(c\text{.}\) Let \(w_{1}^{t_{1}}\cdots w_{j}^{t_{j}}\) be the prime facorization for \(c\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 ab = p_{1}^{r_{1}}\cdots p_{k}^{r_{k}}q_{1}^{s_{1}}\cdots q_{\ell}^{s_{\ell}} =c^n=w_{1}^{nt_{1}}\cdots w_{j}^{nt_{j}}\text{.}
 \end{equation*}
 </div>
-<p id="p-705">By the FTA, these prime factorizations are equal, which means for each \(i\text{,}\) \(p_{i}=w_{j}\) for some \(j\text{,}\) and \(r_{i}=nt_{j}\text{.}\) In particular, \(n\) divides \(r_{i}\) for all \(i\text{,}\) and so \(a\) is an \(n\)th power. The same holds for \(b\text{.}\)</p></article></div>
-<p id="p-706">Let's do an example of another diophantine equation. This one is from Liebeck (but is not proven correctly there).</p>
+<p id="p-739">By the FTA, these prime factorizations are equal, which means for each \(i\text{,}\) \(p_{i}=w_{j}\) for some \(j\text{,}\) and \(r_{i}=nt_{j}\text{.}\) In particular, \(n\) divides \(r_{i}\) for all \(i\text{,}\) and so \(a\) is an \(n\)th power. The same holds for \(b\text{.}\)</p></article></div>
+<p id="p-740">Let's do an example of another diophantine equation. This one is from Liebeck (but is not proven correctly there).</p>
 <article class="example example-like" id="example-71"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-71"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.7.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-71"><article class="example example-like"><p id="p-707">Find all integer solutions to \(4x^2=y^3+1\text{.}\)</p>
-<p id="p-708"><em class="emphasis">Reductions:</em> If \((x,y)\) is a solution, then \((-x,y)\) is also a solution, so we can assume \(x\geq 0\text{.}\) If \(x=0\text{,}\) then \(y^3=-1\text{,}\) which is only possible if \(y=-1\text{.}\) So now we can assume \(x&gt;0\text{.}\) But then \(y^3+1=4x^2\geq 4\text{,}\) so we must have \(y&gt;0\) as well.</p>
-<p id="p-709">We are now left to finding all integer solutions \(x,y&gt;0\text{.}\) Observe that</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-71"><article class="example example-like"><p id="p-741">Find all integer solutions to \(4x^2=y^3+1\text{.}\)</p>
+<p id="p-742"><em class="emphasis">Reductions:</em> If \((x,y)\) is a solution, then \((-x,y)\) is also a solution, so we can assume \(x\geq 0\text{.}\) If \(x=0\text{,}\) then \(y^3=-1\text{,}\) which is only possible if \(y=-1\text{.}\) So now we can assume \(x&gt;0\text{.}\) But then \(y^3+1=4x^2\geq 4\text{,}\) so we must have \(y&gt;0\) as well.</p>
+<p id="p-743">We are now left to finding all integer solutions \(x,y&gt;0\text{.}\) Observe that</p>
 <div class="displaymath">
 \begin{equation*}
 y^3=4x^2-1=(2x-1)(2x+1)\text{.}
 \end{equation*}
 </div>
-<p id="p-710">By The Linear Combination Lemma, the gcd of \(2x-1\) and \(2x+1\) must divide \(2x+1-(2x-1)=2\text{,}\) so the gcd is either \(1\) or \(2\text{.}\) However, since both of these numbers are odd, the gcd must actually be \(1\text{.}\) Hence, \(2x\pm 1\) are coprime.</p>
-<p id="p-711">By <a class="xref" data-knowl="./knowl/t_abn.html" title="Theorem 8.7.2">Theorem 8.7.2</a>, \(2x\pm 1\) are both cubes. Thus, there are \(m,n\in\mathbb{Z}\) so that \(m^3=2x+1\) and \(n^3=2x-1\text{.}\) Since \(x\) is a positive integer, so are \(m^3\) and \(n^3\text{,}\) and thus so are \(m\) and \(n\text{.}\) Then</p>
+<p id="p-744">By The Linear Combination Lemma, the gcd of \(2x-1\) and \(2x+1\) must divide \(2x+1-(2x-1)=2\text{,}\) so the gcd is either \(1\) or \(2\text{.}\) However, since both of these numbers are odd, the gcd must actually be \(1\text{.}\) Hence, \(2x\pm 1\) are coprime.</p>
+<p id="p-745">By <a class="xref" data-knowl="./knowl/t_abn.html" title="Theorem 8.7.2">Theorem 8.7.2</a>, \(2x\pm 1\) are both cubes. Thus, there are \(m,n\in\mathbb{Z}\) so that \(m^3=2x+1\) and \(n^3=2x-1\text{.}\) Since \(x\) is a positive integer, so are \(m^3\) and \(n^3\text{,}\) and thus so are \(m\) and \(n\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 2=2x+1-(2x-1)=m^3-n^3=(m-n)(m^2+mn+n^2)\text{,}
