@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:15+01:00       *-->
+<!--*       on 2021-10-18T13:48:15+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,100 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>Since \(d\) divides \(a\) and \(d\) divides \(b\text{,}\) there are integers \(s\) and \(t\) so that \(a=sd\) and \(b=td\text{.}\) Hence</p>
+<ol class="lower-alpha">
+<li>
+<p>Let \(\epsilon&gt;0\text{.}\) We need to show there is \(N\) so that \(n &gt; N\) implies \(|a_{n}+b_{n}-(a+b)|\lt \epsilon\text{.}\) Note that by the triangle inequality</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-ma+nb=msd+ntd=(ms+nt)d
+|a_{n}+b_{n}-(a+b)| =|(a_n-a)+(b_n-b)| \leq |a_{n}-a|+|b_{n}-b|
 \end{equation*}
 </div>
-<p class="continuation">and so \(d\) divides \(ma+nb\text{.}\)</p></article><span class="incontext"><a href="euclideanalgo.html#proof-21">in-context</a></span>
+<p class="continuation">We can make \(|a_{n}+b_{n}-(a+b)|\lt \epsilon\) by making \(|a_{n}-a|\) and \(|b_{n}-b|\) both less than \(\frac{\epsilon}{2}\text{.}\) Since \(a_n\rightarrow a\text{,}\) we know that there is \(N_{1}\) so that \(n &gt; N_1\) implies \(|a_{n}-a|\lt \frac{\epsilon}{2}\text{.}\) Similarly, since \(b_n\rightarrow b\text{,}\) we know that there is \(N_{2}\) so that \(n &gt; N_2\) implies \(|b_{n}-b|\lt \frac{\epsilon}{2}\text{.}\) If we set \(N=\max\{N_1,N_2\}\text{,}\) then for all \(n &gt; N\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|a_{n}+b_{n}-(a+b)| \leq |a_{n}-a|+|b_{n}-b| \lt \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon\text{.}
+\end{equation*}
+</div>
+</li>
+<li>
+<p>Let \(\epsilon&gt;0\text{.}\) Note that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+|a_{n}b_{n}-ab| \amp  =|a_{n}b_{n}-ab_{n}+ab_{n}-ab| =|(a_{n}-a)b_{n} + a(b_n-b)|\\
+\amp  \leq |(a_{n}-a)b_{n}| + |a(b_n-b)| =|a_{n}-a|\cdot |b_{n}|+ |a|\cdot |b_{n}-b|\text{.}
+\end{align*}
+</div>
+<p class="continuation">Thus, if we can pick \(N\) large enough so that \(n &gt; N\) implies \(|a_{n}-a|\cdot |b_{n}|\lt \frac{\epsilon}{2}\) and \(|a|\cdot |b_{n}-b|\lt \frac{\epsilon}{2}\text{,}\) then the above will imply \(|a_{n}b_{n}-ab|\lt \epsilon\) and we'll be done. So let's focus on proving these two things. Let's first find \(N_1\) so that \(n &gt; N_1\) implies \(|a_{n}-a|\cdot |b_{n}|\lt \frac{\epsilon}{2}\text{.}\) Since \(b_n\) converges, it is bounded, and so there is \(M\) so that \(|b_{n}|\leq M\) for all \(n\text{,}\) thus</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|a_{n}-a|\cdot |b_{n}|\leq M|a_{n}-a|\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since \(a_n\rightarrow a\text{,}\) there is \(N_1\) so that \(n &gt; N_1\) implies \(|a_{n}-a|\lt \frac{\epsilon}{2M}\) and hence</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|a_{n}-a|\leq M|a_{n}-a|\lt M\cdot \frac{\epsilon}{2M}=\frac{\epsilon}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now let's find \(N_2\) so that \(n &gt; N_2\) implies \(|a|\cdot |b_{n}-b|\lt \frac{\epsilon}{2}\text{.}\) If \(a=0\text{,}\) then this is always true and we can set \(N_2=1\text{.}\) If \(a\neq 0\text{,}\) then since \(b_n\rightarrow b\text{,}\) there is \(N_2\) so that \(n &gt; N_2\) implies \(|b_{n}-b|\lt \frac{\epsilon}{2|a|}\text{,}\) and so that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|a|\cdot |b_{n}-b|\lt |a|\cdot \frac{\epsilon}{2|a|}=\frac{\epsilon}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Thus, if we set \(N=\max\{N_{1},N_{2}\}\text{,}\) then if \(n &gt; N\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|a_{n}b_{n}-ab| \leq |a_{n}-a|\cdot |b_{n}|+ |a|\cdot |b_{n}-b| \lt \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon\text{.}
+\end{equation*}
+</div>
+</li>
+<li><p>We leave this one as an exercise.</p></li>
+<li>
+<p>We claim that it suffices to show that if \(b_n\rightarrow b\) and \(b_n,b\neq 0\text{,}\) then \(b_{n}^{-1}\rightarrow b^{-1}\text{.}\) Indeed, if this is the case, then  by part (b),</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{a_{n}}{b_{n}}=a_{n}\cdot b_{n}^{-1} \rightarrow ab^{-1}=\frac{a}{b}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">So now let's prove that if \(b_n\rightarrow b\) and \(b_n,b\neq 0\text{,}\) then \(b_{n}^{-1}\rightarrow b^{-1}\text{.}\) Let \(\epsilon&gt;0\text{.}\) We need to find \(N\) so that \(n &gt; N\) implies \(|b_{n}^{-1}-b^{-1}|\lt \epsilon\text{.}\) Observe that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left|\frac{1}{b_{n}}-\frac{1}{b}\right| =\left|\frac{b-b_{n}}{bb_{n}}\right| =\frac{|b-b_{n}|}{|b|\cdot |b_{n}|}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Suppose we can show that for some number \(s&gt;0\) we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+|b_{n}|\geq s \text{ for every } n\in\mathbb{N}\text{.}\tag{5.2.1}
+\end{equation}
+</div>
+<p class="continuation">Then since \(b_{n}\rightarrow b\text{,}\) we know that for any \(\epsilon_1&gt;0\) there is \(N = N(\epsilon_1)\) so that \(n &gt; N\) implies \(|b_{n}-b|\lt \epsilon_1\text{,}\) and then we would have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left|\frac{1}{b_{n}}-\frac{1}{b}\right|\leq \frac{|b-b_{n}|}{|b|\cdot |b_{n}|} \leq \frac{\epsilon_1}{|b| s}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Hence, if we pick \(\epsilon_1=|b|s\epsilon\text{,}\) then all this implies that for \(n &gt; N(|b|s\epsilon)\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left|\frac{1}{b_{n}}-\frac{1}{b}\right| \leq \frac{\epsilon_1}{|b| s}= \frac{|b|s\epsilon}{|b| s}=\epsilon\text{.}
+\end{equation*}
+</div>
+<p class="continuation">So now we focus on proving <a class="xref" data-knowl="./knowl/e_bn_m.html" title="Equation 5.2.1">(5.2.1)</a>. Since \(b_n\rightarrow b\text{,}\) there is \(N'\) so that \(n &gt; N'\) implies \(|b_{n}-b|\lt \frac{|b|}{2}\text{.}\) Thus, by the reverse triangle inequality,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|b_{n}| =|b_{n}-b+b| \geq |b|-|b_{n}-b| &gt;|b|-\frac{|b|}{2} = \frac{|b|}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">For \(n \leq N'\text{,}\) we simply have \(|b_{n}|\geq \min\{|b_{1}|,\dots,|b_{N'}|\}&gt;0\text{.}\) Thus, for all \(n\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|b_{n}|\geq \min\left\{\frac{|b|}{2},|b_{1}|,\dots ,|b_{N'}|\right\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This finishes the proof of  <a class="xref" data-knowl="./knowl/e_bn_m.html" title="Equation 5.2.1">(5.2.1)</a>, and thus of (d).</p>
+</li>
+</ol></article><span class="incontext"><a href="rulesforlimits.html#proof-21">in-context</a></span>
 </body>
 </html>

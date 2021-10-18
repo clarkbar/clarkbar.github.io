@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:23:42+01:00       *-->
+<!--*       on 2021-10-18T13:48:18+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,12 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Since \(42 = 2\cdot 3 \cdot 7\text{,}\) we just need to verify each of these factors divides \(n^7-n\) for each \(n\in\mathbb{N}\text{.}\)</p>
-<ul class="disc">
-<li><p>Since \(n^7-n=n^6(n-1)\text{,}\) one of \(n\) and \(n-1\) must be even, so one of \(n^6\) and \(n\) must be even, so \(2\) divides \(n^{7}-n\text{.}\)</p></li>
-<li><p>\(n^7-n = n^4\cdot (n-1)n\cdot (n-1)\text{,}\) and one of \(n-1,n,n+1\) must be divisible by 3.</p></li>
-<li>
-<p>Finally, by FLT,</p>
+<p>We see that \(\gcd(18,14)=2\) divides \(10\text{,}\) so there is at least one solution. We can use the Euclidean Algorithm to express \(2\) as an integer linear combination: since \(18 - 14 = 4\text{,}\) and \(14 - 3\cdot 4 = 2\) is the gcd, so we can write</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-n^7-n = n-n=0 \mod 7\text{.}
+2 = 14 - 3\cdot 4 = 4\cdot 14 - 3 \cdot 18\text{.}
 \end{equation*}
 </div>
-</li>
-</ul>
-<span class="incontext"><a href="modularexercises.html#p-901">in-context</a></span>
+<span class="incontext"><a href="linearequationsmodm.html#p-901">in-context</a></span>
 </body>
 </html>

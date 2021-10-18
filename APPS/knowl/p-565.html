@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:15+01:00       *-->
+<!--*       on 2021-10-18T13:48:15+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,37 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Notice that a linear combination of linear combinations is a linear combination. That is, if \(c\) and \(b\) are each linear combinations of \(a\) and \(b\text{,}\) then for some integers \(m\text{,}\) \(n\text{,}\) \(p\text{,}\) and \(q\text{,}\) we have \(c = m a + n b\) and \(d = p a + q b\text{.}\) If we form a linear combination of \(c\) and \(d\text{,}\) we get</p>
+<p>Let \(\epsilon&gt;0\text{.}\) Note that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+|a_{n}b_{n}-ab| \amp  =|a_{n}b_{n}-ab_{n}+ab_{n}-ab| =|(a_{n}-a)b_{n} + a(b_n-b)|\\
+\amp  \leq |(a_{n}-a)b_{n}| + |a(b_n-b)| =|a_{n}-a|\cdot |b_{n}|+ |a|\cdot |b_{n}-b|\text{.}
+\end{align*}
+</div>
+<p class="continuation">Thus, if we can pick \(N\) large enough so that \(n &gt; N\) implies \(|a_{n}-a|\cdot |b_{n}|\lt \frac{\epsilon}{2}\) and \(|a|\cdot |b_{n}-b|\lt \frac{\epsilon}{2}\text{,}\) then the above will imply \(|a_{n}b_{n}-ab|\lt \epsilon\) and we'll be done. So let's focus on proving these two things. Let's first find \(N_1\) so that \(n &gt; N_1\) implies \(|a_{n}-a|\cdot |b_{n}|\lt \frac{\epsilon}{2}\text{.}\) Since \(b_n\) converges, it is bounded, and so there is \(M\) so that \(|b_{n}|\leq M\) for all \(n\text{,}\) thus</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-r c + s d = (rm+sp)a + (rn+sq)b\text{,}
+|a_{n}-a|\cdot |b_{n}|\leq M|a_{n}-a|\text{.}
 \end{equation*}
 </div>
-<p class="continuation">which is a linear combination of \(a\) and \(b\text{.}\)</p>
-<span class="incontext"><a href="euclideanalgo.html#p-565">in-context</a></span>
+<p class="continuation">Since \(a_n\rightarrow a\text{,}\) there is \(N_1\) so that \(n &gt; N_1\) implies \(|a_{n}-a|\lt \frac{\epsilon}{2M}\) and hence</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|a_{n}-a|\leq M|a_{n}-a|\lt M\cdot \frac{\epsilon}{2M}=\frac{\epsilon}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now let's find \(N_2\) so that \(n &gt; N_2\) implies \(|a|\cdot |b_{n}-b|\lt \frac{\epsilon}{2}\text{.}\) If \(a=0\text{,}\) then this is always true and we can set \(N_2=1\text{.}\) If \(a\neq 0\text{,}\) then since \(b_n\rightarrow b\text{,}\) there is \(N_2\) so that \(n &gt; N_2\) implies \(|b_{n}-b|\lt \frac{\epsilon}{2|a|}\text{,}\) and so that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|a|\cdot |b_{n}-b|\lt |a|\cdot \frac{\epsilon}{2|a|}=\frac{\epsilon}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Thus, if we set \(N=\max\{N_{1},N_{2}\}\text{,}\) then if \(n &gt; N\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|a_{n}b_{n}-ab| \leq |a_{n}-a|\cdot |b_{n}|+ |a|\cdot |b_{n}-b| \lt \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="rulesforlimits.html#p-565">in-context</a></span>
 </body>
 </html>

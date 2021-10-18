@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T13:29:16+01:00       *-->
+<!--*       on 2021-10-18T13:48:10+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Motivation and the \(\epsilon-N\) definition of a limit</title>
+<title>Sequences and the definition of limit</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>window.MathJax = {
@@ -347,16 +347,6 @@
 	\DeclareMathOperator{\Mor}{Mor}
 	\newcommand{\MOR}{\ensuremath{\textup{\textsc{Mor}}}}
 
-	\DeclareMathOperator{\GL}{GL}
-	\DeclareMathOperator{\PSL}{PSL}
-	\DeclareMathOperator{\PSO}{PSO}
-	\DeclareMathOperator{\PSp}{PSp}
-	\DeclareMathOperator{\PSU}{PSU}
-	\DeclareMathOperator{\SL}{SL}
-	\DeclareMathOperator{\SO}{SO}
-	\DeclareMathOperator{\Sp}{Sp}
-	\DeclareMathOperator{\SU}{SU}
-
 	\DeclareMathOperator{\cofib}{cofib}
 	\DeclareMathOperator{\coker}{coker}
 	\DeclareMathOperator*{\colim}{colim}
@@ -390,38 +380,11 @@
 
 	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
 
-\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
-\def\LUB{{ LUB}}
-\renewcommand{\sectionmark}[1]{{}}
-\def\GLB{{ GLB}}
-\renewcommand{\headrulewidth}{0.5pt}
-\def\ve{\varepsilon}
-\renewcommand{\footrulewidth}{0pt}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\headrulewidth}{0pt}
-\def\R{\mathbb{R}}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
-\def\LUB{{ LUB}}
 \newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
-\def\ve{\epsilon}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\LUB{{ LUB}}
-\def\easylemma{the Linear Combination Lemma}
-\def\lcm{ lcm}
-\def\cl{{ cl}}
-\newcommand{\thepartimage}{}
-\newcommand{\thechapterimage}{}
-\def\R{\mathbb{R}}
-\def\Z{\mathbb{Z}}
-\def\N{{\mathbb{N}}}
-\def\Q{{\mathbb{Q}}}
-\def\C{{\mathbb{C}}}
-\def\hcf{{ hcf}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -464,102 +427,53 @@
 <li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
 <li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
 <li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
-<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Week 1 Exercises, due 28 September 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and equivalence relations</span></a><ul>
+<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and relations</span></a><ul>
 <li><a href="cartesianproducts.html" data-scroll="cartesianproducts">Cartesian products</a></li>
 <li><a href="maps.html" data-scroll="maps">Maps</a></li>
 <li><a href="injectivesurjective.html" data-scroll="injectivesurjective">Injective and surjective</a></li>
 <li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
 <li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
-<li><a href="sizesofsets.html" data-scroll="sizesofsets">Comparing sizes of sets with functions</a></li>
 <li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
-<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
+<li><a href="mapsexercises.html" data-scroll="mapsexercises">Week 2 Exercises, due 5 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">The Real Line</span></a><ul>
-<li><a href="realnumbers.html" data-scroll="realnumbers">The Reals</a></li>
-<li><a href="archimedeanproperty.html" data-scroll="archimedeanproperty">The integers and the Archimedean Property</a></li>
-<li><a href="rationals.html" data-scroll="rationals">The rationals and irrationals</a></li>
-<li><a href="roots.html" data-scroll="roots">Roots</a></li>
-<li><a href="realexercises.html" data-scroll="realexercises">Exercises</a></li>
+<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a><ul>
+<li><a href="integer_sec.html" data-scroll="integer_sec">The integers</a></li>
+<li><a href="rationals.html" data-scroll="rationals">The rational numbers</a></li>
+<li><a href="orderedfields.html" data-scroll="orderedfields">Ordered fields</a></li>
+<li><a href="realnumbers.html" data-scroll="realnumbers">Completeness and the real numbers</a></li>
+<li><a href="reallineexercises.html" data-scroll="reallineexercises">Week 3 Exercise, due 12 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a><ul>
-<li><a href="orderaxioms.html" data-scroll="orderaxioms">The axioms for order</a></li>
-<li><a href="separatingproducts.html" data-scroll="separatingproducts">Separating products</a></li>
-<li><a href="absolutevalues.html" data-scroll="absolutevalues">Absolute Values</a></li>
-<li><a href="homogeneity.html" data-scroll="homogeneity">Homogeneity and inequalities</a></li>
-<li><a href="inequalitiesexercises.html" data-scroll="inequalitiesexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="induction.html" data-scroll="induction"><span class="codenumber">5</span> <span class="title">Induction</span></a><ul>
-<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on \(\Sigma\) notation</a></li>
+<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Induction and inequalities</span></a><ul>
+<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on summation notation</a></li>
 <li><a href="inductionsection.html" data-scroll="inductionsection">Induction</a></li>
-<li><a href="stronginduction.html" data-scroll="stronginduction">Strong Mathematical Induction</a></li>
-<li><a href="inequalitiesredux.html" data-scroll="inequalitiesredux">Inequalities revisited</a></li>
-<li><a href="inductionexercises.html" data-scroll="inductionexercises">Exercises</a></li>
+<li><a href="roots.html" data-scroll="roots">Roots</a></li>
+<li><a href="separatingproducts.html" data-scroll="separatingproducts">AM/GM Inequality and Cauchy-Schwarz</a></li>
+<li><a href="inequalitiesexercises.html" data-scroll="inequalitiesexercises">Some sample exercises</a></li>
+<li><a href="ineqhandin.html" data-scroll="ineqhandin">Week 4 exercises, due 19 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="upperbounds.html" data-scroll="upperbounds"><span class="codenumber">6</span> <span class="title">Upper Bounds and Least Upper Bounds</span></a><ul>
-<li><a href="upperlowerbounds.html" data-scroll="upperlowerbounds">Upper and Lower Bounds</a></li>
-<li><a href="sups.html" data-scroll="sups">Least Upper Bounds</a></li>
-<li><a href="upperboundsexercises.html" data-scroll="upperboundsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="limits.html" data-scroll="limits"><span class="codenumber">7</span> <span class="title">Limits</span></a><ul>
-<li><a href="epsilondefinitionoflimit.html" data-scroll="epsilondefinitionoflimit" class="active">Motivation and the \(\epsilon-N\) definition of a limit</a></li>
+<a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a><ul>
+<li><a href="epsilondefinitionoflimit.html" data-scroll="epsilondefinitionoflimit" class="active">Sequences and the definition of limit</a></li>
 <li><a href="rulesforlimits.html" data-scroll="rulesforlimits">Rules for Limits</a></li>
-<li><a href="existenceofroots.html" data-scroll="existenceofroots">Application: the existence of roots.</a></li>
 <li><a href="infinitelimits.html" data-scroll="infinitelimits">Infinite limits</a></li>
-<li><a href="limitsexercises.html" data-scroll="limitsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="monotoneconvergence.html" data-scroll="monotoneconvergence"><span class="codenumber">8</span> <span class="title">The Monotone Convergence Theorem</span></a><ul>
 <li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection">The Monotone Convergence Theorem</a></li>
-<li><a href="iterativelydefinedsequences.html" data-scroll="iterativelydefinedsequences">Iteratively defined sequences</a></li>
-<li><a href="monotoneexercises.html" data-scroll="monotoneexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">9</span> <span class="title">Decimals and Series</span></a><ul>
-<li><a href="decimals.html" data-scroll="decimals">Decimals</a></li>
-<li><a href="series.html" data-scroll="series">Infinite Series</a></li>
-<li><a href="numbere.html" data-scroll="numbere">The number \(e\)</a></li>
-<li><a href="decimalsseriesexercises.html" data-scroll="decimalsseriesexercises">Exercises</a></li>
-<li><a href="eisirrational.html" data-scroll="eisirrational">*Appendix: irrationality of \(e\)</a></li>
 <li><a href="subsequences.html" data-scroll="subsequences">Subsequences</a></li>
+<li><a href="cauchysequences.html" data-scroll="cauchysequences">Cauchy sequences</a></li>
 </ul>
 </li>
+<li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
+<li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a></li>
 <li class="link">
-<a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">10</span> <span class="title">Complex Numbers</span></a><ul>
-<li><a href="complexnumberssection.html" data-scroll="complexnumberssection">Complex Numbers</a></li>
-<li><a href="cartesianandpolar.html" data-scroll="cartesianandpolar">Cartesian and Polar form</a></li>
-<li><a href="geometryandarithmeticofC.html" data-scroll="geometryandarithmeticofC">Geometry and arithmetic in \​(\mathbb{C}\)</a></li>
-<li><a href="exponentialform.html" data-scroll="exponentialform">Exponential form</a></li>
-<li><a href="rootsof1.html" data-scroll="rootsof1">Roots of Unity</a></li>
-<li><a href="complexnumbersexercises.html" data-scroll="complexnumbersexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="polynomials.html" data-scroll="polynomials"><span class="codenumber">11</span> <span class="title">Polynomials</span></a><ul>
-<li><a href="introtopolynomials.html" data-scroll="introtopolynomials">Introduction</a></li>
-<li><a href="factoringpolynomials.html" data-scroll="factoringpolynomials">Factoring Polynomials</a></li>
-<li><a href="realpolynomials.html" data-scroll="realpolynomials">Real Polynomials</a></li>
-<li><a href="rootcoefficienttheorem.html" data-scroll="rootcoefficienttheorem">Root-Coefficient Theorem</a></li>
-<li><a href="polynomialsexercises.html" data-scroll="polynomialsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="integers.html" data-scroll="integers"><span class="codenumber">12</span> <span class="title">Integers</span></a><ul>
+<a href="integers.html" data-scroll="integers"><span class="codenumber">8</span> <span class="title">Multiplicative theory of integers</span></a><ul>
 <li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
 <li><a href="euclideanalgo.html" data-scroll="euclideanalgo">The GCD and the Euclidean Algorithm</a></li>
 <li><a href="bezoutcorollaries.html" data-scroll="bezoutcorollaries">Corollaries of Bezout's Identity and the Linear Combination Lemma</a></li>
@@ -568,89 +482,60 @@
 <li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
 <li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
 <li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
-<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="modular.html" data-scroll="modular"><span class="codenumber">13</span> <span class="title">Modular Arithmetic</span></a><ul>
+<a href="modular.html" data-scroll="modular"><span class="codenumber">9</span> <span class="title">Modular Arithmetic</span></a><ul>
 <li><a href="arithmeticmodm.html" data-scroll="arithmeticmodm">Arithmetic modulo \(m\)</a></li>
 <li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
 <li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
 <li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
-<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
 </ul>
 </li>
-<li class="link"><a href="infinitecardinals.html" data-scroll="infinitecardinals"><span class="codenumber">14</span> <span class="title">Applications: What's bigger than \(\infty\text{?}\)*</span></a></li>
-<li class="link">
-<a href="counting.html" data-scroll="counting"><span class="codenumber">15</span> <span class="title">Counting</span></a><ul>
-<li><a href="multiplicationprinciple.html" data-scroll="multiplicationprinciple">The Multiplication Principle</a></li>
-<li><a href="correspendenceandovercounting.html" data-scroll="correspendenceandovercounting">Correspondence and overcounting</a></li>
-<li><a href="countingsubsets.html" data-scroll="countingsubsets">Counting subsets</a></li>
-<li><a href="countingpartitions.html" data-scroll="countingpartitions">Counting partitions</a></li>
-<li><a href="binomialmultinomial.html" data-scroll="binomialmultinomial">The Binomial and Multinomial Theorems</a></li>
-<li><a href="inclusionexclusion.html" data-scroll="inclusionexclusion">Inclusion-Exclusion</a></li>
-<li><a href="countingexercises.html" data-scroll="countingexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="permutations.html" data-scroll="permutations"><span class="codenumber">16</span> <span class="title">Permutations</span></a><ul>
-<li><a href="permutationssection.html" data-scroll="permutationssection">Permutations</a></li>
-<li><a href="tablenotation.html" data-scroll="tablenotation">Table Notation</a></li>
-<li><a href="compositionandidentity.html" data-scroll="compositionandidentity">Composition and identity</a></li>
-<li><a href="inverseofpermutation.html" data-scroll="inverseofpermutation">Inverse permutations</a></li>
-<li><a href="section-92.html" data-scroll="section-92">Powers</a></li>
-<li><a href="cycles.html" data-scroll="cycles">Cycles</a></li>
-<li><a href="cyclenotation.html" data-scroll="cyclenotation">Cycle Notation</a></li>
-<li><a href="section-95.html" data-scroll="section-95">Order of a permutation</a></li>
-<li><a href="evenandoddpermutations.html" data-scroll="evenandoddpermutations">Even and Odd permutations</a></li>
-<li><a href="permutationexercises.html" data-scroll="permutationexercises">Exercises</a></li>
-</ul>
-</li>
+<li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">10</span> <span class="title">Counting</span></a></li>
+<li class="link"><a href="permutations.html" data-scroll="permutations"><span class="codenumber">11</span> <span class="title">Permutations</span></a></li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="epsilondefinitionoflimit"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Motivation and the \(\epsilon-N\) definition of a limit</span>
+<span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Sequences and the definition of limit</span>
 </h2>
-<p id="p-825">How does a computer compute \(\sqrt{51}\text{?}\) A computer can't possibly memorise all possible square roots, so it must compute it from scratch. Moreover, it can't possibly compute the entire decimal expansion (next week we will see that, because \(\sqrt{51}\) is irrational, the decimal expansion never repeats), so it can only come up with an approximation. Thus, your computer requires an algorithm for computing \(\sqrt{51}\) (or any root) to any degree of accuracy. But before implementing such an algorithm, we need to <dfn class="terminology">justify</dfn> that it can indeed approximate \(\sqrt{51}\) to any degree of accuracy. That is, if my algorithm spits out a sequence of numbers \(x_1,x_2,..\text{.,}\) and I want an approximation that is within \(10^{-10}\) of \(\sqrt{51}\text{,}\) I need to show that for all large enough \(n\text{,}\) \(x_n\) is at most \(10^{-10}\) away from \(\sqrt{51}\text{,}\) and I need this to happen for <dfn class="terminology">every</dfn> degree of accuracy \(\epsilon&gt;0\) that I may require (not just \(10^{-10}\)). All this motivates the following:</p>
-<article class="definition definition-like" id="definition-33"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">The $\epsilon-N$ definition of a limit.</span>
+<p id="p-533">How does a computer compute \(\sqrt{51}\text{?}\) A computer can't possibly memorise all possible square roots, so it must compute it from scratch. Moreover, it can't possibly compute the entire decimal expansion (next week we will see that, because \(\sqrt{51}\) is irrational, the decimal expansion never repeats), so it can only come up with an approximation. Thus, your computer requires an algorithm for computing \(\sqrt{51}\) (or any root) to any degree of accuracy. But before implementing such an algorithm, we need to <dfn class="terminology">justify</dfn> that it can indeed approximate \(\sqrt{51}\) to any degree of accuracy. That is, if my algorithm spits out a sequence of numbers \(x_1,x_2,\dots\text{,}\) and we want an approximation that is within \(10^{-10}\) of \(\sqrt{51}\text{,}\) I need to show that for all large enough \(n\text{,}\) \(x_n\) is at most \(10^{-10}\) away from \(\sqrt{51}\text{,}\) and I need this to happen for <dfn class="terminology">every</dfn> degree of accuracy \(\epsilon&gt;0\) that I may require (not just \(10^{-10}\)).</p>
+<article class="definition definition-like" id="definition-36"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sequences and limits.</span>
 </h6>
-<p id="p-826">Let \((x_{n})_{n=1}^{\infty}\) be a sequence of real numbers \(x_{1},x_{2},..\text{.}\) and let \(L\in \mathbb{R}\text{.}\) We say that \(x_n\) <dfn class="terminology">converges to \(L\)</dfn>, and we write \(\lim_{n\rightarrow\infty} x_{n}=L\text{,}\) or \(x_{n}\rightarrow L\) as \(n \rightarrow \infty\text{,}\) if for all \(\epsilon&gt;0\text{,}\) there is a real number \(N\) so that for \(n&gt; N\text{,}\) we have</p>
+<p id="p-534">A <dfn class="terminology">sequence</dfn> of elements of a set \(S\) is a map \(x \colon \NN \to S \text{.}\) For a natural number \(n\text{,}\) we will write \(x_n\) for the value \(x(n)\text{.}\) We will often write the sequence as \((x_n)_{n\geq 1}\) or \((x_n)_{n=1}^{\infty}\) or even just \((x_n)\text{.}\)</p>
+<p id="p-535">Let \((x_{n})_{n\geq 1}\) be a sequence of real numbers, and let \(L\in \RR\text{.}\) We say that \(x_n\) <dfn class="terminology">converges to \(L\)</dfn>, and we write “\(\lim_{n\rightarrow\infty} x_{n}=L\)”, or “\(x_{n}\rightarrow L\) as \(n \rightarrow \infty\)”, if for every \(\epsilon&gt;0\text{,}\) there exists \(N \in \NN\) such that for every \(n \gt N\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
-|x_{n}-L|\lt \epsilon
+|x_{n}-L|\lt \epsilon\text{,}
 \end{equation*}
 </div>
-<p class="continuation">or equivalently,<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 1 </sup></a></p>
+<p class="continuation">or equivalently,</p>
 <div class="displaymath">
 \begin{equation*}
 L-\epsilon\lt x_n\lt L+\epsilon\text{.}
 \end{equation*}
 </div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">See <a class="xref" data-knowl="./knowl/one.html" title="Checkpoint 7.5.1">Exercise 7.5.1</a>.</div></div></article><article class="definition definition-like" id="definition-34"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.2</span><span class="period">.</span>
-</h6>
-<p id="p-827">We say that a sequence \((a_n)\) is <dfn class="terminology">convergent</dfn> if for some \(L \in \R\text{,}\) it converges to \(L\text{.}\)</p></article><p id="p-828"><em class="emphasis">Exercise.</em> Give an example of a convergent sequence. Give an example of a non-convergent sequence.</p>
-<p id="p-829">Notice that here we are working with the notion of a <em class="emphasis">sequence</em> \((x_n)_{n=1}^\infty\) — this is just an <dfn class="terminology">ordered</dfn> list of real numbers \(x_n\text{,}\) indexed by the natural numbers \(\mathbb{N}\text{.}\) Or, if you prefer, you can think of a sequence as a function \(x:\mathbb{N}\to \mathbb{R}\) with domain \(\mathbb{N}\) and codomain \(\mathbb{R}\text{.}\)</p>
-<p id="p-830">Note that in Liebeck, the \(N\) in Definition 6.1 is required to be an integer, but it actually makes no difference since we can just round \(N\) up to an integer if we like, using the Archimedean principle. It is important to recognise that, in this definition, we expect \(N\) to depend on \(\epsilon\text{.}\)</p>
-<article class="example example-like" id="example-58"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-58"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-58"><article class="example example-like"><p id="p-831">Show that \(\lim_{n\rightarrow \infty} \frac{1}{n}=0\text{.}\)</p>
-<p id="p-832">We need to show that for all \(\epsilon&gt;0\) there is \(N\) so that \(n&gt; N\) implies \(|\frac{1}{n}-0|\lt \epsilon\text{,}\) which is the same as \(\frac{1}{n}\lt \epsilon\text{.}\) This is equivalent to finding \(N\) so that \(n&gt;N\) implies \(n&gt;\frac{1}{\epsilon}\text{.}\) Thus, if we pick \(N=\frac{1}{\epsilon}\text{,}\) we see that if \(n&gt; N\text{,}\)</p>
+<p id="p-536">We say that a sequence \((x_n)\) is <dfn class="terminology">convergent</dfn> if for some \(L \in \R\text{,}\) it converges to \(L\text{.}\)</p></article><p id="p-537">One point to be made here is that we aren't so interested in the beginning of our sequences. We're really only interested in what “eventually happens” with the sequence. As a result, we will sometimes find it convenient to consider maps \(x \colon \{n \in \NN : n \geq k\} \to \RR\) for some natural number \(k\) as <dfn class="terminology">sequences</dfn> as well. We may write \((x_n)_{n\geq k}\) or \((x_n)_{n=k}^{\infty}\) for such sequences.</p>
+<p id="p-538"><em class="emphasis">Exercise.</em> Give an example of a convergent sequence. Give an example of a non-convergent sequence.</p>
+<article class="example example-like" id="example-55"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-55"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-55"><article class="example example-like"><p id="p-539">Show that \(\lim_{n\rightarrow \infty} \frac{1}{n}=0\text{.}\)</p>
+<p id="p-540">We need to show that for all \(\epsilon \gt 0\) there exists a natural number \(N\) so that for every \(n&gt; N\text{,}\) we have \(|\frac{1}{n}-0|\lt \epsilon\text{,}\) which is the same as \(\frac{1}{n}\lt \epsilon\text{.}\) This is equivalent to finding \(N\) so that \(n&gt;N\) implies \(n&gt;\frac{1}{\epsilon}\text{.}\) By the Archimedean property, we may choose a natural number \(N\) such that \(N\epsilon &gt;1\text{.}\) We then see that if \(n&gt; N\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \left|\frac{1}{n} -0\right|=\frac{1}{n} \lt  \frac{1}{N}= \frac{1}{\frac{1}{\epsilon}}=\epsilon\text{.}
 \end{equation*}
 </div></article></div>
-<article class="note remark-like" id="note-8"><h6 class="heading">
-<span class="type">Note</span><span class="space"> </span><span class="codenumber">7.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Note on establishing limits.</span>
+<article class="note remark-like" id="note-5"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">5.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Note on establishing limits.</span>
 </h6>
-<p id="p-833">Don't expect a nice looking proof to fall into your lap immediately when trying to establish a certain limit. It usually requires some rough work first, which you can then use to help you write your proof.</p></article><article class="example example-like" id="example-59"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-59"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-59"><article class="example example-like"><p id="p-834">Show that \(\lim_{n\rightarrow \infty} \frac{5n^2+2n}{n^2+4}=5\text{.}\)</p>
-<p id="p-835"><em class="emphasis">Rough work:</em> We are going to need to show that \(\frac{5n^2+2n}{n^2+4}-5\) is small when \(n\) is large, so it first makes sense to simplify this expression algebraically to see if we can identify when it might be small. Doing this,</p>
+<p id="p-541">Don't expect a nice looking proof to fall into your lap immediately when trying to establish a certain limit. It usually requires some rough work first, which you can then use to help you write your proof.</p></article><article class="example example-like" id="example-56"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-56"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.4</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-56"><article class="example example-like"><p id="p-542">Show that \(\lim_{n\rightarrow \infty} \frac{5n^2+2n}{n^2+4}=5\text{.}\)</p>
+<p id="p-543"><em class="emphasis">Rough work:</em> We are going to need to show that \(\frac{5n^2+2n}{n^2+4}-5\) is small when \(n\) is large, so it first makes sense to simplify this expression algebraically to see if we can identify when it might be small. Doing this,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{5n^2+2n}{n^2+4}-5 =\frac{2n-20}{n^2+4}\text{,}
@@ -662,41 +547,44 @@ L-\epsilon\lt x_n\lt L+\epsilon\text{.}
 \left|\frac{5n^2+2n}{n^2+4}-5\right| \leq \left| \frac{2n-20}{n^2+4} \right| \leq \frac{2n}{n^2 + 4} + \frac{20}{n^2 + 4} \leq \frac{2}{n} + \frac{20}{n^2}\text{.}
 \end{equation*}
 </div>
-<p id="p-836">This is looking good because all we need to do to make this small is to make both \(2/n\) and \(20/n^2\) small, and this is very reasonable. Now we bring in the \(\epsilon &gt; 0\text{.}\) If \(n\) is such that both \(2/n \lt  \epsilon/2\) and \(20/n^2 \lt  \epsilon/2\text{,}\) we can deduce that</p>
+<p id="p-544">This is looking good because all we need to do to make this small is to make both \(2/n\) and \(20/n^2\) small, and this is very reasonable. Now we bring in the \(\epsilon &gt; 0\text{.}\) If \(n\) is such that both \(2/n \lt  \epsilon/2\) and \(20/n^2 \lt  \epsilon/2\text{,}\) we can deduce that</p>
 <div class="displaymath">
 \begin{equation*}
 \left|\frac{5n^2+2n}{n^2+4}-5\right| \lt  \frac{\epsilon}{2}+ \frac{\epsilon}{2} = \epsilon\text{,}
 \end{equation*}
 </div>
 <p class="continuation">which is exactly what we need. What do we need \(n\) to satisfy for this to be true? Well, for \(\frac{2}{n} \lt  \frac{\epsilon}{2}\) we need \(n &gt; \frac{4}{\epsilon}\text{,}\) and for \(\frac{20}{n^2} \lt  \frac{\epsilon}{2}\) we need \(n &gt; \sqrt{\frac{40}{\epsilon}}\text{.}\) To ensure both of these hold, we need \(n\) to satisfy \(n &gt; \max\left\{\frac{4}{\epsilon}, \sqrt{\frac{40}{\epsilon}}\right\}\text{.}\) So we take \(N = \max\left\{\frac{4}{\epsilon}, \sqrt{\frac{40}{\epsilon}}\right\}\text{.}\)</p>
-<p id="p-837">(All the above was just rough work to help me formulate and write my formal proof. Below is what you want to do when writing your work for marking (and not the rough work). It's fine not to show how you chose your \(N\text{,}\) so long as it works. And there is no single answer for \(N\) — if \(N\) works, then so does \(N'\) for any \(N'&gt;N\text{.}\))</p>
-<p id="p-838"><em class="emphasis">Now for the actual proof:</em></p>
-<p id="p-839"><em class="emphasis">Claim:</em> \(\lim_{n\rightarrow\infty}\frac{5n^2+2n}{n^2+4}=5\text{.}\)</p></article></div>
+<p id="p-545">(All the above was just rough work to help me formulate and write my formal proof. Below is what you want to do when writing your work for marking (and not the rough work). It's fine not to show how you chose your \(N\text{,}\) so long as it works. And there is no single answer for \(N\) — if \(N\) works, then so does \(N'\) for any \(N'&gt;N\text{.}\))</p>
+<p id="p-546"><em class="emphasis">Now for the actual proof:</em></p>
+<p id="p-547">We claim that \(\lim_{n\rightarrow\infty}\frac{5n^2+2n}{n^2+4}=5\text{.}\) Let \(\epsilon\) be any positive real number. We need to show that there is \(N\in\RR\) so that \(n&gt; N\) implies \(\left|\frac{5n^2+2n}{n^2+4}-5\right|\lt \epsilon\text{.}\) We assert that \(N=\max\left\{\frac{4}{\epsilon}, \sqrt{\frac{40}{\epsilon}}\right\}\) works. Indeed, if \(n&gt; N\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\left|\frac{5n^2+2n}{n^2+4}-5\right| \leq \left| \frac{2n-20}{n^2+4} \right| \leq \frac{2n}{n^2 + 4} + \frac{20}{n^2 + 4} \leq \frac{2}{n} + \frac{20}{n^2} \lt  \frac{2}{N} + \frac{20}{N^2} \leq \frac{\epsilon}{2}+ \frac{\epsilon}{2} = \epsilon\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since we have shown we can find such an \(N\) no matter what \(\epsilon&gt;0\) we started with, this proves the claim.</p></article></div>
 <article class="example example-like" id="sqrootxn"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-sqrootxn"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-sqrootxn"><article class="example example-like"><p id="p-842">Suppose \(x_{n}\geq 0\) and \(x_{n}\rightarrow x&gt;0\text{,}\) then \(\sqrt{x_{n}}\rightarrow \sqrt{x}\text{.}\)</p>
-<p id="p-843"><em class="emphasis">Discussion:</em> This is a little different from the previous example because now \(x_n\) isn't given in a concrete form, and all we know about it is that \(x_n \rightarrow x\text{,}\) or, more informally, \(|x_n - x|\) is small for all large \(n\text{.}\) Nevertheless the conclusion, \(\sqrt{x_{n}}\rightarrow \sqrt{x}\text{,}\) is similar to what we had before, and the tactic of manipulating the expression \(\sqrt{x_{n}}-\sqrt{x}\) algebraically, and using some inequalities on it until it's apparent why it should also be small, is equally useful. Thus, we want to manipulate \(|\sqrt{x_{n}}-\sqrt{x}|\) so that \(|x_{n}-x|\) appears in the expression, since we hope that if we can make \(|x_{n}-x|\) as small as we want, then we can make \(|\sqrt{x_{n}}-\sqrt{x}|\) small as well.</p>
-<p id="p-844">A standard trick when working with roots is to multiply and divide by the conjugate, and we have</p>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.5</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-sqrootxn"><article class="example example-like"><p id="p-548">Suppose \(x_{n}\geq 0\) and \(x_{n}\rightarrow x&gt;0\text{,}\) then \(\sqrt{x_{n}}\rightarrow \sqrt{x}\text{.}\)</p>
+<p id="p-549"><em class="emphasis">Discussion:</em> This is a little different from the previous example because now \(x_n\) isn't given in a concrete form, and all we know about it is that \(x_n \rightarrow x\text{,}\) or, more informally, \(|x_n - x|\) is small for all large \(n\text{.}\) Nevertheless the conclusion, \(\sqrt{x_{n}}\rightarrow \sqrt{x}\text{,}\) is similar to what we had before, and the tactic of manipulating the expression \(\sqrt{x_{n}}-\sqrt{x}\) algebraically, and using some inequalities on it until it's apparent why it should also be small, is equally useful. Thus, we want to manipulate \(|\sqrt{x_{n}}-\sqrt{x}|\) so that \(|x_{n}-x|\) appears in the expression, since we hope that if we can make \(|x_{n}-x|\) as small as we want, then we can make \(|\sqrt{x_{n}}-\sqrt{x}|\) small as well.</p>
+<p id="p-550">A standard trick when working with roots is to multiply and divide by the conjugate, and we have</p>
 <div class="displaymath">
 \begin{equation*}
 |\sqrt{x_{n}}-\sqrt{x}| =\left|(\sqrt{x_{n}}-\sqrt{x})\cdot \frac{\sqrt{x_{n}}+\sqrt{x}}{\sqrt{x_{n}}+\sqrt{x}}\right| =\left|\frac{x_{n}-x}{\sqrt{x_{n}}+\sqrt{x}}\right| =\frac{|x_{n}-x|}{\sqrt{x_{n}}+\sqrt{x}} \leq \frac{|x_{n}-x|}{\sqrt{x}}
 \end{equation*}
 </div>
-<p class="continuation">where in the last step we used the facts that \(\sqrt{x_n} \geq 0\) and \(x &gt; 0\text{.}\) This is looking good because we should be able to make \(\frac{|x_{n}-x|}{\sqrt{x}}\) small by taking \(n\) large enough. Indeed, now let's bring in \(\epsilon &gt; 0\text{.}\) Since \(x_n \rightarrow x\text{,}\) we know that there is some \(N \in \mathbb{R}\) such that whenever \(n &gt; N\text{,}\) we have</p>
+<p class="continuation">where in the last step we used the facts that \(\sqrt{x_n} \geq 0\) and \(x &gt; 0\text{.}\) This is looking good because we should be able to make \(\frac{|x_{n}-x|}{\sqrt{x}}\) small by taking \(n\) large enough. Indeed, now let's bring in \(\epsilon &gt; 0\text{.}\) Since \(x_n \rightarrow x\text{,}\) we know that there is some \(N \in \RR\) such that whenever \(n &gt; N\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 |x_n - x| \lt \epsilon\sqrt{x}\text{.}
 \end{equation*}
 </div>
-<p id="p-845">(This maybe requires a pause for thought. The definition of \(x_n \rightarrow x\) talks about “\(|x_n - x| \lt  \epsilon\)” for all large \(n\text{,}\) it doesn't say anything about “\(|x_n - x| \lt \epsilon\sqrt{x}\text{.}\)” But the definition of \(x_n \rightarrow x\) applies to <dfn class="terminology">every</dfn> positive \(\epsilon\) — and thus it applies just equally well to \(\epsilon\sqrt{x}\) in place of \(\epsilon\text{.}\) Remember that \(x\) is fixed in this discussion. The \(N\) coming out depends on \(x\) as well as \(\epsilon\text{,}\) but this is not a problem, as \(x\) is fixed.) So if \(n &gt; N\text{,}\) we have</p>
+<p id="p-551">(This maybe requires a pause for thought. The definition of \(x_n \rightarrow x\) talks about “\(|x_n - x| \lt  \epsilon\)” for all large \(n\text{,}\) it doesn't say anything about “\(|x_n - x| \lt \epsilon\sqrt{x}\text{.}\)” But the definition of \(x_n \rightarrow x\) applies to <dfn class="terminology">every</dfn> positive \(\epsilon\) — and thus it applies just equally well to \(\epsilon\sqrt{x}\) in place of \(\epsilon\text{.}\) Remember that \(x\) is fixed in this discussion. The \(N\) coming out depends on \(x\) as well as \(\epsilon\text{,}\) but this is not a problem, as \(x\) is fixed.) So if \(n &gt; N\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 |x_n - x| \leq \frac{|x_n - x|}{\sqrt{x}} \lt  \frac{\epsilon\sqrt{x}}{\sqrt{x}} = \epsilon
 \end{equation*}
-</div></article></div>
-<article class="problem example-like" id="problem-1"><a data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-1"><h6 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.1.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-1"><article class="problem example-like"><p id="p-848">What happens if \(x = 0\) in this example?</p></article></div></section></div></main>
+</div></article></div></section></div></main>
 </div>
 </body>
 </html>

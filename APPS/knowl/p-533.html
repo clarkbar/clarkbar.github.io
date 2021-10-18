@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:15+01:00       *-->
+<!--*       on 2021-10-18T13:48:15+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,26 +15,7 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We are all familiar with decimal representation of numbers. For example, given a rational number \(x = \frac{p}{q}\) with \(p,
-q \in \mathbb{N}\) and \(0 \lt  p \lt  q\text{,}\) we can go through the process of dividing \(q\) into \(p\) to represent it as</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x = 0.a_1 a_2 \dots a_n \dots
-\end{equation*}
-</div>
-<p class="continuation">where each \(a_n\) is an integer in the set \(\{0,1,\dots, 9\}\text{.}\) So we are used to writing</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{1}{2} = 0.5 = 0.50000\dots \mbox{ and }  \frac{2}{3} = 0.66666\dots
-\end{equation*}
-</div>
-<p class="continuation">and we are also may have seen such expressions as</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\sqrt{2} = 1.414\dots \mbox{ and }  \pi = 3.14159 \dots\text{.}
-\end{equation*}
-</div>
-<p class="continuation">There are also wilder examples such as \(0.7264082793684301 \dots\text{.}\) which have no identifiable pattern. But what exactly do we mean by these infinitely long decimals? We shall answer this question, and give a precise meaning to decimal expansions.</p>
-<span class="incontext"><a href="decimalsseries.html#p-533">in-context</a></span>
+<p>How does a computer compute \(\sqrt{51}\text{?}\) A computer can't possibly memorise all possible square roots, so it must compute it from scratch. Moreover, it can't possibly compute the entire decimal expansion (next week we will see that, because \(\sqrt{51}\) is irrational, the decimal expansion never repeats), so it can only come up with an approximation. Thus, your computer requires an algorithm for computing \(\sqrt{51}\) (or any root) to any degree of accuracy. But before implementing such an algorithm, we need to <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">justify</dfn> that it can indeed approximate \(\sqrt{51}\) to any degree of accuracy. That is, if my algorithm spits out a sequence of numbers \(x_1,x_2,\dots\text{,}\) and we want an approximation that is within \(10^{-10}\) of \(\sqrt{51}\text{,}\) I need to show that for all large enough \(n\text{,}\) \(x_n\) is at most \(10^{-10}\) away from \(\sqrt{51}\text{,}\) and I need this to happen for <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">every</dfn> degree of accuracy \(\epsilon&gt;0\) that I may require (not just \(10^{-10}\)).</p>
+<span class="incontext"><a href="epsilondefinitionoflimit.html#p-533">in-context</a></span>
 </body>
 </html>

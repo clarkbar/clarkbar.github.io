@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:15+01:00       *-->
+<!--*       on 2021-10-18T13:48:15+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,50 @@
 </head>
 <body>
 <article class="li"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Item</span><span class="period">.</span>
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">d</span><span class="period">.</span>
 </h6>
-<p>We divide \(6\) by \(3\) to get \(2\) with a remainder of \(r_3 = 0\text{.}\)</p></article><span class="incontext"><a href="euclideanalgo.html#li-113">in-context</a></span>
+<p>We claim that it suffices to show that if \(b_n\rightarrow b\) and \(b_n,b\neq 0\text{,}\) then \(b_{n}^{-1}\rightarrow b^{-1}\text{.}\) Indeed, if this is the case, then  by part (b),</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{a_{n}}{b_{n}}=a_{n}\cdot b_{n}^{-1} \rightarrow ab^{-1}=\frac{a}{b}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">So now let's prove that if \(b_n\rightarrow b\) and \(b_n,b\neq 0\text{,}\) then \(b_{n}^{-1}\rightarrow b^{-1}\text{.}\) Let \(\epsilon&gt;0\text{.}\) We need to find \(N\) so that \(n &gt; N\) implies \(|b_{n}^{-1}-b^{-1}|\lt \epsilon\text{.}\) Observe that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left|\frac{1}{b_{n}}-\frac{1}{b}\right| =\left|\frac{b-b_{n}}{bb_{n}}\right| =\frac{|b-b_{n}|}{|b|\cdot |b_{n}|}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Suppose we can show that for some number \(s&gt;0\) we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+|b_{n}|\geq s \text{ for every } n\in\mathbb{N}\text{.}\tag{5.2.1}
+\end{equation}
+</div>
+<p class="continuation">Then since \(b_{n}\rightarrow b\text{,}\) we know that for any \(\epsilon_1&gt;0\) there is \(N = N(\epsilon_1)\) so that \(n &gt; N\) implies \(|b_{n}-b|\lt \epsilon_1\text{,}\) and then we would have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left|\frac{1}{b_{n}}-\frac{1}{b}\right|\leq \frac{|b-b_{n}|}{|b|\cdot |b_{n}|} \leq \frac{\epsilon_1}{|b| s}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Hence, if we pick \(\epsilon_1=|b|s\epsilon\text{,}\) then all this implies that for \(n &gt; N(|b|s\epsilon)\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left|\frac{1}{b_{n}}-\frac{1}{b}\right| \leq \frac{\epsilon_1}{|b| s}= \frac{|b|s\epsilon}{|b| s}=\epsilon\text{.}
+\end{equation*}
+</div>
+<p class="continuation">So now we focus on proving <a class="xref" data-knowl="./knowl/e_bn_m.html" title="Equation 5.2.1">(5.2.1)</a>. Since \(b_n\rightarrow b\text{,}\) there is \(N'\) so that \(n &gt; N'\) implies \(|b_{n}-b|\lt \frac{|b|}{2}\text{.}\) Thus, by the reverse triangle inequality,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|b_{n}| =|b_{n}-b+b| \geq |b|-|b_{n}-b| &gt;|b|-\frac{|b|}{2} = \frac{|b|}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">For \(n \leq N'\text{,}\) we simply have \(|b_{n}|\geq \min\{|b_{1}|,\dots,|b_{N'}|\}&gt;0\text{.}\) Thus, for all \(n\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|b_{n}|\geq \min\left\{\frac{|b|}{2},|b_{1}|,\dots ,|b_{N'}|\right\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This finishes the proof of  <a class="xref" data-knowl="./knowl/e_bn_m.html" title="Equation 5.2.1">(5.2.1)</a>, and thus of (d).</p></article><span class="incontext"><a href="rulesforlimits.html#li-113">in-context</a></span>
 </body>
 </html>

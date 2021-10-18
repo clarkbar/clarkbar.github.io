@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:15+01:00       *-->
+<!--*       on 2021-10-18T13:48:16+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We divide \(4\) by \(2\) to get \(2\) with a remainder of \(r_9 = 0\text{.}\)</p>
-<span class="incontext"><a href="euclideanalgo.html#p-606">in-context</a></span>
+<p>Since \(a^n\) is a product of positive numbers, it is positive, so the sequence \((a^{n})_{n=1}^{\infty}\) is bounded below by \(0\text{.}\) Moreover, since \(a\lt 1\text{,}\) \(a^{n+1}=a\cdot a^{n}\lt a^{n}\text{,}\) so the sequence is decreasing. By the MCT, it has a limit \(L\text{.}\) To find \(L\text{,}\) we will find a simple equation which \(L\) must satisfy — in this case \(aL = L\text{.}\) Recall that if \((a_{n})\) is a convergent sequence, then \((a_{n+1})\) also converges, and indeed converges to the same limit (see the exercises from last week). Thus, by the rules for limits,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+L=\lim_n a^{n} = \lim_n a^{n+1}=\lim_n a^{n} =a\lim_n a^{n}=aL\text{,}
+\end{equation*}
+</div>
+<p class="continuation">as we claimed. Therefore \(L(a-1) =0\) and since \(a \neq 1\) we must have \(L =0\text{,}\) and we are done.</p>
+<span class="incontext"><a href="monotoneconvergencesection.html#p-606">in-context</a></span>
 </body>
 </html>

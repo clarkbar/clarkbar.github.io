@@ -53,7 +53,7 @@
 %-------------------------------------------------------------------%
 
 \newenvironment{loggentry}[2]% date, heading
-{\noindent\textbf{#2}\marginnote{\textbf{#1}}\par}{\vspace{0.5cm}}
+{\noindent\textsf{#2}\marginnote{\textsf{#1}}\par}{\vspace{0.5cm}}
 
 \def\?#1{}
 
@@ -75,7 +75,16 @@
 \setcounter{tocdepth}{2}
 \tableofcontents
 
-\bigskip
+\chapter*{Why are you reading this?}
+\addcontentsline{toc}{chapter}{Why are you reading this?}
+If you aren't me, and you're reading this,
+you should be aware that pretty much everything here is speculative.
+I'll try on a lot of ideas, and I probably won't do a good job of saying
+which ones turned out to be bullshit.
+You can rest assured that that will include most of them.
+
+Hell, I probably won't even manage to really say what I mean.
+If any of this is legible, it's not because I was trying to make it so.
 
 \foreach \Year in {\StartYear,...,\EndYear}{
 	\chapter*{\Year}

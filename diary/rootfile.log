@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.8.1)  13 OCT 2021 03:54
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.8.1)  15 OCT 2021 17:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1968,6 +1968,8 @@ Package fontspec Info: Font family 'BrownPro(2)' created for font 'BrownPro'
 
  [3] [4
 
+] [5] [6
+
 ]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `MinionMath-Regular' (encoding: TU).
@@ -2007,7 +2009,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(1)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(1)/m/n' will be
-(Font)              scaled to size 7.2pt on input line 107.
+(Font)              scaled to size 7.2pt on input line 116.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(1)/m/n/7.2'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2042,7 +2044,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(1)/m/n/7.2'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(1)/m/n' will be
-(Font)              scaled to size 5.2pt on input line 107.
+(Font)              scaled to size 5.2pt on input line 116.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(1)/m/n/5.2'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2077,7 +2079,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(1)/m/n/5.2'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 107.
+(Font)              scaled to size 10.00107pt on input line 116.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2112,7 +2114,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(2)/m/n' will be
-(Font)              scaled to size 7.20076pt on input line 107.
+(Font)              scaled to size 7.20076pt on input line 116.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/7.2'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2147,7 +2149,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/7.2'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(2)/m/n' will be
-(Font)              scaled to size 5.20055pt on input line 107.
+(Font)              scaled to size 5.20055pt on input line 116.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/5.2'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2182,7 +2184,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/5.2'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 107.
+(Font)              scaled to size 9.99893pt on input line 116.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(3)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2217,7 +2219,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(3)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(3)/m/n' will be
-(Font)              scaled to size 7.19922pt on input line 107.
+(Font)              scaled to size 7.19922pt on input line 116.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(3)/m/n/7.2'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2252,7 +2254,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(3)/m/n/7.2'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(3)/m/n' will be
-(Font)              scaled to size 5.19943pt on input line 107.
+(Font)              scaled to size 5.19943pt on input line 116.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(3)/m/n/5.2'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2397,12 +2399,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `UnifrakturMaguntia' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 107.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 116.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
-LaTeX Warning: Marginpar on page 5 moved.
+LaTeX Warning: Marginpar on page 7 moved.
 
 (./2021/October/11.tex
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(1)/m/n' will be
@@ -2821,19 +2823,33 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 
 
-LaTeX Warning: Marginpar on page 5 moved.
+LaTeX Warning: Marginpar on page 7 moved.
 
 
-LaTeX Warning: Marginpar on page 5 moved.
+LaTeX Warning: Marginpar on page 7 moved.
 
 )
 
-LaTeX Warning: Marginpar on page 5 moved.
+LaTeX Warning: Marginpar on page 7 moved.
 
 (./2021/October/12.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5])
+ [7])
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+(./2021/October/14.tex
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+)
 
 Package fontspec Info: Font family 'MinionPro(2)' created for font 'Minion
 (fontspec)             Pro' with options
@@ -2861,15 +2877,15 @@ Package fontspec Info: Font family 'MinionPro(2)' created for font 'Minion
 (fontspec)             <->"Minion
 (fontspec)             Pro/BI/OT:script=latn;language=dflt;letterspace=5.0;+onum;+liga;+smcp;mapping=tex-text;"
 
- [6]
+ [8]
 
-Package biblatex Warning: Keyword 'alph' not found on input line 121.
-
-
-LaTeX Warning: Empty bibliography on input line 121.
+Package biblatex Warning: Keyword 'alph' not found on input line 130.
 
 
-LaTeX Warning: Empty bibliography on input line 124.
+LaTeX Warning: Empty bibliography on input line 130.
+
+
+LaTeX Warning: Empty bibliography on input line 133.
 
 \tf@thm=\write6
 \openout6 = `rootfile.thm'.
@@ -2880,12 +2896,12 @@ Package logreq Info: Writing requests to 'rootfile.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47083 strings out of 476476
- 949775 string characters out of 5814302
- 1846993 words of memory out of 5000000
- 66624 multiletter control sequences out of 15000+600000
- 409774 words of font info for 169 fonts, out of 8000000 for 9000
+ 47096 strings out of 476476
+ 950238 string characters out of 5814302
+ 1846994 words of memory out of 5000000
+ 66632 multiletter control sequences out of 15000+600000
+ 409798 words of font info for 172 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  118i,12n,148p,545b,3608s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on rootfile.xdv (6 pages, 39172 bytes).
+Output written on rootfile.xdv (8 pages, 61344 bytes).

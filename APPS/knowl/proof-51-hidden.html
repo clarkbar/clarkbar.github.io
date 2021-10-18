@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T13:29:43+01:00       *-->
+<!--*       on 2021-10-18T13:48:18+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,25 +13,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>Let</p>
+<body><article class="hiddenproof"><p>Since \(n\) and \(p-1\) are coprime, there are integers \(s,t\) so that \(sn+t(p-1)=1\text{.}\)</p>
+<p>Let us prove the uniqueness. If \(x_1,x_2 \in \{1,\dots,p-1\}\) are two such solutions, then \(x_1^n=x_2^n \mod p\text{,}\) and so for \(i \in \{1,2\}\text{,}\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-S=\{x \; | \; \mbox{ there are infinitely many \(n\in\mathbb{N}\) so that } x_n\geq x\}
+x_i = x_i^{sn+t(p-1)} = x_i^{sn}x_i^{t(p-1)} = b^s(x_i^t)^{p-1} \mod p\text{.}
 \end{equation*}
 </div>
-<p class="continuation">and set \(L=\LUB (S)\text{.}\) Since \((x_n)\) is bounded, \(\LUB(S)\) exists. By <a class="xref" data-knowl="./knowl/p_lim-points.html" title="Proposition 9.6.3">Proposition 9.6.3</a>, \(L\) is a limit point if we can verify the following:</p>
-<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Claim:</em> For all \(\epsilon&gt;0\) and \(N\in\mathbb{N}\) there is \(n&gt;N\) so that \(|x_{n}-L|\lt \epsilon\text{.}\)</p>
-<p>We prove by contradiction. Suppose instead that there exists \(\epsilon&gt;0\) and \(N\in\mathbb{N}\) so that \(|x_{n}-L|\geq \epsilon\) for all \(n&gt; N\text{.}\) In other words, there are at most \(N\) many integers \(n\) (hence only finitely many) for which \(|x_{n}-L|\lt \epsilon\text{,}\) or equivalently</p>
+<p>Since \(p\) does not divide \(x_i^t\text{,}\) Fermat's Little Theorem that each \(x_i = b^s \mod p\text{,}\) whence \(x_1=x_2\text{.}\)</p>
+<p>Now let us prove the existence. Let \(x\) be the remainder after dividing \(b^s\) by \(p\text{.}\) Now in \(\mathbb{Z}/p\text{,}\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-L-\epsilon\lt x_n\lt L+\epsilon\text{.}\tag{9.6.2}
-\end{equation}
+\begin{equation*}
+x^{n}  = (b^{s})^{n}=b^{ns}  = b^{1-t(p-1)}=b\cdot (b^{p-1})^{-t}\text{.}
+\end{equation*}
 </div>
-<p>Since \(L+\epsilon&gt;L=\LUB(S)\) and \(\LUB(S)\) is an upper bound for \(S\text{,}\) we can't have \(L+\epsilon\in S\text{,}\) so by the definition of \(S\text{,}\) there are only finitely many \(n\in\mathbb{N}\) so that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-x_n\geq L+\epsilon\tag{9.6.3}
-\end{equation}
-</div>
-<p>Thus, there are only finitely many \(n\) satisfying <a class="xref" data-knowl="./knowl/e_finitely-many-betweenL-eL_e.html" title="Equation 9.6.2">(9.6.2)</a> or <a class="xref" data-knowl="./knowl/e_finitely-many-aboveL_e.html" title="Equation 9.6.3">(9.6.3)</a>, so there can only be finitely many \(n\) so that \(x_n&gt;L-\epsilon\text{.}\) But then \(L-\epsilon\geq \LUB(S)\text{,}\) since if \(L-\epsilon\lt \LUB(S)\text{,}\) by definition of the LUB, \(L-\epsilon\) is not an upper bound for \(S\text{,}\) so there is \(t&gt;L-\epsilon\) so that there are infinitely many \(x_n\geq t\text{,}\) which is impossible since there are only finitely many \(x_n&gt;\epsilon\text{.}\) Thus, \(L-\epsilon\geq \LUB(S)=L\text{,}\) which is a contradiction. This proves the claim, and thus \(L\) is a limit point.</p></article></body>
+<p>(Note that this makes sense, since \(p\) does not divide \(b\text{,}\) so \(b\) is invertible.) Since \(p\) does not divide \(b\text{,}\) Fermat's Little Theorem implies that \(x^n = b \mod p\text{.}\)</p></article></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T13:29:43+01:00       *-->
+<!--*       on 2021-10-18T13:48:18+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,32 +15,19 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>If \(L\) is a limit point, we will show that for all \(\epsilon&gt;0\) and for all integers \(N\text{,}\) we can find \(n&gt; N\) so that \(|x_n-L|\lt \epsilon\text{.}\) Let \(\epsilon&gt;0\) and \(N\in\mathbb{N}\text{.}\) Since \(L\) is a limit point, there is a subsequence \((x_{n_{k}})\) converging to \(L\) with \(n_{1}\lt n_{2}\lt \cdots\text{,}\) so there is \(K\in\mathbb{N}\) so that \(k&gt; K\) implies \(|x_{n_{k}}-L|\lt \epsilon\text{.}\) By the previous exercise, \(n_{k}\geq k\text{,}\) so if \(k&gt; \max\{N,K\}\text{,}\) then \(n_k\) is an integer bigger than \(N\) so that \(|x_{n_{k}}-L|\lt \epsilon\text{.}\) This proves the forward implication of the proposition.</p>
-<p>Now we prove the converse. Assume \(L\) is a number so that for all \(\epsilon&gt;0\) and for all integers \(N\text{,}\) we can find \(n&gt; N\) so that \(|x_n-L|\lt \epsilon\text{.}\) We will show \(L\) is a limit point.</p>
-<p>By our assumption (with \(\epsilon=1\) and \(N=1\)), we can find \(n_1\in\mathbb{N}\) so that</p>
+<p>Without loss of generality, we may assume that \(a \in \{1,\dots,p-1\}\text{.}\) We consider the numbers \(a,2a,3a,\dots,(p-1)a\text{.}\) We first observe that each of these numbers is distinct modulo \(p\text{;}\) that is, for each \(c,d\in \mathbb{Z}/p\text{,}\) one has \(ca = da\mod p\) if and only if \(c=d\text{.}\) This follows from <a class="xref" data-knowl="./knowl/p_xa_ya-x_a.html" title="Proposition 9.1.6">Proposition 9.1.6</a>.</p>
+<p>If \(\overline{a},\overline{2a}, \dots, \overline{(p-1)a}\) are the remainders of \(a,2a,\dots,(p-1)a\) after dividing by \(p\text{,}\) then we deduce that the sets \(\{\overline{a},\overline{2a}, \dots, \overline{(p-1)a}\}\) and \(\{1,2,\dots,p-1\}\) are equal Consequently,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-|x_{n_{1}}-L|\lt 1\text{.}
+a\cdot 2a \cdots (p-1)a = \overline{a}\cdot\overline{2a}\cdot \cdots\cdot \overline{(p-1)a} = 1\cdot 2 \cdots \cdot (p-1) \mod p\text{.}
 \end{equation*}
 </div>
-<p>By our assumption again (now with \(\epsilon=\frac{1}{2}\) and \(N=n_{1}+1\)) we can find \(n_2&gt;n_1\) so that</p>
+<p>Thus</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-|x_{n_{2}}-L|\lt \frac{1}{2}\text{.}
+(p-1)!a^{p-1} = (p-1)!\mod p\text{.}
 \end{equation*}
 </div>
-<p>Now suppose we have picked \(n_{k-1}\) for some integer \(k\geq 2\text{.}\) Using the same logic, we can find \(n_{k}&gt;n_{k-1}\) so that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-|x_{n_{k}}-L|\lt \frac{1}{k}\text{.}\tag{9.6.1}
-\end{equation}
-</div>
-<p>If we continue in this way, we get a sequence of integers \(n_1\lt n_2\lt \cdots\) so that <a class="xref" data-knowl="./knowl/e_xn-L_1_k.html" title="Equation 9.6.1">(9.6.1)</a> holds for all \(k\text{.}\) This means \(x_{n_k}\rightarrow L\text{:}\) For \(\epsilon&gt;0\text{,}\) if \(N=\frac{1}{\epsilon}\text{,}\) then for \(k&gt; N\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-|x_{n_{k}}-L|\lt \frac{1}{k}\lt  \frac{1}{N}=\epsilon\text{,}
-\end{equation*}
-</div>
-<p class="continuation">which implies \(x_{n_k}\rightarrow L\text{.}\)</p></article><span class="incontext"><a href="subsequences.html#proof-50">in-context</a></span>
+<p>Now since \(p\) does not divide \((p-1)!\text{,}\) <a class="xref" data-knowl="./knowl/p_xa_ya-x_a.html" title="Proposition 9.1.6">Proposition 9.1.6</a> implies that \(a^{p-1} = 1 \mod p\text{,}\) as desired.</p></article><span class="incontext"><a href="Fermatlittle.html#proof-50">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:15+01:00       *-->
+<!--*       on 2021-10-18T13:48:15+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(a\in\mathbb{N}\) and \(b\in\mathbb{Z}\text{.}\) There are unique integers \(q\in \mathbb{Z}\) and \(0\leq r\lt a\) such that</p>
+<p>We claim that \(\lim_{n\rightarrow\infty}\frac{5n^2+2n}{n^2+4}=5\text{.}\) Let \(\epsilon\) be any positive real number. We need to show that there is \(N\in\RR\) so that \(n&gt; N\) implies \(\left|\frac{5n^2+2n}{n^2+4}-5\right|\lt \epsilon\text{.}\) We assert that \(N=\max\left\{\frac{4}{\epsilon}, \sqrt{\frac{40}{\epsilon}}\right\}\) works. Indeed, if \(n&gt; N\text{,}\) then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-b=qa+r\text{.}
+\left|\frac{5n^2+2n}{n^2+4}-5\right| \leq \left| \frac{2n-20}{n^2+4} \right| \leq \frac{2n}{n^2 + 4} + \frac{20}{n^2 + 4} \leq \frac{2}{n} + \frac{20}{n^2} \lt  \frac{2}{N} + \frac{20}{N^2} \leq \frac{\epsilon}{2}+ \frac{\epsilon}{2} = \epsilon\text{.}
 \end{equation*}
 </div>
-<span class="incontext"><a href="remainders.html#p-547">in-context</a></span>
+<p class="continuation">Since we have shown we can find such an \(N\) no matter what \(\epsilon&gt;0\) we started with, this proves the claim.</p>
+<span class="incontext"><a href="epsilondefinitionoflimit.html#p-547">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:11+01:00       *-->
+<!--*       on 2021-10-18T13:48:11+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -460,7 +460,16 @@
 <li><a href="ineqhandin.html" data-scroll="ineqhandin">Week 4 exercises, due 19 October 2021</a></li>
 </ul>
 </li>
-<li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a></li>
+<li class="link">
+<a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a><ul>
+<li><a href="epsilondefinitionoflimit.html" data-scroll="epsilondefinitionoflimit">Sequences and the definition of limit</a></li>
+<li><a href="rulesforlimits.html" data-scroll="rulesforlimits">Rules for Limits</a></li>
+<li><a href="infinitelimits.html" data-scroll="infinitelimits">Infinite limits</a></li>
+<li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection">The Monotone Convergence Theorem</a></li>
+<li><a href="subsequences.html" data-scroll="subsequences">Subsequences</a></li>
+<li><a href="cauchysequences.html" data-scroll="cauchysequences">Cauchy sequences</a></li>
+</ul>
+</li>
 <li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
 <li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a></li>
 <li class="link">
@@ -492,59 +501,59 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="euclideanalgo"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.2</span> <span class="title">The GCD and the Euclidean Algorithm</span>
 </h2>
-<article class="definition definition-like" id="definition-37"><h6 class="heading">
+<article class="definition definition-like" id="definition-43"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-557">Let \(a\) and \(b\) be two nonzero integers. A <dfn class="terminology">common divisor</dfn> or <dfn class="terminology">common factor</dfn> of \(a\) and \(b\) is an integer \(d \in \N\) such that \(d\) divides both \(a\) and \(b\text{.}\) The <dfn class="terminology">greatest common divisor</dfn> (AKA the <dfn class="terminology">highest common factor</dfn>) of \(a\) and \(b\) is the <dfn class="terminology">largest</dfn> common divisor of \(a\) and \(b\text{.}\) We denote this integer \(d\) by \(\gcd(a,b)\) (you may also see the notation \(\mathrm{hcf}(a,b)\text{.}\)</p>
-<p id="p-558">If \(\gcd(a,b)=1\text{,}\) then we say that \(a\) and \(b\) are said to be <dfn class="terminology">coprime</dfn> or <dfn class="terminology">relatively prime</dfn>.</p></article><p id="p-559">Thus \(a\) and \(b\) are coprime if and only if their only (positive) common divisor is \(1\text{.}\)</p>
-<article class="example example-like" id="example-55"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-55"><h6 class="heading">
+<p id="p-661">Let \(a\) and \(b\) be two nonzero integers. A <dfn class="terminology">common divisor</dfn> or <dfn class="terminology">common factor</dfn> of \(a\) and \(b\) is an integer \(d \in \N\) such that \(d\) divides both \(a\) and \(b\text{.}\) The <dfn class="terminology">greatest common divisor</dfn> (AKA the <dfn class="terminology">highest common factor</dfn>) of \(a\) and \(b\) is the <dfn class="terminology">largest</dfn> common divisor of \(a\) and \(b\text{.}\) We denote this integer \(d\) by \(\gcd(a,b)\) (you may also see the notation \(\mathrm{hcf}(a,b)\text{.}\)</p>
+<p id="p-662">If \(\gcd(a,b)=1\text{,}\) then we say that \(a\) and \(b\) are said to be <dfn class="terminology">coprime</dfn> or <dfn class="terminology">relatively prime</dfn>.</p></article><p id="p-663">Thus \(a\) and \(b\) are coprime if and only if their only (positive) common divisor is \(1\text{.}\)</p>
+<article class="example example-like" id="example-63"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-63"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-55"><article class="example example-like"><p id="p-560">\(\gcd(15,45)=15\text{,}\) \(\gcd(6,15)=3\text{,}\) and \(\gcd(17,91)=1\text{.}\)</p></article></div>
-<article class="example example-like" id="example-56"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-56"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-63"><article class="example example-like"><p id="p-664">\(\gcd(15,45)=15\text{,}\) \(\gcd(6,15)=3\text{,}\) and \(\gcd(17,91)=1\text{.}\)</p></article></div>
+<article class="example example-like" id="example-64"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-64"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-56"><article class="example example-like"><p id="p-561">We allow ourselves the flexibility to speak of the gcd of negative integers as well as positive ones, but we notice that</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-64"><article class="example example-like"><p id="p-665">We allow ourselves the flexibility to speak of the gcd of negative integers as well as positive ones, but we notice that</p>
 <div class="displaymath">
 \begin{equation*}
 \gcd(a,b) = \gcd(a,-b) = \gcd(-a,b) = \gcd(-a,-b)\text{.}
 \end{equation*}
 </div>
-<p id="p-562">(So for instance \(\gcd(-6,-27) = \gcd(6, 27) = 3\text{.}\)) As a result, we will mostly focus on the gcd of natural numbers.</p></article></div>
-<p id="p-563">For a prime \(p&gt;1\) and any integer \(n\text{,}\) we have:</p>
+<p id="p-666">(So for instance \(\gcd(-6,-27) = \gcd(6, 27) = 3\text{.}\)) As a result, we will mostly focus on the gcd of natural numbers.</p></article></div>
+<p id="p-667">For a prime \(p&gt;1\) and any integer \(n\text{,}\) we have:</p>
 <div class="displaymath">
 \begin{align*}
 \end{align*}
 </div>
-<article class="definition definition-like" id="definition-38"><h6 class="heading">
+<article class="definition definition-like" id="definition-44"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.2.4</span><span class="period">.</span>
 </h6>
-<p id="p-564">Let \(a\) and \(b\) be integers. An <dfn class="terminology">integer linear combination</dfn> of \(a\) and \(b\) is an integer of the form \(ma + nb\) for some \(m,n \in \Z\text{.}\)</p></article><p id="p-565">Notice that a linear combination of linear combinations is a linear combination. That is, if \(c\) and \(b\) are each linear combinations of \(a\) and \(b\text{,}\) then for some integers \(m\text{,}\) \(n\text{,}\) \(p\text{,}\) and \(q\text{,}\) we have \(c = m a + n b\) and \(d = p a + q b\text{.}\) If we form a linear combination of \(c\) and \(d\text{,}\) we get</p>
+<p id="p-668">Let \(a\) and \(b\) be integers. An <dfn class="terminology">integer linear combination</dfn> of \(a\) and \(b\) is an integer of the form \(ma + nb\) for some \(m,n \in \Z\text{.}\)</p></article><p id="p-669">Notice that a linear combination of linear combinations is a linear combination. That is, if \(c\) and \(b\) are each linear combinations of \(a\) and \(b\text{,}\) then for some integers \(m\text{,}\) \(n\text{,}\) \(p\text{,}\) and \(q\text{,}\) we have \(c = m a + n b\) and \(d = p a + q b\text{.}\) If we form a linear combination of \(c\) and \(d\text{,}\) we get</p>
 <div class="displaymath">
 \begin{equation*}
 r c + s d = (rm+sp)a + (rn+sq)b\text{,}
 \end{equation*}
 </div>
 <p class="continuation">which is a linear combination of \(a\) and \(b\text{.}\)</p>
-<p id="p-566">A little trick that we will use repeatedly is the observation that common divisors of two integers are also divisors of linear combinations of those integers:</p>
+<p id="p-670">A little trick that we will use repeatedly is the observation that common divisors of two integers are also divisors of linear combinations of those integers:</p>
 <article class="lemma theorem-like" id="l_easy-lemma"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Linear Combination Lemma.</span>
 </h6>
-<p id="p-567">Let \(a\text{,}\) \(b\text{,}\) and \(d\) be integers. If \(d\) divides both \(a\) and \(b\text{,}\) then \(d\) divides every integer linear combination of \(a\) and \(b\text{.}\) In other words, for every pair of integers \(m,n\in\mathbb{Z}\text{,}\) the integer \(d\) also divides \(ma + nb\text{.}\)</p></article><article class="hiddenproof" id="proof-21"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-21"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof"><p id="p-568">Since \(d\) divides \(a\) and \(d\) divides \(b\text{,}\) there are integers \(s\) and \(t\) so that \(a=sd\) and \(b=td\text{.}\) Hence</p>
+<p id="p-671">Let \(a\text{,}\) \(b\text{,}\) and \(d\) be integers. If \(d\) divides both \(a\) and \(b\text{,}\) then \(d\) divides every integer linear combination of \(a\) and \(b\text{.}\) In other words, for every pair of integers \(m,n\in\mathbb{Z}\text{,}\) the integer \(d\) also divides \(ma + nb\text{.}\)</p></article><article class="hiddenproof" id="proof-31"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-31"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><p id="p-672">Since \(d\) divides \(a\) and \(d\) divides \(b\text{,}\) there are integers \(s\) and \(t\) so that \(a=sd\) and \(b=td\text{.}\) Hence</p>
 <div class="displaymath">
 \begin{equation*}
 ma+nb=msd+ntd=(ms+nt)d
 \end{equation*}
 </div>
 <p class="continuation">and so \(d\) divides \(ma+nb\text{.}\)</p></article></div>
-<article class="example example-like" id="example-57"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-57"><h6 class="heading">
+<article class="example example-like" id="example-65"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-65"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-57"><article class="example example-like"><p id="p-569">Let \(a, b \in \Z\text{.}\) If there is a linear combination of \(a\) and \(b\) that gives \(1\text{,}\) then \(a\) and \(b\) are coprime. Indeed, if \(m,n \in \Z\) have the property that \(ma+nb = 1\text{,}\) then any common divisor \(d\) of \(a\) and \(b\) must also divide \(1\text{.}\) But then \(d=1\text{,}\) so \(\gcd(a,b)=1\text{.}\)</p>
-<p id="p-570">Here we'll show \(n\) and \(n+1\) are coprime: By the Linear Combination Lemma, \(\gcd(n,n+1)\) divides \((n+1)-n=1\text{,}\) so \(\gcd(n,n+1)\) divides \(1\text{.}\) Thus \(\gcd(n,n+1)=1\text{.}\)</p></article></div>
-<p id="p-571">We can also use it to narrow down the gcd of two numbers:</p>
-<article class="example example-like" id="example-58"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-58"><h6 class="heading">
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-65"><article class="example example-like"><p id="p-673">Let \(a, b \in \Z\text{.}\) If there is a linear combination of \(a\) and \(b\) that gives \(1\text{,}\) then \(a\) and \(b\) are coprime. Indeed, if \(m,n \in \Z\) have the property that \(ma+nb = 1\text{,}\) then any common divisor \(d\) of \(a\) and \(b\) must also divide \(1\text{.}\) But then \(d=1\text{,}\) so \(\gcd(a,b)=1\text{.}\)</p>
+<p id="p-674">Here we'll show \(n\) and \(n+1\) are coprime: By the Linear Combination Lemma, \(\gcd(n,n+1)\) divides \((n+1)-n=1\text{,}\) so \(\gcd(n,n+1)\) divides \(1\text{.}\) Thus \(\gcd(n,n+1)=1\text{.}\)</p></article></div>
+<p id="p-675">We can also use it to narrow down the gcd of two numbers:</p>
+<article class="example example-like" id="example-66"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-66"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-58"><article class="example example-like"><p id="p-572">For \(n\in\mathbb{N}\text{,}\) what is \(\gcd(4n^2-2,2n)?\) Observe that by the Linear Combination Lemma, \(\gcd(4n^2-2,2n)\) divides \((2n)(2n)-(4n^2-2)=2\text{,}\) so the highest common factor of these numbers is either \(1\) or \(2\text{.}\) Since \(2\) divides both \(4n^2-2\) and \(2n\text{,}\) it also divides the \(\gcd\text{,}\) so <a class="xref" data-knowl="./knowl/l_abba.html" title="Lemma 8.1.3">Lemma 8.1.3</a> implies \(\gcd(4n^2-2,2n)=2\text{.}\)</p></article></div>
-<p id="p-573">How do we find the gcd for very large numbers? For this we use the <dfn class="terminology">Euclidean Algorithm</dfn> which exploits the Remainder Theorem and the Linear Combination Lemma.</p>
-<p id="p-574">Let \(a,b\in\N\text{.}\) Let us also assume \(a\lt b\text{.}\) We are going to construct a sequence of nonnegative integers</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-66"><article class="example example-like"><p id="p-676">For \(n\in\mathbb{N}\text{,}\) what is \(\gcd(4n^2-2,2n)?\) Observe that by the Linear Combination Lemma, \(\gcd(4n^2-2,2n)\) divides \((2n)(2n)-(4n^2-2)=2\text{,}\) so the highest common factor of these numbers is either \(1\) or \(2\text{.}\) Since \(2\) divides both \(4n^2-2\) and \(2n\text{,}\) it also divides the \(\gcd\text{,}\) so <a class="xref" data-knowl="./knowl/l_abba.html" title="Lemma 8.1.3">Lemma 8.1.3</a> implies \(\gcd(4n^2-2,2n)=2\text{.}\)</p></article></div>
+<p id="p-677">How do we find the gcd for very large numbers? For this we use the <dfn class="terminology">Euclidean Algorithm</dfn> which exploits the Remainder Theorem and the Linear Combination Lemma.</p>
+<p id="p-678">Let \(a,b\in\N\text{.}\) Let us also assume \(a\lt b\text{.}\) We are going to construct a sequence of nonnegative integers</p>
 <div class="displaymath">
 \begin{equation*}
 0 = r_{n+1} \lt  r_n \lt  \cdots \lt  r_2 \lt  r_1 = a \lt  r_0 = b
@@ -552,16 +561,16 @@ ma+nb=msd+ntd=(ms+nt)d
 </div>
 <p class="continuation">such that for each \(k \in \N\text{,}\) if \(k\leq n\text{,}\) then:</p>
 <ol class="decimal">
-<li id="li-106"><p id="p-575">\(r_{k-1}\) is an integer linear combination of \(r_k\) and \(r_{k+1}\text{,}\) and</p></li>
-<li id="li-107"><p id="p-576">\(r_{k+1}\) is an integer linear combination of \(r_k\) and \(r_{k-1}\text{.}\)</p></li>
+<li id="li-120"><p id="p-679">\(r_{k-1}\) is an integer linear combination of \(r_k\) and \(r_{k+1}\text{,}\) and</p></li>
+<li id="li-121"><p id="p-680">\(r_{k+1}\) is an integer linear combination of \(r_k\) and \(r_{k-1}\text{.}\)</p></li>
 </ol>
-<p id="p-577">If we manage to construct a sequence with these properties, then \(\gcd(a,b)\) will be the natural number \(r_n\text{.}\) Before we perform the construction, let's understand why. The key is the Linear Combination Lemma.</p>
+<p id="p-681">If we manage to construct a sequence with these properties, then \(\gcd(a,b)\) will be the natural number \(r_n\text{.}\) Before we perform the construction, let's understand why. The key is the Linear Combination Lemma.</p>
 <ul class="disc">
-<li id="li-108"><p id="p-578">We first claim that \(\gcd(a,b)\) divides \(r_{n}\text{.}\) Note that \(r_0=b\) and \(r_1=a\) are certainly linear combinations of \(a\) and \(b\text{.}\) Let \(k\in \N\) with \(1\leq k \leq n\text{.}\) If \(r_{k-1}\) and \(r_k\) are each integer linear combinations of \(a\) and \(b\text{,}\) so is \(r_{k+1}\text{.}\) By induction, we conclude that \(r_n\) is a integer linear combination of \(a\) and \(b\text{.}\) Hence it follows from the Linear Combination Lemma that \(\gcd(a,b)\) divides \(r_n\text{.}\)</p></li>
-<li id="li-109"><p id="p-579">On the other hand, we claim that \(r_{n}\) divides \(\gcd(a,b)\text{.}\) This is equivalent to the claim that \(r_n\) is a common divisor of \(a\) and \(b\text{.}\) Note that since \(r_{n+1}=0\text{,}\) it follows that \(r_{n-1}=q_{n+1}r_{n}\) for some \(q_{n+1}\in\Z\text{,}\) so \(r_{n}\) divides \(r_{n-1}\text{.}\) Let \(k\in \N\) with \(k \leq n\text{.}\) Assume that \(r_n\) divides \(r_k\) and \(r_{k+1}\text{;}\) since \(r_{k-1}\) is a linear combination of \(r_k\) and \(r_{k+1}\text{,}\) it follows from the Linear Combination Lemma that \(r_n\) divides \(r_{k-1}\) as well. By induction, we conclude that \(r_n\) divides \(r_1=a\) and \(r_0=b\text{.}\)</p></li>
+<li id="li-122"><p id="p-682">We first claim that \(\gcd(a,b)\) divides \(r_{n}\text{.}\) Note that \(r_0=b\) and \(r_1=a\) are certainly linear combinations of \(a\) and \(b\text{.}\) Let \(k\in \N\) with \(1\leq k \leq n\text{.}\) If \(r_{k-1}\) and \(r_k\) are each integer linear combinations of \(a\) and \(b\text{,}\) so is \(r_{k+1}\text{.}\) By induction, we conclude that \(r_n\) is a integer linear combination of \(a\) and \(b\text{.}\) Hence it follows from the Linear Combination Lemma that \(\gcd(a,b)\) divides \(r_n\text{.}\)</p></li>
+<li id="li-123"><p id="p-683">On the other hand, we claim that \(r_{n}\) divides \(\gcd(a,b)\text{.}\) This is equivalent to the claim that \(r_n\) is a common divisor of \(a\) and \(b\text{.}\) Note that since \(r_{n+1}=0\text{,}\) it follows that \(r_{n-1}=q_{n+1}r_{n}\) for some \(q_{n+1}\in\Z\text{,}\) so \(r_{n}\) divides \(r_{n-1}\text{.}\) Let \(k\in \N\) with \(k \leq n\text{.}\) Assume that \(r_n\) divides \(r_k\) and \(r_{k+1}\text{;}\) since \(r_{k-1}\) is a linear combination of \(r_k\) and \(r_{k+1}\text{,}\) it follows from the Linear Combination Lemma that \(r_n\) divides \(r_{k-1}\) as well. By induction, we conclude that \(r_n\) divides \(r_1=a\) and \(r_0=b\text{.}\)</p></li>
 </ul>
-<p id="p-580">This proves (using <a class="xref" data-knowl="./knowl/l_abba.html" title="Lemma 8.1.3">Lemma 8.1.3</a>) that \(\gcd(a,b)=r_n\text{.}\)</p>
-<p id="p-581">So our goal now is to present an iterative construction of a sequence of nonnegative integers</p>
+<p id="p-684">This proves (using <a class="xref" data-knowl="./knowl/l_abba.html" title="Lemma 8.1.3">Lemma 8.1.3</a>) that \(\gcd(a,b)=r_n\text{.}\)</p>
+<p id="p-685">So our goal now is to present an iterative construction of a sequence of nonnegative integers</p>
 <div class="displaymath">
 \begin{equation*}
 0 = r_{n+1} \lt  r_n \lt  \cdots \lt  r_2 \lt  r_1 = a \lt  r_0 = b
@@ -569,118 +578,118 @@ ma+nb=msd+ntd=(ms+nt)d
 </div>
 <p class="continuation">such that for each \(k \in \N\text{,}\) if \(k\leq n\text{,}\) then</p>
 <ol class="decimal">
-<li id="li-110"><p id="p-582">\(r_{k-1}\) is an integer linear combination of \(r_k\) and \(r_{k+1}\text{,}\) and</p></li>
-<li id="li-111"><p id="p-583">\(r_{k+1}\) is an integer linear combination of \(r_k\) and \(r_{k-1}\text{.}\)</p></li>
+<li id="li-124"><p id="p-686">\(r_{k-1}\) is an integer linear combination of \(r_k\) and \(r_{k+1}\text{,}\) and</p></li>
+<li id="li-125"><p id="p-687">\(r_{k+1}\) is an integer linear combination of \(r_k\) and \(r_{k-1}\text{.}\)</p></li>
 </ol>
-<p id="p-584">To begin the iteration, we set \(r_0 = b\) and \(r_1 = a\text{.}\) To construct the rest of the sequence, assume that for some \(k\in\N\) we have constructed nonnegative integers \(r_k \lt  r_{k-1} \lt  \dots \lt  r_1 \lt  r_0\) with the two properties above. Now use the Remainder Theorem to find an integers \(q_{k+1}\) and \(r_{k+1}\) such that</p>
+<p id="p-688">To begin the iteration, we set \(r_0 = b\) and \(r_1 = a\text{.}\) To construct the rest of the sequence, assume that for some \(k\in\N\) we have constructed nonnegative integers \(r_k \lt  r_{k-1} \lt  \dots \lt  r_1 \lt  r_0\) with the two properties above. Now use the Remainder Theorem to find an integers \(q_{k+1}\) and \(r_{k+1}\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 r_{k-1} = q_{k+1}r_k + r_{k+1}\text{.}
 \end{equation*}
 </div>
-<p id="p-585">Thus \(r_{k-1}\) is a linear combination of \(r_k\) and \(r_{k+1}\text{,}\) but also \(r_{k+1} = r_{k-1} - q_{k+1} r_k\) so \(r_{k+1}\) is a linear combination of \(r_k\) and \(r_{k-1}\text{.}\)</p>
-<p id="p-586">This process must terminate with \(r_{n+1}=0\) for some \(n\text{,}\) since the \(r_{j}\) are nonnegative and strictly decreasing. This completes the construction of the sequence</p>
+<p id="p-689">Thus \(r_{k-1}\) is a linear combination of \(r_k\) and \(r_{k+1}\text{,}\) but also \(r_{k+1} = r_{k-1} - q_{k+1} r_k\) so \(r_{k+1}\) is a linear combination of \(r_k\) and \(r_{k-1}\text{.}\)</p>
+<p id="p-690">This process must terminate with \(r_{n+1}=0\) for some \(n\text{,}\) since the \(r_{j}\) are nonnegative and strictly decreasing. This completes the construction of the sequence</p>
 <div class="displaymath">
 \begin{equation*}
 0 = r_{n+1} \lt  r_n \lt  \cdots \lt  r_2 \lt  r_1 = a \lt  r_0 = b
 \end{equation*}
 </div>
 <p class="continuation">with the desired properties.</p>
-<p id="p-587">Let's watch this algorithm in action.</p>
-<article class="example example-like" id="example-59"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-59"><h6 class="heading">
+<p id="p-691">Let's watch this algorithm in action.</p>
+<article class="example example-like" id="example-67"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-67"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.8</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-59"><article class="example example-like"><p id="p-588">Let \(a = r_1 = 6\) and \(b = r_0 = 15\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-67"><article class="example example-like"><p id="p-692">Let \(a = r_1 = 6\) and \(b = r_0 = 15\text{.}\)</p>
 <ul class="disc">
-<li id="li-112"><p id="p-589">We divide \(15\) by \(6\) to get \(2\) with a remainder of \(r_2=3\text{.}\)</p></li>
-<li id="li-113"><p id="p-590">We divide \(6\) by \(3\) to get \(2\) with a remainder of \(r_3 = 0\text{.}\)</p></li>
+<li id="li-126"><p id="p-693">We divide \(15\) by \(6\) to get \(2\) with a remainder of \(r_2=3\text{.}\)</p></li>
+<li id="li-127"><p id="p-694">We divide \(6\) by \(3\) to get \(2\) with a remainder of \(r_3 = 0\text{.}\)</p></li>
 </ul>
-<p id="p-591">Thus \(r_2 = 3\) is the gcd of \(6\) and \(15\text{.}\)</p></article></div>
-<article class="example example-like" id="example-60"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-60"><h6 class="heading">
+<p id="p-695">Thus \(r_2 = 3\) is the gcd of \(6\) and \(15\text{.}\)</p></article></div>
+<article class="example example-like" id="example-68"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-68"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.9</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-60"><article class="example example-like"><p id="p-592">Let \(a = r_1 = 48\) and \(b = r_0 = 66\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-68"><article class="example example-like"><p id="p-696">Let \(a = r_1 = 48\) and \(b = r_0 = 66\text{.}\)</p>
 <ul class="disc">
-<li id="li-114"><p id="p-593">We divide \(66\) by \(48\) to get \(1\) with a remainder of \(r_2=18\text{.}\)</p></li>
-<li id="li-115"><p id="p-594">We divide \(48\) by \(18\) to get \(2\) with a remainder of \(r_3 = 12\text{.}\)</p></li>
-<li id="li-116"><p id="p-595">We divide \(18\) by \(12\) to get \(1\) with a remainder of \(r_4 = 6\text{.}\)</p></li>
-<li id="li-117"><p id="p-596">We divide \(12\) by \(6\) to get \(2\) with a remainder of \(r_5 = 0\text{.}\)</p></li>
+<li id="li-128"><p id="p-697">We divide \(66\) by \(48\) to get \(1\) with a remainder of \(r_2=18\text{.}\)</p></li>
+<li id="li-129"><p id="p-698">We divide \(48\) by \(18\) to get \(2\) with a remainder of \(r_3 = 12\text{.}\)</p></li>
+<li id="li-130"><p id="p-699">We divide \(18\) by \(12\) to get \(1\) with a remainder of \(r_4 = 6\text{.}\)</p></li>
+<li id="li-131"><p id="p-700">We divide \(12\) by \(6\) to get \(2\) with a remainder of \(r_5 = 0\text{.}\)</p></li>
 </ul>
-<p id="p-597">Thus \(r_4 = 6\) is the gcd of \(48\) and \(66\text{.}\)</p></article></div>
-<article class="example example-like" id="example-61"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-61"><h6 class="heading">
+<p id="p-701">Thus \(r_4 = 6\) is the gcd of \(48\) and \(66\text{.}\)</p></article></div>
+<article class="example example-like" id="example-69"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-69"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.10</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-61"><article class="example example-like"><p id="p-598">Let \(a = r_1 = 120\) and \(b = r_0 = 214\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-69"><article class="example example-like"><p id="p-702">Let \(a = r_1 = 120\) and \(b = r_0 = 214\text{.}\)</p>
 <ul class="disc">
-<li id="li-118"><p id="p-599">We divide \(214\) by \(120\) to get \(1\) with a remainder of \(r_2=94\text{.}\)</p></li>
-<li id="li-119"><p id="p-600">We divide \(120\) by \(94\) to get \(1\) with a remainder of \(r_3 = 26\text{.}\)</p></li>
-<li id="li-120"><p id="p-601">We divide \(94\) by \(26\) to get \(3\) with a remainder of \(r_4 = 16\text{.}\)</p></li>
-<li id="li-121"><p id="p-602">We divide \(26\) by \(16\) to get \(1\) with a remainder of \(r_5 = 10\text{.}\)</p></li>
-<li id="li-122"><p id="p-603">We divide \(16\) by \(10\) to get \(1\) with a remainder of \(r_6 = 6\text{.}\)</p></li>
-<li id="li-123"><p id="p-604">We divide \(10\) by \(6\) to get \(1\) with a remainder of \(r_7 = 4\text{.}\)</p></li>
-<li id="li-124"><p id="p-605">We divide \(6\) by \(4\) to get \(1\) with a remainder of \(r_8 = 2\text{.}\)</p></li>
-<li id="li-125"><p id="p-606">We divide \(4\) by \(2\) to get \(2\) with a remainder of \(r_9 = 0\text{.}\)</p></li>
+<li id="li-132"><p id="p-703">We divide \(214\) by \(120\) to get \(1\) with a remainder of \(r_2=94\text{.}\)</p></li>
+<li id="li-133"><p id="p-704">We divide \(120\) by \(94\) to get \(1\) with a remainder of \(r_3 = 26\text{.}\)</p></li>
+<li id="li-134"><p id="p-705">We divide \(94\) by \(26\) to get \(3\) with a remainder of \(r_4 = 16\text{.}\)</p></li>
+<li id="li-135"><p id="p-706">We divide \(26\) by \(16\) to get \(1\) with a remainder of \(r_5 = 10\text{.}\)</p></li>
+<li id="li-136"><p id="p-707">We divide \(16\) by \(10\) to get \(1\) with a remainder of \(r_6 = 6\text{.}\)</p></li>
+<li id="li-137"><p id="p-708">We divide \(10\) by \(6\) to get \(1\) with a remainder of \(r_7 = 4\text{.}\)</p></li>
+<li id="li-138"><p id="p-709">We divide \(6\) by \(4\) to get \(1\) with a remainder of \(r_8 = 2\text{.}\)</p></li>
+<li id="li-139"><p id="p-710">We divide \(4\) by \(2\) to get \(2\) with a remainder of \(r_9 = 0\text{.}\)</p></li>
 </ul>
-<p id="p-607">Thus \(r_8 = 2\) is the gcd of \(120\) and \(214\text{.}\)</p></article></div>
-<article class="example example-like" id="example-62"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-62"><h6 class="heading">
+<p id="p-711">Thus \(r_8 = 2\) is the gcd of \(120\) and \(214\text{.}\)</p></article></div>
+<article class="example example-like" id="example-70"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-70"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.11</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-62"><article class="example example-like"><p id="p-608">Let \(a = r_1 = 14\) and \(b = r_0 = 348\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-70"><article class="example example-like"><p id="p-712">Let \(a = r_1 = 14\) and \(b = r_0 = 348\text{.}\)</p>
 <ul class="disc">
-<li id="li-126"><p id="p-609">We divide \(348\) by \(14\) to get \(24\) with a remainder of \(r_2=12\text{.}\)</p></li>
-<li id="li-127"><p id="p-610">We divide \(14\) by \(12\) to get \(1\) with a remainder of \(r_3 = 2\text{.}\)</p></li>
-<li id="li-128"><p id="p-611">We divide \(12\) by \(2\) to get \(6\) with a remainder of \(r_4 = 0\text{.}\)</p></li>
+<li id="li-140"><p id="p-713">We divide \(348\) by \(14\) to get \(24\) with a remainder of \(r_2=12\text{.}\)</p></li>
+<li id="li-141"><p id="p-714">We divide \(14\) by \(12\) to get \(1\) with a remainder of \(r_3 = 2\text{.}\)</p></li>
+<li id="li-142"><p id="p-715">We divide \(12\) by \(2\) to get \(6\) with a remainder of \(r_4 = 0\text{.}\)</p></li>
 </ul>
-<p id="p-612">Thus \(r_3 = 2\) is the gcd of \(14\) and \(348\text{.}\)</p></article></div>
-<article class="example example-like" id="example-63"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-63"><h6 class="heading">
+<p id="p-716">Thus \(r_3 = 2\) is the gcd of \(14\) and \(348\text{.}\)</p></article></div>
+<article class="example example-like" id="example-71"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-71"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.12</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-63"><article class="example example-like"><p id="p-613">Let \(a = r_1 = 2059\) and \(b = r_0 = 6744\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-71"><article class="example example-like"><p id="p-717">Let \(a = r_1 = 2059\) and \(b = r_0 = 6744\text{.}\)</p>
 <ul class="disc">
-<li id="li-129"><p id="p-614">We divide \(6744\) by \(2059\) to get \(3\) with a remainder of \(r_2=567\text{.}\)</p></li>
-<li id="li-130"><p id="p-615">We divide \(2059\) by \(567\) to get \(3\) with a remainder of \(r_3 = 358\text{.}\)</p></li>
-<li id="li-131"><p id="p-616">We divide \(567\) by \(358\) to get \(1\) with a remainder of \(r_4 = 209\text{.}\)</p></li>
-<li id="li-132"><p id="p-617">We divide \(358\) by \(209\) to get \(1\) with a remainder of \(r_5 = 149\text{.}\)</p></li>
-<li id="li-133"><p id="p-618">We divide \(209\) by \(149\) to get \(1\) with a remainder of \(r_6 = 60\text{.}\)</p></li>
-<li id="li-134"><p id="p-619">We divide \(149\) by \(60\) to get \(2\) with a remainder of \(r_7 = 29\text{.}\)</p></li>
-<li id="li-135"><p id="p-620">We divide \(60\) by \(29\) to get \(2\) with a remainder of \(r_8 = 2\text{.}\)</p></li>
-<li id="li-136"><p id="p-621">We divide \(29\) by \(2\) to get \(14\) with a remainder of \(r_9 = 1\text{.}\)</p></li>
-<li id="li-137"><p id="p-622">We divide \(2\) by \(1\) to get \(2\) with a remainder of \(r_{10} = 0\text{.}\)</p></li>
+<li id="li-143"><p id="p-718">We divide \(6744\) by \(2059\) to get \(3\) with a remainder of \(r_2=567\text{.}\)</p></li>
+<li id="li-144"><p id="p-719">We divide \(2059\) by \(567\) to get \(3\) with a remainder of \(r_3 = 358\text{.}\)</p></li>
+<li id="li-145"><p id="p-720">We divide \(567\) by \(358\) to get \(1\) with a remainder of \(r_4 = 209\text{.}\)</p></li>
+<li id="li-146"><p id="p-721">We divide \(358\) by \(209\) to get \(1\) with a remainder of \(r_5 = 149\text{.}\)</p></li>
+<li id="li-147"><p id="p-722">We divide \(209\) by \(149\) to get \(1\) with a remainder of \(r_6 = 60\text{.}\)</p></li>
+<li id="li-148"><p id="p-723">We divide \(149\) by \(60\) to get \(2\) with a remainder of \(r_7 = 29\text{.}\)</p></li>
+<li id="li-149"><p id="p-724">We divide \(60\) by \(29\) to get \(2\) with a remainder of \(r_8 = 2\text{.}\)</p></li>
+<li id="li-150"><p id="p-725">We divide \(29\) by \(2\) to get \(14\) with a remainder of \(r_9 = 1\text{.}\)</p></li>
+<li id="li-151"><p id="p-726">We divide \(2\) by \(1\) to get \(2\) with a remainder of \(r_{10} = 0\text{.}\)</p></li>
 </ul>
-<p id="p-623">Thus \(r_9 = 1\) is the gcd of \(2059\) and \(6744\text{.}\) In particular, \(2059\) and \(6744\) are coprime.</p></article></div>
-<p id="p-624">One important corollary of the Euclidean Algorithm is the following.</p>
+<p id="p-727">Thus \(r_9 = 1\) is the gcd of \(2059\) and \(6744\text{.}\) In particular, \(2059\) and \(6744\) are coprime.</p></article></div>
+<p id="p-728">One important corollary of the Euclidean Algorithm is the following.</p>
 <article class="theorem theorem-like" id="t_lincombgcd"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Bezout’s  Identity.</span>
 </h6>
-<p id="p-625">Let \(a\) and \(b\) be integers. Then \(\gcd(a,b)\) is an integer linear combination of \(a\) and \(b\text{.}\) That is, there are integers \(s\) and \(t\) so that \(\gcd(a,b)=sa+tb\text{.}\)</p></article><p id="p-626">Let's revisit some of the examples above to find the \(s\) and \(t\text{.}\)</p>
-<article class="example example-like" id="example-64"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-64"><h6 class="heading">
+<p id="p-729">Let \(a\) and \(b\) be integers. Then \(\gcd(a,b)\) is an integer linear combination of \(a\) and \(b\text{.}\) That is, there are integers \(s\) and \(t\) so that \(\gcd(a,b)=sa+tb\text{.}\)</p></article><p id="p-730">Let's revisit some of the examples above to find the \(s\) and \(t\text{.}\)</p>
+<article class="example example-like" id="example-72"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-72"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.14</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-64"><article class="example example-like"><p id="p-627">Let \(a = r_1 = 6\) and \(b = r_0 = 15\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-72"><article class="example example-like"><p id="p-731">Let \(a = r_1 = 6\) and \(b = r_0 = 15\text{.}\)</p>
 <ul class="disc">
-<li id="li-138"><p id="p-628">We divide \(15\) by \(6\) to get \(2\) with a remainder of \(r_2=3\text{.}\)</p></li>
-<li id="li-139"><p id="p-629">We divide \(6\) by \(3\) to get \(2\) with a remainder of \(r_3 = 0\text{.}\)</p></li>
+<li id="li-152"><p id="p-732">We divide \(15\) by \(6\) to get \(2\) with a remainder of \(r_2=3\text{.}\)</p></li>
+<li id="li-153"><p id="p-733">We divide \(6\) by \(3\) to get \(2\) with a remainder of \(r_3 = 0\text{.}\)</p></li>
 </ul>
-<p id="p-630">Thus \(\gcd(6,15) = 3 = 15-2\cdot 6\text{.}\)</p></article></div>
-<article class="example example-like" id="example-65"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-65"><h6 class="heading">
+<p id="p-734">Thus \(\gcd(6,15) = 3 = 15-2\cdot 6\text{.}\)</p></article></div>
+<article class="example example-like" id="example-73"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-73"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.15</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-65"><article class="example example-like"><p id="p-631">Let \(a = r_1 = 48\) and \(b = r_0 = 66\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-73"><article class="example example-like"><p id="p-735">Let \(a = r_1 = 48\) and \(b = r_0 = 66\text{.}\)</p>
 <ul class="disc">
-<li id="li-140"><p id="p-632">We divide \(66\) by \(48\) to get \(1\) with a remainder of \(r_2=18\text{.}\)</p></li>
-<li id="li-141"><p id="p-633">We divide \(48\) by \(18\) to get \(2\) with a remainder of \(r_3 = 12\text{.}\)</p></li>
-<li id="li-142"><p id="p-634">We divide \(18\) by \(12\) to get \(1\) with a remainder of \(r_4 = 6\text{.}\)</p></li>
-<li id="li-143"><p id="p-635">We divide \(12\) by \(6\) to get \(2\) with a remainder of \(r_5 = 0\text{.}\)</p></li>
+<li id="li-154"><p id="p-736">We divide \(66\) by \(48\) to get \(1\) with a remainder of \(r_2=18\text{.}\)</p></li>
+<li id="li-155"><p id="p-737">We divide \(48\) by \(18\) to get \(2\) with a remainder of \(r_3 = 12\text{.}\)</p></li>
+<li id="li-156"><p id="p-738">We divide \(18\) by \(12\) to get \(1\) with a remainder of \(r_4 = 6\text{.}\)</p></li>
+<li id="li-157"><p id="p-739">We divide \(12\) by \(6\) to get \(2\) with a remainder of \(r_5 = 0\text{.}\)</p></li>
 </ul>
-<p id="p-636">Thus \(\gcd(48,66) = 6 = 18-12 = 3\cdot 18-48 = 3\cdot 66 -4\cdot 48\text{.}\)</p></article></div>
-<article class="example example-like" id="example-66"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-66"><h6 class="heading">
+<p id="p-740">Thus \(\gcd(48,66) = 6 = 18-12 = 3\cdot 18-48 = 3\cdot 66 -4\cdot 48\text{.}\)</p></article></div>
+<article class="example example-like" id="example-74"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-74"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.16</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-66"><article class="example example-like"><p id="p-637">Let \(a = r_1 = 2059\) and \(b = r_0 = 6744\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-74"><article class="example example-like"><p id="p-741">Let \(a = r_1 = 2059\) and \(b = r_0 = 6744\text{.}\)</p>
 <ul class="disc">
-<li id="li-144"><p id="p-638">We divide \(6744\) by \(2059\) to get \(3\) with a remainder of \(r_2=567\text{.}\)</p></li>
-<li id="li-145"><p id="p-639">We divide \(2059\) by \(567\) to get \(3\) with a remainder of \(r_3 = 358\text{.}\)</p></li>
-<li id="li-146"><p id="p-640">We divide \(567\) by \(358\) to get \(1\) with a remainder of \(r_4 = 209\text{.}\)</p></li>
-<li id="li-147"><p id="p-641">We divide \(358\) by \(209\) to get \(1\) with a remainder of \(r_5 = 149\text{.}\)</p></li>
-<li id="li-148"><p id="p-642">We divide \(209\) by \(149\) to get \(1\) with a remainder of \(r_6 = 60\text{.}\)</p></li>
-<li id="li-149"><p id="p-643">We divide \(149\) by \(60\) to get \(2\) with a remainder of \(r_7 = 29\text{.}\)</p></li>
-<li id="li-150"><p id="p-644">We divide \(60\) by \(29\) to get \(2\) with a remainder of \(r_8 = 2\text{.}\)</p></li>
-<li id="li-151"><p id="p-645">We divide \(29\) by \(2\) to get \(14\) with a remainder of \(r_9 = 1\text{.}\)</p></li>
-<li id="li-152"><p id="p-646">We divide \(2\) by \(1\) to get \(2\) with a remainder of \(r_{10} = 0\text{.}\)</p></li>
+<li id="li-158"><p id="p-742">We divide \(6744\) by \(2059\) to get \(3\) with a remainder of \(r_2=567\text{.}\)</p></li>
+<li id="li-159"><p id="p-743">We divide \(2059\) by \(567\) to get \(3\) with a remainder of \(r_3 = 358\text{.}\)</p></li>
+<li id="li-160"><p id="p-744">We divide \(567\) by \(358\) to get \(1\) with a remainder of \(r_4 = 209\text{.}\)</p></li>
+<li id="li-161"><p id="p-745">We divide \(358\) by \(209\) to get \(1\) with a remainder of \(r_5 = 149\text{.}\)</p></li>
+<li id="li-162"><p id="p-746">We divide \(209\) by \(149\) to get \(1\) with a remainder of \(r_6 = 60\text{.}\)</p></li>
+<li id="li-163"><p id="p-747">We divide \(149\) by \(60\) to get \(2\) with a remainder of \(r_7 = 29\text{.}\)</p></li>
+<li id="li-164"><p id="p-748">We divide \(60\) by \(29\) to get \(2\) with a remainder of \(r_8 = 2\text{.}\)</p></li>
+<li id="li-165"><p id="p-749">We divide \(29\) by \(2\) to get \(14\) with a remainder of \(r_9 = 1\text{.}\)</p></li>
+<li id="li-166"><p id="p-750">We divide \(2\) by \(1\) to get \(2\) with a remainder of \(r_{10} = 0\text{.}\)</p></li>
 </ul>
-<p id="p-647">Thus</p>
+<p id="p-751">Thus</p>
 <div class="displaymath">
 \begin{align*}
 \gcd(6744, 2059) = 1 \amp = 29 - 14\cdot 2\\
@@ -693,53 +702,53 @@ r_{k-1} = q_{k+1}r_k + r_{k+1}\text{.}
 \amp = 3259\cdot 2059-995\cdot 6744
 \end{align*}
 </div></article></div>
-<p id="p-648">Bezout's Identity is incredibly useful, even in examples that seem to have nothing to do with the gcd:</p>
-<article class="exercise exercise-like" id="exercise-33"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-33"><h6 class="heading">
+<p id="p-752">Bezout's Identity is incredibly useful, even in examples that seem to have nothing to do with the gcd:</p>
+<article class="exercise exercise-like" id="exercise-35"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-35"><h6 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">8.2.17</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-33"><article class="exercise exercise-like"><p id="p-649">Let \(a\) and \(b\) be coprime integers. Show that</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-35"><article class="exercise exercise-like"><p id="p-753">Let \(a\) and \(b\) be coprime integers. Show that</p>
 <ul class="disc">
-<li id="li-153">
+<li id="li-167">
 <h6 class="heading"><span class="title">(i).</span></h6>
-<p id="p-650">If \(a\) divides \(c\) and \(b\) divides \(c\) then \(ab\) divides \(c\text{.}\)</p>
+<p id="p-754">If \(a\) divides \(c\) and \(b\) divides \(c\) then \(ab\) divides \(c\text{.}\)</p>
 </li>
-<li id="li-154">
+<li id="li-168">
 <h6 class="heading"><span class="title">(ii).</span></h6>
-<p id="p-651">If \(a\) divides \(bc\) then \(a\) divides \(c\text{.}\)</p>
+<p id="p-755">If \(a\) divides \(bc\) then \(a\) divides \(c\text{.}\)</p>
 </li>
 </ul>
-<p id="p-652">Show that both parts of this result can fail if \(a\) and \(b\) are not coprime.</p>
+<p id="p-756">Show that both parts of this result can fail if \(a\) and \(b\) are not coprime.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-17" id="solution-17"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-17"><div class="solution solution-like"><ul class="disc">
-<li id="li-155">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-19" id="solution-19"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-19"><div class="solution solution-like"><ul class="disc">
+<li id="li-169">
 <h6 class="heading"><span class="title">(i).</span></h6>
-<p id="p-653">Since \(a\) and \(b\) are coprime, we can find integers \(s\) and \(t\) so that \(sa + tb = 1\text{.}\) If \(a\) divides \(c\) then we can write \(c = ax\text{,}\) and if \(b\) divides \(c\) then we can write \(c = by\) for some \(x,y \in \Z\text{.}\) Then \(c = csa + ctb = (by)sa + (ax)tb = (ab)sy + (ab)xt\text{,}\) so \(ab\) divides \(c\text{.}\)</p>
+<p id="p-757">Since \(a\) and \(b\) are coprime, we can find integers \(s\) and \(t\) so that \(sa + tb = 1\text{.}\) If \(a\) divides \(c\) then we can write \(c = ax\text{,}\) and if \(b\) divides \(c\) then we can write \(c = by\) for some \(x,y \in \Z\text{.}\) Then \(c = csa + ctb = (by)sa + (ax)tb = (ab)sy + (ab)xt\text{,}\) so \(ab\) divides \(c\text{.}\)</p>
 </li>
-<li id="li-156">
+<li id="li-170">
 <h6 class="heading"><span class="title">(ii).</span></h6>
-<p id="p-654">As in (i), \(c = csa + ctb\text{.}\) If \(a\) divides \(bc\) then write \(az = bc\) for some integer \(z\text{,}\) and then we have \(c = csa + t(az) = a(cs + tz)\text{,}\) so \(a\) divides \(c\text{.}\)</p>
+<p id="p-758">As in (i), \(c = csa + ctb\text{.}\) If \(a\) divides \(bc\) then write \(az = bc\) for some integer \(z\text{,}\) and then we have \(c = csa + t(az) = a(cs + tz)\text{,}\) so \(a\) divides \(c\text{.}\)</p>
 </li>
 </ul></div></div>
 </div></article></div>
-<article class="exercise exercise-like" id="exercise-34"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-34"><h6 class="heading">
+<article class="exercise exercise-like" id="exercise-36"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-36"><h6 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">8.2.18</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-34"><article class="exercise exercise-like"><p id="p-655">Show that if \(a, b\) are postive integers, and \(d=gcd(a,b)\) then there exist positive integers \(s,
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-36"><article class="exercise exercise-like"><p id="p-759">Show that if \(a, b\) are postive integers, and \(d=gcd(a,b)\) then there exist positive integers \(s,
 t\) such that \(d=sa-tb\text{.}\) <em class="emphasis">Note:</em> that this exercise differs from Bezout’s Identity, in that we ask \(s, t\) to be <em class="emphasis">positive</em>.</p>
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-18" id="solution-18"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-18"><div class="solution solution-like">
-<p id="p-656"><em class="emphasis">Claim</em>: If \(a,b\) are positive integers and \(d=gcd(a,b)\text{,}\) we can find positive integers \(s,
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-20" id="solution-20"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-20"><div class="solution solution-like">
+<p id="p-760"><em class="emphasis">Claim</em>: If \(a,b\) are positive integers and \(d=gcd(a,b)\text{,}\) we can find positive integers \(s,
 t \in\mathbb{Z}\) such that \(d=sa-tb\text{.}\)</p>
-<article class="hiddenproof" id="proof-22"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof"><p id="p-657">By the Euclidean algorithm, we can find integers \(s,t\in\mathbb{Z}\text{,}\) such that</p>
+<article class="hiddenproof" id="proof-32"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><p id="p-761">By the Euclidean algorithm, we can find integers \(s,t\in\mathbb{Z}\text{,}\) such that</p>
 <div class="displaymath">
 \begin{equation}
 d=sa+tb\label{gcdeqn}\tag{8.2.1}
 \end{equation}
 </div>
-<p id="p-658">Since \(0\lt d\leq a,b\text{,}\) at most one of \(s\) and \(t\) can be positive, and at most one can be non-positive (i.e. zero or negative). If it happens that \(t\) is negative, then we will have produced the desired expression for \(d\) (by writing \(d=sa - (-t)b\)).</p>
-<p id="p-659">In case \(t\) is non-negative, we can apply the following observation:</p>
+<p id="p-762">Since \(0\lt d\leq a,b\text{,}\) at most one of \(s\) and \(t\) can be positive, and at most one can be non-positive (i.e. zero or negative). If it happens that \(t\) is negative, then we will have produced the desired expression for \(d\) (by writing \(d=sa - (-t)b\)).</p>
+<p id="p-763">In case \(t\) is non-negative, we can apply the following observation:</p>
 <article class="lemma theorem-like" id="lemma-6"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.2.19</span><span class="period">.</span>
 </h6>
-<p id="p-660">The integers \(s\) and \(t\) satisfy Equation <a class="xref" data-knowl="./knowl/gcdeqn.html" title="Equation 8.2.1">(8.2.1)</a> if, and only if, the integers \(s+kb\) and \(t-ka\) do as well, for any integer \(k\text{.}\)</p></article><article class="hiddenproof" id="proof-23"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><p id="p-661">We have \((s+kb)a + (t-ka)b = sa+tb\text{,}\) simply by expanding the LHS, so one finds the same condition for both pairs.</p></article></div>
-<p id="p-662">Choosing \(k\) sufficiently large, we can replace \(t\) by \(t-ka\) so that it is negative. It follows then that \(s+kb\) is positive.</p></article></div>
+<p id="p-764">The integers \(s\) and \(t\) satisfy Equation <a class="xref" data-knowl="./knowl/gcdeqn.html" title="Equation 8.2.1">(8.2.1)</a> if, and only if, the integers \(s+kb\) and \(t-ka\) do as well, for any integer \(k\text{.}\)</p></article><article class="hiddenproof" id="proof-33"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><p id="p-765">We have \((s+kb)a + (t-ka)b = sa+tb\text{,}\) simply by expanding the LHS, so one finds the same condition for both pairs.</p></article></div>
+<p id="p-766">Choosing \(k\) sufficiently large, we can replace \(t\) by \(t-ka\) so that it is negative. It follows then that \(s+kb\) is positive.</p></article></div>
 </div></div></article></div></section></div></main>
 </div>
 </body>

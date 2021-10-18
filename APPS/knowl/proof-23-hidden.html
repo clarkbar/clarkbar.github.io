@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:16+01:00       *-->
+<!--*       on 2021-10-18T13:48:15+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,5 +13,40 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>We have \((s+kb)a + (t-ka)b = sa+tb\text{,}\) simply by expanding the LHS, so one finds the same condition for both pairs.</p></article></body>
+<body><article class="hiddenproof"><ol class="lower-alpha">
+<li>
+<p>Suppose for a contradiction that \(x&gt;y\text{.}\) Take \(\epsilon = (x-y)/2 &gt; 0\text{.}\) Since \(x_{n}\rightarrow x\text{,}\) there is \(N_{1}\) so that \(n &gt; N_{1}\) implies</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x-\frac{x-y}{2}\lt x_{n}\lt x+\frac{x-y}{2}
+\end{equation*}
+</div>
+<p class="continuation">and in particular</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{x+y}{2}\lt x_{n}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Similarly, since \(y_{n}\rightarrow y\text{,}\) there is \(N_{2}\) so that \(n &gt; N_{2}\) implies</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+y-\frac{x-y}{2}\lt y_{n}\lt y+\frac{x-y}{2}
+\end{equation*}
+</div>
+<p class="continuation">and in particular</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+y_{n}\lt \frac{x+y}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Therefore, for all \(n&gt;  \max\{N_{1},N_{2}\}\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{x+y}{2}\lt x_{n} \leq y_n \lt  \frac{x+y}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">which gives the desired contradiction.</p>
+</li>
+<li><p>This follows by (a) by letting \(y_{n}=y\) for all \(n\text{.}\)</p></li>
+</ol></article></body>
 </html>

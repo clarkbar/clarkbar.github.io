@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:15+01:00       *-->
+<!--*       on 2021-10-18T13:48:15+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,9 +15,21 @@
 </head>
 <body>
 <article class="definition definition-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.2</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sequences and limits.</span>
 </h6>
-<p>For two integers \(a\) and \(b\) we say <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">\(a\) divides \(b\)</dfn> if there is an integer \(c\) so that \(b=ac\text{.}\)</p>
-<p>Some authors will write \(a | b\) for the sentence “\(a\) divides \(b\text{.}\)” (This isn't great notation.)</p></article><span class="incontext"><a href="remainders.html#definition-36">in-context</a></span>
+<p>A <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">sequence</dfn> of elements of a set \(S\) is a map \(x \colon \NN \to S \text{.}\) For a natural number \(n\text{,}\) we will write \(x_n\) for the value \(x(n)\text{.}\) We will often write the sequence as \((x_n)_{n\geq 1}\) or \((x_n)_{n=1}^{\infty}\) or even just \((x_n)\text{.}\)</p>
+<p>Let \((x_{n})_{n\geq 1}\) be a sequence of real numbers, and let \(L\in \RR\text{.}\) We say that \(x_n\) <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">converges to \(L\)</dfn>, and we write “\(\lim_{n\rightarrow\infty} x_{n}=L\)”, or “\(x_{n}\rightarrow L\) as \(n \rightarrow \infty\)”, if for every \(\epsilon&gt;0\text{,}\) there exists \(N \in \NN\) such that for every \(n \gt N\text{,}\) we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|x_{n}-L|\lt \epsilon\text{,}
+\end{equation*}
+</div>
+<p class="continuation">or equivalently,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+L-\epsilon\lt x_n\lt L+\epsilon\text{.}
+\end{equation*}
+</div>
+<p>We say that a sequence \((x_n)\) is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">convergent</dfn> if for some \(L \in \R\text{,}\) it converges to \(L\text{.}\)</p></article><span class="incontext"><a href="epsilondefinitionoflimit.html#definition-36">in-context</a></span>
 </body>
 </html>

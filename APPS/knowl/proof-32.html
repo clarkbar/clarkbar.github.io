@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:16+01:00       *-->
+<!--*       on 2021-10-18T13:48:17+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,44 +15,17 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>Since \(r\) is rational, there are integers \(a'\) and \(b'\) such that \(r = \frac{a'}{b'}\text{,}\) with \(b' \neq 0\text{.}\) Without loss of generality, we may assume that \(b'&gt;0\text{.}\) If we find \(-r = \frac{a}{b}\) with \(a\) and \(b\) coprime, then \(r = \frac{-a}{b}\) with \(-a\) and \(b\) coprime, so we may assume that \(r\geq 0\text{.}\)</p>
-<p>Now let \(p_1, \cdots,
-p_k\) be the prime numbers that divide either \(a'\) or \(b'\text{.}\) We may therefore write</p>
+<p>By the Euclidean algorithm, we can find integers \(s,t\in\mathbb{Z}\text{,}\) such that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-a' = p_1^{m_1}\cdots p_k^{m_k} \ \ \text{ and  }  b' = q_1^{n_1}\cdots q_k^{n_k}\text{,}
-\end{equation*}
+\begin{equation}
+d=sa+tb\tag{8.2.1}
+\end{equation}
 </div>
-<p class="continuation">where each exponent \(m_i\) and \(n_i\) is nonnegative. Now for each \(i\text{,}\) let</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-s_i = \max(m_i-n_i, 0)\ \ \text{ and  } t_i = \max(n_i-m_i, 0)\text{.}
-\end{equation*}
-</div>
-<p>Thus for each \(i\text{,}\) at most one of \(s_i\) and \(t_i\) is nonzero, and</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{p_i^{m_i}}{q_i^{n_i}} = \frac{p_i^{s_i}}{q_i^{t_i}}\text{.}
-\end{equation*}
-</div>
-<p>Thus we set</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-a = p_1^{s_1}\cdots p_r^{s_k} \ \ \text{ and  }  b = q_1^{t_1}\cdots q_k^{t_k}\text{,}
-\end{equation*}
-</div>
-<p class="continuation">and we find that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-r = \frac{a'}{b'} = \frac{a}{b}\text{.}
-\end{equation*}
-</div>
-<p>Now</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\gcd(a,b) = p_1^{\min(s_1,t_1)}\cdots p_r^{\min(s_k,t_k)} = p_1^0\cdots p_r^0 = 1. \qedhere
-\end{equation*}
-</div>
-<p>Now let us prove that \(a\) and \(b\) are unique with this property. If \(c\) and \(d\) are coprime integers with \(d \geq 1\text{,}\) and if \(r = \frac{c}{d}\text{,}\) then \(ad = bc\text{.}\) Since \(a\) and \(b\) are coprime, it follows that \(b\) divides \(d\text{,}\) and since \(c\) and \(d\) are coprime, it follows that \(d\) divides \(b\text{.}\) Thus \(d=b\text{,}\) and so \(a=c\) as well.</p></article><span class="incontext"><a href="lcmandgcd.html#proof-32">in-context</a></span>
+<p>Since \(0\lt d\leq a,b\text{,}\) at most one of \(s\) and \(t\) can be positive, and at most one can be non-positive (i.e. zero or negative). If it happens that \(t\) is negative, then we will have produced the desired expression for \(d\) (by writing \(d=sa - (-t)b\)).</p>
+<p>In case \(t\) is non-negative, we can apply the following observation:</p>
+<article class="lemma theorem-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.2.19</span><span class="period">.</span>
+</h6>
+<p>The integers \(s\) and \(t\) satisfy Equation <a class="xref" data-knowl="./knowl/gcdeqn.html" title="Equation 8.2.1">(8.2.1)</a> if, and only if, the integers \(s+kb\) and \(t-ka\) do as well, for any integer \(k\text{.}\)</p></article><article class="hiddenproof"><a class="proof-knowl original" data-knowl="./knowl/proof-33-hidden.html" title="Proof 8.2.18.1.1.1"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><p>Choosing \(k\) sufficiently large, we can replace \(t\) by \(t-ka\) so that it is negative. It follows then that \(s+kb\) is positive.</p></article><span class="incontext"><a href="euclideanalgo.html#proof-32">in-context</a></span>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:12+01:00       *-->
+<!--*       on 2021-10-18T13:48:12+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -460,7 +460,16 @@
 <li><a href="ineqhandin.html" data-scroll="ineqhandin">Week 4 exercises, due 19 October 2021</a></li>
 </ul>
 </li>
-<li class="link"><a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a></li>
+<li class="link">
+<a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a><ul>
+<li><a href="epsilondefinitionoflimit.html" data-scroll="epsilondefinitionoflimit">Sequences and the definition of limit</a></li>
+<li><a href="rulesforlimits.html" data-scroll="rulesforlimits">Rules for Limits</a></li>
+<li><a href="infinitelimits.html" data-scroll="infinitelimits">Infinite limits</a></li>
+<li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection">The Monotone Convergence Theorem</a></li>
+<li><a href="subsequences.html" data-scroll="subsequences">Subsequences</a></li>
+<li><a href="cauchysequences.html" data-scroll="cauchysequences">Cauchy sequences</a></li>
+</ul>
+</li>
 <li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
 <li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a></li>
 <li class="link">
@@ -492,71 +501,71 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Fermatlittle"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.4</span> <span class="title">Fermat's Little Theorem</span>
 </h2>
-<section class="introduction" id="introduction-13"><p id="p-827">The great thing about congruence is that arithmetic becomes easier since you can replace big numbers with smaller numbers that are congruent. The following is a little but powerful theorem due to Fermat that allows you to eliminate large powers if you are working modulo some prime.</p>
-<article class="theorem theorem-like" id="theorem-26"><h6 class="heading">
+<section class="introduction" id="introduction-13"><p id="p-931">The great thing about congruence is that arithmetic becomes easier since you can replace big numbers with smaller numbers that are congruent. The following is a little but powerful theorem due to Fermat that allows you to eliminate large powers if you are working modulo some prime.</p>
+<article class="theorem theorem-like" id="theorem-29"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Fermat's Little Theorem (FLT).</span>
 </h6>
-<p id="p-828">Let \(a\) be an integer, and let \(p\) be a prime number. If \(p\) does not divide \(a\text{,}\) then</p>
+<p id="p-932">Let \(a\) be an integer, and let \(p\) be a prime number. If \(p\) does not divide \(a\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 a^{p-1} = 1 \mod p\text{.}
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-40"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-40"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-40"><article class="hiddenproof"><p id="p-829">Without loss of generality, we may assume that \(a \in \{1,\dots,p-1\}\text{.}\) We consider the numbers \(a,2a,3a,\dots,(p-1)a\text{.}\) We first observe that each of these numbers is distinct modulo \(p\text{;}\) that is, for each \(c,d\in \mathbb{Z}/p\text{,}\) one has \(ca = da\mod p\) if and only if \(c=d\text{.}\) This follows from <a class="xref" data-knowl="./knowl/p_xa_ya-x_a.html" title="Proposition 9.1.6">Proposition 9.1.6</a>.</p>
-<p id="p-830">If \(\overline{a},\overline{2a}, \dots, \overline{(p-1)a}\) are the remainders of \(a,2a,\dots,(p-1)a\) after dividing by \(p\text{,}\) then we deduce that the sets \(\{\overline{a},\overline{2a}, \dots, \overline{(p-1)a}\}\) and \(\{1,2,\dots,p-1\}\) are equal Consequently,</p>
+</div></article><article class="hiddenproof" id="proof-50"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-50"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-50"><article class="hiddenproof"><p id="p-933">Without loss of generality, we may assume that \(a \in \{1,\dots,p-1\}\text{.}\) We consider the numbers \(a,2a,3a,\dots,(p-1)a\text{.}\) We first observe that each of these numbers is distinct modulo \(p\text{;}\) that is, for each \(c,d\in \mathbb{Z}/p\text{,}\) one has \(ca = da\mod p\) if and only if \(c=d\text{.}\) This follows from <a class="xref" data-knowl="./knowl/p_xa_ya-x_a.html" title="Proposition 9.1.6">Proposition 9.1.6</a>.</p>
+<p id="p-934">If \(\overline{a},\overline{2a}, \dots, \overline{(p-1)a}\) are the remainders of \(a,2a,\dots,(p-1)a\) after dividing by \(p\text{,}\) then we deduce that the sets \(\{\overline{a},\overline{2a}, \dots, \overline{(p-1)a}\}\) and \(\{1,2,\dots,p-1\}\) are equal Consequently,</p>
 <div class="displaymath">
 \begin{equation*}
 a\cdot 2a \cdots (p-1)a = \overline{a}\cdot\overline{2a}\cdot \cdots\cdot \overline{(p-1)a} = 1\cdot 2 \cdots \cdot (p-1) \mod p\text{.}
 \end{equation*}
 </div>
-<p id="p-831">Thus</p>
+<p id="p-935">Thus</p>
 <div class="displaymath">
 \begin{equation*}
 (p-1)!a^{p-1} = (p-1)!\mod p\text{.}
 \end{equation*}
 </div>
-<p id="p-832">Now since \(p\) does not divide \((p-1)!\text{,}\) <a class="xref" data-knowl="./knowl/p_xa_ya-x_a.html" title="Proposition 9.1.6">Proposition 9.1.6</a> implies that \(a^{p-1} = 1 \mod p\text{,}\) as desired.</p></article></div>
-<article class="example example-like" id="example-77"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-77"><h6 class="heading">
+<p id="p-936">Now since \(p\) does not divide \((p-1)!\text{,}\) <a class="xref" data-knowl="./knowl/p_xa_ya-x_a.html" title="Proposition 9.1.6">Proposition 9.1.6</a> implies that \(a^{p-1} = 1 \mod p\text{,}\) as desired.</p></article></div>
+<article class="example example-like" id="example-85"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-85"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-77"><article class="example example-like"><p id="p-833">Find \(5^{100}\mod 7\text{.}\)</p>
-<p id="p-834">Since \(7\) does not divide \(5\text{,}\) the FLT says \(5^{6} = 1\mod 7\text{.}\) Thus, we can shave off any power of \(5\) from \(5^{100}\) that is a multiple of \(6\text{.}\) Thus,</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-85"><article class="example example-like"><p id="p-937">Find \(5^{100}\mod 7\text{.}\)</p>
+<p id="p-938">Since \(7\) does not divide \(5\text{,}\) the FLT says \(5^{6} = 1\mod 7\text{.}\) Thus, we can shave off any power of \(5\) from \(5^{100}\) that is a multiple of \(6\text{.}\) Thus,</p>
 <div class="displaymath">
 \begin{equation*}
 5^{100} = 5^{96}5^{4}=(5^{6})^{16}5^{4} = 1^{16}5^{4}= 5^{4}\text{.}
 \end{equation*}
 </div>
-<p id="p-835">Then the rest is as before:</p>
+<p id="p-939">Then the rest is as before:</p>
 <div class="displaymath">
 \begin{align*}
 5^{2} \amp  =25 = 4\mod 7\\
 5^{4} \amp  =(5^{2})^{2} = 4^{2}=16 = 2\mod 7\text{.}
 \end{align*}
 </div></article></div>
-<p id="p-836">Fermat's Little Theorem gives us a way of solving a large class of polynomial equations mod \(m\text{:}\)</p>
+<p id="p-940">Fermat's Little Theorem gives us a way of solving a large class of polynomial equations mod \(m\text{:}\)</p>
 <article class="theorem theorem-like" id="t_x_n_bmodp"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.4.3</span><span class="period">.</span>
 </h6>
-<p id="p-837">Let \(n\in\mathbb{N}\) and \(p\) be a prime number. Assume \(n\) and \(p-1\) are coprime and \(p\) does not divide \(b\text{.}\) Then the equation</p>
+<p id="p-941">Let \(n\in\mathbb{N}\) and \(p\) be a prime number. Assume \(n\) and \(p-1\) are coprime and \(p\) does not divide \(b\text{.}\) Then the equation</p>
 <div class="displaymath">
 \begin{equation}
 x^{n} = b\mod p\text{.}\label{e_x_n_bmodp}\tag{9.4.1}
 \end{equation}
 </div>
-<p class="continuation">has exactly one solution \(x\in \{1,\dots,p-1\}\text{.}\)</p></article><article class="hiddenproof" id="proof-41"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-41"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-41"><article class="hiddenproof"><p id="p-838">Since \(n\) and \(p-1\) are coprime, there are integers \(s,t\) so that \(sn+t(p-1)=1\text{.}\)</p>
-<p id="p-839">Let us prove the uniqueness. If \(x_1,x_2 \in \{1,\dots,p-1\}\) are two such solutions, then \(x_1^n=x_2^n \mod p\text{,}\) and so for \(i \in \{1,2\}\text{,}\)</p>
+<p class="continuation">has exactly one solution \(x\in \{1,\dots,p-1\}\text{.}\)</p></article><article class="hiddenproof" id="proof-51"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-51"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-51"><article class="hiddenproof"><p id="p-942">Since \(n\) and \(p-1\) are coprime, there are integers \(s,t\) so that \(sn+t(p-1)=1\text{.}\)</p>
+<p id="p-943">Let us prove the uniqueness. If \(x_1,x_2 \in \{1,\dots,p-1\}\) are two such solutions, then \(x_1^n=x_2^n \mod p\text{,}\) and so for \(i \in \{1,2\}\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 x_i = x_i^{sn+t(p-1)} = x_i^{sn}x_i^{t(p-1)} = b^s(x_i^t)^{p-1} \mod p\text{.}
 \end{equation*}
 </div>
-<p id="p-840">Since \(p\) does not divide \(x_i^t\text{,}\) Fermat's Little Theorem that each \(x_i = b^s \mod p\text{,}\) whence \(x_1=x_2\text{.}\)</p>
-<p id="p-841">Now let us prove the existence. Let \(x\) be the remainder after dividing \(b^s\) by \(p\text{.}\) Now in \(\mathbb{Z}/p\text{,}\)</p>
+<p id="p-944">Since \(p\) does not divide \(x_i^t\text{,}\) Fermat's Little Theorem that each \(x_i = b^s \mod p\text{,}\) whence \(x_1=x_2\text{.}\)</p>
+<p id="p-945">Now let us prove the existence. Let \(x\) be the remainder after dividing \(b^s\) by \(p\text{.}\) Now in \(\mathbb{Z}/p\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 x^{n}  = (b^{s})^{n}=b^{ns}  = b^{1-t(p-1)}=b\cdot (b^{p-1})^{-t}\text{.}
 \end{equation*}
 </div>
-<p id="p-842">(Note that this makes sense, since \(p\) does not divide \(b\text{,}\) so \(b\) is invertible.) Since \(p\) does not divide \(b\text{,}\) Fermat's Little Theorem implies that \(x^n = b \mod p\text{.}\)</p></article></div>
-<p id="p-843">Notice that even though the choice of \(s, t\) is not unique, the remainder after dividing \(b^s\) by \(p\) <dfn class="terminology">is</dfn> unique. In other words, if \(s_1,t_1,s_2,t_2\) are integers such that for \(i \in \{1,2\}\text{,}\) we have</p>
+<p id="p-946">(Note that this makes sense, since \(p\) does not divide \(b\text{,}\) so \(b\) is invertible.) Since \(p\) does not divide \(b\text{,}\) Fermat's Little Theorem implies that \(x^n = b \mod p\text{.}\)</p></article></div>
+<p id="p-947">Notice that even though the choice of \(s, t\) is not unique, the remainder after dividing \(b^s\) by \(p\) <dfn class="terminology">is</dfn> unique. In other words, if \(s_1,t_1,s_2,t_2\) are integers such that for \(i \in \{1,2\}\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 s_in+t_i(p-1)=1\text{,}
@@ -574,92 +583,92 @@ b^{s_1} = (b^{s_1})^{s_2n+t_2(p-1)} = b^{s_1s_2}(b^{s_1t_2})^{p-1}=b^{s_1s_2}\te
 b^{s_2} = (b^{s_2})^{s_1n+t_1(p-1)} = b^{s_1s_2}(b^{s_2t_1})^{p-1}=b^{s_1s_2}\text{.}
 \end{equation*}
 </div>
-<p id="p-844">We now have a blueprint to how to solve equations of the form <a class="xref" data-knowl="./knowl/e_x_n_bmodp.html" title="Equation 9.4.1">(9.4.1)</a> when \(n\) and \(p-1\) are coprime and \(p\) does not divide \(b\text{.}\)</p>
-<article class="example example-like" id="example-78"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-78"><h6 class="heading">
+<p id="p-948">We now have a blueprint to how to solve equations of the form <a class="xref" data-knowl="./knowl/e_x_n_bmodp.html" title="Equation 9.4.1">(9.4.1)</a> when \(n\) and \(p-1\) are coprime and \(p\) does not divide \(b\text{.}\)</p>
+<article class="example example-like" id="example-86"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-86"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-78"><article class="example example-like"><p id="p-845">Find \(x\in\{0,1,...16\}\) so that \(x^{7} = 4\mod 17\text{.}\)</p>
-<p id="p-846">Since \(\gcd(7,17-1)=\gcd(7,16)=1\text{,}\) we can use the Euclidean Algorithm to show that \(7\cdot 7=1+3\cdot 16\text{.}\) Thus, if \(x\) solves the above equation, then \(4 = x^{7}\text{,}\) and so</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-86"><article class="example example-like"><p id="p-949">Find \(x\in\{0,1,...16\}\) so that \(x^{7} = 4\mod 17\text{.}\)</p>
+<p id="p-950">Since \(\gcd(7,17-1)=\gcd(7,16)=1\text{,}\) we can use the Euclidean Algorithm to show that \(7\cdot 7=1+3\cdot 16\text{.}\) Thus, if \(x\) solves the above equation, then \(4 = x^{7}\text{,}\) and so</p>
 <div class="displaymath">
 \begin{equation*}
 4^{7} = (x^{7})^{7} = x^{7\cdot 7} = x^{1+3\cdot 16} = x\cdot (x^{16})^{3} = x\cdot (1)^{3} = x\text{.}
 \end{equation*}
 </div>
-<p id="p-847">Thus, \(x = 4^{7}\text{,}\) so we need to find a representative in \(\{0,1,...,16\}\text{.}\) Note that \(4^{2}=16 = -1\mod 17\text{,}\) so</p>
+<p id="p-951">Thus, \(x = 4^{7}\text{,}\) so we need to find a representative in \(\{0,1,...,16\}\text{.}\) Note that \(4^{2}=16 = -1\mod 17\text{,}\) so</p>
 <div class="displaymath">
 \begin{equation*}
 4^{7}=(4^{2})^{3} \cdot 4 = (-1)^{3} \cdot 4 =-4 = 13\mod 17\text{.}
 \end{equation*}
 </div>
-<p id="p-848">Thus, \(x=13\) is the unique solution in \(\{0,1,...,16\}\text{.}\)</p></article></div>
-<p id="p-849">Not all polynomial equations can be solved using the above method:</p>
-<article class="example example-like" id="example-79"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-79"><h6 class="heading">
+<p id="p-952">Thus, \(x=13\) is the unique solution in \(\{0,1,...,16\}\text{.}\)</p></article></div>
+<p id="p-953">Not all polynomial equations can be solved using the above method:</p>
+<article class="example example-like" id="example-87"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-87"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.5</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-79"><article class="example example-like"><p id="p-850">Find a solution to \(x^{22} = 3 \mod 11\text{.}\)</p>
-<p id="p-851">Note that \(\gcd(22,11-1)=\gcd(22,10)=2\text{,}\) so we can't use the method in <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a>. However, let's suppose \(x\) is a solution to the above equation and try to narrow down what it must be. Note that \(11\) does not divide \(x\) (otherwise \(x^{22} = 0\)). Thus, FLT implies \(x^{10} = 1 \mod 11\text{.}\) Hence,</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-87"><article class="example example-like"><p id="p-954">Find a solution to \(x^{22} = 3 \mod 11\text{.}\)</p>
+<p id="p-955">Note that \(\gcd(22,11-1)=\gcd(22,10)=2\text{,}\) so we can't use the method in <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a>. However, let's suppose \(x\) is a solution to the above equation and try to narrow down what it must be. Note that \(11\) does not divide \(x\) (otherwise \(x^{22} = 0\)). Thus, FLT implies \(x^{10} = 1 \mod 11\text{.}\) Hence,</p>
 <div class="displaymath">
 \begin{equation*}
 x^{22}=x^{2}(x^{10})^{2}   = x^{2}\text{.}
 \end{equation*}
 </div>
-<p id="p-852">Now we just need to solve \(x^{2} = 3 \mod 11\text{.}\) Again, \(\gcd(2,11-1)=\gcd(2,10)=2\text{,}\) so we still can't use the method of <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a>. But now the power \(2\) is small enough we can just try values \(x\in \{0,1,...,10\}\) and see what works:</p>
+<p id="p-956">Now we just need to solve \(x^{2} = 3 \mod 11\text{.}\) Again, \(\gcd(2,11-1)=\gcd(2,10)=2\text{,}\) so we still can't use the method of <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a>. But now the power \(2\) is small enough we can just try values \(x\in \{0,1,...,10\}\) and see what works:</p>
 <ul class="disc">
-<li id="li-197"><p id="p-853">\(\displaystyle 1^{2}=1\)</p></li>
-<li id="li-198"><p id="p-854">\(\displaystyle 2^{2}=4\)</p></li>
-<li id="li-199"><p id="p-855">\(\displaystyle 3^{2}=9\)</p></li>
-<li id="li-200"><p id="p-856">\(4^{2}=16 = 5 \mod 11\text{.}\)</p></li>
-<li id="li-201"><p id="p-857">\(5^{2}=25 = 3\mod 11\text{.}\)</p></li>
+<li id="li-211"><p id="p-957">\(\displaystyle 1^{2}=1\)</p></li>
+<li id="li-212"><p id="p-958">\(\displaystyle 2^{2}=4\)</p></li>
+<li id="li-213"><p id="p-959">\(\displaystyle 3^{2}=9\)</p></li>
+<li id="li-214"><p id="p-960">\(4^{2}=16 = 5 \mod 11\text{.}\)</p></li>
+<li id="li-215"><p id="p-961">\(5^{2}=25 = 3\mod 11\text{.}\)</p></li>
 </ul>
-<p id="p-858">Thus, \(x=5\) is a solution to \(x^{22} = 3 \mod 11\text{:}\)</p>
+<p id="p-962">Thus, \(x=5\) is a solution to \(x^{22} = 3 \mod 11\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 5^{22}=5^{2}(5^{10})^{2} = 3\cdot (1)^{2}=3\text{.}
 \end{equation*}
 </div>
-<p id="p-859">Note that if we can't use <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a>, then the solution may not be unique. In this example, note that \(x=6\) is also a solution</p></article></div>
-<article class="example example-like" id="example-80"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-80"><h6 class="heading">
+<p id="p-963">Note that if we can't use <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a>, then the solution may not be unique. In this example, note that \(x=6\) is also a solution</p></article></div>
+<article class="example example-like" id="example-88"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-88"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.6</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-80"><article class="example example-like"><p id="p-860">Find \(x\in\{0,1,...,10\}\) that solves \(x^{3} = 9 \mod 11\text{.}\)</p>
-<p id="p-861">Note \(\gcd(3,11-1)=\gcd(3,10)=1\text{,}\) so this tells us that the method of <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a> should work in finding the unique solution. Note also that \(7\cdot 3 = 21=1+2\cdot 10\text{.}\) Thus, if \(x\) is the solution, then \(9 = x^{3}\mod 11\) implies</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-88"><article class="example example-like"><p id="p-964">Find \(x\in\{0,1,...,10\}\) that solves \(x^{3} = 9 \mod 11\text{.}\)</p>
+<p id="p-965">Note \(\gcd(3,11-1)=\gcd(3,10)=1\text{,}\) so this tells us that the method of <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a> should work in finding the unique solution. Note also that \(7\cdot 3 = 21=1+2\cdot 10\text{.}\) Thus, if \(x\) is the solution, then \(9 = x^{3}\mod 11\) implies</p>
 <div class="displaymath">
 \begin{equation*}
 9^{7} = (x^{3})^{7} =x^{3\cdot 7} =x^{1+2\cdot 10} =x\cdot (x^{10})^{2} = x\cdot(1)^{2} =x \mod 11\text{.}
 \end{equation*}
 </div>
-<p id="p-862">Thus, \(x = 9^{7}\text{.}\) Now we must find \(x\in \{0,1,...,10\}\) so that \(x = 9^{7}\text{.}\)</p>
+<p id="p-966">Thus, \(x = 9^{7}\text{.}\) Now we must find \(x\in \{0,1,...,10\}\) so that \(x = 9^{7}\text{.}\)</p>
 <ul class="disc">
-<li id="li-202"><p id="p-863">\(\displaystyle 9^{2}=81 = 4 \mod 11\)</p></li>
-<li id="li-203"><p id="p-864">\(9^{4}=(9^{2})^{2} = 4^{2} =16 = 5\mod 11\text{.}\)</p></li>
-<li id="li-204"><p id="p-865">\(9^{7}=9^{4}\cdot 9^{2}\cdot 9 = 5\cdot 4\cdot 9 =180 =176+4 = 4\mod 11\text{.}\)</p></li>
+<li id="li-216"><p id="p-967">\(\displaystyle 9^{2}=81 = 4 \mod 11\)</p></li>
+<li id="li-217"><p id="p-968">\(9^{4}=(9^{2})^{2} = 4^{2} =16 = 5\mod 11\text{.}\)</p></li>
+<li id="li-218"><p id="p-969">\(9^{7}=9^{4}\cdot 9^{2}\cdot 9 = 5\cdot 4\cdot 9 =180 =176+4 = 4\mod 11\text{.}\)</p></li>
 </ul>
-<p id="p-866">Thus, \(x=4\) is the solution. We can also check \(4^{3}=64=55+9 = 9\mod 11\text{.}\)</p></article></div></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<p id="p-970">Thus, \(x=4\) is the solution. We can also check \(4^{3}=64=55+9 = 9\mod 11\text{.}\)</p></article></div></section><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.4.1</span> <span class="title">Diophantine equations</span>
 </h3>
-<p id="p-867">As congruences relate to divisibility, we can also use them to solve diophantine equations.</p>
-<article class="example example-like" id="example-81"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-81"><h6 class="heading">
+<p id="p-971">As congruences relate to divisibility, we can also use them to solve diophantine equations.</p>
+<article class="example example-like" id="example-89"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-89"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.7</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-81"><article class="example example-like"><p id="p-868">What are the integer solutions to \(9x^{2}+9x+2=y^{4}\text{?}\)</p>
-<p id="p-869">We will present two methods for comparison, first using the usual divisbility methods from last week, and then a second method using modular arithmetic.</p>
-<p id="p-870"><em class="emphasis">Method 1:</em> If \(x,y\) are integer solutions, then</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-89"><article class="example example-like"><p id="p-972">What are the integer solutions to \(9x^{2}+9x+2=y^{4}\text{?}\)</p>
+<p id="p-973">We will present two methods for comparison, first using the usual divisbility methods from last week, and then a second method using modular arithmetic.</p>
+<p id="p-974"><em class="emphasis">Method 1:</em> If \(x,y\) are integer solutions, then</p>
 <div class="displaymath">
 \begin{equation*}
 y^{4}=9x^{2}+9x+2 =(3x+2)(3x+1)\text{.}
 \end{equation*}
 </div>
-<p id="p-871">Since \(y^{4}\geq 0\text{,}\) we know \(3x+1,3x+2&gt; 0\) or \(\lt 0\text{.}\) First assume \(&gt;0\text{.}\) They are coprime since \(\gcd(3x+1,3x+2)\) divides \((3x+2)-(3x+1)=1\text{.}\) Thus, \(3x+1=a^{4}\) and \(3x+2=b^{4}\) for some integers \(a\) and \(b\text{.}\) (We can assume they are non-negative). But then \(b^{4}-a^{4} =3x+2-(3x+1) =1\text{.}\) This is only possible if \((a,b)=(0,1)\) (exercise :). We can't have \(a=0\) since then \(3x+1=0\text{,}\) which is impossible if \(x\) is an integer. The same happens if \(3x+1,3x+2\lt 0\text{.}\) Thus, there are no solutions.</p>
-<p id="p-872">As you can see, the above solution is quite long (and we didn't do some of the details). Now let's instead use modular arithmetic for a shorter proof:</p>
-<p id="p-873"><em class="emphasis">Method 2:</em> If \(x,y\) are integer solutions to \(9x^{2}+9x+2=y^{4}\text{,}\) then</p>
+<p id="p-975">Since \(y^{4}\geq 0\text{,}\) we know \(3x+1,3x+2&gt; 0\) or \(\lt 0\text{.}\) First assume \(&gt;0\text{.}\) They are coprime since \(\gcd(3x+1,3x+2)\) divides \((3x+2)-(3x+1)=1\text{.}\) Thus, \(3x+1=a^{4}\) and \(3x+2=b^{4}\) for some integers \(a\) and \(b\text{.}\) (We can assume they are non-negative). But then \(b^{4}-a^{4} =3x+2-(3x+1) =1\text{.}\) This is only possible if \((a,b)=(0,1)\) (exercise :). We can't have \(a=0\) since then \(3x+1=0\text{,}\) which is impossible if \(x\) is an integer. The same happens if \(3x+1,3x+2\lt 0\text{.}\) Thus, there are no solutions.</p>
+<p id="p-976">As you can see, the above solution is quite long (and we didn't do some of the details). Now let's instead use modular arithmetic for a shorter proof:</p>
+<p id="p-977"><em class="emphasis">Method 2:</em> If \(x,y\) are integer solutions to \(9x^{2}+9x+2=y^{4}\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 y^{4}=9x^{2}+9x+2 = 2\mod 3\text{.}
 \end{equation*}
 </div>
-<p id="p-874">Let \(z\in \{0,1,2\}\) be such that \(z = y\mod 3\text{,}\) then \(z^{4} = y^{4} = 2\mod 3\text{.}\) So let's test some \(z\)'s!</p>
+<p id="p-978">Let \(z\in \{0,1,2\}\) be such that \(z = y\mod 3\text{,}\) then \(z^{4} = y^{4} = 2\mod 3\text{.}\) So let's test some \(z\)'s!</p>
 <ul class="disc">
-<li id="li-205"><p id="p-875">\(\displaystyle 0^{4}=0\)</p></li>
-<li id="li-206"><p id="p-876">\(\displaystyle 1^{4}=1\)</p></li>
-<li id="li-207"><p id="p-877">\(2^{4}=16 = 1 \mod 3\text{.}\)</p></li>
+<li id="li-219"><p id="p-979">\(\displaystyle 0^{4}=0\)</p></li>
+<li id="li-220"><p id="p-980">\(\displaystyle 1^{4}=1\)</p></li>
+<li id="li-221"><p id="p-981">\(2^{4}=16 = 1 \mod 3\text{.}\)</p></li>
 </ul>
-<p id="p-878">So there are no \(z\in \{0,1,2\}\) so that \(z^{4} = 2 \mod 3\text{.}\) Thus, there are no integer solutions to \(9x^{2}+9x+2=y^{4}\text{.}\)</p></article></div></section></section></div></main>
+<p id="p-982">So there are no \(z\in \{0,1,2\}\) so that \(z^{4} = 2 \mod 3\text{.}\) Thus, there are no integer solutions to \(9x^{2}+9x+2=y^{4}\text{.}\)</p></article></div></section></section></div></main>
 </div>
 </body>
 </html>

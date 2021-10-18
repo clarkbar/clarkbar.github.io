@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:16+01:00       *-->
+<!--*       on 2021-10-18T13:48:16+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,5 +13,37 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>By Bezout's Identity, there are integers \(s\) and \(t\) such that \(\gcd(a,c)=sa+tc\text{.}\) Then as \(d\) divides \(a\) and \(d\) divides \(b\text{,}\) we have \(d\) divides \(\gcd(a,c)\) by the Linear Combination Lemma.</p></article></body>
+<body><article class="hiddenproof"><p>We begin with the first part. Assume that \((a_n)\) is increasing and bounded above. Notice that we are not told what its limit is going to be. This has to come out of our argument somehow, and the first job is to find a candidate for it.</p>
+<p>Since \((a_{n})\) is bounded above, this means that the set<a class="fn-knowl original" data-knowl="./knowl/fn-3-hidden.html" title="Footnote 5.4.1"><sup> 1 </sup></a> \(\{a_{n} : n\in\NN\}\) is bounded above. Thus, by the Completeness Axiom, the set has an supremum, call it \(L\text{.}\) We claim that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\lim_{n\rightarrow\infty}a_{n}=L\text{.}
+\end{equation*}
+</div>
+<p>We begin the proof of the claim. Let \(\epsilon&gt;0\text{,}\) we wish to show there is \(N\in\NN\) so that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|a_{n}-L|\lt \epsilon
+\end{equation*}
+</div>
+<p class="continuation">for all \(n&gt; N\text{,}\) or equivalently,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+L-\epsilon\lt a_{n}\lt L+\epsilon\text{.}\tag{5.4.1}
+\end{equation}
+</div>
+<p>Since \(L\) is an upper bound for \(\{a_{n} : n\in\NN\}\text{,}\) we know \(a_{n}\leq L\lt L+\epsilon\) for all \(n\text{,}\) thus dealing with the second inequality in <a class="xref" data-knowl="./knowl/e_L-e_a_L_e.html" title="Equation 5.4.1">(5.4.1)</a>. Therefore, it suffices to show that there is \(N\in\NN\) so that for all \(n&gt; N\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+L-\epsilon\lt a_{n}\text{.}
+\end{equation*}
+</div>
+<p>Since \(L\) is the supremum for \(\{a_{n} : n\in\NN\}\text{,}\) this means that \(L-\epsilon\) is not an upper bound for this set, so there exists an integer \(N\) so that \(a_{N}&gt;L-\epsilon\text{.}\) Since the sequence is increasing, this means that for all \(n&gt; N\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a_{n} \geq a_N &gt; L - \epsilon\text{.}
+\end{equation*}
+</div>
+<p>This shows <a class="xref" data-knowl="./knowl/e_L-e_a_L_e.html" title="Equation 5.4.1">(5.4.1)</a> holds for all \(n&gt;N\) and completes the proof.</p>
+<p>We leave the proof of the second part to the reader. (Why is it an easy consequence of the first part?)</p></article></body>
 </html>

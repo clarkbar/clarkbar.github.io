@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:16+01:00       *-->
+<!--*       on 2021-10-18T13:48:16+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,19 +16,16 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.2.17.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">5.4.4.1</span><span class="period">.</span>
 </h6>
-<ul class="disc">
-<li>
-<h6 class="heading"><span class="title">(i).</span></h6>
-<p>Since \(a\) and \(b\) are coprime, we can find integers \(s\) and \(t\) so that \(sa + tb = 1\text{.}\) If \(a\) divides \(c\) then we can write \(c = ax\text{,}\) and if \(b\) divides \(c\) then we can write \(c = by\) for some \(x,y \in \Z\text{.}\) Then \(c = csa + ctb = (by)sa + (ax)tb = (ab)sy + (ab)xt\text{,}\) so \(ab\) divides \(c\text{.}\)</p>
-</li>
-<li>
-<h6 class="heading"><span class="title">(ii).</span></h6>
-<p>As in (i), \(c = csa + ctb\text{.}\) If \(a\) divides \(bc\) then write \(az = bc\) for some integer \(z\text{,}\) and then we have \(c = csa + t(az) = a(cs + tz)\text{,}\) so \(a\) divides \(c\text{.}\)</p>
-</li>
-</ul>
+<p>Since \(a^n\) is a product of positive numbers, it is positive, so the sequence \((a^{n})_{n=1}^{\infty}\) is bounded below by \(0\text{.}\) Moreover, since \(a\lt 1\text{,}\) \(a^{n+1}=a\cdot a^{n}\lt a^{n}\text{,}\) so the sequence is decreasing. By the MCT, it has a limit \(L\text{.}\) To find \(L\text{,}\) we will find a simple equation which \(L\) must satisfy — in this case \(aL = L\text{.}\) Recall that if \((a_{n})\) is a convergent sequence, then \((a_{n+1})\) also converges, and indeed converges to the same limit (see the exercises from last week). Thus, by the rules for limits,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+L=\lim_n a^{n} = \lim_n a^{n+1}=\lim_n a^{n} =a\lim_n a^{n}=aL\text{,}
+\end{equation*}
 </div>
-<span class="incontext"><a href="euclideanalgo.html#solution-17">in-context</a></span>
+<p class="continuation">as we claimed. Therefore \(L(a-1) =0\) and since \(a \neq 1\) we must have \(L =0\text{,}\) and we are done.</p>
+</div>
+<span class="incontext"><a href="monotoneconvergencesection.html#solution-17">in-context</a></span>
 </body>
 </html>

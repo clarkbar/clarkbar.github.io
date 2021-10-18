@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T13:29:16+01:00       *-->
+<!--*       on 2021-10-18T13:48:10+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -347,16 +347,6 @@
 	\DeclareMathOperator{\Mor}{Mor}
 	\newcommand{\MOR}{\ensuremath{\textup{\textsc{Mor}}}}
 
-	\DeclareMathOperator{\GL}{GL}
-	\DeclareMathOperator{\PSL}{PSL}
-	\DeclareMathOperator{\PSO}{PSO}
-	\DeclareMathOperator{\PSp}{PSp}
-	\DeclareMathOperator{\PSU}{PSU}
-	\DeclareMathOperator{\SL}{SL}
-	\DeclareMathOperator{\SO}{SO}
-	\DeclareMathOperator{\Sp}{Sp}
-	\DeclareMathOperator{\SU}{SU}
-
 	\DeclareMathOperator{\cofib}{cofib}
 	\DeclareMathOperator{\coker}{coker}
 	\DeclareMathOperator*{\colim}{colim}
@@ -390,38 +380,11 @@
 
 	\newcommand{\categ}[1]{\textbf{\textup{#1}}}
 
-\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}}
-\def\LUB{{ LUB}}
-\renewcommand{\sectionmark}[1]{{}}
-\def\GLB{{ GLB}}
-\renewcommand{\headrulewidth}{0.5pt}
-\def\ve{\varepsilon}
-\renewcommand{\footrulewidth}{0pt}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\headrulewidth}{0pt}
-\def\R{\mathbb{R}}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
 \newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
-\def\LUB{{ LUB}}
 \newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
-\def\ve{\epsilon}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\limn{\lim_{n\rightarrow\infty}}
-\renewcommand{\qedsymbol}{$\blacksquare$}
-\def\LUB{{ LUB}}
-\def\easylemma{the Linear Combination Lemma}
-\def\lcm{ lcm}
-\def\cl{{ cl}}
-\newcommand{\thepartimage}{}
-\newcommand{\thechapterimage}{}
-\def\R{\mathbb{R}}
-\def\Z{\mathbb{Z}}
-\def\N{{\mathbb{N}}}
-\def\Q{{\mathbb{Q}}}
-\def\C{{\mathbb{C}}}
-\def\hcf{{ hcf}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -434,10 +397,10 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="epsilondefinitionoflimit.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="limits.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="existenceofroots.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="epsilondefinitionoflimit.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="limits.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="infinitelimits.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="epsilondefinitionoflimit.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="limits.html" title="Up">Up</a><a class="next-button button toolbar-item" href="existenceofroots.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="epsilondefinitionoflimit.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="limits.html" title="Up">Up</a><a class="next-button button toolbar-item" href="infinitelimits.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -464,102 +427,53 @@
 <li><a href="quantifiers.html" data-scroll="quantifiers">Quantifiers</a></li>
 <li><a href="naturals.html" data-scroll="naturals">Natural numbers</a></li>
 <li><a href="induct.html" data-scroll="induct">A first look at induction</a></li>
-<li><a href="logicexercises.html" data-scroll="logicexercises">Exercises</a></li>
+<li><a href="logicexercises.html" data-scroll="logicexercises">Week 1 Exercises, due 28 September 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and equivalence relations</span></a><ul>
+<a href="moresets.html" data-scroll="moresets"><span class="codenumber">2</span> <span class="title">Maps and relations</span></a><ul>
 <li><a href="cartesianproducts.html" data-scroll="cartesianproducts">Cartesian products</a></li>
 <li><a href="maps.html" data-scroll="maps">Maps</a></li>
 <li><a href="injectivesurjective.html" data-scroll="injectivesurjective">Injective and surjective</a></li>
 <li><a href="cardinalities.html" data-scroll="cardinalities">Cardinalities of finite sets</a></li>
 <li><a href="imagesandpreimages.html" data-scroll="imagesandpreimages">Images and preimages</a></li>
-<li><a href="sizesofsets.html" data-scroll="sizesofsets">Comparing sizes of sets with functions</a></li>
 <li><a href="equivalencerels.html" data-scroll="equivalencerels">Equivalence Relations</a></li>
-<li><a href="moresettheoryexercises.html" data-scroll="moresettheoryexercises">Exercises</a></li>
+<li><a href="mapsexercises.html" data-scroll="mapsexercises">Week 2 Exercises, due 5 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">The Real Line</span></a><ul>
-<li><a href="realnumbers.html" data-scroll="realnumbers">The Reals</a></li>
-<li><a href="archimedeanproperty.html" data-scroll="archimedeanproperty">The integers and the Archimedean Property</a></li>
-<li><a href="rationals.html" data-scroll="rationals">The rationals and irrationals</a></li>
-<li><a href="roots.html" data-scroll="roots">Roots</a></li>
-<li><a href="realexercises.html" data-scroll="realexercises">Exercises</a></li>
+<a href="realline.html" data-scroll="realline"><span class="codenumber">3</span> <span class="title">Numbers</span></a><ul>
+<li><a href="integer_sec.html" data-scroll="integer_sec">The integers</a></li>
+<li><a href="rationals.html" data-scroll="rationals">The rational numbers</a></li>
+<li><a href="orderedfields.html" data-scroll="orderedfields">Ordered fields</a></li>
+<li><a href="realnumbers.html" data-scroll="realnumbers">Completeness and the real numbers</a></li>
+<li><a href="reallineexercises.html" data-scroll="reallineexercises">Week 3 Exercise, due 12 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Inequalities</span></a><ul>
-<li><a href="orderaxioms.html" data-scroll="orderaxioms">The axioms for order</a></li>
-<li><a href="separatingproducts.html" data-scroll="separatingproducts">Separating products</a></li>
-<li><a href="absolutevalues.html" data-scroll="absolutevalues">Absolute Values</a></li>
-<li><a href="homogeneity.html" data-scroll="homogeneity">Homogeneity and inequalities</a></li>
-<li><a href="inequalitiesexercises.html" data-scroll="inequalitiesexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="induction.html" data-scroll="induction"><span class="codenumber">5</span> <span class="title">Induction</span></a><ul>
-<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on \(\Sigma\) notation</a></li>
+<a href="inequalities.html" data-scroll="inequalities"><span class="codenumber">4</span> <span class="title">Induction and inequalities</span></a><ul>
+<li><a href="summationnotation.html" data-scroll="summationnotation">Preliminaries on summation notation</a></li>
 <li><a href="inductionsection.html" data-scroll="inductionsection">Induction</a></li>
-<li><a href="stronginduction.html" data-scroll="stronginduction">Strong Mathematical Induction</a></li>
-<li><a href="inequalitiesredux.html" data-scroll="inequalitiesredux">Inequalities revisited</a></li>
-<li><a href="inductionexercises.html" data-scroll="inductionexercises">Exercises</a></li>
+<li><a href="roots.html" data-scroll="roots">Roots</a></li>
+<li><a href="separatingproducts.html" data-scroll="separatingproducts">AM/GM Inequality and Cauchy-Schwarz</a></li>
+<li><a href="inequalitiesexercises.html" data-scroll="inequalitiesexercises">Some sample exercises</a></li>
+<li><a href="ineqhandin.html" data-scroll="ineqhandin">Week 4 exercises, due 19 October 2021</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="upperbounds.html" data-scroll="upperbounds"><span class="codenumber">6</span> <span class="title">Upper Bounds and Least Upper Bounds</span></a><ul>
-<li><a href="upperlowerbounds.html" data-scroll="upperlowerbounds">Upper and Lower Bounds</a></li>
-<li><a href="sups.html" data-scroll="sups">Least Upper Bounds</a></li>
-<li><a href="upperboundsexercises.html" data-scroll="upperboundsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="limits.html" data-scroll="limits"><span class="codenumber">7</span> <span class="title">Limits</span></a><ul>
-<li><a href="epsilondefinitionoflimit.html" data-scroll="epsilondefinitionoflimit">Motivation and the \(\epsilon-N\) definition of a limit</a></li>
+<a href="limits.html" data-scroll="limits"><span class="codenumber">5</span> <span class="title">Sequences and limits</span></a><ul>
+<li><a href="epsilondefinitionoflimit.html" data-scroll="epsilondefinitionoflimit">Sequences and the definition of limit</a></li>
 <li><a href="rulesforlimits.html" data-scroll="rulesforlimits" class="active">Rules for Limits</a></li>
-<li><a href="existenceofroots.html" data-scroll="existenceofroots">Application: the existence of roots.</a></li>
 <li><a href="infinitelimits.html" data-scroll="infinitelimits">Infinite limits</a></li>
-<li><a href="limitsexercises.html" data-scroll="limitsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="monotoneconvergence.html" data-scroll="monotoneconvergence"><span class="codenumber">8</span> <span class="title">The Monotone Convergence Theorem</span></a><ul>
 <li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection">The Monotone Convergence Theorem</a></li>
-<li><a href="iterativelydefinedsequences.html" data-scroll="iterativelydefinedsequences">Iteratively defined sequences</a></li>
-<li><a href="monotoneexercises.html" data-scroll="monotoneexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">9</span> <span class="title">Decimals and Series</span></a><ul>
-<li><a href="decimals.html" data-scroll="decimals">Decimals</a></li>
-<li><a href="series.html" data-scroll="series">Infinite Series</a></li>
-<li><a href="numbere.html" data-scroll="numbere">The number \(e\)</a></li>
-<li><a href="decimalsseriesexercises.html" data-scroll="decimalsseriesexercises">Exercises</a></li>
-<li><a href="eisirrational.html" data-scroll="eisirrational">*Appendix: irrationality of \(e\)</a></li>
 <li><a href="subsequences.html" data-scroll="subsequences">Subsequences</a></li>
+<li><a href="cauchysequences.html" data-scroll="cauchysequences">Cauchy sequences</a></li>
 </ul>
 </li>
+<li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
+<li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a></li>
 <li class="link">
-<a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">10</span> <span class="title">Complex Numbers</span></a><ul>
-<li><a href="complexnumberssection.html" data-scroll="complexnumberssection">Complex Numbers</a></li>
-<li><a href="cartesianandpolar.html" data-scroll="cartesianandpolar">Cartesian and Polar form</a></li>
-<li><a href="geometryandarithmeticofC.html" data-scroll="geometryandarithmeticofC">Geometry and arithmetic in \​(\mathbb{C}\)</a></li>
-<li><a href="exponentialform.html" data-scroll="exponentialform">Exponential form</a></li>
-<li><a href="rootsof1.html" data-scroll="rootsof1">Roots of Unity</a></li>
-<li><a href="complexnumbersexercises.html" data-scroll="complexnumbersexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="polynomials.html" data-scroll="polynomials"><span class="codenumber">11</span> <span class="title">Polynomials</span></a><ul>
-<li><a href="introtopolynomials.html" data-scroll="introtopolynomials">Introduction</a></li>
-<li><a href="factoringpolynomials.html" data-scroll="factoringpolynomials">Factoring Polynomials</a></li>
-<li><a href="realpolynomials.html" data-scroll="realpolynomials">Real Polynomials</a></li>
-<li><a href="rootcoefficienttheorem.html" data-scroll="rootcoefficienttheorem">Root-Coefficient Theorem</a></li>
-<li><a href="polynomialsexercises.html" data-scroll="polynomialsexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="integers.html" data-scroll="integers"><span class="codenumber">12</span> <span class="title">Integers</span></a><ul>
+<a href="integers.html" data-scroll="integers"><span class="codenumber">8</span> <span class="title">Multiplicative theory of integers</span></a><ul>
 <li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
 <li><a href="euclideanalgo.html" data-scroll="euclideanalgo">The GCD and the Euclidean Algorithm</a></li>
 <li><a href="bezoutcorollaries.html" data-scroll="bezoutcorollaries">Corollaries of Bezout's Identity and the Linear Combination Lemma</a></li>
@@ -568,85 +482,57 @@
 <li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
 <li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
 <li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
-<li><a href="numbertheoryexercises.html" data-scroll="numbertheoryexercises">Exercises</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="modular.html" data-scroll="modular"><span class="codenumber">13</span> <span class="title">Modular Arithmetic</span></a><ul>
+<a href="modular.html" data-scroll="modular"><span class="codenumber">9</span> <span class="title">Modular Arithmetic</span></a><ul>
 <li><a href="arithmeticmodm.html" data-scroll="arithmeticmodm">Arithmetic modulo \(m\)</a></li>
 <li><a href="linearequationsmodm.html" data-scroll="linearequationsmodm">Solving linear equations modulo \(m\)</a></li>
 <li><a href="Zmodm.html" data-scroll="Zmodm">\(\mathbb{Z}/m\)</a></li>
 <li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
-<li><a href="modularexercises.html" data-scroll="modularexercises">Exercises</a></li>
 </ul>
 </li>
-<li class="link"><a href="infinitecardinals.html" data-scroll="infinitecardinals"><span class="codenumber">14</span> <span class="title">Applications: What's bigger than \(\infty\text{?}\)*</span></a></li>
-<li class="link">
-<a href="counting.html" data-scroll="counting"><span class="codenumber">15</span> <span class="title">Counting</span></a><ul>
-<li><a href="multiplicationprinciple.html" data-scroll="multiplicationprinciple">The Multiplication Principle</a></li>
-<li><a href="correspendenceandovercounting.html" data-scroll="correspendenceandovercounting">Correspondence and overcounting</a></li>
-<li><a href="countingsubsets.html" data-scroll="countingsubsets">Counting subsets</a></li>
-<li><a href="countingpartitions.html" data-scroll="countingpartitions">Counting partitions</a></li>
-<li><a href="binomialmultinomial.html" data-scroll="binomialmultinomial">The Binomial and Multinomial Theorems</a></li>
-<li><a href="inclusionexclusion.html" data-scroll="inclusionexclusion">Inclusion-Exclusion</a></li>
-<li><a href="countingexercises.html" data-scroll="countingexercises">Exercises</a></li>
-</ul>
-</li>
-<li class="link">
-<a href="permutations.html" data-scroll="permutations"><span class="codenumber">16</span> <span class="title">Permutations</span></a><ul>
-<li><a href="permutationssection.html" data-scroll="permutationssection">Permutations</a></li>
-<li><a href="tablenotation.html" data-scroll="tablenotation">Table Notation</a></li>
-<li><a href="compositionandidentity.html" data-scroll="compositionandidentity">Composition and identity</a></li>
-<li><a href="inverseofpermutation.html" data-scroll="inverseofpermutation">Inverse permutations</a></li>
-<li><a href="section-92.html" data-scroll="section-92">Powers</a></li>
-<li><a href="cycles.html" data-scroll="cycles">Cycles</a></li>
-<li><a href="cyclenotation.html" data-scroll="cyclenotation">Cycle Notation</a></li>
-<li><a href="section-95.html" data-scroll="section-95">Order of a permutation</a></li>
-<li><a href="evenandoddpermutations.html" data-scroll="evenandoddpermutations">Even and Odd permutations</a></li>
-<li><a href="permutationexercises.html" data-scroll="permutationexercises">Exercises</a></li>
-</ul>
-</li>
+<li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">10</span> <span class="title">Counting</span></a></li>
+<li class="link"><a href="permutations.html" data-scroll="permutations"><span class="codenumber">11</span> <span class="title">Permutations</span></a></li>
 <li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="rulesforlimits"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Rules for Limits</span>
+<span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Rules for Limits</span>
 </h2>
-<article class="definition definition-like" id="definition-35"><h6 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
+<article class="definition definition-like" id="definition-37"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-849">We say that a sequence \((a_n)\) is <dfn class="terminology">bounded</dfn> if the set of values \(\{a_{1},a_{2},...\}\) is a bounded set, i.e. there are \(m,M\) so that \(m\leq a_n\leq M\) for all \(n\text{.}\)</p></article><article class="proposition theorem-like" id="cgtgivesbdd"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span>
+<p id="p-554">We say that a sequence \((a_n)\) of real numbers is <dfn class="terminology">bounded above</dfn>, <dfn class="terminology">bounded below</dfn>, or just <dfn class="terminology">bounded</dfn> if and only if the set \(\{a_{1},a_{2},\ldots\}\) is so. That is, \((a_n)\) is bounded above if and only if there exists \(M \in \RR\) such that for every \(n\in\NN\text{,}\) one has \(a_n\lt M\text{;}\) \((a_n)\) is bounded below if and only if there exists \(m \in \RR\) such that for every \(n\in\NN\text{,}\) one has \(a_n\gt m\text{;}\) and \((a_n)\) is bounded if and only if there exist \(m,M \in \RR\) such that for every \(n\in\NN\text{,}\) one has \(m \lt a_n\lt M\text{.}\)</p></article><article class="proposition theorem-like" id="cgtgivesbdd"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
 </h6>
-<p id="p-850">Suppose the sequence \((a_{n})\) converges. Then it is bounded.</p></article><article class="hiddenproof" id="proof-33"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><p id="p-851">Let \(L=\lim_{n\rightarrow\infty}a_{n}\text{.}\) By the definition of a limit (with \(\epsilon=1\)), there is \(N\) so that \(n&gt; N\) implies \(|a_{n}-L|\lt 1\) (there was nothing special about our choice of \(\epsilon=1\) here, any positive number will work in this argument). Thus, for \(n&gt; N\text{,}\)</p>
+<p id="p-555">Let \((a_n)\) be a sequence. If \((a_{n})\) converges, then it is bounded.</p></article><article class="hiddenproof" id="proof-20"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof"><p id="p-556">Let \(L=\lim_{n\rightarrow\infty}a_{n}\text{.}\) By the definition of a limit (with \(\epsilon=1\)), there is a natural number \(N\) such that if \(n&gt; N\text{,}\) then \(|a_{n}-L|\lt 1\text{.}\) <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a> Thus, for \(n&gt; N\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 |a_{n}|=|a_{n}-L+L| \leq |a_{n}-L|+|L| \lt 1+|L|\text{.}
 \end{equation*}
 </div>
-<p id="p-852">For \(n\lt N\text{,}\) we have \(|a_{n}|\leq \max\{|a_i| : |\; i=1,...,N-1\}\text{.}\) Thus, for all \(n\text{,}\)</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">There was nothing special about our choice of \(\epsilon=1\) here, any positive number will work in this argument.</div></div>
+<p id="p-557">For \(n\lt N\text{,}\) we have \(|a_{n}|\leq \max\{|a_i| : 1\leq i\leq N-1\}\text{.}\) Thus, for all \(n\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 |a_{n}|\leq \max\{1+|L|,|a_{1}|,...,|a_{n}|\}\text{.}
 \end{equation*}
-</div>
-<p id="p-853">By <a class="xref" data-knowl="./knowl/ex_bounded.html" title="Checkpoint 6.1.2">Exercise 6.1.2</a>, the sequence is bounded.</p></article></div>
-<article class="problem example-like" id="problem-2"><a data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-2"><h6 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-2"><article class="problem example-like"><p id="p-854">Does the converse to <a class="xref" data-knowl="./knowl/cgtgivesbdd.html" title="Proposition 7.2.2">Proposition 7.2.2</a> hold?</p></article></div>
+</div></article></div>
+<p id="p-558">The converse to <a class="xref" data-knowl="./knowl/cgtgivesbdd.html" title="Proposition 5.2.2">Proposition 5.2.2</a> is false. Consider, for example, the sequence \((a_n)\) given by \(a_n = (-1)^n\text{,}\) which is bounded but does not converge.</p>
 <article class="proposition theorem-like" id="p_limit-rules"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.2.4</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
 </h6>
-<p id="p-855">Suppose that \((a_{n})\) and \((b_{n})\) converge to \(a\) and \(b\) respectively. Then</p>
+<p id="p-559">Let \((a_{n})\) and \((b_{n})\) be sequences of real numbers that converge to \(a\) and \(b\) respectively. Then</p>
 <ol class="lower-alpha">
-<li id="li-211"><p id="p-856">\(\displaystyle a_{n}+b_{n}\rightarrow a+b\)</p></li>
-<li id="li-212"><p id="p-857">\(\displaystyle a_{n}b_{n} \rightarrow ab\)</p></li>
-<li id="li-213"><p id="p-858">If \(c\in\mathbb{R}\text{,}\) then \(ca_{n}\rightarrow ca\text{.}\)</p></li>
-<li id="li-214"><p id="p-859">If \(b\neq 0\) and \(b_n\neq 0\) for all \(n\text{,}\) then \(\frac{a_{n}}{b_{n}}\rightarrow \frac{a}{b}\text{.}\)</p></li>
-</ol></article><article class="hiddenproof" id="proof-34"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><ol class="lower-alpha">
-<li id="li-215">
-<p id="p-860">Let \(\epsilon&gt;0\text{.}\) We need to show there is \(N\) so that \(n &gt; N\) implies \(|a_{n}+b_{n}-(a+b)|\lt \epsilon\text{.}\) Note that by the triangle inequality</p>
+<li id="li-106"><p id="p-560">\(\displaystyle a_{n}+b_{n}\rightarrow a+b\)</p></li>
+<li id="li-107"><p id="p-561">\(\displaystyle a_{n}b_{n} \rightarrow ab\)</p></li>
+<li id="li-108"><p id="p-562">If \(c\in\mathbb{R}\text{,}\) then \(ca_{n}\rightarrow ca\text{.}\)</p></li>
+<li id="li-109"><p id="p-563">If \(b\neq 0\) and \(b_n\neq 0\) for all \(n\text{,}\) then \(\frac{a_{n}}{b_{n}}\rightarrow \frac{a}{b}\text{.}\)</p></li>
+</ol></article><article class="hiddenproof" id="proof-21"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-21"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof"><ol class="lower-alpha">
+<li id="li-110">
+<p id="p-564">Let \(\epsilon&gt;0\text{.}\) We need to show there is \(N\) so that \(n &gt; N\) implies \(|a_{n}+b_{n}-(a+b)|\lt \epsilon\text{.}\) Note that by the triangle inequality</p>
 <div class="displaymath">
 \begin{equation*}
 |a_{n}+b_{n}-(a+b)| =|(a_n-a)+(b_n-b)| \leq |a_{n}-a|+|b_{n}-b|
@@ -659,8 +545,8 @@
 \end{equation*}
 </div>
 </li>
-<li id="li-216">
-<p id="p-861">Let \(\epsilon&gt;0\text{.}\) Note that</p>
+<li id="li-111">
+<p id="p-565">Let \(\epsilon&gt;0\text{.}\) Note that</p>
 <div class="displaymath">
 \begin{align*}
 |a_{n}b_{n}-ab| \amp  =|a_{n}b_{n}-ab_{n}+ab_{n}-ab| =|(a_{n}-a)b_{n} + a(b_n-b)|\\
@@ -685,16 +571,16 @@
 |a|\cdot |b_{n}-b|\lt |a|\cdot \frac{\epsilon}{2|a|}=\frac{\epsilon}{2}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Thus, if we set \(N=\max\{N_{1},N_{2}\}\text{,}\) then \(n &gt; N\) and  <a class="xref" data-knowl="./knowl/e_anbn-ab.html" title="Equation">()</a> imply</p>
+<p class="continuation">Thus, if we set \(N=\max\{N_{1},N_{2}\}\text{,}\) then if \(n &gt; N\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 |a_{n}b_{n}-ab| \leq |a_{n}-a|\cdot |b_{n}|+ |a|\cdot |b_{n}-b| \lt \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon\text{.}
 \end{equation*}
 </div>
 </li>
-<li id="li-217"><p id="p-862">We leave this one as an exercise.</p></li>
-<li id="li-218">
-<p id="p-863">We claim that it suffices to show that if \(b_n\rightarrow b\) and \(b_n,b\neq 0\text{,}\) then \(b_{n}^{-1}\rightarrow b^{-1}\text{.}\) Indeed, if this is the case, then  by part (b),</p>
+<li id="li-112"><p id="p-566">We leave this one as an exercise.</p></li>
+<li id="li-113">
+<p id="p-567">We claim that it suffices to show that if \(b_n\rightarrow b\) and \(b_n,b\neq 0\text{,}\) then \(b_{n}^{-1}\rightarrow b^{-1}\text{.}\) Indeed, if this is the case, then  by part (b),</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{a_{n}}{b_{n}}=a_{n}\cdot b_{n}^{-1} \rightarrow ab^{-1}=\frac{a}{b}\text{.}
@@ -709,7 +595,7 @@
 <p class="continuation">Suppose we can show that for some number \(s&gt;0\) we have</p>
 <div class="displaymath">
 \begin{equation}
-|b_{n}|\geq s \;\;\; \mbox{ for all } n\in\mathbb{N}\text{.}\label{e_bn_m}\tag{7.2.1}
+|b_{n}|\geq s \text{ for every } n\in\mathbb{N}\text{.}\label{e_bn_m}\tag{5.2.1}
 \end{equation}
 </div>
 <p class="continuation">Then since \(b_{n}\rightarrow b\text{,}\) we know that for any \(\epsilon_1&gt;0\) there is \(N = N(\epsilon_1)\) so that \(n &gt; N\) implies \(|b_{n}-b|\lt \epsilon_1\text{,}\) and then we would have</p>
@@ -724,7 +610,7 @@
 \left|\frac{1}{b_{n}}-\frac{1}{b}\right| \leq \frac{\epsilon_1}{|b| s}= \frac{|b|s\epsilon}{|b| s}=\epsilon\text{.}
 \end{equation*}
 </div>
-<p class="continuation">So now we focus on proving <a class="xref" data-knowl="./knowl/e_bn_m.html" title="Equation 7.2.1">(7.2.1)</a>. Since \(b_n\rightarrow b\text{,}\) there is \(N'\) so that \(n &gt; N'\) implies \(|b_{n}-b|\lt \frac{|b|}{2}\text{.}\) Thus, by the reverse triangle inequality,</p>
+<p class="continuation">So now we focus on proving <a class="xref" data-knowl="./knowl/e_bn_m.html" title="Equation 5.2.1">(5.2.1)</a>. Since \(b_n\rightarrow b\text{,}\) there is \(N'\) so that \(n &gt; N'\) implies \(|b_{n}-b|\lt \frac{|b|}{2}\text{.}\) Thus, by the reverse triangle inequality,</p>
 <div class="displaymath">
 \begin{equation*}
 |b_{n}| =|b_{n}-b+b| \geq |b|-|b_{n}-b| &gt;|b|-\frac{|b|}{2} = \frac{|b|}{2}\text{.}
@@ -736,30 +622,30 @@
 |b_{n}|\geq \min\left\{\frac{|b|}{2},|b_{1}|,\dots ,|b_{N'}|\right\}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">This finishes the proof of  <a class="xref" data-knowl="./knowl/e_bn_m.html" title="Equation 7.2.1">(7.2.1)</a>, and thus of (d).</p>
+<p class="continuation">This finishes the proof of  <a class="xref" data-knowl="./knowl/e_bn_m.html" title="Equation 5.2.1">(5.2.1)</a>, and thus of (d).</p>
 </li>
 </ol></article></div>
-<p id="p-864">From these rules, we can get many more useful results:</p>
+<p id="p-568">From these rules, we can get many more useful results:</p>
 <article class="proposition theorem-like" id="p_power-lim"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.2.5</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span>
 </h6>
-<p id="p-865">Suppose that \(x_n\rightarrow L\) as \(n \to \infty\) and that \(k \in \mathbb{N}\text{.}\) Then \(x_{n}^{k}\rightarrow L^{k}\) as \(n \to \infty\text{.}\)</p></article><article class="hiddenproof" id="proof-35"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-35"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-35"><article class="hiddenproof"><p id="p-866">We prove this by induction on \(k\text{.}\) The base case \(k=1\) is a tautology. For the induction step, assume we have shown that whenever \(x_n\rightarrow L\text{,}\) then for some particular \(k \geq 1\text{,}\) \(x_{n}^{k}\rightarrow L^{k}\text{.}\) Now apply <a class="xref" data-knowl="./knowl/p_limit-rules.html" title="Proposition 7.2.4">Proposition 7.2.4</a>(b) with \(a_n=x_{n}^{k}\) and \(b_{n}=x_{n}\text{,}\) to obtain</p>
+<p id="p-569">Suppose that \(x_n\rightarrow L\) as \(n \to \infty\) and that \(k \in \mathbb{N}\text{.}\) Then \(x_{n}^{k}\rightarrow L^{k}\) as \(n \to \infty\text{.}\)</p></article><article class="hiddenproof" id="proof-22"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof"><p id="p-570">We prove this by induction on \(k\text{.}\) The base case \(k=1\) is a tautology. For the induction step, assume we have shown that whenever \(x_n\rightarrow L\text{,}\) then for some particular \(k \geq 1\text{,}\) \(x_{n}^{k}\rightarrow L^{k}\text{.}\) Now apply <a class="xref" data-knowl="./knowl/p_limit-rules.html" title="Proposition 5.2.3">Proposition 5.2.3</a>(b) with \(a_n=x_{n}^{k}\) and \(b_{n}=x_{n}\text{,}\) to obtain</p>
 <div class="displaymath">
 \begin{equation*}
-\limn x_{n}^{k+1}=\limn x_{n}^{k}x_{n} =\left(\limn x_{n}^{k}\right)\cdot\left(\limn x_{n}\right) =L^{k}\cdot L = L^{k+1}
+\lim_n x_{n}^{k+1}=\lim_n x_{n}^{k}x_{n} =\left(\lim_n x_{n}^{k}\right)\cdot\left(\lim_n x_{n}\right) =L^{k}\cdot L = L^{k+1}
 \end{equation*}
 </div>
-<p id="p-867">Thus, the proposition follows by induction.</p></article></div>
+<p id="p-571">Thus, the proposition follows by induction.</p></article></div>
 <article class="proposition theorem-like" id="p_x_n_y_n"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.2.6</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="period">.</span>
 </h6>
-<p id="p-868">Let \((x_{n})\) and \((y_{n})\) be sequences.</p>
+<p id="p-572">Let \((x_{n})\) and \((y_{n})\) be sequences.</p>
 <ol class="lower-alpha">
-<li id="li-219"><p id="p-869">If \(x_{n}\rightarrow x\text{,}\) \(y_{n}\rightarrow y\text{,}\) and \(x_{n}\leq y_{n}\) for all \(n\in\mathbb{N}\text{,}\) then \(x\leq y\text{.}\)</p></li>
-<li id="li-220"><p id="p-870">If \(x_n\rightarrow x\) and \(x_{n}\leq y\) for all \(n\text{,}\) then \(x\leq y\text{.}\)</p></li>
-</ol></article><article class="hiddenproof" id="proof-36"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-36"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-36"><article class="hiddenproof"><ol class="lower-alpha">
-<li id="li-221">
-<p id="p-871">Suppose for a contradiction that \(x&gt;y\text{.}\) Take \(\epsilon = (x-y)/2 &gt; 0\text{.}\) Since \(x_{n}\rightarrow x\text{,}\) there is \(N_{1}\) so that \(n &gt; N_{1}\) implies</p>
+<li id="li-114"><p id="p-573">If \(x_{n}\rightarrow x\text{,}\) \(y_{n}\rightarrow y\text{,}\) and \(x_{n}\leq y_{n}\) for all \(n\in\mathbb{N}\text{,}\) then \(x\leq y\text{.}\)</p></li>
+<li id="li-115"><p id="p-574">If \(x_n\rightarrow x\) and \(x_{n}\leq y\) for all \(n\text{,}\) then \(x\leq y\text{.}\)</p></li>
+</ol></article><article class="hiddenproof" id="proof-23"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-23"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-23"><article class="hiddenproof"><ol class="lower-alpha">
+<li id="li-116">
+<p id="p-575">Suppose for a contradiction that \(x&gt;y\text{.}\) Take \(\epsilon = (x-y)/2 &gt; 0\text{.}\) Since \(x_{n}\rightarrow x\text{,}\) there is \(N_{1}\) so that \(n &gt; N_{1}\) implies</p>
 <div class="displaymath">
 \begin{equation*}
 x-\frac{x-y}{2}\lt x_{n}\lt x+\frac{x-y}{2}
@@ -791,13 +677,13 @@ y_{n}\lt \frac{x+y}{2}\text{.}
 </div>
 <p class="continuation">which gives the desired contradiction.</p>
 </li>
-<li id="li-222"><p id="p-872">This follows by (a) by letting \(y_{n}=y\) for all \(n\text{.}\)</p></li>
+<li id="li-117"><p id="p-576">This follows by (a) by letting \(y_{n}=y\) for all \(n\text{.}\)</p></li>
 </ol></article></div>
-<p id="p-873">There is another important rule for limits, often called the “Squeeze Theorem”:</p>
+<p id="p-577">There is another important rule for limits, often called the “Squeeze Theorem”:</p>
 <article class="proposition theorem-like" id="squeeze"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">7.2.7</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.6</span><span class="period">.</span>
 </h6>
-<p id="p-874">Suppose that \(x_n \leq y_n \leq z_n\) for all \(n\text{,}\) and that \(x_n \to L\) and \(z_n \to L\text{.}\) Then \(y_n \to L\text{.}\)</p></article><article class="hiddenproof" id="proof-37"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-37"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-37"><article class="hiddenproof"><p id="p-875">Let \(\epsilon &gt; 0\text{.}\) There exist \(N_1\) and \(N_2\) such that for \(n &gt; N_1\) we have</p>
+<p id="p-578">Suppose that \(x_n \leq y_n \leq z_n\) for all \(n\text{,}\) and that \(x_n \to L\) and \(z_n \to L\text{.}\) Then \(y_n \to L\text{.}\)</p></article><article class="hiddenproof" id="proof-24"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-24"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-24"><article class="hiddenproof"><p id="p-579">Let \(\epsilon &gt; 0\text{.}\) There exist \(N_1\) and \(N_2\) such that for \(n &gt; N_1\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 |x_n - L| \lt  \epsilon
@@ -809,13 +695,13 @@ y_{n}\lt \frac{x+y}{2}\text{.}
 |z_n - L| \lt  \epsilon\text{.}
 \end{equation*}
 </div>
-<p id="p-876">Take \(N = \max\{N_1, N_2\}\text{.}\) For \(n &gt; N\) we have</p>
+<p id="p-580">Take \(N = \max\{N_1, N_2\}\text{.}\) For \(n &gt; N\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 - \epsilon \lt  x_n - L \leq y_n - L \leq z_n - L \lt  \epsilon\text{.}
 \end{equation*}
 </div>
-<p id="p-877">Therefore for \(n &gt; N\) we have \(|y_n - L| \lt \epsilon\text{.}\)</p></article></div></section></div></main>
+<p id="p-581">Therefore for \(n &gt; N\) we have \(|y_n - L| \lt \epsilon\text{.}\)</p></article></div></section></div></main>
 </div>
 </body>
 </html>

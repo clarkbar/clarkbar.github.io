@@ -1,14 +1,14 @@
 # Fdb version 3
-["biber rootfile"] 1633988733 "rootfile.bcf" "rootfile.bbl" "rootfile" 1634093674
-  "rootfile.bcf" 1634093673 106819 be3187ca21d6ef862f592d7db12702bf "xelatex"
+["biber rootfile"] 1633988733 "rootfile.bcf" "rootfile.bbl" "rootfile" 1634316323
+  "rootfile.bcf" 1634316323 106819 be3187ca21d6ef862f592d7db12702bf "xelatex"
   (generated)
   "rootfile.blg"
   "rootfile.bbl"
-["xdvipdfmx"] 1634093673 "rootfile.xdv" "rootfile.pdf" "rootfile" 1634093674
-  "rootfile.xdv" 1634093673 39172 d1a1500627f12640a3d20f8084f3c889 "xelatex"
+["xdvipdfmx"] 1634316323 "rootfile.xdv" "rootfile.pdf" "rootfile" 1634316323
+  "rootfile.xdv" 1634316323 61344 9ca6ea32784bbc91798d0a8a45393d3d "xelatex"
   (generated)
   "rootfile.pdf"
-["xelatex"] 1634093671 "rootfile.tex" "rootfile.xdv" "rootfile" 1634093674
+["xelatex"] 1634316321 "rootfile.tex" "rootfile.xdv" "rootfile" 1634316323
   "/dev/null" 1630339755 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/clarkbar/texmf/tex/latex/commonstuff/boilerart.sty" 1599981791 9071 43d2984fc3982aa8e31536136f39281b ""
   "/home/clarkbar/texmf/tex/latex/commonstuff/citationscheme.sty" 1586049184 7126 2b28bb7ae98284cc8b3f1b8a3d94b6a0 ""
@@ -254,17 +254,18 @@
   "/usr/local/texlive/2021/texmf.cnf" 1619147540 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "2021/October/11.tex" 1634027393 1516 01062f3c9d6f982045f49a3791d8862f ""
   "2021/October/12.tex" 1634093670 1705 5e7867fdf43e4993f4ae419c1131328f ""
+  "2021/October/14.tex" 1634316320 1685 0733c039f417adf86f25ec3cce497949 ""
   "2021/October/flag.tex" 1633991554 3 2228e977ebea8966e27929f43e39cb67 ""
-  "rootfile.aux" 1634093673 1423 ac5f745d8573bf5c1a4b4574039ec744 "xelatex"
+  "rootfile.aux" 1634316323 1583 f34a16c58d80df3bd33aa043b51059e3 "xelatex"
   "rootfile.bbl" 1633988734 0 d41d8cd98f00b204e9800998ecf8427e "biber rootfile"
-  "rootfile.run.xml" 1634093673 2351 2b56bda537baa0eff1ae98936ed39085 "xelatex"
-  "rootfile.tex" 1634045448 4163 9b6008dc9e84e217dcd1fca85fcd93a8 ""
-  "rootfile.toc" 1634093673 286 e0a8c18ae7258298c57ca5e284953be6 "xelatex"
+  "rootfile.run.xml" 1634316323 2351 2b56bda537baa0eff1ae98936ed39085 "xelatex"
+  "rootfile.tex" 1634247272 4665 c720cfffca2e84a85f7dce30db8ba2a9 ""
+  "rootfile.toc" 1634316323 388 15da4a45fd89af12885777c67cd7b536 "xelatex"
   (generated)
-  "rootfile.thm"
+  "rootfile.run.xml"
+  "rootfile.log"
+  "rootfile.xdv"
+  "rootfile.toc"
   "rootfile.aux"
   "rootfile.bcf"
-  "rootfile.toc"
-  "rootfile.xdv"
-  "rootfile.log"
-  "rootfile.run.xml"
+  "rootfile.thm"

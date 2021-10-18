@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:15+01:00       *-->
+<!--*       on 2021-10-18T13:48:15+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,11 +13,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><p>We allow ourselves the flexibility to speak of the gcd of negative integers as well as positive ones, but we notice that</p>
+<body><article class="example example-like"><p>Show that \(\lim_{n\rightarrow \infty} \frac{5n^2+2n}{n^2+4}=5\text{.}\)</p>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Rough work:</em> We are going to need to show that \(\frac{5n^2+2n}{n^2+4}-5\) is small when \(n\) is large, so it first makes sense to simplify this expression algebraically to see if we can identify when it might be small. Doing this,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\gcd(a,b) = \gcd(a,-b) = \gcd(-a,b) = \gcd(-a,-b)\text{.}
+\frac{5n^2+2n}{n^2+4}-5 =\frac{2n-20}{n^2+4}\text{,}
 \end{equation*}
 </div>
-<p>(So for instance \(\gcd(-6,-27) = \gcd(6, 27) = 3\text{.}\)) As a result, we will mostly focus on the gcd of natural numbers.</p></article></body>
+<p class="continuation">and therefore, using the triangle inequality and the fact that \(4\geq0\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left|\frac{5n^2+2n}{n^2+4}-5\right| \leq \left| \frac{2n-20}{n^2+4} \right| \leq \frac{2n}{n^2 + 4} + \frac{20}{n^2 + 4} \leq \frac{2}{n} + \frac{20}{n^2}\text{.}
+\end{equation*}
+</div>
+<p>This is looking good because all we need to do to make this small is to make both \(2/n\) and \(20/n^2\) small, and this is very reasonable. Now we bring in the \(\epsilon &gt; 0\text{.}\) If \(n\) is such that both \(2/n \lt  \epsilon/2\) and \(20/n^2 \lt  \epsilon/2\text{,}\) we can deduce that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left|\frac{5n^2+2n}{n^2+4}-5\right| \lt  \frac{\epsilon}{2}+ \frac{\epsilon}{2} = \epsilon\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which is exactly what we need. What do we need \(n\) to satisfy for this to be true? Well, for \(\frac{2}{n} \lt  \frac{\epsilon}{2}\) we need \(n &gt; \frac{4}{\epsilon}\text{,}\) and for \(\frac{20}{n^2} \lt  \frac{\epsilon}{2}\) we need \(n &gt; \sqrt{\frac{40}{\epsilon}}\text{.}\) To ensure both of these hold, we need \(n\) to satisfy \(n &gt; \max\left\{\frac{4}{\epsilon}, \sqrt{\frac{40}{\epsilon}}\right\}\text{.}\) So we take \(N = \max\left\{\frac{4}{\epsilon}, \sqrt{\frac{40}{\epsilon}}\right\}\text{.}\)</p>
+<p>(All the above was just rough work to help me formulate and write my formal proof. Below is what you want to do when writing your work for marking (and not the rough work). It's fine not to show how you chose your \(N\text{,}\) so long as it works. And there is no single answer for \(N\) — if \(N\) works, then so does \(N'\) for any \(N'&gt;N\text{.}\))</p>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Now for the actual proof:</em></p>
+<p>We claim that \(\lim_{n\rightarrow\infty}\frac{5n^2+2n}{n^2+4}=5\text{.}\) Let \(\epsilon\) be any positive real number. We need to show that there is \(N\in\RR\) so that \(n&gt; N\) implies \(\left|\frac{5n^2+2n}{n^2+4}-5\right|\lt \epsilon\text{.}\) We assert that \(N=\max\left\{\frac{4}{\epsilon}, \sqrt{\frac{40}{\epsilon}}\right\}\) works. Indeed, if \(n&gt; N\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left|\frac{5n^2+2n}{n^2+4}-5\right| \leq \left| \frac{2n-20}{n^2+4} \right| \leq \frac{2n}{n^2 + 4} + \frac{20}{n^2 + 4} \leq \frac{2}{n} + \frac{20}{n^2} \lt  \frac{2}{N} + \frac{20}{N^2} \leq \frac{\epsilon}{2}+ \frac{\epsilon}{2} = \epsilon\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since we have shown we can find such an \(N\) no matter what \(\epsilon&gt;0\) we started with, this proves the claim.</p></article></body>
 </html>

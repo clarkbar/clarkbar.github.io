@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:16+01:00       *-->
+<!--*       on 2021-10-18T13:48:16+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,27 +15,15 @@
 </head>
 <body>
 <article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.4.7</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2.9</span><span class="period">.</span>
 </h6>
-<p>Find all integer solutions to \(x^2-y^2=91\text{.}\)</p>
-<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Reductions:</em> Let's make a few observations first to narrow down what to solve for.</p>
+<p>Let \(a = r_1 = 48\) and \(b = r_0 = 66\text{.}\)</p>
 <ul class="disc">
-<li><p>Notice that if \((x,y)\) is a solution, then so is \((\pm x,\pm y)\text{,}\) and so we can assume that \(x,y\geq 0\text{,}\) since then the other solutions will be of the form \((\pm x,\pm y)\text{.}\)</p></li>
-<li><p>Moreover, we can't have \(x=y\) since then the equation is not satisfied, so assume \(x\neq y\text{.}\) We can also assume \(x&gt;y\text{,}\) since \(x\lt y\) would imply \(x^2\lt y^2\text{,}\) so \(x^2-y^2\lt 0\lt 51\text{.}\)</p></li>
-<li><p>Finally, we can't have either \(x\) or \(y\) equal to zero, since \(91\) is not a perfect square.</p></li>
+<li><p>We divide \(66\) by \(48\) to get \(1\) with a remainder of \(r_2=18\text{.}\)</p></li>
+<li><p>We divide \(48\) by \(18\) to get \(2\) with a remainder of \(r_3 = 12\text{.}\)</p></li>
+<li><p>We divide \(18\) by \(12\) to get \(1\) with a remainder of \(r_4 = 6\text{.}\)</p></li>
+<li><p>We divide \(12\) by \(6\) to get \(2\) with a remainder of \(r_5 = 0\text{.}\)</p></li>
 </ul>
-<p>Thus, after these reductions, we can assume \(x&gt;y&gt;0\text{.}\)</p>
-<p>Note that \(91\) has prime factorization \(91=7\cdot 13\text{,}\) and so</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-91=7\cdot 13 = x^2-y^2=(x-y)(x+y)\text{.}
-\end{equation*}
-</div>
-<p>Since \(x+y&gt;x-y\text{,}\) there are two cases to consider:</p>
-<ul class="disc">
-<li><p>If \(x+y=91\) and \(x-y=1\text{,}\) solving these linear equations simultaneously gives \(x=46\) and \(y=45\text{.}\)</p></li>
-<li><p>If \(x+y=13\) and \(x-y=7\text{,}\) solving these two equations gives \(x=10\) and \(y=3\text{.}\)</p></li>
-</ul>
-<p>Thus, all the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">positive</dfn> solutions \((x,y)\) are \((46,45)\) and \((10,3)\text{.}\) Thus, recalling our reductions, <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">all</dfn> solutions are just \((\pm 46, \pm 45)\text{,}\) and \((\pm 10,\pm 3)\) (where we range over all possible combinations of \(\pm\) for a total of \(8\) solutions).</p></article><span class="incontext"><a href="fundamentaltheoremofarithmetic.html#example-68">in-context</a></span>
+<p>Thus \(r_4 = 6\) is the gcd of \(48\) and \(66\text{.}\)</p></article><span class="incontext"><a href="euclideanalgo.html#example-68">in-context</a></span>
 </body>
 </html>

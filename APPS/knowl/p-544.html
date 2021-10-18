@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-14T11:48:15+01:00       *-->
+<!--*       on 2021-10-18T13:48:15+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>As motivation for the techniques we develop along the way, we will show how they can be used to solve various diophantine equations. As a special final application of these techniques, we'll also classify all <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">Pythagorean Triples</dfn>, that is, integers \(x,y,z\) so that</p>
+<p>This is looking good because all we need to do to make this small is to make both \(2/n\) and \(20/n^2\) small, and this is very reasonable. Now we bring in the \(\epsilon &gt; 0\text{.}\) If \(n\) is such that both \(2/n \lt  \epsilon/2\) and \(20/n^2 \lt  \epsilon/2\text{,}\) we can deduce that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-x^2+y^2=z^2\text{.}
+\left|\frac{5n^2+2n}{n^2+4}-5\right| \lt  \frac{\epsilon}{2}+ \frac{\epsilon}{2} = \epsilon\text{,}
 \end{equation*}
 </div>
-<span class="incontext"><a href="integers.html#p-544">in-context</a></span>
+<p class="continuation">which is exactly what we need. What do we need \(n\) to satisfy for this to be true? Well, for \(\frac{2}{n} \lt  \frac{\epsilon}{2}\) we need \(n &gt; \frac{4}{\epsilon}\text{,}\) and for \(\frac{20}{n^2} \lt  \frac{\epsilon}{2}\) we need \(n &gt; \sqrt{\frac{40}{\epsilon}}\text{.}\) To ensure both of these hold, we need \(n\) to satisfy \(n &gt; \max\left\{\frac{4}{\epsilon}, \sqrt{\frac{40}{\epsilon}}\right\}\text{.}\) So we take \(N = \max\left\{\frac{4}{\epsilon}, \sqrt{\frac{40}{\epsilon}}\right\}\text{.}\)</p>
+<span class="incontext"><a href="epsilondefinitionoflimit.html#p-544">in-context</a></span>
 </body>
 </html>
