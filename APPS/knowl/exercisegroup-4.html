@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-22T12:35:09+01:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="exercisegroup">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Exercise Group</span><span class="space"> </span><span class="codenumber">5.7.1–6</span><span class="period">.</span>
+</h6>
+<div class="introduction">
+<p>Let \((a_n)_{n=0}^{\infty}\) be a sequence of positive real numbers. For every \(n\in\NN_0\text{,}\) we may define the expression</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+[a_0, a_1, \ldots, a_n] = a_0+\cfrac{1}{a_1+\cfrac{1}{a_2+\cfrac{1}{\ddots +\cfrac{1}{a_n}}}}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">More systematically, we define this expression inductively: for \(n=0\text{,}\) we write \([a_0]=a_0\text{;}\) now for every \(n \in \NN_0\text{,}\) we define</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+[a_0, a_1, \dots, a_n]=\left[a_0,a_1,\dots,a_{n-2},a_{n-1}+\frac{1}{a_n}\right]\text{.}
+\end{equation*}
+</div>
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="exercisegroup-exercises">
+<article class="exercise exercise-like"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p>Define two auxiliary sequences \((u_n)_{n=-2}^{\infty}\) and \((v_n)_{n=-2}^{\infty}\) of real numbers recursively as follows. Let</p>
+<div class="displaymath">
+\begin{equation*}
+u_{-2} = 0 \text{ and } u_{-1} = 1
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+v_{-2} = 1 \text{ and } v_{-1} = 0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">For any natural number \(n\in \NN_0\text{,}\) let</p>
+<div class="displaymath">
+\begin{equation*}
+u_n = a_nu_{n-1}+u_{n-2} \text{ and } v_n = a_nv_{n-1}+v_{n-2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Prove that</p>
+<div class="displaymath">
+\begin{equation*}
+[a_0,a_1,\dots,a_n] = \frac{u_n}{v_n}\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p>If \(a_n = 1\) for every natural number \(n\text{,}\) then what are the numbers \(u_n\) and \(v_n\text{?}\) If you don't know a name for these sequences, that's ok; please just compute the first ten terms of each sequence.</p></article><article class="exercise exercise-like"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p>Prove that for any \(n \in \NN_0\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+u_nv_{n-1} - u_{n-1}v_n = (-1)^{n-1}\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p>For ease of notation, let us write \(x_n = [a_0,a_1, \dots,a_n]\) for \(n\in\NN_0\text{.}\) Prove that the subsequences</p>
+<div class="displaymath">
+\begin{equation*}
+(x_{2n})_{n=0}^{\infty} \text{ and } (x_{2n+1})_{n=0}^{\infty}
+\end{equation*}
+</div>
+<p class="continuation">are each bounded and monotonic, hence convergent. Write \(A = \lim_{n\to \infty} x_{2n}\) and \(B = \lim_{n\to \infty} x_{2n+1}\text{.}\)</p></article><article class="exercise exercise-like"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p>Assume now that for every \(n\in\NN_0\text{,}\) one has \(a_n \in \NN\text{.}\) Prove that \(A=B\text{.}\) Conclude that the sequence \((x_n)_{n=0}^{\infty}\) converges. Write \([a_0,a_1,\dots]\) for the limit.</p></article><article class="exercise exercise-like"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p>Let \(s,t \in \NN\text{.}\) Find an expression for \([s,t,s,t,\dots]\text{.}\) (Hint: you may use the quadratic formula.)</p></article>
+</div>
+</div>
+<span class="incontext"><a href="sequenceexerecises.html#exercisegroup-4">in-context</a></span>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-18T13:48:12+01:00       *-->
+<!--*       on 2021-10-22T12:35:05+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -468,6 +468,7 @@
 <li><a href="monotoneconvergencesection.html" data-scroll="monotoneconvergencesection">The Monotone Convergence Theorem</a></li>
 <li><a href="subsequences.html" data-scroll="subsequences">Subsequences</a></li>
 <li><a href="cauchysequences.html" data-scroll="cauchysequences">Cauchy sequences</a></li>
+<li><a href="sequenceexerecises.html" data-scroll="sequenceexerecises">Week 5 Exercises, due 26 October 2021</a></li>
 </ul>
 </li>
 <li class="link"><a href="decimalsseries.html" data-scroll="decimalsseries"><span class="codenumber">6</span> <span class="title">Decimals and Series</span></a></li>
@@ -501,14 +502,14 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Zmodm"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">\(\mathbb{Z}/m\)</span>
 </h2>
-<p id="p-909">In this section we introduce a set \(\mathbb{Z}/m\) that will be important your future algebra classes. Just like the integers, the rationals, and the reals, it is what is called a <dfn class="terminology">ring</dfn>: it is equipped with addition, subtraction, and multiplication operations. Unlike \(\mathbb{Z}\text{,}\) \(\mathbb{Q}\text{,}\) or \(\mathbb{R}\text{,}\) the set \(\mathbb{Z}/m\) is <dfn class="terminology">finite</dfn>.</p>
-<p id="p-910">As a set,</p>
+<p id="p-916">In this section we introduce a set \(\mathbb{Z}/m\) that will be important your future algebra classes. Just like the integers, the rationals, and the reals, it is what is called a <dfn class="terminology">ring</dfn>: it is equipped with addition, subtraction, and multiplication operations. Unlike \(\mathbb{Z}\text{,}\) \(\mathbb{Q}\text{,}\) or \(\mathbb{R}\text{,}\) the set \(\mathbb{Z}/m\) is <dfn class="terminology">finite</dfn>.</p>
+<p id="p-917">As a set,</p>
 <div class="displaymath">
 \begin{equation*}
 \mathbb{Z}/m=\{0,1,\dots,m-1\}\text{.}
 \end{equation*}
 </div>
-<p id="p-911">On this set we shall define addition and multiplication operations: for any \(x,y \in \mathbb{Z}/m\text{,}\)</p>
+<p id="p-918">On this set we shall define addition and multiplication operations: for any \(x,y \in \mathbb{Z}/m\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 x + y = z \mbox{ where \(z\in \{0,1,...,m-1\}\) is the unique element such that }  x + y = z\mod m\text{,}
@@ -520,16 +521,16 @@ x + y = z \mbox{ where \(z\in \{0,1,...,m-1\}\) is the unique element such that 
 x \cdot y = z \mbox{ where \(z\in \{0,1,...,m-1\}\) is the unique element such that }  x \cdot y = z\mod m\text{,}
 \end{equation*}
 </div>
-<p id="p-912">There is an additive inverse:</p>
+<p id="p-919">There is an additive inverse:</p>
 <div class="displaymath">
 \begin{equation*}
 - x = m-x
 \end{equation*}
 </div>
-<p id="p-913">(Some books write \(\mathbb{Z}_m\) for \(\mathbb{Z}/m\text{,}\) but most algebraists reserve this notation for a very different object!!)</p>
+<p id="p-920">(Some books write \(\mathbb{Z}_m\) for \(\mathbb{Z}/m\text{,}\) but most algebraists reserve this notation for a very different object!!)</p>
 <article class="example example-like" id="example-83"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-83"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-83"><article class="example example-like"><p id="p-914">Let's write the addition and multiplication tables for \(\mathbb{Z}/5=\{0,1,2,3,4\}\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-83"><article class="example example-like"><p id="p-921">Let's write the addition and multiplication tables for \(\mathbb{Z}/5=\{0,1,2,3,4\}\text{.}\)</p>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b1 r0 l0 t0 lines"></td>
@@ -742,8 +743,8 @@ x \cdot y = z \mbox{ where \(z\in \{0,1,...,m-1\}\) is the unique element such t
 <td class="l m b1 r0 l0 t0 lines"></td>
 </tr>
 </table></div></article></div>
-<p id="p-915">We can check that for \(m\in\mathbb{N}\text{,}\) \(\mathbb{Z}/m\) has all the nice algebraic properties of being a field (recall this definition from Week 1) apart from perhaps property (M4), which said that each nonzero element must have a multiplicative inverse. An element \(x\in \mathbb{Z}/m\) is <dfn class="terminology">invertible</dfn> if there exists \(y\in \mathbb{Z}/m\) so that \(x\cdot y=1\text{.}\)</p>
-<p id="p-916">If \(m\) is composite, then not every nonzero element \(\mathbb{Z}/m\) is invertible. Consider the multiplication table of \(\mathbb{Z}/4\text{:}\)</p>
+<p id="p-922">We can check that for \(m\in\mathbb{N}\text{,}\) \(\mathbb{Z}/m\) has all the nice algebraic properties of being a field (recall this definition from Week 1) apart from perhaps property (M4), which said that each nonzero element must have a multiplicative inverse. An element \(x\in \mathbb{Z}/m\) is <dfn class="terminology">invertible</dfn> if there exists \(y\in \mathbb{Z}/m\) so that \(x\cdot y=1\text{.}\)</p>
+<p id="p-923">If \(m\) is composite, then not every nonzero element \(\mathbb{Z}/m\) is invertible. Consider the multiplication table of \(\mathbb{Z}/4\text{:}\)</p>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b1 r0 l0 t0 lines"></td>
@@ -823,30 +824,30 @@ x \cdot y = z \mbox{ where \(z\in \{0,1,...,m-1\}\) is the unique element such t
 <td class="l m b1 r0 l0 t0 lines"></td>
 </tr>
 </table></div>
-<p id="p-917">As you can see, \(2x=1\) has no solution modulo \(4\text{.}\)</p>
-<p id="p-918">Observe that an element \(a \in \mathbb{Z}/m\) is invertible if and only if the equation \(ax = 1 \mod m\) admits a solution. Such a solution exists if and only if \(\gcd(a,m)\) divides \(1\text{,}\) hence if and only if \(a\) and \(m\) are coprime. Thus the invertible elements of \(\mathbb{Z}/m\) are precisely those elements that are coprime to \(m\text{.}\) In particular, if \(p\) is prime, then every nonzero element of \(\mathbb{Z}/p\) is coprime to \(p\text{,}\) so we deduce the following.</p>
+<p id="p-924">As you can see, \(2x=1\) has no solution modulo \(4\text{.}\)</p>
+<p id="p-925">Observe that an element \(a \in \mathbb{Z}/m\) is invertible if and only if the equation \(ax = 1 \mod m\) admits a solution. Such a solution exists if and only if \(\gcd(a,m)\) divides \(1\text{,}\) hence if and only if \(a\) and \(m\) are coprime. Thus the invertible elements of \(\mathbb{Z}/m\) are precisely those elements that are coprime to \(m\text{.}\) In particular, if \(p\) is prime, then every nonzero element of \(\mathbb{Z}/p\) is coprime to \(p\text{,}\) so we deduce the following.</p>
 <article class="proposition theorem-like" id="proposition-12"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
 </h6>
-<p id="p-919">Let \(m\geq 2\) be a natural number. Then \(\mathbb{Z}/m\) is a field if and only if \(m\) is prime.</p></article><article class="exercise exercise-like" id="exercise-39"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-39"><h6 class="heading">
+<p id="p-926">Let \(m\geq 2\) be a natural number. Then \(\mathbb{Z}/m\) is a field if and only if \(m\) is prime.</p></article><article class="exercise exercise-like" id="exercise-45"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-45"><h6 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-39"><article class="exercise exercise-like"><p id="p-920">How many invertible elements are there in \(\mathbb{Z}/{81}\text{?}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-45"><article class="exercise exercise-like"><p id="p-927">How many invertible elements are there in \(\mathbb{Z}/{81}\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><p id="p-921">An element \(y\in\mathbb{Z}/{81}\) is invertible if and only if \(x\) and \(81\) are coprime. The is possible if and only if \(3\) does not divide \(y\text{.}\) The number of numbers in \(\{0,1,...,80\}\) divisible by \(3\) is \(\frac{81}{3}=27\text{,}\) so the number of invertible elements is \(81-27 = 54\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><p id="p-928">An element \(y\in\mathbb{Z}/{81}\) is invertible if and only if \(x\) and \(81\) are coprime. The is possible if and only if \(3\) does not divide \(y\text{.}\) The number of numbers in \(\{0,1,...,80\}\) divisible by \(3\) is \(\frac{81}{3}=27\text{,}\) so the number of invertible elements is \(81-27 = 54\text{.}\)</p></div></div>
 </div></article></div>
-<p id="p-922">Just like there is a notion of inverses for \(\mathbb{Z}/m\text{,}\) we also have a notion of a root. We say \(y\in\mathbb{Z}/m\) is the \(n\)-th root of \(x\in\mathbb{Z}\) if \(x^n=y\text{.}\)</p>
+<p id="p-929">Just like there is a notion of inverses for \(\mathbb{Z}/m\text{,}\) we also have a notion of a root. We say \(y\in\mathbb{Z}/m\) is the \(n\)-th root of \(x\in\mathbb{Z}\) if \(x^n=y\text{.}\)</p>
 <article class="example example-like" id="example-84"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-84"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.4</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-84"><article class="example example-like"><p id="p-923">In \(\mathbb{Z}/{5}\text{,}\) does \(2\) have a cubed root? Let us test the values:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-84"><article class="example example-like"><p id="p-930">In \(\mathbb{Z}/{5}\text{,}\) does \(2\) have a cubed root? Let us test the values:</p>
 <ul class="disc">
-<li id="li-206"><p id="p-924">\(0^{3}=0\text{.}\)</p></li>
-<li id="li-207"><p id="p-925">\(1^{3}=1\text{.}\)</p></li>
-<li id="li-208"><p id="p-926">\(2^{3}=3\) since \(2^{3} = 8 = 3\mod 5\text{.}\)</p></li>
-<li id="li-209"><p id="p-927">\(3^{3}=2\) since \(3^{3} = 27 = 2\mod 5\text{.}\)</p></li>
-<li id="li-210"><p id="p-928">\(4^{3}=4\) since \(4^{3} = (-1)^{3}=-1 = 4 \mod 5\text{.}\)</p></li>
+<li id="li-206"><p id="p-931">\(0^{3}=0\text{.}\)</p></li>
+<li id="li-207"><p id="p-932">\(1^{3}=1\text{.}\)</p></li>
+<li id="li-208"><p id="p-933">\(2^{3}=3\) since \(2^{3} = 8 = 3\mod 5\text{.}\)</p></li>
+<li id="li-209"><p id="p-934">\(3^{3}=2\) since \(3^{3} = 27 = 2\mod 5\text{.}\)</p></li>
+<li id="li-210"><p id="p-935">\(4^{3}=4\) since \(4^{3} = (-1)^{3}=-1 = 4 \mod 5\text{.}\)</p></li>
 </ul>
-<p id="p-929">Thus, the unique cubed root of \(2\) is \(3\text{.}\)</p></article></div>
-<p id="p-930">However, not all numbers in every \(\mathbb{Z}/m\) have roots! Confirm for yourself that \(2\in\mathbb{Z}/{4}\) has no cubed root.</p></section></div></main>
+<p id="p-936">Thus, the unique cubed root of \(2\) is \(3\text{.}\)</p></article></div>
+<p id="p-937">However, not all numbers in every \(\mathbb{Z}/m\) have roots! Confirm for yourself that \(2\in\mathbb{Z}/{4}\) has no cubed root.</p></section></div></main>
 </div>
 </body>
 </html>

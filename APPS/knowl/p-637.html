@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-18T13:48:16+01:00       *-->
+<!--*       on 2021-10-22T12:35:09+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,26 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We are all familiar with decimal representation of numbers. For example, given a rational number \(x = \frac{p}{q}\) with \(p,
-q \in \mathbb{N}\) and \(0 \lt  p \lt  q\text{,}\) we can go through the process of dividing \(q\) into \(p\) to represent it as</p>
+<p>Let \((a_n)_{n=0}^{\infty}\) be a sequence of positive real numbers. For every \(n\in\NN_0\text{,}\) we may define the expression</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-x = 0.a_1 a_2 \dots a_n \dots
+[a_0, a_1, \ldots, a_n] = a_0+\cfrac{1}{a_1+\cfrac{1}{a_2+\cfrac{1}{\ddots +\cfrac{1}{a_n}}}}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">where each \(a_n\) is an integer in the set \(\{0,1,\dots, 9\}\text{.}\) So we are used to writing</p>
+<p class="continuation">More systematically, we define this expression inductively: for \(n=0\text{,}\) we write \([a_0]=a_0\text{;}\) now for every \(n \in \NN_0\text{,}\) we define</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\frac{1}{2} = 0.5 = 0.50000\dots \mbox{ and }  \frac{2}{3} = 0.66666\dots
+[a_0, a_1, \dots, a_n]=\left[a_0,a_1,\dots,a_{n-2},a_{n-1}+\frac{1}{a_n}\right]\text{.}
 \end{equation*}
 </div>
-<p class="continuation">and we are also may have seen such expressions as</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\sqrt{2} = 1.414\dots \mbox{ and }  \pi = 3.14159 \dots\text{.}
-\end{equation*}
-</div>
-<p class="continuation">There are also wilder examples such as \(0.7264082793684301 \dots\text{.}\) which have no identifiable pattern. But what exactly do we mean by these infinitely long decimals? We shall answer this question, and give a precise meaning to decimal expansions.</p>
-<span class="incontext"><a href="decimalsseries.html#p-637">in-context</a></span>
+<span class="incontext"><a href="sequenceexerecises.html#p-637">in-context</a></span>
 </body>
 </html>
