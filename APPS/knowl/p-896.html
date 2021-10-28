@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-22T12:35:11+01:00       *-->
+<!--*       on 2021-10-28T20:49:33+01:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(d\) and \(m\) be coprime. If \(x,y\in \mathbb{Z}\) and \(xd=yd\mod m\text{,}\) then \(x = y\mod m\text{.}\) In particular, if \(p\) is prime and \(p\) does not divide \(a\text{,}\) then \(xa = ya\mod p\) implies that \(x = y\mod p\text{.}\)</p>
+<p>This can be proven by induction. For the base case of \(k=1\text{,}\) this is immediate. Now suppose \(a^{k} = x^{k}\mod m\) for some \(k\geq 1\text{.}\) Then by part (b) of this theorem with \(b=a^{k}\) and \(x=y^{k}\) and our induction hypothesis</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a^{k+1}=a\cdot a^{k} = a x^{k} \mod m
+\end{equation*}
+</div>
+<p class="continuation">and then applying part (b) again but with \(b=y=x^k\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a x^{k} = x\cdot x^k=x^{k+1}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This proves the induction and hence the theorem. \qedhere</p>
 <span class="incontext"><a href="arithmeticmodm.html#p-896">in-context</a></span>
 </body>
 </html>
