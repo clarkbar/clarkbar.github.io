@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-30T20:16:40+01:00       *-->
+<!--*       on 2021-11-01T13:55:28Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We divide \(12\) by \(6\) to get \(2\) with a remainder of \(r_5 = 0\text{.}\)</p>
-<span class="incontext"><a href="euclideanalgo.html#p-711">in-context</a></span>
+<p>Finally, it arises as the infinite sum</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+e = \sum_{n=0}^\infty \frac{1}{n!}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which converges by the comparison test since for \(n \geq 1\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{1}{n!}=\frac{1}{n\cdot (n-1)\cdots 2\cdot 1}\leq \frac{1}{2\cdot 2\cdots 2\cdot 1 } = \frac{1}{2^{n-1}}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and the geometric series \(\sum_{n=1}^{\infty}\frac{1}{2^{n-1}}\) converges. This is the definition of \(e\) which we adopt officially in mathematics. In the exercises you will establish that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty \frac{1}{n!} = \lim_{n\to\infty} \left(1 + \frac{1}{n}\right)^n\text{,}
+\end{equation*}
+</div>
+<p class="continuation">showing that the two definitions of \(e\) which we have proposed are in fact the same.</p>
+<span class="incontext"><a href="numbere.html#p-711">in-context</a></span>
 </body>
 </html>

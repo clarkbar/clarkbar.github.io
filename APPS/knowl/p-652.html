@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-30T20:16:40+01:00       *-->
+<!--*       on 2021-11-01T13:55:28Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>But we aren't done: there are still equations we cannot solve. The equation \(x^2+1=0\) “should” have \(2\) solutions \(z\) and \(-z\text{,}\) but it has no real solutions. Introducing two new solutions \(i, -i\) while keeping the field structure in place, produces the field \(\CC\) of complex numbers.</p>
-<span class="incontext"><a href="complexnumbers.html#p-652">in-context</a></span>
+<p>We all know the convention that the number \(a_1\) gives the number of tenths, \(a_2\) gives the number of hundredths, \(a_3\) gives the number of thousandths etc. But what do we mean by the ellipses at the end of the expansion? A good way to make sense of this is to consider the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">finite</dfn> decimal expansions</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_n := 0.a_1 a_2 \dots a_n = \frac{a_1}{10} + \frac{a_2}{100} + \dots + \frac{a_n}{10^n}
+\end{equation*}
+</div>
+<p class="continuation">and declare the infinite decimal expansion</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+0.a_1 a_2 \dots a_n \dots
+\end{equation*}
+</div>
+<p class="continuation">to be the limit of the sequence \((x_n)\) as \(n \to \infty\text{.}\) But this naturally poses the question of whether the limit must even exist. Fortunately this is easy: the sequence \((x_n)\) consists of positive numbers, and they satisfy \(x_{n+1} \geq x_n\) so that \((x_n)\) is increasing. Finally, using the formula for a finite geometric progression,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_n = \frac{a_1}{10} + \frac{a_2}{100} + \dots + \frac{a_n}{10^n} \leq \frac{9}{10} + \frac{9}{100} + \dots + \frac{9}{10^n} =  \frac{9}{10}\frac{(1 - (\frac{1}{10})^{n+1})}{1 - \frac{1}{10}} \leq \frac{9}{10}\frac{1}{1 - \frac{1}{10}}=1\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so that \((x_n)\) is bounded above by \(1\text{.}\) By the MCT, the sequence \((x_n)\) converges to some \(x \in \RR\) satisfying \(0 \leq x \leq 1\text{.}\) We have thus proved:</p>
+<span class="incontext"><a href="decimals.html#p-652">in-context</a></span>
 </body>
 </html>

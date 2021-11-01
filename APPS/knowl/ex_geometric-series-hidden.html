@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T13:29:42+01:00       *-->
+<!--*       on 2021-11-01T13:55:28Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,13 +16,13 @@
 <body><article class="example example-like"><p>The quintessential example of a convergent series is the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">geometric series</dfn>. Recall that for any real number \(r \neq 1\text{,}\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-\sum_{j=0}^{n} ar ^{j}=\frac{a(1-r^{n+1})}{1-r}\tag{9.2.1}
+\sum_{j=0}^{n} r ^{j}=\frac{(1-r^{n+1})}{1-r}\tag{6.2.1}
 \end{equation}
 </div>
-<p>If \(|r|\lt 1\text{,}\) then \(|r^{n+1}|=|r|^{n+1}\rightarrow 0\) by <a class="xref" data-knowl="./knowl/ex_power.html" title="Example 8.1.4">Example 8.1.4</a>, and so \(r^{n+1}\rightarrow 0\) as well. Thus,</p>
+<p>If \(|r|\lt 1\text{,}\) then \(|r^{n+1}|=|r|^{n+1}\rightarrow 0\) by <a class="xref" data-knowl="./knowl/ex_power.html" title="Exercise 5.4.4">Example 5.4.4</a>, and so \(r^{n+1}\rightarrow 0\) as well. Thus,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\limn \sum_{j=0}^{n}ar^{j} = \limn \frac{a(1-r^{n+1})}{1-r} = \frac{\limn a(1-r^{n+1})}{1-r}=\frac{a- a\limn r^{n+1}}{1-r}=\frac{a}{1-r}\text{.}
+\lim_{n \to \infty} \sum_{j=0}^{n}r^{j} = \lim_{n\to\infty} \frac{(1-r^{n+1})}{1-r} = \frac{\lim_n (1-r^{n+1})}{1-r}=\frac{1- \lim_{n\to\infty} r^{n+1}}{1-r}=\frac{1}{1-r}\text{.}
 \end{equation*}
 </div>
 <p>Thus, when \(|r|\lt 1\text{,}\) \(\sum_{j=0}^\infty a r^{j}\) is convergent, and \(\sum_{j=0}^{\infty} a r^{j}=\frac{a}{1-r}\text{.}\) We'll see below that this series converges if and only if \(|r|\lt 1\text{.}\)</p></article></body>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-30T20:16:40+01:00       *-->
+<!--*       on 2021-11-01T13:55:28Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We prove existence and uniqueness separately.</p>
-<span class="incontext"><a href="remainders.html#p-663">in-context</a></span>
+<p>What about uniqueness of decimal expansions? Can a real number \(x\) be represented by two distinct decimal expansions? Unfortunately, yes: for example</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{1}{2} = 0.5000000\ldots = 0.4999999\dots
+\end{equation*}
+</div>
+<p class="continuation">since, by the formula for finite geometric series, \(0.499999 \dots 99\) (with \(n\) \(9\)'s)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+= \frac{4}{10} + \frac {\frac{9}{100}(1- (\frac{1}{10})^{n})} {1- \frac{1}{10}} \rightarrow \frac{4}{10} + \frac{1}{10} = \frac{1}{2}
+\end{equation*}
+</div>
+<p class="continuation">as \(n \to \infty\text{.}\) (Which of these two representations does the procedure of <a class="xref" data-knowl="./knowl/decimal_existence.html" title="Theorem 6.1.2">Theorem 6.1.2</a> spit out?) It turns out that situations like this are essentially the only ones when this happens (one expansion trailing \(0\)'s and the other trailing \(9\)'s), and there are never more than two decimal expansions that give the same number.</p>
+<span class="incontext"><a href="decimals.html#p-663">in-context</a></span>
 </body>
 </html>

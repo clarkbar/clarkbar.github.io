@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-30T20:16:40+01:00       *-->
+<!--*       on 2021-11-01T13:55:28Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We can also use it to narrow down the gcd of two numbers:</p>
-<span class="incontext"><a href="euclideanalgo.html#p-686">in-context</a></span>
+<p>A good way to make sense of this is to form the new <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">sequence of partial sums</dfn> \((s_n)\text{,}\) where</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+s_n = a_1 + a_2 + \dots + a_n
+\end{equation*}
+</div>
+<p class="continuation">and to define the infinite sum</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a_1 + a_2 + \cdots + a_j + \cdots = \sum_{j=1}^\infty a_j = \lim_{n \to \infty} s_n
+\end{equation*}
+</div>
+<p class="continuation">to be the limit of the sequence \((s_n)\) whenever it exists. The numbers \(s_n\) are called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">partial sums</dfn> of \(\sum_{j=1}^\infty a_j\text{.}\) If the sequence of partial sums \((s_n)\) does not converge, we assign no meaning to \(\sum_{j=1}^\infty a_j\text{.}\) More formally:</p>
+<span class="incontext"><a href="series.html#p-686">in-context</a></span>
 </body>
 </html>

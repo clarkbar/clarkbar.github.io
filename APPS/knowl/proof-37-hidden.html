@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-30T20:16:41+01:00       *-->
+<!--*       on 2021-11-01T13:55:28Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,5 +13,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>We prove this by induction. If \(k=1\text{,}\) then \(p\) divides \({p_1}^{m_1}\text{,}\) so by the previous corollary, \(p=p_1\text{.}\) Assume that the theorem is true for \(k=r\text{;}\) let us prove it for \(k=r+1\text{.}\) Assume that \(p\) divides \(p_{1}^{m_1}\cdots p_{r+1}^{m_{r+1}}\text{.}\) Again by the previous corollary, either \(p\) divides \(p_{k+1}^{m_{r+1}}\) or \(p\) divides \(p_1^{m_1}\cdots p_r^{m_r}\text{.}\) Thus, either \(p=p_{r+1}\text{,}\) or, by the induction hypothesis, \(p=p_i\) for some \(i=1,2,...,r\text{.}\) This completes the proof.</p></article></body>
+<body><article class="hiddenproof"><p>Let \(c&gt;0\text{.}\) By assumption, there is an \(N\) so that \(n&gt; N\) implies</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left|x-\frac{p_{n}}{q_{n}}\right|q_n\lt c
+\end{equation*}
+</div>
+<p class="continuation">or equivalently</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left|x-\frac{p_{n}}{q_{n}}\right| \lt  \frac{c}{q_n}\text{.}
+\end{equation*}
+</div>
+<p>Thus, for all \(c&gt;0\text{,}\) we can find \(\frac{p_n}{q_n}\) rational so that <a class="xref" data-knowl="./knowl/e_x-p_q.html" title="Equation 6.4.1">(6.4.1)</a> holds. Thus \(x\) is irrational.</p></article></body>
 </html>

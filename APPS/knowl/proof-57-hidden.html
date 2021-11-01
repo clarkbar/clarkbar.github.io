@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T13:29:46+01:00       *-->
+<!--*       on 2021-11-01T13:55:30Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,25 +13,41 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>We prove existence and uniqueness separately.</p>
-<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Existence:</em> Let \(q\) be the largest integer for which \(qa\leq b\text{.}\) Let \(r=b-qa\geq 0\text{.}\) Then we must also have \(r\lt a\text{,}\) since if \(r\geq a\text{,}\) then \(b-qa\geq a\text{,}\) and so \(b-(q+1)a\geq 0\text{,}\) which contradicts \(q\) being the largest integer for which \(qa\leq b\text{.}\) This shows the existence of a pair \((q,r)\) satisfying the theorem.</p>
-<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Uniqueness:</em> Assume that \((q',r')\) is a pair of integers such that \(b=q'a+r'\) and \(0\leq r'\lt a\text{.}\) Then</p>
+<body><article class="hiddenproof"><p>We have that \(m\) divides \(a-x\) and \(m\) divides \(b-y\)</p>
+<ol class="lower-alpha">
+<li><p>It is clear that \(m\) divides \(-(a-x)=(-a)-(-x)\text{,}\) so that \(-a = -x \mod m\text{.}\)</p></li>
+<li>
+<p>The Linear Combination Lemma implies that \(m\) divides</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-0=b-b=q'a+r'-qa-r = (q'-q)a+(r'-r)\text{,}
+(a-x)+(b-y)=(a+b)-(x+y)\text{,}
 \end{equation*}
 </div>
-<p class="continuation">and so</p>
+<p class="continuation">and so \(a+b = x-y\mod m\text{.}\)</p>
+</li>
+<li>
+<p>\(a = x \mod m\) implies \(a=x+pm\) for some \(p\in\mathbb{Z}\) and \(b = y \mod m\) implies \(b=y+qm\) for some \(q\in\mathbb{Z}\text{.}\) Thus,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-r'-r=(q-q')a\text{.}
+ab = (x+pm)(y+qm) = xy+pmy+xqm+ pqm^2 = xy + m(py+xq+pqm)\text{,}
 \end{equation*}
 </div>
-<p>Since \(0\leq r,r'\lt a\text{,}\) we know \(|r-r'|\lt a\text{.}\) Thus</p>
+<p class="continuation">and so \(ab = xy\) by <a class="xref" data-knowl="./knowl/d_mod.html" title="Definition 9.1.1">Definition 9.1.1</a>(3).</p>
+</li>
+<li>
+<p>This can be proven by induction. For the base case of \(k=1\text{,}\) this is immediate. Now suppose \(a^{k} = x^{k}\mod m\) for some \(k\geq 1\text{.}\) Then by part (b) of this theorem with \(b=a^{k}\) and \(x=y^{k}\) and our induction hypothesis</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-a&gt;|r-r'|=|(q-q')a|=|q-q'|\cdot a\text{,}
+a^{k+1}=a\cdot a^{k} = a x^{k} \mod m
 \end{equation*}
 </div>
-<p class="continuation">which implies that \(1&gt;|q-q'|\text{.}\) Since \(|q-q'|\) is a nonnegative integer, it therefore follows that \(q=q'\text{.}\)</p></article></body>
+<p class="continuation">and then applying part (b) again but with \(b=y=x^k\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a x^{k} = x\cdot x^k=x^{k+1}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This proves the induction and hence the theorem. \qedhere</p>
+</li>
+</ol></article></body>
 </html>

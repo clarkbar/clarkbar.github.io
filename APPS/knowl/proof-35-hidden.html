@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-30T20:16:41+01:00       *-->
+<!--*       on 2021-11-01T13:55:28Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,5 +13,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>By Bezout's Identity, there are integers \(s\) and \(t\) such that \(\gcd(a,c)=sa+tc\text{.}\) Then as \(d\) divides \(a\) and \(d\) divides \(b\text{,}\) we have \(d\) divides \(\gcd(a,c)\) by the Linear Combination Lemma.</p></article></body>
+<body><article class="hiddenproof"><p>The idea is to write \(a_j = (a_j - b_j) + b_j\) and to use <a class="xref" data-knowl="./knowl/p_suman_bn.html" title="Proposition 6.2.4">Proposition 6.2.4</a>. We know that \(\sum_j b_j\) converges by hypothesis, and if we knew that \(\sum_j(a_j - b_j)\) converged we would be in business.</p>
+<p>Note first that, since \(a_j \leq b_j\) for all \(j\text{,}\) we have \(t_n \geq 0\) for all \(n\text{,}\) and moreover the sequence \((t_n)\) given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+t_{n}=\sum_{j=1}^{n}(b_{j}-a_{j})
+\end{equation*}
+</div>
+<p class="continuation">is increasing. Next, note that \(b_{j}-a_{j}\leq 2b_{j}\text{,}\) and so</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+t_{n}\leq \sum_{j=1}^{n}2b_{j}\leq \sum_{j=1}^{\infty}2b_{j}
+\end{equation*}
+</div>
+<p class="continuation">and since this latter sum converges by <a class="xref" data-knowl="./knowl/p_suman_bn.html" title="Proposition 6.2.4">Proposition 6.2.4</a>, this means that \((t_{n})\) is bounded above. Thus, by the MCT, \((t_{n})\) converges and \(\lim_{n\to\infty} t_n \geq 0\text{.}\) Therefore, by <a class="xref" data-knowl="./knowl/p_suman_bn.html" title="Proposition 6.2.4">Proposition 6.2.4</a>. \(\sum_{j=1}^\infty(a_j - b_j)\) converges to some nonpositive number. We conclude that \(\sum_{j=1}^\infty a_{j}\) converges, and the sum is \(\sum_{j=1}^\infty b_j + \sum_{j=1}^\infty (a_j - b_j)\text{,}\) whose value is at most \(\sum_{j=1}^\infty b_j\text{.}\) Finally, applying the same reasoning with \(-a_j\) in place of \(a_j\text{,}\) we conclude that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|\sum_{j=1}^\infty a_j| \leq \sum_{j=1}^\infty b_j\text{.}
+\end{equation*}
+</div></article></body>
 </html>
