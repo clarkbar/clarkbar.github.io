@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-26T20:28:33+01:00       *-->
+<!--*       on 2021-11-07T12:17:39Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -432,7 +432,7 @@
 <li><a href="sec_quotient_spaces.html" data-scroll="sec_quotient_spaces">Quotient spaces</a></li>
 <li><a href="sec_topologies_exercises.html" data-scroll="sec_topologies_exercises">Problem set 3, due 2 November 2021</a></li>
 <li><a href="sec_products.html" data-scroll="sec_products">Products</a></li>
-<li><a href="sec_esoterica.html" data-scroll="sec_esoterica">Esoterica</a></li>
+<li><a href="operations_exercises.html" data-scroll="operations_exercises">Problem set 4, due 16 November 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -470,7 +470,7 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec_products_and_sets_of_maps"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.7</span> <span class="title">Products and sets of maps</span>
 </h2>
-<p id="p-640">Here's a basic property that relates the product of sets and the set of maps. It's a bit of a tongue-twister, but it's worth it to unpack. Let \(S\text{,}\) \(T\text{,}\) and \(U\) be three sets. Then define a map</p>
+<p id="p-647">Here's a basic property that relates the product of sets and the set of maps. It's a bit of a tongue-twister, but it's worth it to unpack. Let \(S\text{,}\) \(T\text{,}\) and \(U\) be three sets. Then define a map</p>
 <div class="displaymath">
 \begin{equation*}
 \phi \colon \Map(S \times T, U) \to \Map(S, \Map(T, U))
@@ -482,20 +482,20 @@
 \phi(h)(s)(t) = h(\angs{s,t}) \in U\text{.}
 \end{equation*}
 </div>
-<p id="p-641"><em class="emphasis">Did you catch that?</em> Let's say it differently: we're starting with a map \(h \colon S \times T \to U\text{.}\) We want to <em class="emphasis">get</em> a map \(\phi(h) \colon S \to \Map(T,U)\text{.}\) To describe <em class="emphasis">that</em>, we start with an element \(s \in S\text{,}\) and we want to <em class="emphasis">get</em> a map \(\phi(h)(s) \colon T \to U\text{.}\) To define that, we start with an element \(t \in T\text{,}\) and we want to <em class="emphasis">get</em> an element of \(U\text{;}\) that element is \(h(\angs{s,t})\text{.}\) Some times the map \(\phi(h)(s) \colon T \to U\) is written \(h(\angs{s,-})\text{,}\) where the second position is treated as a blank where we can fill in \(t \in T\text{.}\)</p>
-<p id="p-642">Let's go the other way, and define a map</p>
+<p id="p-648"><em class="emphasis">Did you catch that?</em> Let's say it differently: we're starting with a map \(h \colon S \times T \to U\text{.}\) We want to <em class="emphasis">get</em> a map \(\phi(h) \colon S \to \Map(T,U)\text{.}\) To describe <em class="emphasis">that</em>, we start with an element \(s \in S\text{,}\) and we want to <em class="emphasis">get</em> a map \(\phi(h)(s) \colon T \to U\text{.}\) To define that, we start with an element \(t \in T\text{,}\) and we want to <em class="emphasis">get</em> an element of \(U\text{;}\) that element is \(h(\angs{s,t})\text{.}\) Some times the map \(\phi(h)(s) \colon T \to U\) is written \(h(\angs{s,-})\text{,}\) where the second position is treated as a blank where we can fill in \(t \in T\text{.}\)</p>
+<p id="p-649">Let's go the other way, and define a map</p>
 <div class="displaymath">
 \begin{equation*}
 \psi \colon \Map(S, \Map(T, U)) \to \Map(S \times T, U)\text{.}
 \end{equation*}
 </div>
-<p id="p-643">For this, we're starting with a map \(k \colon S \to \Map(T, U)\text{,}\) and we want to define a map \(\psi(k) \colon S \times T \to U\text{.}\) This is defined by</p>
+<p id="p-650">For this, we're starting with a map \(k \colon S \to \Map(T, U)\text{,}\) and we want to define a map \(\psi(k) \colon S \times T \to U\text{.}\) This is defined by</p>
 <div class="displaymath">
 \begin{equation*}
 \psi(k)(\angs{s,t}) \coloneq k(s)(t)\text{.}
 \end{equation*}
 </div>
-<p id="p-644">Now if you inspect thes formulas carefully, you'll see that in fact \(\phi \circ \psi = \id\) and \(\psi \circ \phi = \id\text{.}\) In other words, \(\phi\) is a bijection, and \(\psi\) is its inverse. In still other words, the sets \(\Map(S \times T, U)\) and \(\Map(S, \Map(T, U))\) are the “same”, up to relabelling.</p></section></div></main>
+<p id="p-651">Now if you inspect thes formulas carefully, you'll see that in fact \(\phi \circ \psi = \id\) and \(\psi \circ \phi = \id\text{.}\) In other words, \(\phi\) is a bijection, and \(\psi\) is its inverse. In still other words, the sets \(\Map(S \times T, U)\) and \(\Map(S, \Map(T, U))\) are the “same”, up to relabelling.</p></section></div></main>
 </div>
 </body>
 </html>

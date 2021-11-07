@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-26T20:28:33+01:00       *-->
+<!--*       on 2021-11-07T12:17:39Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -432,7 +432,7 @@
 <li><a href="sec_quotient_spaces.html" data-scroll="sec_quotient_spaces">Quotient spaces</a></li>
 <li><a href="sec_topologies_exercises.html" data-scroll="sec_topologies_exercises">Problem set 3, due 2 November 2021</a></li>
 <li><a href="sec_products.html" data-scroll="sec_products">Products</a></li>
-<li><a href="sec_esoterica.html" data-scroll="sec_esoterica">Esoterica</a></li>
+<li><a href="operations_exercises.html" data-scroll="operations_exercises">Problem set 4, due 16 November 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -470,8 +470,8 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec_the_algebra_of_subsets"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.9</span> <span class="title">The algebra of subsets</span>
 </h2>
-<p id="p-651">The algebra of subsets of a set permits one to perform unions, intersections, and complements, and these satisfy certain rules.</p>
-<p id="p-652">So let \(X\) be a set, and let \(U\colon\fromto{A}{\PP(X)}\) be a map. Then there are two new subsets of \(X\) that can be constructed: the <dfn class="terminology">indexed union</dfn></p>
+<p id="p-658">The algebra of subsets of a set permits one to perform unions, intersections, and complements, and these satisfy certain rules.</p>
+<p id="p-659">So let \(X\) be a set, and let \(U\colon\fromto{A}{\PP(X)}\) be a map. Then there are two new subsets of \(X\) that can be constructed: the <dfn class="terminology">indexed union</dfn></p>
 <div class="displaymath">
 \begin{equation*}
 \bigcup_{a\in A}U(a)\coloneq\{x\in X : (\exists a\in A)\ x\in U(a)\}
@@ -485,19 +485,19 @@
 </div>
 <article class="example example-like" id="example-72"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-72"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.9.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-72"><article class="example example-like"><p id="p-653">There is only one map \(I\colon \varnothing \PP(X)\text{.}\) The indexed union</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-72"><article class="example example-like"><p id="p-660">There is only one map \(I\colon \varnothing \PP(X)\text{.}\) The indexed union</p>
 <div class="displaymath">
 \begin{equation*}
 \bigcup_{a \in \varnothing} I(a) = \varnothing\text{.}
 \end{equation*}
 </div>
-<p id="p-654">The indexed intersection</p>
+<p id="p-661">The indexed intersection</p>
 <div class="displaymath">
 \begin{equation*}
 \bigcap_{a \in \varnothing} I(a) = X\text{.}
 \end{equation*}
 </div></article></div>
-<p id="p-655">Let's see what happens when you repeat these operations or mix them. Let \(A\) and \(B\) be sets, and let \(U \colon A \times B \to \PP(X)\text{.}\) We're going to exploit some bijections now: we know that maps \(A \times B \to \PP(X)\) are in bijection with maps \(A \to \Map(B, \PP(X))\text{;}\) we also know that \(A \times B\) is in bijection with \(B \times A\text{,}\) and therefore that maps \(A \times B \to \PP(X)\) are in bijection with maps \(B \times A \to \PP(X)\text{,}\) which are in turn in bijection with maps \(B \to \Map(A, \PP(X))\text{.}\) Here are the formulas:</p>
+<p id="p-662">Let's see what happens when you repeat these operations or mix them. Let \(A\) and \(B\) be sets, and let \(U \colon A \times B \to \PP(X)\text{.}\) We're going to exploit some bijections now: we know that maps \(A \times B \to \PP(X)\) are in bijection with maps \(A \to \Map(B, \PP(X))\text{;}\) we also know that \(A \times B\) is in bijection with \(B \times A\text{,}\) and therefore that maps \(A \times B \to \PP(X)\) are in bijection with maps \(B \times A \to \PP(X)\text{,}\) which are in turn in bijection with maps \(B \to \Map(A, \PP(X))\text{.}\) Here are the formulas:</p>
 <div class="displaymath">
 \begin{align*}
 \bigcup_{a\in A} \bigcup{b \in B} U(a,b) \amp = \bigcup_{b \in B} \bigcup{a \in A} U(a,b) ;\\
@@ -506,13 +506,13 @@
 \bigcup_{a\in A} \bigcap_{b\in B} U(a,b) \amp = \bigcap_{f\in\Map(A,B)} \bigcup_{a\in A} U(a,f(a)) \text{.}
 \end{align*}
 </div>
-<p id="p-656">There is also the <dfn class="terminology">complement</dfn> of any \(A\in\PP(X)\)</p>
+<p id="p-663">There is also the <dfn class="terminology">complement</dfn> of any \(A\in\PP(X)\)</p>
 <div class="displaymath">
 \begin{equation*}
 \complement A = X \smallsetminus A \coloneq \{x\in X : x\notin A)\}\text{.}
 \end{equation*}
 </div>
-<p id="p-657">The <dfn class="terminology">de Morgan laws</dfn> state that the formation of the complement exchanges union and intersection: for any map \(U\colon\fromto{A}{\PP(X)}\text{,}\)</p>
+<p id="p-664">The <dfn class="terminology">de Morgan laws</dfn> state that the formation of the complement exchanges union and intersection: for any map \(U\colon\fromto{A}{\PP(X)}\text{,}\)</p>
 <div class="displaymath">
 \begin{align*}
 \complement\left(\bigcup_{a\in A}U(a)\right) \amp = \bigcap_{a\in A}\complement U(a);\\
