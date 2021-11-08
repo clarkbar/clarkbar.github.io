@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-01T13:55:28Z       *-->
+<!--*       on 2021-11-08T10:31:17Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,26 +15,48 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>We prove existence and uniqueness separately.</p>
-<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Existence:</em> Let \(q\) be the largest integer for which \(qa\leq b\text{.}\) Let \(r=b-qa\geq 0\text{.}\) Then we must also have \(r\lt a\text{,}\) since if \(r\geq a\text{,}\) then \(b-qa\geq a\text{,}\) and so \(b-(q+1)a\geq 0\text{,}\) which contradicts \(q\) being the largest integer for which \(qa\leq b\text{.}\) This shows the existence of a pair \((q,r)\) satisfying the theorem.</p>
-<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Uniqueness:</em> Assume that \((q',r')\) is a pair of integers such that \(b=q'a+r'\) and \(0\leq r'\lt a\text{.}\) Then</p>
+<p>We prove the first statement by induction. Consider the claim</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-0=b-b=q'a+r'-qa-r = (q'-q)a+(r'-r)\text{,}
+z^n = r^{n} (\cos (n\theta) + i \sin (n\theta))
+\end{equation*}
+</div>
+<p class="continuation">for \(n\) a natural number.</p>
+<p>The base case \(n=1\) holds by definition.</p>
+<p>Assume our claim holds for some integer \(n\geq 1\text{.}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+z^{n+1} = zz^n = z\times r^{n} (\cos (n\theta) + i \sin (n\theta))
+\end{equation*}
+</div>
+<p class="continuation">using the induction hypothesis. And so</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+z^{n+1}=r(\cos \theta + i \sin \theta) r^{n} (\cos (n\theta) + i \sin (n\theta))
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+= r^{n+1} ( \cos \theta\cos (n\theta) - \sin \theta\sin (n\theta) +i(\cos \theta\sin (n\theta) + \sin \theta\cos (n\theta)))
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+= r^{n+1} (\cos ((n+1)\theta) + i \sin ((n+1)\theta))\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The first equation in the theorem holds by the principle of mathematical induction.</p>
+<p>For the second part, we just note that,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{1}{\cos n \theta +i\sin n \theta} =\cos n \theta - i\sin n \theta\text{,}
 \end{equation*}
 </div>
 <p class="continuation">and so</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-r'-r=(q-q')a\text{.}
+z^{-n}=(z^{n})^{-1} = (r^{n}(\cos n\theta + i\sin n\theta))^{-1} = r^{-n} (\cos n \theta - i\sin n \theta)\text{.}
 \end{equation*}
-</div>
-<p>Since \(0\leq r,r'\lt a\text{,}\) we know \(|r-r'|\lt a\text{.}\) Thus</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-a&gt;|r-r'|=|(q-q')a|=|q-q'|\cdot a\text{,}
-\end{equation*}
-</div>
-<p class="continuation">which implies that \(1&gt;|q-q'|\text{.}\) Since \(|q-q'|\) is a nonnegative integer, it therefore follows that \(q=q'\text{.}\)</p></article><span class="incontext"><a href="remainders.html#proof-39">in-context</a></span>
+</div></article><span class="incontext"><a href="geometryandarithmeticofC.html#proof-39">in-context</a></span>
 </body>
 </html>

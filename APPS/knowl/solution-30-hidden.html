@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:23:39+01:00       *-->
+<!--*       on 2021-11-08T10:31:20Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,24 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Claim:</em> We have the following: The integer solutions of \(x^2=y^3\) are of the form \(x=n^3\text{,}\) \(y=n^2\) for some integer \(n\text{.}\)</p>
-<article class="hiddenproof"><a class="proof-knowl original" data-knowl="./knowl/proof-26-hidden.html" title="Proof [STRUCT].0.1.1"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article>
+<p>Since \(\gcd(7,12)=1\text{,}\) we can use the Euclidean Algorithm:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+12-7 = 5 \ \ \text{ and  }  7-5 = 2 \ \ \text{ and  }  5-2\cdot 2 = 1\text{.}
+\end{equation*}
+</div>
+<p>We find</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+1 = 5 - 2\cdot 2 = 3\cdot 5 - 2\cdot 7 = 3\cdot 12 - 5\cdot 7\text{,}
+\end{equation*}
+</div>
+<p class="continuation">so by multiplying by \(8\text{,}\) we get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+8 = 24 \cdot 12 - 40 \cdot 7\text{.}
+\end{equation*}
+</div>
+<p>Thus \(x = -40\) is a solution, and so is \(8 = -40 \mod 12\text{.}\)</p>
 </div></body>
 </html>

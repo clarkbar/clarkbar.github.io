@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-01T13:55:31Z       *-->
+<!--*       on 2021-11-08T10:31:19Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Now we just need to solve \(x^{2} = 3 \mod 11\text{.}\) Again, \(\gcd(2,11-1)=\gcd(2,10)=2\text{,}\) so we still can't use the method of <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a>. But now the power \(2\) is small enough we can just try values \(x\in \{0,1,...,10\}\) and see what works:</p>
-<ul class="disc">
-<li><p>\(\displaystyle 1^{2}=1\)</p></li>
-<li><p>\(\displaystyle 2^{2}=4\)</p></li>
-<li><p>\(\displaystyle 3^{2}=9\)</p></li>
-<li><p>\(4^{2}=16 = 5 \mod 11\text{.}\)</p></li>
-<li><p>\(5^{2}=25 = 3\mod 11\text{.}\)</p></li>
-</ul>
-<span class="incontext"><a href="Fermatlittle.html#p-1054">in-context</a></span>
+<p>(\(\implies\)): Suppose \(m\) divides \(n\text{,}\) then \(n=mc\) fr some positive integer \(c\text{.}\) Then \(m\) and \(n\) have prime decompositions whose product is the prime decomposition for \(n\) as shown below:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\underbrace{p_1^{a_1}\cdots p_k^{a_k}}_n = \underbrace{q_1^{c_1}\cdots q_l^{c_l}}_m\underbrace{r_1^{d_1}\cdots r_s^{d_s}}_c\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The FTA implies each \(q_i\) and \(r_i\) equals to some \(p_j\text{.}\) To ease notation, we'll assume \(q_{i}=r_{i}=p_{i}\) for all \(i\text{,}\) but that \(c_{i}=0\) if \(p_{i}\) didn't appear as one of the primes \(q_{i}\) originally, and similarly for the \(d_{i}\text{.}\) Then the product above is in fact</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\underbrace{p_1^{a_1}\cdots p_k^{a_k}}_n = {q_1^{c_1}\cdots q_l^{c_l}}{r_1^{d_1}\cdots r_s^{d_s}} =p_{1}^{c_{1}+d_{1}}\cdots p_{k}^{c_{k}+d_{k}}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The FTA now implies each power \(c_i+d_i\) equals to \(a_j\text{.}\) In particular, this means \(m=p_{1}^{c_{1}}\cdots p_{k}^{c_{k}}\) where \(0\leq c_{k}\leq a_{k}\text{.}\)</p>
+<span class="incontext"><a href="findingdivisors.html#p-1054">in-context</a></span>
 </body>
 </html>

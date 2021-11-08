@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-01T13:55:28Z       *-->
+<!--*       on 2021-11-08T10:31:18Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,12 +13,45 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="example example-like"><p>Let \(a = r_1 = 48\) and \(b = r_0 = 66\text{.}\)</p>
-<ul class="disc">
-<li><p>We divide \(66\) by \(48\) to get \(1\) with a remainder of \(r_2=18\text{.}\)</p></li>
-<li><p>We divide \(48\) by \(18\) to get \(2\) with a remainder of \(r_3 = 12\text{.}\)</p></li>
-<li><p>We divide \(18\) by \(12\) to get \(1\) with a remainder of \(r_4 = 6\text{.}\)</p></li>
-<li><p>We divide \(12\) by \(6\) to get \(2\) with a remainder of \(r_5 = 0\text{.}\)</p></li>
-</ul>
-<p>Thus \(r_4 = 6\) is the gcd of \(48\) and \(66\text{.}\)</p></article></body>
+<body><article class="example example-like"><p>Suppose \(x^{3}+ax^{2}+bx+c\) has roots \(\alpha,\beta\text{,}\) and \(\gamma\text{.}\) Find a polynomial with roots \(\alpha\beta\text{,}\) \(\beta\gamma\text{,}\) and \(\gamma\alpha\) in terms of \(a,b,c\) (that is, the coefficients of your polynomial should only be described using \(a,b\text{,}\) and \(c\text{,}\) not \(\alpha,\beta\text{,}\) and \(\gamma\)).</p>
+<p>By the Root Coefficient Theorem,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\alpha+\beta+\gamma = -a\text{,}
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\alpha\beta+\beta\gamma+\gamma\alpha = b
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\alpha\beta\gamma = -c\text{.}
+\end{equation*}
+</div>
+<p>Let \(x^{3}+Ax^{2}+Bx+C\) be a polynomial with roots \(\alpha\beta\text{,}\) \(\beta\gamma\) and \(\gamma\alpha\text{.}\) Then we know</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+-A=\alpha\beta+\beta\gamma+\gamma\alpha = b
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+B=\alpha\beta^{2}\gamma+\alpha\beta\gamma^{2}+\alpha^{2}\beta\gamma=-c(\alpha+\beta+\gamma)=ac
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+-C=\alpha\beta \cdot \beta\gamma\cdot \gamma\alpha = (\alpha\beta\gamma)^{2}=c^{2}
+\end{equation*}
+</div>
+<p>Hence, the polynomial is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x^{3}-bx^{2}+acx-c^{2}\text{.}
+\end{equation*}
+</div></article></body>
 </html>

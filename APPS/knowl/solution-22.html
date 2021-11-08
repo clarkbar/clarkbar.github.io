@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-01T13:55:30Z       *-->
+<!--*       on 2021-11-08T10:31:17Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,28 +16,29 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.2.3.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">7.6.4.1</span><span class="period">.</span>
 </h6>
-<p>Since \(\gcd(7,12)=1\text{,}\) we can use the Euclidean Algorithm:</p>
+<p>Note that by rearranging the equations so that the \(z's\) are on one side and \(|z|'s\) are on the other, we get if \(|z|\neq 1\) that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-12-7 = 5 \ \ \text{ and  }  7-5 = 2 \ \ \text{ and  }  5-2\cdot 2 = 1\text{.}
+z  =\frac{|z|^{2}}{|z|-1}\text{,}
 \end{equation*}
 </div>
-<p>We find</p>
+<p class="continuation">and so \(z\in\R\text{.}\) If \(z\geq 0\text{,}\) then our original equation becomes \(z^2-z^2+z=0\text{,}\) hence \(z=0\text{.}\) If \(z\lt 0\text{,}\) then \(|z|=-z\text{,}\) and our original equation is</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-1 = 5 - 2\cdot 2 = 3\cdot 5 - 2\cdot 7 = 3\cdot 12 - 5\cdot 7\text{,}
+z^2+z^2+z=0
 \end{equation*}
 </div>
-<p class="continuation">so by multiplying by \(8\text{,}\) we get</p>
+<p>So \(0=z(2z+1)\text{,}\) hence \(z=0\) or \(z=-\frac{1}{2}\text{.}\)</p>
+<p>If \(|z|=1\text{,}\) then the original equation is</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-8 = 24 \cdot 12 - 40 \cdot 7\text{.}
+1-z+z=0\text{,}
 \end{equation*}
 </div>
-<p>Thus \(x = -40\) is a solution, and so is \(8 = -40 \mod 12\text{.}\)</p>
+<p class="continuation">which is impossible, so there are no solutions in this case. Thus, \(z=0,-\frac{1}{2}\) are the only solutions.</p>
 </div>
-<span class="incontext"><a href="linearequationsmodm.html#solution-22">in-context</a></span>
+<span class="incontext"><a href="complexnumbersexercises.html#solution-22">in-context</a></span>
 </body>
 </html>

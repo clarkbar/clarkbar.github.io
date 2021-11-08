@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-01T13:55:28Z       *-->
+<!--*       on 2021-11-08T10:31:17Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,6 +15,46 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>Exercise.</p></article><span class="incontext"><a href="remainders.html#proof-40">in-context</a></span>
+<p>We prove this by induction on \(n\text{,}\) the degree of the polynomial \(p\text{.}\) Let \(P(n)\) be the statement</p>
+<blockquote class="blockquote">A degree \(n\) polynomial \(p\) has \(n\) roots \(r_{1},\ldots,r_{n}\in\mathbb{C}\) and there is a number \(a\in\mathbb{C}\) so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+p(z) = a(z-r_{1})(z-r_{2})\cdots (z-r_{n})\text{.}
+\end{equation*}
+</div>
+</blockquote>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Base Case:</em> Assume \(p\) is any degree \(1\) polynomial. If we write \(p\) as \(p(z)=az+b\text{,}\) we can re-write \(p(z) = a(z-\frac{-b}{a})\text{.}\) Then \(p\) has precisely one root \(r_1=\frac{-b}{a}\) and \(p\) can be written in the form \(p(z)=a(z-r_1)\text{.}\) This proves \(P(1)\text{.}\)</p>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Induction Step:</em> Suppose the theorem holds true for some integer \(n\geq 1\text{,}\) i.e. \(P(n)\) is true. Let \(p\) be a degree \(n+1\) polynomial. By the Fundamental Theorem of Algebra there is a root \(w\) of \(p\text{,}\) i.e. \(p(w)=0\text{.}\)</p>
+<p>Consider the polynomial \(q(z):=p(z+w)\text{.}\) Then \(q\) is also degree \(n+1\) and has a root at \(0\text{.}\) Write \(q\) out as a polynomial then because it has a root at \(z=0\) the constant term is also zero and we can write</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+q(z) = q_{1}z+\cdots + q_{n+1}z^{n+1} = z\underbrace{(q_{1}+q_{2}z+\cdots + q_{n+1}z^{n})}_{=g(z)}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">where \(g\) is a polynomial of degree \(n\text{.}\) By our induction hypothesis \(P(n)\text{,}\) there are \(a,z_{1},\ldots,z_{n}\in\mathbb{C}\) so that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+g(z) = a(z-z_{1})(z-z_{2})\cdots (z-z_{n})\text{.}
+\end{equation*}
+</div>
+<p>Note if \(q(z)=p(z+w)\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+p(z)=q(z-w)=(z-w)g(z-w)
+\end{equation*}
+</div>
+<p class="continuation">and so if \(r_{i}=z_{i}+w\) for \(i=1,\cdots,
+n\) and \(r_{n+1}=w\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+p(z) = a(z-w-z_{1})(z-w-z_{2})\cdots (z-w-z_{n})(z-w) =a(z-r_{1})(z-r_{2})\cdots (z-r_{n+1})\text{.}
+\end{equation*}
+</div>
+<p>This proves \(p\) has \(n+1\) roots and there is a number \(a\in\mathbb{C}\) so that we can write</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+p(z) = a(z-r_{1})(z-r_{2})\cdots (z-r_{n+1})\text{.}
+\end{equation*}
+</div>
+<p>Since \(P(1)\) is true, and \(P(n)\Rightarrow P(n+1)\) it follows that \(P(n)\) is true for all \(n\in\NN\) by the principle of mathematical induction.</p></article><span class="incontext"><a href="factoringpolynomials.html#proof-40">in-context</a></span>
 </body>
 </html>

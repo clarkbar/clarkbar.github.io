@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-01T13:55:28Z       *-->
+<!--*       on 2021-11-08T10:31:17Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,17 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(a,b\in\N\text{.}\) Let us also assume \(a\lt b\text{.}\) We are going to construct a sequence of nonnegative integers</p>
+<p>More generally multiplication of complex numbers can be understood by writing the two numbers in polar form. Let \(z=r(\cos \theta + i \sin \theta)\) and \(w=s(\cos \phi + i \sin \phi)\) then \(zw\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-0 = r_{n+1} \lt  r_n \lt  \cdots \lt  r_2 \lt  r_1 = a \lt  r_0 = b
-\end{equation*}
+\begin{align*}
+zw \amp  = r(\cos \theta + i \sin \theta)\times  s(\cos \phi + i \sin \phi)\\
+\amp  = rs ( \cos \theta \cos \phi - \sin \theta \sin \phi)+ rsi (\cos \theta \sin \phi + \sin \theta \cos \phi)\\
+\amp  = rs (\cos(\theta + \phi) + i\sin(\theta + \phi))\text{.}
+\end{align*}
 </div>
-<p class="continuation">such that for each \(k \in \N\text{,}\) if \(k\leq n\text{,}\) then:</p>
-<ol class="decimal">
-<li><p>\(r_{k-1}\) is an integer linear combination of \(r_k\) and \(r_{k+1}\text{,}\) and</p></li>
-<li><p>\(r_{k+1}\) is an integer linear combination of \(r_k\) and \(r_{k-1}\text{.}\)</p></li>
-</ol>
-<span class="incontext"><a href="euclideanalgo.html#p-776">in-context</a></span>
+<span class="incontext"><a href="geometryandarithmeticofC.html#p-776">in-context</a></span>
 </body>
 </html>

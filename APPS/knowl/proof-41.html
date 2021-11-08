@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-01T13:55:28Z       *-->
+<!--*       on 2021-11-08T10:31:17Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,14 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>Since \(d\) divides \(a\) and \(d\) divides \(b\text{,}\) there are integers \(s\) and \(t\) so that \(a=sd\) and \(b=td\text{.}\) Hence</p>
+<p>If \(p(x)=a_0+a_{1}x+\cdots +a_{n}x^n\) with \(a_{i}\) real, and \(p(r)=0\text{,}\) then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-ma+nb=msd+ntd=(ms+nt)d
-\end{equation*}
-</div>
-<p class="continuation">and so \(d\) divides \(ma+nb\text{.}\)</p></article><span class="incontext"><a href="euclideanalgo.html#proof-41">in-context</a></span>
+\begin{align*}
+0 =\overline{p(r)} \amp  =\overline{a_0+a_{1}r+\cdots +a_{n}r^n}\\
+{\color{magenta} (\overline{z+w}=\bar{z}+\bar{w})} \amp  = \overline{a_0}+\overline{a_1 r}+\cdots + \overline{ a_n r^n}\\
+{\color{magenta} (\overline{zw}=\bar{z}\bar{w})} \amp  =\overline{a_0}+\bar{a_1} \bar{ r}+\cdots + \bar{ a_n}\bar{ r^n}\\
+{\color{magenta} (\overline{a_{i}}=a_{i}\;\; \mbox{ since } \;\;a_{i} \;\; \mbox{are real} )} \amp   ={a_0}+{a_1} \bar{ r}+\cdots + { a_n}\bar{ r}^n = p(\bar{r})\text{.}
+\end{align*}
+</div></article><span class="incontext"><a href="realpolynomials.html#proof-41">in-context</a></span>
 </body>
 </html>

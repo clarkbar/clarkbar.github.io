@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T13:29:51+01:00       *-->
+<!--*       on 2021-11-08T10:31:21Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,22 +15,30 @@
 </head>
 <body>
 <article class="example example-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">13.1.7</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.4.7</span><span class="period">.</span>
 </h6>
-<p>Find an integer \(x\in \{0,1,..,6\}\) so that \(4^{6} = x\mod 7\text{.}\)</p>
-<p>Let's look at some powers of \(4\) and see what they are modulo \(7\text{.}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-4^2 \amp  = 16 =14+2 = 2 \mod 7\\
-4^4 \amp  = (4^2)^2  = 2^2 =4 \mod 7\text{.}
-\end{align*}
-</div>
-<p>Thus,</p>
+<p>What are the integer solutions to \(9x^{2}+9x+2=y^{4}\text{?}\)</p>
+<p>We will present two methods for comparison, first using the usual divisbility methods from last week, and then a second method using modular arithmetic.</p>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Method 1:</em> If \(x,y\) are integer solutions, then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-4^6=4^2\cdot 4^4 = 2\cdot 4=8 = 1 \mod 7\text{.}
+y^{4}=9x^{2}+9x+2 =(3x+2)(3x+1)\text{.}
 \end{equation*}
 </div>
-<p>This is certainly much quicker than computing \(4^6\) by hand and then doing long division!</p></article><span class="incontext"><a href="arithmeticmodm.html#example-98">in-context</a></span>
+<p>Since \(y^{4}\geq 0\text{,}\) we know \(3x+1,3x+2&gt; 0\) or \(\lt 0\text{.}\) First assume \(&gt;0\text{.}\) They are coprime since \(\gcd(3x+1,3x+2)\) divides \((3x+2)-(3x+1)=1\text{.}\) Thus, \(3x+1=a^{4}\) and \(3x+2=b^{4}\) for some integers \(a\) and \(b\text{.}\) (We can assume they are non-negative). But then \(b^{4}-a^{4} =3x+2-(3x+1) =1\text{.}\) This is only possible if \((a,b)=(0,1)\) (exercise :). We can't have \(a=0\) since then \(3x+1=0\text{,}\) which is impossible if \(x\) is an integer. The same happens if \(3x+1,3x+2\lt 0\text{.}\) Thus, there are no solutions.</p>
+<p>As you can see, the above solution is quite long (and we didn't do some of the details). Now let's instead use modular arithmetic for a shorter proof:</p>
+<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Method 2:</em> If \(x,y\) are integer solutions to \(9x^{2}+9x+2=y^{4}\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+y^{4}=9x^{2}+9x+2 = 2\mod 3\text{.}
+\end{equation*}
+</div>
+<p>Let \(z\in \{0,1,2\}\) be such that \(z = y\mod 3\text{,}\) then \(z^{4} = y^{4} = 2\mod 3\text{.}\) So let's test some \(z\)'s!</p>
+<ul class="disc">
+<li><p>\(\displaystyle 0^{4}=0\)</p></li>
+<li><p>\(\displaystyle 1^{4}=1\)</p></li>
+<li><p>\(2^{4}=16 = 1 \mod 3\text{.}\)</p></li>
+</ul>
+<p>So there are no \(z\in \{0,1,2\}\) so that \(z^{4} = 2 \mod 3\text{.}\) Thus, there are no integer solutions to \(9x^{2}+9x+2=y^{4}\text{.}\)</p></article><span class="incontext"><a href="Fermatlittle.html#example-98">in-context</a></span>
 </body>
 </html>

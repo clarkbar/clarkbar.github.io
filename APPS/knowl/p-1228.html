@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:20:37+01:00       *-->
+<!--*       on 2021-11-07T17:34:54Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,12 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>If \((x,y,z)\) was a solution, then \(x^2+y^2 = 3\mod 9\text{,}\) but the squares modulo \(9\) are \(0,1,4,0,7,0,0,1\text{,}\) and adding any pair of these gives \(0,1,2,4,5,7,8\) modulo \(9\text{,}\) and none of these are \(3\text{,}\) thus there cannot be any solutions to the original equation.</p>
-<span class="incontext"><a href="modularexercises.html#p-1228">in-context</a></span>
+<p>Note \(\gcd(3,11-1)=\gcd(3,10)=1\text{,}\) so this tells us that the method of <a class="xref" data-knowl="./knowl/t_x_n_bmodp.html" title="Theorem 9.4.3">Theorem 9.4.3</a> should work in finding the unique solution. Note also that \(7\cdot 3 = 21=1+2\cdot 10\text{.}\) Thus, if \(x\) is the solution, then \(9 = x^{3}\mod 11\) implies</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+9^{7} = (x^{3})^{7} =x^{3\cdot 7} =x^{1+2\cdot 10} =x\cdot (x^{10})^{2} = x\cdot(1)^{2} =x \mod 11\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="Fermatlittle.html#p-1228">in-context</a></span>
 </body>
 </html>

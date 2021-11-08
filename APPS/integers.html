@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-01T13:55:22Z       *-->
+<!--*       on 2021-11-08T10:31:10Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -397,10 +397,10 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="complexnumbers.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="book-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="remainders.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="complexexercises.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="book-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="remainders.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="complexnumbers.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="book-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="remainders.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="complexexercises.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="book-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="remainders.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -481,7 +481,21 @@
 <li><a href="seriesexercises.html" data-scroll="seriesexercises">Week 7 Exercises, due 9 November 2021</a></li>
 </ul>
 </li>
-<li class="link"><a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a></li>
+<li class="link">
+<a href="complexnumbers.html" data-scroll="complexnumbers"><span class="codenumber">7</span> <span class="title">Complex Numbers</span></a><ul>
+<li><a href="complexnumberssection.html" data-scroll="complexnumberssection">Complex Numbers</a></li>
+<li><a href="cartesianandpolar.html" data-scroll="cartesianandpolar">Polar form</a></li>
+<li><a href="geometryandarithmeticofC.html" data-scroll="geometryandarithmeticofC">Geometry and arithmetic of complex numbers</a></li>
+<li><a href="exponentialform.html" data-scroll="exponentialform">Exponential form</a></li>
+<li><a href="rootsof1.html" data-scroll="rootsof1">Roots of Unity</a></li>
+<li><a href="complexnumbersexercises.html" data-scroll="complexnumbersexercises">Sample exercises</a></li>
+<li><a href="introtopolynomials.html" data-scroll="introtopolynomials">Introduction</a></li>
+<li><a href="factoringpolynomials.html" data-scroll="factoringpolynomials">Factoring Polynomials</a></li>
+<li><a href="realpolynomials.html" data-scroll="realpolynomials">Real Polynomials</a></li>
+<li><a href="rootcoefficienttheorem.html" data-scroll="rootcoefficienttheorem">Root-Coefficient Theorem</a></li>
+<li><a href="complexexercises.html" data-scroll="complexexercises">Week 8 Exercises, due 16 September 2021</a></li>
+</ul>
+</li>
 <li class="link active">
 <a href="integers.html" data-scroll="integers"><span class="codenumber">8</span> <span class="title">Multiplicative theory of integers</span></a><ul>
 <li><a href="remainders.html" data-scroll="remainders">Remainders and divisibility</a></li>
@@ -511,30 +525,30 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="chapter" id="integers"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">8</span> <span class="title">Multiplicative theory of integers</span>
 </h2>
-<section class="introduction" id="introduction-14"><p id="p-740">This week we will study the integers, particularly the techniques of studying divisibility, the highest common factor, and prime factorization.</p>
-<p id="p-741">These techniques are especially useful for solving <dfn class="terminology">diophantine equations</dfn>, which are polynomial equations where we seek <dfn class="terminology">integer</dfn> solutions. The most famous diophantine equation is</p>
+<section class="introduction" id="introduction-15"><p id="p-879">This week we will study the integers, particularly the techniques of studying divisibility, the highest common factor, and prime factorization.</p>
+<p id="p-880">These techniques are especially useful for solving <dfn class="terminology">diophantine equations</dfn>, which are polynomial equations where we seek <dfn class="terminology">integer</dfn> solutions. The most famous diophantine equation is</p>
 <div class="displaymath">
 \begin{equation*}
 x^{n}+y^{n}=z^{n}
 \end{equation*}
 </div>
-<p id="p-742">It was famously claimed by Fermat (without proof) that there are solutions \(x,y,z,n\in\NN\) only if \(n=1\) or \(n=2\text{.}\) It wasn't until 1994 when Andrew Wiles actually gave a proof.</p>
-<p id="p-743">This week's set of tools are also useful when we are trying to show at a diophantine <dfn class="terminology">can't</dfn> be solved. You have seen one such proof before: that \(\sqrt{2}\) is irrational. Let's recall the proof briefly:</p>
-<p id="p-744">Suppose there was a rational number \(\frac{m}{n}\) (where \(m\) and \(n\) are reduced in the sense that they have no common divisors apart from \(1\)) so that \(\left(\frac{m}{n}\right)^2=2\text{,}\) then \(m^2=2n^2\text{.}\) This means that \(m^2\) is even. Then \(m\) must be even since, if instead \(m=2k+1\) for some integer \(k\text{,}\) then \(m^2=(2k+1)^2=4(k^2+k)+1\text{,}\) which is odd, a contradiction. Hence, \(m=2k\) for some integer \(k\text{,}\) and so</p>
+<p id="p-881">It was famously claimed by Fermat (without proof) that there are solutions \(x,y,z,n\in\NN\) only if \(n=1\) or \(n=2\text{.}\) It wasn't until 1994 when Andrew Wiles actually gave a proof.</p>
+<p id="p-882">This week's set of tools are also useful when we are trying to show at a diophantine <dfn class="terminology">can't</dfn> be solved. You have seen one such proof before: that \(\sqrt{2}\) is irrational. Let's recall the proof briefly:</p>
+<p id="p-883">Suppose there was a rational number \(\frac{m}{n}\) (where \(m\) and \(n\) are reduced in the sense that they have no common divisors apart from \(1\)) so that \(\left(\frac{m}{n}\right)^2=2\text{,}\) then \(m^2=2n^2\text{.}\) This means that \(m^2\) is even. Then \(m\) must be even since, if instead \(m=2k+1\) for some integer \(k\text{,}\) then \(m^2=(2k+1)^2=4(k^2+k)+1\text{,}\) which is odd, a contradiction. Hence, \(m=2k\) for some integer \(k\text{,}\) and so</p>
 <div class="displaymath">
 \begin{equation*}
 2n^2=m^2=(2k)^2=4k^2
 \end{equation*}
 </div>
 <p class="continuation">and so \(n^2=2k^2\text{,}\) and using a similar reasoning, we get that \(n\) must also be even, which is a contradiction since we assumed \(m\) and \(n\) had no common factors, but now we have shown they are both divisible by \(2\text{.}\)</p>
-<p id="p-745">The important feature of the proof was to use the <dfn class="terminology">coprimality</dfn> of \(m\) and \(n\text{,}\) that is, that they share no common divisors, as well as the fact that if \(m^2\) is divisible by \(2\) (that is, if \(m^2\) was even, then so was \(m\)). If we want to generalize this proof, we will need to develop these tools about divisibility and coprimality. Later, we will in fact show that \(\sqrt{n}\) is rational exactly when \(n=m^2\) for some integer \(m\text{.}\)</p>
-<p id="p-746">As motivation for the techniques we develop along the way, we will show how they can be used to solve various diophantine equations. As a special final application of these techniques, we'll also classify all <dfn class="terminology">Pythagorean Triples</dfn>, that is, integers \(x,y,z\) so that</p>
+<p id="p-884">The important feature of the proof was to use the <dfn class="terminology">coprimality</dfn> of \(m\) and \(n\text{,}\) that is, that they share no common divisors, as well as the fact that if \(m^2\) is divisible by \(2\) (that is, if \(m^2\) was even, then so was \(m\)). If we want to generalize this proof, we will need to develop these tools about divisibility and coprimality. Later, we will in fact show that \(\sqrt{n}\) is rational exactly when \(n=m^2\) for some integer \(m\text{.}\)</p>
+<p id="p-885">As motivation for the techniques we develop along the way, we will show how they can be used to solve various diophantine equations. As a special final application of these techniques, we'll also classify all <dfn class="terminology">Pythagorean Triples</dfn>, that is, integers \(x,y,z\) so that</p>
 <div class="displaymath">
 \begin{equation*}
 x^2+y^2=z^2\text{.}
 \end{equation*}
 </div>
-<p id="p-747">If you like the material from this week, you might enjoy taking <dfn class="terminology">Introduction to Number Theory</dfn> (4th year).</p></section><nav class="summary-links"><ul>
+<p id="p-886">If you like the material from this week, you might enjoy taking <dfn class="terminology">Introduction to Number Theory</dfn> (4th year).</p></section><nav class="summary-links"><ul>
 <li><a href="remainders.html"><span class="codenumber">8.1</span> <span class="title">Remainders and divisibility</span></a></li>
 <li><a href="euclideanalgo.html"><span class="codenumber">8.2</span> <span class="title">The GCD and the Euclidean Algorithm</span></a></li>
 <li><a href="bezoutcorollaries.html"><span class="codenumber">8.3</span> <span class="title">Corollaries of Bezout's Identity and the Linear Combination Lemma</span></a></li>

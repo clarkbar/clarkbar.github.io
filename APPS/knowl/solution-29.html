@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-18T18:23:39+01:00       *-->
+<!--*       on 2021-11-08T10:31:19Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,11 +16,29 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">[STRUCT].0.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.4.5.1</span><span class="period">.</span>
 </h6>
-<p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Claim:</em> There are no integer solutions to \(x^2+2y^2=8z+5\text{.}\)</p>
-<article class="hiddenproof"><a class="proof-knowl original" data-knowl="./knowl/proof-25-hidden.html" title="Proof [STRUCT].0.1.1"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article>
+<p>We want to apply the FTA to \(x\) and \(y\text{,}\) but this only works when \(x,y\geq 2\text{.}\) Note that if \((x,y)\) is a solution, then so is \((-x,y)\text{,}\) so we just need to find all solutions with \(x\geq 0\text{.}\) The only solutions with \(x=0\) is \((0,0)\) and the only solution with \(x=1\) or \(y=1\) is \((1,1)\text{.}\) Thus, we have narrowed things down to just finding all solutions \((x,y)\) with \(x,y\geq 2\text{.}\)</p>
+<p>By the FTA, there are primes \(p_{1}\lt \cdots \lt p_{k}\) and \(q_{1}\lt \cdots \lt q_{\ell}\) and \(r_{i},s_{j}\in \mathbb{N}\) so that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x=p_{1}^{r_{1}}\cdots p_{k}^{r_{k}}\;\;\; \mbox{ and }  \;\;\; y= q_1^{s_{1}}\cdots q_\ell^{s_{\ell}}\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="numbertheoryexercises.html#solution-29">in-context</a></span>
+<p>Plugging this into \(x^2=y^5\text{,}\) we get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+p_{1}^{2r_{1}}\cdots p_{k}^{2r_{k}} = q_1^{5s_{1}}\cdots q_\ell^{5s_{\ell}}\text{.}
+\end{equation*}
+</div>
+<p>The FTA says these two factorizations must equal, so \(k=\ell\text{,}\) \(p_i=q_i\text{,}\) and \(2r_{i}=5s_{i}\) for \(1\leq i\leq k\text{.}\) By <a class="xref" data-knowl="./knowl/ex_2x_5y.html" title="Example 8.3.6">Example 8.3.6</a>, this means \(r_{i}=5w_{i}\) and \(s_{i}=2w_{i}\) for some integer \(w_{i}\text{.}\) Thus,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x=p_{1}^{5w_{1}}\cdots p_{k}^{5w_{k}}= \left(p_{1}^{w_{1}}\cdots p_{k}^{w_{k}}\right)^{5} \;\;\; \mbox{ and }  \;\;\; y =p_1^{2w_{1}}\cdots p_\ell^{2w_{\ell}} = \left(p_1^{w_{1}}\cdots p_\ell^{w_{\ell}}\right)^2\text{.}
+\end{equation*}
+</div>
+<p>If we let \(z=p_1^{w_{1}}\cdots p_\ell^{w_{\ell}}\text{,}\) we see that \((x,y)=(z^{5},z^{2})\text{.}\) Thus, we have shown that all integer solutions \(x,y\geq 2\) are of the form \((x,y)=(z^{5},z^{2})\) for some \(z\in\mathbb{N}\text{.}\) Recalling our reductions, all solutions are either \((0,0)\text{,}\) \((\pm 1,1)\text{,}\) and \((\pm z^5,z^2)\) for \(z\in\mathbb{N}\text{.}\) More succinctly, all solutions must be of the form \(( z^5,z^2)\) for some \(z\in\mathbb{Z}\text{.}\) One can also easily check that every pair in this set is also a solution to \(x^2=y^5\text{,}\) thus \(S\) is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">exactly</dfn> the set of solutions.</p>
+</div>
+<span class="incontext"><a href="fundamentaltheoremofarithmetic.html#solution-29">in-context</a></span>
 </body>
 </html>
