@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-08T10:31:11Z       *-->
+<!--*       on 2021-11-18T10:47:27Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -506,6 +506,7 @@
 <li><a href="lcmandgcd.html" data-scroll="lcmandgcd" class="active">LCM and GCD via prime factorizations</a></li>
 <li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
 <li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
+<li><a href="gcdexercises.html" data-scroll="gcdexercises">Week 9 Exercises, due 23 November 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -528,30 +529,30 @@
 <article class="definition definition-like" id="definition-51"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.6.1</span><span class="period">.</span>
 </h6>
-<p id="p-1058">The least common multiple \(\lcm(a,b)\) of positive integers \(a\) and \(b\) is the smallest positive integer divisible by both \(a\) and \(b\text{.}\)</p></article><p id="p-1059">For example, \(\lcm(15,12)=60\text{.}\)</p>
+<p id="p-1057">The least common multiple \(\lcm(a,b)\) of positive integers \(a\) and \(b\) is the smallest positive integer divisible by both \(a\) and \(b\text{.}\)</p></article><p id="p-1058">For example, \(\lcm(15,12)=60\text{.}\)</p>
 <article class="theorem theorem-like" id="t_lcm"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.6.2</span><span class="period">.</span>
 </h6>
-<p id="p-1060">Let \(a\) and \(b\) have prime factorizations,</p>
+<p id="p-1059">Let \(a\) and \(b\) have prime factorizations,</p>
 <div class="displaymath">
 \begin{equation*}
 a=p_1^{r_1}\cdots p_m^{r_m}, \;\; b=p_1^{s_1}\cdots p_m^{s_m}\text{.}
 \end{equation*}
 </div>
-<p id="p-1061">Here \(p_i\)'s are distinct, but \(r_i\) and \(s_i\) are allowed to be zero. Then:</p>
+<p id="p-1060">Here \(p_i\)'s are distinct, but \(r_i\) and \(s_i\) are allowed to be zero. Then:</p>
 <ul class="disc">
-<li id="li-191"><p id="p-1062">\(\gcd(a,b) = p_1^{min(r_1,s_1)}\cdots p_m^{min(r_m,s_m)}\text{.}\)</p></li>
-<li id="li-192"><p id="p-1063">\(\lcm(a,b) = p_1^{max(r_1,s_1)}\cdots p_m^{max(r_m,s_m)}\text{.}\)</p></li>
-<li id="li-193"><p id="p-1064">\(\lcm(a,b) = ab/\gcd(a,b)\text{.}\)</p></li>
-</ul></article><p id="p-1065">We leave the proof of this as an exercise.</p>
+<li id="li-191"><p id="p-1061">\(\gcd(a,b) = p_1^{min(r_1,s_1)}\cdots p_m^{min(r_m,s_m)}\text{.}\)</p></li>
+<li id="li-192"><p id="p-1062">\(\lcm(a,b) = p_1^{max(r_1,s_1)}\cdots p_m^{max(r_m,s_m)}\text{.}\)</p></li>
+<li id="li-193"><p id="p-1063">\(\lcm(a,b) = ab/\gcd(a,b)\text{.}\)</p></li>
+</ul></article><p id="p-1064">We leave the proof of this as an exercise.</p>
 <article class="example example-like" id="example-87"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-87"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.6.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-87"><article class="example example-like"><p id="p-1066">If \(a=120=2^3\cdot 3\cdot 5\) and \(b=36=2^2\cdot 3^2\text{,}\) then \(\gcd=2^2\cdot 3=12\) and \(\lcm=2^3\cdot 3^2 \cdot 5=360=\frac{120\cdot 36}{12}\text{,}\)</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-87"><article class="example example-like"><p id="p-1065">If \(a=120=2^3\cdot 3\cdot 5\) and \(b=36=2^2\cdot 3^2\text{,}\) then \(\gcd=2^2\cdot 3=12\) and \(\lcm=2^3\cdot 3^2 \cdot 5=360=\frac{120\cdot 36}{12}\text{,}\)</p></article></div>
 <article class="lemma theorem-like" id="lem_rationalsascoprimefractions"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.6.4</span><span class="period">.</span>
 </h6>
-<p id="p-1067">Let \(r \in \mathbb{Q}\text{.}\) Then there exist unique coprime integers \(a\) and \(b\) such that \(r = \frac{a}{b}\) and \(b \geq 1\text{.}\)</p></article><article class="hiddenproof" id="proof-56"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-56"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-56"><article class="hiddenproof"><p id="p-1068">Since \(r\) is rational, there are integers \(a'\) and \(b'\) such that \(r = \frac{a'}{b'}\text{,}\) with \(b' \neq 0\text{.}\) Without loss of generality, we may assume that \(b'&gt;0\text{.}\) If we find \(-r = \frac{a}{b}\) with \(a\) and \(b\) coprime, then \(r = \frac{-a}{b}\) with \(-a\) and \(b\) coprime, so we may assume that \(r\geq 0\text{.}\)</p>
-<p id="p-1069">Now let \(p_1, \cdots,
+<p id="p-1066">Let \(r \in \QQ\text{.}\) Then there exist unique coprime integers \(a\) and \(b\) such that \(r = \frac{a}{b}\) and \(b \geq 1\text{.}\)</p></article><article class="hiddenproof" id="proof-56"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-56"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-56"><article class="hiddenproof"><p id="p-1067">Since \(r\) is rational, there are integers \(a'\) and \(b'\) such that \(r = \frac{a'}{b'}\text{,}\) with \(b' \neq 0\text{.}\) Without loss of generality, we may assume that \(b'&gt;0\text{.}\) If we find \(-r = \frac{a}{b}\) with \(a\) and \(b\) coprime, then \(r = \frac{-a}{b}\) with \(-a\) and \(b\) coprime, so we may assume that \(r\geq 0\text{.}\)</p>
+<p id="p-1068">Now let \(p_1, \cdots,
 p_k\) be the prime numbers that divide either \(a'\) or \(b'\text{.}\) We may therefore write</p>
 <div class="displaymath">
 \begin{equation*}
@@ -564,13 +565,13 @@ a' = p_1^{m_1}\cdots p_k^{m_k} \ \ \text{ and  }  b' = q_1^{n_1}\cdots q_k^{n_k}
 s_i = \max(m_i-n_i, 0)\ \ \text{ and  } t_i = \max(n_i-m_i, 0)\text{.}
 \end{equation*}
 </div>
-<p id="p-1070">Thus for each \(i\text{,}\) at most one of \(s_i\) and \(t_i\) is nonzero, and</p>
+<p id="p-1069">Thus for each \(i\text{,}\) at most one of \(s_i\) and \(t_i\) is nonzero, and</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{p_i^{m_i}}{q_i^{n_i}} = \frac{p_i^{s_i}}{q_i^{t_i}}\text{.}
 \end{equation*}
 </div>
-<p id="p-1071">Thus we set</p>
+<p id="p-1070">Thus we set</p>
 <div class="displaymath">
 \begin{equation*}
 a = p_1^{s_1}\cdots p_r^{s_k} \ \ \text{ and  }  b = q_1^{t_1}\cdots q_k^{t_k}\text{,}
@@ -582,13 +583,13 @@ a = p_1^{s_1}\cdots p_r^{s_k} \ \ \text{ and  }  b = q_1^{t_1}\cdots q_k^{t_k}\t
 r = \frac{a'}{b'} = \frac{a}{b}\text{.}
 \end{equation*}
 </div>
-<p id="p-1072">Now</p>
+<p id="p-1071">Now</p>
 <div class="displaymath">
 \begin{equation*}
 \gcd(a,b) = p_1^{\min(s_1,t_1)}\cdots p_r^{\min(s_k,t_k)} = p_1^0\cdots p_r^0 = 1. \qedhere
 \end{equation*}
 </div>
-<p id="p-1073">Now let us prove that \(a\) and \(b\) are unique with this property. If \(c\) and \(d\) are coprime integers with \(d \geq 1\text{,}\) and if \(r = \frac{c}{d}\text{,}\) then \(ad = bc\text{.}\) Since \(a\) and \(b\) are coprime, it follows that \(b\) divides \(d\text{,}\) and since \(c\) and \(d\) are coprime, it follows that \(d\) divides \(b\text{.}\) Thus \(d=b\text{,}\) and so \(a=c\) as well.</p></article></div></section></div></main>
+<p id="p-1072">Now let us prove that \(a\) and \(b\) are unique with this property. If \(c\) and \(d\) are coprime integers with \(d \geq 1\text{,}\) and if \(r = \frac{c}{d}\text{,}\) then \(ad = bc\text{.}\) Since \(a\) and \(b\) are coprime, it follows that \(b\) divides \(d\text{,}\) and since \(c\) and \(d\) are coprime, it follows that \(d\) divides \(b\text{.}\) Thus \(d=b\text{,}\) and so \(a=c\) as well.</p></article></div></section></div></main>
 </div>
 </body>
 </html>

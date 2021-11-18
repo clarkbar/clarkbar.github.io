@@ -1,0 +1,532 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+\chapter{Aspects of set theory}%
+\label{cha:aspects_of_set_theory}
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+
+%-------------------------------------------------------------------%
+\section{Large cardinals}%
+\label{sec:large_cardinals}
+%-------------------------------------------------------------------%
+
+Mathematicians' \enquote{stock} set theory, $\zfc$ (which is Zermelo-Fraenkel set theory $\zf$ plus the Axiom of Choice $\ac$) is insufficient for work with categories and higher categories.
+The issue ultimately comes down to Cantor's diagonal argument:
+there is no surjection of a set onto its powerset.
+This is why no one can contemplate a set of all sets,
+and it's also the key to Freyd's observation that if $C$ is a category and $\kappa$ is the cardinality of its set of arrows,
+then $C$ has all $\kappa$-indexed products only if $C$ is a poset.
+This, in turn, is behind the \enquote{solution set condition} in representability theorems or the Adjoint Functor Theorem.
+Hence one really must distinguish between \enquote{large} and \enquote{small} objects.
+
+One can improve matters by passing to von Neumann--Bernays--Gödel set theory ($\nbg$), which is conservative over $\zfc$,
+which at least gives access to proper classes.
+In $\nbg$, the objects of a category form a class, which is often a proper class, in which case the category is said to be \defn{large}.
+Even after passage to $\nbg$, one needs something like the Axiom of Global Choice ($\agc$) (or some artifice) to make sense of a construction like \enquote{the} functor $ - \times X \colon C \to C $ for a large category $ C $ with all finite products and a fixed object therein.
+The theory $\nbg + \agc$ is no longer conservative over $\zfc$.
+
+At the same time, the whole project of higher category theory in particular turns on the principle that we want to be able to deal with the collections of all objects of a given kind as a mathematical object in its own right.
+So \enquote{large} and \enquote{small} objects may be different,
+but our foundations ought to offer some systematic way to ensure that these objects function in the same way.
+Consequently, we may have a large category $C$, but we have no way of seeing $C$ itself as an object of a still larger category of all (potentially large) categories.
+
+Perhaps the simplest way to contend with this is to deploy Grothendieck universes or, equivalently, inaccessible cardinals.
+
+\begin{definition}
+	A cardinal $\kappa$ is said to be a \defn{strong limit cardinal} if and only if, for any $\alpha<\kappa$, one has $2^\alpha<\kappa$ as well.
+	One says that $\kappa$ is \defn{(strongly) inaccessible} if and only if it is a regular, uncountable, strong limit cardinal.
+\end{definition}
+
+\begin{eg}
+	The $\beth$ family of cardinals is defined by a function from the class of ordinal numbers to the class of cardinal numbers.
+	It's defined by transfinite induction:
+	\begin{itemize}
+		\item By definition, $ \beth_0 = \aleph_0 $.
+		\item For any ordinal $ \alpha $, one defines $ \beth_{\alpha+1} \coloneq 2^{\beth_{\alpha}} $.
+		\item For any limit ordinal $ \alpha $, one defines $ \beth_{\alpha} \coloneq \sup \{ \beth_{\beta} : \beta < \alpha \} $.
+	\end{itemize}
+	The cardinal $ \beth_{\omega} $ is the smallest uncountable strong limit cardinal.
+	It is not an inaccessible cardinal, however, because it is not regular.
+\end{eg}
+
+\begin{definition}%
+\label{dfn:uni}
+	An uncountable set $\VV$ is a \defn{Grothendieck universe}\cite[Exposé I, \S 0 and Appendix]{Anonymous:1972tk} if it satisfies the following conditions.
+	\begin{enumerate}
+		\item The set $\VV$ is \defn{transitive}: $X\in Y\in\VV$, then $X\in\VV$ as well.
+		\item If $X,Y\in\VV$, then $\{X,Y\}\in\VV$ as well.
+		\item If $X\in\VV$, then the powerset $P(X)\in\VV$ as well.
+		\item If $A\in\VV$ and $\{X_{\alpha}\}_{\alpha\in A}$ is a family of sets such that for any $\alpha\in A$, one has $X_{\alpha}\in\VV$, then
+		\[
+		\bigcup_{\alpha\in\VV}X_{\alpha}
+		\]
+		as well.
+	\end{enumerate}
+\end{definition}
+
+Grothendieck universes are essentially the same thing as inaccessible cardinals, as demonstrated by Bourbaki.\cite[Exposé I, Appendix]{Anonymous:1972tk}
+\begin{proposition}[Bourbaki]
+	If $\kappa$ is an inaccessible cardinal, then the set $\VV_{\kappa}$ of all sets of rank less than $\kappa$ is a Grothendieck universe of rank and cardinality $\kappa$.
+
+	If $\VV$ is a Grothendieck universe, then there exists an inaccessible cardinal $\kappa$ such that $\VV=\VV_{\kappa}$.
+\end{proposition}
+
+\begin{theorem}
+	If \zfc is consistent, then the existence of inaccessible cardinals is not provable by methods formalisable in \zfc.
+\end{theorem}
+
+\begin{axiom}%
+\label{axm:AU}
+	\defn{Axiom of Universes} (\au) is the assertion that every cardinal is dominated by an inaccessible cardinal, or, equivalently, every set is an element of some Grothendieck universe.
+	\defn{Tarski--Grothendieck set theory} is the schema $\tg = \zfc+\au$.
+\end{axiom}
+
+In particular, for our purposes here,
+we will have to contemplate presheaves on a category $C$ that is not small.
+There are two options for how one deals with such things set-theoretically:
+\begin{enumerate}
+	\item On one hand, one can arrange for the presheaves to take values in sets that are as large as $C$.
+		This can be done either by restricting the category to $C$ to some subcategory of sufficiently small objects,
+		or by enlarging the sizes of the sets.
+		This has the advantage that we have easy representability theorems to ensure the existence of various objects defined by universal properties.
+		It has the disadvantage that a careful formulation requires either a certain degree of extra care with the choice of the size of $C$,
+		or else additional axioms of set theory that are not equiconsistent with \zfc.
+	\item On the other hand, one can contemplate only those presheaves that are themselves small in the sense that they are determined by their values on some small subcategory.
+		This has the advantage of remaining within the confines of \zfc.
+		It has the disadvantage of not having recourse to easy representability theorems.
+\end{enumerate}
+These two approaches lead, respectively, to the pyknotic or condensed formalism.
+
+In practice, the distinction between pyknotic and condensed objects is quite mild,
+so the typical end-user of the theory will in many cases be able to ignore the distinction.
+We will want to highlight those few places where the distinction is relevant,
+and we will want to dispatch hastily those places where it is not.
+The set-theoretic framework we  here is chosen for exactly that purpose.
+
+The \defn{Lévy scheme}, $\levy$ was originally proposed by Lévy,\cite{Levy:1960wx}
+and its suitability for the tasks of category theory was recently emphasized by Mike Shulman \cite{Shulman:2008th}.
+It addresses the following informal points.
+\begin{enumerate}
+	\item We must avoid any of the usual known paradoxes of set theory,
+		particularly, the Russell paradox, the Cantor paradox, and the Burali–Forti paradox.
+		This is the point that \emph{large objects are genuinely different from small objects}.
+		This can be formalised by means of a (relatively modest) large cardinal axiom.
+		This is precisely the motivation for the Axiom of the Universe
+		as formulated by Grothendieck et al.\cite[Exposé I, \S 0 and Appendix]{Anonymous:1972tk}
+	\item At the same time, constructions of objects that involve representability theorems --- for example --- may not be stable under passage to higher universes.%
+		\footnote{There are examples of this.
+			Waterhouse constructs a presheaf whose fpqc sheafification actually depends upon the universe one is in.
+			One may take this as a sign that fpqc sheafification is to be avoided.}
+		The axioms of our set theory should formalise the idea that \emph{large objects are different from small objects, but they still behave in the same manner}.
+		This is the core of the \defn{Reflection Principle}, which is also the primary insight in Feferman's construction of $\zfc/\SS$.
+	\item Though there are genuine (and genuinely relevant) mathematical ideas at work in the Reflection Principle,
+		those mathematicians who do not wish to contemplate large cardinal axioms should be able to make use of the assertions made here naively without consequential errors.
+		This is achieved by working with an extension of the more familiar \zfc combined with a few rules as to what sort of manoeuvres are permitted with large objects.
+\end{enumerate}
+
+We now set about describing the axioms beyond the usual axioms of \zfc we shall employ.
+For more details, we refer the reader to Jech's comprehensive text.\cite{Jech:2003tt}
+
+\begin{notation}%
+\label{ntn:ZFC}
+	We denote by $\mathscr{L}$ the language formal set theory,
+	which consists of the symbols $\in$ and $=$; suitable variables; connectives $\neg$, $\wedge$, $\vee$, $\implies$, and $\iff$; and quantifiers $\forall$ and $\exists$.
+
+	We denote by \zfc the theory given by the following axioms and axiom schemata in the language $\mathscr{L}$.
+	\begin{enumerate}
+		\item Axiom of Extensionality.\cite[p. 4]{Jech:2003tt}
+		\item Axiom of Pairing.\cite[p. 6]{Jech:2003tt}
+		\item Axiom Schema of Separation.\cite[p. 7]{Jech:2003tt}
+		\item Axiom of Union.\cite[p. 9]{Jech:2003tt}
+		\item Axiom of Powerset.\cite[p. 9]{Jech:2003tt}
+		\item Axiom of Infinity.\cite[p. 12]{Jech:2003tt}
+		\item Axiom Schema of Replacement.\cite[p. 13]{Jech:2003tt}
+		\item Axiom of Regularity.\cite[p. 63]{Jech:2003tt}
+		\item Axiom of Choice.\cite[p. 47]{Jech:2003tt}
+	\end{enumerate}
+\end{notation}
+
+
+\begin{axiom}%
+\label{axm:Levy}
+	We add to the language $\mathscr{L}$ an additional constant $\kappa$,
+	and we add the following axioms to $\zfc$ to form \defn{the Lévy scheme} $\levy$.
+	\begin{enumerate}
+		\item $\kappa$ is an inaccessible cardinal.
+		\item \defn{Axiom of Reflection.} For any formula $\phi$, and for any element $x\in V_{\kappa}$, one has
+		\[
+			\phi(x)\iff \VV_{\kappa}\models\phi[x].
+		\]
+	\end{enumerate}
+\end{axiom}
+
+The Lévy scheme implies $\zfc+\textsc{om}$, where $\textsc{om}$ is the scheme%
+\footnote{The notation $\textsc{om}$ is meant to stand for \enquote{\textsc{ord} is Mahlo.}}
+asserting that any closed unbounded subclass of $\textsc{ord}$ that is definable from parameters contains an inaccessible cardinal.
+On the other hand, if $\zfc+\textsc{om}$ is consistent, then so is $\textsc{Lévy}$.
+
+The Lévy scheme is stronger than the Axiom of Universes ($\textsc{au}$), which asserts that every cadinal is dominated by an inaccessible cardinal;
+on the other hand, if $\delta$ is a \emph{Mahlo} cardinal, then $\VV_{\delta}\models\textsc{Lévy}$, so the Lévy scheme is of strictly lower conistency strength than the existence of a single Mahlo cardinal. Among large cardinal axioms, therefore, it appears that $\textsc{Lévy}$ is quite weak.
+
+Finally, it turns out that by adding the axioms for the Lévy scheme, we may do so at the same time we \emph{remove} the Axiom Schema of Replacement and Axiom of Infinity and get an equivalent theory.
+
+%-------------------------------------------------------------------%
+\section{Ultrafilters}%
+\label{sec:ultrafilters}
+%-------------------------------------------------------------------%
+
+\begin{notation}
+	Write $ \Set $ for the category of finite sets.
+	Write $ \Fin \subset \Set $ for the full subcategory of finite sets,
+	and write $ i $ for the inclusion $ \Fin \inclusion \Set $.
+\end{notation}
+
+\begin{definition}
+	For any tiny set $ S $, write $ h^S $ for the functor $ \Fin \to \Set $ given by $ I  \mapsto \Map(S, I) $.
+	An \defn{ultrafilter} $ \mu $ on $ S $ is a natural transformation
+	\[
+		\int_S (\cdot) \ d\mu \colon h^S \to i \comma
+	\]
+	which for any finite set $I$ gives a map
+	\[
+		\begin{tikzcd}[column sep={1ex}, row sep={0ex}]
+			\Map(S, I) \ar[r] & I \\
+			f \ar[r, mapsto] & \int_S f \ d \mu
+		\end{tikzcd}
+	\]
+
+	Write $ \beta (S) $ for the set of ultrafilters on $ S $.
+	For any set $ S $, the set $ \beta(S) $ is the set
+	\[
+		\beta(S) = \lim_{I \in \Fin_{S/}} I \period
+	\]
+	The functor
+	\[
+		\beta \colon \Set \to \Set
+	\]
+	is thus the right Kan extension of the inclusion $ \Fin \inclusion \Set $ along itself.
+\end{definition}
+
+\begin{eg}
+	Let $ S $ be a set, and let $ s \in S $ be an element.
+	The \defn{principal ultrafilter} $ \delta_s $ is then defined so that
+	\[
+		\int_S f \ d \delta_s = f(s) \period
+	\]
+\end{eg}
+
+Every ultrafilter on a finite set is principal,
+but infinite sets have ultrafilters that are not principal.
+To prove the existence of these, let us look at a more traditional way of defining an ultrafilter on a set.
+
+\begin{definition}
+	Let $ S $ be a set, $ T \subseteq S$, and $ \mu $ an ultrafilter on $ S $.
+	There is a unique \defn{characteristic map} $ \chi_T \colon S \to \{ 0,1 \}$ such that $ \chi_T(s) = 1 $ if and only if $ s \in T $.
+	Let us write
+	\[
+		\mu(T) \coloneq \int_S \chi_T \ d \mu \period
+	\]
+	
+	We say that \defn{$ T $ is $ \mu $-thick} if and only if $\mu(T) = 1$.
+	Otherwise (that is, if $ \mu(T) = 0 $), then we say that $ T $ is \defn{$ \mu $-thin}.
+
+	For any $ s \in S$, the principal ultrafilter $ \delta_s $ is the unique ultrafilter relative to which $ \{ s \} $ is thick.
+\end{definition}
+
+\begin{scholium}
+	If $ S $ is a set and $ \mu $ is an ultrafilter on $ S $, then we can observe the following facts about the collection of thick and thin subsets (relative to $ \mu $):
+	\begin{enumerate}
+		\item The empty set is thin.
+		\item Complements of thick sets are thin.
+		\item Every subset is either thick or thin.
+		\item Subsets of thin sets are thin.
+		\item The intersection of two thick sets is thick.
+	\end{enumerate}
+	In other words, if $ S $ is a set, then an ultrafilter on $ S $ is tantamount to a Boolean algebra homomorphism $ \PP(S) \to \{0,1\} $.
+
+	It is possible to define ultrafilters on more general posets, and if $ P $ is a Boolean algebra, then an ultrafilter is precisely a Boolean algebra homomorphism $ P \to \{0, 1\} $.
+\end{scholium}
+
+\begin{scholium}
+	Ultrafilters are functorial in maps of sets.
+	Let $ \phi \colon S \to T $ be a map, and let $ \mu $ be an ultrafilter on $ S $.
+	The ultrafilter $ \phi_{\ast}\mu $ on $ T $ given by
+	\[
+		\int_T f \ d (\phi_{\ast}\mu) = \int_S (f \circ \phi) \ d \mu \period
+	\]
+	For any $ U \subseteq T$, one has in particular
+	\[
+		(\phi_{\ast} \mu)(U) = \mu (\phi^{-1}(U)) \period
+	\]
+	Thus $ U $ is $ \phi_{\ast} \mu $-thick if and only if $ \phi^{-1} U $ is $ \mu $-thick.
+\end{scholium}
+
+\begin{definition}
+	A \defn{system of thick subsets} of $ S $ is a collection $ F \subseteq \PP(S) $ such that for any finite set $ I $ and any partition
+	\[
+		S = \coprod_{ i \in I } S_i \comma
+	\]
+	there is a unique $ i \in I $ such that $ S_i \in F $.
+\end{definition}
+
+\begin{construction}
+	We have seen that an ultrafilter $ \mu $ specifies the system $ F_{\mu} $ of $ \mu $-thick subsets.
+	In the other direction, attached to any system $F$ of thick subsets is an ultrafilter $\mu_F$: for any finite set $ I $ and any map $ f \colon S \to I $, the element $ i = \int_S f \ d \mu \in I $ is the unique one such that $ S_i \in F$.
+
+	The assignments $ \mu \mapsto F_{\mu} $ and $ F \mapsto \mu_F $ together define a bijection between ultrafilters on $S$ and systems of thick subsets.
+\end{construction}
+
+\begin{definition}
+	If $ S $ is a set, and if $ G \subseteq \PP(S) $, then an ultrafilter $ \mu $ is said to be \defn{supported on $ G $} if and only if every element of $G$ is $ \mu $-thick, that is, $ G \subseteq F_{\mu} $.
+\end{definition}
+
+\begin{lemma} \label{generateultrafilters}
+	Let $ S $ be a set, and let $ G \subseteq \PP(S) $.
+	Assume that no finite intersection of elements of $ G $ is empty.
+	Then there exists an ultrafilter $ \mu $ on $ S $ supported on $ G $.
+\end{lemma}
+
+\begin{proof}
+	Consider all the families $ A \subseteq \PP(S) $ with the following properties:
+	\begin{enumerate}
+		\item $ A $ contains $ G $;
+		\item \label{FIP} no finite intersection of elements of $ A $ is empty.
+	\end{enumerate}
+	By Zorn's lemma there is a maximal such family, $ F $.
+
+	We claim that $ F $ is a system of thick subsets.
+	For this, let $ S = \coprod_{i \in I} S_i $ be a finite partition of $ S $.
+	Condition \ref{FIP} ensures that at most one of the summands $ S_i $ can lie in $ F $.
+	Now suppose that none of the summands $ S_i $ lies in $ F $.
+	Consider, for each $ i \in I $, the family $ F \cup \{ S_i \} \subseteq \PP(S) $;
+	the maximality of $ F $ implies that none of these families can satisfy Condition \ref{FIP}.
+	Thus for each $ i \in I $, there is an empty finite intersection
+	$S_i \cap \bigcap_{j = 1}^{n_i} T_{ij} = \varnothing $.
+	But this implies that the intersection $ \bigcap_{i \in I}\bigcap_{j = 1}^{n_i} T_{ij} $ is empty, contradicting Condition \ref{FIP} for $ F $ itself.
+	Hence at least one -- and thus exactly one -- of the summands $ S_i $ lies in $ F $.
+	Thus $ F $ is a system of thick subsets of $ S $.
+\end{proof}
+
+\begin{nul}
+	It is not quite accurate to say that the Axiom of Choice is \emph{necessary} to produce nonprincipal ultrafilters, but it is true that their existence is independent of Zermelo--Fraenkel set theory.
+\end{nul}
+
+\begin{nul}
+	If $ \phi $ is a functor $ \Set \to \Set $, then a natural transformation $ \phi \to \beta $ is the same thing as a natural transformation $ \phi \circ i \to i $.
+	Please observe that we have a canonical identification $ \beta \circ i = i $.
+
+	It follows readily that the functor $ \beta $ is a monad: the unit $ \delta \colon \id \to \beta $ corresponds to the identification $ {\id} \circ i = i $, and the multiplication $ \mu \colon \beta^2 \to \beta $ corresponds to the identification $ \beta^2 \circ i = i $.
+
+	The unit for the monad $\beta$ structure is the assignment $ s \mapsto \delta_s $ that picks out the principal ultrafilter at a point.
+
+	To describe the multiplication $ \tau \mapsto \mu_{\tau} $, let us write $ T^{\dag} $ for the set of ultrafilters supported on $\{T\}$.
+	Now if $ \tau $ is an ultrafilter on $ \beta(S) $, then $ \mu_{\tau} $ is the ultrafilter on $S$ such that
+	\[
+		\mu_{\tau} ( T ) = \tau ( T^{\dag} ) \period
+	\]
+\end{nul}
+
+\begin{construction}
+	Let $ \categ{Top} $ denote the category of tiny topological spaces.
+	If $ S $ is a set, we can introduce a topology on $ \beta(S) $ simply by forming the inverse limit $ \lim_{I \in \Fin_{S/}} I $ in $ \categ{Top} $.
+	That is, we endow $ \beta(S) $ with the coarsest topology such that all the projections $ \beta(S) \to I $ are continuous.
+	We call this the \defn{Stone topology} on $\beta(S)$.
+	By Tychonoff, this limit is a compact Hausdorff topological space.
+	This lifts $ \beta $ to a functor $ \Set \to \Top $.
+\end{construction}
+
+\begin{nul}
+	Let's be more explicit about the topology on $ \beta(S) $.
+	The topology on $ \beta(S) $ is generated by the sets $ T^{\dag} $ (for $ T \subseteq S $).
+	In fact, since the sets $ T^{\dag} $ are stable under finite intersections, they form a base for the Stone topology on $ \beta(S) $.
+	Additionally, since the sets $ T^{\dag} $ are stable under the formation of complements, they even form a base of clopens of $ \beta(S) $.
+\end{nul}
+
+\begin{definition} \label{compactaasbetaalgebras}
+	A \defn{compactum} is an algebra for the monad $ \beta $.
+	Hence a compactum consists of a set $ K $ and a map $ \lambda_K \colon \beta(K) \to K $, which is required to satisfy the usual identities:
+	\[
+		\lambda_K(\lambda_{K,\ast}\tau) = \lambda_K(\mu_{\tau}) \andeq{} \lambda_K(\delta_s) = s \comma
+	\]
+	for any ultrafilter $ \tau $ on $ \beta(S) $ and any point $ s \in S $.
+	The image $ \lambda_K(\mu) $ will be called the \defn{limit} of the ultrafilter $\mu$.
+	We write $ \Comp $ for the category of compacta, and write $\Compfree \subset \Comp $ for the full subcategory spanned by the \defn{free compacta} -- \emph{i.e.}, free algebras for $ \beta $.
+\end{definition}
+
+\begin{construction} \label{turnacompactumintoatopspace}
+	If $K$ is a compactum, then we use the limit map $ \lambda_K \colon \beta(K) \to K $ to topologise $ K $ as follows.
+	For any subset $ T \subseteq K $, we define the closure of $ T $ as the image $ \lambda_K(T^{\dag}) $.
+
+	A subset $ Z \subseteq K $ is thus closed if and only if the limit of any ultrafilter relative to which $ Z $ is thick lies in $ Z $.
+	Dually, a subset $ U \subseteq K $ is open if and only if it is thick with respect to any ultrafilter whose limit lies in $ U $.
+
+	We denote the resulting topological space $ K^{\textit{top}} $.
+	The assignment $ K \mapsto K^{\textit{top}} $ defines a lift $ \Alg(\beta) \to \Top $ of the forgetful functor $ \Alg(\beta) \to \Set $.
+\end{construction}
+
+\begin{proposition} \label{compactaarecompacta}
+	The functor $ K \mapsto K^{\textit{top}} $ identifies the category of compacta with the category of compact Hausdorff topological spaces. 
+\end{proposition}
+
+We will spend the remainder of this section proving this claim.
+Please observe first that $ K \mapsto K^{\textit{top}} $ is faithful.
+What we will do now is prove:
+\begin{enumerate}
+	\item that for any compactum $ K $, the topological space $ K^{\textit{top}} $ is compact Hausdorff;
+	\item that for any compact Hausdorff topological space $ X $, there is a $ \beta $-algebra structure $ K $ on the underlying set of $ X $ such that $ X \cong K^{\textit{top}} $; and
+	\item that for any compacta $ K $ and $ L $, any continuous map $ K^{\textit{top}} \to L^{\textit{top}} $ lifts to a $ \beta $-algebra homomorphism $ K \to L$.
+\end{enumerate}
+To do this, it is convenient to describe a related idea: that of \emph{convergence} of ultrafilters on topological spaces.
+
+\begin{definition} \label{limitpointofultrafilter}
+	Let $ X $ be a topological space, and let $ x \in X $.
+	We say that $ x $ is a \defn{limit point} of an ultrafilter $ \mu $ on (the underlying set of) $ X $ if and only if every open neighbourhood of $ x $ is $ \mu $-thick.
+	In other words, $ x $ is a limit point of $ \mu $ if and only if, for every open neighbourhood $ U $ of $ x $, one has $ \mu \in U^{\dag} $.
+\end{definition}
+
+\begin{lemma} \label{opensetsarethickwrtultrafilters}
+	Let $ X $ be a topological space, and let $ U \subseteq X$ be a subset.
+	Then $ U $ is open if and only if it is thick with respect to any ultrafilter with limit point in $ U $.
+\end{lemma}
+
+\begin{proof}
+	If $ U $ is open, then $ U $ is by definition thick with respect to any ultrafilter with limit point in $ U $.
+
+	Conversely, assume that $ U $ is thick with respect to any ultrafilter with limit point in $ U $.
+	Let $ u \in U $.
+	Consider the set $ G \coloneq N(u) \cup \{ X \smallsetminus U \} $, where $N(u)$ is the collection of open neighbourhoods of $u$.
+	If $ U $ does not contain any open neighbourhood of $u$, then no finite intersection of elements of $ G $ is empty.
+	By \Cref{generateultrafilters} there is an ultrafilter $ \mu $ supported on the $ N(u) \cup \{ X \smallsetminus U \} $, whence $ u $ is a limit point of $ \mu $, but $ U $ is not $ \mu $-thick.
+	This contradicts our assumption, and so we deduce that $ U $ contains an open neighbourhood of $ u $.
+\end{proof}
+
+\begin{lemma} \label{continuityviaultrafilters}
+	Let $ X $ and $ Y $ be topological spaces, and let $ \phi \colon X \to Y $ be a map.
+	Then $ \phi $ is continuous if and only if, for any ultrafilter $ \mu $ on $ X $ with limit point $ x \in X $, the point $ \phi(x) $ is a limit point of $ \phi_{\ast}\mu $.
+\end{lemma}
+
+\begin{proof}
+	Assume that $ \phi $ is continuous, and let $ \mu $ be an ultrafilter on $ X $, and assume that $ x \in X $ is a limit point of  $ \mu $.
+	Now assume that $ V $ is an open neighbourhood of $ \phi(x) $.
+	Since $ \phi^{-1}V $ is an open neighbourhood of $ x $, so it is $ \mu $-thick, whence $ V $ is $\phi_{\ast}\mu$-thick.
+	Thus $ \phi(x) $ is a limit point of $ \phi_{\ast}\mu $.
+
+	Assume now that if $ x \in X $ is a limit point of an ultrafilter $ \mu $, then $ \phi(x) $ is a limit point of $ \phi_{\ast}\mu $.
+	Let $ V \subseteq Y $ be an open set.
+	Let $ x \in \phi^{-1}(V) $, and let $ \mu $ be an ultrafilter on $ X $ with limit point $ x $.
+	Then $ \phi(x) $ is a limit point of $ \phi_{\ast}\mu $, so $V$ is $ \phi_{\ast}\mu $-thick, whence $ \phi^{-1}(V) $ is $ \mu $-thick.
+	It follows from \Cref{opensetsarethickwrtultrafilters} that $\phi^{-1}(V)$ is open.
+\end{proof}
+
+\begin{lemma} \label{quasicompactiffeveryultrafilterhasalimitpoint}
+	Let $ X $ be a topological space.
+	Then $ X $ is quasicompact if and only if every ultrafilter on $ X $ has at least one limit point.
+\end{lemma}
+
+\begin{proof}
+	Assume first that $ X $ is quasicompact.
+	Let $ \mu $ be an ultrafilter on $ X $, and assume that $ \mu $ has no limit point.
+	Select, for every point $ x \in X $, an open neighbourhood $ U_x $ thereof that is not $ \mu $-thick.
+	Quasicompactness implies that there is a finite collection $ x_1, \dots, x_n \in X $ such that $ \left\{ U_{x_1}, \dots, U_{x_n} \right\} $ covers $ X $.
+	But at least one of $ U_{x_1}, \dots, U_{x_n} $ must be $ \mu $-thick.
+	This is a contradiction.
+
+	Now assume that $ X $ is not quasicompact.
+	Then there exists a collection $ G \subseteq \PP(X) $ of closed subsets of $ X $ such that the intersection all the elements of $ G $ is empty, but no finite intersection of elements of $ G $ is empty.
+	In light of \Cref{generateultrafilters}, there is an ultrafilter $ \mu $ with the property that every element of $ G $ is thick.
+	For any $ x \in X $, there is an element $ Z \in G $ such that $ x \in X \smallsetminus Z $.
+	Since $ Z $ is $ \mu $-thick, $ X \smallsetminus Z $ is not.
+	Thus $ \mu $ has no limit points.
+\end{proof}
+
+\begin{lemma} \label{hausdorffiffeveryultrafilterhasatmostonelimitpoint}
+	Let $ X $ be a topological space.
+	Then $ X $ is Hausdorff if and only if every ultrafilter on $ X $ has at most one limit point.
+\end{lemma}
+
+\begin{proof}
+	Assume that $ \mu $ is an ultrafilter with two distinct limit points $ x_1 $ and $ x_2 $.
+	Choose open neighbourhoods $ U_1 $ of $ x_1 $ and $ U_2 $ of $ x_2 $.
+	Since they are both $ \mu $-thick, they cannot be disjoint;
+	hence $ X $ is not Hausdorff.
+
+	Conversely, assume that $ X $ is not Hausdorff.
+	Select two points $ x_1 $ and $ x_2 $ such that every open neighbourhoods $ U_1 $ of $ x_1 $ and $ U_2 $ of $ x_2 $ intersect.
+	Now the set $ G $ consisting of open neighbourhoods of either $ x_1 $ \emph{or} $ x_2 $ has the property that no finite intersection of elements of $ G $ is empty.
+	In light of \Cref{generateultrafilters}, there is an ultrafilter $ \mu $ with the property that every element of $ G $ is thick.
+	Thus $ x_1 $ and $ x_2 $ are limit points of $ \mu $.
+\end{proof}
+
+Let us now return to our functor $ K \mapsto K^{\textit{top}} $.
+
+\begin{lemma} \label{limitsarelimits}
+	Let $ K $ be a compactum, and let $ \mu $ be an ultrafilter on $ K $.
+	Then a point of $ K^{\textit{top}} $ is a limit point of $ \mu $ in the sense of \Cref{limitpointofultrafilter} if and only if it is the limit of $ \mu $ in the sense of \Cref{compactaasbetaalgebras}.
+\end{lemma}
+
+\begin{proof}
+	Let $ x \coloneq \lambda_K(\mu) $.
+	The open neighbourhoods $ U $ of $ x $ are by definition thick (relative to $ \mu $), so certainly $ x $ is a limit point of $ \mu $.
+
+	Now assume that $ y \in K^{\textit{top}} $ is a limit point of $ \mu $.
+	To prove that the limit of $ \mu $ is $ y $, we shall build an ultrafilter $ \tau $ on $ \beta(K) $ with the following properties:
+	\begin{enumerate}
+		\item under the multiplication $ \beta^2 \to \beta $, the ultrafilter $ \tau $ is sent to $ \mu $; and
+		\item under the map $ \lambda_{\ast} \colon \beta^2 \to \beta  $, the ultrafilter $ \tau $ is sent to $\delta_y$.
+	\end{enumerate}
+	Once we have succeeded, it will follow that
+	\[
+		\lambda_K( \mu ) = \lambda_K( \mu_{\tau} ) = \lambda_K(\lambda_{K,\ast}\tau) = \lambda_K(\delta_y) = y \comma
+	\]
+	and the proof will be complete.
+
+	Consider the family $ G' $ of subsets of $ \beta(K) $ of the form $ T^{\dag} $ for a $ \mu $-thick subset $ T \subseteq S $;
+	since these are all nonempty and they are stable under finite intersections, it follows that no finite intersection of elements of $ G' $ is empty.
+
+	Now consider the set $ G \coloneq G' \cup \{ \lambda_K^{-1}\{y\} \}$.
+	If $ T $ is $ \mu $-thick, then we claim that there is an ultrafilter $ \nu \in \lambda_K^{-1}\{y\} \cap T^{\dag} $.
+	Indeed, consider the set $ N(y) \cup \{T\} $, where $ N(y) $ is the collection of open neighbourhoods of $ y $.
+	Since every open neighbourhood of $ y $ is $ \mu $-thick, no intersection of an open neighbourhood of $ y $ with $ T $ is empty.
+	By \Cref{generateultrafilters} there is an ultrafilter supported on $ N(y) \cup \{T\} $, which implies that no finite intersection of elements of $ G $ is empty.
+
+	Applying \Cref{generateultrafilters} again, we see that $ G $ supports an ultrafilter $ \tau $ on $ \beta(K) $.
+	For any $ T \subseteq K $,
+	\[
+		\mu_{\tau}(T) = \tau(T^{\dag}) \comma
+	\]
+	so since $ \tau $ is supported on $ G' $, it follows that $ \mu_{\tau} = \mu $.
+	At the same time, since $ \tau $ is supported on $ \{\lambda_K^{-1}\{y\}\} $, it follows that $ \{y\} $ is thick relative to $ \lambda_{K,\ast}\tau $, whence $ \lambda_{K,\ast}\tau = \delta_y $.
+\end{proof}
+
+\begin{proof}[Proof of \Cref{compactaarecompacta}]
+	Let $ K $ be a compactum.
+	Combine \Cref{hausdorffiffeveryultrafilterhasatmostonelimitpoint,quasicompactiffeveryultrafilterhasalimitpoint,limitsarelimits} to conclude that $ K^{\textit{top}} $ is a compact Hausdorff topological space.
+
+	Let $ X $ be a compact Hausdorff topological space with underlying set $ K $.
+	Define a map $ \lambda_K \colon \beta(K) \to K $ by carrying an ultrafilter $ \mu $ to its unique limit point in $ X $.
+	This is a $ \beta $-algebra structure on $ X $, and it follows from \Cref{limitsarelimits} and the definition of the topology together imply that $ X \cong K^{\textit{top}}$.
+
+	Finally, let $ K $ and $ L $ be compacta, and let $ \phi \colon K^{\textit{top}} \to L^{\textit{top}} $ be a continuous map.
+	To prove that $ \phi $ is a $ \beta $-algebra homomorphism, it suffices to confirm that if $ \mu $ is an ultrafilter on $ K $, then
+	\[
+		\lambda_L (\phi_{\ast} \mu) = \phi (\lambda_K(\mu)) \comma
+	\]
+	but this follows exactly from \Cref{continuityviaultrafilters}.
+\end{proof}
+
+\begin{nul}
+	We opted in \Cref{turnacompactumintoatopspace} to define the topology on a compactum $ K $ in very explicit terms, but note that the map $ \lambda_K \colon \beta(K) \to K^{\textit{top}} $ is a continuous surjection between compact Hausdorff topological spaces.
+	Thus $ K^{\textit{top}} $ is endowed with the quotient topology relative to $ \lambda_K $.
+\end{nul}
+
+

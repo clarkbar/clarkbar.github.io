@@ -1,0 +1,5 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'book.blg'
+[50] biber:340> INFO - === Sat Nov 13, 2021, 12:13:19
+[60] Biber.pm:415> INFO - Reading 'book.bcf'
+[108] Utils.pm:395> WARN - No data sources defined!

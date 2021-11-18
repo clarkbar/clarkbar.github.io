@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-08T10:31:20Z       *-->
+<!--*       on 2021-11-18T10:47:36Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,43 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p><a class="xref" data-knowl="./knowl/t_mod-artithmetic.html" title="Theorem 9.1.5">Theorem 9.1.5</a> says we can add and multiply modulo \(m\text{.}\) Can we also divide? That is, if \(ad = bd\mod m\text{,}\) do we also have \(a = b\mod m\text{?}\) This is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">not</dfn> always the case. Perhaps the simplest example is the following: \(2 = 0 \mod 2\text{,}\) but we cannot divide this equation by \(2\text{,}\) because \(1 \neq 0 \mod 2\text{.}\) More subtly, \(12 = 24 \mod 6\text{,}\) but here we cannot divide by \(3\text{,}\) because \(4 \neq 8 \mod 6\text{.}\) The following theorem says when we can divide in this way.</p>
+<p>We have that \(m\) divides \(a-x\) and \(m\) divides \(b-y\)</p>
+<ol class="lower-alpha">
+<li><p>It is clear that \(m\) divides \(-(a-x)=(-a)-(-x)\text{,}\) so that \(-a = -x \mod m\text{.}\)</p></li>
+<li>
+<p>The Linear Combination Lemma implies that \(m\) divides</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(a-x)+(b-y)=(a+b)-(x+y)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and so \(a+b = x-y\mod m\text{.}\)</p>
+</li>
+<li>
+<p>\(a = x \mod m\) implies \(a=x+pm\) for some \(p\in\mathbb{Z}\) and \(b = y \mod m\) implies \(b=y+qm\) for some \(q\in\mathbb{Z}\text{.}\) Thus,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+ab = (x+pm)(y+qm) = xy+pmy+xqm+ pqm^2 = xy + m(py+xq+pqm)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and so \(ab = xy\) by <a class="xref" data-knowl="./knowl/d_mod.html" title="Definition 9.1.1">Definition 9.1.1</a>(3).</p>
+</li>
+<li>
+<p>This can be proven by induction. For the base case of \(k=1\text{,}\) this is immediate. Now suppose \(a^{k} = x^{k}\mod m\) for some \(k\geq 1\text{.}\) Then by part (b) of this theorem with \(b=a^{k}\) and \(x=y^{k}\) and our induction hypothesis</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a^{k+1}=a\cdot a^{k} = a x^{k} \mod m
+\end{equation*}
+</div>
+<p class="continuation">and then applying part (b) again but with \(b=y=x^k\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a x^{k} = x\cdot x^k=x^{k+1}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This proves the induction and hence the theorem. \qedhere</p>
+</li>
+</ol>
 <span class="incontext"><a href="arithmeticmodm.html#p-1125">in-context</a></span>
 </body>
 </html>

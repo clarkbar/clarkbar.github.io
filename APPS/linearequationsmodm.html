@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-08T10:31:12Z       *-->
+<!--*       on 2021-11-18T10:47:28Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -506,6 +506,7 @@
 <li><a href="lcmandgcd.html" data-scroll="lcmandgcd">LCM and GCD via prime factorizations</a></li>
 <li><a href="powersofintegers.html" data-scroll="powersofintegers">Powers</a></li>
 <li><a href="pythagoreantriples.html" data-scroll="pythagoreantriples">Application: Pythagorean Triples*</a></li>
+<li><a href="gcdexercises.html" data-scroll="gcdexercises">Week 9 Exercises, due 23 November 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -525,13 +526,13 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="linearequationsmodm"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.2</span> <span class="title">Solving linear equations modulo \(m\)</span>
 </h2>
-<p id="p-1132">When can we solve \(ax = b\mod m\) for \(x\text{?}\) Before we even start, it's good to have a test to see if there is actually a solution:</p>
+<p id="p-1139">When can we solve \(ax = b\mod m\) for \(x\text{?}\) Before we even start, it's good to have a test to see if there is actually a solution:</p>
 <article class="theorem theorem-like" id="theorem-43"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.2.1</span><span class="period">.</span>
 </h6>
-<p id="p-1133">The equation \(ax = b\mod m\) has a solution if and only if \(\gcd(a,m)\) divides \(b\text{.}\)</p></article><article class="hiddenproof" id="proof-63"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-63"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-63"><article class="hiddenproof"><p id="p-1134">An integer \(x\) is a solution to \(ax = b\mod m\) if and only if \(ax=b-my\) for some integer \(y\text{.}\) In other words, \(ax = b\mod m\) has a solution if and only if \(b\) can be written as \(ax + my\) for some integers \(x\) and \(y\text{.}\)</p>
-<p id="p-1135">If \(b = ax+my\text{,}\) then the Linear Combination Lemma ensures that \(\gcd(a,m)\) divides \(b\text{.}\)</p>
-<p id="p-1136">Conversely, assume that \(\gcd(a,m)\) divides \(b\text{,}\) so that \(b = h\gcd(a,m)\) for some integer \(h\text{.}\) Bezout's identity implies that there exist integers \(x'\) and \(y'\) such that \(\gcd(a,m)=ax'+my'\text{.}\) Hence if \(x = hx'\) and \(y=hy'\text{,}\) then</p>
+<p id="p-1140">The equation \(ax = b\mod m\) has a solution if and only if \(\gcd(a,m)\) divides \(b\text{.}\)</p></article><article class="hiddenproof" id="proof-63"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-63"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-63"><article class="hiddenproof"><p id="p-1141">An integer \(x\) is a solution to \(ax = b\mod m\) if and only if \(ax=b-my\) for some integer \(y\text{.}\) In other words, \(ax = b\mod m\) has a solution if and only if \(b\) can be written as \(ax + my\) for some integers \(x\) and \(y\text{.}\)</p>
+<p id="p-1142">If \(b = ax+my\text{,}\) then the Linear Combination Lemma ensures that \(\gcd(a,m)\) divides \(b\text{.}\)</p>
+<p id="p-1143">Conversely, assume that \(\gcd(a,m)\) divides \(b\text{,}\) so that \(b = h\gcd(a,m)\) for some integer \(h\text{.}\) Bezout's identity implies that there exist integers \(x'\) and \(y'\) such that \(\gcd(a,m)=ax'+my'\text{.}\) Hence if \(x = hx'\) and \(y=hy'\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 b = h\gcd(a,m) = ax + my\text{,}
@@ -540,33 +541,33 @@ b = h\gcd(a,m) = ax + my\text{,}
 <p class="continuation">as desired.</p></article></div>
 <article class="example example-like" id="example-91"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-91"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-91"><article class="example example-like"><p id="p-1137">Find \(x\in \{0,1,...,13\}\) so that \(18x = 10\mod 14\text{.}\)</p>
-<p id="p-1138">We see that \(\gcd(18,14)=2\) divides \(10\text{,}\) so there is at least one solution. We can use the Euclidean Algorithm to express \(2\) as an integer linear combination: since \(18 - 14 = 4\text{,}\) and \(14 - 3\cdot 4 = 2\) is the gcd, so we can write</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-91"><article class="example example-like"><p id="p-1144">Find \(x\in \{0,1,...,13\}\) so that \(18x = 10\mod 14\text{.}\)</p>
+<p id="p-1145">We see that \(\gcd(18,14)=2\) divides \(10\text{,}\) so there is at least one solution. We can use the Euclidean Algorithm to express \(2\) as an integer linear combination: since \(18 - 14 = 4\text{,}\) and \(14 - 3\cdot 4 = 2\) is the gcd, so we can write</p>
 <div class="displaymath">
 \begin{equation*}
 2 = 14 - 3\cdot 4 = 4\cdot 14 - 3 \cdot 18\text{.}
 \end{equation*}
 </div>
-<p id="p-1139">Multiplying this by \(5\text{,}\) we obtain</p>
+<p id="p-1146">Multiplying this by \(5\text{,}\) we obtain</p>
 <div class="displaymath">
 \begin{equation*}
 10 = 20\cdot 14 - 15 \cdot 18\text{.}
 \end{equation*}
 </div>
-<p id="p-1140">So \(-15\) is a solution, and so is \(3 = -15 \mod 18\text{.}\)</p></article></div>
-<p id="p-1141">Note that when finding a solution to \(a = bx\mod m\text{,}\) any integer \(x\) is congruent modulo \(m\) to a number in \(\{0,1,...,m-1\}\text{.}\) Thus, whenever we ask for a solution, we prefer to write it as one of these integers.</p>
-<article class="exercise exercise-like" id="exercise-63"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-63"><h6 class="heading">
+<p id="p-1147">So \(-15\) is a solution, and so is \(3 = -15 \mod 18\text{.}\)</p></article></div>
+<p id="p-1148">Note that when finding a solution to \(a = bx\mod m\text{,}\) any integer \(x\) is congruent modulo \(m\) to a number in \(\{0,1,...,m-1\}\text{.}\) Thus, whenever we ask for a solution, we prefer to write it as one of these integers.</p>
+<article class="exercise exercise-like" id="exercise-70"><a data-knowl="" class="id-ref exercise-knowl original" data-refid="hk-exercise-70"><h6 class="heading">
 <span class="type">Exercise</span><span class="space"> </span><span class="codenumber">9.2.3</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-63"><article class="exercise exercise-like"><p id="p-1142">Find \(x\) so that \(7x = 8\mod 12\text{.}\)</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-exercise-70"><article class="exercise exercise-like"><p id="p-1149">Find \(x\) so that \(7x = 8\mod 12\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-30" id="solution-30"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like">
-<p id="p-1143">Since \(\gcd(7,12)=1\text{,}\) we can use the Euclidean Algorithm:</p>
+<p id="p-1150">Since \(\gcd(7,12)=1\text{,}\) we can use the Euclidean Algorithm:</p>
 <div class="displaymath">
 \begin{equation*}
 12-7 = 5 \ \ \text{ and  }  7-5 = 2 \ \ \text{ and  }  5-2\cdot 2 = 1\text{.}
 \end{equation*}
 </div>
-<p id="p-1144">We find</p>
+<p id="p-1151">We find</p>
 <div class="displaymath">
 \begin{equation*}
 1 = 5 - 2\cdot 2 = 3\cdot 5 - 2\cdot 7 = 3\cdot 12 - 5\cdot 7\text{,}
@@ -578,7 +579,7 @@ b = h\gcd(a,m) = ax + my\text{,}
 8 = 24 \cdot 12 - 40 \cdot 7\text{.}
 \end{equation*}
 </div>
-<p id="p-1145">Thus \(x = -40\) is a solution, and so is \(8 = -40 \mod 12\text{.}\)</p>
+<p id="p-1152">Thus \(x = -40\) is a solution, and so is \(8 = -40 \mod 12\text{.}\)</p>
 </div></div>
 </div></article></div></section></div></main>
 </div>
