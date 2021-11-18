@@ -1,14 +1,14 @@
 # Fdb version 3
-["makeindex book.idx"] 1636831383 "book.idx" "book.ind" "book" 1636965561
-  "book.idx" 1636965560 36 78e7e15e54aef2fedfb366509c820396 "xelatex"
+["makeindex book.idx"] 1637261380 "book.idx" "book.ind" "book" 1637261573
+  "book.idx" 1637261572 36 a4de2cd8e8af2a6ca7c77036e2a6e9dc "xelatex"
   (generated)
   "book.ind"
   "book.ilg"
-["xdvipdfmx"] 1636965561 "book.xdv" "book.pdf" "book" 1636965561
-  "book.xdv" 1636965560 297084 40f8a617f3443cb700b2642f3869fd5b "xelatex"
+["xdvipdfmx"] 1637261573 "book.xdv" "book.pdf" "book" 1637261573
+  "book.xdv" 1637261572 321512 a3b5259493c9497f7d5a02fd0c002f77 "xelatex"
   (generated)
   "book.pdf"
-["xelatex"] 1636965559 "book.tex" "book.xdv" "book" 1636965561
+["xelatex"] 1637261571 "book.tex" "book.xdv" "book" 1637261573
   "/home/clarkbar/texmf/tex/latex/commonstuff/boilerbook.sty" 1636831383 8188 f3c08164b36aa11eed6f3850884dbc73 ""
   "/home/clarkbar/texmf/tex/latex/commonstuff/mathssymbols.sty" 1636965557 44495 6750d938ccae268757226fea9630c433 ""
   "/home/clarkbar/texmf/tex/latex/commonstuff/minionfonts.sty" 1599981345 7248 8a0c5064bc2ed4c16ad85d499b8b478c ""
@@ -203,24 +203,24 @@
   "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
   "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1635023918 5133932 5e43dd951ff36d106a711007e761455c ""
   "/usr/local/texlive/2021/texmf.cnf" 1619147540 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "acronym.aux" 1636965560 992 f2995c47c218ff58e37b8d2a84c6c612 "xelatex"
+  "acronym.aux" 1637261572 992 f2995c47c218ff58e37b8d2a84c6c612 "xelatex"
   "acronym.tex" 1636801608 254 4ea8d9b145f1242b875a033b2f509eb0 ""
-  "aspects_of_set_theory.aux" 1636965560 5198 09abe322c507697c68d52290bdd17d14 "xelatex"
-  "aspects_of_set_theory.tex" 1636965435 31106 082072123a033da7d15f6239ebedcdcc ""
-  "book.aux" 1636965560 2537 7114bc137ec4962801ae3b563233381d "xelatex"
-  "book.ind" 1636831384 67 34511f6d9244b00dd28f0204a9d3497b "makeindex book.idx"
+  "aspects_of_set_theory.aux" 1637261572 5779 d61fde7a8fe1276c0645edb1d6b51e9d "xelatex"
+  "aspects_of_set_theory.tex" 1637261567 33880 65cab2f78aa9c80951ef6a539d752745 ""
+  "book.aux" 1637261572 2537 500fc95e6a67b7ba3be25ed0fca36217 "xelatex"
+  "book.ind" 1637261380 67 3643e95b36833eee4286bb0af2549238 "makeindex book.idx"
   "book.tex" 1636822030 5497 5a4fac0826e6e8d943556524e3ed732e ""
-  "book.toc" 1636965560 1161 dce827b2158efc545e493b7f0abe341a "xelatex"
-  "glossary.aux" 1636965560 1584 a4f6c13cc7d6bce7734f92525b155362 "xelatex"
+  "book.toc" 1637261572 1326 6e8567a74f63bd18d73f79695faad1da "xelatex"
+  "glossary.aux" 1637261572 1584 6f75536c22e61f6acfc62f56665eaca3 "xelatex"
   "glossary.tex" 1636795945 1307 3ec055ecf41c4c7a4588e4f51482ebc1 ""
   "svmono.cls" 1636795945 82124 8c8663255586dc5c66b69da2414dc437 ""
   (generated)
-  "book.log"
-  "glossary.aux"
   "book.xdv"
+  "glossary.aux"
+  "book.log"
   "book.thm"
   "book.aux"
   "book.idx"
-  "aspects_of_set_theory.aux"
   "book.toc"
+  "aspects_of_set_theory.aux"
   "acronym.aux"

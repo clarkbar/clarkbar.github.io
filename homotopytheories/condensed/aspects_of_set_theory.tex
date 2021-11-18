@@ -15,32 +15,53 @@
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
-%-------------------------------------------------------------------%
-\section{Large cardinals}%
-\label{sec:large_cardinals}
-%-------------------------------------------------------------------%
-
-Mathematicians' \enquote{stock} set theory, $\zfc$ (which is Zermelo-Fraenkel set theory $\zf$ plus the Axiom of Choice $\ac$) is insufficient for work with categories and higher categories.
+Mathematicians' \enquote{stock} set theory, $\zfc$ (Zermelo--Fraenkel set theory $\zf$ plus the Axiom of Choice $\ac$) doesn't quite have the expressive power one needs for work with categories and higher categories.
 The issue ultimately comes down to Cantor's diagonal argument:
 there is no surjection of a set onto its powerset.
 This is why no one can contemplate a set of all sets,
 and it's also the key to Freyd's observation that if $C$ is a category and $\kappa$ is the cardinality of its set of arrows,
 then $C$ has all $\kappa$-indexed products only if $C$ is a poset.
-This, in turn, is behind the \enquote{solution set condition} in representability theorems or the Adjoint Functor Theorem.
+This, in turn, is what's behind the \enquote{solution set condition} in representability theorems or the Adjoint Functor Theorem.
 Hence one really must distinguish between \enquote{large} and \enquote{small} objects.
 
-One can improve matters by passing to von Neumann--Bernays--Gödel set theory ($\nbg$), which is conservative over $\zfc$,
-which at least gives access to proper classes.
+One improves matters by passing to von Neumann--Bernays--Gödel set theory ($\nbg$), which is a conservative extension of $\zfc$.
+In $ \nbg $, the formal language consists of the symbols $\in$ and $=$; a constant $V$, suitable variables; the usual connectives of first-order logic ($\neg$, $\wedge$, $\vee$, $\implies$, and $\iff$); and the quantifiers $\forall$ and $\exists$.
+The objects of the theory are called \defn{classes}, and a class $ X $ is called a \defn{set} if and only if $X \in V$;
+if $ X \notin V $, then we call $ X $ a \defn{proper class}.
+We summarize the axioms of $ \nbg $ in informal language:
+\begin{description}
+	\item[Extensionality] Classes $ X $ and $ Y $ are equal if and only if, for any set $ Z $, one has $ Z \in X $ if and only if $ Z \in Y $.
+	\item[Regularity] For every class $ X $, there exists an element $ Z \in X $ such that $ Z \cap X = \varnothing $.
+	\item[Infinity] There is an infinite set.
+	\item[Union] If $ X $ is a set, then $ \bigcup X = \bigcup_{Z \in X} Z $ is a set as well.
+	\item[Pairing] If $X$ and $Y$ are sets, then $ \{X,Y\} $ is a set as well.
+	\item[Powerset] If $ X $ is a set, then the powerset $ \PP(X) $ is a set as well.
+	\item[Limitation of size] A class $X$ is a proper class if and only if there is a bijection between $X$ and $V$.
+	\item[Class comprehension] For every first-order formula $ \phi(X) $ with a free variable $ X $ in which the quantifiers are over sets, there exists a class $ \{ X \in V : \phi(X) \} $ whose elements are those sets $ X $ such that $ \phi(X) $.
+\end{description}
+
 In $\nbg$, the objects of a category form a class, which is often a proper class, in which case the category is said to be \defn{large}.
-Even after passage to $\nbg$, one needs something like the Axiom of Global Choice ($\agc$) (or some artifice) to make sense of a construction like \enquote{the} functor $ - \times X \colon C \to C $ for a large category $ C $ with all finite products and a fixed object therein.
-The theory $\nbg + \agc$ is no longer conservative over $\zfc$.
+The Class Comprehension Axiom Schema implies the \defn{Axiom of Global Choice},
+which ensures the existence of a choice function $ \tau \colon V \to V $ such that $ \tau(X) \in X $.
+One needs this to make sense of a construction like \enquote{the} functor $ - \times X \colon C \to C $ for a large category $ C $ with all finite products and a fixed object therein.
 
-At the same time, the whole project of higher category theory in particular turns on the principle that we want to be able to deal with the collections of all objects of a given kind as a mathematical object in its own right.
-So \enquote{large} and \enquote{small} objects may be different,
-but our foundations ought to offer some systematic way to ensure that these objects function in the same way.
-Consequently, we may have a large category $C$, but we have no way of seeing $C$ itself as an object of a still larger category of all (potentially large) categories.
+Here, we will work with $\nbg$ as our base theory.
+Hence we may speak of proper classes and large categories whenever the occasion arises.
+On the other hand, the whole project of category theory and higher category theory turns on the principle that we want to be able to deal with the collections of all objects of a given kind as a mathematical object in its own right,
+and that the passage up and down these category levels is a fruitful way to understand even completely \enquote{decategorified} objects.
+If we have a large category $C$, we cannot view $C$ itself as an object of a still larger category of all categories.
 
-Perhaps the simplest way to contend with this is to deploy Grothendieck universes or, equivalently, inaccessible cardinals.
+To give ourselves the space to perform these sorts of constructions, we need to have a hierarchy of scales at which we can work.
+This motivates the use of inaccessible cardinals or, equivalently, Grothendieck universes (\Cref{sec:cardinals}).
+However, we will also want to have reasonable assurance that the results we obtain at one scale remain valid at other scales.
+This sort of \enquote{scale-invariance of truth} is expressed by a \defn{reflection principle}.
+
+%-------------------------------------------------------------------%
+\section{Cardinals}%
+\label{sec:cardinals}
+%-------------------------------------------------------------------%
+
+We establish some notation and recall some basic results on cardinals in set theory.
 
 \begin{definition}
 	A cardinal $\kappa$ is said to be a \defn{strong limit cardinal} if and only if, for any $\alpha<\kappa$, one has $2^\alpha<\kappa$ as well.
@@ -55,8 +76,15 @@ Perhaps the simplest way to contend with this is to deploy Grothendieck universe
 		\item For any ordinal $ \alpha $, one defines $ \beth_{\alpha+1} \coloneq 2^{\beth_{\alpha}} $.
 		\item For any limit ordinal $ \alpha $, one defines $ \beth_{\alpha} \coloneq \sup \{ \beth_{\beta} : \beta < \alpha \} $.
 	\end{itemize}
+	The cardinal $ \beth_{\alpha} $ is the cardinality of $ V_{\omega+\alpha} $.
+
+	A cardinal $ \kappa $ is a strong limit cardinal if and only if, for some limit ordinal $ \alpha $, one has $ \kappa = \beth_{\alpha} $.
+
 	The cardinal $ \beth_{\omega} $ is the smallest uncountable strong limit cardinal.
 	It is not an inaccessible cardinal, however, because it is not regular.
+
+	An inaccessible cardinal is a \defn{$\beth$-fixed point}:
+	if $ \kappa $ is inaccessible, then $ \beth_{\kappa} = \kappa $.
 \end{eg}
 
 \begin{definition}%
@@ -113,8 +141,15 @@ We will want to highlight those few places where the distinction is relevant,
 and we will want to dispatch hastily those places where it is not.
 The set-theoretic framework we  here is chosen for exactly that purpose.
 
-The \defn{Lévy scheme}, $\levy$ was originally proposed by Lévy,\cite{Levy:1960wx}
-and its suitability for the tasks of category theory was recently emphasized by Mike Shulman \cite{Shulman:2008th}.
+%-------------------------------------------------------------------%
+\section{Refection principles}%
+\label{sec:reflection_principles}
+%-------------------------------------------------------------------%
+
+The \defn{Lévy scheme}, $\levy$ was originally proposed by Lévy,\cite{Levy:1960wx}.
+Since then essentially the same set theory arrived under different names:
+
+Its suitability for the tasks of category theory was recently emphasized by Mike Shulman \cite{Shulman:2008th}.
 It addresses the following informal points.
 \begin{enumerate}
 	\item We must avoid any of the usual known paradoxes of set theory,
@@ -179,6 +214,11 @@ The Lévy scheme is stronger than the Axiom of Universes ($\textsc{au}$), which 
 on the other hand, if $\delta$ is a \emph{Mahlo} cardinal, then $\VV_{\delta}\models\textsc{Lévy}$, so the Lévy scheme is of strictly lower conistency strength than the existence of a single Mahlo cardinal. Among large cardinal axioms, therefore, it appears that $\textsc{Lévy}$ is quite weak.
 
 Finally, it turns out that by adding the axioms for the Lévy scheme, we may do so at the same time we \emph{remove} the Axiom Schema of Replacement and Axiom of Infinity and get an equivalent theory.
+
+%-------------------------------------------------------------------%
+\section{Limits, colimits, and cardinals}%
+\label{sec:limits_colimits_and_cardinals}
+%-------------------------------------------------------------------%
 
 %-------------------------------------------------------------------%
 \section{Ultrafilters}%

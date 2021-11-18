@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.23)  15 NOV 2021 08:39
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.23)  18 NOV 2021 18:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1991,24 +1991,25 @@ Chapter 1.
 
 ]
 
-LaTeX Warning: Citation `Anonymous:1972tk' on page 4 undefined on input line 64.
-
-
-LaTeX Warning: Citation `Anonymous:1972tk' on page 4 undefined on input line 77.
+LaTeX Warning: Citation `Anonymous:1972tk' on page 4 undefined on input line 92.
 
 [4]
 
-LaTeX Warning: Citation `Levy:1960wx' on page 5 undefined on input line 116.
+LaTeX Warning: Citation `Anonymous:1972tk' on page 5 undefined on input line 105.
 
 
-LaTeX Warning: Citation `Shulman:2008th' on page 5 undefined on input line 117.
+LaTeX Warning: Citation `Levy:1960wx' on page 5 undefined on input line 149.
+
+[5]
+
+LaTeX Warning: Citation `Shulman:2008th' on page 6 undefined on input line 152.
 
 
-LaTeX Warning: Citation `Anonymous:1972tk' on page 5 undefined on input line 125.
+LaTeX Warning: Citation `Anonymous:1972tk' on page 6 undefined on input line 160.
 
-LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 129.
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 164.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(1)/m/n' will be
-(Font)              scaled to size 8.5pt on input line 129.
+(Font)              scaled to size 8.5pt on input line 164.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(1)/m/n/8.5'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2043,7 +2044,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(1)/m/n/8.5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(1)/m/n' will be
-(Font)              scaled to size 5.94997pt on input line 129.
+(Font)              scaled to size 5.94997pt on input line 164.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(1)/m/n/5.94997'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2078,7 +2079,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(1)/m/n/5.94997'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(1)/m/n' will be
-(Font)              scaled to size 4.25pt on input line 129.
+(Font)              scaled to size 4.25pt on input line 164.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(1)/m/n/4.25'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2113,7 +2114,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(1)/m/n/4.25'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(2)/m/n' will be
-(Font)              scaled to size 8.5009pt on input line 129.
+(Font)              scaled to size 8.5009pt on input line 164.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/8.5'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2148,7 +2149,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/8.5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(2)/m/n' will be
-(Font)              scaled to size 5.95059pt on input line 129.
+(Font)              scaled to size 5.95059pt on input line 164.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/5.94997'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2183,7 +2184,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/5.94997'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(2)/m/n' will be
-(Font)              scaled to size 4.25044pt on input line 129.
+(Font)              scaled to size 4.25044pt on input line 164.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/4.25'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2218,7 +2219,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(2)/m/n/4.25'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(3)/m/n' will be
-(Font)              scaled to size 8.49908pt on input line 129.
+(Font)              scaled to size 8.49908pt on input line 164.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(3)/m/n/8.5'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2253,7 +2254,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(3)/m/n/8.5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(3)/m/n' will be
-(Font)              scaled to size 5.94933pt on input line 129.
+(Font)              scaled to size 5.94933pt on input line 164.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(3)/m/n/5.94997'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2288,7 +2289,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(3)/m/n/5.94997'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath-Regular(3)/m/n' will be
-(Font)              scaled to size 4.24954pt on input line 129.
+(Font)              scaled to size 4.24954pt on input line 164.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath-Regular(3)/m/n/4.25'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2423,51 +2424,47 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 129.
+(Font)              size <8> substituted on input line 164.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.25> not available
-(Font)              size <5> substituted on input line 129.
+(Font)              size <5> substituted on input line 164.
 
 
-LaTeX Warning: Citation `Jech:2003tt' on page 5 undefined on input line 138.
+LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 173.
 
 
-LaTeX Warning: Citation `Jech:2003tt' on page 5 undefined on input line 147.
+LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 182.
 
 
-LaTeX Warning: Citation `Jech:2003tt' on page 5 undefined on input line 148.
+LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 183.
 
 
-LaTeX Warning: Citation `Jech:2003tt' on page 5 undefined on input line 149.
-
-[5]
-
-LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 150.
+LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 184.
 
 
-LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 151.
+LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 185.
 
 
-LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 152.
+LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 186.
 
 
-LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 153.
+LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 187.
 
 
-LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 154.
+LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 188.
 
 
-LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 155.
-
-[6] [7]
-Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 300.
- [8] [9] [10] [11]) [12] [13
+LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 189.
 
 
+LaTeX Warning: Citation `Jech:2003tt' on page 6 undefined on input line 190.
+
+[6] [7] [8]
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 340.
+ [9] [10] [11] [12]) [13] [14
 
 
-] [14
 
 
 ] [15] [16
@@ -2482,19 +2479,22 @@ Package hyperref Info: bookmark level for unknown proof defaults to 0 on input l
 ] [21] [22
 
 
+] [23] [24
+
+
 ]
 \openout2 = `glossary.aux'.
 
- (./glossary.tex) [23
+ (./glossary.tex) [25
 
 
 
-] (./book.ind [24
+] (./book.ind [26
 
 
 
 
-] [25])
+] [27])
 \tf@thm=\write7
 \openout7 = `book.thm'.
 
@@ -2508,12 +2508,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 37348 strings out of 476473
- 763745 string characters out of 5816481
- 1256472 words of memory out of 5000000
- 57091 multiletter control sequences out of 15000+600000
+ 37354 strings out of 476473
+ 763879 string characters out of 5816481
+ 1255779 words of memory out of 5000000
+ 57097 multiletter control sequences out of 15000+600000
  410014 words of font info for 163 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  117i,14n,148p,521b,2766s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.xdv (31 pages, 297084 bytes).
+Output written on book.xdv (33 pages, 321512 bytes).
