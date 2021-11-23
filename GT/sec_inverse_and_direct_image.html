@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-07T12:17:39Z       *-->
+<!--*       on 2021-11-23T09:22:40Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -440,6 +440,7 @@
 <li><a href="sec_compact_topological_spaces.html" data-scroll="sec_compact_topological_spaces">Compact topological spaces</a></li>
 <li><a href="sec_compact_hausdorff_topological_spaces.html" data-scroll="sec_compact_hausdorff_topological_spaces">Compact Hausdorff topological spaces</a></li>
 <li><a href="sec_tikhonov.html" data-scroll="sec_tikhonov">The Tikhonov Theorem</a></li>
+<li><a href="sec_onepoint_exercises.ptx.html" data-scroll="sec_onepoint_exercises.ptx">Problem set 5, due 30 November 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -470,7 +471,7 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec_inverse_and_direct_image"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.10</span> <span class="title">Inverse and direct image</span>
 </h2>
-<p id="p-665">A map \(f \colon X \to Y\) induces a map</p>
+<p id="p-684">A map \(f \colon X \to Y\) induces a map</p>
 <div class="displaymath">
 \begin{equation*}
 f^{\ast} \colon \PP(Y) \to \PP(X)
@@ -494,14 +495,14 @@ f^{\ast}(B) \coloneq \left\{x\in X : f(x)\in B\right\}\text{,}
 f_{\ast}(A) \coloneq \left\{y\in Y : (\exists x\in A)(y=f(x)) \right\}\text{.}
 \end{equation*}
 </div>
-<p id="p-666">These operations are related in the following manner: one has \(f_{\ast}(A)\subseteq B\) if and only if \(A\subseteq f^{\ast}(B)\text{.}\) In particular, we have</p>
+<p id="p-685">These operations are related in the following manner: one has \(f_{\ast}(A)\subseteq B\) if and only if \(A\subseteq f^{\ast}(B)\text{.}\) In particular, we have</p>
 <div class="displaymath">
 \begin{equation*}
 A \subseteq f^{\ast}(f_{\ast}(A)) \andeq f_{\ast}(f^{\ast}(B)) \subseteq B\text{.}
 \end{equation*}
 </div>
-<p id="p-667">In general, both of these containments are strict. However, if \(f\) is an injection, then \(A = f^{\ast}(f_{\ast}(A))\text{,}\) and if \(f\) is a surjection, then \(f_{\ast}(f^{\ast}(B)) = B\text{.}\)</p>
-<p id="p-668">In many respects, the inverse image is more natural than the direct image. For example, the inverse image preserves unions, intersections, and complements, so that one has:</p>
+<p id="p-686">In general, both of these containments are strict. However, if \(f\) is an injection, then \(A = f^{\ast}(f_{\ast}(A))\text{,}\) and if \(f\) is a surjection, then \(f_{\ast}(f^{\ast}(B)) = B\text{.}\)</p>
+<p id="p-687">In many respects, the inverse image is more natural than the direct image. For example, the inverse image preserves unions, intersections, and complements, so that one has:</p>
 <div class="displaymath">
 \begin{align*}
 f^{\ast}\left(\bigcup_{a\in A}U(a)\right) \amp = \bigcup_{a\in A}f^{\ast}(U(a)) ;\\
@@ -509,25 +510,25 @@ f^{\ast}\left(\bigcap_{a\in A}U(a)\right) \amp = \bigcap_{a\in A}f^{\ast}(U(a)) 
 f^{\ast}(\complement U) \amp = \complement(f^{\ast}(U)) \text{.}
 \end{align*}
 </div>
-<p id="p-669">For the direct image, one only has</p>
+<p id="p-688">For the direct image, one only has</p>
 <div class="displaymath">
 \begin{align*}
 f_{\ast}\left(\bigcup_{a\in A}U(a)\right) \amp = \bigcup_{a\in A}f_{\ast}(U(a)) ;\\
 f_{\ast}\left(\bigcap_{a\in A}U(a)\right) \amp \subseteq \bigcap_{a\in A}f_{\ast}(U(a)) \text{.}
 \end{align*}
 </div>
-<p id="p-670">There is no containment between \(\complement f_{\ast}(A)\) and \(f_{\ast}(\complement A)\) in general.</p>
-<p id="p-671">In the particular case where \(B = \{y\}\text{,}\) the inverse image \(f^{\ast}\{y\}\) is called the <dfn class="terminology">fiber</dfn> of \(f\) over \(y\text{.}\) This gives us a handy way to think about maps \(f \colon X \to Y\text{:}\) in effect, they organize \(X\) into a disjoint union of fibers. That is, if \(y \neq y'\text{,}\) then \(f^{\ast}\{y\} \cap f^{\ast}\{y'\} = \varnothing\text{,}\) and</p>
+<p id="p-689">There is no containment between \(\complement f_{\ast}(A)\) and \(f_{\ast}(\complement A)\) in general.</p>
+<p id="p-690">In the particular case where \(B = \{y\}\text{,}\) the inverse image \(f^{\ast}\{y\}\) is called the <dfn class="terminology">fiber</dfn> of \(f\) over \(y\text{.}\) This gives us a handy way to think about maps \(f \colon X \to Y\text{:}\) in effect, they organize \(X\) into a disjoint union of fibers. That is, if \(y \neq y'\text{,}\) then \(f^{\ast}\{y\} \cap f^{\ast}\{y'\} = \varnothing\text{,}\) and</p>
 <div class="displaymath">
 \begin{equation*}
 X = \bigcup_{y \in Y} f^{\ast}\{y\}\text{.}
 \end{equation*}
 </div>
-<p id="p-672">The map \(f\) is injective if and only if each fiber \(f^{\ast} \{y\}\) has <em class="emphasis">at most one element</em>, and \(f\) is surjective if and only if each fiber \(f^{\ast} \{y\}\) has <em class="emphasis">at least one element</em>.</p>
+<p id="p-691">The map \(f\) is injective if and only if each fiber \(f^{\ast} \{y\}\) has <em class="emphasis">at most one element</em>, and \(f\) is surjective if and only if each fiber \(f^{\ast} \{y\}\) has <em class="emphasis">at least one element</em>.</p>
 <article class="warning remark-like" id="warning-3"><h6 class="heading">
 <span class="type">Warning</span><span class="space"> </span><span class="codenumber">5.10.1</span><span class="period">.</span>
 </h6>
-<p id="p-673">Now for the annoying news. The notations \(f^{\ast}\) and \(f_{\ast}\) are not the usual notations. The more typical notation for the inverse image of \(B\) is \(f^{-1}(B)\text{.}\) The more typical notation for the direct image of \(A\) is \(f(A)\text{.}\) This notation makes it look as though these operations are inverse — <em class="emphasis">in general they are not!!</em></p></article></section></div></main>
+<p id="p-692">Now for the annoying news. The notations \(f^{\ast}\) and \(f_{\ast}\) are not the usual notations. The more typical notation for the inverse image of \(B\) is \(f^{-1}(B)\text{.}\) The more typical notation for the direct image of \(A\) is \(f(A)\text{.}\) This notation makes it look as though these operations are inverse — <em class="emphasis">in general they are not!!</em></p></article></section></div></main>
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-07T12:17:39Z       *-->
+<!--*       on 2021-11-23T09:22:40Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -440,6 +440,7 @@
 <li><a href="sec_compact_topological_spaces.html" data-scroll="sec_compact_topological_spaces">Compact topological spaces</a></li>
 <li><a href="sec_compact_hausdorff_topological_spaces.html" data-scroll="sec_compact_hausdorff_topological_spaces">Compact Hausdorff topological spaces</a></li>
 <li><a href="sec_tikhonov.html" data-scroll="sec_tikhonov">The Tikhonov Theorem</a></li>
+<li><a href="sec_onepoint_exercises.ptx.html" data-scroll="sec_onepoint_exercises.ptx">Problem set 5, due 30 November 2021</a></li>
 </ul>
 </li>
 <li class="link">
@@ -470,16 +471,16 @@
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec_maps"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.5</span> <span class="title">Maps</span>
 </h2>
-<p id="p-627">The real point of defining things as we have is so we can talk about <dfn class="terminology">maps</dfn> as soon as possible. Maps — {\addfontfeature{LetterSpace=5.0}\textsmallcaps{aka}} <dfn class="terminology">set maps</dfn>, <dfn class="terminology">mappings</dfn>, <dfn class="terminology">functions</dfn> — are an important notion in set theory. The idea is that a map \(f\colon S \to T\) is a way of taking each element \(s\in S\) and associating one and only one element \(f(s)\in Y\) thereto. Importantly, though, a map \(f\colon S \to T\) “knows” its <dfn class="terminology">source</dfn> \(S\text{,}\) its <dfn class="terminology">target</dfn> \(T\text{,}\) and the method of associating elements of \(T\) with elements of \(S\text{.}\) Thus a map \(f\colon S \to T\) is defined as an ordered triple \(\angs{S,T,\Gamma(f)}\) in which \(\Gamma(f) \subseteq S \times T\) is a subset with the property that for every element \(s \in S\text{,}\) there is a unique</p>
-<aside class="aside aside-like" id="aside-56"><p id="p-628">The phrase “there is a unique \(x\) such that \(\phi(x)\)” — sometimes written \((\exists ! x)\ \phi(x)\) — is a helpful shorthand for the longer sentence</p>
+<p id="p-646">The real point of defining things as we have is so we can talk about <dfn class="terminology">maps</dfn> as soon as possible. Maps — {\addfontfeature{LetterSpace=5.0}\textsmallcaps{aka}} <dfn class="terminology">set maps</dfn>, <dfn class="terminology">mappings</dfn>, <dfn class="terminology">functions</dfn> — are an important notion in set theory. The idea is that a map \(f\colon S \to T\) is a way of taking each element \(s\in S\) and associating one and only one element \(f(s)\in Y\) thereto. Importantly, though, a map \(f\colon S \to T\) “knows” its <dfn class="terminology">source</dfn> \(S\text{,}\) its <dfn class="terminology">target</dfn> \(T\text{,}\) and the method of associating elements of \(T\) with elements of \(S\text{.}\) Thus a map \(f\colon S \to T\) is defined as an ordered triple \(\angs{S,T,\Gamma(f)}\) in which \(\Gamma(f) \subseteq S \times T\) is a subset with the property that for every element \(s \in S\text{,}\) there is a unique</p>
+<aside class="aside aside-like" id="aside-56"><p id="p-647">The phrase “there is a unique \(x\) such that \(\phi(x)\)” — sometimes written \((\exists ! x)\ \phi(x)\) — is a helpful shorthand for the longer sentence</p>
 <div class="displaymath">
 \begin{equation*}
 (\exists x)(\phi(x) \wedge ((\forall y)(\phi(y){\implies}(x=y))))\text{.}
 \end{equation*}
 </div>
-<p id="p-629">You knew that, of course, but our point here is that it's a formula of predicate calculus, and so the phrase “such-and-so is a map” is a formula of predicate calculus as well.</p></aside><p id="p-630">element \(f(x)\in Y\) such that \(\angs{x,f(x)}\in\Gamma(f)\text{.}\)</p>
-<p id="p-631">In practice, the way we describe maps is pretty relaxed. We typically identify the source \(S\) and the target \(T\text{,}\) and then we provide a <em class="emphasis">rule</em> for “sending” elements of \(S\) to the associated elements of \(T\text{.}\) The idea is that for every \(s \in S\text{,}\) we have to specify a unique \(f(s) \in T\) “attached” to \(s\) in the sense that \(\angs{s, f(s)} \in \Gamma(f)\text{.}\)</p>
-<p id="p-632">Sometimes, it's handy to use the following notation: we may define a map \(f \colon S \to T\) by the <em class="emphasis">assignment</em></p>
+<p id="p-648">You knew that, of course, but our point here is that it's a formula of predicate calculus, and so the phrase “such-and-so is a map” is a formula of predicate calculus as well.</p></aside><p id="p-649">element \(f(x)\in Y\) such that \(\angs{x,f(x)}\in\Gamma(f)\text{.}\)</p>
+<p id="p-650">In practice, the way we describe maps is pretty relaxed. We typically identify the source \(S\) and the target \(T\text{,}\) and then we provide a <em class="emphasis">rule</em> for “sending” elements of \(S\) to the associated elements of \(T\text{.}\) The idea is that for every \(s \in S\text{,}\) we have to specify a unique \(f(s) \in T\) “attached” to \(s\) in the sense that \(\angs{s, f(s)} \in \Gamma(f)\text{.}\)</p>
+<p id="p-651">Sometimes, it's handy to use the following notation: we may define a map \(f \colon S \to T\) by the <em class="emphasis">assignment</em></p>
 <div class="displaymath">
 \begin{equation*}
 s \mapsto \text{ [some formula involving \(s\)] }\text{.}
@@ -487,18 +488,18 @@ s \mapsto \text{ [some formula involving \(s\)] }\text{.}
 </div>
 <article class="example example-like" id="example-68"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-68"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.1</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-68"><article class="example example-like"><p id="p-633">For instance, we can specify a map \(f\colon \omega \to \{0,1\}\) by saying that \(f(0)=0\) and for any successor \(n+1\text{,}\) we let \(f(n+1)\) be the unique element of \(\{0,1\}\) such that \(f(n+1)\neq f(n)\text{.}\) Since we can check that \(f(n+1)\) is indeed unique with this property, we are assured that \(f\) really is a map.</p></article></div>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-68"><article class="example example-like"><p id="p-652">For instance, we can specify a map \(f\colon \omega \to \{0,1\}\) by saying that \(f(0)=0\) and for any successor \(n+1\text{,}\) we let \(f(n+1)\) be the unique element of \(\{0,1\}\) such that \(f(n+1)\neq f(n)\text{.}\) Since we can check that \(f(n+1)\) is indeed unique with this property, we are assured that \(f\) really is a map.</p></article></div>
 <article class="example example-like" id="example-69"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-69"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.2</span><span class="period">.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-69"><article class="example example-like"><p id="p-634">Suppose \(S\subseteq X\text{.}\) There is a map \(i\colon S \to X\) such that \(i(s)=s\text{,}\) called the <dfn class="terminology">inclusion map</dfn>. When \(S=X\text{,}\) this is called the <dfn class="terminology">identity map</dfn> \(\id\text{.}\)</p></article></div>
-<p id="p-635">If we specify two sets \(S\) and \(T\text{,}\) then we can write \(\Map(S, T) \subseteq \PP(S \times T)\) consisting of those subsets \(\Gamma \subseteq S \times T\) such that \(\angs{S, T, \Gamma}\) is a map. We can write this as:</p>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-69"><article class="example example-like"><p id="p-653">Suppose \(S\subseteq X\text{.}\) There is a map \(i\colon S \to X\) such that \(i(s)=s\text{,}\) called the <dfn class="terminology">inclusion map</dfn>. When \(S=X\text{,}\) this is called the <dfn class="terminology">identity map</dfn> \(\id\text{.}\)</p></article></div>
+<p id="p-654">If we specify two sets \(S\) and \(T\text{,}\) then we can write \(\Map(S, T) \subseteq \PP(S \times T)\) consisting of those subsets \(\Gamma \subseteq S \times T\) such that \(\angs{S, T, \Gamma}\) is a map. We can write this as:</p>
 <div class="displaymath">
 \begin{equation*}
 \Map(S, T) \coloneq \{ \Gamma \subseteq \PP(S \times T) : (\forall s \in S)(\exists ! t \in T)(\angs{s,t} \in \Gamma) \}\text{.}
 \end{equation*}
 </div>
 <p class="continuation">this is our set of maps from \(S\) to \(T\text{.}\)</p>
-<p id="p-636">\​begin{exr} Suppose \(X\) a set (possibly empty). The set \(\Map(\varnothing,X)\) always consists of exactly one element: the inclusion map \(\varnothing \to X\text{.}\) The point here is that \(\varnothing \times X = \varnothing\text{,}\) so \(\PP(\varnothing \times X) = \{\varnothing\}\text{.}\) The unique subset \(\varnothing \subseteq \varnothing\) is a map \(\varnothing \to X\text{:}\) indeed, the condition is:</p>
+<p id="p-655">\​begin{exr} Suppose \(X\) a set (possibly empty). The set \(\Map(\varnothing,X)\) always consists of exactly one element: the inclusion map \(\varnothing \to X\text{.}\) The point here is that \(\varnothing \times X = \varnothing\text{,}\) so \(\PP(\varnothing \times X) = \{\varnothing\}\text{.}\) The unique subset \(\varnothing \subseteq \varnothing\) is a map \(\varnothing \to X\text{:}\) indeed, the condition is:</p>
 <div class="displaymath">
 \begin{equation*}
 (\forall s \in \varnothing)(\exists ! t \in X)(\angs{s,t} \in \varnothing)\text{,}
@@ -511,19 +512,19 @@ s \mapsto \text{ [some formula involving \(s\)] }\text{.}
 \end{equation*}
 </div>
 <p class="continuation">which is true if \(X = \varnothing\text{;}\) otherwise it is false. \end{exr}</p>
-<p id="p-637">Maps can be <dfn class="terminology">composed</dfn>. If \(f\colon S \to T\) is a map, and \(g\colon T \to U\) is another, then you can “do \(f\) first, and then do \(g\)”. That is, one can form a new map \(g\circ f\colon S \to U\) such that for any \(s\in S\text{,}\) one has</p>
+<p id="p-656">Maps can be <dfn class="terminology">composed</dfn>. If \(f\colon S \to T\) is a map, and \(g\colon T \to U\) is another, then you can “do \(f\) first, and then do \(g\)”. That is, one can form a new map \(g\circ f\colon S \to U\) such that for any \(s\in S\text{,}\) one has</p>
 <div class="displaymath">
 \begin{equation*}
 (g\circ f)(s)\coloneq g(f(s))\text{.}
 \end{equation*}
 </div>
-<p id="p-638">More formally, \(f\) and \(g\) are triples \(\angs{S,T,\Gamma(f)}\) and \(\angs{T,U,\Gamma(g)}\) (respectively), and \(g\circ f\) is the triple \(\angs{S,U,\Gamma(g\circ f)}\text{,}\) where</p>
+<p id="p-657">More formally, \(f\) and \(g\) are triples \(\angs{S,T,\Gamma(f)}\) and \(\angs{T,U,\Gamma(g)}\) (respectively), and \(g\circ f\) is the triple \(\angs{S,U,\Gamma(g\circ f)}\text{,}\) where</p>
 <div class="displaymath">
 \begin{equation*}
 \Gamma(g\circ f)\coloneq\{(s,u)\in S\times U : (\exists t\in T)((s,t)\in\Gamma(f)\wedge(t,u)\in\Gamma(g))\}\text{.}
 \end{equation*}
 </div>
-<p id="p-639">It is easy enough to see that \(g\circ\id=g\) and \(\id\circ f=f\text{,}\) and moreover composition is associative, so that \((h\circ g)\circ f=h\circ(g\circ f)\text{.}\)</p></section></div></main>
+<p id="p-658">It is easy enough to see that \(g\circ\id=g\) and \(\id\circ f=f\text{,}\) and moreover composition is associative, so that \((h\circ g)\circ f=h\circ(g\circ f)\text{.}\)</p></section></div></main>
 </div>
 </body>
 </html>

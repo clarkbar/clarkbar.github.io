@@ -15,57 +15,173 @@
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
-Mathematicians' \enquote{stock} set theory, $\zfc$ (Zermelo--Fraenkel set theory $\zf$ plus the Axiom of Choice $\ac$) doesn't quite have the expressive power one needs for work with categories and higher categories.
+Mathematicians' \enquote{stock} set theory, $\zfc$
+(Zermelo--Fraenkel set theory $\zf$ plus the Axiom of Choice $\ac$)
+doesn't quite have the expressive power one needs for work with categories and higher categories.
 The issue ultimately comes down to Cantor's diagonal argument:
 there is no surjection of a set onto its powerset.
-This is why no one can contemplate a set of all sets,
-and it's also the key to Freyd's observation that if $C$ is a category and $\kappa$ is the cardinality of its set of arrows,
+This is ultimately why no one can contemplate a set of all sets,
+and it's also the key to Freyd's observation that
+if $C$ is a category and $\kappa$ is the cardinality of its set of arrows,
 then $C$ has all $\kappa$-indexed products only if $C$ is a poset.
-This, in turn, is what's behind the \enquote{solution set condition} in representability theorems or the Adjoint Functor Theorem.
+This, in turn, is what's behind the \enquote{solution set condition}
+in representability theorems or the Adjoint Functor Theorem.
 Hence one really must distinguish between \enquote{large} and \enquote{small} objects.
 
-One improves matters by passing to von Neumann--Bernays--Gödel set theory ($\nbg$), which is a conservative extension of $\zfc$.
-In $ \nbg $, the formal language consists of the symbols $\in$ and $=$; a constant $V$, suitable variables; the usual connectives of first-order logic ($\neg$, $\wedge$, $\vee$, $\implies$, and $\iff$); and the quantifiers $\forall$ and $\exists$.
+One improves matters by passing to von Neumann--Bernays--Gödel set theory ($\nbg$),
+which is a conservative extension of $\zfc$.
+In $ \nbg $, the formal language consists of the symbols $\in$ and $=$;
+a constant $V$; suitable variables;
+the usual connectives of first-order logic ($\neg$, $\wedge$, $\vee$, $\implies$, and $\iff$);
+and the quantifiers $\forall$ and $\exists$.
 The objects of the theory are called \defn{classes}, and a class $ X $ is called a \defn{set} if and only if $X \in V$;
 if $ X \notin V $, then we call $ X $ a \defn{proper class}.
 We summarize the axioms of $ \nbg $ in informal language:
 \begin{description}
-	\item[Extensionality] Classes $ X $ and $ Y $ are equal if and only if, for any set $ Z $, one has $ Z \in X $ if and only if $ Z \in Y $.
-	\item[Regularity] For every class $ X $, there exists an element $ Z \in X $ such that $ Z \cap X = \varnothing $.
-	\item[Infinity] There is an infinite set.
-	\item[Union] If $ X $ is a set, then $ \bigcup X = \bigcup_{Z \in X} Z $ is a set as well.
-	\item[Pairing] If $X$ and $Y$ are sets, then $ \{X,Y\} $ is a set as well.
-	\item[Powerset] If $ X $ is a set, then the powerset $ \PP(X) $ is a set as well.
-	\item[Limitation of size] A class $X$ is a proper class if and only if there is a bijection between $X$ and $V$.
-	\item[Class comprehension] For every first-order formula $ \phi(X) $ with a free variable $ X $ in which the quantifiers are over sets, there exists a class $ \{ X \in V : \phi(X) \} $ whose elements are those sets $ X $ such that $ \phi(X) $.
+	\item[\textbf{Extensionality}] Classes $ X $ and $ Y $ are equal if and only if, for any set $ Z $, one has $ Z \in X $ if and only if $ Z \in Y $.
+	\item[\textbf{Regularity}] For every class $ X $, there exists an element $ Z \in X $ such that $ Z \cap X = \varnothing $.
+	\item[\textbf{Infinity}] There is an infinite set.
+	\item[\textbf{Union}] If $ X $ is a set, then $ \bigcup X = \bigcup_{Z \in X} Z $ is a set as well.
+	\item[\textbf{Pairing}] If $X$ and $Y$ are sets, then $ \{X,Y\} $ is a set as well.
+	\item[\textbf{Powerset}] If $ X $ is a set, then the powerset $ P(X) $ is a set as well.
+	\item[\textbf{Limitation of size}] A class $X$ is a proper class if and only if there is a bijection between $X$ and $V$.
+	\item[\textbf{Class comprehension}] For every first-order formula $ \phi(X) $ with a free variable $ X $ in which the quantifiers are over sets, there exists a class $ \{ X \in V : \phi(X) \} $ whose elements are those sets $ X $ such that $ \phi(X) $.
 \end{description}
 
-In $\nbg$, the objects of a category form a class, which is often a proper class, in which case the category is said to be \defn{large}.
+\begin{definition}
+	A \defn{large category} $C$ consists of a sequence $(C_n)_{n\in\NN_0}$ of classes,
+	along with a family of class maps $ \phi^{\ast} \colon C_m \to C_n $ for each map $ \phi \colon n \to m $,
+	subject to the all the formulas that express the statement that $C_n$ is a simplicial class
+	that satisfies the inner Kan condition.
+	
+	If the classes $ C_n $ are all sets, then we just say that $ C $ is a \defn{category}.
+	
+	A large category $ C $ is said to be \defn{locally small} if and only if, for every subset $ C'_0 \subseteq C_0$, the full subcategory $ C' \subseteq C $ spanned by the elements of $ C'_0 $ is a category.
+\end{definition}
+
+\begin{eg}
+	We shall write $ \Set_V $ for the large category of all sets.
+	The objects of $ \Set_V$ are thus precisely the elements of $V$.
+
+	We shall write $ \SS_V $ for the large category of all spaces.
+	The objects of $ \SS_V $ are thus precisely the Kan complexes $ \Delta^{\op} \to \Set_V $.
+
+	We shall write $ \Cat_V $ for the large category of all categories.
+	The objects of $ \Cat_V $ are thus precisely the weak Kan complexes $ \Delta^{\op} \to \Set_V $.
+\end{eg}
+
 The Class Comprehension Axiom Schema implies the \defn{Axiom of Global Choice},
 which ensures the existence of a choice function $ \tau \colon V \to V $ such that $ \tau(X) \in X $.
-One needs this to make sense of a construction like \enquote{the} functor $ - \times X \colon C \to C $ for a large category $ C $ with all finite products and a fixed object therein.
+One needs this to make sense of a construction like \enquote{the} functor $ - \times X \colon C \to C $ for a large category $ C $ with all finite products and a fixed object $ X \in C $.
 
 Here, we will work with $\nbg$ as our base theory.
 Hence we may speak of proper classes and large categories whenever the occasion arises.
-On the other hand, the whole project of category theory and higher category theory turns on the principle that we want to be able to deal with the collections of all objects of a given kind as a mathematical object in its own right,
-and that the passage up and down these category levels is a fruitful way to understand even completely \enquote{decategorified} objects.
-If we have a large category $C$, we cannot view $C$ itself as an object of a still larger category of all categories.
 
-To give ourselves the space to perform these sorts of constructions, we need to have a hierarchy of scales at which we can work.
-This motivates the use of inaccessible cardinals or, equivalently, Grothendieck universes (\Cref{sec:cardinals}).
-However, we will also want to have reasonable assurance that the results we obtain at one scale remain valid at other scales.
-This sort of \enquote{scale-invariance of truth} is expressed by a \defn{reflection principle}.
+However, the whole project of category theory and higher category theory turns on the principle that we want to be able to deal with the collections of all objects of a given kind as a mathematical object in its own right,
+and that the passage up and down these category levels%
+\footnote{This is roughly a description of \emph{microcosm principle} of Baez--Dolan.} 
+is a fruitful way to understand even completely \enquote{decategorified} objects.
+If we have a large category $C$, we cannot view $C$ itself as an object of a still larger category of all categories,
+and that limits the kinds of operations we are permitted to do to $ C $.
+
+To give ourselves the space to perform these sorts of constructions,
+we need to have a hierarchy of \enquote{scales} at which we can work.
+These scales will be identified by inaccessible cardinals
+or, equivalently, Grothendieck universes (\Cref{sec:cardinals}).
+The existence of these cardinals is independent of $ \nbg $.
+
+But now a rather different concern arises.
+We will also want to have reasonable assurance that the results we obtain at one scale remain valid at other scales.
+We would prefer to prove sentences about \emph{all} sets, spaces, groups, etc., not just those within a universe.
+This sort of \enquote{scale-invariance of truth} is expressed by a \defn{reflection principle} (\Cref{sec:reflection_principles}).
+The reflection principle we will use here states roughly that there is an inaccessible cardinal $ \kappa $ such that any statement of set theory that holds in the universe $ V_{\kappa} $ holds in $V$ itself.
+This is the \defn{Lévy scheme} $ \levy $.
+In effect, it permits us to focus our attention on categories (as opposed to large categories).
+This axiom schema has a strictly stronger conistency strength than the existence of inaccessible cardinals;
+however, its consistency strength is strictly weaker than that of the existence of a single Mahlo cardinal.
+
+\begin{eg}
+	Keep the notations from \Cref{eg:bigpresheaves} and \Cref{eg:morebigpresheaves}.
+	If we have a formula in 
+\end{eg}
 
 %-------------------------------------------------------------------%
 \section{Cardinals}%
 \label{sec:cardinals}
 %-------------------------------------------------------------------%
 
-We establish some notation and recall some basic results on cardinals in set theory.
+We establish some notation and recall some basic results on cardinals in set and category theory.
+
+\begin{definition}
+	If $ \kappa $ is a cardinal, then a set $ S $ is \defn{$ \kappa $-small} if and only if $ |S| < \kappa $.
+	We shall write $ \Set_{\kappa} \subset \Set_V$ for the category of $ \kappa $-small sets,
+	Thus $ \Set_V $ is the union of the categories $ \Set_{\kappa} $ over the proper class of cardinals.
+	
+	An infinite cardinal $ \kappa $ is \defn{regular} if and only if, for every map $ f \colon S \to T $ such that $ T $ is $ \kappa $-small and every fiber $ f^{-1}\{t\} $ is $ \kappa $-small, the set $ S $ is $ \kappa $-small as well.
+	Equivalently, $ \kappa $ is regular if and only if $ \Set_{\kappa} \subset \Set_V $ is stable under colimits indexed by $ \kappa $-small posets.
+\end{definition}
+
+\begin{eg}
+	The countable cardinal $ \aleph_0 $ is regular.
+	Every successor cardinal is regular;
+	in particular, $ \aleph_n $ for $ n \in \NN $ is regular as well.
+	The cardinal $ \aleph_{\omega} $ is the smallest cardinal that is not regular.
+\end{eg}
+
+If $ \kappa $ is a regular cardinal, then $ \Set_{\kappa} \subset \Set_V $ is in fact the smallest full subcategory that is stable under colimits indexed by $ \kappa $-small posets and contains the singleton $ \{ 0 \}$.
+
+\begin{definition}
+	If $ \kappa $ is a regular cardinal, then we shall write $ \SS_{\kappa} \subset \SS_V $ for the smallest full subcategory that is stable under colimits indexed by $ \kappa $-small posets and contains $ \{ 0 \} $.
+
+	Similarly, we shall write $ \Cat_{\kappa} \subset \Cat_V $ for the smallest full subcategory that is stable under colimits indexed by $ \kappa $-small posets and contains the categories $ \{ 0 \} $ and $ \{ 0 < 1 \} $.
+\end{definition}
+
+\begin{eg}
+	A set is $ \aleph_0 $-small if and only if it is finite.
+
+	A space is $ \aleph_0 $-small if and only if it is weak homotopy equivalent to a simplicial set with only finitely many nondegenerate simplices.
+
+	A category $ C $ is $ \aleph_0 $-small if and only if is is Joyal equivalent to a simplicial sets with only finitely many nondegenerate simplices. 
+\end{eg}
+
+\begin{definition}
+	Let $ \kappa $ be a regular cardinal.
+	A category $ \Lambda $ is \defn{$ \kappa $-filtered} if and only if it satisfies the following equivalent conditions:
+	\begin{enumerate}
+		\item For every $ \kappa $-small category $ I $,
+			every functor $ f \colon I \to \Lambda $ can be extended to a functor $ F \colon I^{\rhd} \to \Lambda $.
+		\item For every $ \kappa $-small category $ I $, and every functer $ H \colon \Lambda \times I \to \SS_V$,
+			the natural morphism
+			\[
+				\colim_{\lambda \in \Lambda} \lim_{i \in I} H(\lambda,i) \to \lim_{i \in I} \colim_{\lambda \in \Lambda} H(\lambda,i)
+			\]
+			is an equivalence.
+	\end{enumerate}
+	
+	A functor $ f \colon C \to D $ between large categories will be said to be \defn{$ \kappa $-continuous} if and only if it preserves $ \kappa $-filtered colimits.
+	An object $ X $ of a large locally small category $ C $ is said to be \defn{$ \kappa $-compact} if and only if the functor $ \yo^X \colon C \to \SS_V$ corepresented by $ X $ (i.e., the functor $ Y \mapsto \Map_C(X,Y) $) is $ \kappa $-continuous.
+\end{definition}
+
+\begin{eg}
+	Let $ \kappa $ be an uncountable regular cardinal.
+	Then the following are equivalent for a category $ C $.
+	\begin{enumerate}
+		\item The category $ C $ is $ \kappa $-small.
+		\item The set of equivalence classes of objects of $C$ is $ \kappa $-small,
+			and for every morphism $ f \colon X \to Y $ of $ C $ and every $ n \in \NN_0$, the set $ \pi_n(\Map_C(X,Y),f) $ is $ \kappa $-small.
+		\item The category $ C $ is $ \kappa $-compact as an object of $ \Cat_V $.
+	\end{enumerate}
+	In particular, a space $ X $ is $ \kappa $-small if and only if all its homotopy sets are $ \kappa $-small, if and only if it is $ \kappa $-compact as an object of $ \SS_V $.
+\end{eg}
 
 \begin{definition}
 	A cardinal $\kappa$ is said to be a \defn{strong limit cardinal} if and only if, for any $\alpha<\kappa$, one has $2^\alpha<\kappa$ as well.
-	One says that $\kappa$ is \defn{(strongly) inaccessible} if and only if it is a regular, uncountable, strong limit cardinal.
+	Equivalently, $ \kappa $ is a strong limit cardinal if and only if, for any $ \kappa $-small sets $ X $ and $ Y $, the set $ \Map(X, Y) $ of maps $ X \to Y $ is $ \kappa $-small as well. 
+
+	One says that $\kappa$ is \defn{inaccessible}%
+	\footnote{Some authors say \defn{strongly inaccessible} instead of \defn{inaccessible}.}
+	if and only if it is a regular, uncountable, strong limit cardinal.
+	Equivalently, an uncountable cardinal $ \kappa $ is inaccessible if and only if $ \Set_{\kappa} $ has all $ \kappa $-small colimits and is cartesian closed.
 \end{definition}
 
 \begin{eg}
@@ -87,16 +203,53 @@ We establish some notation and recall some basic results on cardinals in set the
 	if $ \kappa $ is inaccessible, then $ \beth_{\kappa} = \kappa $.
 \end{eg}
 
-\begin{definition}%
+\begin{eg}%
+\label{eg:bigpresheaves}
+	Here's the sort of example that will give us grief.
+	Let $ C $ be a large category,
+	and suppose that we seek to make sense in $ \nbg $ of the category $ \PP_0(C) $ of presheaves of sets $ C^{\op} \to \Set_V $.
+	
+	Right away we encounter a problem:
+	if the objects of $ C $ form a proper class $ C_ 0 $, then there is no class of class maps $ \Map(C_0, V) $.
+	Indeed, on one hand, in $ \nbg $, every element of a class is itself a set,
+	and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
+	\footnote{Worse still, the very large category of classes is not cartesian closed,
+	so there's no hope of defining $ \Map(C_0, V) $ by some other artifice.}
+	
+	If $ C $ is locally small, then for any full subcategory $ D \subset C $ spanned by a set of objects,
+	we may contemplate the category $ \PP_0(D) $ of presheaves $ D^{\op} \to \Set_V $.
+	The large category $ \PP_0(D) $ is locally small,
+	and it enjoys many of the same good properties enjoyed by $ \Set_V $ itself.
+	In particular, it has all colimits,%
+	\footnote{by which we mean colimits of functors from categories, not large categories}
+	and it is \defn{cartesian closed}:
+	for every pair of presheaves $ X, Y \colon D^{\op} \to \Set_V $,
+	the morphisms $ X \to Y $ form a presheaf $ \MOR(X, Y) \colon D^{\op} \to \Set_V $.
+
+	If we have an inclusion of subcategories $ D \subseteq D' \subset C $, then left Kan extension identifies
+	$ \PP_0(D') $ with a full subcategory of $ \PP_0(D) $.
+
+
+	We might hope for the category $ \PP^0_{\lambda}(C_{\kappa}) $ to enjoy good properties.
+	For example, we may want it to contain all $ \lambda $-small colimits.
+	We may want that for presheaves $ X, Y $ on $ C_{\kappa} $ valued in $ \lambda $-small sets,
+	the morphisms $ X \to Y $ form a presheaf $ \MOR(X, Y) $ on $ C_{\kappa} $ again valued in $ \lambda $-small sets.
+	These two conditions hold if and only if $ \lambda $ is inaccessible.
+
+	If the 
+\end{eg}
+
+
+\begin{definition}[\protect{\cite[Exposé I, \S 0 and Appendix]{Anonymous:1972tk}}]%
 \label{dfn:uni}
-	An uncountable set $\VV$ is a \defn{Grothendieck universe}\cite[Exposé I, \S 0 and Appendix]{Anonymous:1972tk} if it satisfies the following conditions.
+	An uncountable set $\VV$ is a \defn{Grothendieck universe} if it satisfies the following conditions.
 	\begin{enumerate}
 		\item The set $\VV$ is \defn{transitive}: $X\in Y\in\VV$, then $X\in\VV$ as well.
 		\item If $X,Y\in\VV$, then $\{X,Y\}\in\VV$ as well.
 		\item If $X\in\VV$, then the powerset $P(X)\in\VV$ as well.
-		\item If $A\in\VV$ and $\{X_{\alpha}\}_{\alpha\in A}$ is a family of sets such that for any $\alpha\in A$, one has $X_{\alpha}\in\VV$, then
+		\item If $A\in\VV$ and $X \colon A \to \VV$ is a map, then
 		\[
-		\bigcup_{\alpha\in\VV}X_{\alpha}
+			\bigcup_{\alpha\in A}X(\alpha) \in \VV
 		\]
 		as well.
 	\end{enumerate}
@@ -104,26 +257,28 @@ We establish some notation and recall some basic results on cardinals in set the
 
 Grothendieck universes are essentially the same thing as inaccessible cardinals, as demonstrated by Bourbaki.\cite[Exposé I, Appendix]{Anonymous:1972tk}
 \begin{proposition}[Bourbaki]
-	If $\kappa$ is an inaccessible cardinal, then the set $\VV_{\kappa}$ of all sets of rank less than $\kappa$ is a Grothendieck universe of rank and cardinality $\kappa$.
+	If $\kappa$ is an inaccessible cardinal, then the set $V_{\kappa}$ of all sets of rank less than $\kappa$ is a Grothendieck universe of rank and cardinality $\kappa$.
 
-	If $\VV$ is a Grothendieck universe, then there exists an inaccessible cardinal $\kappa$ such that $\VV=\VV_{\kappa}$.
+	If $ V $ is a Grothendieck universe, then there exists an inaccessible cardinal $ \kappa $ such that $ V=V_{\kappa} $.
 \end{proposition}
 
 \begin{theorem}
-	If \zfc is consistent, then the existence of inaccessible cardinals is not provable by methods formalisable in \zfc.
+	If $ \kappa $ is an inaccessible cardinal, then $V_{\kappa} $ models $ \zfc $, and $ V_{\kappa+1} $ models $ \nbg $.
+	
+	Assuming that $ \zfc $ (respectively, $ \nbg $) is consistent, then the existence of inaccessible cardinals is not provable by methods formalizable in $ \zfc $ (resp., $ \nbg $).
 \end{theorem}
 
 \begin{axiom}%
 \label{axm:AU}
-	\defn{Axiom of Universes} (\au) is the assertion that every cardinal is dominated by an inaccessible cardinal, or, equivalently, every set is an element of some Grothendieck universe.
-	\defn{Tarski--Grothendieck set theory} is the schema $\tg = \zfc+\au$.
+	\defn{Axiom of Universes} ($ \au $) is the assertion that every cardinal is dominated by an inaccessible cardinal, or, equivalently, every set is an element of some Grothendieck universe.
+	\defn{Tarski--Grothendieck set theory} is the schema $\tg = \nbg+\au$.
 \end{axiom}
 
-In particular, for our purposes here,
-we will have to contemplate presheaves on a category $C$ that is not small.
-There are two options for how one deals with such things set-theoretically:
+
+
 \begin{enumerate}
-	\item On one hand, one can arrange for the presheaves to take values in sets that are as large as $C$.
+	\item On one hand, one can choose to consider presheaves on a small model of the category $C$,
+		which is given by the full subcategory $ C^{\kappa} \subset C $ spanned by the $ \kappa $-compact objects for some regular cardinal $ \kappa $, and one can demand that 
 		This can be done either by restricting the category to $C$ to some subcategory of sufficiently small objects,
 		or by enlarging the sizes of the sets.
 		This has the advantage that we have easy representability theorems to ensure the existence of various objects defined by universal properties.

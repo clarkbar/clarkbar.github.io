@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-07T12:17:43Z       *-->
+<!--*       on 2021-11-23T09:22:44Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>For every set \(S\text{,}\) every indexed set \(\{U_a\}_{a\in A}\text{,}\) and every indexed set \(\left\{f_a\colon\fromto{S}{U_a}\right\}\) of maps, there exists a unique map</p>
+<p>The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">de Morgan laws</dfn> state that the formation of the complement exchanges union and intersection: for any map \(U\colon\fromto{A}{\PP(X)}\text{,}\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-f\colon S \to \prod_{a\in A}U_a
-\end{equation*}
+\begin{align*}
+\complement\left(\bigcup_{a\in A}U(a)\right) \amp = \bigcap_{a\in A}\complement U(a);\\
+\complement\left(\bigcap_{a\in A}U(a)\right) \amp  =\bigcup_{a\in A}\complement U(a) \text{.}
+\end{align*}
 </div>
-<p class="continuation">such that \(\pi_a\circ f=f_a\text{.}\) Indeed, the map \(f\) is given by the assignment \(s \mapsto (f_a(x))_{a\in A}\text{.}\)</p>
-<span class="incontext"><a href="sec_products_of_sets.html#p-683">in-context</a></span>
+<span class="incontext"><a href="sec_the_algebra_of_subsets.html#p-683">in-context</a></span>
 </body>
 </html>
