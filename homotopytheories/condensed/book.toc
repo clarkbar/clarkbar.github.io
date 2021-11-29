@@ -2,8 +2,8 @@
 \contentsline {chapter}{\numberline {1}Aspects of set theory}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Cardinals}{5}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Refection principles}{8}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Limits, colimits, and cardinals}{9}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Ultrafilters}{9}{section.1.4}%
+\contentsline {section}{\numberline {1.3}Limits, colimits, and cardinals}{10}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Ultrafilters}{10}{section.1.4}%
 \contentsline {part}{Part\ II\hspace {\betweenumberspace }Condensed sets}{17}{part.2}%
 \contentsline {part}{Part\ III\hspace {\betweenumberspace }Condensed groups}{19}{part.3}%
 \contentsline {part}{Part\ IV\hspace {\betweenumberspace }Condensed abelian groups}{21}{part.4}%

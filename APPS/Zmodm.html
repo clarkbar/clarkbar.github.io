@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-18T21:51:13Z       *-->
+<!--*       on 2021-11-29T10:06:11Z       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -517,10 +517,6 @@
 <li><a href="Fermatlittle.html" data-scroll="Fermatlittle">Fermat's Little Theorem</a></li>
 </ul>
 </li>
-<li class="link"><a href="counting.html" data-scroll="counting"><span class="codenumber">10</span> <span class="title">Counting</span></a></li>
-<li class="link"><a href="permutations.html" data-scroll="permutations"><span class="codenumber">11</span> <span class="title">Permutations</span></a></li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Zmodm"><h2 class="heading hide-type">
@@ -871,7 +867,13 @@ x \cdot y = z \mbox{ where \(z\in \{0,1,...,m-1\}\) is the unique element such t
 <li id="li-221"><p id="p-1172">\(4^{3}=4\) since \(4^{3} = (-1)^{3}=-1 = 4 \mod 5\text{.}\)</p></li>
 </ul>
 <p id="p-1173">Thus, the unique cubed root of \(2\) is \(3\text{.}\)</p></article></div>
-<p id="p-1174">However, not all numbers in every \(\mathbb{Z}/m\) have roots! Confirm for yourself that \(2\in\mathbb{Z}/{4}\) has no cubed root.</p></section></div></main>
+<p id="p-1174">However, not all numbers in every \(\mathbb{Z}/m\) have roots! Confirm for yourself that \(2\in\mathbb{Z}/{4}\) has no cubed root.</p>
+<article class="theorem theorem-like" id="theorem-44"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Chinese Remainder Theorem.</span>
+</h6>
+<p id="p-1175">Let \(a,b \in \NN\text{.}\) Consider the map \(\theta \colon \ZZ/(ab) \to \ZZ/a \times \ZZ/b \) that carries \(n\) to the pair \((r,s)\) in which \(r = n \mod a\) and \(s = n \mod b\text{.}\) If \(a\) and \(b\) are coprime, then \(\theta\) is a bijection.</p></article><article class="hiddenproof" id="proof-64"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-64"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-64"><article class="hiddenproof"><p id="p-1176">Let \((r,s) \in \ZZ/a \times \ZZ/b\text{.}\) We must show that there exists a unique \(n \in \ZZ/(ab)\) such that \(r = n \mod a\) and \(s = n \mod b\text{.}\)</p>
+<p id="p-1177">Let's prove uniqueness first. Suppose that \(n_1, n_2\) are two natural numbers such that \(r = n_i \mod a\) and \(s = n_i \mod b\) for \(i \in \{1,2\}\text{.}\) Then \(n_1 -n_2\) is divisible by both \(a\) and \(b\text{,}\) and since \(a \) and \(b \) are coprime, it follows that \(ab\) divides \(n_1 - n_2\text{.}\)</p>
+<p id="p-1178">Now let's prove existence. By the Bezout theorem, there exist integers \(c,d\in \ZZ\) such that \(ca+db = 1\text{.}\) Thus \(ca = 1 \mod b\) and \(db = 1 \mod a\text{.}\) Now let \(N = cas+dbr\text{,}\) so that \(N = cas = s \mod b\) and \(N = bdr = r \mod a\text{.}\) Thus \(n = N \mod (ab)\) is the desired element of \(\ZZ/(ab)\text{.}\)</p></article></div></section></div></main>
 </div>
 </body>
 </html>
