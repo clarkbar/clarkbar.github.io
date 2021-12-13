@@ -15,19 +15,17 @@
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
-\documentclass[envcountsame,envcountsect]{svmono}
+\documentclass{cambridge7A}
 
-\usepackage{makeidx}		% allows index generation
-\usepackage{graphicx}		% standard LaTeX graphics tool
-\usepackage{multicol}		% used for the two-column index
-\usepackage[bottom]{footmisc}	% places footnotes at page bottom
+\usepackage{natbib}
+%\usepackage{rotating}
+\usepackage{floatpag}  \rotfloatpagestyle{empty}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+%\usepackage{multind}\ProvidesPackage{multind}
 
 \usepackage[minionmath]{boilerbook}
-
-
-\makeindex             % used for the subject index
-                       % please use the style svind.ist with
-                       % your makeindex program
 
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
@@ -60,7 +58,7 @@
 
 \tableofcontents
 
-\include{acronym}
+%\include{acronym}
 
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
@@ -73,67 +71,57 @@
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
-\begin{partbacktext}
-	\part{Topological preliminaries}%
-	\label{prt:topological_preliminaries}
+\part{Categorical and topological preliminaries}%
+\label{prt:topological_preliminaries}
 
-	\noindent The general theory of condensed objects relies on some very precise results in general topology.
-	Not all of these results would be included in a typical undergraduate course in topology,
-	so we fill in some of these details.
-\end{partbacktext}
+\noindent The general theory of condensed objects relies upon
+some very precise results in category theory and general topology.
+Not all of these results would be included in
+typical undergraduate courses on these subjects,
+so we fill in these details,
+and we fix our notations.
 
 \include{aspects_of_set_theory}
 
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
-\begin{partbacktext}
-	\part{Condensed sets}%
-	\label{prt:condensed_sets}
+\part{Condensed sets}%
+\label{prt:condensed_sets}
 
-	\noindent 
-\end{partbacktext}
+\noindent 
 
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
-\begin{partbacktext}
-	\part{Condensed groups}%
-	\label{prt:condensed_groups}
+\part{Condensed groups}%
+\label{prt:condensed_groups}
 
-	\noindent 
-\end{partbacktext}
+\noindent 
 
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
-\begin{partbacktext}
-	\part{Condensed abelian groups}%
-	\label{prt:condensed_abelian_groups}
+\part{Condensed abelian groups}%
+\label{prt:condensed_abelian_groups}
 
-	\noindent 
-\end{partbacktext}
+\noindent 
 
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
-\begin{partbacktext}
-	\part{Condensed spaces}%
-	\label{prt:condensed_spaces}
+\part{Condensed spaces}%
+\label{prt:condensed_spaces}
 
-	\noindent 
-\end{partbacktext}
+\noindent 
 
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
+\part{Condensed spectra}%
+\label{prt:condensed_spectra}
 
-\begin{partbacktext}
-	\part{Condensed spectra}%
-	\label{prt:condensed_spectra}
-
-	\noindent 
-\end{partbacktext}
+\noindent 
 
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
@@ -146,10 +134,10 @@
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
-\include{glossary}
+%\include{glossary}
 %\include{solutions}
 
-\printindex
+%\printindex
 
 \end{document}
 %-------------------------------------------------------------------%
