@@ -56,6 +56,7 @@
 %\include{preface}
 %\include{acknowledgement}
 
+\setcounter{tocdepth}{2}
 \tableofcontents
 
 %\include{acronym}
@@ -71,17 +72,12 @@
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
-\part{Categorical and topological preliminaries}%
-\label{prt:topological_preliminaries}
+\part{Preliminaries}%
+\label{prt:preliminaries}
 
-\noindent The general theory of condensed objects relies upon
-some very precise results in category theory and general topology.
-Not all of these results would be included in
-typical undergraduate courses on these subjects,
-so we fill in these details,
-and we fix our notations.
+\include{foundations}
 
-\include{aspects_of_set_theory}
+\include{topology}
 
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
@@ -133,6 +129,9 @@ and we fix our notations.
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
+
+\bibliography{../homotopytheories.bib}
+\bibliographystyle{../cambridgeauthordate.bst}
 
 %\include{glossary}
 %\include{solutions}

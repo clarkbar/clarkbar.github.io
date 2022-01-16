@@ -1,12 +1,42 @@
-\contentsline {part}{\MakeUppercase {Part\ ONE\relax \hskip 1em\relax Categorical and topological preliminaries}}{1}{}%
-\contentsline {chapter}{\numberline {1}Aspects of set theory}{4}{}%
-\contentsline {section}{\numberline {1.1}Cardinals}{6}{}%
-\contentsline {subsection}{\numberline {1.1.1}Regularity, smallness, and accessibility}{6}{}%
-\contentsline {subsection}{\numberline {1.1.2}Presheaf categories}{9}{}%
-\contentsline {subsection}{\numberline {1.1.3}Strong limit and inaccessible cardinals}{10}{}%
-\contentsline {subsection}{\numberline {1.1.4}Higher inaccessibility}{12}{}%
-\contentsline {part}{\MakeUppercase {Part\ TWO\relax \hskip 1em\relax Condensed sets}}{15}{}%
-\contentsline {part}{\MakeUppercase {Part\ THREE\relax \hskip 1em\relax Condensed groups}}{17}{}%
-\contentsline {part}{\MakeUppercase {Part\ FOUR\relax \hskip 1em\relax Condensed abelian groups}}{19}{}%
-\contentsline {part}{\MakeUppercase {Part\ FIVE\relax \hskip 1em\relax Condensed spaces}}{21}{}%
-\contentsline {part}{\MakeUppercase {Part\ SIX\relax \hskip 1em\relax Condensed spectra}}{23}{}%
+\contentsline {part}{\MakeUppercase {Part\ ONE\relax \hskip 1em\relax Preliminaries}}{1}{}%
+\contentsline {chapter}{\numberline {1}Foundations}{3}{}%
+\contentsline {section}{\numberline {1.1}Cardinals}{3}{}%
+\contentsline {subsection}{\numberline {1.1.1}Regularity and smallness}{6}{}%
+\contentsline {subsection}{\numberline {1.1.2}Accessibility and presentablity}{7}{}%
+\contentsline {subsection}{\numberline {1.1.3}Presheaf categories}{9}{}%
+\contentsline {subsection}{\numberline {1.1.4}Strong limit and inaccessible cardinals}{12}{}%
+\contentsline {subsection}{\numberline {1.1.5}Ind and Pro}{14}{}%
+\contentsline {subsection}{\numberline {1.1.6}Higher inaccessibility}{15}{}%
+\contentsline {subsection}{\numberline {1.1.7}Universe polymorphism}{17}{}%
+\contentsline {section}{\numberline {1.2}Reflection principles}{17}{}%
+\contentsline {subsection}{\numberline {1.2.1}Lévy hierarchy}{17}{}%
+\contentsline {subsection}{\numberline {1.2.2}Elementary embeddings}{17}{}%
+\contentsline {subsection}{\numberline {1.2.3}Reflection principles}{17}{}%
+\contentsline {subsection}{\numberline {1.2.4}Indescribable cardinals}{17}{}%
+\contentsline {section}{\numberline {1.3}Bicategories}{17}{}%
+\contentsline {chapter}{\numberline {2}Topology}{18}{}%
+\contentsline {section}{\numberline {2.1}Ultrafilters}{18}{}%
+\contentsline {subsection}{\numberline {2.1.1}Codensity monads}{18}{}%
+\contentsline {subsection}{\numberline {2.1.2}Ultrafilters on sets}{20}{}%
+\contentsline {subsection}{\numberline {2.1.3}Completeness of ultrafilters}{24}{}%
+\contentsline {subsection}{\numberline {2.1.4}Ultrafilters on posets}{24}{}%
+\contentsline {subsection}{\numberline {2.1.5}Ultraproducts}{24}{}%
+\contentsline {section}{\numberline {2.2}Topoi}{24}{}%
+\contentsline {subsection}{\numberline {2.2.1}Topoi}{24}{}%
+\contentsline {subsection}{\numberline {2.2.2}Sheaves and hypersheaves}{24}{}%
+\contentsline {subsection}{\numberline {2.2.3}Postnikov completeness}{24}{}%
+\contentsline {subsection}{\numberline {2.2.4}Coherence}{24}{}%
+\contentsline {subsection}{\numberline {2.2.5}Stone duality}{24}{}%
+\contentsline {subsection}{\numberline {2.2.6}Spectral duality}{24}{}%
+\contentsline {subsection}{\numberline {2.2.7}Classifying topoi}{24}{}%
+\contentsline {section}{\numberline {2.3}Compacta}{24}{}%
+\contentsline {subsection}{\numberline {2.3.1}Compacta and $ \mitbeta $-algebras}{24}{}%
+\contentsline {subsection}{\numberline {2.3.2}Boolean algebras}{28}{}%
+\contentsline {subsection}{\numberline {2.3.3}Stone topological spaces}{28}{}%
+\contentsline {subsection}{\numberline {2.3.4}Projective compacta}{28}{}%
+\contentsline {part}{\MakeUppercase {Part\ TWO\relax \hskip 1em\relax Condensed sets}}{29}{}%
+\contentsline {part}{\MakeUppercase {Part\ THREE\relax \hskip 1em\relax Condensed groups}}{31}{}%
+\contentsline {part}{\MakeUppercase {Part\ FOUR\relax \hskip 1em\relax Condensed abelian groups}}{33}{}%
+\contentsline {part}{\MakeUppercase {Part\ FIVE\relax \hskip 1em\relax Condensed spaces}}{35}{}%
+\contentsline {part}{\MakeUppercase {Part\ SIX\relax \hskip 1em\relax Condensed spectra}}{37}{}%
+\contentsline {schapter}{References}{39}{}%

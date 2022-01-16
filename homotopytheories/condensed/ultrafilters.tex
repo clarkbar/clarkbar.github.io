@@ -1,0 +1,405 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+\section{Ultrafilters}%
+\label{sec:ultrafilters}
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+
+%-------------------------------------------------------------------%
+\subsection{Codensity monads}%
+\label{sub:codensity_monads}
+%-------------------------------------------------------------------%
+
+The codensity monad of a functor $ f \colon A \to B $
+is the right Kan extension $ \beta(f) $ of $ f $ along itself,
+when it exists.
+For formal reasons, this is always a monad on $ B $.
+
+The full functoriality
+of the construction $ f \mapsto \beta(f) $
+is relevant to us.
+In effect, we regard functors as the objects of a category,
+and the morphisms are lax-commutative squares.
+
+
+\begin{definition}
+	Let $ A $ and $ B $ be categories.
+	Then a bifibration 
+	\citep[\S\S 2.4.7]{Lurie2009}
+	$ X \to B \times A $ is \defn{representable}
+	if and only if,
+	for every object $ a \in A $,
+	the fiber $ X_a $ has a terminal object.
+\end{definition}
+
+\begin{nul}
+	Let $ A $ and $ B $ be categories.
+	A bifibration $ X \to B \times A $ corresponds
+	to a functor $ B^{\op} \times A \to \SS_V $,
+	or equivalently to a functor $ \Xi \colon A \to \PP(B) $.
+	A representable bifibration is one in which
+	each presheaf $ \Xi(a) $ is representable.
+	In this way,
+	the category of representable bifibrations to $ B \times A $
+	is equivalent to the category $ \Fun(A, B) $.
+
+	One can be explicit about the correspondence:
+	if $ f \colon A \to B $ is a functor,
+	then the corresponding representable bifibration is
+	\[
+		\Fun(\Delta^1, B) \times_B A \to B \times A \comma
+	\]
+	and every representable fibration is of this form.
+\end{nul}
+
+\begin{construction}
+	Let $ \Lax\Cat $ be the full subcategory
+	of $ \Fun(\Lambda^1_0, \Cat ) $
+	spanned by those diagrams $ A \ot X \to B $
+	such that $ X \to B \times A $ is a representable bifibration.
+
+	The objects can be identified with functors $ f \colon A \to B $,
+	but $ \Lax\Cat $ is not equivalent to 
+	the category $ \Fun(\Delta^1, \Cat) $.
+	If $ f \colon A \to B $ and $ g \colon C \to D $
+	are functors, then
+	a morphism $ \sigma \colon f \to g $ of $ \Lax\Cat $
+	determines a functor
+	\[
+		\Fun(\Delta^1, B) \times_B A \to
+		\Fun(\Delta^1, D) \times_D C \period
+	\]
+	If $ a \in A $ and $ b \in B $ are objects,
+	then $ \sigma $ determines a map
+	\[
+		\Map_B(b, f(a)) \to \Map_D(\psi(b), g(\phi(a))) \period
+	\]
+	When $ b = f(a) $,
+	the image of the identity under this map
+	is thus a morphism $ \sigma_a \colon \psi(f(a)) \to g(\phi(a)) $.
+	Thus the morphism $ \sigma $ amounts to a lax-commutative square:
+	\begin{equation}\label{square:laxsquare}
+		\begin{tikzcd}
+			A \arrow[r, "f" above]
+			  \arrow[d, "\phi" left]
+			  & B \arrow[d, "\psi" right]
+			      \arrow[dl, phantom, "\scriptstyle \sigma"
+			      below right, "\Longleftarrow" sloped] \\ 
+			C \arrow[r, "g" below] & D
+		\end{tikzcd}
+	\end{equation}
+
+	We have two functors
+	$ s, t \colon \Lax\Cat \to \Cat $
+	which carry a diagram $ [ A \ot X \to B ] $
+	to $ A $ and $ B $, respectively.
+	We have an equivalence
+	\[
+		\{A\} \times_{\Cat} \Lax\Cat \times_{\Cat} \{B\}
+		\simeq \Fun(A,B) \period
+	\]
+
+	In fact, the functor
+	$ H_B \colon \Cat^{\op} \to \Cat $
+	represented by $ B $
+	and the functor
+	$ H^A \colon \Cat \to \Cat $
+	corepresented by $ A $
+	correspond under straightening/unstraightening
+	to the cartesian fibration
+	\[
+		\Lax\Cat \times_{\Cat} \{B\} \to \Cat
+	\]
+	and the cocartesian fibration
+	\[
+		\{A\} \times_{\Cat} \Lax\Cat \to \Cat \comma
+	\]
+	respectively.
+\end{construction}
+
+\begin{definition}
+	We call $ \Lax\Cat $ the \defn{lax arrow category of categories}.
+	If $ C $ is a fixed category,
+	then we call 
+\end{definition}
+
+\begin{construction}
+	Let $ C $ be a category.
+	We write $ \Endofun(C) $ for
+	the monoidal category of endofunctors of $ C $,
+	with the monoidal structure given by composition.
+
+	acts on the left on the category $ \Fun(D, C) $.
+	Both the monoidal structure and
+	the left module structure
+	are given by composition.
+
+	We consider the category $ \LL\Mod_{\Endofun(C)}(\Fun(D,C)) $
+	whose objects can be regarded as pairs $ (T, f ) $
+	consisting of an algebra $ T \in \Alg(\Endofun(C)) $
+	and a $ T $-module $ f $ in $ \Fun(D,C) $.
+	Thus 
+
+	For any functor $ f \colon D \to C $,
+	we consider the monoidal category $ \Endofun(C)[f] $
+	constructed in
+	\cite[Definition 4.7.1.1]{Lurie2017}.
+	The objects of the category $ \Endofun(C)[f] $
+	are pairs $ (T, \eta) $ consisting of
+	an object $ T \in \Endofun(C) $
+	and a natural transformation $ T \circ f \to f $.
+	The assignment $ (T, \eta) \mapsto T $ defines a 
+	monoidal forgetful functor
+	$ \Endofun(C)[f] \to \Endofun(C) $.
+
+	The terminal object
+	(if it exists)
+	of $ \Endofun(C)[f] $ is automatically
+	an algebra object $ B(f) = (\beta(f), \epsilon)$.
+	The image of $ B(f) $ under
+	the forgetful functor $ \Endofun(C)[f] \to \Endofun(C) $ is
+	the algebra object
+	\[
+		\beta(f) \in \Alg(\Endofun(C)) \semicolon
+	\]
+	in other words, $ \beta(f) $ is a monad on $ C $.
+	
+	If $ \Endofun(C)[f] $ has
+	a terminal object $ B(f) = (\beta(f), \epsilon)$,
+	then the monad $ \beta(f) $ will be called the
+	\defn{codensity monad}
+	attached to $ f \colon D \to C $.
+
+	If the category $ \Endofun(C)[f] $ has a terminal object,
+	then $ \epsilon $ exhibits
+	$ \beta(f) $ as the right Kan extension of $ f $
+	along itself.
+	Conversely, if the right Kan extension
+	of $ f $ along itself exists,
+	then that Kan extension defines a terminal object of
+	the category $ \Endofun(C)[f] $.
+
+	\cite[\S\S 4.7.1]{Lurie2017} identifies three categories:
+	\[
+		\LL\Mod(\Fun(D,C)) \times_{\Fun(D,C)} \left\{f\right\} \simeq
+		\Alg(\Endofun(C)[f]) \simeq
+		\Alg(\Endofun(C))_{/\beta(f)} \period
+	\]
+	More informally, we may say that
+	a morphism of monads $ T \to \beta(f) $
+	is the same thing as a $ T $-module structure on $ f $.
+\end{construction}
+
+%-------------------------------------------------------------------%
+\subsection{Ultrafilters on sets}%
+\label{sub:ultrafilters_on_sets}
+%-------------------------------------------------------------------%
+
+\begin{notation}
+	Let us write $ \Fin \subset \Set $ for
+	the full subcategory of finite sets,
+	and let us write $ i $ for
+	the inclusion $ \Fin \inclusion \Set $.
+\end{notation}
+
+\begin{definition}
+	Let $ S $ be a set.
+	An \defn{ultrafilter} on $ S $ is
+	a natural transformation
+	\[
+		\yo^S \circ i \to i \period
+	\]
+\end{definition}
+
+\begin{notation}
+	Let $ S $ be a set, and
+	let $ \mu $ be an ultrafilter on $ S $.
+	We find it expressive to write
+	\[
+		\int_S (\cdot) \ d\mu \colon \yo^S \circ i \to i
+	\]
+	for the natural transformation.
+	If $ I $ is a finite set,
+	and if $ f \colon S \to I $ is a map,
+	then this natural transformation
+	permits us to specify an element
+	\[
+		\int_S f \ d\mu \in I \period
+	\]
+	The naturality is the condition that
+	if $ \phi \colon I \to J $ is a map of finite sets,
+	then
+	\[
+		\phi \left( \int_S f \ d\mu \right) = 
+		\int_S \phi \circ f \ d\mu \period
+	\]
+\end{notation}
+
+\begin{eg}
+	Let $ S $ be a set, and let $ s \in S $ be an element.
+	The \defn{principal ultrafilter} $ \delta_s $ is then defined so that
+	\[
+		\int_S f \ d \delta_s = f(s) \period
+	\]
+	By the Yoneda lemma,
+	every ultrafilter on a finite set is principal,
+	but as we shall see,
+	infinite sets have ultrafilters that are not principal.
+\end{eg}
+
+\begin{notation}
+	If $ S $ is a set, then
+	let us write $ \beta(S) $ for the set
+	of ultrafilters on $ S $:
+	\[
+		\beta(S) \coloneq \Map(\yo^S \circ i, i) \period
+	\]
+\end{notation}
+	Write $ \beta (S) $ for the set of ultrafilters on $ S $.
+	For any set $ S $, the set $ \beta(S) $ is the set
+	\[
+		\beta(S) = \lim_{I \in \Fin_{S/}} I \period
+	\]
+	The functor
+	\[
+		\beta \colon \Set \to \Set
+	\]
+	is thus the right Kan extension of the inclusion $ \Fin \inclusion \Set $ along itself.
+
+To prove the existence of these, let us look at a more traditional way of defining an ultrafilter on a set.
+
+\begin{definition}
+	Let $ S $ be a set, $ T \subseteq S$, and $ \mu $ an ultrafilter on $ S $.
+	There is a unique \defn{characteristic map} $ \chi_T \colon S \to \{ 0,1 \}$ such that $ \chi_T(s) = 1 $ if and only if $ s \in T $.
+	Let us write
+	\[
+		\mu(T) \coloneq \int_S \chi_T \ d \mu \period
+	\]
+	
+	We say that \defn{$ T $ is $ \mu $-thick} if and only if $\mu(T) = 1$.
+	Otherwise (that is, if $ \mu(T) = 0 $), then we say that $ T $ is \defn{$ \mu $-thin}.
+
+	For any $ s \in S$, the principal ultrafilter $ \delta_s $ is the unique ultrafilter relative to which $ \{ s \} $ is thick.
+\end{definition}
+
+\begin{scholium}
+	If $ S $ is a set and $ \mu $ is an ultrafilter on $ S $, then we can observe the following facts about the collection of thick and thin subsets (relative to $ \mu $):
+	\begin{enumerate}
+		\item The empty set is thin.
+		\item Complements of thick sets are thin.
+		\item Every subset is either thick or thin.
+		\item Subsets of thin sets are thin.
+		\item The intersection of two thick sets is thick.
+	\end{enumerate}
+	In other words, if $ S $ is a set, then an ultrafilter on $ S $ is tantamount to a Boolean algebra homomorphism $ \PP(S) \to \{0,1\} $.
+
+	It is possible to define ultrafilters on more general posets, and if $ P $ is a Boolean algebra, then an ultrafilter is precisely a Boolean algebra homomorphism $ P \to \{0, 1\} $.
+\end{scholium}
+
+\begin{scholium}
+	Ultrafilters are functorial in maps of sets.
+	Let $ \phi \colon S \to T $ be a map, and let $ \mu $ be an ultrafilter on $ S $.
+	The ultrafilter $ \phi_{\ast}\mu $ on $ T $ given by
+	\[
+		\int_T f \ d (\phi_{\ast}\mu) = \int_S (f \circ \phi) \ d \mu \period
+	\]
+	For any $ U \subseteq T$, one has in particular
+	\[
+		(\phi_{\ast} \mu)(U) = \mu (\phi^{-1}(U)) \period
+	\]
+	Thus $ U $ is $ \phi_{\ast} \mu $-thick if and only if $ \phi^{-1} U $ is $ \mu $-thick.
+\end{scholium}
+
+\begin{definition}
+	A \defn{system of thick subsets} of $ S $ is a collection $ F \subseteq \PP(S) $ such that for any finite set $ I $ and any partition
+	\[
+		S = \coprod_{ i \in I } S_i \comma
+	\]
+	there is a unique $ i \in I $ such that $ S_i \in F $.
+\end{definition}
+
+\begin{construction}
+	We have seen that an ultrafilter $ \mu $ specifies the system $ F_{\mu} $ of $ \mu $-thick subsets.
+	In the other direction, attached to any system $F$ of thick subsets is an ultrafilter $\mu_F$: for any finite set $ I $ and any map $ f \colon S \to I $, the element $ i = \int_S f \ d \mu \in I $ is the unique one such that $ S_i \in F$.
+
+	The assignments $ \mu \mapsto F_{\mu} $ and $ F \mapsto \mu_F $ together define a bijection between ultrafilters on $S$ and systems of thick subsets.
+\end{construction}
+
+\begin{definition}
+	If $ S $ is a set, and if $ G \subseteq \PP(S) $, then an ultrafilter $ \mu $ is said to be \defn{supported on $ G $} if and only if every element of $G$ is $ \mu $-thick, that is, $ G \subseteq F_{\mu} $.
+\end{definition}
+
+\begin{lemma} \label{generateultrafilters}
+	Let $ S $ be a set, and let $ G \subseteq \PP(S) $.
+	Assume that no finite intersection of elements of $ G $ is empty.
+	Then there exists an ultrafilter $ \mu $ on $ S $ supported on $ G $.
+\end{lemma}
+
+\begin{proof}
+	Consider all the families $ A \subseteq \PP(S) $ with the following properties:
+	\begin{enumerate}
+		\item $ A $ contains $ G $;
+		\item \label{FIP} no finite intersection of elements of $ A $ is empty.
+	\end{enumerate}
+	By Zorn's lemma there is a maximal such family, $ F $.
+
+	We claim that $ F $ is a system of thick subsets.
+	For this, let $ S = \coprod_{i \in I} S_i $ be a finite partition of $ S $.
+	Condition \ref{FIP} ensures that at most one of the summands $ S_i $ can lie in $ F $.
+	Now suppose that none of the summands $ S_i $ lies in $ F $.
+	Consider, for each $ i \in I $, the family $ F \cup \{ S_i \} \subseteq \PP(S) $;
+	the maximality of $ F $ implies that none of these families can satisfy Condition \ref{FIP}.
+	Thus for each $ i \in I $, there is an empty finite intersection
+	$S_i \cap \bigcap_{j = 1}^{n_i} T_{ij} = \varnothing $.
+	But this implies that the intersection $ \bigcap_{i \in I}\bigcap_{j = 1}^{n_i} T_{ij} $ is empty, contradicting Condition \ref{FIP} for $ F $ itself.
+	Hence at least one -- and thus exactly one -- of the summands $ S_i $ lies in $ F $.
+	Thus $ F $ is a system of thick subsets of $ S $.
+\end{proof}
+
+\begin{nul}
+	It is not quite accurate to say that the Axiom of Choice is \emph{necessary} to produce nonprincipal ultrafilters, but it is true that their existence is independent of Zermelo--Fraenkel set theory.
+\end{nul}
+
+\begin{nul}
+	If $ \phi $ is a functor $ \Set \to \Set $, then a natural transformation $ \phi \to \beta $ is the same thing as a natural transformation $ \phi \circ i \to i $.
+	Please observe that we have a canonical identification $ \beta \circ i = i $.
+
+	It follows readily that the functor $ \beta $ is a monad: the unit $ \delta \colon \id \to \beta $ corresponds to the identification $ {\id} \circ i = i $, and the multiplication $ \mu \colon \beta^2 \to \beta $ corresponds to the identification $ \beta^2 \circ i = i $.
+
+	The unit for the monad $\beta$ structure is the assignment $ s \mapsto \delta_s $ that picks out the principal ultrafilter at a point.
+
+	To describe the multiplication $ \tau \mapsto \mu_{\tau} $, let us write $ T^{\dag} $ for the set of ultrafilters supported on $\{T\}$.
+	Now if $ \tau $ is an ultrafilter on $ \beta(S) $, then $ \mu_{\tau} $ is the ultrafilter on $S$ such that
+	\[
+		\mu_{\tau} ( T ) = \tau ( T^{\dag} ) \period
+	\]
+\end{nul}
+
+%-------------------------------------------------------------------%
+\subsection{Completeness of ultrafilters}%
+\label{sub:completeness_of_ultrafilters}
+%-------------------------------------------------------------------%
+
+%-------------------------------------------------------------------%
+\subsection{Ultrafilters on posets}%
+\label{sub:ultrafilters_on_posets}
+%-------------------------------------------------------------------%
+
+%-------------------------------------------------------------------%
+\subsection{Ultraproducts}%
+\label{sub:ultraproducts}
+%-------------------------------------------------------------------%
+
+
+
+

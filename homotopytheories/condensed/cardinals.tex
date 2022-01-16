@@ -1,0 +1,1188 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+\section{Cardinals}%
+\label{sec:cardinals}
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+
+Mathematicians' \enquote{stock} set theory, $\zfc$
+(Zermelo--Fraenkel set theory $\zf$ plus the Axiom of Choice $\ac$)
+doesn't quite have the expressive power one needs for work with categories and higher categories.
+The issue ultimately comes down to Cantor's diagonal argument:
+there is no surjection of a set onto its powerset.
+This is ultimately why no one can contemplate a set of all sets,
+and it's also the key to Freyd's observation that
+if $C$ is a category and $\kappa$ is the cardinality of its set of arrows,
+then $C$ has all $\kappa$-indexed products only if $C$ is a poset.
+This, in turn, is what's behind the \enquote{solution set condition}
+in representability theorems or the Adjoint Functor Theorem.
+Hence one really must distinguish between \enquote{large} and \enquote{small} objects.
+
+One improves matters by passing to von Neumann--Bernays--Gödel set theory ($\nbg$),
+which is a conservative extension of $\zfc$.
+In $ \nbg $, the formal language consists of the symbols $\in$ and $=$;
+a constant $V$; suitable variables;
+the usual connectives of first-order logic ($\neg$, $\wedge$, $\vee$, $\implies$, and $\iff$);
+and the quantifiers $\forall$ and $\exists$.
+The objects of the theory are called \defn{classes}.
+A class $ x $ is called a \defn{set} if and only if $x \in V$;
+a \defn{proper class} is a class $ X $ such that $ X \notin V $.
+We summarize the axioms of $ \nbg $ in informal language:
+\begin{description}
+	\item[\textbf{Extensionality}] Classes $ X $ and $ Y $ are equal if and only if,
+		for any $ z $, one has $ z \in X $ if and only if $ z \in Y $.
+	\item[\textbf{Regularity}] For every class $ X $,
+		there exists an element $ z \in X $ such that $ z \cap X = \varnothing $.
+	\item[\textbf{Infinity}] There is an infinite set.
+	\item[\textbf{Union}] If $ x $ is a set, then $ \bigcup x = \bigcup_{z \in x} z $ is a set as well.
+	\item[\textbf{Pairing}] If $ x $ and $ y $ are sets, then $ \{x,y\} $ is a set as well.
+	\item[\textbf{Powerset}] If $ x $ is a set, then the powerset $ P(x) $ is a set as well.
+	\item[\textbf{Limitation of size}] A class $X$ is a proper class if and only if
+		there is a bijection between $X$ and $V$.
+	\item[\textbf{Class comprehension}] For every first-order formula $ \phi(x) $ with a free variable $ x $ in which the quantifiers are over sets,
+		there exists a class $ \{ x \in V : \phi(x) \} $ whose elements are exactly those sets $ x $ such that $ \phi(x) $.
+\end{description}
+
+In matters of set theory,
+we will generally follow the notations and terminological conventions
+of the comprehensive monograph of \cite{Jech2003}.
+We will also refer to the texts of \cite{Drake1974} and \cite{Kanamori2009}
+In particular, $ \Ord $ denotes the proper class of ordinal numbers.
+For any ordinal $ \alpha $, the set $ V_{\alpha} $ is defined recursively as follows:
+\begin{enumerate}
+	\item If $ \alpha = 0 $, then $ V_{\alpha} \coloneq \emptyset $;
+	\item if $ \alpha = \beta + 1 $ for an ordinal number $ \beta $, then $ V_{\alpha} \coloneq P(V_{\beta}) $;
+	\item if $ \alpha $ is a limit ordinal, then $ V_{\alpha} \coloneq \bigcup_{\beta < \alpha} V_{\beta} $.
+\end{enumerate}
+If $ x $ is a set, then the \defn{rank} of $ x $ is the smallest ordinal number $ \alpha $ such that $ x \in V_{\alpha} $.
+The proper class $ V $ is then the union $ \bigcup_{\alpha \in \Ord} V_{\alpha} $.
+
+\begin{definition}
+	A \defn{large-category}%
+	\footnote{We use the term \enquote{category}
+		for what other authors might call
+		\enquote{$ \infty $-category},
+		\enquote{$(\infty,1)$-category}, or
+		\enquote{quasicategory}.
+		We will use the term \enquote{1-category}
+	when the specification is needed.}
+	$C$ consists of a sequence $(C_n)_{n\in\NN_0}$ of classes,
+	along with a family of class maps $ \phi^{\ast} \colon C_m \to C_n $ for each map $ \phi \colon n \to m $,
+	subject to all the formulas that express the statement that $C_n$ is a simplicial class
+	that satisfies the inner Kan condition.
+
+	If the large-category $C$ contains a full subcategory $ C' \subseteq C $
+	such that each $ C'_n $ is a set and
+	such that every object of $ C $ is equivalent to an object of $ C' $,
+	then we will call $ C $ a \defn{category}
+	or, for emphasis, a \defn{small category}.%
+	\footnote{These are sometimes called \defn{essentially small}.}
+	
+	A large-category $ C $ is said to be \defn{locally small} if and only if,
+	for every subset $ C'_0 \subseteq C_0$,
+	the full subcategory $ C' \subseteq C $ spanned by the elements of $ C'_0 $ is small.
+	
+	Limits and colimits are only considered for functors $ J \to C $ in which
+	the $ J $ is a small category.
+	Hence when we refer to \defn{all limits} or \defn{all colimits},
+	we mean all limits or colimits of diagrams indexed on small categories.
+\end{definition}
+
+\begin{eg}
+	We shall write $ \Set^V $ for the large-category of all sets.
+	The objects of $ \Set^V$ are thus precisely the elements of $V$.
+
+	We shall write $ \An^V $ for the large-category of all animae.%
+	\footnote{We follow Clausen and Scholze,
+		and we use the term \enquote{anima} for
+		what other authors might call
+		\enquote{space},
+		\enquote{$ \infty $-groupoid}, or
+		\enquote{$ (\infty,0) $-category}.}	
+	The objects of $ \An^V $ are thus precisely
+	the Kan complexes $ \Delta^{\op} \to \Set^V $.
+
+	We shall write $ \Cat^V $ for the large-category of all categories.
+	The objects of $ \Cat^V $ are thus precisely the weak Kan complexes $ \Delta^{\op} \to \Set^V $.
+\end{eg}
+
+The Class Comprehension Axiom Schema implies the \defn{Axiom of Global Choice},
+which ensures the existence of a choice function $ \tau \colon V \to V $ such that $ \tau(x) \in x $.
+One needs this to make sense of a construction
+like \enquote{the} functor $ - \times u \colon C \to C $ for a large-category $ C $
+with all finite products and a fixed object $ u \in C $.
+
+Here, we will work with $\nbg$ as our base theory,
+so that we may speak of proper classes and large-categories
+whenever the occasion arises.
+
+However, the whole project of higher category theory turns on the principle that
+we want to be able to deal with the collections of all objects of a given kind
+as a mathematical object in its own right,
+and that the passage up and down these category levels
+is a fruitful way to understand even completely \enquote{decategorified} objects.%
+\footnote{The \emph{microcosm principle} of Baez--Dolan is a
+precise illustration of this principle.} 
+If we have a large-category $C$,
+$ \nbg $ provides us with no mechanism
+to view $C$ itself as an object
+of a still larger category of all categories.
+This limits the kinds of operations we are permitted to do to $ C $.
+
+To give ourselves the room to pass up and down category levels,
+we need to have a hierarchy of \enquote{scales} at which we can work.
+These scales will be identified by inaccessible cardinals
+or, equivalently, Grothendieck universes.
+The existence of these cardinals is independent of $ \nbg $.
+
+But now a rather different concern arises.
+We will also want to have reasonable assurance
+that the results we obtain at one scale remain valid at other scales.
+We might prefer to prove sentences about
+\emph{all} sets, animae, groups, etc. --
+not just those within a universe.
+This sort of \enquote{scale-invariance of truth}
+is expressed by a \defn{reflection principle} (\ref{sec:reflection_principles}).
+The reflection principle we will use here states roughly that
+there is an inaccessible cardinal $ \kappa $ such that
+statements of set theory hold in the universe $ V_{\kappa} $
+just in case they hold in $V$ itself.
+This is the \defn{Lévy scheme} $ \levy $,
+which we will first formulate as a large cardinal axiom.
+In effect, this permits us to focus our attention on \emph{categories}
+(as opposed to large-categories).
+This scheme has a strictly higher conistency strength
+than the existence of a proper class of inaccessible cardinals;
+however, its consistency strength is strictly lower
+than that of the existence of a single Mahlo cardinal.
+
+Following beautiful work of \cite{Hamkins2003},
+we will later prove that the Lévy scheme is equivalent to
+(not only equiconsistent with)
+a \defn{maximality principle},
+which states roughly that every sentence of set theory
+that is true for a sieve of forcing extensions is true.
+
+%-------------------------------------------------------------------%
+\subsection{Regularity and smallness}%
+\label{sub:regularity_and_smallness}
+%-------------------------------------------------------------------%
+
+\begin{definition}
+	If $ \kappa $ is a cardinal,
+	then a set $ S $ is \defn{$ \kappa $-small}
+	if and only if $ |S| < \kappa $.
+	We shall write $ \Set^{\kappa} \subset \Set^V$
+	for the category of $ \kappa $-small sets,
+	Thus $ \Set^V $ is the filtered union of the categories $ \Set^{\kappa} $
+	over the proper class of regular cardinals.
+	
+	A cardinal $ \kappa $ is \defn{regular}
+	if and only if, for every map $ f \colon S \to T $
+	in which $ T $ and every fiber $ f^{-1}\{t\} $ are all $ \kappa $-small,
+	the set $ S $ is $ \kappa $-small as well.
+	Equivalently, $ \kappa $ is regular if and only if
+	$ \Set^{\kappa} \subset \Set^V $ is stable under colimits indexed by $ \kappa $-small posets.
+\end{definition}
+
+\begin{eg}
+	Under this definition, $ 0 $ is a regular cardinal.
+	Many texts require that a regular cardinal be infinite.
+\end{eg}
+
+\begin{eg}
+	The $ \aleph $ family of cardinals is defined by
+	a function from the class of ordinal numbers
+	to the class of cardinal numbers, by transfinite induction:
+	\begin{enumerate}
+		\item The cardinal $ \aleph_0 $ is the ordinal number
+			$ \omega $ consisting of all finite ordinals.
+		\item For any ordinal $ \alpha $,
+			one defines $ \aleph_{\alpha + 1} $ to be
+			the smallest cardinal number strictly greater than $ \aleph_{\alpha} $.
+		\item For any limit ordinal $ \alpha $,
+			one defines $ \aleph_{\alpha} \coloneq \sup \left\{ \aleph_{\beta} : \beta < \alpha \right\} $.
+	\end{enumerate}
+
+	The countable cardinal $ \aleph_0 $ is regular.
+	Every successor cardinal is regular;
+	consequently, $ \aleph_n $ for $ n \in \NN $ is regular as well.
+	The cardinal $ \aleph_{\omega} $ is
+	the smallest infinite cardinal that is not regular.
+\end{eg}
+
+\begin{nul}
+	If $ \kappa $ is a regular cardinal,
+	then $ \Set^{\kappa} \subset \Set^V $ is the full subcategory
+	generated by the singleton $ \{ 0 \}$
+	under colimits over $ \kappa $-small posets.
+\end{nul}
+
+\begin{definition}
+	If $ \kappa $ is a regular cardinal,
+	then we shall write $ \An^{\kappa} \subset \An^V $
+	for the full subcategory generated by $ \{ 0 \} $
+	under colimits over $ \kappa $-small posets.
+	The objects of $ \An^{\kappa} $ will be called
+	\defn{$ \kappa $-small animae}.
+
+	Similarly, we shall write $ \Cat^{\kappa} \subset \Cat^V $
+	for the full subcategory generated 
+	by $ \{ 0 \} $ and $ \{ 0 < 1 \} $
+	under colimits over $ \kappa $-small posets.
+	The objects of $ \Cat^{\kappa} $ will be called
+	\defn{$ \kappa $-small categories}.
+
+	Finally, a large-category $ C $
+	is said to be \defn{locally $ \lambda $-small}
+	if and only if,
+	for every $ \lambda $-small subset $ C'_0 \subseteq C_0 $
+	of objects of $ C $, the full subcategory $ C' \subseteq C $
+	that it spans is $ \lambda $-small.
+\end{definition}
+
+\begin{eg}
+	A set is $ \aleph_0 $-small if and only if it is finite.
+
+	An anima is $ \aleph_0 $-small if and only if
+	it is weak homotopy equivalent to a simplicial set
+	with only finitely many nondegenerate simplices.
+
+	A category $ C $ is $ \aleph_0 $-small if and only if
+	it is Joyal equivalent to a simplicial set
+	with only finitely many nondegenerate simplices. 
+\end{eg}
+
+\begin{eg}
+	Why does regularity arise so often in category theory?
+	What role does this hypothesis play?
+	Here is the sort of scenario that is often
+	lurking in the background when we appeal to the
+	regularity of a cardinal.
+
+	Let $ C $ be a large-category.
+	Suppose that we have a \emph{diagram of diagrams} in $ C $,
+	in the following sense.
+	We have a category $ A $;
+	a functor $ B \colon A \to \Cat^V $;
+	and for each $ \alpha \in A $,
+	a functor $ X_{\alpha} \colon B_{\alpha} \to C $.
+	Furthermore, the colimits of each of these functors
+	organize themselves into a functor
+	$ A \to C $:
+	\[
+		\alpha \mapsto \colim_{\beta \in B_{\alpha}}
+		X_{\alpha}(\beta) \period
+	\]
+	We will often be in situations in which
+	we need to analyze the \emph{colimit of colimits}:
+	\[
+		\colim_{\alpha \in A}
+		\colim_{\beta \in B_{\alpha}} X_{\alpha}(\beta) \period
+	\]
+	In this case, we may reorganize these data.
+	We first construct the cocartesian fibration
+	corresponding to the functor $ B $,
+	which we will abusively write $ B \to A $,
+	since the fibers are the categories $ B_{\alpha} $.
+	We now have a single functor $ X \colon B \to C $
+	whose restriction to any fiber $ B_{\alpha} $
+	is the functor $ X_{\alpha} $.
+	Now the colimit of colimits above is a single colimit:
+	\[
+		\colim_{\alpha \in A}
+		\colim_{\beta \in B_{\alpha}} X_{\alpha}(\beta) \simeq
+		\colim_{\gamma \in B} X(\gamma) \period
+	\]
+
+	Now let $ \kappa $ be a cardinal.
+	If $ A $ is $ \kappa $-small,
+	and if each category $ B_{\alpha} $ is $ \kappa $-small,
+	then what can we conclude about $ B $?
+	In general, nothing.
+	However, if $ \kappa $ is a regular cardinal,
+	then $ B $ is also $ \kappa $-small.
+
+	The motto here, then, is that
+	\emph{%
+		if $ \kappa $ is regular,
+		then $ \kappa $-small colimits
+		of $ \kappa $-small colimits
+		are $ \kappa $-small colimits.
+	}
+\end{eg}
+
+%-------------------------------------------------------------------%
+\subsection{Accessibility and presentablity}%
+\label{sub:accessibility_and_presentablity}
+%-------------------------------------------------------------------%
+
+\begin{definition}
+	Let $ \kappa $ be a regular cardinal.
+	A category $ \Lambda $ is \defn{$ \kappa $-filtered} if and only if
+	it satisfies the following equivalent conditions:
+	\begin{enumerate}
+		\item For every $ \kappa $-small category $ J $,
+			every functor $ f \colon J \to \Lambda $ can be extended
+			to a functor $ F \colon J^{\rhd} \to \Lambda $.
+		\item For every $ \kappa $-small category $ J $
+			and every functer $ H \colon \Lambda \times J \to \An^V$,
+			the natural morphism
+			\[
+				\colim_{\lambda \in \Lambda} \lim_{j \in J} H(\lambda,j)
+				\to
+				\lim_{j \in J} \colim_{\lambda \in \Lambda} H(\lambda,j)
+			\]
+			is an equivalence.
+		\item For every $ \kappa $-small category $ J $,
+			the diagonal functor
+			$ \Lambda \to \Fun(J, \Lambda) $
+			is cofinal.
+	\end{enumerate}
+\end{definition}
+
+\begin{eg}
+	For any regular cardinal $ \kappa $,
+	the ordinal $ \kappa $, regarded as a category,
+	is $ \kappa $-filtered.
+
+	More generally, a poset is $ \kappa $-filtered if and only if
+	every $ \kappa $-small subset thereof is dominated by some element.
+\end{eg}
+
+\begin{eg}
+	A $ \kappa $-small category is $ \kappa $-filtered
+	if and only if it contains a terminal object.
+\end{eg}
+
+\begin{definition}
+	Let $ \kappa $ be a regular cardinal.
+	A functor $ f \colon C \to D $ between large-categories
+	will be said to be \defn{$ \kappa $-continuous}
+	if and only if it preserves $ \kappa $-filtered colimits.
+	
+	An object $ X $ of a locally small large-category $ C $
+	is said to be \defn{$ \kappa $-compact} if and only if
+	the functor $ \yo^X \colon C \to \An^V$ corepresented by $ X $
+	(i.e., the functor $ Y \mapsto \Map_C(X,Y) $)
+	is $ \kappa $-continuous.
+	We write $ C^{(\kappa)} \subseteq C $
+	for the full subcategory of $ \kappa $-compact objects.
+
+	A large-category $C$ is \defn{$\kappa$-accessible} if and only if
+	it satisfies the following conditions:
+	\begin{enumerate}
+		\item The category $ C $
+			is locally small.
+		\item The category $ C $
+			has all $ \kappa $-filtered colimits.
+		\item The subcategory $ C ^{(\kappa)} $ generates $ C $
+			under $ \kappa $-filtered colimits.
+	\end{enumerate}
+	
+	A $ \kappa $-accessible large-category $C$ is
+	\defn{$\kappa$-presentable}%
+	\footnote{Some authors use the phrase
+		\defn{$ \kappa $-compactly generated} instead.}
+	if and only if $ C^{(\kappa)} $
+	has all $ \kappa $-small colimits.
+\end{definition}
+
+\begin{eg}
+	Let $ \kappa $ be an uncountable regular cardinal.
+	Then the following are equivalent for a category $ C $.
+	\begin{enumerate}
+		\item The category $ C $ is $ \kappa $-small.
+		\item The set of equivalence classes
+			of objects of $C$ is $ \kappa $-small,
+			and for every morphism
+			$ f \colon X \to Y $ of $ C $
+			and every $ n \in \NN_0$,
+			the set $ \pi_n(\Map_C(X,Y),f) $ is
+			$ \kappa $-small.
+		\item The category $ C $ is $ \kappa $-compact
+			as an object of $ \Cat^V $;
+			that is, $ \Cat^{\kappa} = \Cat^{V,(\kappa)} $.
+	\end{enumerate}
+	In particular, an anima $ X $ is $ \kappa $-small if and only if
+	all its homotopy sets are $ \kappa $-small, if and only if
+	it is $ \kappa $-compact as an object of $ \An^V $.
+\end{eg}
+
+\begin{eg}
+	The equivalence above is doubly false if $ \kappa = \aleph_0 $.
+
+	First, an $ \aleph_0 $-compact anima is a \emph{retract} of
+	an $ \aleph_0 $-small anima, but 
+	it may not be $ \aleph_0 $-small itself.
+	If $ X $ is $ \aleph_0 $-compact and \emph{simply connected},
+	then $ X $ is $ \aleph_0 $-small.
+	The obstruction is the \emph{de Lyra--Wall finiteness obstruction},
+	which lies in the reduced $ K_0 $ of the group ring $ \ZZ[\pi_1(X)] $.
+
+	Second, the homotopy sets of an $ \aleph_0 $-small $ X $ anima
+	are not generally finite.
+	By a theorem of Serre,
+	if each connected component $ Y \subseteq X $
+	has finite fundamental group, then
+	its homotopy groups are finitely generated.
+	But if $ \pi_1(X) $ isn't finite,
+	this too fails;
+	for example, $ \pi_3(S^1 \vee S^2) $ is not finitely generated.
+\end{eg}
+
+\begin{nul}
+	Let $ \kappa \leq \lambda $ be regular cardinals.
+	A $ \kappa $-small category is $ \lambda $-small.
+	A $ \lambda $-filtered category is $ \kappa $-filtered.
+	A $ \kappa $-continuous functor is $ \lambda $-continuous.
+	In general, however, there are $ \kappa $-accessible categories
+	that are not $ \lambda $-accessible.
+\end{nul}
+
+\begin{definition}
+	Let $ \kappa $ and $ \lambda $ be regular cardinals.
+	We write $ \kappa \ll \lambda $
+	if and only if,
+	for every pair of cardinals
+	$ \kappa_0 < \kappa $ and $ \lambda_0 < \lambda $,
+	one has $ \lambda_0^{\kappa_0} < \lambda $.
+	Equivalently, $ \kappa \ll \lambda $ if and only if,
+	for every $ \kappa $-small set $A$
+	and every $ \lambda $-small set $ B $,
+	the set $ \Map(A, B) $ is $ \lambda $-small.
+\end{definition}
+
+\begin{eg}
+	For every infinite regular cardinal $ \kappa $,
+	one has $ \aleph_0 \ll \kappa $.
+\end{eg}
+
+\begin{nul}
+	If $ \kappa \ll \lambda $ are regular cardinals,
+	then every $ \kappa $-accessible category
+	is $ \lambda $-accessible.
+	Similarly, every $ \kappa $-presentable category
+	is $ \lambda $-presentable.
+\end{nul}
+
+\begin{definition}
+	A large-category $ C $ is \defn{accessible} if and only if
+	there exists a regular cardinal $ \kappa $ such that
+	$ C $ is $ \kappa $-accessible.
+
+	We shall say that $ C $ is \defn{presentable} if and only if
+	there exists a regular cardinal $ \kappa $ such that
+	$ C $ is $ \kappa $-presentable.
+\end{definition}
+
+\begin{nul}
+	A large-category is presentable if and only if
+	it is accessible and has all colimits.
+	A presentable category automatically admits all limits:
+\end{nul}
+
+\begin{definition}
+	A large-category $ C $ is \defn{locally presentable}%
+	\footnote{In the $1$-category literature,
+		the phrase \emph{locally presentable category} is used for
+		what we call \emph{presentable category}.}
+	if and only if, every object $ X \in C $
+	is contained in a presentable full subcategory $ C' \subseteq C $
+	such that the inclusion $ C' \inclusion C $ preserves colimits.
+\end{definition}
+
+%-------------------------------------------------------------------%
+\subsection{Presheaf categories}%
+\label{sub:presheaf_categories}
+%-------------------------------------------------------------------%
+
+Let $ C $ be a large-category.
+What happens if we seek to make sense in $ \nbg $
+of the category $ \tau_0\PP(C) $ of presheaves of sets
+$ C^{\op} \to \Set^V $?
+
+Right away we encounter a problem:
+if the objects of $ C $ form a proper class $ C_ 0 $,
+then there is no class of class maps $ \Map(C_0, V) $.
+Indeed, on one hand, in $ \nbg $, every element of a class is itself a set,
+and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
+\footnote{Worse still, the \enquote{very large}
+	category of classes is not cartesian closed,
+	so there's no hope of defining
+	$ \Map(C_0, V) $ by means of some other artifice.}
+
+\begin{nul}
+	If $ C $ is a small category, then 
+	the large-category $ \PP_0(C) $ is locally small,
+	and it enjoys many of the same good properties
+	enjoyed by $ \Set^V $ itself.
+	For every regular cardinal $ \kappa $,
+	it is $ \kappa $-presentable,
+	and it is \defn{cartesian closed}:
+	for every pair of presheaves $ X, Y \colon C^{\op} \to \Set^V $,
+	the morphisms $ X \to Y $
+	form a presheaf $ \MOR(X, Y) \colon D^{\op} \to \Set^V $.
+	The category $ \PP_0(C) $ is a \defn{1-topos}.
+
+	Similarly, the category $ \PP(C) $ of presheaves
+	$ C^{\op} \to \An^V $
+	is a $ \kappa $-presentable topos
+	for every regular cardinal $ \kappa $.
+\end{nul}
+
+\begin{eg}
+	Let $ C $ be a locally small category.
+	If $ Y \in C $ is an object,
+	then $ \yo_Y \colon C^{\op} \to \Set^V $ is
+	the presheaf $ X \mapsto \Map_C(X,Y) $ represented by $ Y $.
+
+	Dually, if $ X \in C $ is an objects,
+	then $ \yo^X \colon C \to \Set^V $ is the functor
+	$ Y \mapsto \Map_C(X,Y) $ corepresented by $ X $.
+\end{eg}
+
+\begin{definition}
+	Let $ C $ be a locally small large-category.
+	A \defn{small presheaf} of sets on $ C $ is
+	a functor $ C^{\op} \to \Set^V $
+	that is left Kan extended from its restriction
+	to some small full subcategory $ D \subseteq C $.
+	We write $ \PP^{\sm}_0(C) $
+	for the locally small large-category
+	of small presheaves of sets.
+	
+	Similarly, a \defn{small presheaf} (of animae) is
+	a functor $ C^{\op} \to \An^V $
+	that is left Kan extended from its restriction to
+	some small full subcategory $ D \subseteq C $.
+	We write $ \PP^{\sm}(C) $
+	for the locally small large-category
+	of small presheaves.
+\end{definition}
+
+\begin{nul}
+	For any small full subcategory $ D \subseteq C $,
+	we may contemplate the large-category $ \PP(D) $
+	of presheaves $ D^{\op} \to \An^V $.
+	If we have an inclusion of full subcategories
+	$ D' \subseteq D \subset C $, then
+	left Kan extension identifies $ \PP(D') $ with
+	a full subcategory of $ \PP(D) $.
+	
+	The (class-indexed) filtered union
+	$ \bigcup_D \PP_0(D) $
+	over the class of small full subcategories of $ C $
+	is precisely the large-category $ \PP^{\sm}(C) $.
+\end{nul}
+
+\begin{eg}
+	Assume that $ C $ is locally small.
+	For any object $ Y \in C $,
+	the representable presheaf $ \yo_Y $ is left Kan extended
+	from any full subcategory that contains $ Y $.
+	In particular, $ \yo_Y $ is small.
+
+	Thus the assignment $ Y \mapsto \yo_Y $ is
+	the fully faithful \defn{Yoneda embedding}
+	\[
+		\yo \colon C \inclusion \PP^{\sm}(C) \period
+	\]
+\end{eg}
+
+\begin{eg}
+	If $ C^{\op} $ is accessible,
+	then $ \PP^{\sm}_0(C) $ and $ \PP^{\sm}(C) $
+	are the categories of accessible functors
+	$ C^{\op} \to \Set^V $ and $ C^{\op} \to \An^V $, respectively.
+\end{eg}
+
+\begin{nul}
+	The categories $ \PP^{\sm}_0(C) $ and $ \PP^{\sm}(C) $
+	may not enjoy all the same good features that
+	$ \Set^V $ and $ \An^V$ have.
+	The categories $ \PP^{\sm}_0(C) $ and $ \PP^{\sm}(C) $
+	possess all colimits,
+	but they do not generally have all limits.
+	For example, if $C$ has no nonidentity arrows, then
+	there is no terminal object in $ \PP^{\sm}_0(C) $.
+	
+	If $ C^{\op} $ is accessible or small,
+	then $ \PP^{\sm}_0(C) $ and $ \PP^{\sm}(C) $ do have all limits.
+\end{nul}
+
+\begin{definition}
+	Let $ A $ be a class of categories.
+	Let $ C $ be a locally small large-category,
+	and let $ C^0 \subseteq C $ be a full subcategory.
+	Then we say that
+	\defn{$ C^0 $ generates $ C $ freely under $ A $-shaped colimits}
+	if and only if,
+	for every large-category $ D $
+	that has all $ A $-shaped colimits,
+	the following assertions obtain.
+	\begin{enumerate}
+		\item Every functor $ C^0 \to D $ extends
+			to a functor $ C \to D $
+			that preserves $ A $ -shaped colimits.
+		\item For every pair of functors
+			$ F, G \colon C \to D $
+			that preserve $ A $-shaped colimits,
+			the map
+			$ \Map(F, G) \to \Map(F|C^0, G|C^0 ) $
+			is an equivalence.
+	\end{enumerate}
+	If $ f \colon C' \inclusion C $ is a fully faithful functor,
+	then we will say that
+	\defn{$ f $ generates $ C $ freely under $ A $-shaped colimits}
+	if and only if its image $ f(C') \subseteq C $ does so.
+\end{definition}
+
+\begin{remark}
+	If $ C $ is not small, then in $ \nbg $
+	we can make sense neither of $ \Fun(C,D) $,
+	nor of the full subcategory
+	$ \Fun^{A}(C, D) \subseteq \Fun(C,D) $
+	consisting of those functors that preserve
+	$ A $-shaped colimits.
+	If however we are in a situation in which
+	these objects \emph{can} be made sensible,
+	then $ C^0 $ generates $ C $ freely under
+	$ A $-shaped colimits
+	if and only if the restriction induces an equivalence
+	\[
+		\Fun^A(C, D) \equivalence \Fun(C^0, D) \period
+	\]
+\end{remark}
+
+\begin{proposition}%
+	\label{prp:PPsmisfreelygenerated}
+	Let $ C $ be a locally small large-category.
+	Then the Yoneda embedding
+	$ \yo \colon C \inclusion \PP^{\sm}(C) $
+	generates $ \PP^{\sm}(C) $ freely under all colimits.
+\end{proposition}
+
+The theory of small presheaves can be relativized
+to a regular cardinal $ \kappa $:
+
+\begin{definition}
+	Let $ \kappa $ be a regular cardinal.
+	Let $ C $ be a locally $ \kappa $-small large-category.
+	A \defn{$ \kappa $-small presheaf} of sets on $ C $
+	is a functor $ C^{\op} \to \Set^{\kappa} $
+	that is left Kan extended from its restriction to
+	some $ \kappa $-small full subcategory $ D \subseteq C $.
+	The large-category of $ \kappa $-small presheaves of sets
+	will be denoted $ \tau_0\PP^{\kappa}(C) $.
+
+	Similarly, a \defn{$ \kappa $-small presheaf}
+	(of animae) is a functor $ C^{\op} \to \An^{\kappa} $
+	that is left Kan extended from its restriction to 
+	some $ \kappa $-small full subcategory $ D \subseteq C $.
+	The large-category of $ \kappa $-small presheaves
+	will be denoted $ \PP^{\kappa}(C) $.
+\end{definition}
+
+\begin{nul}
+	If $ C $ is small, then so is $ \PP^{\kappa}(C) $.
+
+	Since we have assumed that $ C $ is locally $ \kappa $-small,
+	it follows that the Yoneda embedding lands in $ \PP^{\kappa}(C) $.
+\end{nul}
+
+\begin{proposition}%
+	\label{prp:PPkappaisfreelygenerated}
+	Let $ \kappa $ be a regular cardinal.
+	Let $ C $ be a locally $\kappa$-small large-category.
+	Then the Yoneda embedding
+	$ \yo \colon C \inclusion \PP^{\kappa}(C) $
+	generates $ \PP^{\kappa}(C) $ freely under
+	$ \kappa $-small colimits.
+\end{proposition}
+
+\begin{nul}
+	The category $ \PP^{\kappa}_0(C) $
+	has all $ \kappa $-small colimits, but
+	in general, it does not have $ \kappa $-small limits, and
+	it is not cartesian closed.
+	To ensure these properties as well,
+	we must turn to a discussion of inaccessible cardinals.
+\end{nul}
+
+%-------------------------------------------------------------------%
+\subsection{Strong limit and inaccessible cardinals}%
+\label{sub:strong_limit_and_inaccessible_cardinals}
+%-------------------------------------------------------------------%
+
+\begin{definition}
+	One says that $ \kappa $ is a \defn{weak limit cardinal} if and only if,
+	for every cardinal $ \xi $,
+	if $ \xi < \kappa $, then $ \xi^+ < \kappa $.
+
+	A cardinal $\kappa$ is said to be a \defn{strong limit cardinal} if and only if,
+	for every cardinal $ \xi $,
+	if $ \xi < \kappa $, then $ 2^{\xi} < \kappa $ as well.
+	Equivalently, $ \kappa $ is a strong limit cardinal if and only if,
+	for every pair of $ \kappa $-small sets $ X $ and $ Y $,
+	the set $ \Map(X, Y) $ of maps $ X \to Y $ is $ \kappa $-small as well. 
+
+	One says that $\kappa$ is \defn{weakly inaccessible} if and only if
+	it is a regular, uncountable, weak limit cardinal.
+
+	One says that $\kappa$ is \defn{inaccessible}%
+	\footnote{Some authors say \defn{strongly inaccessible}
+	instead of \defn{inaccessible}.}
+	if and only if it is a regular, uncountable, strong limit cardinal.
+	Equivalently, an uncountable cardinal $ \kappa $ is inaccessible if and only if
+	$ \Set^{\kappa} $ has all $ \kappa $-small colimits and is cartesian closed.
+	Equivalently again, an uncountable cardinal $ \kappa $ is inaccessible if and only if 
+	$ \Set^{\kappa} $ has all $ \kappa $-small colimits and all $ \kappa $-small colimits.
+\end{definition}
+
+The Generalized Continuum Hypothesis ($ \gch $) is equivalent to the statement that
+the classes of strong and weak limit cardinals coincide,
+and similarly the classes of inaccessible and weakly inaccessible cardinal coincide.
+
+\begin{eg}
+	A cardinal $ \kappa $ is a weak limit cardinal if and only if,
+	for some limit ordinal $ \alpha $, one has $ \kappa = \aleph_{\alpha} $.
+\end{eg}
+
+\begin{eg}
+	The $\beth$ family of cardinals is defined by a function from the class of ordinal numbers to the class of cardinal numbers.
+	It's defined by transfinite induction:
+	\begin{enumerate}
+		\item By definition, $ \beth_0 = \aleph_0 $.
+		\item For any ordinal $ \alpha $, one defines $ \beth_{\alpha+1} \coloneq 2^{\beth_{\alpha}} $.
+		\item For any limit ordinal $ \alpha $,
+			one defines $ \beth_{\alpha} \coloneq \sup \left\{ \beth_{\beta} : \beta < \alpha \right\} $.
+	\end{enumerate}
+	The cardinal $ \beth_{\alpha} $ is the cardinality of $ V_{\omega+\alpha} $.
+
+	The Generalized Continuum Hypothesis ($ \gch $) is equivalent to the statement that
+	$ \aleph_{\alpha} = \beth_{\alpha} $ for each ordinal $ \alpha $,	
+	
+	A cardinal $ \kappa $ is a strong limit cardinal if and only if,
+	for some limit ordinal $ \alpha $, one has $ \kappa = \beth_{\alpha} $.
+
+	The cardinal $ \beth_{\omega} $ is
+	the smallest uncountable strong limit cardinal.
+	It is not inaccessible, however,
+	because it is not regular.
+
+	An inaccessible cardinal $ \kappa $ is
+	a \defn{$\beth$-fixed point}:
+	that is, $ \beth_{\kappa} = \kappa $.
+\end{eg}
+
+\begin{nul}
+	A regular uncountable cardinal $ \kappa $
+	is inaccessible if and only if
+	one has $ \kappa \ll \kappa $.
+\end{nul}
+
+\begin{definition}[\protect{\citeauthor[Exposé I, \S 0 and Appendix]{SGA4-1}}]%
+\label{dfn:uni}
+	An uncountable set $ U $ is a \defn{Grothendieck universe} if it satisfies the following conditions.
+	\begin{enumerate}
+		\item The set $ U $ is \defn{transitive}:
+			if $ X \in Y \in U $, then $ X \in U $ as well.
+		\item If $ X, Y \in U $, then $ \{X,Y\} \in U $ as well.
+		\item If $ X \in U $, then the powerset $ P(X) \in U $ as well.
+		\item If $ A \in U $ and $ X \colon A \to U $ is a map, then
+		\[
+			\bigcup_{\alpha\in A}X(\alpha) \in U
+		\]
+		as well.
+	\end{enumerate}
+\end{definition}
+
+Grothendieck universes are essentially the same thing as inaccessible cardinals.
+This was effectively proved by \cite{Tarski1938}.
+See also Bourbaki, \citeauthor[Exposé I, Appendix]{SGA4-1}.
+\begin{proposition}
+	If $\kappa$ is an inaccessible cardinal, then
+	the set $V_{\kappa}$ of all sets of rank less than $\kappa$ is
+	a Grothendieck universe of rank and cardinality $\kappa$.
+
+	If $ U $ is a Grothendieck universe, then
+	there exists an inaccessible cardinal $ \kappa $ such that $ U = V_{\kappa} $.
+\end{proposition}
+
+\begin{theorem}
+	If $ \kappa $ is an inaccessible cardinal,
+	then $V_{\kappa} \models \zfc $, and
+	$ V_{\kappa+1} \models \nbg $.
+	
+	Assuming that $ \zfc $ (respectively, $ \nbg $) is consistent, then
+	the existence of inaccessible cardinals is not provable
+	by methods formalizable in $ \zfc $ (resp., $ \nbg $).
+\end{theorem}
+
+\begin{axiom}%
+\label{axm:AU}
+	The \defn{Axiom of Universes} ($ \au $) is the assertion that
+	every cardinal is dominated by an inaccessible cardinal,
+	or, equivalently, every set is an element of some Grothendieck universe.
+	\defn{Tarski--Grothendieck set theory} is the schema $\tg = \nbg+\au$.
+\end{axiom}
+
+Under $ \au $, the proper class of inaccessible cardinals
+can be well ordered.
+It will be helpful for us to have a notation for this.
+
+\begin{definition}
+	Assume $ \au $.
+	Let us define the $ \daleth $ family of cardinals
+	as a function from the class of ordinal numbers
+	to the class of cardinal numbers:
+	\begin{enumerate}
+		\item By definition, $ \daleth_0 = \aleph_0 $.
+		\item For any ordinal $ \alpha $,
+			one defines $ \daleth_{\alpha+1} $ as
+			the smallest inaccessible number
+			greater than $ \daleth_{\alpha} $.
+		\item For any limit ordinal $ \alpha $,
+			one defines $ \daleth_{\alpha} \coloneq \sup \left\{ \daleth_{\beta} : \beta < \alpha \right\} $.
+	\end{enumerate}
+	Thus $ \daleth_0 = \aleph_0 $, and
+	$ \daleth_{\alpha} $ is the
+	\enquote{$ \alpha $-th inaccessible cardinal}.
+\end{definition}
+
+The notions of smallness,
+accessibility, and presentability of categories
+can all be relativized to a Grothendieck universe.
+
+\begin{definition}
+	Let $ \alpha $ be an ordinal number.
+	A category $ C $ is
+	\defn{of rank $ \alpha $} if and only if
+	it is locally $ \daleth_{\alpha} $-small
+	and $ \daleth_{\alpha + 1} $-small.
+	We will say that $ C $ is
+	\defn{small of rank $ \alpha $}
+	if and only if it is of rank $ \alpha $
+	and $ \daleth_{\alpha} $-small.
+\end{definition}
+
+\begin{eg}
+	Let $ \alpha $ be an ordinal number, and
+	let $ \kappa \coloneq \daleth_{\alpha} $.
+	The categories $ \Set^{\kappa} $
+	and $ \An^{\kappa} $
+	are of rank $ \alpha $.
+	
+	More generally, if $ C $ is a $ \kappa $-small category,
+	then $ \PP_0^{\kappa}(C) $ and $ \PP^{\kappa}(C) $
+	are each locally $ \lambda $-small.
+\end{eg}
+
+\begin{definition}
+	Let $ \lambda $ be an inaccessible cardinal, and 
+	let $ \kappa $ be a regular cardinal less than $ \lambda $.
+	A functor between categories is
+	\emph{$ \kappa $-continuous below  $ \lambda $} if and only if 
+	it preserves all $ \lambda $-small, $ \kappa $-filtered colimits.
+	
+	Let $ C $ be a locally $ \lambda $-small category.
+	An object $ X $ of $ C $
+	is said to be \defn{$ \kappa $-compact below $ \lambda $} if and only if
+	the functor $ \yo^X \colon C \to \An^{\lambda} $ corepresented by $ X $
+	is $ \kappa $-continuous below $ \lambda $.
+	We write $ C^{\kappa < \lambda} \subseteq C $
+	for the full subcategory of $ \kappa $-compact objects below $ \lambda $.
+
+	A category $C$ is
+	\defn{$\kappa$-accessible below $ \lambda $} if and only if
+	it satisfies the following trio of conditions:
+	\begin{enumerate}
+		\item The category $ C $ is locally small below $ \lambda $.
+		\item The category $ C $ has all $ \lambda $-small, $ \kappa $-filtered colimits.
+		\item The subcategory $ C^{\kappa < \lambda} $
+			generates $ C $ under $ \lambda $-small and 
+			$ \kappa $-filtered colimits.
+	\end{enumerate}
+	
+	A category $C$ is
+	\defn{$\kappa$-presentable below $ \lambda $}
+	if and only if
+	it is $ \kappa $ accessible below $ \lambda $, and  
+	$ C^{\kappa < \lambda} $ has all $ \kappa $-small colimits.
+\end{definition}
+
+%-------------------------------------------------------------------%
+\subsection{Ind and Pro}%
+\label{sub:ind_and_pro}
+%-------------------------------------------------------------------%
+
+\begin{definition}
+	Let $ \kappa \leq \lambda $ be regular cardinals.
+	Let $ C $ be a locally $ \lambda $-small category.
+	Then $ \Ind_{\kappa}^{\lambda}(C) $ is
+	the smallest full subcategory $ D \subseteq \PP^{\lambda}(C) $
+	such that $ D $ contains the image
+	of the Yoneda embedding
+	$ \yo \colon C \inclusion \PP^{\lambda}(C) $,
+	and $ D $ is stable under
+	$ \lambda $-small, $ \kappa $-filtered colimits.
+
+	Accordingly, if $ C $ is a locally small large-category,
+	then $ \Ind_{\kappa}^{\VV} $ is
+	the smallest full subcategory $ D \subseteq \PP^{\sm}(C) $
+	such that $ D $ contains the image
+	of the Yoneda embedding
+	$ \yo \colon C \inclusion \PP^{\sm}(C) $,
+	and $ D $ is stable under $ \kappa $-filtered colimits.
+\end{definition}
+
+\begin{eg}
+	The category $ \Ind_{\kappa}^{\kappa}(C) $ is
+	equivalent to $ C $ itself.
+\end{eg}
+
+\begin{proposition}
+	Let $ \kappa \leq \lambda $ be regular cardinals.
+	Let $ C $ be a locally $ \lambda $-small category.
+	Then the Yoneda embedding
+	$ \yo \colon C \inclusion \Ind_{\kappa}^{\lambda}(C) $,
+	generates $ \Ind_{\kappa}^{\lambda}(C) $ freely under
+	$ \lambda $-small, $ \kappa $-filtered colimits.
+
+	Similarly, if $ C $ is a locally small large-category,
+	then the Yoneda embedding
+	$ \yo \colon C \inclusion \Ind_{\kappa}^{V}(C) $,
+	generates $ \Ind_{\kappa}^V(C) $ freely under
+	$ \kappa $-filtered colimits.
+\end{proposition}
+
+\begin{notation}
+	Let $ \kappa \leq \lambda $ be regular cardinals.
+	Let $ C $ and $ D $  be locally $ \lambda $-small categories
+	that contain all $ \lambda $-small, $ \kappa $-filtered colimits.
+	Denote by $ \Fun^{\kappa \leq \lambda}(C, D) $
+	the full subcategory of $ \Fun(C,D) $ consisting of
+	the functors $ C \to D $ that preserve all 
+	$ \lambda $-small, $ \kappa $-filtered colimits.
+
+	If $ C^0 $ is a locally $ \lambda $-small category,
+	then restriction along the Yoneda embedding
+	induces and equivalence of categories
+	\[
+		\Fun^{\kappa \leq \lambda}(\Ind_{\kappa}^{\lambda}(C^0), D)
+		\equivalence \Fun(C^0, D) \period
+	\]
+\end{notation}
+
+\begin{eg}
+	Let $ \kappa \leq \lambda \leq \mu $ be regular cardinals.
+	Then for any 
+\end{eg}
+
+%-------------------------------------------------------------------%
+\subsection{Higher inaccessibility}%
+\label{sub:higher_inaccessibility}
+%-------------------------------------------------------------------%
+
+\begin{nul}
+	We shall endow an ordinal with its order topology.
+	This may be described recursively as follows:
+	\begin{enumerate}
+		\item The ordinal $ 0 $ is the empty topological space.
+		\item For any ordinal $ \alpha $ with its order topology,
+			the order topology on the ordinal $ \alpha + 1 $
+			is the one-point compactification of $ \alpha $.
+		\item For any limit ordinal $ \alpha $,
+			the order topology is the colimit topology
+			$ \colim_{\beta < \alpha} \beta $.
+	\end{enumerate}
+\end{nul}
+
+We will use terminology 
+that treats $ \Ord $ itself as a topological space,
+even though it is not small.
+
+\begin{definition}
+	If $ W \subseteq \Ord $ is a subclass,
+	then a \defn{limit point} of $ A $ is
+	an ordinal $ \alpha $ such that $ \alpha = \sup (W \cap \alpha) $.
+	The class $ W $ will be said to be \defn{closed} if and only if
+	it contains all its limit points.
+
+	An \defn{ordinal function} is a class map $ f \colon \Ord \to \Ord $.
+	We say that $ f $ is \defn{continuous} if and only if
+	its restriction to any subset is continuous.
+	Equivalently, $ f $ is continuous if and only if,
+	for every subclass $ W \subseteq \Ord $
+	and every limit point $ \alpha $ of $ W $,
+	the ordinal $ f(\alpha) $ is a limit point of $ f(W) $.
+
+	We say that $ f $ is \defn{normal} if and only if
+	it is continuous and strictly increasing.
+\end{definition}
+
+\begin{nul}
+	If $ f $ is a normal ordinal function,
+	then its image is a closed and unbounded class%
+	\footnote{This is often abbreviated \defn{club class} in
+	set theory literature.}
+	of ordinals.
+	Conversely, if $ W \subseteq \Ord $ is a closed and unbounded class,
+	then we can define a normal ordinal function $ f $ by
+	\[
+		f(\alpha) = \min \left\{ \gamma \in W : (\forall \beta < \alpha)(f(\beta) < \gamma) \right\} \period
+	\]
+\end{nul}
+
+\begin{definition}
+	Let $ f $ be an ordinal function.
+	A regular cardinal $ \kappa $ is said to be
+	\defn{$ f $-inaccessible} if and only if,
+	for every ordinal $ \alpha$, if $ \alpha < \kappa $,
+	then $ f(\alpha) < \kappa $ as well.
+\end{definition}
+
+\begin{eg}
+	If $ f $ is the ordinal function that carries
+	an ordinal $ \alpha $ to the cardinal $ 2^{|\alpha|} $,
+	then an $ f $-inaccessible cardinal is precisely
+	an inaccessible cardinal.
+\end{eg}
+
+\begin{construction}
+	Let $ f $ be an increasing ordinal function
+	such that for every ordinal $ \beta $, one has $ \beta < f(\beta) $.
+	For every ordinal $ \xi $,
+	the normal ordinal function $ \alpha \mapsto f^{\alpha}(\xi) $
+	in uniquely specified by the requirements that
+	$ f^0(\xi) = \xi $ and $ f^{\alpha + 1}(\xi) =f(f^{\alpha}(\xi)) $.
+
+	\cite{Jorgensen1970} proves that an $ f $-inaccessible cardinal
+	greater than an ordinal $ \xi $
+	is precisely a regular cardinal that is a \emph{fixed point}
+	for the ordinal function $ \alpha \mapsto f^{\alpha}(\xi) $.
+\end{construction}
+
+\begin{eg}
+	If $ f $ is the ordinal function $ \beta \mapsto 2^{|\beta|} $,
+	then $ f^{\alpha}(\omega) = \beth_{\alpha} $.
+	An inaccessible cardinal is thus precisely a regular $ \beth $-fixed point.
+	
+	If $ f $ is the ordinal function $ \beta \mapsto |\beta|^+ $,
+	then $ f^{\alpha}(\omega) = \aleph_{\alpha} $. 
+	A weakly inaccessible cardinal is precisely a regular $ \aleph $-fixed  point.
+\end{eg}
+
+\begin{eg}
+	Assume $ \au $.
+	Consider the ordinal function $ f $ that carries
+	an ordinal $ \beta $ to the smallest inaccessible cardinal greater than $ \beta $.
+	For any ordinal $ \alpha $,
+	we have $ \daleth_{\alpha} = f^{\alpha}(\omega) $.
+
+	An $ f $-inaccessible cardinal is precisely a $ \daleth $-fixed point.
+	These are called \defn{$ 1 $-inaccessible cardinals}.
+	If $ \kappa $ is $ 1 $-inaccessible, then
+	$ V_{\kappa} \models (\zfc + \au) $.
+	If $ \zfc + \au $ is consistent, then
+	the existence of $ 1 $-inaccessible cardinals is not provable
+	by methods formalizable in $ \zfc + \au $.
+\end{eg}
+
+Iterating this strategy,
+one can now proceed to define $ \alpha $-inaccessibility
+for every ordinal $ \alpha $.
+Iterating the iteration,
+one can define notions of
+hyperinaccessibility, hyper${}^{\alpha}$inaccessibility, \emph{etc}.
+We cut to the chase:
+
+\begin{axiom}
+	The \defn{Lévy scheme} ($ \levy $) is the assertion that
+	for every ordinal function $ f $ and every ordinal $ \xi $,
+	there exists an $ f $-inaccessible cardinal $ \kappa $ such that $ \xi < \kappa $.
+\end{axiom}
+
+\begin{theorem}[\cite{Levy1960, Montague1962, Jorgensen1970}]
+	The following are equivalent.
+	\begin{enumerate}
+		\item The Lévy scheme.
+		\item Every normal ordinal function
+			has a regular cardinal in its image.
+		\item Every closed unbounded subclass $ W \subseteq \Ord $
+			contains a regular cardinal.
+		\item Every normal ordinal function
+			has an inaccessible cardinal in its image.
+		\item Every closed unbounded subclass $ W \subseteq \Ord $
+			contains an inaccessible cardinal.
+	\end{enumerate}
+\end{theorem}
+
+\begin{nul}
+	The Lévy scheme implies the Axiom of Universes,
+	and the consistency strength of $ \nbg + \levy $ is strictly greater
+	than that of $ \nbg + \au $.
+
+	The consistency strength of the Lévy scheme is
+	also strictly greater than
+	the existence of $ \alpha $-inaccessible, hyperinaccessible,
+	hyper${}^{\alpha}$inaccessible, \emph{etc}., cardinals.
+\end{nul}
+
+\begin{definition}
+	Let $ \kappa $ be a regular cardinal.
+	One says that $ \kappa $ is \defn{Mahlo} if and only if
+	every closed unbounded subset $ W \subseteq \kappa $
+	contains a regular cardinal.
+\end{definition}
+
+\begin{nul}
+	Assume that $ \kappa $ is a Mahlo cardinal.
+	Then $ \kappa $ is $ f $-inaccessible for every ordinal function $ f $.
+	Accordingly, $ \kappa $ is a fixed point of every normal ordinal function.
+
+	Additionally,
+	if $ \kappa $ is a Mahlo cardinal, then
+	$ V_{\kappa} \models (\zfc + \levy) $, and similarly
+	$ V_{\kappa + 1} \models (\nbg + \levy) $.
+	The consistency strength of the axiom
+	\enquote{a Mahlo cardinal exists}
+	is strictly greater than the Lévy scheme.
+\end{nul}
+
+\begin{nul}
+	The Lévy scheme and its equivalents and slight variants
+	have appeared under various names:
+	\enquote{Mahlo's principle} \citep{Gloede1973},
+	\enquote{Axiom F} \citep{Drake1974},
+	\enquote{$ \Ord $ is Mahlo} \citep{Hamkins2003}.
+\end{nul}
+
+For our purposes,
+one of the main appeals of the Lévy scheme
+is the following.
+
+\begin{theorem}
+	Assume $ \levy $.
+	
+\end{theorem}
+
+%-------------------------------------------------------------------%
+\subsection{Universe polymorphism}%
+\label{sub:universe_polymorphism}
+%-------------------------------------------------------------------%
+
+
+
+

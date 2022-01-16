@@ -1,5 +1,51 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'book.blg'
-[50] biber:340> INFO - === Sat Nov 13, 2021, 12:13:19
-[60] Biber.pm:415> INFO - Reading 'book.bcf'
-[108] Utils.pm:395> WARN - No data sources defined!
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: book.aux
+A level-1 auxiliary file: foundations.aux
+A level-1 auxiliary file: topology.aux
+The style file: ../cambridgeauthordate.bst.bst
+Database file #1: ../homotopytheories.bib
+Warning--empty booktitle in Montague1962
+Warning--empty author and editor in SGA4-1
+You've used 12 entries,
+            2465 wiz_defined-function locations,
+            676 strings with 6741 characters,
+and the built_in function-call counts, 4223 in all, are:
+= -- 427
+> -- 88
+< -- 34
++ -- 40
+- -- 22
+* -- 314
+:= -- 710
+add.period$ -- 52
+call.type$ -- 12
+change.case$ -- 72
+chr.to.int$ -- 12
+cite$ -- 14
+duplicate$ -- 173
+empty$ -- 341
+format.name$ -- 33
+if$ -- 862
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 15
+newline$ -- 70
+num.names$ -- 33
+pop$ -- 59
+preamble$ -- 1
+purify$ -- 84
+quote$ -- 0
+skip$ -- 172
+stack$ -- 0
+substring$ -- 264
+swap$ -- 36
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 84
+warning$ -- 2
+while$ -- 33
+width$ -- 0
+write$ -- 161
+(There were 2 warnings)
