@@ -422,7 +422,12 @@ that is true for a sieve of forcing extensions is true.
 \begin{eg}
 	The equivalence above is doubly false if $ \kappa = \aleph_0 $.
 
-	First, an $ \aleph_0 $-compact anima is a \emph{retract} of
+	First, we certainly have a containment
+	\[
+		\Cat^{V,(\aleph_0)} \subset \Cat^{\aleph_0} \comma
+	\]
+	but this containment is proper.
+	An $ \aleph_0 $-compact anima is a \emph{retract} of
 	an $ \aleph_0 $-small anima, but 
 	it may not be $ \aleph_0 $-small itself.
 	If $ X $ is $ \aleph_0 $-compact and \emph{simply connected},
@@ -524,7 +529,7 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 
 \begin{nul}
 	If $ C $ is a small category, then 
-	the large-category $ \PP_0(C) $ is locally small,
+	the large-category $ \tau_0\PP(C) $ is locally small,
 	and it enjoys many of the same good properties
 	enjoyed by $ \Set^V $ itself.
 	For every regular cardinal $ \kappa $,
@@ -533,7 +538,7 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 	for every pair of presheaves $ X, Y \colon C^{\op} \to \Set^V $,
 	the morphisms $ X \to Y $
 	form a presheaf $ \MOR(X, Y) \colon D^{\op} \to \Set^V $.
-	The category $ \PP_0(C) $ is a \defn{1-topos}.
+	The category $ \tau_0\PP(C) $ is a \defn{1-topos}.
 
 	Similarly, the category $ \PP(C) $ of presheaves
 	$ C^{\op} \to \An^V $
@@ -558,7 +563,7 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 	a functor $ C^{\op} \to \Set^V $
 	that is left Kan extended from its restriction
 	to some small full subcategory $ D \subseteq C $.
-	We write $ \PP^{\sm}_0(C) $
+	We write $ \tau_0\PP^{\sm}(C) $
 	for the locally small large-category
 	of small presheaves of sets.
 	
@@ -581,7 +586,7 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 	a full subcategory of $ \PP(D) $.
 	
 	The (class-indexed) filtered union
-	$ \bigcup_D \PP_0(D) $
+	$ \bigcup_D \tau_0\PP(D) $
 	over the class of small full subcategories of $ C $
 	is precisely the large-category $ \PP^{\sm}(C) $.
 \end{nul}
@@ -602,23 +607,23 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 
 \begin{eg}
 	If $ C^{\op} $ is accessible,
-	then $ \PP^{\sm}_0(C) $ and $ \PP^{\sm}(C) $
+	then $ \tau_0\PP^{\sm}(C) $ and $ \PP^{\sm}(C) $
 	are the categories of accessible functors
 	$ C^{\op} \to \Set^V $ and $ C^{\op} \to \An^V $, respectively.
 \end{eg}
 
 \begin{nul}
-	The categories $ \PP^{\sm}_0(C) $ and $ \PP^{\sm}(C) $
+	The categories $ \tau_0\PP^{\sm}(C) $ and $ \PP^{\sm}(C) $
 	may not enjoy all the same good features that
 	$ \Set^V $ and $ \An^V$ have.
-	The categories $ \PP^{\sm}_0(C) $ and $ \PP^{\sm}(C) $
+	The categories $ \tau_0\PP^{\sm}(C) $ and $ \PP^{\sm}(C) $
 	possess all colimits,
 	but they do not generally have all limits.
 	For example, if $C$ has no nonidentity arrows, then
-	there is no terminal object in $ \PP^{\sm}_0(C) $.
+	there is no terminal object in $ \tau_0\PP^{\sm}(C) $.
 	
 	If $ C^{\op} $ is accessible or small,
-	then $ \PP^{\sm}_0(C) $ and $ \PP^{\sm}(C) $ do have all limits.
+	then $ \tau_0\PP^{\sm}(C) $ and $ \PP^{\sm}(C) $ do have all limits.
 \end{nul}
 
 \begin{definition}
@@ -861,47 +866,55 @@ It will be helpful for us to have a notation for this.
 	\enquote{$ \alpha $-th inaccessible cardinal}.
 \end{definition}
 
+%-------------------------------------------------------------------%
+\subsection{Echelons of accessibility}%
+\label{sub:echelons_of_accessibility}
+%-------------------------------------------------------------------%
+
 The notions of smallness,
 accessibility, and presentability of categories
 can all be relativized to a Grothendieck universe.
 
 \begin{definition}
-	Let $ \alpha $ be an ordinal number.
-	A category $ C $ is
-	\defn{of rank $ \alpha $} if and only if
-	it is locally $ \daleth_{\alpha} $-small
+	The \defn{echelon} of a category $ C $ is
+	the smallest ordinal $ \alpha $ such that
+	$ C $ is both
+	locally $ \daleth_{\alpha} $-small
 	and $ \daleth_{\alpha + 1} $-small.
 	We will say that $ C $ is
-	\defn{small of rank $ \alpha $}
-	if and only if it is of rank $ \alpha $
-	and $ \daleth_{\alpha} $-small.
+	\defn {strictly of echelon $ \leq \alpha $}
+	if and only if it is $ \daleth_{\alpha} $-small.
 \end{definition}
 
-\begin{eg}
-	Let $ \alpha $ be an ordinal number, and
-	let $ \kappa \coloneq \daleth_{\alpha} $.
-	The categories $ \Set^{\kappa} $
-	and $ \An^{\kappa} $
-	are of rank $ \alpha $.
-	
-	More generally, if $ C $ is a $ \kappa $-small category,
-	then $ \PP_0^{\kappa}(C) $ and $ \PP^{\kappa}(C) $
-	are each locally $ \lambda $-small.
-\end{eg}
+\begin{notation}
+	Let $ \alpha $ be an ordinal number.
+	We will denote by $ \Cat_{\alpha} $
+	the category of categories that are
+	strictly of echelon $ \leq \alpha $.
+	Accordingly, we will denote by
+	$ \Set_{\alpha} $ and $ \An_{\alpha} $
+	the categories of $ \daleth_{\alpha} $-small
+	sets and animae, respectively.
+
+	The categories $ \Cat_{\alpha} $, $ \Set_{\alpha} $, and $ \An_{\alpha} $
+	are all of echelon $ \alpha $.
+\end{notation}
 
 \begin{definition}
-	Let $ \lambda $ be an inaccessible cardinal, and 
-	let $ \kappa $ be a regular cardinal less than $ \lambda $.
-	A functor between categories is
-	\emph{$ \kappa $-continuous below  $ \lambda $} if and only if 
-	it preserves all $ \lambda $-small, $ \kappa $-filtered colimits.
+	Let $ \alpha $ be an ordinal number, and
+	let $ \kappa $ be a regular cardinal less than $ \daleth_{\alpha} $.
+	Let $ C $ and $ D $ be categories
+	of echelon $ \leq \alpha $.
+
+	A functor $ f \colon C \to D $
+	is \emph{$ \kappa $-continuous of echelon  $ \leq \alpha $} if and only if 
+	it preserves all $ \daleth_{\alpha} $-small, $ \kappa $-filtered colimits.
 	
-	Let $ C $ be a locally $ \lambda $-small category.
 	An object $ X $ of $ C $
-	is said to be \defn{$ \kappa $-compact below $ \lambda $} if and only if
-	the functor $ \yo^X \colon C \to \An^{\lambda} $ corepresented by $ X $
-	is $ \kappa $-continuous below $ \lambda $.
-	We write $ C^{\kappa < \lambda} \subseteq C $
+	is said to be \defn{$ \kappa $-compact of echelon $ \leq \alpha $} if and only if
+	the functor $ \yo^X \colon C \to \An_{\alpha} $ corepresented by $ X $
+	is $ \kappa $-continuous of echelon $ \leq \alpha $.
+	We write $ C^{(\kappa)} \subseteq C $
 	for the full subcategory of $ \kappa $-compact objects below $ \lambda $.
 
 	A category $C$ is
