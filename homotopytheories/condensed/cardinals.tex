@@ -56,7 +56,7 @@ We summarize the axioms of $ \nbg $ in informal language:
 In matters of set theory,
 we will generally follow the notations and terminological conventions
 of the comprehensive monograph of \cite{Jech2003}.
-We will also refer to the texts of \cite{Drake1974} and \cite{Kanamori2009}
+We will also refer to the texts of \cite{Drake1974} and \cite{Kanamori2009}.
 In particular, $ \Ord $ denotes the proper class of ordinal numbers.
 For any ordinal $ \alpha $, the set $ V_{\alpha} $ is defined recursively as follows:
 \begin{enumerate}
@@ -67,6 +67,11 @@ For any ordinal $ \alpha $, the set $ V_{\alpha} $ is defined recursively as fol
 If $ x $ is a set, then the \defn{rank} of $ x $ is the smallest ordinal number $ \alpha $ such that $ x \in V_{\alpha} $.
 The proper class $ V $ is then the union $ \bigcup_{\alpha \in \Ord} V_{\alpha} $.
 
+In matters of (higher) category theory,
+we will generally follow the notations and terminological conventions
+of \cite{Lurie2009}.
+However, we will simplify some pieces of language and notation,
+and our set-theoretic conventions are slightly different:
 \begin{definition}
 	A \defn{large-category}%
 	\footnote{We use the term \enquote{category}
@@ -77,7 +82,8 @@ The proper class $ V $ is then the union $ \bigcup_{\alpha \in \Ord} V_{\alpha} 
 		We will use the term \enquote{1-category}
 	when the specification is needed.}
 	$C$ consists of a sequence $(C_n)_{n\in\NN_0}$ of classes,
-	along with a family of class maps $ \phi^{\ast} \colon C_m \to C_n $ for each map $ \phi \colon n \to m $,
+	along with a family of class maps $ \phi^{\ast} \colon C_m \to C_n $
+	for each map $ \phi \colon n \to m $,
 	subject to all the formulas that express the statement that $C_n$ is a simplicial class
 	that satisfies the inner Kan condition.
 
@@ -96,9 +102,15 @@ The proper class $ V $ is then the union $ \bigcup_{\alpha \in \Ord} V_{\alpha} 
 	the $ J $ is a small category.
 	Hence when we refer to \defn{all limits} or \defn{all colimits},
 	we mean all limits or colimits of diagrams indexed on small categories.
+	
+	If $ C $ is a category and $ D $ is a large-category, 
+	then the large-category $ \Fun(C, D) $ is defined in the usual way,
+	so that $ \Fun(C, D)_n $ is the class of simplicial maps
+	$ C \times \Delta^n \to D $.
 \end{definition}
 
-\begin{eg}
+\begin{notation}%
+	\label{not:Vsetsanimaepresheavescategories}
 	We shall write $ \Set^V $ for the large-category of all sets.
 	The objects of $ \Set^V$ are thus precisely the elements of $V$.
 
@@ -112,9 +124,21 @@ The proper class $ V $ is then the union $ \bigcup_{\alpha \in \Ord} V_{\alpha} 
 	The objects of $ \An^V $ are thus precisely
 	the Kan complexes $ \Delta^{\op} \to \Set^V $.
 
+	If $ C $ is a category, then
+	we shall write $ \PP^V(C) \coloneq \Fun(C^{\op}, \An^V) $
+	and $ \tau_0\PP^V(C) \coloneq \Fun(C^{\op}, \Set^V) $.
+	We will write
+	\[ \yo \colon C \inclusion \PP^V(C) \]
+	for the Yoneda embedding $ X \mapsto \yo_X $.
+	Thus if $ X $ is an object of $ C $, then
+	$ \yo_X \colon C^{\op} \to \An^V $ is
+	the functor represented by $ X $, so that
+	$ \yo_X(U) = \Map(U, X) $.
+
 	We shall write $ \Cat^V $ for the large-category of all categories.
-	The objects of $ \Cat^V $ are thus precisely the weak Kan complexes $ \Delta^{\op} \to \Set^V $.
-\end{eg}
+	The objects of $ \Cat^V $ are thus precisely
+	the weak Kan complexes $ \Delta^{\op} \to \Set^V $.
+\end{notation}
 
 The Class Comprehension Axiom Schema implies the \defn{Axiom of Global Choice},
 which ensures the existence of a choice function $ \tau \colon V \to V $ such that $ \tau(x) \in x $.
@@ -145,8 +169,8 @@ These scales will be identified by inaccessible cardinals
 or, equivalently, Grothendieck universes.
 The existence of these cardinals is independent of $ \nbg $.
 
-But now a rather different concern arises.
-We will also want to have reasonable assurance
+But now a different sort of concern arises.
+We will also want to have assurance
 that the results we obtain at one scale remain valid at other scales.
 We might prefer to prove sentences about
 \emph{all} sets, animae, groups, etc. --
@@ -196,8 +220,9 @@ that is true for a sieve of forcing extensions is true.
 \end{definition}
 
 \begin{eg}
-	Under this definition, $ 0 $ is a regular cardinal.
-	Many texts require that a regular cardinal be infinite.
+	Under this definition, $ 0 $ is a regular cardinal.%
+	\footnote{Many texts require that a regular cardinal be infinite.}
+	There are no $ 0 $-small sets.
 \end{eg}
 
 \begin{eg}
@@ -215,10 +240,14 @@ that is true for a sieve of forcing extensions is true.
 	\end{enumerate}
 
 	The countable cardinal $ \aleph_0 $ is regular.
-	Every successor cardinal is regular;
+	Every infinite successor cardinal is regular;
 	consequently, $ \aleph_n $ for $ n \in \NN $ is regular as well.
 	The cardinal $ \aleph_{\omega} $ is
 	the smallest infinite cardinal that is not regular.
+\end{eg}
+
+\begin{eg}
+	A set is $ \aleph_0 $-small if and only if it is finite.
 \end{eg}
 
 \begin{nul}
@@ -252,8 +281,16 @@ that is true for a sieve of forcing extensions is true.
 \end{definition}
 
 \begin{eg}
-	A set is $ \aleph_0 $-small if and only if it is finite.
+	This turn of phrase above is slightly ambiguous when $ \kappa = 0 $.
+	In that case, we take the phrase
+	\enquote{subcategory generated by \ldots\ under colimits
+	over the empty collection of posets}
+	to mean the empty category.
+	With this convention, there are no $ 0 $-small animae or categories:
+	\[ \Set^0 = \An^0 = \Cat^0 = \varnothing \period \]
+\end{eg}
 
+\begin{eg}
 	An anima is $ \aleph_0 $-small if and only if
 	it is weak homotopy equivalent to a simplicial set
 	with only finitely many nondegenerate simplices.
@@ -336,7 +373,7 @@ that is true for a sieve of forcing extensions is true.
 			every functor $ f \colon J \to \Lambda $ can be extended
 			to a functor $ F \colon J^{\rhd} \to \Lambda $.
 		\item For every $ \kappa $-small category $ J $
-			and every functer $ H \colon \Lambda \times J \to \An^V$,
+			and every functor $ H \colon \Lambda \times J \to \An^V$,
 			the natural morphism
 			\[
 				\colim_{\lambda \in \Lambda} \lim_{j \in J} H(\lambda,j)
@@ -365,6 +402,11 @@ that is true for a sieve of forcing extensions is true.
 	if and only if it contains a terminal object.
 \end{eg}
 
+\begin{eg}
+	Since no category is $ 0 $-small,
+	every category is $ 0 $-filtered.
+\end{eg}
+
 \begin{definition}
 	Let $ \kappa $ be a regular cardinal.
 	A functor $ f \colon C \to D $ between large-categories
@@ -386,7 +428,8 @@ that is true for a sieve of forcing extensions is true.
 			is locally small.
 		\item The category $ C $
 			has all $ \kappa $-filtered colimits.
-		\item The subcategory $ C ^{(\kappa)} $ generates $ C $
+		\item The subcategory $ C^{(\kappa)} \subseteq C $ is small. 
+		\item The subcategory $ C ^{(\kappa)} \subseteq C $ generates $ C $
 			under $ \kappa $-filtered colimits.
 	\end{enumerate}
 	
@@ -397,6 +440,33 @@ that is true for a sieve of forcing extensions is true.
 	if and only if $ C^{(\kappa)} $
 	has all $ \kappa $-small colimits.
 \end{definition}
+
+\begin{eg}
+	A $ 0 $-continuous functor is one that preserves all colimits.
+	Hence a $ 0 $-compact object $ X $ is one in which the natural map 
+	\[
+		\Map(X, \colim_{\alpha \in A} Y_{\alpha}) \equivalence
+		\colim_{\alpha \in A} \Map(X, Y_{\alpha})
+	\]
+	is an equivalence,
+	irrespective of the category $ A $ or the diagram $ Y \colon A \to C $.
+
+	The following are equivalent for a large-category $ C $.
+	\begin{enumerate}
+		\item There exists a small full subcategory $ D \subseteq C $ whose
+			inclusion extends along the Yoneda embedding
+			to an equivalence of categories
+			\eqref{not:Vsetsanimaepresheavescategories}
+			\[ \PP^V(D) \equivalence C \period \]
+		\item The full subcategory $ C^{(0)} \subseteq C $ of $ 0 $-compact objects
+			is small, and
+			its inclusion extends along the Yoneda embedding
+			to an equivalence of categories
+			\[ \PP^V(C^{(0)}) \equivalence C \period \]
+		\item The large-category $ C $ is $ 0 $-accessible.
+		\item The large-category $ C $ is $ 0 $-presentable.
+	\end{enumerate}
+\end{eg}
 
 \begin{eg}
 	Let $ \kappa $ be an uncountable regular cardinal.
@@ -423,16 +493,15 @@ that is true for a sieve of forcing extensions is true.
 	The equivalence above is doubly false if $ \kappa = \aleph_0 $.
 
 	First, we certainly have a containment
-	\[
-		\Cat^{V,(\aleph_0)} \subset \Cat^{\aleph_0} \comma
-	\]
+	\[ \Cat^{\aleph_0} \subset \Cat^{V,(\aleph_0)} \comma \]
 	but this containment is proper.
 	An $ \aleph_0 $-compact anima is a \emph{retract} of
 	an $ \aleph_0 $-small anima, but 
 	it may not be $ \aleph_0 $-small itself.
 	If $ X $ is $ \aleph_0 $-compact and \emph{simply connected},
-	then $ X $ is $ \aleph_0 $-small.
-	The obstruction is the \emph{de Lyra--Wall finiteness obstruction},
+	then $ X $ is $ \aleph_0 $-small, but
+	for non-simply-connected animae,
+	we have the \emph{de Lyra--Wall finiteness obstruction},
 	which lies in the reduced $ K_0 $ of the group ring $ \ZZ[\pi_1(X)] $.
 
 	Second, the homotopy sets of an $ \aleph_0 $-small $ X $ anima
@@ -444,6 +513,9 @@ that is true for a sieve of forcing extensions is true.
 	But if $ \pi_1(X) $ isn't finite,
 	this too fails;
 	for example, $ \pi_3(S^1 \vee S^2) $ is not finitely generated.
+
+	It is still true that the category $ \Cat^V $ is
+	$ \aleph_0 $-presentable.
 \end{eg}
 
 \begin{nul}
@@ -469,17 +541,53 @@ that is true for a sieve of forcing extensions is true.
 \end{definition}
 
 \begin{eg}
+	For every regular cardinal $ \kappa $,
+	one has $ 0 \ll \kappa $.
+\end{eg}
+
+\begin{eg}
 	For every infinite regular cardinal $ \kappa $,
 	one has $ \aleph_0 \ll \kappa $.
 \end{eg}
 
 \begin{nul}
+	Let $ \kappa $ and $ \lambda $ be regular cardinals.
+	How is the condition $ \kappa \ll \lambda $ used in practice?
+	The answer comes down to the following pair of manoeuvres,
+	which we can do whenever $ \kappa \ll \lambda $.
+
+	If $ J $ is a $ \lambda $-small poset,
+	then we can write
+	\[ J = \bigcup_{\el \in \Lambda} J_{\el} \comma \]
+	where $ \Lambda $ is a $ \lambda $-small and $ \kappa $-filtered poset,
+	and each $ J_{\el} \subseteq J $ is a $ \kappa $-small poset.
+	In this way, we may express
+	any $ \lambda $-small colimit as
+	a $ \lambda $-small and $ \kappa $-filtered colimit of
+	$ \kappa $-small colimits:
+	\[ \colim_{j \in J} X(j) \simeq \colim_{\el \in \Lambda} \colim_{j \in J_{\el}} X(j) \]
+	\citep[Corollary 4.2.3.11]{Lurie2009}.
+
+	On the other hand, if $ M $ is a $ \kappa $-filtered poset,
+	then we can write
+	\[ M = \bigcup_{k \in K} M_k \comma \]
+	where $ K $ is a $ \lambda $-filtered poset,
+	and each $ M_k \subseteq M $ is $ \lambda $-small and $ \kappa $-filtered.
+	In this way, we may express
+	any $ \kappa $-filtered colimit as
+	a $ \lambda $-filtered colimit of
+	$ \lambda $-small and $ \kappa $-filtered colimits:
+	\[ \colim_{m \in M} Y(m) \simeq \colim_{k \in K} \colim_{m \in M_k} Y(m) \]
+	\citep[Lemma 5.4.2.10]{Lurie2009}.
+\end{nul}
+
+\begin{proposition}[\protect{\citealp[Proposition 5.4.2.11]{Lurie2009}}]
 	If $ \kappa \ll \lambda $ are regular cardinals,
 	then every $ \kappa $-accessible category
 	is $ \lambda $-accessible.
 	Similarly, every $ \kappa $-presentable category
 	is $ \lambda $-presentable.
-\end{nul}
+\end{proposition}
 
 \begin{definition}
 	A large-category $ C $ is \defn{accessible} if and only if
@@ -491,10 +599,15 @@ that is true for a sieve of forcing extensions is true.
 	$ C $ is $ \kappa $-presentable.
 \end{definition}
 
+\begin{eg}
+	A small category is accessible if and only if it is idempotent-complete
+	\citep[Corollary 5.4.3.6]{Lurie2009}.
+\end{eg}
+
 \begin{nul}
 	A large-category is presentable if and only if
 	it is accessible and has all colimits.
-	A presentable category automatically admits all limits:
+	A presentable large-category automatically has all limits as well.
 \end{nul}
 
 \begin{definition}
@@ -514,7 +627,7 @@ that is true for a sieve of forcing extensions is true.
 
 Let $ C $ be a large-category.
 What happens if we seek to make sense in $ \nbg $
-of the category $ \tau_0\PP(C) $ of presheaves of sets
+of the category $ \tau_0\PP^V(C) $ of presheaves of sets
 $ C^{\op} \to \Set^V $?
 
 Right away we encounter a problem:
@@ -529,7 +642,7 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 
 \begin{nul}
 	If $ C $ is a small category, then 
-	the large-category $ \tau_0\PP(C) $ is locally small,
+	the large-category $ \tau_0\PP^V(C) $ is locally small,
 	and it enjoys many of the same good properties
 	enjoyed by $ \Set^V $ itself.
 	For every regular cardinal $ \kappa $,
@@ -538,9 +651,9 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 	for every pair of presheaves $ X, Y \colon C^{\op} \to \Set^V $,
 	the morphisms $ X \to Y $
 	form a presheaf $ \MOR(X, Y) \colon D^{\op} \to \Set^V $.
-	The category $ \tau_0\PP(C) $ is a \defn{1-topos}.
+	The category $ \tau_0\PP^V(C) $ is a \defn{1-topos}.
 
-	Similarly, the category $ \PP(C) $ of presheaves
+	Similarly, the category $ \PP^V(C) $ of presheaves
 	$ C^{\op} \to \An^V $
 	is a $ \kappa $-presentable topos
 	for every regular cardinal $ \kappa $.
@@ -563,7 +676,7 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 	a functor $ C^{\op} \to \Set^V $
 	that is left Kan extended from its restriction
 	to some small full subcategory $ D \subseteq C $.
-	We write $ \tau_0\PP^{\sm}(C) $
+	We write $ \tau_0\PP^V(C) $
 	for the locally small large-category
 	of small presheaves of sets.
 	
@@ -571,24 +684,31 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 	a functor $ C^{\op} \to \An^V $
 	that is left Kan extended from its restriction to
 	some small full subcategory $ D \subseteq C $.
-	We write $ \PP^{\sm}(C) $
+	We write $ \PP^V(C) $
 	for the locally small large-category
 	of small presheaves.
 \end{definition}
 
+\begin{eg}
+	Of course if $ C $ is a small category, then
+	every presheaf on $ C $ is small.
+	Thus the notation above does not conflict with the one established in
+	Notation \ref{not:Vsetsanimaepresheavescategories}.
+\end{eg}
+
 \begin{nul}
 	For any small full subcategory $ D \subseteq C $,
-	we may contemplate the large-category $ \PP(D) $
+	we may contemplate the large-category $ \PP^V(D) $
 	of presheaves $ D^{\op} \to \An^V $.
 	If we have an inclusion of full subcategories
 	$ D' \subseteq D \subset C $, then
-	left Kan extension identifies $ \PP(D') $ with
-	a full subcategory of $ \PP(D) $.
+	left Kan extension identifies $ \PP^V(D') $ with
+	a full subcategory of $ \PP^V(D) $.
 	
 	The (class-indexed) filtered union
-	$ \bigcup_D \tau_0\PP(D) $
+	$ \bigcup_D \tau_0\PP^V(D) $
 	over the class of small full subcategories of $ C $
-	is precisely the large-category $ \PP^{\sm}(C) $.
+	is precisely the large-category $ \PP^V(C) $.
 \end{nul}
 
 \begin{eg}
@@ -600,30 +720,28 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 
 	Thus the assignment $ Y \mapsto \yo_Y $ is
 	the fully faithful \defn{Yoneda embedding}
-	\[
-		\yo \colon C \inclusion \PP^{\sm}(C) \period
-	\]
+	\[ \yo \colon C \inclusion \PP^V(C) \period \]
 \end{eg}
 
 \begin{eg}
 	If $ C^{\op} $ is accessible,
-	then $ \tau_0\PP^{\sm}(C) $ and $ \PP^{\sm}(C) $
+	then $ \tau_0\PP^V(C) $ and $ \PP^V(C) $
 	are the categories of accessible functors
 	$ C^{\op} \to \Set^V $ and $ C^{\op} \to \An^V $, respectively.
 \end{eg}
 
 \begin{nul}
-	The categories $ \tau_0\PP^{\sm}(C) $ and $ \PP^{\sm}(C) $
+	The categories $ \tau_0\PP^V(C) $ and $ \PP^V(C) $
 	may not enjoy all the same good features that
 	$ \Set^V $ and $ \An^V$ have.
-	The categories $ \tau_0\PP^{\sm}(C) $ and $ \PP^{\sm}(C) $
+	The categories $ \tau_0\PP^V(C) $ and $ \PP^V(C) $
 	possess all colimits,
 	but they do not generally have all limits.
 	For example, if $C$ has no nonidentity arrows, then
-	there is no terminal object in $ \tau_0\PP^{\sm}(C) $.
+	there is no terminal object in $ \tau_0\PP^V(C) $.
 	
 	If $ C^{\op} $ is accessible or small,
-	then $ \tau_0\PP^{\sm}(C) $ and $ \PP^{\sm}(C) $ do have all limits.
+	then $ \tau_0\PP^V(C) $ and $ \PP^V(C) $ do have all limits.
 \end{nul}
 
 \begin{definition}
@@ -665,17 +783,15 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 	then $ C^0 $ generates $ C $ freely under
 	$ A $-shaped colimits
 	if and only if the restriction induces an equivalence
-	\[
-		\Fun^A(C, D) \equivalence \Fun(C^0, D) \period
-	\]
+	\[ \Fun^A(C, D) \equivalence \Fun(C^0, D) \period \]
 \end{remark}
 
 \begin{proposition}%
 	\label{prp:PPsmisfreelygenerated}
 	Let $ C $ be a locally small large-category.
 	Then the Yoneda embedding
-	$ \yo \colon C \inclusion \PP^{\sm}(C) $
-	generates $ \PP^{\sm}(C) $ freely under all colimits.
+	$ \yo \colon C \inclusion \PP^V(C) $
+	generates $ \PP^V(C) $ freely under all colimits.
 \end{proposition}
 
 The theory of small presheaves can be relativized
@@ -748,7 +864,11 @@ to a regular cardinal $ \kappa $:
 	One says that $\kappa$ is \defn{inaccessible}%
 	\footnote{Some authors say \defn{strongly inaccessible}
 	instead of \defn{inaccessible}.}
-	if and only if it is a regular, uncountable, strong limit cardinal.
+	if and only if it is a regular, uncountable,%
+	\footnote{We include the condition of uncountability only for convenience.
+		It is not unreasonable to regard $ 0 $ and $ \aleph_0 $
+		as inaccessible as well.}
+	strong limit cardinal.
 	Equivalently, an uncountable cardinal $ \kappa $ is inaccessible if and only if
 	$ \Set^{\kappa} $ has all $ \kappa $-small colimits and is cartesian closed.
 	Equivalently again, an uncountable cardinal $ \kappa $ is inaccessible if and only if 
@@ -806,9 +926,7 @@ and similarly the classes of inaccessible and weakly inaccessible cardinal coinc
 		\item If $ X, Y \in U $, then $ \{X,Y\} \in U $ as well.
 		\item If $ X \in U $, then the powerset $ P(X) \in U $ as well.
 		\item If $ A \in U $ and $ X \colon A \to U $ is a map, then
-		\[
-			\bigcup_{\alpha\in A}X(\alpha) \in U
-		\]
+		\[ \bigcup_{\alpha\in A}X(\alpha) \in U \]
 		as well.
 	\end{enumerate}
 \end{definition}
@@ -859,7 +977,9 @@ It will be helpful for us to have a notation for this.
 			the smallest inaccessible number
 			greater than $ \daleth_{\alpha} $.
 		\item For any limit ordinal $ \alpha $,
-			one defines $ \daleth_{\alpha} \coloneq \sup \left\{ \daleth_{\beta} : \beta < \alpha \right\} $.
+			one defines
+			$ \daleth_{\alpha} \coloneq \sup \left\{ \daleth_{\beta} :
+			\beta < \alpha \right\} $.
 	\end{enumerate}
 	Thus $ \daleth_0 = \aleph_0 $, and
 	$ \daleth_{\alpha} $ is the
@@ -881,16 +1001,22 @@ can all be relativized to a Grothendieck universe.
 	$ C $ is both
 	locally $ \daleth_{\alpha} $-small
 	and $ \daleth_{\alpha + 1} $-small.
-	We will say that $ C $ is
-	\defn {strictly of echelon $ \leq \alpha $}
-	if and only if it is $ \daleth_{\alpha} $-small.
 \end{definition}
+
+\begin{eg}
+	The category of finite sets is 
+	of echelon $ 0 $.
+	More generally, for any ordinal number $ \alpha $,
+	the category of $ \daleth_{\alpha} $-small sets is
+	of echelon $ \alpha $.
+\end{eg}
 
 \begin{notation}
 	Let $ \alpha $ be an ordinal number.
 	We will denote by $ \Cat_{\alpha} $
 	the category of categories that are
-	strictly of echelon $ \leq \alpha $.
+	$ \daleth_{\alpha} $-small.
+
 	Accordingly, we will denote by
 	$ \Set_{\alpha} $ and $ \An_{\alpha} $
 	the categories of $ \daleth_{\alpha} $-small
@@ -902,7 +1028,7 @@ can all be relativized to a Grothendieck universe.
 
 \begin{definition}
 	Let $ \alpha $ be an ordinal number, and
-	let $ \kappa $ be a regular cardinal less than $ \daleth_{\alpha} $.
+	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
 	Let $ C $ and $ D $ be categories
 	of echelon $ \leq \alpha $.
 
@@ -914,26 +1040,96 @@ can all be relativized to a Grothendieck universe.
 	is said to be \defn{$ \kappa $-compact of echelon $ \leq \alpha $} if and only if
 	the functor $ \yo^X \colon C \to \An_{\alpha} $ corepresented by $ X $
 	is $ \kappa $-continuous of echelon $ \leq \alpha $.
-	We write $ C^{(\kappa)} \subseteq C $
-	for the full subcategory of $ \kappa $-compact objects below $ \lambda $.
+	We write $ C^{(\kappa)}_{\alpha} \subseteq C $
+	for the full subcategory of $ \kappa $-compact objects of echelon $ \leq \alpha $.
 
 	A category $C$ is
-	\defn{$\kappa$-accessible below $ \lambda $} if and only if
+	\defn{$ \kappa $-accessible of echelon $ \leq \alpha $} if and only if
 	it satisfies the following trio of conditions:
 	\begin{enumerate}
-		\item The category $ C $ is locally small below $ \lambda $.
-		\item The category $ C $ has all $ \lambda $-small, $ \kappa $-filtered colimits.
-		\item The subcategory $ C^{\kappa < \lambda} $
-			generates $ C $ under $ \lambda $-small and 
+		\item The category $ C $ is of echelon $ \leq \alpha $.
+		\item The category $ C $ has all
+			$ \daleth_{\alpha} $-small, $ \kappa $-filtered colimits.
+		\item The subcategory $ C^{(\kappa)}_{\alpha} $
+			generates $ C $ under $ \daleth_{\alpha} $-small and 
 			$ \kappa $-filtered colimits.
 	\end{enumerate}
 	
 	A category $C$ is
-	\defn{$\kappa$-presentable below $ \lambda $}
+	\defn{$\kappa$-presentable of echelon $ \leq \alpha $}
 	if and only if
-	it is $ \kappa $ accessible below $ \lambda $, and  
-	$ C^{\kappa < \lambda} $ has all $ \kappa $-small colimits.
+	it is $ \kappa $ accessible of echelon $ \leq \alpha $, and  
+	$ C^{(\kappa)}_{\alpha} $ has all $ \kappa $-small colimits.
+
+	A category $ C $ is
+	\defn{accessible of echelon $ \leq \alpha $}
+	if and only if
+	there exists a regular cardinal $ \kappa < \daleth_{\alpha} $
+	such that $ C $ is $ \kappa $-accessible of echelon $ \leq \alpha $.
+	It is
+	\defn{presentable of echelon $ \leq \alpha $}
+	if and only if
+	there exists a regular cardinal $ \kappa < \daleth_{\alpha} $
+	such that $ C $ is $ \kappa $-presentable of echelon $ \leq \alpha $.
 \end{definition}
+
+\begin{eg}
+	Let $ \alpha $ be an ordinal number.
+	Let $ C $ be a $ \daleth_{\alpha} $-small category.
+	Then we shall write
+	\[ \PP_{\alpha}(\CC) \coloneq \PP^{\daleth_{\alpha}}(\CC) \comma \]
+	the category of presheaves $ C^{\op} \to \An_{\alpha} $.
+	The category $ \PP_{\alpha}(C) $ is then
+	$ 0 $-presentable of echelon $ \leq \alpha $.
+
+	Conversely, if $ D $ is a $ 0 $-presentable category
+	of echelon $ \leq \alpha $, then 
+	there exists a $ \daleth_{\alpha} $-small category $ C $
+	and an equivalence $ D \simeq \PP_{\alpha}(C) $.
+\end{eg}
+
+\begin{notation}
+	Let $ \alpha $ be an ordinal number, and
+	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
+	We shall write $ \Acc^{\kappa}_{\alpha} \subset \Cat_{\alpha+1} $ for
+	the following subcategory.
+	\begin{enumerate}
+		\item The objects of $ \Acc^{\kappa}_{\alpha} $ are
+			the $ \kappa $-accessible categories of echelon $ \leq \alpha $.
+		\item The morphisms $ f \colon C \to D $ of $ \Acc^{\kappa}_{\alpha} $ are
+			the $ \kappa $-continuous functors of echelon $ \leq \alpha $
+			such that $ f(C^{\kappa}_{\alpha}) \subseteq D^{\kappa}_{\alpha} $.
+	\end{enumerate}
+	Similarly, we shall write $ \Pr^{\kappa,L}_{\alpha} \subset \Acc^{\kappa}_{\alpha}$
+	for the following subcategory.
+	\begin{enumerate}
+		\item The objects of $ \Pr^{\kappa,L}_{\alpha} $ are
+			the $ \kappa $-presentable categories of echelon $ \leq \alpha $.
+		\item The morphisms of $ \Pr^{\kappa,L}_{\alpha} $ are
+			those functors in $ \Acc^{\kappa}_{\alpha} $
+			that preserve all $ \daleth_{\alpha} $-small colimits.
+	\end{enumerate}
+
+	Now we may write
+	\[
+		\Acc_{\alpha} = \bigcup_{\kappa < \daleth_{\alpha}} \Acc^{\kappa}_{\alpha}
+		\andeq 
+		\Pr^L_{\alpha} = \bigcup_{\kappa < \daleth_{\alpha}} \Pr^{\kappa,L}_{\alpha}
+	\]
+	for the category of accessible categories of echelon $ \alpha $
+	and the category of presentable categories of echelon $ \alpha $, respectively.
+\end{notation}
+
+For a fixed regular cardinal $ \kappa $,
+the theory of $ \kappa $-accessible categories
+does not depend upon the echelon $ \alpha $,
+provided of course that $ \kappa < \daleth_{\alpha} $.
+
+\begin{theorem}
+	Let $ \alpha $ be an ordinal number, and
+	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
+
+\end{theorem}
 
 %-------------------------------------------------------------------%
 \subsection{Ind and Pro}%
@@ -953,10 +1149,10 @@ can all be relativized to a Grothendieck universe.
 
 	Accordingly, if $ C $ is a locally small large-category,
 	then $ \Ind_{\kappa}^{\VV} $ is
-	the smallest full subcategory $ D \subseteq \PP^{\sm}(C) $
+	the smallest full subcategory $ D \subseteq \PP^V(C) $
 	such that $ D $ contains the image
 	of the Yoneda embedding
-	$ \yo \colon C \inclusion \PP^{\sm}(C) $,
+	$ \yo \colon C \inclusion \PP^V(C) $,
 	and $ D $ is stable under $ \kappa $-filtered colimits.
 \end{definition}
 
@@ -1054,7 +1250,9 @@ even though it is not small.
 	Conversely, if $ W \subseteq \Ord $ is a closed and unbounded class,
 	then we can define a normal ordinal function $ f $ by
 	\[
-		f(\alpha) = \min \left\{ \gamma \in W : (\forall \beta < \alpha)(f(\beta) < \gamma) \right\} \period
+		f(\alpha) =
+		\min \left\{ \gamma \in W :
+			(\forall \beta < \alpha)(f(\beta) < \gamma) \right\} \period
 	\]
 \end{nul}
 
