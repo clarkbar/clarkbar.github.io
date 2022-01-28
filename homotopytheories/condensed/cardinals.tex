@@ -610,15 +610,24 @@ that is true for a sieve of forcing extensions is true.
 	A presentable large-category automatically has all limits as well.
 \end{nul}
 
-\begin{definition}
+\begin{definition}%
+	\label{dfn:locallypresentable}
 	A large-category $ C $ is \defn{locally presentable}%
 	\footnote{In the $1$-category literature,
 		the phrase \emph{locally presentable category} is used for
 		what we call \emph{presentable category}.}
-	if and only if, every object $ X \in C $
-	is contained in a presentable full subcategory $ C' \subseteq C $
+	if and only if every object $ X \in C $
+	is contained in a presentable full large-subcategory $ C' \subseteq C $
 	such that the inclusion $ C' \inclusion C $ preserves colimits.
 \end{definition}
+
+\begin{nul}
+	In other words, a large-category $ C $ is locally presentable
+	just in case it can be expressed as
+	a class-indexed union of presentable large-categories,
+	each of which is embedded in $ C $ via
+	a colimit-preserving, fully faithful functor.
+\end{nul}
 
 %-------------------------------------------------------------------%
 \subsection{Presheaf categories}%
@@ -697,6 +706,7 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 \end{eg}
 
 \begin{nul}
+	Let $ C $ be a locally small large-category.
 	For any small full subcategory $ D \subseteq C $,
 	we may contemplate the large-category $ \PP^V(D) $
 	of presheaves $ D^{\op} \to \An^V $.
@@ -706,13 +716,16 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 	a full subcategory of $ \PP^V(D) $.
 	
 	The (class-indexed) filtered union
-	$ \bigcup_D \tau_0\PP^V(D) $
+	$ \bigcup_D \PP^V(D) $
 	over the class of small full subcategories of $ C $
 	is precisely the large-category $ \PP^V(C) $.
+	
+	The categories $ \tau_0\PP^V(C) $ and $ \PP^V(C) $ are thus
+	locally presentable large-categories.
 \end{nul}
 
 \begin{eg}
-	Assume that $ C $ is locally small.
+	Let $ C $ be a locally small large-category.
 	For any object $ Y \in C $,
 	the representable presheaf $ \yo_Y $ is left Kan extended
 	from any full subcategory that contains $ Y $.
@@ -724,6 +737,7 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 \end{eg}
 
 \begin{eg}
+	Let $ C $ be a locally small large-category.
 	If $ C^{\op} $ is accessible,
 	then $ \tau_0\PP^V(C) $ and $ \PP^V(C) $
 	are the categories of accessible functors
@@ -731,6 +745,7 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 \end{eg}
 
 \begin{nul}
+	Let $ C $ be a locally small large-category.
 	The categories $ \tau_0\PP^V(C) $ and $ \PP^V(C) $
 	may not enjoy all the same good features that
 	$ \Set^V $ and $ \An^V$ have.
@@ -747,28 +762,28 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 \begin{definition}
 	Let $ A $ be a class of categories.
 	Let $ C $ be a locally small large-category,
-	and let $ C^0 \subseteq C $ be a full subcategory.
+	and let $ C' \subseteq C $ be a full subcategory.
 	Then we say that
-	\defn{$ C^0 $ generates $ C $ freely under $ A $-shaped colimits}
+	\defn{$ C' $ generates $ C $ freely under $ A $-shaped colimits}
 	if and only if,
 	for every large-category $ D $
 	that has all $ A $-shaped colimits,
 	the following assertions obtain.
 	\begin{enumerate}
-		\item Every functor $ C^0 \to D $ extends
+		\item Every functor $ C' \to D $ extends
 			to a functor $ C \to D $
 			that preserves $ A $ -shaped colimits.
 		\item For every pair of functors
 			$ F, G \colon C \to D $
 			that preserve $ A $-shaped colimits,
 			the map
-			$ \Map(F, G) \to \Map(F|C^0, G|C^0 ) $
+			$ \Map(F, G) \to \Map(F|C', G|C' ) $
 			is an equivalence.
 	\end{enumerate}
-	If $ f \colon C' \inclusion C $ is a fully faithful functor,
+	If $ f \colon C'' \inclusion C $ is a fully faithful functor,
 	then we will say that
 	\defn{$ f $ generates $ C $ freely under $ A $-shaped colimits}
-	if and only if its image $ f(C') \subseteq C $ does so.
+	if and only if its image $ f(C'') \subseteq C $ does so.
 \end{definition}
 
 \begin{remark}
@@ -780,10 +795,10 @@ and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
 	$ A $-shaped colimits.
 	If however we are in a situation in which
 	these objects \emph{can} be made sensible,
-	then $ C^0 $ generates $ C $ freely under
+	then $ C' $ generates $ C $ freely under
 	$ A $-shaped colimits
 	if and only if the restriction induces an equivalence
-	\[ \Fun^A(C, D) \equivalence \Fun(C^0, D) \period \]
+	\[ \Fun^A(C, D) \equivalence \Fun(C', D) \period \]
 \end{remark}
 
 \begin{proposition}%
@@ -817,9 +832,14 @@ to a regular cardinal $ \kappa $:
 
 \begin{nul}
 	If $ C $ is small, then so is $ \PP^{\kappa}(C) $.
+\end{nul}
 
+\begin{nul}
 	Since we have assumed that $ C $ is locally $ \kappa $-small,
 	it follows that the Yoneda embedding lands in $ \PP^{\kappa}(C) $.
+	We can therefore characterize $ \PP^{\kappa}(C) $
+	as the smallest full large-subcategory of $ \PP^V(C) $
+	containing $ \yo(C) $ and closed under $ \kappa $-small colimits.
 \end{nul}
 
 \begin{proposition}%
@@ -833,7 +853,7 @@ to a regular cardinal $ \kappa $:
 \end{proposition}
 
 \begin{nul}
-	The category $ \PP^{\kappa}_0(C) $
+	The category $ \PP^{\kappa}(C) $
 	has all $ \kappa $-small colimits, but
 	in general, it does not have $ \kappa $-small limits, and
 	it is not cartesian closed.
@@ -982,6 +1002,7 @@ It will be helpful for us to have a notation for this.
 			\beta < \alpha \right\} $.
 	\end{enumerate}
 	Thus $ \daleth_0 = \aleph_0 $, and
+	for $ \alpha \geq 1$ an ordinal,
 	$ \daleth_{\alpha} $ is the
 	\enquote{$ \alpha $-th inaccessible cardinal}.
 \end{definition}
@@ -1027,7 +1048,7 @@ can all be relativized to a Grothendieck universe.
 \end{notation}
 
 \begin{definition}
-	Let $ \alpha $ be an ordinal number, and
+	Let $ \alpha \geq 1 $ be an ordinal number, and
 	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
 	Let $ C $ and $ D $ be categories
 	of echelon $ \leq \alpha $.
@@ -1045,11 +1066,13 @@ can all be relativized to a Grothendieck universe.
 
 	A category $C$ is
 	\defn{$ \kappa $-accessible of echelon $ \leq \alpha $} if and only if
-	it satisfies the following trio of conditions:
+	it satisfies the following quartet of conditions:
 	\begin{enumerate}
 		\item The category $ C $ is of echelon $ \leq \alpha $.
 		\item The category $ C $ has all
 			$ \daleth_{\alpha} $-small, $ \kappa $-filtered colimits.
+		\item The subcategory $ C^{(\kappa)}_{\alpha} \subseteq C $
+			is $ \daleth_{\alpha} $-small.
 		\item The subcategory $ C^{(\kappa)}_{\alpha} $
 			generates $ C $ under $ \daleth_{\alpha} $-small and 
 			$ \kappa $-filtered colimits.
@@ -1074,7 +1097,7 @@ can all be relativized to a Grothendieck universe.
 \end{definition}
 
 \begin{eg}
-	Let $ \alpha $ be an ordinal number.
+	Let $ \alpha \geq 1 $ be an ordinal number.
 	Let $ C $ be a $ \daleth_{\alpha} $-small category.
 	Then we shall write
 	\[ \PP_{\alpha}(\CC) \coloneq \PP^{\daleth_{\alpha}}(\CC) \comma \]
@@ -1089,7 +1112,7 @@ can all be relativized to a Grothendieck universe.
 \end{eg}
 
 \begin{notation}
-	Let $ \alpha $ be an ordinal number, and
+	Let $ \alpha \geq 1 $ be an ordinal number, and
 	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
 	We shall write $ \Acc^{\kappa}_{\alpha} \subset \Cat_{\alpha+1} $ for
 	the following subcategory.
@@ -1118,18 +1141,30 @@ can all be relativized to a Grothendieck universe.
 	\]
 	for the category of accessible categories of echelon $ \alpha $
 	and the category of presentable categories of echelon $ \alpha $, respectively.
+
+	We specify some corresponding subcategories of $ \Cat_{\alpha}$.
+	Let $ \Cat_{\alpha}^{\vee} \subset \Cat_{\alpha} $ denote
+	the full subcategory consisting of 
+	the idempotent-complete $ \daleth_{\alpha} $-small categories.
+	Let $ \Cat^{\kappa}_{\alpha} \subseteq \Cat_{\alpha} $ denote the subcategory
+	whose objects are $ \daleth_{\alpha} $-small categories
+	that possess all $ \kappa $-small colimits
+	and whose morphisms are functors that preserve $ \kappa $-small colimits.
+	Finally, let 
+	\[ \Cat^{\kappa,\vee}_{\alpha} \coloneq \Cat^{\kappa}_{\alpha} \cap \Cat_{\alpha} \period \]
 \end{notation}
 
-For a fixed regular cardinal $ \kappa $,
-the theory of $ \kappa $-accessible categories
-does not depend upon the echelon $ \alpha $,
-provided of course that $ \kappa < \daleth_{\alpha} $.
+\begin{nul}
+	Let $ \alpha \geq 1 $ be an ordinal number,
+	and let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
+	The assignment $ C \mapsto C^{(\kappa)}_{\alpha} $ defines a functor
+	\[ \theta \colon \Acc^{\kappa}_{\alpha} \to \Cat^{\vee}_{\alpha} \period \]
+	This functor is an equivalence;
+	we will describe its inverse in the next section.
 
-\begin{theorem}
-	Let $ \alpha $ be an ordinal number, and
-	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
-
-\end{theorem}
+	The functor $ \theta $ restricts to an equivalence
+	\[ \theta \colon \Pr^{\kappa,L}_{\alpha} \equivalence \Cat^{\kappa,\vee}_{\alpha} \period \]
+\end{nul}
 
 %-------------------------------------------------------------------%
 \subsection{Ind and Pro}%
@@ -1161,6 +1196,11 @@ provided of course that $ \kappa < \daleth_{\alpha} $.
 	equivalent to $ C $ itself.
 \end{eg}
 
+\begin{eg}
+	The category $ \Ind_0^{\kappa} $ is 
+	equivalent to the presheaf category $ \PP^{\kappa}(C) $.
+\end{eg}
+
 \begin{proposition}
 	Let $ \kappa \leq \lambda $ be regular cardinals.
 	Let $ C $ be a locally $ \lambda $-small category.
@@ -1178,25 +1218,27 @@ provided of course that $ \kappa < \daleth_{\alpha} $.
 
 \begin{notation}
 	Let $ \kappa \leq \lambda $ be regular cardinals.
-	Let $ C $ and $ D $  be locally $ \lambda $-small categories
+	Let $ C $ and $ D $  be categories
 	that contain all $ \lambda $-small, $ \kappa $-filtered colimits.
 	Denote by $ \Fun^{\kappa \leq \lambda}(C, D) $
 	the full subcategory of $ \Fun(C,D) $ consisting of
 	the functors $ C \to D $ that preserve all 
 	$ \lambda $-small, $ \kappa $-filtered colimits.
 
-	If $ C^0 $ is a locally $ \lambda $-small category,
+	If $ C' $ is a locally $ \lambda $-small category,
 	then restriction along the Yoneda embedding
-	induces and equivalence of categories
+	induces an equivalence of categories
 	\[
-		\Fun^{\kappa \leq \lambda}(\Ind_{\kappa}^{\lambda}(C^0), D)
-		\equivalence \Fun(C^0, D) \period
+		\Fun^{\kappa \leq \lambda}(\Ind_{\kappa}^{\lambda}(C'), D)
+		\equivalence \Fun(C', D) \period
 	\]
 \end{notation}
 
 \begin{eg}
 	Let $ \kappa \leq \lambda \leq \mu $ be regular cardinals.
-	Then for any 
+	Then for any locally $ \lambda $-small category $ C $,
+	we have an equivalence of categories
+	\[ \Ind_{\lambda}^{\mu}(\Ind_{\kappa}^{\lambda}(C)) \simeq \Ind_{\kappa}^{\mu}(C) \period \]
 \end{eg}
 
 %-------------------------------------------------------------------%
