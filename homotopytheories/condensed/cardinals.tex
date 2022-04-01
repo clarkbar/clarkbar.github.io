@@ -1099,51 +1099,48 @@ can all be relativized to a Grothendieck universe.
 \begin{eg}
 	Let $ \alpha \geq 1 $ be an ordinal number.
 	Let $ C $ be a $ \daleth_{\alpha} $-small category.
-	Then we shall write
-	\[ \PP_{\alpha}(\CC) \coloneq \PP^{\daleth_{\alpha}}(\CC) \comma \]
-	the category of presheaves $ C^{\op} \to \An_{\alpha} $.
-	The category $ \PP_{\alpha}(C) $ is then
+	The category $ \PP^{\daleth_{\alpha}}(C) $ is then
 	$ 0 $-presentable of echelon $ \leq \alpha $.
 
 	Conversely, if $ D $ is a $ 0 $-presentable category
 	of echelon $ \leq \alpha $, then 
 	there exists a $ \daleth_{\alpha} $-small category $ C $
-	and an equivalence $ D \simeq \PP_{\alpha}(C) $.
+	and an equivalence $ D \simeq \PP^{\daleth_{\alpha}}(C) $.
 \end{eg}
 
 \begin{notation}
 	Let $ \alpha \geq 1 $ be an ordinal number, and
 	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
-	We shall write $ \Acc^{\kappa}_{\alpha} \subset \Cat_{\alpha+1} $ for
+	We shall write $ \Acc_{\kappa}^{\alpha} \subset \Cat_{\alpha+1} $ for
 	the following subcategory.
 	\begin{enumerate}
-		\item The objects of $ \Acc^{\kappa}_{\alpha} $ are
+		\item The objects of $ \Acc_{\kappa}^{\alpha} $ are
 			the $ \kappa $-accessible categories of echelon $ \leq \alpha $.
-		\item The morphisms $ f \colon C \to D $ of $ \Acc^{\kappa}_{\alpha} $ are
+		\item The morphisms $ f \colon C \to D $ of $ \Acc_{\kappa}^{\alpha} $ are
 			the $ \kappa $-continuous functors of echelon $ \leq \alpha $
-			such that $ f(C^{\kappa}_{\alpha}) \subseteq D^{\kappa}_{\alpha} $.
+			such that $ f(C^{(\kappa)}_{\alpha}) \subseteq D^{(\kappa)}_{\alpha} $.
 	\end{enumerate}
-	Similarly, we shall write $ \Pr^{\kappa,L}_{\alpha} \subset \Acc^{\kappa}_{\alpha}$
+	Similarly, we shall write $ \Pr^{\alpha,L}_{\kappa} \subset \Acc_{\kappa}^{\alpha}$
 	for the following subcategory.
 	\begin{enumerate}
-		\item The objects of $ \Pr^{\kappa,L}_{\alpha} $ are
+		\item The objects of $ \Pr^{\alpha,L}_{\kappa} $ are
 			the $ \kappa $-presentable categories of echelon $ \leq \alpha $.
-		\item The morphisms of $ \Pr^{\kappa,L}_{\alpha} $ are
-			those functors in $ \Acc^{\kappa}_{\alpha} $
+		\item The morphisms of $ \Pr^{\alpha,L}_{\kappa} $ are
+			those functors in $ \Acc_{\kappa}^{\alpha} $
 			that preserve all $ \daleth_{\alpha} $-small colimits.
 	\end{enumerate}
 
 	Now we may write
 	\[
-		\Acc_{\alpha} = \bigcup_{\kappa < \daleth_{\alpha}} \Acc^{\kappa}_{\alpha}
+		\Acc^{\alpha} = \bigcup_{\kappa < \daleth_{\alpha}} \Acc_{\kappa}^{\alpha}
 		\andeq 
-		\Pr^L_{\alpha} = \bigcup_{\kappa < \daleth_{\alpha}} \Pr^{\kappa,L}_{\alpha}
+		\Pr^{\alpha,L} = \bigcup_{\kappa < \daleth_{\alpha}} \Pr^{\alpha,L}_{\kappa}
 	\]
 	for the category of accessible categories of echelon $ \alpha $
 	and the category of presentable categories of echelon $ \alpha $, respectively.
 
 	We specify some corresponding subcategories of $ \Cat_{\alpha}$.
-	Let $ \Cat_{\alpha}^{\vee} \subset \Cat_{\alpha} $ denote
+	Let $ \Cat_{\alpha}^{\idem} \subset \Cat_{\alpha} $ denote
 	the full subcategory consisting of 
 	the idempotent-complete $ \daleth_{\alpha} $-small categories.
 	Let $ \Cat^{\kappa}_{\alpha} \subseteq \Cat_{\alpha} $ denote the subcategory
@@ -1151,39 +1148,50 @@ can all be relativized to a Grothendieck universe.
 	that possess all $ \kappa $-small colimits
 	and whose morphisms are functors that preserve $ \kappa $-small colimits.
 	Finally, let 
-	\[ \Cat^{\kappa,\vee}_{\alpha} \coloneq \Cat^{\kappa}_{\alpha} \cap \Cat_{\alpha} \period \]
+	\[ \Cat^{\kappa,\idem}_{\alpha} \coloneq \Cat^{\kappa}_{\alpha} \cap \Cat_{\alpha} \period \]
+	Please observe that if $ \kappa $ in uncountable, then
+	in fact $ \Cat^{\kappa,\idem}_{\alpha} = \Cat^{\kappa}_{\alpha} $,
+	because one can split an idempotent using a colimit that is
+	$ \aleph_1 $-small and $ \aleph_0 $-filtered
+	\cite[Corollary 4.4.5.15 \& Example 5.3.1.9]{Lurie2009}
 \end{notation}
 
-\begin{nul}
+\begin{nul}%
+	\label{nul:thetafromAcctoCat}
 	Let $ \alpha \geq 1 $ be an ordinal number,
 	and let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
-	The assignment $ C \mapsto C^{(\kappa)}_{\alpha} $ defines a functor
-	\[ \theta \colon \Acc^{\kappa}_{\alpha} \to \Cat^{\vee}_{\alpha} \period \]
+	The assignment $ C \mapsto C^{(\kappa)}_{\alpha} $
+	defines a functor
+	\[ \Acc_{\kappa}^{\alpha} \to \Cat^{\idem}_{\alpha} \period \]
 	This functor is an equivalence;
-	we will describe its inverse in the next section.
-
-	The functor $ \theta $ restricts to an equivalence
-	\[ \theta \colon \Pr^{\kappa,L}_{\alpha} \equivalence \Cat^{\kappa,\vee}_{\alpha} \period \]
+	furthermore, it restricts to an equivalence
+	\[
+		\Pr^{\alpha,L}_{\kappa} \equivalence
+		\Cat^{\kappa,\idem}_{\alpha} \period
+	\]
+	We will describe the inverses of these equivalences in the next section.
 \end{nul}
 
 %-------------------------------------------------------------------%
-\subsection{Ind and Pro}%
-\label{sub:ind_and_pro}
+\subsection{Indization}%
+\label{sub:indization}
 %-------------------------------------------------------------------%
 
 \begin{definition}
-	Let $ \kappa \leq \lambda $ be regular cardinals.
-	Let $ C $ be a locally $ \lambda $-small category.
-	Then $ \Ind_{\kappa}^{\lambda}(C) $ is
-	the smallest full subcategory $ D \subseteq \PP^{\lambda}(C) $
+	Let $ \alpha \geq 1 $ be an ordinal number, and
+	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
+	Let $ C $ be a category of echelon $ \leq \alpha $.
+
+	Then $ \Ind_{\kappa}^{\alpha}(C) $ is
+	the smallest full subcategory $ D \subseteq \PP^{\daleth_{\alpha}}(C) $
 	such that $ D $ contains the image
 	of the Yoneda embedding
-	$ \yo \colon C \inclusion \PP^{\lambda}(C) $,
+	$ \yo \colon C \inclusion \PP^{\daleth_{\alpha}}(C) $,
 	and $ D $ is stable under
-	$ \lambda $-small, $ \kappa $-filtered colimits.
+	$ \daleth_{\alpha} $-small, $ \kappa $-filtered colimits.
 
 	Accordingly, if $ C $ is a locally small large-category,
-	then $ \Ind_{\kappa}^{\VV} $ is
+	then $ \Ind_{\kappa}^V(C) $ is
 	the smallest full subcategory $ D \subseteq \PP^V(C) $
 	such that $ D $ contains the image
 	of the Yoneda embedding
@@ -1192,54 +1200,117 @@ can all be relativized to a Grothendieck universe.
 \end{definition}
 
 \begin{eg}
-	The category $ \Ind_{\kappa}^{\kappa}(C) $ is
-	equivalent to $ C $ itself.
-\end{eg}
-
-\begin{eg}
-	The category $ \Ind_0^{\kappa} $ is 
-	equivalent to the presheaf category $ \PP^{\kappa}(C) $.
+	The category $ \Ind_{0}^{\alpha}(C) $ is 
+	equivalent to the presheaf category
+	$ \PP^{\daleth_{\alpha}}(C) $.
 \end{eg}
 
 \begin{proposition}
-	Let $ \kappa \leq \lambda $ be regular cardinals.
-	Let $ C $ be a locally $ \lambda $-small category.
+	Let $ \alpha \geq 1 $ be an ordinal number, and
+	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
+	Let $ C $ be a category of echelon $ \leq \alpha $.
 	Then the Yoneda embedding
-	$ \yo \colon C \inclusion \Ind_{\kappa}^{\lambda}(C) $,
-	generates $ \Ind_{\kappa}^{\lambda}(C) $ freely under
-	$ \lambda $-small, $ \kappa $-filtered colimits.
+	$ \yo \colon C \inclusion \Ind_{\kappa}^{\alpha}(C) $,
+	generates $ \Ind_{\kappa}^{\alpha}(C) $ freely under
+	$ \daleth_{\alpha} $-small, $ \kappa $-filtered colimits.
 
 	Similarly, if $ C $ is a locally small large-category,
 	then the Yoneda embedding
 	$ \yo \colon C \inclusion \Ind_{\kappa}^{V}(C) $,
-	generates $ \Ind_{\kappa}^V(C) $ freely under
+	generates $ \Ind_{\kappa}^{V}(C) $ freely under
 	$ \kappa $-filtered colimits.
 \end{proposition}
 
-\begin{notation}
-	Let $ \kappa \leq \lambda $ be regular cardinals.
+\begin{nul}
+	Let $ \alpha \geq 1 $ be an ordinal number, and
+	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
 	Let $ C $ and $ D $  be categories
-	that contain all $ \lambda $-small, $ \kappa $-filtered colimits.
-	Denote by $ \Fun^{\kappa \leq \lambda}(C, D) $
+	that contain all $ \daleth_{\alpha} $-small, $ \kappa $-filtered colimits.
+	Denote by $ \Fun_{\kappa}^{\alpha}(C, D) $
 	the full subcategory of $ \Fun(C,D) $ consisting of
 	the functors $ C \to D $ that preserve all 
-	$ \lambda $-small, $ \kappa $-filtered colimits.
-
-	If $ C' $ is a locally $ \lambda $-small category,
+	$ \daleth_{\alpha} $-small, $ \kappa $-filtered colimits.
+	
+	If $ C' $ is a category of echelon $ \leq \alpha $,
 	then restriction along the Yoneda embedding
 	induces an equivalence of categories
 	\[
-		\Fun^{\kappa \leq \lambda}(\Ind_{\kappa}^{\lambda}(C'), D)
+		\Fun_{\kappa}^{\alpha}(\Ind_{\kappa}^{\alpha}(C'), D)
 		\equivalence \Fun(C', D) \period
 	\]
-\end{notation}
+\end{nul}
 
 \begin{eg}
-	Let $ \kappa \leq \lambda \leq \mu $ be regular cardinals.
-	Then for any locally $ \lambda $-small category $ C $,
-	we have an equivalence of categories
-	\[ \Ind_{\lambda}^{\mu}(\Ind_{\kappa}^{\lambda}(C)) \simeq \Ind_{\kappa}^{\mu}(C) \period \]
+	Let $ \alpha \geq 1 $ be an ordinal number, and
+	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
+	Let $ C $ be a $ \daleth_{\alpha} $-small category.
+	Then the category $ \Ind_{\kappa}^{\alpha}(C) $ is
+	$ \kappa $-accessible of echelon $ \leq \alpha $.
+	
+	Hence we obtain a functor
+	\[
+		\Ind_{\kappa}^{\alpha} \colon
+		\Cat_{\alpha} \to \Acc_{\kappa}^{\alpha} \period
+	\]
+	This functor exhibits $ \Acc_{\kappa}^{\alpha} $ as
+	a localization of $ \Cat_{\alpha} $,
+	and it restricts to the inverse
+	\[ \Cat_{\alpha}^{\idem} \equivalence \Acc_{\kappa}^{\alpha} \]
+	of the equivalence $ C \mapsto C_{\alpha}^{(\kappa)} $
+	constructed in \eqref{nul:thetafromAcctoCat}.
+	It also restricts further to the equivalence
+	\[
+		\Cat_{\alpha}^{\kappa,\idem} \equivalence
+		\Pr^{\alpha,L}_{\kappa}
+	\]
+	inverse to the restriction of
+	$ C \mapsto C_{\alpha}^{(\kappa)} $.
 \end{eg}
+
+\begin{construction}
+	Let $ \beta > \alpha \geq 1 $ be two ordinal numbers.
+	Then we can use indization to define 
+	a change-of-universe functor
+	\[
+		\II_{\alpha}^{\beta} \coloneq
+		\Ind_{\daleth_{\alpha}}^{\beta} \period
+	\]
+	If $ \kappa < \daleth_{\alpha} $ is a regular cardinal,
+	then this is a fully faithful functor
+	\[
+		\II_{\alpha}^{\beta} \colon
+		\Acc_{\kappa}^{\alpha} \inclusion
+		\Acc_{\kappa}^{\beta} \comma
+	\]
+	which is equivalent to the inclusion
+	$ \Cat_{\alpha}^{\idem} \inclusion \Cat_{\beta}^{\idem} $.
+	The functor $ \II_{\alpha}^{\beta} $ restricts to 
+	a fully faithful functor
+	\[
+		\II_{\alpha}^{\beta} \colon
+		\Pr^{\alpha,L}_{\kappa} \inclusion
+		\Pr^{\beta,L}_{\kappa} \comma
+	\]
+	which is equivalent to the inclusion
+	$ \Cat_{\alpha}^{\kappa,\idem} \inclusion \Cat_{\beta}^{\kappa,\idem} $.
+\end{construction}
+
+\begin{eg}
+	For any category $ C $ of echelon $ \alpha $,
+	one has
+	\[
+		\II_{\alpha}^{\beta}(\PP^{\daleth_{\alpha}}(C))
+		\simeq \PP^{\daleth_{\beta}}(C) \period
+	\]
+\end{eg}
+
+\begin{notation}
+	Let $ \alpha \geq 1 $ be an ordinal number.
+	Then we will abberviate
+	\[
+		\Ind^{\alpha} \coloneq \Ind_{\aleph_0}^{\alpha} \period
+	\]
+\end{notation}
 
 %-------------------------------------------------------------------%
 \subsection{Higher inaccessibility}%

@@ -20,35 +20,72 @@
 \label{sub:ultrafilters_on_sets}
 %-------------------------------------------------------------------%
 
+Ultrafilters on sets are masters of disguise.
+They manage to appear exceptionally natural
+in several different outfits:
+\begin{enumerate}
+	\item Most simply, an ultrafilter on a set $ S $
+		provides an integral that assigns,
+		to a map $ f $ from $ S $ to a finite set $ I $,
+		an element $ \int f \ d\mu \in I $.
+	\item In functional analysis, one is used to the idea
+		that the data of an integral operator
+		for functions on a suitable space
+		is equivalent to
+		the data of a measure of that space.
+		Accordingly, an ultrafilter on $ S $ can be regarded
+		as a probability measure $ \mu $ on $ S $,
+		for which every subset is
+		either measure $ 0 $ (\enquote{thin}) or
+		measure $ 1 $ (\enquote{thick}).
+	\item 
+\end{enumerate}
+
+\begin{nul}
+	Recall that $ \Set_0 $ denotes the category of finite sets.
+\end{nul}
+
 \begin{definition}%
 	\label{dfn:ultrafilter}
-	Let $ S $ be a set,
-	and consider the functor
-	$ \yo^S \colon \Set^V \to Set^V $
-	corepresented by $ S $.
-	Let $ i \colon \Set_0 \inclusion \Set^V $
-	denote the inclusion of the full subcategory 
-	of finite sets.
+	Let $ S $ be a set.
+	We shall write $ S_+ \coloneq S \sqcup \{ \infty \} $.
+	An \defn{ultrafilter} is a section of the forgetful functor
+	\[ S_+/\Set_0 \to S/\Set_0 \period \]
+\end{definition}
 
-	An \defn{ultrafilter} on $ S $ is
+\begin{nul}
+	Let $ i \colon \Set_0 \inclusion \Set^V $
+	denote the inclusion.
+	The forgetful functor $ S/\Set_0 \to \Set_0 $
+	is a cocartesian fibration classified by
+	the restriction $ \yo^S \circ i $ of the functor
+	corepresented by $ S $.
+	Consequently, an ultrafilter on $ S $ is
+	tantamount to 
 	a natural transformation
 	\[ \yo^S \circ i \to i \period \]
-\end{definition}
+\end{nul}
+
 
 \begin{notation}
 	Let $ S $ be a set, and
 	let $ \mu $ be an ultrafilter on $ S $.
 	We find it expressive to write
-	\[ \int_S (\cdot) \ d\mu \colon \yo^S \circ i \to i \]
-	for the natural transformation.
-	If $ I $ is a finite set,
+	\[ \int_S (\cdot) \ d\mu \]
+	for the functor $ S/\Set_0 \to S_+/\Set_0 $. 
+	So if $ I $ is a finite set,
 	and if $ f \colon S \to I $ is a map,
 	then this natural transformation
-	specifies an element
-	\[ \int_S f \ d\mu \in I \period \]
+	specifies an element of $ I $ that we shall write as
+	\[
+		\int_S f \ d\mu
+		\text{\quad or \quad}
+		\int_{s \in S} f(s) \ d\mu
+		\period
+	\]
 	The naturality condition ensures that
-	if $ \phi \colon I \to J $ is a map of finite sets,
-	then
+	for a map $ \phi \colon I \to J $ of finite sets,
+	we have
 	\[
 		\phi \left( \int_S f \ d\mu \right) = 
 		\int_S \phi \circ f \ d\mu \period
@@ -57,10 +94,9 @@
 
 \begin{eg}
 	Let $ S $ be a set, and let $ s \in S $ be an element.
-	The \defn{principal ultrafilter} $ \delta_s $ is then defined so that
-	\[
-		\int_S f \ d \delta_s = f(s) \period
-	\]
+	The \defn{principal ultrafilter} $ \delta_s $ is
+	then defined so that
+	\[ \int_S f \ d \delta_s = f(s) \period \]
 	By Yoneda,
 	every ultrafilter on a finite set is principal,
 	but as we shall see,
@@ -89,7 +125,7 @@
 	Let $ \phi \colon S \to T $ be a map,
 	and let $ \mu $ be an ultrafilter on $ S $.
 	The induced ultrafilter $ \phi_{\ast}\mu $ on $ T $
-	is then given by
+	is then given by the change-of-variables formula:
 	\[
 		\int_T f \ d (\phi_{\ast}\mu) =
 		\int_S (f \circ \phi) \ d \mu \period
@@ -101,8 +137,10 @@
 	We can express $ \beta(S) $ as an end:
 	\[
 		\beta(S) =
-		\int_{I \in \Set_0} \Map(\Map(S,I),I) \period
+		\sqint_{I \in \Set_0} I^{I^S} \period
 	\]
+	(Here we are writing $ Y^X $ for the set $ \Map(X,Y) $
+	of maps $ X \to Y $.)
 	Hence for an ordinal number $ \alpha $,
 	the functor $ \beta \colon \Set_{\alpha} \to \Set_{\alpha} $
 	is the right Kan extension of
@@ -115,10 +153,10 @@
 \end{nul}
 
 Thus far, there is nothing to guarantee that we aren't
-simply speaking about the identity functor.
-We have not laid eyes an example of an ultrafilter
+simply speaking about the identity functor;
+we have not seen an example of an ultrafilter
 that is not principal.
-It turns out that infinite sets have plenty of
+It turns out that an infinite set $ S $ has plenty of
 non-principal ultrafilters.
 To prove the existence of these,
 let us look at a more conventional way
@@ -398,48 +436,69 @@ on an infinite set.
 	independent of Zermelo--Fraenkel set theory.
 \end{nul}
 
-\begin{proposition}
+\begin{nul}
+	What colimits does $ \beta $ preserve?
+	We can easily rule out the possibility that
+	$ \beta $ preserves arbitrary coproducts:
+	if $ S $ is an infinite set, then
+	we have seen that $ \beta(S) \neq S $, but
+	on the other hand
+	\[
+		\coprod_{s \in S} \beta(\{s\}) =
+		\coprod_{s \in S} \{s\} = S \period
+	\]
+
+	On the other hand, $ \beta $ does preserve finite coproducts:
+	if $ \mu $ is an ultrafilter on
+	$ S = S_1 \sqcup \cdots \sqcup S_n $,
+	then $ \mu $ is supported on
+	exactly one of the summands $ S_i $.
+	Thus $ \mu $ is induced by a unique ultrafilter
+	on this summand $ S_i $.
+	Consequently, the natural map
+	\[
+		\beta(S_1) \sqcup \cdots \sqcup \beta(S_n) \to \beta(S)
+	\]
+	is a bijection.
+
+	Since all coequalizers in $ \Set $ are split ($ \ac $),
+	it follows that any functor out of $ \Set $ preserves them.
+	We thus conclude:
+\end{nul}
+
+\begin{proposition}%
+	\label{prp:betapreservesfinitecolimits}
 	The functor $ \beta \colon \Set^V \to \Set^V $
 	preserves finite colimits.
 \end{proposition}
 
-\begin{proof}
-	If $ \mu $ is an ultrafilter on
-	$ S = S_1 \sqcup \cdots \sqcup S_n $,
-	then exactly one of the $ S_i $ is $ \mu $-thick.
-	Thus $ \mu $ is induced by a unique ultrafilter
-	on this unique summand $ S_i $.
-	This proves that $ \beta $ preserves finite coproducts.
-
-	Now let $ S $ be a set, and let $ R \parallelto S $
+\begin{eg}
+	Let $ S $ be a set, and let $ R \parallelto S $
 	be an equivalence relation.
 	Applying $ \beta $, we obtain a relation
-	$ \beta(R) \parallelto \beta(S) $.
-	We must prove that the natural map
-	$ \beta(S)/\beta(R) \to \beta(S/R) $
-	is a bijection.
-	It is automatically a surjection,%
-	\footnote{Every surjection has a section (\ac),
-		and so every functor $ \Set \to \Set $ carries
-		surjections to surjections.}
-	so it remains to show that it is injective.
+	$ \beta(R) \parallelto \beta(S) $, which induces
+	the natural bijection
+	$ \beta(S)/\beta(R) \equivalence \beta(S/R) $.
+	Let us try to understand the relation $ \beta(R) $
+	in explicit terms.
 	
-	Given ultrafilters $ \mu $ and $ \nu $ on $ S $,
-	let us write $ \mu R \nu $ if
+	Let $ \mu $ and $ \nu $ be ultrafilters on $ S $.
+	Let us write $ \mu R \nu $ if
 	the pair $ (\mu, \nu) \in \beta(S) \times \beta(S) $
 	lies in the image of $ \beta(R) $.
 	Thus $ \mu R \nu $ if and only if
 	there exists an ultrafilter $ \tau $ on $ R $
 	such that:
-	\begin{enumerate}
+	\begin{itemize}
 		\item for any $ \mu $-thick subset $ U \subseteq S $,
 			the set $ (U \times S) \cap R $
 			is $ \tau $-thick, and
 		\item for any $ \nu $-thick subset $ V \subseteq S $,
 			the set $ (S \times V) \cap R $
 			is $ \tau $-thick.
-	\end{enumerate}
-	In other words, $ \mu R \nu $ if and only if
+	\end{itemize}
+	Combining these conditions, we see that
+	$ \mu R \nu $ if and only if
 	there exists an ultrafilter $ \tau $ on $ R $
 	supported on the family
 	\[
@@ -448,6 +507,7 @@ on an infinite set.
 			(U \in \mathscr{F}_{\mu})
 			\wedge (V \in \mathscr{F}_{\nu}) \} \period
 	\]
+	
 	By Lemma \ref{lem:generateultrafilters},
 	$ \mu R \nu $ if and only if
 	$ \mathscr{G} $ enjoys the finite intersection property.
@@ -456,7 +516,7 @@ on an infinite set.
 	so is $ \mathscr{G} $.
 	So $ \mu R \nu $ if and only if
 	$ \mathscr{G} $ does not contain the empty set,
-	which holds if and only if,
+	which in turn holds if and only if,
 	for every $ \mu $-thick $ U \subseteq S $ and
 	every $ \nu $-thick $ V \subseteq S $,
 	we have $ (U \times V) \cap R \neq \emptyset $.
@@ -472,7 +532,7 @@ on an infinite set.
 	or equivalently, $ U \cap \overline{V} \neq \emptyset $.
 
 	Using the observation of Example \ref{eg:thicknesscriterion},
-	we thus conclude that the following are equivalent:
+	we conclude that the following are equivalent:
 	\begin{enumerate}
 		\item $ \mu R \nu $;
 		\item the saturation of every $ \mu $-thick subset
@@ -484,9 +544,86 @@ on an infinite set.
 		\item $ \mu $ and $ \nu $ induce the same ultrafilter
 			on $ S/R $.
 	\end{enumerate}
-	In other words, the map $ \beta(S)/\beta(R) \to \beta(S/R) $
-	is an injection.
-\end{proof}
+\end{eg}
+
+\begin{nul}
+	What \emph{limits} does $ \beta $ preserve?
+	As it happens, not very many.
+
+	Clearly $ \beta $ preserves the terminal object.
+	If $ S $ and $ T $ are sets, then
+	we can contemplate the natural map
+	$ (\pr_{1,\ast},\pr_{2,\ast}) \colon
+	\beta(S \times T) \to \beta(S) \times \beta(T) $.
+	If $ \mu $ is an ultrafilter on $ S $,
+	and $ \nu $ is an ultrafilter on $ T $,
+	then the fiber of this map over $ (\mu,\nu) $
+	is the set of those ultrafilters $ \tau $
+	on $ S \times T $ such that
+	\[
+		\pr_{1,\ast}\tau = \mu \andeq
+		\pr_{2,\ast}\tau = \nu \period
+	\]
+	These fibers are exactly the ultrafilters supported on
+	\[
+		\mathscr{G} \coloneq
+			\{ U \times V :
+			(U \in \mathscr{F}_{\mu})
+			\wedge (V \in \mathscr{F}_{\nu}) \} \period
+	\]
+	Since $ \mathscr{G} $ enjoys the finite intersection property,
+	this fiber is certainly nonempty.
+
+	Let us construct two ultrafilters supported on $ \mathscr{G} $.
+	\begin{enumerate}
+		\item We have an ultrafilter $ \mu \ltimes \nu $,
+			which is defined by the formula
+			\[
+			\int_{X \times Y} f\ d(\mu \ltimes \nu) =
+			\int_{x \in X} \int_{y \in Y}
+			f(x, y)\ d\nu\ d\mu \period
+			\]
+			A subset $ W \subseteq X \times Y $ is
+			$ \mu \ltimes \nu $-thick if and only if 
+			\[
+			\left\{ x \in X :
+			\{ y \in Y : (x,y) \in W \}
+			\in \mathscr{F}_{\nu} \right\}
+			\in \mathscr{F}_{\mu} \period
+			\]
+		\item We can also exchange the order 
+			of integration in this formula.
+			This results in an ultrafilter
+			$ \mu \rtimes \nu $ given by
+			the formula
+			\[
+			\int_{X \times Y} f\ d(\mu \rtimes \nu) =
+			\int_{y \in Y} \int_{x \in X}
+			f(x, y)\ d\mu\ d\nu \period
+			\]
+			A subset $ W \subseteq X \times Y $ is
+			$ \mu \rtimes \nu $-thick if and only if 
+			\[
+			\left\{ y \in Y :
+			\{ x \in X : (x,y) \in W \}
+			\in \mathscr{F}_{\mu} \right\}
+			\in \mathscr{F}_{\nu} \period
+			\]
+	\end{enumerate}
+	
+	If one of $ \mu $ or $ \nu $ is a principal ultrafilter,
+	then $ \mu \ltimes \nu = \mu \rtimes \nu $,
+	but in general these two are distinct.
+	Indeed, let $ \mu, \nu \in \beta(\NN) $ be
+	two non-principal ultrafilters.
+	Then the set $ \{ (x,y) \in \NN \times \NN : x < y \} $
+	is $ (\mu \ltimes \nu) $-thick but $ (\mu \rtimes \nu) $-thin,
+	whereas the set $ \{ (x,y) \in \NN \times \NN : x > y \} $
+	is $ (\mu \ltimes \nu) $-thin but $ (\mu \rtimes \nu) $-thick.
+
+	From this, we deduce that $ \beta $ does not preserve
+	products or pullbacks in general.
+\end{nul}
 
 \begin{construction}
 	Let $ \alpha $ be an ordinal number.
@@ -529,7 +666,7 @@ on an infinite set.
 		\begin{tikzcd}[sep=1.5em]
 			X \arrow[r, "\delta_X"] &
 			\beta(X) =
-			\int_{I \in F} I^{I^X} \arrow[r, "\pr_I"] &
+			\sqint_{I \in F} I^{I^X} \arrow[r, "\pr_I"] &
 			I^{I^X}
 		\end{tikzcd}
 	\]	
@@ -551,14 +688,14 @@ on an infinite set.
 	is the composite
 	\[
 		\begin{tikzcd}[sep=1.5em]
-			\beta(\beta(S)) =
-			\int_{J \in F} J^{J^{\int_{I \in F} I^{I^S}}}
-			\arrow[r, "c"] &
-			\int_{J \in F} \int_{I \in F} J^{J^{I^{I^S}}}
-			\arrow[r, "p"] &
-			\int_{I \in F} I^{I^{I^{I^S}}}
-			\arrow[r, "\int_I \epsilon_{I^S}^{\ast}"] &
-			\int_{I \in F} I^{I^S} = \beta(S) \comma
+		\beta(\beta(S)) =
+		\sqint_{J \in F} J^{J^{\sqint_{I \in F} I^{I^S}}}
+		\arrow[r, "c"] &
+		\sqint_{J \in F} \sqint_{I \in F} J^{J^{I^{I^S}}}
+		\arrow[r, "p"] &
+		\sqint_{I \in F} I^{I^{I^{I^S}}}
+		\arrow[r, "\sqint_I \epsilon_{I^S}^{\ast}"] &
+		\sqint_{I \in F} I^{I^S} = \beta(S) \comma
 		\end{tikzcd}
 	\]
 	where $ c $ and $ p $ are the canonical maps.

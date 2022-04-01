@@ -768,9 +768,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/csquotes/csquotes.cfg
 INPUT ./book.aux
 INPUT book.aux
 INPUT book.aux
-INPUT ./introduction.aux
-INPUT introduction.aux
-INPUT introduction.aux
 INPUT ./foundations.aux
 INPUT foundations.aux
 INPUT foundations.aux
@@ -794,16 +791,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 OUTPUT book.toc
-INPUT ./introduction.tex
-INPUT ./introduction.tex
-INPUT ./introduction.tex
-OUTPUT introduction.aux
-INPUT ./introduction.tex
-INPUT ./introduction.tex
-INPUT ./introduction.tex
-INPUT introduction.tex
-INPUT ./introduction.tex
-INPUT introduction.tex
 INPUT ./foundations.tex
 INPUT ./foundations.tex
 INPUT ./foundations.tex
@@ -869,9 +856,6 @@ INPUT book.bbl
 INPUT ./book.bbl
 INPUT book.bbl
 INPUT book.aux
-INPUT ./introduction.aux
-INPUT introduction.aux
-INPUT introduction.aux
 INPUT ./foundations.aux
 INPUT foundations.aux
 INPUT foundations.aux

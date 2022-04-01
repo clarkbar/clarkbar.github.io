@@ -1,0 +1,733 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+\section{Monads}%
+\label{sec:monads}
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+
+%-------------------------------------------------------------------%
+\subsection{Monoidal categories}%
+\label{sub:monoidal_categories}
+%-------------------------------------------------------------------%
+
+\begin{definition}
+	An \defn{operator category} is a $1$-category $ \Phi $
+	of echelon $ 0 $
+	that satisfies the following conditions.
+	\begin{enumerate}
+		\item There exists a terminal object $ \ast \in \Phi $.
+			A map $ i \colon \ast \to I $ will be called
+			a \emph{point} of $ I $, and
+			the set of points will be denoted
+			$ |I| \coloneq \Mor_{\Phi}(\ast, I) $.
+			Given a point $ i \in |I| $, we will write
+			$ \{ i \} $ for the corresponding object of $ \Phi_{/I} $.
+		\item For every morphism $ f \colon J \to I $ and
+			for every point $ i \in |I| $,
+			there exists a fiber $ J_i \coloneq J \times_I \{i\} $.
+	\end{enumerate}
+	
+	A functor $ f \colon \Psi \to \Phi $ is \defn{admissible} if and only if
+	it preserves the terminal object and the formation of fibers.
+	We call $ f $ an \defn{operator morphism}
+	if and only if, in addition,
+	for every object $ I \in \Phi $,
+	the map $ |I| \to |f(I)| $ is a bijection.
+\end{definition}
+
+\begin{eg}
+	The one-point category $ \ast $ is an operator category.
+	In fact, it is a zero object in
+	the category of operator categories and admissible functors,
+	and it is an initial object in
+	the category of operator categories and operator morphisms.
+\end{eg}
+
+\begin{eg}
+	The category $ F $ of finite sets is an operator category.
+	It is terminal in the category of operator categories and operator morphisms.
+	Every object of $ F $ is isomorphic to a set of the form
+	\[
+		\angs{n} \coloneq \{ 1, \ldots, n \} \comma
+	\]
+	where $ n \in \NN_0 $.
+\end{eg}
+
+\begin{eg}
+	The category $ E $ of totally ordered finite sets is an operator category.
+	Every object of $ E $ is isomorphic to a set of the form%
+	\footnote{This notation may engender some bemusement.
+		Regarded as an object of the simplicial category $ \mbfDelta $,
+		the object $ [n] $ normally refers to
+		a totally ordered set with $ n+1 $ elements.
+		However, there is method in our madness:
+		we will construct a category $ \Theta(E) $, which
+		has the same objects as $ E $,
+		and which is equivalent to the category $ \mbfDelta^{\op} $;
+		under this equivalence, our $ [n] $ corresponds to the usual $ [n] $.}
+	\[
+		[n] \coloneq \{ 1, \ldots, n \} \comma
+	\]
+	where $ n \in \NN_0 $.
+\end{eg}
+
+\begin{eg}
+	Let $ n \in \NN $.
+	If $ \Phi $ is an operator category, then
+	so is the full subcategory $ \Phi_{\leq n} \subseteq \Phi $
+	consisting of those objects $ I \in \Phi $ such that
+	the cardinality of $ |I| $ is no greater than $ n $.
+\end{eg}
+
+\begin{construction}
+	If $ \Phi $ and $ \Psi $ are operator categories, then
+	we may define an operator category $ \Phi \wr \Psi $ as follows.
+	The objects are pairs $ (I, M_I) $ consisting of
+	an object $ I \in \Phi $ and
+	an indexed collection $ M_I = \{M_i\}_{i \in |I|} $ of
+	objects $ M_i \in \Psi $.
+	A morphism $ (\phi, \psi_J) \colon (J, N_J) \to (I, M_J) $ consists of
+	a morphism $ \phi \colon J \to I $ of $ \Phi $ and,
+	for every $ j \in |J| $, a morphism $ \psi_j \colon N_j \to M_{\phi(j)} $ of $ \Psi $.
+
+	This is the \defn{wreath product} of operator categories.
+	One can show that this is a monoidal structure on
+	the category of operator categories and operator morphisms
+	with unit $ \ast $.
+
+	The functor $ \Phi \wr \Psi \to \Phi $
+	given by the assignment $ (I, M_I) \mapsto I $ is admissible.
+	The functors $ \Phi = \Phi \wr \ast \to \Phi \wr \Psi $ and
+	$ \Psi = \ast \wr \Psi \to \Phi \wr \Psi $ are both
+	operator morphisms.
+\end{construction}
+
+\begin{eg}
+	Perhaps the most interesting examples of operator categories are
+	the iterated wreath products of $ E $:
+	we let $ E^{0} \coloneq 0 $, and
+	for every $ n \in \NN_0 $, we let $ E^{n+1} \coloneq E \wr E^{n} $.
+
+	Thus the objects of $ E^2 $ are tuples of the form
+	$ ([i]; [m_1], \dots, [m_i]) $.
+	It may be tempting to think of such an object as
+	a suitable partition of
+	the totally ordered set $ [m_1 + \cdots + m_i] $, but
+	this overall ordering need not be respected by a morphism 
+	\[
+		(\phi; \psi_1, \dots, \psi_i) \colon ([i]; [m_1], \dots, [m_i]) \to ([j]; [n_1], \dots, [n_j])
+	\]
+	of $ E^2 $,
+	which consists of a morphism $ \phi \colon [i] \to [j] $ and
+	morphisms
+	\[
+		\psi_1 \colon [m_1] \to [n_{\phi(1)}],\ 
+		\dots,\ 
+		\psi_i \colon [m_i] \to [n_{\phi(i)}] \period
+	\]
+\end{eg}
+
+\begin{definition}
+	An operator category $ \Phi $ is said to be \defn{perfect} if and only if
+	it satisfies the following hypotheses.
+	\begin{enumerate}
+		\item There exist an object $ T \in \Phi $ and
+			a point $ t \in |T| $
+			such that, for every object $ I \in \Phi $ and
+			every point $ i \in |I| $,
+			there exists a unique morphism $ \chi_i \colon I \to T $
+			such that $ I_t = \{ i \} $.
+			We call the pair $ (T,t) $ a \defn{point classifier}.
+		\item The functor $ \Phi_{/T} \to \Phi $
+			given by the assignment $ I \mapsto I_t $
+			admits a right adjoint $ T \colon \Phi \to \Phi_{/T} $.
+	\end{enumerate}
+\end{definition}
+
+\begin{nul}
+	We have abused notation by using $ T $ for both the point classifier
+	and the right adjoint of the functor $ I \mapsto I_t $.
+	This abuse is partially justified by the observation that $ T = T(\ast) $.
+
+	Let $ I \in \Phi $, and let $ J \in \Phi_{/T} $.
+	There is a natural unit morphism $ I \to TI $, and
+	its universal property states that
+	every morphism $ J_t \to I $ extends in a unique fashion to
+	a morphism $ J \to TI $ over $ T $.
+\end{nul}
+
+\begin{eg}
+	The operator category $ F $ is perfect:
+	the point classifier is the set $ T = \{ t, 0 \} $,
+	and the functor $ T $ carries a finite set $ I $
+	to the finite set
+	\[ TI = I \sqcup \{ 0 \} \comma \]
+	viewed as an object over $ T $ via the map
+	$ \chi_I \colon TI \to T $ with $ \chi_I^{-1}\{t\} = I $.
+
+	Thus $ T \cong \angs{2} $, and
+	$ T\angs{n} \cong \angs{n+1} $.
+\end{eg}
+
+\begin{eg}
+	The operator category $ E $ is also perfect:
+	the point classifier is the totally ordered finite set
+	$ T = \{ -\infty < t < +\infty \} $,
+	and the functor $ T $ carries a totally ordered finite set $ J $
+	to the finite set
+	\[ TJ \coloneq \{ -\infty \} \sqcup J \sqcup \{ +\infty \} \comma \]
+	where, for every $ j \in J $, both $ -\infty < j $ and $ j < +\infty $,
+	viewed as an object over $ T $ via the map
+	$ \chi_J \colon TJ \to T $ with $ \chi_J^{-1}\{t\} = J $.
+
+	Thus $ T \cong [3] $, and
+	$ T[n] \cong [n+2] $.
+\end{eg}
+
+\begin{eg}
+	The operator categories $ F_{\leq n} $ and $ E_{\leq n} $ are
+	not perfect unless $ n = 1 $.
+\end{eg}
+
+\begin{eg}
+	If $ \Phi $ and $ \Psi $ are two perfect operator categories,
+	then the wreath product $ \Phi \wr \Psi $ is perfect as well.
+	The point classifier is the pair $ (I, M_I) $, where
+	$ I = T_{\Phi} $ is the point classifier for $ \Phi $, and
+	$ M_I = \{M_i\}_{i \in |T_{\Phi}|} $ is the indexed collection in which
+	\[
+		M_i = \begin{cases}
+			\ast & \text{if } i \neq t \semicolon \\
+			T_{\Psi} & \text{if } i = t \period
+		\end{cases}
+	\]
+\end{eg}
+
+\begin{eg}
+	In particular, $ E^2 $ is a perfect operator category.
+	Abstractly, its point classifier is $ ([3]; [1], [3], [1])$, and
+	\[ T([i]; [m_1], \dots, [m_i]) \cong ([i+2]; [1], [m_1+2], \dots, [m_i+2], [1]) \period \]
+\end{eg}
+
+\begin{definition}
+	Let $ \Phi $ be a perfect operator category, and
+	let $ I, J \in \Phi $.
+	Then a morphism $ TJ \to TI $ of $ \Phi $
+	is \defn{algebraic} if and only if 
+	the induced morphism $ J \times_{TI} I \inclusion TJ \times_{TI} I $
+	is an isomorphism.
+\end{definition}
+
+\begin{nul}
+	Let $ TJ \to TI $ be an algebraic morphism of $ \Phi $.
+	Consider $ TI $ as an object over $ T $ via
+	the structure map, and
+	consider $ TJ $ as an object over $ T $ via
+	the composite $ TJ \to TI \to T $.
+	The universal property of $ TJ $ then states that
+	$ TJ \to TI $ is uniquely determined by its restriction
+	$ TJ \times_{TI} I \to I $.
+	Since the morphism $ J \times_{TI} I \inclusion TJ \times_{TI} I $
+	is an isomorphism, it follows that 
+	an algebraic morphism $ TJ \to TI $ is uniquely determined by its restriction
+	$ J \times_{TI} I \to I $.
+\end{nul}
+
+\begin{eg}
+	If $ \psi \colon J \to I $ is a morphism of $ \Phi $, then
+	the induced morphism $ T(\psi) \colon TJ \to TI $ is algebraic.
+\end{eg}
+
+\begin{eg}
+	If $ I \in \Phi $ is an object and $ i \in |I| $,
+	then there is a classifying morphism $ I \to T $ of $ \Phi $
+	whose fiber over $ t $ is $ i $.
+	The classifying morphism in turn extends to
+	an algebraic morphism $ \chi_i \colon TI \to T $.
+\end{eg}
+
+\begin{construction}
+	Let $ \Phi $ be a perfect operator category.
+
+	If $ I,J,K \in \Phi $, then 
+	the composition of an algebraic morphism $ TK \to TJ $
+	along with another algebraic morphism $ TJ \to TI $
+	is again algebraic.
+	
+	We are therefore entitled to construct
+	the following category $ \Theta(\Phi) $.
+	The objects of $ \Theta(\Phi) $ are the objects of $ \Phi $.
+	A morphism $ I \to J $ in $ \Theta(\Phi) $ is
+	an algebraic morphism $ TJ \to TI $.
+	Please note the reversal of direction!
+\end{construction}
+
+\begin{eg}
+	The category $ \Theta(F) $ is Segal's category $ \mbfGamma $;
+	that is, $ \Theta(F) $ is opposite to
+	the category of pointed finite sets.
+\end{eg}
+
+\begin{eg}
+	The category $ \Theta(E) $ is
+	the simplicial category $ \mbfDelta $.
+	André Joyal constructed
+	the equivalence $ \Theta(E) \equivalence \mbfDelta $ as
+	the assignment
+	$ I \mapsto \Mor_{\Theta(E)}(\emptyset, I) $, where
+	the set of algebraic morphisms $ TI \to T(\emptyset) $
+	is given its natural ordering.
+	This equivalence carries
+	$ [n] = \{1 < \cdots < n\} \in \Theta(E) $ to the object
+	\[ \{0 < \cdots < n\} \in \mbfDelta \comma \]
+	which justifies our surprising notation for objects of $ E $.
+\end{eg}
+
+\begin{eg}
+	For every $ n \in \NN_0 $, the category $ \Theta(E^n) $
+	is Joyal's category $ \Theta _n $.
+	This follows from a theorem of Clemens Berger,
+	which identifies $ \Theta_n $ as an iterated wreath product of $ \Theta_1 $.
+\end{eg}
+
+\begin{nul}
+	On a perfect operator $ \Phi $,
+	the assignment $ I \mapsto TI $ defines an endofunctor
+	$ T \colon \Phi \to \Phi $.
+	In fact, this endofunctor always admits
+	the structure of a monad.
+
+	We have a natural transformation $ \epsilon \colon \id \to T $
+	between endofunctors on $ \Phi $,
+	which for any $ I \in \Phi $ gives
+	the inclusion $ I \inclusion TI $
+	that is pulled back from the inclusion $ \{t\} \to T $.
+
+	Let us describe another key natural transformation
+	$ \mu \colon T^2 \to T $.
+	For every $ I \in \Phi $, we may compose the map $ T^2I \to TT $
+	with the classifying map
+	$ \chi_t \colon TT \to T $ of $ t \in |T| \subset |TT| $.
+	The result is a map $ T^2I \to T $
+	whose fiber over $ t $ is $ I $.
+	Now the universal property of the inclusion $ I \inclusion TI $
+	ensures that the identity $ \id \colon I \to I $
+	extends uniquely to
+	a map $ \mu_I \colon T^2 I \to TI $.
+
+	The triple $ (T, \epsilon, \mu) $ is a monad on $ \Phi $.
+	The category $ \Theta(\Phi) $ is opposite to
+	the Kleisli category of this monad.
+	In [CITE], we wrote $ \Lambda(\Phi) = \Theta(\Phi)^{\op} $, and
+	we called this the \defn{Leinster category}
+	of the operator category $ \Phi $.
+\end{nul}
+
+\begin{definition}
+	Let $ \Phi $ be a perfect operator category. 
+	Let $ \phi \colon I \to J $ be a morphism of $ \Theta(\Phi) $,
+	that is, an algebraic morphism $ TJ \to TI $ of $ \Phi $.
+	
+	We shall say that $ \phi $ is \defn{inert} if and only if
+	the projection $ J \times_{TI} I \to I $ is an isomorphism.
+	
+	Dually, we shall say that $ \phi $ is
+	\defn{active} if and only if
+	the projection $ J \times_{TI} I \to J $ is an isomorphism.
+\end{definition}
+
+\begin{eg}
+	If $ I \in \Phi $ is an object and $ i \in |I| $,
+	then the algebraic morphism $ \chi_i \colon TI \to T $,
+	is inert as a morphism $ \ast \to I $ of $ \Theta(\Phi) $.
+\end{eg}
+
+\begin{eg}
+	Let $ I $ be a finite set, and
+	let $ K \subseteq I $ be a subset.
+	Then we may define
+	an inert morphism $ \chi \colon K \to I $ of $ \Theta(F) $
+	as the algebraic morphism $ \phi \colon TI \to TK $ given by
+	\[
+		\phi(x) = \begin{cases}
+			x & \text{if } x \in K \\
+			\ast & \text{if } x \notin K \period
+		\end{cases}
+	\]	
+\end{eg}
+
+\begin{lemma}%
+	\label{lem:characterizationofactive}
+	Let $ \Phi $ be a perfect operator category.
+	The following are equivalent
+	for a morphism $ \phi \colon I \to J $ of $ \Theta(\Phi) $.
+	\begin{enumerate}
+		\item The morphism $ \phi $ corresponds to an algebraic morphism
+			$ TJ \to TI $ of the form $ T(\psi) $ for
+			some morphism $ \psi \colon J \to I $ of $ \Phi $.
+		\item The morphism $ \phi $ is active. 
+	\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+	On one hand, $ T(\psi) \colon TJ \to TI $ restricts to
+	the morphism $ \psi \colon J \to I $.
+	On the other hand, the algebraic morphism
+	$ TJ \to TI $ is uniquely determined by its restriction to
+	the morphism $ J \times_{TI} I \to I $.
+\end{proof}
+
+\begin{notation}
+	If $ p \colon X \to \Theta(\Phi) $ is a functor, then
+	for every $ I \in \Theta(\Phi) $, we shall write
+	$ X_I $ for the fiber $ p^{-1}\{I\} $.
+\end{notation}
+
+\begin{definition}%
+	\label{dfn:Phimonoidal}
+	Let $ \Phi $ be a perfect operator category.
+	A \defn{$\Phi$-monoidal category} is a cocartesian fibration
+	\[ C^{\otimes} \to \Theta(\Phi)^{\op} \]
+	such that, for every $ I \in \Theta(\Phi) $,
+	the functor
+	\[
+		P_I \coloneq \prod_{i \in |I|} \chi_i^{\ast} \colon
+		C^{\otimes}_I \to
+		\prod_{i \in |I|} C^{\otimes}_{\{i\}}
+	\]
+	is an equivalence.
+
+	In particular, an $ E $-monoidal category is called
+	a \defn{monoidal category}.
+	For any natural number $ n \in \NN_0 $,
+	an $ E^n $-monoidal category is called
+	an \defn{$ n $-monoidal category}.
+	An $ F $-monoidal category is called
+	a \defn{symmetric monoidal category}.
+\end{definition}
+
+\begin{notation}
+	Let $ \Phi $ be a perfect operator category,
+	and let $ C^{\otimes} $ be a $ \Phi $-monoidal category.
+	We will denote by $ C $ the fiber $ C^{\otimes}_{\ast} $
+	over the terminal object $ \ast $,
+	regarded as an object of $ \Theta(\Phi)^{\op} $.
+	For example, if $ I \in \Phi $ is an object, then 
+	the map $ P_I $ of Definition \ref{dfn:Phimonoidal} is
+	an equivalence $ C^{\otimes}_I \equivalence C^{|I|} $.
+	
+	Any active morphism
+	$ \phi \colon I \to J $ of $ \Theta(\Phi) $
+	induces a functor
+	$ \phi^{\ast} \colon C^{\otimes}_J \to C^{\otimes}_I $.
+	We may use the equivalences $ P_J $ and $ P_I $ 
+	to identify this functor with a functor
+	\[
+		\otimes_{J/I} \colon C^{|J|} \to C^{|I|} \period
+	\]
+	In particular, when $ I = \ast $, we obtain a functor
+	\[
+		\otimes_{J} \colon C^{|J|} \to C \comma
+	\]
+	which we may call the \defn{tensor product}.
+	The functor $ \otimes_{J/I} $ can then be identified
+	with the product over $ i \in |I| $ of
+	the tensor products
+	\[
+		\otimes_{J_i} \colon C^{|J_i|} \to C \period
+	\]
+\end{notation}
+
+\begin{eg}
+	If $ C^{\otimes} $ is a monoidal category,
+	then for every $ n \in \NN_0 $,
+	the functor $ \otimes_{[n]} \colon C^n \to C $
+	can be written
+	\[
+		(X_1, \dots, X_n) \mapsto
+		X_1 \otimes \cdots \otimes X_n \period
+	\]
+	In particular, when $ n = 0 $,
+	this functor picks out a \defn{unit object}
+	$ 1 \in C $. 
+\end{eg}
+
+\begin{eg}
+	Similarly, if $ C^{\otimes} $ is a symmetric monoidal category,
+	then for every $ n \in \NN_0 $,
+	the functor $ \otimes_{\angs{n}} \colon C^n \to C $
+	can be written
+	\[
+		(X_1, \dots, X_n) \mapsto
+		X_1 \otimes \cdots \otimes X_n \period
+	\]
+\end{eg}
+
+\begin{eg}
+	If $ C^{\otimes} $ is a $2$-monoidal category,
+	then for every $ i \in \NN_0 $ and
+	every $ m_1, \ldots, m_i \in \NN_0 $,
+	we have a functor
+	\[
+		\otimes_{([i];[m_1],\ldots,[m_i])} \colon
+		C^{m_1+\cdots+m_i} \to C \period
+	\]
+	In particular, for every $ n \in \NN_0 $,
+	we obtain a \defn{horizontal tensor product}
+	\[
+		\otimes_{([n];[1],\ldots,[1])} \colon C^n \to C \comma
+	\]
+	and well as a \defn{vertical tensor product}
+	\[
+		\otimes_{([1];[n])} \colon C^n \to C \comma
+	\]
+	How are these tensor products related?
+
+	To fix ideas, let's consider the case $ n = 2 $,
+	and let's write $ (X,Y) \mapsto X \otimes^h Y $
+	and $ (X,Y) \mapsto X \otimes^v Y $
+	for the horizontal and vertical tensor products.
+	We have two maps of  $ E^2 $
+	\[
+		([2];[1],[1]) \to ([1],[2])
+	\]
+	that induce bijections $ \angs{2} \equivalence \angs{2} $
+	on the underlying finite sets.
+	These functors induce natural equivalences
+	\[
+		X \otimes^h Y \equivalence X \otimes^v Y \andeq
+		X \otimes^h Y \equivalence Y \otimes^v X \period
+	\]
+	If we think of the first equivalence as
+	an identification of the horizontal
+	and vertical tensor products,
+	then the second equivalence provides a \defn{braiding}.
+	Indeed, one may prove that $2$-monoidal $1$-categories
+	are precisely \defn{braided monoidal $1$-categories}
+	in the classical sense.
+\end{eg}
+
+\begin{definition}
+	Let $ \Phi $ be a perfect operator category.
+	Let $ p \colon C^{\otimes} \to \Theta(\Phi)^{\op} $ be
+	a $ \Phi $-monoidal category.
+	Then a \defn{$ \Phi $-monoid in $ C^{\otimes} $}
+	is a section $ M \colon \Theta(\Phi)^{\op} \to C^{\otimes} $
+	of $ p $  that carries inert morphisms of $ \Theta(\Phi) $
+	to cocartesian morphisms of $ C^{\otimes} $.
+
+	The value $ M(\ast) \in C $ is the \defn{underlying object}
+	of the $ \Phi $-monoid $ M $.
+\end{definition}
+
+%-------------------------------------------------------------------%
+\subsection{Monads and modules}%
+\label{sub:monads_and_modules}
+%-------------------------------------------------------------------%
+
+%-------------------------------------------------------------------%
+\subsection{Monadicity}%
+\label{monadicity}
+%-------------------------------------------------------------------%
+
+%-------------------------------------------------------------------%
+\subsection{Free modules}%
+\label{sub:free_modules}
+%-------------------------------------------------------------------%
+
+%-------------------------------------------------------------------%
+\subsection{Codensity monads}%
+\label{sub:codensity_monads}
+%-------------------------------------------------------------------%
+
+The codensity monad of a functor $ f \colon A \to B $
+is the right Kan extension $ \beta(f) $ of $ f $ along itself,
+when it exists.
+For formal reasons, this is always a monad on $ B $.
+
+The full functoriality
+of the construction $ f \mapsto \beta(f) $
+is relevant to us.
+In effect, we regard functors as the objects of a category,
+and the morphisms are lax-commutative squares.
+
+
+\begin{definition}
+	Let $ A $ and $ B $ be categories.
+	Then a bifibration 
+	\citep[\S\S 2.4.7]{Lurie2009}
+	$ X \to B \times A $ is \defn{representable}
+	if and only if,
+	for every object $ a \in A $,
+	the fiber $ X_a $ has a terminal object.
+\end{definition}
+
+\begin{nul}
+	Let $ A $ and $ B $ be categories.
+	A bifibration $ X \to B \times A $ corresponds
+	to a functor $ B^{\op} \times A \to \SS_V $,
+	or equivalently to a functor $ \Xi \colon A \to \PP(B) $.
+	A representable bifibration is one in which
+	each presheaf $ \Xi(a) $ is representable.
+	In this way,
+	the category of representable bifibrations to $ B \times A $
+	is equivalent to the category $ \Fun(A, B) $.
+
+	One can be explicit about the correspondence:
+	if $ f \colon A \to B $ is a functor,
+	then the corresponding representable bifibration is
+	\[
+		\Fun(\Delta^1, B) \times_B A \to B \times A \comma
+	\]
+	and every representable fibration is of this form.
+\end{nul}
+
+\begin{construction}
+	Let $ \Lax\Cat $ be the full subcategory
+	of $ \Fun(\Lambda^1_0, \Cat ) $
+	spanned by those diagrams $ A \ot X \to B $
+	such that $ X \to B \times A $ is a representable bifibration.
+
+	The objects can be identified with functors $ f \colon A \to B $,
+	but $ \Lax\Cat $ is not equivalent to 
+	the category $ \Fun(\Delta^1, \Cat) $.
+	If $ f \colon A \to B $ and $ g \colon C \to D $
+	are functors, then
+	a morphism $ \sigma \colon f \to g $ of $ \Lax\Cat $
+	determines a functor
+	\[
+		\Fun(\Delta^1, B) \times_B A \to
+		\Fun(\Delta^1, D) \times_D C \period
+	\]
+	If $ a \in A $ and $ b \in B $ are objects,
+	then $ \sigma $ determines a map
+	\[
+		\Map_B(b, f(a)) \to \Map_D(\psi(b), g(\phi(a))) \period
+	\]
+	When $ b = f(a) $,
+	the image of the identity under this map
+	is thus a morphism $ \sigma_a \colon \psi(f(a)) \to g(\phi(a)) $.
+	Thus the morphism $ \sigma $ amounts to a lax-commutative square:
+	\begin{equation}\label{square:laxsquare}
+		\begin{tikzcd}
+			A \arrow[r, "f" above]
+			  \arrow[d, "\phi" left]
+			  & B \arrow[d, "\psi" right]
+			      \arrow[dl, phantom, "\scriptstyle \sigma"
+			      below right, "\Longleftarrow" sloped] \\ 
+			C \arrow[r, "g" below] & D
+		\end{tikzcd}
+	\end{equation}
+
+	We have two functors
+	$ s, t \colon \Lax\Cat \to \Cat $
+	which carry a diagram $ [ A \ot X \to B ] $
+	to $ A $ and $ B $, respectively.
+	We have an equivalence
+	\[
+		\{A\} \times_{\Cat} \Lax\Cat \times_{\Cat} \{B\}
+		\simeq \Fun(A,B) \period
+	\]
+
+	In fact, the functor
+	$ H_B \colon \Cat^{\op} \to \Cat $
+	represented by $ B $
+	and the functor
+	$ H^A \colon \Cat \to \Cat $
+	corepresented by $ A $
+	correspond under straightening/unstraightening
+	to the cartesian fibration
+	\[
+		\Lax\Cat \times_{\Cat} \{B\} \to \Cat
+	\]
+	and the cocartesian fibration
+	\[
+		\{A\} \times_{\Cat} \Lax\Cat \to \Cat \comma
+	\]
+	respectively.
+\end{construction}
+
+\begin{definition}
+	We call $ \Lax\Cat $ the \defn{lax arrow category of categories}.
+	If $ C $ is a fixed category,
+	then we call 
+\end{definition}
+
+\begin{construction}
+	Let $ C $ be a category.
+	We write $ \Endofun(C) $ for
+	the monoidal category of endofunctors of $ C $,
+	with the monoidal structure given by composition.
+
+	acts on the left on the category $ \Fun(D, C) $.
+	Both the monoidal structure and
+	the left module structure
+	are given by composition.
+
+	We consider the category $ \LL\Mod_{\Endofun(C)}(\Fun(D,C)) $
+	whose objects can be regarded as pairs $ (T, f ) $
+	consisting of an algebra $ T \in \Alg(\Endofun(C)) $
+	and a $ T $-module $ f $ in $ \Fun(D,C) $.
+	Thus 
+
+	For any functor $ f \colon D \to C $,
+	we consider the monoidal category $ \Endofun(C)[f] $
+	constructed in
+	\cite[Definition 4.7.1.1]{Lurie2017}.
+	The objects of the category $ \Endofun(C)[f] $
+	are pairs $ (T, \eta) $ consisting of
+	an object $ T \in \Endofun(C) $
+	and a natural transformation $ T \circ f \to f $.
+	The assignment $ (T, \eta) \mapsto T $ defines a 
+	monoidal forgetful functor
+	$ \Endofun(C)[f] \to \Endofun(C) $.
+
+	The terminal object
+	(if it exists)
+	of $ \Endofun(C)[f] $ is automatically
+	an algebra object $ B(f) = (\beta(f), \epsilon)$.
+	The image of $ B(f) $ under
+	the forgetful functor $ \Endofun(C)[f] \to \Endofun(C) $ is
+	the algebra object
+	\[
+		\beta(f) \in \Alg(\Endofun(C)) \semicolon
+	\]
+	in other words, $ \beta(f) $ is a monad on $ C $.
+	
+	If $ \Endofun(C)[f] $ has
+	a terminal object $ B(f) = (\beta(f), \epsilon)$,
+	then the monad $ \beta(f) $ will be called the
+	\defn{codensity monad}
+	attached to $ f \colon D \to C $.
+
+	If the category $ \Endofun(C)[f] $ has a terminal object,
+	then $ \epsilon $ exhibits
+	$ \beta(f) $ as the right Kan extension of $ f $
+	along itself.
+	Conversely, if the right Kan extension
+	of $ f $ along itself exists,
+	then that Kan extension defines a terminal object of
+	the category $ \Endofun(C)[f] $.
+
+	\cite[\S\S 4.7.1]{Lurie2017} identifies three categories:
+	\[
+		\LL\Mod(\Fun(D,C)) \times_{\Fun(D,C)} \left\{f\right\} \simeq
+		\Alg(\Endofun(C)[f]) \simeq
+		\Alg(\Endofun(C))_{/\beta(f)} \period
+	\]
+	More informally, we may say that
+	a morphism of monads $ T \to \beta(f) $
+	is the same thing as a $ T $-module structure on $ f $.
+\end{construction}
+
+

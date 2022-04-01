@@ -1,42 +1,49 @@
-\contentsline {part}{\MakeUppercase {Part\ ONE\relax \hskip 1em\relax Preliminaries}}{1}{}%
-\contentsline {chapter}{\numberline {1}Foundations}{3}{}%
-\contentsline {section}{\numberline {1.1}Cardinals}{3}{}%
-\contentsline {subsection}{\numberline {1.1.1}Regularity and smallness}{6}{}%
-\contentsline {subsection}{\numberline {1.1.2}Accessibility and presentablity}{7}{}%
-\contentsline {subsection}{\numberline {1.1.3}Presheaf categories}{9}{}%
-\contentsline {subsection}{\numberline {1.1.4}Strong limit and inaccessible cardinals}{12}{}%
-\contentsline {subsection}{\numberline {1.1.5}Ind and Pro}{14}{}%
-\contentsline {subsection}{\numberline {1.1.6}Higher inaccessibility}{15}{}%
-\contentsline {subsection}{\numberline {1.1.7}Universe polymorphism}{17}{}%
-\contentsline {section}{\numberline {1.2}Reflection principles}{17}{}%
-\contentsline {subsection}{\numberline {1.2.1}Lévy hierarchy}{17}{}%
-\contentsline {subsection}{\numberline {1.2.2}Elementary embeddings}{17}{}%
-\contentsline {subsection}{\numberline {1.2.3}Reflection principles}{17}{}%
-\contentsline {subsection}{\numberline {1.2.4}Indescribable cardinals}{17}{}%
-\contentsline {section}{\numberline {1.3}Bicategories}{17}{}%
-\contentsline {chapter}{\numberline {2}Topology}{18}{}%
-\contentsline {section}{\numberline {2.1}Ultrafilters}{18}{}%
-\contentsline {subsection}{\numberline {2.1.1}Codensity monads}{18}{}%
-\contentsline {subsection}{\numberline {2.1.2}Ultrafilters on sets}{20}{}%
-\contentsline {subsection}{\numberline {2.1.3}Completeness of ultrafilters}{24}{}%
-\contentsline {subsection}{\numberline {2.1.4}Ultrafilters on posets}{24}{}%
-\contentsline {subsection}{\numberline {2.1.5}Ultraproducts}{24}{}%
-\contentsline {section}{\numberline {2.2}Topoi}{24}{}%
-\contentsline {subsection}{\numberline {2.2.1}Topoi}{24}{}%
-\contentsline {subsection}{\numberline {2.2.2}Sheaves and hypersheaves}{24}{}%
-\contentsline {subsection}{\numberline {2.2.3}Postnikov completeness}{24}{}%
-\contentsline {subsection}{\numberline {2.2.4}Coherence}{24}{}%
-\contentsline {subsection}{\numberline {2.2.5}Stone duality}{24}{}%
-\contentsline {subsection}{\numberline {2.2.6}Spectral duality}{24}{}%
-\contentsline {subsection}{\numberline {2.2.7}Classifying topoi}{24}{}%
-\contentsline {section}{\numberline {2.3}Compacta}{24}{}%
-\contentsline {subsection}{\numberline {2.3.1}Compacta and $ \mitbeta $-algebras}{24}{}%
-\contentsline {subsection}{\numberline {2.3.2}Boolean algebras}{28}{}%
-\contentsline {subsection}{\numberline {2.3.3}Stone topological spaces}{28}{}%
-\contentsline {subsection}{\numberline {2.3.4}Projective compacta}{28}{}%
-\contentsline {part}{\MakeUppercase {Part\ TWO\relax \hskip 1em\relax Condensed sets}}{29}{}%
-\contentsline {part}{\MakeUppercase {Part\ THREE\relax \hskip 1em\relax Condensed groups}}{31}{}%
-\contentsline {part}{\MakeUppercase {Part\ FOUR\relax \hskip 1em\relax Condensed abelian groups}}{33}{}%
-\contentsline {part}{\MakeUppercase {Part\ FIVE\relax \hskip 1em\relax Condensed spaces}}{35}{}%
-\contentsline {part}{\MakeUppercase {Part\ SIX\relax \hskip 1em\relax Condensed spectra}}{37}{}%
-\contentsline {schapter}{References}{39}{}%
+\contentsline {schapter}{Introduction}{1}{}%
+\contentsline {part}{\MakeUppercase {Part\ ONE\relax \hskip 1em\relax Preliminaries}}{3}{}%
+\contentsline {chapter}{\numberline {1}Foundations}{5}{}%
+\contentsline {section}{\numberline {1.1}Cardinals}{5}{}%
+\contentsline {subsection}{\numberline {1.1.1}Regularity and smallness}{8}{}%
+\contentsline {subsection}{\numberline {1.1.2}Accessibility and presentablity}{10}{}%
+\contentsline {subsection}{\numberline {1.1.3}Presheaf categories}{13}{}%
+\contentsline {subsection}{\numberline {1.1.4}Strong limit and inaccessible cardinals}{16}{}%
+\contentsline {subsection}{\numberline {1.1.5}Echelons of accessibility}{18}{}%
+\contentsline {subsection}{\numberline {1.1.6}Indization}{20}{}%
+\contentsline {subsection}{\numberline {1.1.7}Higher inaccessibility}{21}{}%
+\contentsline {subsection}{\numberline {1.1.8}Universe polymorphism}{24}{}%
+\contentsline {section}{\numberline {1.2}Reflection principles}{24}{}%
+\contentsline {subsection}{\numberline {1.2.1}Lévy hierarchy}{24}{}%
+\contentsline {subsection}{\numberline {1.2.2}Elementary embeddings}{24}{}%
+\contentsline {subsection}{\numberline {1.2.3}Reflection principles}{24}{}%
+\contentsline {subsection}{\numberline {1.2.4}Indescribable cardinals}{24}{}%
+\contentsline {section}{\numberline {1.3}Bicategories}{24}{}%
+\contentsline {section}{\numberline {1.4}Monads}{24}{}%
+\contentsline {subsection}{\numberline {1.4.1}Monoidal categories}{24}{}%
+\contentsline {subsection}{\numberline {1.4.2}Monads and modules}{30}{}%
+\contentsline {subsection}{\numberline {1.4.3}Monadicity}{30}{}%
+\contentsline {subsection}{\numberline {1.4.4}Free modules}{30}{}%
+\contentsline {subsection}{\numberline {1.4.5}Codensity monads}{30}{}%
+\contentsline {chapter}{\numberline {2}Topology}{33}{}%
+\contentsline {section}{\numberline {2.1}Ultrafilters}{33}{}%
+\contentsline {subsection}{\numberline {2.1.1}Ultrafilters on sets}{33}{}%
+\contentsline {subsection}{\numberline {2.1.2}Completeness of ultrafilters}{41}{}%
+\contentsline {subsection}{\numberline {2.1.3}Ultrafilters on posets}{41}{}%
+\contentsline {subsection}{\numberline {2.1.4}Ultraproducts}{41}{}%
+\contentsline {section}{\numberline {2.2}Topoi}{41}{}%
+\contentsline {subsection}{\numberline {2.2.1}Topoi}{41}{}%
+\contentsline {subsection}{\numberline {2.2.2}Sheaves and hypersheaves}{41}{}%
+\contentsline {subsection}{\numberline {2.2.3}Postnikov completeness}{41}{}%
+\contentsline {subsection}{\numberline {2.2.4}Coherence}{41}{}%
+\contentsline {subsection}{\numberline {2.2.5}Stone duality}{41}{}%
+\contentsline {subsection}{\numberline {2.2.6}Spectral duality}{41}{}%
+\contentsline {subsection}{\numberline {2.2.7}Classifying topoi}{41}{}%
+\contentsline {section}{\numberline {2.3}Compacta}{41}{}%
+\contentsline {subsection}{\numberline {2.3.1}Compacta and $ \mitbeta $-algebras}{41}{}%
+\contentsline {subsection}{\numberline {2.3.2}Boolean algebras}{45}{}%
+\contentsline {subsection}{\numberline {2.3.3}Stone topological spaces}{45}{}%
+\contentsline {subsection}{\numberline {2.3.4}Projective compacta}{45}{}%
+\contentsline {part}{\MakeUppercase {Part\ TWO\relax \hskip 1em\relax Condensed sets}}{47}{}%
+\contentsline {part}{\MakeUppercase {Part\ THREE\relax \hskip 1em\relax Condensed groups}}{49}{}%
+\contentsline {part}{\MakeUppercase {Part\ FOUR\relax \hskip 1em\relax Condensed abelian groups}}{51}{}%
+\contentsline {part}{\MakeUppercase {Part\ FIVE\relax \hskip 1em\relax Condensed spaces}}{53}{}%
+\contentsline {part}{\MakeUppercase {Part\ SIX\relax \hskip 1em\relax Condensed spectra}}{55}{}%
+\contentsline {schapter}{References}{57}{}%

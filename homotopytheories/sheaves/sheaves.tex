@@ -10,17 +10,24 @@
 
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
-%-------------------------------------------------------------------%
-\chapter{Foundations}%
-\label{cha:foundations}
-%-------------------------------------------------------------------%
+\section{Sheaves}%
+\label{sec:sheaves}
 %-------------------------------------------------------------------%
 %-------------------------------------------------------------------%
 
-\input{cardinals.tex}
+%-------------------------------------------------------------------%
+\subsection{Presheaves}%
+\label{sub:presheaves}
+%-------------------------------------------------------------------%
 
-\input{reflection_principles.tex}
+\begin{notation}
+	Let $ X $ be a topological space.
+	Let us write $ \Omega(X) $ for the set of open subsets of $ X $.
+	This set has a partial order by inclusion, and
+	we regard the resulting poset as a category.
+	That is, if $ U, V \in \Omega(X) $, then
+	there is a unique morphism $ U \to V $ of $ \Omega(X) $
+	if and only if $ U \subseteq V $.
+\end{notation}
 
-\input{bicategories.tex}
 
-\input{monads.tex}
