@@ -1,0 +1,113 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+\chapter{Grothendieck's homotopy hypothesis}%
+\label{cha:Grothendieck's homotopy hypothesis}
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+
+The mission of homotopy theory is to iteratively enhance every \emph{property} of a mathematical object to \emph{structure} on it.
+The homotopy theorist deconstructs the equals sign by this process:
+they no longer regard \enquote{$x = y$} as a property that $x$ and $y$ together possess,
+but rather as piece of structure that connects $x$ and $y$.
+That structure is then a \emph{path} between $x$ and $y$.
+Semantically, we consider this path as a \enquote{reason} for -- or as a \enquote{witness} to -- the equality $x = y$.
+
+If $\alpha$ and $\beta$ are paths connecting $x$ and $y$,
+then again we do not wish to speak of \enquote{$\alpha = \beta$} as a property,
+but as a further piece of structure -- a \emph{homotopy} between $\alpha$ and $\beta$.
+We iterate: two homotopies are no longer merely \enquote{equal}, but they may be connected by \emph{higher homotopies};
+two higher homotopies may be connected by further higher homotopies, \emph{etc}., \emph{etc}., \emph{ad infinitum}.
+
+The data of all these points and paths and homotopies and higher homotopies, taken together, constitute an \emph{anima} (pl. \emph{animae}).
+Animae are also called \emph{spaces}, \emph{homotopy types}, \emph{Kan complexes}, or \emph{$\infty$-groupoids}.
+These terms each reflect a certain attitude toward these objects.
+Terms like \enquote{space} and \enquote{homotopy type} acknowledge that these objects were first modelled and understood using topological spaces and topological notions of homotopy.
+A \enquote{Kan complex} is then a combinatorial blueprint for these homotopies and their relations.
+The phrase \enquote{$\infty$-groupoid} then reinterprets the (higher) homotopies as (higher) \emph{symmetries}.
+The fact that these terms can all be used interchangeably is a nontrivial insight -- Grothendieck's \emph{homotopy hypothesis}.
+We will formulate and prove a version of this sentence in this chapter -- surely not the version Grothendieck had in mind,
+but one that is better-adapted to the needs of contemporary mathematicians.
+In our formulation, it becomes a theorem of Kan.
+
+Our use of the term \emph{anima} reflects our desire not to favor any one of these attitudes.
+Animae play the same role in \emph{homotopical mathematics} that sets play in `ordinary' mathematics:
+virtually all objects in homotopical mathematics are described in terms of animae.
+
+Symmetries of objects were certainly central to the mathematics of the 19th century, but
+it's a distinctly 20th century notion that symmetries might meaningfully have their own symmetries.
+(It is interesting to reflect on the origins of this idea, but
+it would be difficult to pinpoint the first person who seriously considered this possibility.)
+In any case, the 20th century provided three realizations about homotopy theory's iterative enhancement process.
+
+First was the promise of interesting new phenomena to study.
+Homological algebra appears at first to be a relatively featureless outgrowth of linear algebra.
+The Bockstein homomorphism is an early illustration that ordinary modules interact in new ways in derived settings.
+But it's the nontriviality of the Hopf element $\eta$ in the stable homotopy group $\pi^s_1$ that decisively separates \emph{homological algebra} -- ordinary algebra that is then derived -- from \emph{homotopical algebra} -- algebra done in a natively homotopical setting.
+The first signal from the mysterious world of homotopical algebra was a short message: \enquote{$\eta \neq 0$}.
+
+In spite of our vague description of homotopy theory as an inductive enhancement of properties into structure,
+this can all be made precise.
+In fact, it can be made precise in different ways.
+On one hand, we can model homotopical structures entirely via ordinary mathematical objects.
+We'll do that here: we'll adopt the Kanian approach and encode homotopy types as \emph{simplicial sets}.
+Alternatively -- and in a spirit closer to that of this introduction -- one might instead attempt to rewrite the logical foundations of mathematics in a way that bakes in our preference for structure over properties.
+This is the approach of \emph{homotopy type theory}, a stirring vision of new foundations in mathematics.
+As of this writing, homotopy type theory is still in its infancy.
+In later editions of this book, perhaps the combinatorics of simplices will be replaced by fundamental facts about type theory.
+
+Once it was understood how to model homotopical structures accurately, new questions arose:
+\emph{how do we construct models that are maximally useful?}
+\emph{what does it mean to say that two models represent the same homotopy theory?}
+\emph{shouldn't this notion of sameness, whatever it is, be subject to the same inductive refinement process that got us here?}
+These questions lay at the heart of the many foundational developments in homotopy theory starting in the 1970s.
+By the end of the millennium it was clear that one would need to take a further step, and contemplate a \emph{homotopy theory of homotopy theories}.
+Just as Grothendieck had seen that ordinary homotopy theory should be equivalent to the theory of $\infty$-groupoids,
+people like Joyal, Kan, Rezk, Simpson, and Toen recognized that the homotopy theory of homotopy theories should be equivalent to the theory of \emph{$\infty$-categories}.
+
+Our approach to constructing the homotopy theory of animae follows a general recipe, which will inform our work throughout this book.
+The goal is to design a homotopy theory $\EE$, using only partial or imperfect information about $\EE$.
+\begin{itemize}
+  \item%
+    Select a piece $\EE_0$ of $\EE$ that is simple enough that you can understand it completely,
+    but complex enough so that any object $X \in \EE$ is completely determined by the sets/groups/whatevers of maps $T \to X$ with $T \in \EE_0$.
+    In many cases, you'll want $\EE_0$ to generate $\EE$ under suitable colimits.
+  \item%
+    Now select a small category $J$, usually combinatorial in nature,
+    along with an essentially surjective functor $R \colon J \to \EE_0$ (which need not be fully faithful).
+    In many cases, it will be helpful if the objects of $J$ come equipped with some notion of \emph{degree}.
+    The category $J$ and functor $R$ should be chosen so that some key salient features of general objects $X \in \EE$ can be read off from mapping objects $\Map(R(j),X)$.
+  \item%
+    Encode these salient features as a set of properties $P$ of the corresponding functors $\Map(R(-),X)$.
+    For example, perhaps you'll want to require that for some particular $j \in J$, the object $\Map(R(j),X)$ is trivial.
+    Or perhaps such a property expresses $\Map(R(k),X)$ as a limit or colimit of various other mapping objects $\Map(R(j),X)$.
+    The objects of your homotopy theory will be exactly the functors $J^{\op} \to \Set$ (or other enriching category) that enjoy these properties of $P$.
+\end{itemize}
+
+In this chapter, we will construct the homotopy theory of animae in this way:
+$\EE_0$ will be the homotopy theory of contractible animae (which is of course trivial),
+$J$ is the category of \emph{simplices} $\mbfDelta$ (the first topic of this book),
+and $P$ is Kan's \emph{horn-filling condition}.
+
+Other options for $J$ (and therefore $P$) are possible:
+there is an interesting class of categories -- the \emph{Grothendieck test categories} -- that can could serve as $J$.
+These include the category of nonempty finite sets, Joyal's categories $\mbfTheta_n$, various categories of cubes, and the tree category.
+
+One special feature of $\mbfDelta$ is that it can also be used to define the larger homotopy theory of $\infty$-categories itself.
+For this homotopy theory, $\EE_0$ is the homotopy theory of finite, linearly ordered sets (which is not trivial, but is still quite simple),
+$J$ is again the category $\mbfDelta$,
+and $P$ is the \emph{inner horn-filling condition} first identified explicitly by Boardman--Vogt.
+
+\input{simplicial.tex}
+

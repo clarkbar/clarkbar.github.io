@@ -1,0 +1,301 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+\section{Simplicial objects}%
+\label{sec:Simplicialobjects}
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+
+%-------------------------------------------------------------------%
+\subsection{The simplex category}%
+\label{sub:Thesimplexcategory}
+%-------------------------------------------------------------------%
+
+If our aim is to convert equality from a property to a structure,
+then we might recall the notion of \emph{equivalence relation} on a set $S$.
+A \emph{relation} is encoded by a subset $R \subseteq S \times S$, which is the subset of related pairs of elements.
+An \emph{equivalence} relation is one that is reflexive, symmetric, and transitive:
+\begin{enumerate}
+  \item Reflexivity is the condition that $R$ contains the image of the \emph{diagonal map} $S \to S \times S$ given by $x \mapsto (x,x)$.
+  \item Symmetry is the condition that $R$ is stable under the involution of $S \times S$ given by $(x,y) \mapsto (y,x)$.
+  \item Transitivity states that the projection $S \times S \times S \to S \times S$ given by $(x,y,z) \mapsto (x,z)$ carries the subset $R \times_S R \subseteq S \times S \times S$ to the subset $R$.
+\end{enumerate}
+An equivalence relation on $S$ can thus be converted into a diagram
+\begin{equation}
+  \label{eq:equivrel}
+  \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+    R \times_S R \arrow[r] \arrow[r, shift left=1.5ex] \arrow[r, shift right=1.5ex] \& R \arrow[l, shift left=0.75ex] \arrow[l, shift right=0.75ex] \arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \& S \comma \arrow[l]
+  \end{tikzcd}%
+\end{equation}
+The maps from left to right are various projections.
+The maps from right to left are various diagonal maps.
+The colimit of this diagram agrees with the coequalizer of the subdiagram 
+\[
+  \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+    R \arrow[r, shift left=0.5ex] \arrow[r, shift right=0.5ex] \& S \comma
+  \end{tikzcd}%
+\]
+which is in turn the set of equivalence classes $S/R$.
+
+The case we want to make is that this diagram shape is the start of a more natural \emph{simplicial diagram}, extending infinitely off to the left:
+\[
+  \simplicial{R_2}{R_1}{R_0}.
+\]
+This diagram can encode the higher forms of equivalence we sought in the introduction to this chapter.
+
+You may have noticed that our diagram \eqref{eq:equivrel} does not capture the symmetry property of $R$.
+It would be a simple matter to incorporate actions of the symmetric groups $\Sigma_2$ and $\Sigma_3$ on $R$ and $R \times_S R$ into our diagram.
+This would lead us to the theory of \emph{symmetric simplicial sets}.
+We will see in our story that the symmetry is encoded not in the shape of a simplicial diagram of sets, but in the properties we demand of it when it models an anima.
+This asymmetry is as much a feature as it is a bug, however:
+it will be necessary when we want to connect the theory of simplicial sets to that of categories.
+
+Nothing in the diagram \eqref{eq:equivrel} forces $R$ to be a subset of $S \times S$;
+we may demand only that $R$ map to $S \times S$.
+The effect of this is to permit the elements of $S$ to be equivalent in many ways.
+For example, if $x,y \in S$, then the fiber of the map $R \to S \times S$ is a set
+\[
+  \enquine{x R y} \comma
+\]
+which is the set of ways in which $x$ and $y$ are equivalent -- or witnesses to their equivalence.
+The middle map from $R \times_S R \to R$ now carries two such witnesses, $\alpha \in \enquine{xRy}$ and $\beta \in \enquine{yRz}$, to a witness $\beta\alpha \in \enquine{xRz}$.
+It now becomes natural to ask whether this operation is \emph{associative}:
+is $\gamma(\beta\alpha) = (\gamma\beta)\alpha$?
+If so, then what we have is the data of a \emph{groupoid} whose objects are the elements of $S$ and whose (iso)morphisms are elements of $R$, so that $\Isom(x,y) = \enquine{xRy}$.
+
+The associativity also lets us extend our diagram \eqref{eq:equivrel} to a larger diagram
+\begin{equation}%
+  \label{eq:groupoid}
+  \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+    R \times_S R \times_S R\arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \arrow[r, shift right=2.25ex] \arrow[r, shift left=2.25ex] \& R \times_S R \arrow[l] \arrow[l, shift left=1.5ex] \arrow[l, shift right=1.5ex] \arrow[r] \arrow[r, shift left=1.5ex] \arrow[r, shift right=1.5ex] \& R \arrow[l, shift left=0.75ex] \arrow[l, shift right=0.75ex] \arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \& S \period \arrow[l]
+  \end{tikzcd}%
+\end{equation}
+These diagrams are becoming complex enough that it will help to be a little more exacting about their indexing categories. 
+
+\begin{definition}
+  The \emph{simplex category} $\DDelta$ is category
+  whose objects are nonempty, totally ordered, finite sets,
+  and whose morphisms the monotonic maps between these.
+\end{definition}
+
+Every object of $\DDelta$ is uniquely isomorphic to a finite ordinal
+\[
+  [n] = \{ 0 < 1 < \cdots < n \}
+\]
+for some integer $n \geq 0$.
+This entitles us to refer to objects of $\DDelta$ as if they are all of this form.
+
+Between adjacent objects, we have the following morphisms:
+\begin{itemize}
+  \item for every $j \in [n]$, the \emph{face map} is the injective map $\delta_j \colon [n-1] \to [n]$ whose image does not contain $j$;
+  \item for every $i \in [n]$, the \emph{degeneracy map} is the surjective map $\sigma_i \colon [n+1] \to [n]$ that carries $i+1$ to $i$.
+\end{itemize}
+Every other map in the simplex category can be expressed as a composite of face and degeneracy maps.
+It is elementary (but boring) to prove that $\DDelta$ is generated by these face and degeneracy maps, subject only to the following relations, called the \emph{simplicial identities}:
+\begin{itemize}
+  \item if $i \leq j$, then
+  \[
+    \delta_i \delta_j = \delta_{j+1} \delta_i \semicolon
+  \]
+  \item if $i \leq j$, then
+  \[
+    \sigma_j \sigma_i = \sigma_i \sigma_{j+1} \semicolon
+  \]
+\item for every $i,j$, 
+  \[
+    \sigma_j \delta_i = \begin{cases}
+      \delta_i \sigma_{j-1} & \text{ if } i < j \semicolon \\
+      \id                   & \text{ if } i \in \{j,j+1\} \semicolon \\
+      \delta_{i-1} \sigma_j & \text{ if } j+1 < i \period
+    \end{cases}
+  \]
+\end{itemize}
+In practice, the generators-and-relations description of $\DDelta$ is usually more trouble than it's worth, but
+it does provide a schematic picture of the category $\DDelta$:
+\[
+  \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+    {[0]} \arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \&
+    {[1]} \arrow[l] \arrow[r] \arrow[r, shift left=1.5ex] \arrow[r, shift right=1.5ex] \&
+    {[2]} \arrow[l, shift left=0.75ex] \arrow[l, shift right=0.75ex] \arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \arrow[r, shift right=2.25ex] \arrow[r, shift left=2.25ex] \&
+    {[3]} \arrow[l] \arrow[l, shift left=1.5ex] \arrow[l, shift right=1.5ex] \arrow[r] \arrow[r, shift left=1.5ex] \arrow[r, shift right=1.5ex] \arrow[r, shift left=3ex] \arrow[r, shift right=3ex] \&
+    \cdots \comma \arrow[l, shift left=0.75ex] \arrow[l, shift right=0.75ex] \arrow[l, shift left=2.25ex] \arrow[l, shift right=2.25ex]
+  \end{tikzcd}%
+\]
+as well as its opposite $\DDelta^{\op}$:
+\[
+  \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+    \cdots \arrow[r] \arrow[r, shift left=1.5ex] \arrow[r, shift right=1.5ex] \arrow[r, shift left=3ex] \arrow[r, shift right=3ex] \&
+    {[3]} \arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \arrow[r, shift right=2.25ex] \arrow[r, shift left=2.25ex] \arrow[l, shift left=0.75ex] \arrow[l, shift right=0.75ex] \arrow[l, shift left=2.25ex] \arrow[l, shift right=2.25ex] \&
+    {[2]} \arrow[l] \arrow[l, shift left=1.5ex] \arrow[l, shift right=1.5ex] \arrow[r] \arrow[r, shift left=1.5ex] \arrow[r, shift right=1.5ex] \&
+    {[1]} \arrow[l, shift left=0.75ex] \arrow[l, shift right=0.75ex] \arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \&
+    {[0]} \arrow[l]
+  \end{tikzcd}%
+\]
+
+\begin{notation}
+  For any integer $n \geq 0$, we define $\DDelta_{\leq n} \subset \DDelta$ as the full subcategory spanned by the objects $[k]$ with $k \leq n$.
+\end{notation}
+
+We see that the diagram \eqref{eq:equivrel} is a functor $\DDelta_{\leq 2}^{\op} \to \Set$, and
+the larger diagram \eqref{eq:groupoid} is a functor $\DDelta_{\leq 3}^{\op} \to \Set$.
+In fact, there is no obstruction to extending it further, to a functor $\DDelta^{\op} \to \Set$ that carries $[n]$ to the $n$-fold fiber product of $R$ over $S$:
+\[
+  R \times_S R \times_S \cdots \times_S R \period
+\]
+
+This is our first example of a \emph{simplicial object}:
+\begin{definition}
+  Let $C$ be a category.
+  A \emph{simplicial object} of $C$ is a functor $\DDelta^{\op}\to C$.
+  A \emph{cosimplicial object} of $C$ is a functor $\DDelta \to C$.
+  We write
+  \[
+    sC \coloneq \Fun(\DDelta^{\op},C)
+    \andeq
+    cC \coloneq \Fun(\DDelta, C) \period
+  \]
+
+  If $X \in sC$, then we write $X_n$ for the value $X([n])$, and
+  if $Y \in cC$, then we write $Y^n$ for the value $Y([n])$.
+  At times it may be convenient to write $X_\bullet$ and $Y^\bullet$ instead of $X$ and $Y$, just to emphasize the variance.
+\end{definition}
+
+We will be interested in simplicial objects of a wide range of categories, but our starting place is the theory of simplicial \emph{sets}.
+
+\begin{eg}
+  If $[m], [n] \in \DDelta$, then let us write
+  \[
+    \Delta_m^n \coloneq \Mor_{\DDelta}([m],[n]) \period
+  \]
+  Thus for each $[n] \in \DDelta$, we have the simplicial set it represents
+  \[
+    \Delta^n \coloneq \Mor_{\DDelta}(-,[n]) \colon \DDelta^{\op} \to \Set \period
+  \]
+  We call $\Delta^n$ the \emph{standard $n$-simplex}.
+  The assignment $[n] \mapsto \Delta^n$ is a functor $\DDelta \to s\Set$.
+  Equally, for each $[m] \in \DDelta$, we have the cosimplicial set it corepresents
+  \[
+    \Delta_m \coloneq \Mor_{\DDelta}([m],-) \colon \DDelta \to \Set \comma
+  \]
+  and the assignment $[m] \mapsto \Delta_m$ is a functor $\DDelta^{\op} \to c\Set$.
+\end{eg}
+
+The standard simplices play a critical role in the theory of simplicial sets.
+The Yoneda lemma implies that for every simplicial set $X$, we have a natural isomorphism
+\[
+  X_n = \Mor_{s\Set}(\Delta^n, X) \period
+\]
+An element $\sigma \in X_n$ -- or equivalently a map $\sigma \colon \Delta^n \to X$ -- is called an \emph{$n$-simplex of $X$}.
+This implies that every simplicial set $X \in s\Set$ is the colimit of its simplices.
+That is, consider the Yoneda embedding $\DDelta \to s\Set$ given by $[n] \mapsto \Delta^n$, and let
+\[
+  \DDelta_{/X} \coloneq \DDelta \times_{s\Set} s\Set_{/X} \period
+\]
+We call $\DDelta_{/X}$ the \emph{category of simplices} of $X$.
+We now have a canonical isomorphism
+\[
+  \colim_{[n]\in\DDelta_{/X}^{\op}} \Delta^n = X \period
+\]
+Said differently, the left Kan extension of the Yoneda embedding $\DDelta \to s\Set$ is the identity functor on $s\Set$. 
+
+\begin{eg}
+  Let $A$ be a small category.
+  The \emph{nerve} $NA$ is the simplicial set that carries $[n]$ to the \emph{set} of functors $[n] \to A$.
+
+  In other words, by regarding each nonempty totally ordered finite set $[n]$ as a category, we obtain a fully faithful inclusion $\DDelta \inclusion \Cat$.
+  The nerve $NA$ is the composite of $\DDelta^{\op} \inclusion \Cat^{\op}$ with the functor $\Cat^{\op} \to \Set$ represented by $A$.
+\end{eg}
+
+The simplicial objects we have been discussing so far have all been extended from finite subcategories $\DDelta_{\leq n}$.
+Let's understand how that works.
+We write
+\[
+  s_{\leq n}C \coloneq \Fun(\Delta_{\leq n}^{\op}, C)
+  \andeq
+  c^{\leq n}C \coloneq \Fun(\Delta_{\leq n}, C)
+  \period
+\]
+Now restriction along the inclusion $\DDelta_{\leq n} \subset \DDelta$ defines functors
+\[
+  sC \to s_{\leq n}C
+  \andeq
+  cC \to c^{\leq n}C \period
+\]
+
+If $C$ has finite colimits, then these functors each admit a fully faithful left adjoint given by left Kan extension:
+\[
+  \sk_n \colon s_{\leq n}C \inclusion sC
+  \andeq
+  \sk_n \colon c^{\leq n}C \inclusion cC \period
+\]
+These are called the \emph{$n$-skeleton} functors.
+
+If $C$ has finite limits, then these functors each admit a fully faithful right adjoint given by right Kan extension:
+\[
+  \cosk_n \colon s_{\leq n}C \inclusion sC
+  \andeq
+  \cosk_n \colon c^{\leq n}C \inclusion cC \period
+\]
+These are called the \emph{$n$-coskeleton} functors.
+
+We have the usual formulas for these Kan extensions;
+for example, in the language of coends and ends:
+if $X \in s_{\leq n}C$, then
+\[
+  \sk_n(X)_m = \int^{k \in \DDelta_{\leq n}} \Delta^k_m \times X_k
+  \andeq
+  \cosk_n(X)_m = \int_{k \in \DDelta_{\leq n}} X_k^{\Delta^m_k} \comma
+\]
+and if $Y \in c^{\leq n}C$, then
+\[
+  \sk_n(Y)^m = \int^{k \in \DDelta_{\leq n}} \Delta^m_k \times Y^k
+  \andeq
+  \cosk_n(Y)^m = \int_{k \in \DDelta_{\leq n}} (Y^k)^{\Delta^k_m} \comma
+\]
+
+We will regularly abuse notation by speaking of $\sk_n(X)$ for a simplicial object $X$;
+in this case, one should regard $\sk_n$ as implicitly precomposed with the restriction $sC \to s_{\leq n}C$.
+
+\begin{definition}
+  Let $C$ be a category with all finite colimits, and let $n \geq 0$ be an integer.
+  A simplicial object $X \in sC$ is \emph{$n$-skeletal} if and only if the natural map $\sk_n(X) \to X$ is an isomorphism.
+  Accordingly, $X$ is \emph{$n$-coskeletal} if and only if the natural map $X \to \cosk_n(X)$ is an isomorphism.
+
+  Similar definitions apply for cosimplicial objects.
+\end{definition}
+
+\begin{eg}
+  Let $X \in sC$ be a simplicial object.
+  Our $X$ is $0$-skeletal if and only if it is \emph{constant}.
+  It is $0$-coskeletal if and only if it is determined by $X_0$ via the formula
+  \[
+    X_m = X_0^{\times(m+1)} \period
+  \]
+\end{eg}
+
+
+
+\begin{exercises}
+  \item%
+    Use the Yoneda lemma to show that for any small category $A$,
+    the left Kan extension of the Yoneda embedding $A \inclusion \Fun(A^{\op}, \Set)$ along itself is the identity functor.
+\end{exercises}
+
+
+%-------------------------------------------------------------------%
+\subsection{Simplicial and cosimplicial objects}%
+\label{sub:Simplicialandcosimplicialobjects}
+%-------------------------------------------------------------------%
+
+
+
+
