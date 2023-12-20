@@ -967,6 +967,16 @@ INPUT simplicial.tex
 INPUT /usr/local/share/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm
 INPUT /usr/local/share/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
 INPUT /usr/local/share/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm
+INPUT /usr/local/share/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm
+INPUT /usr/local/share/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm
+INPUT /usr/local/share/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm
+INPUT ./constructions.tex
+INPUT ./constructions.tex
+INPUT ./constructions.tex
+INPUT constructions.tex
+INPUT ./constructions.tex
+INPUT ./constructions.tex
+INPUT constructions.tex
 INPUT ./book.bbl
 INPUT book.bbl
 INPUT ./book.bbl

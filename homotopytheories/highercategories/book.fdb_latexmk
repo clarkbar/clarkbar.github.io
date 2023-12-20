@@ -1,21 +1,21 @@
 # Fdb version 4
-["bibtex book"] 1701798421 "book.aux" "book.bbl" "book" 1701798426 0
+["bibtex book"] 1703071587 "book.aux" "book.bbl" "book" 1703071597 0
   "../cambridgeauthordate.bst" 1688571860 32813 78b2186050197f9eccd34f061097141d ""
   "../homotopytheories.bib" 1688571860 21031 5a7adbb4c15b73172ab21247428ff660 ""
-  "book.aux" 1701798424 528 5b72aa0367769127cc09110e63bceb58 "xelatex"
-  "homotopy.aux" 1701798424 1507 f1d8b4a2bacb27ff7e2e2e2579099c0d "xelatex"
+  "book.aux" 1703071595 528 427e0589cc8b9df61b7266da71a49414 "xelatex"
+  "homotopy.aux" 1703071595 3439 b6f3577bab68722de6fb26f7d486f0c2 "xelatex"
   (generated)
   "book.bbl"
   "book.blg"
   (rewritten before read)
-["xdvipdfmx"] 1701798425 "book.xdv" "book.pdf" "book" 1701798426 0
-  "book.xdv" 1701798424 93840 224627035e344422e98902fb6cb0da9d "xelatex"
+["xdvipdfmx"] 1703071596 "book.xdv" "book.pdf" "book" 1703071597 0
+  "book.xdv" 1703071595 136828 cb7dd28a7f5af06e0cb2bee7a3cfac72 "xelatex"
   (generated)
   "book.pdf"
   (rewritten before read)
-["xelatex"] 1701798421 "book.tex" "book.xdv" "book" 1701798426 0
+["xelatex"] 1703071587 "book.tex" "book.xdv" "book" 1703071597 0
   "/home/user/texmf/tex/latex/commonstuff/boilerbook.sty" 1701256333 6525 910f5573205f5bc3bc84c72c5912a7a2 ""
-  "/home/user/texmf/tex/latex/commonstuff/cambridge7A.cls" 1701256352 81640 46381839fbc709af9a8bb17104c11ca0 ""
+  "/home/user/texmf/tex/latex/commonstuff/cambridge7A.cls" 1702068967 81616 b4d7bd720bdd97dc12097509b4709148 ""
   "/home/user/texmf/tex/latex/commonstuff/mathssymbols.sty" 1701787645 44934 abc79d94bb8192068590fe8a2fa07af4 ""
   "/home/user/texmf/tex/latex/commonstuff/normalfonts.sty" 1701256333 7468 16d1bfe85d0c67abbf8f1444f8c65cc8 ""
   "/home/user/texmf/tex/latex/commonstuff/tikzarrows.sty" 1701256333 9564 10f82642af9f93f291f3228080ff4d0c ""
@@ -38,6 +38,7 @@
   "/usr/local/share/texmf-dist/fonts/tfm/public/stix/stix-mathsfit.tfm" 1388795362 2560 304766c612fce5d4ce94849df0676616 ""
   "/usr/local/share/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm" 1388795362 1396 56f228418b8da227ec737e2e8eb165ee ""
   "/usr/local/share/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm" 1388795362 11012 fe8465b2dc4812fb0ce069fcb0fe6af8 ""
+  "/usr/local/share/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm" 1388795362 11132 876cc1f68923277b90e950337bde364f ""
   "/usr/local/share/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-italic.tfm" 1388795362 11156 e8d76832153748248385d623691129d7 ""
   "/usr/local/share/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm" 1388795362 11184 42ce9dfc058df87da7094b2e2fab1260 ""
   "/usr/local/share/texmf-dist/tex/generic/iftex/ifpdf.sty" 1572645307 480 5778104efadad304ced77548ca2184b1 ""
@@ -198,14 +199,15 @@
   "/usr/local/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1655411236 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "/usr/local/share/texmf-dist/web2c/texmf.cnf" 1700490705 40888 a266755322ca1957323abd9e9bb239d9 ""
   "/usr/local/share/texmf-var/web2c/xetex/xelatex.fmt" 1687347041 10502716 7b30e9de89f580568880859057cee5c6 ""
-  "book.aux" 1701798424 528 5b72aa0367769127cc09110e63bceb58 "xelatex"
-  "book.bbl" 1701798421 211 6689e1d0bfd02d851d821d2c19d1ed4c "bibtex book"
-  "book.tex" 1701791724 2809 cadb6d0729cf3546d01f7d60a445da48 ""
-  "book.toc" 1701798424 626 77d444d1fe599ca0f45dd9a9ff6bd01d "xelatex"
+  "book.aux" 1703071595 528 427e0589cc8b9df61b7266da71a49414 "xelatex"
+  "book.bbl" 1703071587 211 6689e1d0bfd02d851d821d2c19d1ed4c "bibtex book"
+  "book.tex" 1703071580 2809 cadb6d0729cf3546d01f7d60a445da48 ""
+  "book.toc" 1703071595 1448 4fa4124b5b699ac3e39676c2822aad01 "xelatex"
   "book.ttl" 0 -1 0 ""
-  "homotopy.aux" 1701798424 1507 f1d8b4a2bacb27ff7e2e2e2579099c0d "xelatex"
-  "homotopy.tex" 1701787657 9071 cd7f0cd1340e8163de9f5863cc5af980 ""
-  "simplicial.tex" 1701798415 14476 ddbe214d87f0e64fa947e725fd879808 ""
+  "constructions.tex" 1702068736 627 3e3f5414a1a04151ac1906d1d7280eb0 ""
+  "homotopy.aux" 1703071595 3439 b6f3577bab68722de6fb26f7d486f0c2 "xelatex"
+  "homotopy.tex" 1702065880 9094 91db202c6408b6e1d95b42b9b912d07a ""
+  "simplicial.tex" 1702486500 23737 7a7c173ea1cc1e56d154f18d850c9bc8 ""
   (generated)
   "book.aux"
   "book.log"

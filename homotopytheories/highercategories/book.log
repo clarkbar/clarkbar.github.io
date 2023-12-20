@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023-OpenBSD_Ports) (preloaded format=xelatex 2023.6.21)  5 DEC 2023 17:47
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023-OpenBSD_Ports) (preloaded format=xelatex 2023.6.21)  20 DEC 2023 11:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -884,17 +884,17 @@ LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <7.5> not available
 [3
 
 
-] [4] [5] (./simplicial.tex [6] [7] [8] [9] [10])) [11] [12
+] [4] [5] (./simplicial.tex [6] [7] [8] [9] [10] [11] [12] [13] [14]) (./constructions.tex)) [15] [16
 
 
 
-] [13] [14
+] [17] [18
 
 ] (./book.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 6.
 
-) [15
+) [19
 
 
 ] (./book.aux (./homotopy.aux))
@@ -904,12 +904,12 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 27767 strings out of 476683
- 545254 string characters out of 5807133
+ 27959 strings out of 476683
+ 549858 string characters out of 5807133
  1878018 words of memory out of 5000000
- 47530 multiletter control sequences out of 15000+600000
- 597020 words of font info for 119 fonts, out of 8000000 for 9000
+ 47718 multiletter control sequences out of 15000+600000
+ 605297 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 118i,14n,129p,1001b,970s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 118i,14n,129p,1001b,1045s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on book.xdv (19 pages, 93840 bytes).
+Output written on book.xdv (23 pages, 136828 bytes).

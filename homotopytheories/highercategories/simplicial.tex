@@ -8,20 +8,13 @@
 % chktex-file 35 
 % chktex-file 42
 
-%-------------------------------------------------------------------%
-%-------------------------------------------------------------------%
 \section{Simplicial objects}%
 \label{sec:Simplicialobjects}
-%-------------------------------------------------------------------%
-%-------------------------------------------------------------------%
 
-%-------------------------------------------------------------------%
-\subsection{The simplex category}%
-\label{sub:Thesimplexcategory}
-%-------------------------------------------------------------------%
+Our aim is to convert equality from a property into a structure.
+At a minimum, we want to be able to work with notions of equivalence that are not just set-theoretic equality.
+Traditionally, such an alternative is described as an \emph{equivalence relation} on a set $S$.
 
-If our aim is to convert equality from a property to a structure,
-then we might recall the notion of \emph{equivalence relation} on a set $S$.
 A \emph{relation} is encoded by a subset $R \subseteq S \times S$, which is the subset of related pairs of elements.
 An \emph{equivalence} relation is one that is reflexive, symmetric, and transitive:
 \begin{enumerate}
@@ -52,7 +45,7 @@ The case we want to make is that this diagram shape is the start of a more natur
 \]
 This diagram can encode the higher forms of equivalence we sought in the introduction to this chapter.
 
-You may have noticed that our diagram \eqref{eq:equivrel} does not capture the symmetry property of $R$.
+Our diagram \eqref{eq:equivrel} does not capture the symmetry property of $R$.
 It would be a simple matter to incorporate actions of the symmetric groups $\Sigma_2$ and $\Sigma_3$ on $R$ and $R \times_S R$ into our diagram.
 This would lead us to the theory of \emph{symmetric simplicial sets}.
 We will see in our story that the symmetry is encoded not in the shape of a simplicial diagram of sets, but in the properties we demand of it when it models an anima.
@@ -79,10 +72,14 @@ The associativity also lets us extend our diagram \eqref{eq:equivrel} to a large
     R \times_S R \times_S R\arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \arrow[r, shift right=2.25ex] \arrow[r, shift left=2.25ex] \& R \times_S R \arrow[l] \arrow[l, shift left=1.5ex] \arrow[l, shift right=1.5ex] \arrow[r] \arrow[r, shift left=1.5ex] \arrow[r, shift right=1.5ex] \& R \arrow[l, shift left=0.75ex] \arrow[l, shift right=0.75ex] \arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \& S \period \arrow[l]
   \end{tikzcd}%
 \end{equation}
-These diagrams are becoming complex enough that it will help to be a little more exacting about their indexing categories. 
+These diagrams are now becoming sufficiently complicated that
+we need to be more pedantic about the indexing categories we're using.
+
+\subsection{The simplex category}%
+\label{sub:Thesimplexcategory}
 
 \begin{definition}
-  The \emph{simplex category} $\DDelta$ is category
+  The \emph{simplex category} $\DDelta$ is the category
   whose objects are nonempty, totally ordered, finite sets,
   and whose morphisms the monotonic maps between these.
 \end{definition}
@@ -94,7 +91,7 @@ Every object of $\DDelta$ is uniquely isomorphic to a finite ordinal
 for some integer $n \geq 0$.
 This entitles us to refer to objects of $\DDelta$ as if they are all of this form.
 
-Between adjacent objects, we have the following morphisms:
+Between these, we have the following morphisms:
 \begin{itemize}
   \item for every $j \in [n]$, the \emph{face map} is the injective map $\delta_j \colon [n-1] \to [n]$ whose image does not contain $j$;
   \item for every $i \in [n]$, the \emph{degeneracy map} is the surjective map $\sigma_i \colon [n+1] \to [n]$ that carries $i+1$ to $i$.
@@ -145,14 +142,51 @@ as well as its opposite $\DDelta^{\op}$:
   For any integer $n \geq 0$, we define $\DDelta_{\leq n} \subset \DDelta$ as the full subcategory spanned by the objects $[k]$ with $k \leq n$.
 \end{notation}
 
-We see that the diagram \eqref{eq:equivrel} is a functor $\DDelta_{\leq 2}^{\op} \to \Set$, and
-the larger diagram \eqref{eq:groupoid} is a functor $\DDelta_{\leq 3}^{\op} \to \Set$.
-In fact, there is no obstruction to extending it further, to a functor $\DDelta^{\op} \to \Set$ that carries $[n]$ to the $n$-fold fiber product of $R$ over $S$:
+We started by contemplating an equivalence relation $R$ on $S$ in a diagrammatic way.
+That gave us diagram \eqref{eq:equivrel}, which we now can describe efficiently as a functor $X \colon \DDelta_{\leq 2}^{\op} \to \Set$ that carries $[0]$ to $S$, $[1]$ to $R$, and $[2]$ to $R \times_S R$.
+
+Our job is to replace properties with structure, so
+we then considered what happens if you allow the possibility of different ways of being equivalent.
+The equivalence relation becomes a groupoid;
+$S$ becomes the set of objects;
+$R$ becomes the set of morphisms.
+The transitivity condition becomes a composition structure.
+That new structure was encoded in a map $R \times_S R \to R$,
+and we asked it to satisfy a \emph{coherence condition}, which asserted the associativity of composition.
+That associativity is then expressed in the larger diagram \eqref{eq:groupoid},
+which is a functor $\DDelta_{\leq 3}^{\op} \to \Set$ that carries $[3]$ to $R \times_S R \times_S R$.
+
+But let's examine the meaning of associativity in our groupoid a little more carefully.
+The value of associative laws is that they permit us to make sense of composites not only of pairs of morphisms
+\[
+  x \to y \to z \comma
+\]
+but also of triples of morphisms
+\[
+  w \to x \to y \to z \comma
+\]
+and even of arbitrary finite sequences of morphisms
+\[
+  x_0 \to x_1 \to \cdots \to x_n \period
+\]
+That's a subtle shift of perspective here that we want to take a moment to appreciate.
+We were never \emph{really} interested in the equation $(\gamma\beta)\alpha = \gamma(\beta\alpha)$;
+what we wanted was to say that there was an unambiguous meaning to the expression $\gamma\beta\alpha$ and even of $\alpha_n \alpha_{n-1} \cdots \alpha_1$.
+
+In other words, the data in which we are ultimately interested is not that of a single multiplication law $R \times_S R \to R$, but in fact of a family of multiplication laws
+\[
+  R \times_S R \times_S \cdots \times_S R \to R \period
+\]
+Associativity is then the expression of the compatibility between these.
+This is all packaged up very neatly in the functor $\DDelta^{\op} \to \Set$ that carries $[n]$ to the $n$-fold fiber product of $R$ over $S$:
 \[
   R \times_S R \times_S \cdots \times_S R \period
 \]
+This is our first example of a \emph{simplicial object}.
 
-This is our first example of a \emph{simplicial object}:
+\subsection{Simplicial \& cosimplicial}%
+\label{sub:simplicialcosimplicial}
+
 \begin{definition}
   Let $C$ be a category.
   A \emph{simplicial object} of $C$ is a functor $\DDelta^{\op}\to C$.
@@ -169,7 +203,19 @@ This is our first example of a \emph{simplicial object}:
   At times it may be convenient to write $X_\bullet$ and $Y^\bullet$ instead of $X$ and $Y$, just to emphasize the variance.
 \end{definition}
 
-We will be interested in simplicial objects of a wide range of categories, but our starting place is the theory of simplicial \emph{sets}.
+Thus a simplicial object $X_\bullet$ specifies object $X_0, X_1, \dots$, along with \emph{face maps} $d_j \colon X_n \to X_{n-1}$ for each $j \in [n]$ and \emph{degeneracy maps} $s_i \colon X_n \to X_{n+1}$ for each $i \in [n]$:
+\[
+  \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+    \cdots \arrow[r] \arrow[r, shift left=1.5ex] \arrow[r, shift right=1.5ex] \arrow[r, shift left=3ex] \arrow[r, shift right=3ex] \&
+    {X_3} \arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \arrow[r, shift right=2.25ex] \arrow[r, shift left=2.25ex] \arrow[l, shift left=0.75ex] \arrow[l, shift right=0.75ex] \arrow[l, shift left=2.25ex] \arrow[l, shift right=2.25ex] \&
+    {X_2} \arrow[l] \arrow[l, shift left=1.5ex] \arrow[l, shift right=1.5ex] \arrow[r] \arrow[r, shift left=1.5ex] \arrow[r, shift right=1.5ex] \&
+    {X_1} \arrow[l, shift left=0.75ex] \arrow[l, shift right=0.75ex] \arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \&
+    {X_0} \arrow[l]
+  \end{tikzcd}%
+  \period
+\]
+
+We will be interested in simplicial objects of a number of different categories, but our big interest is the theory of simplicial \emph{sets}.
 
 \begin{eg}
   If $[m], [n] \in \DDelta$, then let us write
@@ -195,28 +241,94 @@ The Yoneda lemma implies that for every simplicial set $X$, we have a natural is
   X_n = \Mor_{s\Set}(\Delta^n, X) \period
 \]
 An element $\sigma \in X_n$ -- or equivalently a map $\sigma \colon \Delta^n \to X$ -- is called an \emph{$n$-simplex of $X$}.
-This implies that every simplicial set $X \in s\Set$ is the colimit of its simplices.
-That is, consider the Yoneda embedding $\DDelta \to s\Set$ given by $[n] \mapsto \Delta^n$, and let
+If $n=0$, we may call this a \emph{vertex};
+if $n=1$, we may call this an \emph{edge}.
+
+Every simplicial set $X \in s\Set$ is the colimit of its simplices.
+More precisely, consider the Yoneda embedding $\DDelta \to s\Set$ given by $[n] \mapsto \Delta^n$, and let
 \[
   \DDelta_{/X} \coloneq \DDelta \times_{s\Set} s\Set_{/X} \period
 \]
 We call $\DDelta_{/X}$ the \emph{category of simplices} of $X$.
 We now have a canonical isomorphism
 \[
-  \colim_{[n]\in\DDelta_{/X}^{\op}} \Delta^n = X \period
+  \colim_{[n]\in\DDelta_{/X}} \Delta^n = X \period
 \]
 Said differently, the left Kan extension of the Yoneda embedding $\DDelta \to s\Set$ is the identity functor on $s\Set$. 
+(Exercise \ref{exercise:stronggeneration}.)
 
 \begin{eg}
   Let $A$ be a small category.
-  The \emph{nerve} $NA$ is the simplicial set that carries $[n]$ to the \emph{set} of functors $[n] \to A$.
+  The \emph{nerve} $N_\bullet A$ is the simplicial set that carries $[n]$ to the \emph{set} of functors $[n] \to A$.
 
   In other words, by regarding each nonempty totally ordered finite set $[n]$ as a category, we obtain a fully faithful inclusion $\DDelta \inclusion \Cat$.
-  The nerve $NA$ is the composite of $\DDelta^{\op} \inclusion \Cat^{\op}$ with the functor $\Cat^{\op} \to \Set$ represented by $A$.
+  The nerve $N_\bullet A$ is the composite of $\DDelta^{\op} \inclusion \Cat^{\op}$ with the functor $\Cat^{\op} \to \Set$ represented by $A$.
+
+  Thus $N_0A$ is the set of objects of $A$, and $N_1A$ is the set of morphims.
+  If $f \colon x \to y$ is a morphism of $A$, then $d_0(f)=y$, and $d_1(f)=x$.
+  For any object $x$ of $A$, the degenerate $1$-simplex $s_0(x)$ is the identity at $x$.
+
+  The set $N_2A$ of $2$-simplices is the set of commutative triangles 
+  \[
+    \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+      \& y \arrow[dr, "g"] \& \\
+      x \arrow[ur, "f"] \arrow[rr, "h"'] \& \& z 
+    \end{tikzcd}
+  \]
+  in $A$.
+  If we call this $2$-simplex $\alpha$, then $d_0(\alpha) = g$, $d_1(\alpha) = h$, and $d_2(\alpha) = f$.
+  For every morphism $f \colon x \to y$ of $A$, we also have two degenerate $2$-simplices $s_0(f)$ and $s_1(f)$, which correspond to the commutative triangles
+  \[
+    \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+      \& x \arrow[dr, "f"] \& \\
+      x \arrow[ur, "\id"] \arrow[rr, "f"'] \& \& y 
+    \end{tikzcd}
+    \andeq
+    \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+      \& y \arrow[dr, "\id"] \& \\
+      x \arrow[ur, "f"] \arrow[rr, "f"'] \& \& y 
+    \end{tikzcd}
+    \comma
+  \]
+  respectively.
+
+  If $S$ is the set of objects of $A$ and $R$ is its set of morphisms, then
+  we find that $N_n A$ is the $n$-fold fiber product
+  \[
+    R \times_S R \times_S \cdots \times_S R \period
+  \]
+  Thus we have recovered the simplicial objects we extracted from relations and groupoids.
+
+  In particular, the standard $n$-simplex $\Delta^n$ is precisely the nerve $N_\bullet [n]$.
 \end{eg}
 
-The simplicial objects we have been discussing so far have all been extended from finite subcategories $\DDelta_{\leq n}$.
-Let's understand how that works.
+\begin{proposition}
+  The nerve functor $N_\bullet \colon \Cat \to s\Set$ is fully faithful.
+\end{proposition}
+
+\begin{proof}
+  Let $C$ and $D$ be categories, and let $f \colon N_\bullet C \to N_\bullet D$ be a morphism of simplicial sets.
+  We aim to show that there exists a unique functor $F \colon C \to D$ such that $f = N_\bullet F$.
+
+  If $F \colon C \to D$ is a functor such that $N_\bullet F=f$, then
+  on objects, $F$ is the map $f_0 \colon N_0C \to N_0D$, and
+  on morphisms, $F$ is the map $f_1 \colon N_1C \to N_1D$.
+  So our $F$ is certainly unique if it exists.
+
+  So define $F$ accordingly: on objects, take the map $f_0$, and on morphisms, take the map $f_1$.
+  The compatibility of $f$ with the face map $d_1 \colon N_2 \to N_1$ shows that $F$ respects composition.
+  The compatibility of $f$ with the degeneracy map $s_0 \colon N_0 \to N_1$ shows that $F$ respects identities.
+  Hence $F$ is indeed a functor.
+\end{proof}
+
+\noindent This proposition guarantees that we lose no information when we pass from categories to simplicial sets.
+
+\subsection{Skeletal \& coskeletal}%
+\label{sub:Skeletalandcoskeletal}
+
+The simplicial objects we have been discussing so far have all been extended from the finite subcategories $\DDelta_{\leq n}$.
+Let's understand the mechanism for these extensions.
+
 We write
 \[
   s_{\leq n}C \coloneq \Fun(\Delta_{\leq n}^{\op}, C)
@@ -228,45 +340,64 @@ Now restriction along the inclusion $\DDelta_{\leq n} \subset \DDelta$ defines f
 \[
   sC \to s_{\leq n}C
   \andeq
-  cC \to c^{\leq n}C \period
+  cC \to c^{\leq n}C \comma
 \]
+which we will denote by $X \mapsto X_{\leq n}$ and $Y \mapsto Y^{\leq n}$.
 
-If $C$ has finite colimits, then these functors each admit a fully faithful left adjoint given by left Kan extension:
-\[
-  \sk_n \colon s_{\leq n}C \inclusion sC
-  \andeq
-  \sk_n \colon c^{\leq n}C \inclusion cC \period
-\]
-These are called the \emph{$n$-skeleton} functors.
+\begin{definition}
+  If $C$ has finite colimits, then these functors each admit a fully faithful left adjoint given by left Kan extension:
+  \[
+    \sk_n \colon s_{\leq n}C \inclusion sC
+    \andeq
+    \sk_n \colon c^{\leq n}C \inclusion cC \period
+  \]
+  These are called the \emph{$n$-skeleton} functors.
+  
+  Dually, if $C$ has finite limits, then these functors each admit a fully faithful right adjoint given by right Kan extension:
+  \[
+    \cosk_n \colon s_{\leq n}C \inclusion sC
+    \andeq
+    \cosk_n \colon c^{\leq n}C \inclusion cC \period
+  \]
+  These are called the \emph{$n$-coskeleton} functors.
+\end{definition}
 
-If $C$ has finite limits, then these functors each admit a fully faithful right adjoint given by right Kan extension:
-\[
-  \cosk_n \colon s_{\leq n}C \inclusion sC
-  \andeq
-  \cosk_n \colon c^{\leq n}C \inclusion cC \period
-\]
-These are called the \emph{$n$-coskeleton} functors.
-
-We have the usual formulas for these Kan extensions;
-for example, in the language of coends and ends:
+We have the usual formulas for these Kan extensions:
 if $X \in s_{\leq n}C$, then
 \[
-  \sk_n(X)_m = \int^{k \in \DDelta_{\leq n}} \Delta^k_m \times X_k
+  \sk_n(X)_m = \colim_{[k] \in ((\DDelta_{\leq n})_{[m]/})^{\op}} X_k 
   \andeq
-  \cosk_n(X)_m = \int_{k \in \DDelta_{\leq n}} X_k^{\Delta^m_k} \comma
+  \cosk_n(X)_m = \lim_{[k] \in ((\DDelta_{\leq n})_{/[m]})^{\op}} X_k \comma
 \]
 and if $Y \in c^{\leq n}C$, then
 \[
-  \sk_n(Y)^m = \int^{k \in \DDelta_{\leq n}} \Delta^m_k \times Y^k
+  \sk_n(Y)^m = \colim_{[k] \in (\DDelta_{\leq n})_{/[m]}} Y^k 
   \andeq
-  \cosk_n(Y)^m = \int_{k \in \DDelta_{\leq n}} (Y^k)^{\Delta^k_m} \comma
+  \cosk_n(Y)^m = \lim_{[k] \in (\DDelta_{\leq n})_{[m]/}} Y^k \period
+\]
+In the language of coends and ends:
+\[
+  \sk_n(X)_m = \int^{[k] \in \DDelta_{\leq n}} \Delta^k_m \times X_k
+  \andeq
+  \cosk_n(X)_m = \int_{[k] \in \DDelta_{\leq n}} X_k^{\Delta^m_k} \comma
+\]
+\[
+  \sk_n(Y)^m = \int^{[k] \in \DDelta_{\leq n}} \Delta^m_k \times Y^k
+  \andeq
+  \cosk_n(Y)^m = \int_{[k] \in \DDelta_{\leq n}} (Y^k)^{\Delta^k_m} \period
 \]
 
-We will regularly abuse notation by speaking of $\sk_n(X)$ for a simplicial object $X$;
-in this case, one should regard $\sk_n$ as implicitly precomposed with the restriction $sC \to s_{\leq n}C$.
+We will sometimes abuse notation slightly by writing $\sk_n(X) = \sk_n(X_{\leq n})$ and $\cosk_n(X) = \cosk_n(X_{\leq n})$ for a simplicial object $X$.
+That is, we will often regard the functors $\sk_n$ and $\cosk_n$ as implicitly precomposed with the restriction $sC \to s_{\leq n}C$.
+The formulas above remain valid.
+
+If $C$ has all finite limits and colimits, and if $X,Y \in sC$, then we have natural bijections
+\[
+  \Mor_{sC}(\sk_n(X), Y) = \Mor_{s_{\leq n}C}(X_{\leq n}, Y_{\leq n}) = \Mor_{sC}(X, \cosk_n(Y)) \period
+\]
 
 \begin{definition}
-  Let $C$ be a category with all finite colimits, and let $n \geq 0$ be an integer.
+  Let $C$ be a category with all finite limits and colimits, and let $n \geq 0$ be an integer.
   A simplicial object $X \in sC$ is \emph{$n$-skeletal} if and only if the natural map $\sk_n(X) \to X$ is an isomorphism.
   Accordingly, $X$ is \emph{$n$-coskeletal} if and only if the natural map $X \to \cosk_n(X)$ is an isomorphism.
 
@@ -282,20 +413,99 @@ in this case, one should regard $\sk_n$ as implicitly precomposed with the restr
   \]
 \end{eg}
 
+\begin{eg}
+  The standard $n$-simplex $\Delta^n$ is $n$-skeletal.
+  For a simplicial set $X$, the $n$-skeleton $\sk_n(X)$ is the colimit of the $m$-simplices of $X$ with $m \leq n$:
+  \[
+    \sk_n(X) = \colim_{[m] \in (\DDelta_{\leq n})_{/X}} \Delta^m \period
+  \]
+  (Exercise \ref{exercise:nskeletonascolimit}.)
+\end{eg}
 
+\begin{eg}
+  If $X$ is a simplicial set, then we have a formula for the $m$-simplices of the $n$-coskeleton:
+  \[
+    \cosk_n(X)_m = \Mor_{s\Set}(\sk_n(\Delta^m), X) \period
+  \]
+\end{eg}
+
+\begin{eg}
+  The nerve of any small category is $2$-coskeletal (Exercise \ref{exercise:nerve2cosk}).
+\end{eg}
+
+\subsection{Boundaries \& horns}%
+\label{sub:Boundariesandhorns}
+
+\begin{definition}
+  Let $X$ be a simplicial set.
+  A \emph{simplicial subset} $Y \subseteq X$ is a choice of a subset $Y_n \subseteq X_n$ for each $n \geq 0$ such that for any map $\phi \colon [m] \to [n]$ in $\DDelta$, the induced map $X_n \to X_m$ carries $Y_n$ to $Y_m$.
+\end{definition}
+
+\noindent We are particularly interested here in simplicial subsets of the simplicial set $\Delta^n$.
+
+\begin{notation}
+  Let $0 \leq i_0 < i_1 < \cdots < i_k \leq n$ be integers.
+  Then we write
+  \[
+    \Delta^{\{i_0, \dots, i_k\}} \subseteq \Delta^n
+  \]
+  for the corresponding simplicial subset of $\Delta^n$.
+  This simplicial subset is itself a $k$-simplex.
+\end{notation}
+
+Families of simplicial subsets of a simplicial set $X$ can be intersected or unioned, just as with subsets of a set.
+
+\begin{definition}
+  Let $n \geq 0$ be an integer.
+  For every integer $0 \leq i \leq n$, the \emph{$i$-th face} is the simplicial subset 
+  \[
+    \Delta^{\hat{\imath}} \coloneq \Delta^{\{0,\dots,i-1,i+1,\dots,n\}} \subset \Delta^n \period
+  \]
+  This is the unique $(n-1)$-simplex of $\Delta^n$ that does not contain the vertex $\Delta^{\{i\}}$.
+
+  The \emph{boundary} of the $n$-simplex is the union of all the faces of $\Delta^n$:
+  \[
+    \partial \Delta^n \coloneq \bigcup_{0 \leq i \leq n} \Delta^{\hat{\imath}} \subset \Delta^n \period
+  \]
+
+  For every integer $0 \leq k \leq n$, the \emph{$k$-th horn} is the union of all but the $k$-th face of $\Delta^n$:
+  \[
+    \Lambda^n_k \coloneq \bigcup_{0 \leq i \leq n, i \neq k} \Delta^{\hat{\imath}} \subset \Delta^n \period
+  \]
+  This is the union of all the faces of $\Delta^n$ that contain the vertex $\Delta^{\{k\}}$. 
+\end{definition}
+
+Equivalently, $\partial \Delta^n$ can be described as the $(n-1)$-skeleton of the $n$-simplex:
+\[
+  \partial \Delta^n = \sk_{n-1}(\Delta^n) \period
+\]
+Thus
+\[
+  \Mor_{s\Set}(\partial\Delta^n, X) = \cosk_{n-1}(X)_n \period
+\]
+
+\subsection{Higher groupoids \& higher categories}%
+\label{sub:Highergroupoidshighercategories}
+
+\subsection{Fibrations}%
+\label{sub:Fibrations}
 
 \begin{exercises}
   \item%
+    \label{exercise:stronggeneration}
     Use the Yoneda lemma to show that for any small category $A$,
     the left Kan extension of the Yoneda embedding $A \inclusion \Fun(A^{\op}, \Set)$ along itself is the identity functor.
+  \item%
+    \label{exercise:nskeletonascolimit}
+    We have seen that every simplicial set $X$ is the colimit of its simplices.
+    Now show that $X$ is $n$-skeletal if and only if the canonical map
+    \[
+      \colim_{[m] \in \DDelta_{\leq n, /X}} \Delta^m \to X
+    \]
+    is an isomorphism.
+  \item%
+    \label{exercise:nerve2cosk}
+    Show that the composition of the nerve functor $N \colon \Cat \to s\Set$ with the restriction $s\Set \to s_{\leq 2}\Set$ is fully faithful.
+    Conclude that the nerve of every small category is $2$-coskeletal.
 \end{exercises}
-
-
-%-------------------------------------------------------------------%
-\subsection{Simplicial and cosimplicial objects}%
-\label{sub:Simplicialandcosimplicialobjects}
-%-------------------------------------------------------------------%
-
-
-
 
