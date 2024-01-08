@@ -1,13 +1,14 @@
 This is BibTeX, Version 0.99d (TeX Live 2023-OpenBSD_Ports)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: book.aux
+A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: homotopy.aux
 The style file: ../cambridgeauthordate.bst.bst
 I found no \citation commands---while reading file book.aux
 Database file #1: ../homotopytheories.bib
 You've used 0 entries,
             2465 wiz_defined-function locations,
-            577 strings with 4435 characters,
+            578 strings with 4451 characters,
 and the built_in function-call counts, 27 in all, are:
 = -- 0
 > -- 0

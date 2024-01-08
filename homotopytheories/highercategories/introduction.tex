@@ -1,0 +1,214 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+\chapter*{Higher categories \& Wittgenstein's ladder}%
+\label{cha:introduction}
+
+\epigraph{
+  My propositions elucidate in the sense that anyone who understands me will eventually recognize them as nonsense, once they have climbed through them -- on them -- beyond them.
+  (They must, as it were, throw the ladder away after they have climbed up it.)
+
+  They must surmount these propositions;
+  then they will see the world aright.
+}{-- Ludwig Wittgenstein, \textit{Tractatus Logico-Philosophicus}, 6.54.}
+
+We cannot yet give a thorough and precise account of higher category theory in the same terms that experienced practitioners use it.
+Instead, we have to construct a \emph{model} of higher categories within established set-theoretic foundations.
+We will then work within that model to develop a slate of fundamental definitions, constructions, and theorems.
+Once enough of this development is complete,
+the corresponding \emph{higher category of higher categories} is then unique.
+At that point, we are free to ignore the set-level specifics of the chosen model and to work contentedly in a natively higher-categorical way.
+
+This process of abstraction permeates mathematics.
+For example, according to set theory, the number $3$ might refer to:
+\begin{itemize}
+  \item a set with $3$ elements (when viewed as a natural number),
+  \item a set with countably many elements (when viewed as an integer or as a rational number), or
+  \item a set with uncountably many elements (when viewed as a real number).
+\end{itemize}
+Mathematicians do not fret much about this ambiguity, because they know there are preferred injections
+\[
+  \NN \inclusion \ZZ \inclusion \QQ \inclusion \RR \period
+\]
+These injections are in fact \emph{unique} with certain simple properties.
+For example, there is exactly one way to embed $\QQ$ as a subfield of $\RR$.
+
+Better still, each of these number systems satisfies a universal property:
+\begin{itemize}
+  \item $\NN$ is the free commutative monoid on one generator;
+  \item $\ZZ$ is the group completion of $\NN$;
+  \item $\QQ$ is the field of fractions of $\ZZ$;
+  \item $\RR$ is the Cauchy completion of $\QQ$.
+\end{itemize}
+Each of these universal properties characterizes maps from these objects in certain categories.
+
+To \emph{construct} these objects set-theoretically and to prove that they have the desired properties is sometimes a chore.
+There are often many constructions of the same object.
+For example, are real numbers Dedekind cuts, or are they equivalence classes of Cauchy sequences of rational numbers?
+If we ask questions that involve the \emph{elements} of a real number, then we can observe differences between these two options. 
+But if the kinds of questions we study only involve the things for which we usually use real numbers -- adding, subtracting, multiplying, dividing, and taking limits -- then any differences among the various constructions of $\RR$ are unimportant.
+
+Even further, working mathematicians don't generally regard the question \enquote{is $3 \in \pi$?} as \emph{meaningful}, even though it technically will have an answer.
+It is precisely \emph{because} the answer depends upon the set-theoretic model one chooses of the real numbers that we aren't supposed to ask that sort of question.
+That is, we adopt a \emph{structuralist} attitude to the real numbers.
+Every complete ordered field has a unique element that deserves the name $\pi$, and
+what we call the \emph{meaningful} questions about $\pi$ make reference only to that structure.
+Since any pair of complete ordered fields are topologically isomorphic in exactly one way, the answers do not depend on any particular construction of the complete ordered field.
+
+Note that we may still \emph{answer} meaningful questions by appealing to a particular model.
+One may deduce facts about $\pi$ by understanding it as an equivalence class of Cauchy sequences.
+But those facts are only meaningful (in our sense) if they can be stated only with reference to the structures present in a complete ordered field.
+
+This pattern of mathematical development resembles Wittgenstein's parable.
+We climb a ladder by constructing a mathematical object $X$ in a set-theoretical manner.
+Once we've done this, we identify the salient \emph{structures} and \emph{properties} of $X$.
+We write enough of these down to characterize $X$ uniquely, up to an appropriate notion of \emph{isomorphism}.
+The structures we specify will, perhaps, reveal to us a category $\CC$ of which it should be viewed as an object, and the properties will identify it uniquely up to unique isomorphism in $\CC$.
+We then restrict our attention to the questions about $X$ that can be formulated in terms provided by $\CC$,
+and we regard questions about $X$ that do not admit such formulations as meaningless.
+Details about our initial construction of $X$ become uninterrogable, and thus we throw away the ladder.
+
+The theory of higher categories functions also follows this pattern, to a point. 
+In fact, there are many ways to construct a theory of higher categories.
+These constructions vary significantly in detail.
+However, there are also today a number of different \emph{unicity theorems};
+these state that
+any two purported models of higher categories satisfying a handful of reasonable axioms are equivalent in an appropriate sense.
+In other words, all of these are models of the same structure.
+That structure is the \emph{higher category of higher categories}.
+We will have more to say about this below.
+
+Before we do, though, we must acknowledge that this does seem to introduce a little wrinkle in our story.
+After all, $\RR$ is not itself a real number;
+one can define complete ordered fields, without making reference to an existing theory of real numbers.
+But higher categories do form a higher category.
+Is it not paradoxical to assert that there is a unique higher category of higher categories?
+Are we not trying to throw away our ladder while we are still standing on it?
+After all, how can one characterize the theory of higher categories as a higher category before one has fully worked out what a higher category is?
+And how can one claim to have fully worked out what a higher category is without having characterized the theory of higher categories?
+
+The strategy is to begin with a definition (in set-theoretic terms) of \emph{putative} higher categories.
+We show that putative higher categories form a putative higher category $\categ{Put}$.
+Then we uniquely characterize an object $\categ{True}$ of $\categ{Put}$, making reference only to the structure available in $\categ{Put}$.
+We call $\categ{True}$ the putative higher category of \emph{true} higher categories.
+Then we prove that $\categ{Put}$ satisfies the conditions of our characterization.
+Hence the putative higher category $\categ{Put}$ of putative higher categories is equivalent (in a unique fashion) to the putative higher category $\categ{True}$ of true higher categories.
+
+It is easy to tell a degenerate version of this story.
+I define a putative higher category to be a one-point set.
+The category $\categ{Put}$ of one-point sets is, up to equivalence, a one-point set itself.
+We characterize $\categ{True}$ as the unique object of $\categ{Put}$ (up to unique isomorphism).
+Necessarily, $\categ{Put} \cong \categ{True}$.
+Obviously, we want a theory of higher categories with more content than this one.
+
+We conclude that the theory of higher categories, as we can develop it today, differs from many other mathematical abstractions in one important respect.
+Whereas we are eventually able to find new (and often clearer) \emph{definitions} of many mathematical objects by adopting structuralist attitudes,
+we do not have a way of constructing a theory of higher categories without introducing a model of the theory at some point.
+We can, for example, give a structuralist definition of \enquote{real number} as an element of a complete ordered field $\RR$;
+such a definition doesn't exhibit any preference for any particular construction of $\RR$.
+By contrast, we do not currently know how to give a completely structuralist definition of \enquote{higher category}.
+What we have is a structuralist \emph{characterization} of the theory of higher categories, when this theory is regarded as an object in some extant model of higher categories.
+So it appears that we cannot avoid the difficult task of constructing and studying an explicit model of higher categories.
+Such a model remains entangled with the theory of higher categories,
+even when the goal is a model-independent understanding of the theory.
+
+What this means for us is that, if we are to undertake a well-motivated study of higher categories, then we will have to spend some time developing good intuitions about these objects. 
+
+\section*{The landscape of higher categories}%
+\label{sec:landscape}
+
+At first it's hard to see what all the fuss is about.
+We already know what $0$-categories are: they're sets.
+We also know what $1$-categories are: they're categories.
+So a $1$-category has a collection of objects and, between every pair $x,y$ of objects, one has a $0$-category (=set) $\Mor(x,y)$ of maps.
+Composition is then a map
+\[
+  \Mor(x,y) \times \Mor(y,z) \to \Mor(x,z)
+\]
+given by $(f,g) \mapsto g \circ f$.
+The right way to iterate this definition seems uncontroversial.
+
+Let $\VV$ be a category with all finite products.
+A \emph{category $\CC$ enriched in $\VV$} consists of:
+\begin{itemize}
+  \item a collection $\Obj \CC$ of objects;
+  \item between every pair $x,y \in \Obj \CC$, an object
+  \[
+    \Mor_{\CC}(x,y) \in \Obj \VV \semicolon
+  \]
+  \item for every $x \in \Obj \CC$, a morphism $\id_x \colon 1_{\VV} \to \Mor_{\CC}(x,x)$ (where $1_{\VV}$ denotes the terminal object of $\VV$); and
+  \item for every $x,y,z \in \Obj \CC$, a morphism
+    \[
+      \Mor_{\CC}(x,y) \times \Mor_{\CC}(y,z) \to \Mor_{\CC}(x,z) \comma
+    \]
+    written $(f,g) \mapsto g \circ f$.
+\end{itemize}
+These data are subject to the usual axioms: composition is associative ($(h \circ g) \circ f = h \circ (g \circ f)$), and unital ($f \circ \id_x = \id_y \circ f = f$).
+There's an attached notion of \emph{enriched functor}, whose definition is predictable.
+
+Now we can give an easy recursive definition.
+Our base case is the notion of \emph{strict $0$-categories} and the category $\Cat^{\textit{str}}_0 \coloneq \Set$.
+Then we define a \emph{strict $n$-category} as a category enriched in $\Cat^{\textit{str}}_{n-1}$,
+and we define $\Cat^{\textit{str}}_n$ as the category of $\Cat^{\textit{str}}_{n-1}$-enriched categories and $\Cat^{\textit{str}}_{n-1}$-enriched functors.
+
+Thus a strict $2$-category consists of a set $\Obj \CC$ of objects;
+between every $a,b \in \Obj \CC$, a set $\Mor_{\CC}(a,b)$ of morphisms $a \to b$; and
+between every $f,g \in \Mor_{\CC}(a,b)$, a set $\Mor_{\Mor_{\CC}(a,b)}(f,g)$ of $2$-morphisms $f \to g$.
+Morphisms and $2$-morphisms each have composition laws, which are associative and unital.
+Since $\Mor_{\CC}(a,b)$ is actually a category, the composition law $\Mor_{\CC}(a,b) \times \Mor_{\CC}(b,c) \to \Mor_{\CC}(a,c)$ is a functor.
+In particular, if $f,g \colon a \to b$ and $u,v \colon b \to c$ are morphisms,
+and if $\eta \colon f \to g$ and $\theta \colon u \to v$ are $2$-morphisms, then we have a \emph{horizontal composition} $\theta \ast \eta \colon u \circ f \to v \circ g$. 
+The horizontal composition is related to the vertical composition by means of an \emph{interchange formula}:
+\[
+  (\nu \ast \mu) \circ (\theta \ast \eta) = (\nu \circ \theta) \ast (\mu \circ \eta) \period
+\]
+
+Unwinding the recursion, we see that a strict $n$-category $\CC$ has:
+\begin{itemize}
+  \item a collection $\Obj \CC$ of \emph{objects} or \emph{$0$-morphisms};
+  \item for every pair $a,b \in \Obj(\CC)$ of objects, a collection $\Mor_{\CC}(a,b)$ of \emph{morphisms} or \emph{$1$-morphisms} with \emph{source} $a$ and \emph{target} $b$;
+  \item for every pair $f,g \in \Mor_{\CC}(a,b)$ of $1$-morphisms (which we say are \emph{parallel} because they have the same source, and they have the same target), a collection $\Mor_{\Mor_{\CC}(a,b)}(f,g)$ of \emph{$2$-morphisms} with source $f$ and target $g$;
+  \item for every parallel pair $\alpha,\beta \in \Mor_{\Mor_{\CC}(a,b)}(f,g)$ of $2$-morphisms, a collection
+    \[
+      \Mor_{\Mor_{\Mor_{\CC}(a,b)}(f,g)}(\alpha,\beta)
+    \]
+    of \emph{$3$-morphisms} with source $\alpha$ and target $\beta$;
+\end{itemize}
+
+\dots
+
+\begin{itemize}
+  \item for every parallel pair $\phi, \psi$ of $(n-1)$-morphisms, a collection
+    \[
+    \Mor_{\Mor_{\;{\ddots}_{\;\Mor_{\CC}(a,b)\;}{\revddots}\;}}(\phi,\psi)
+    \]
+    $\Mor(\phi,\psi)$ of \emph{$n$-morphisms} with source $\phi$ and target $\psi$.
+\end{itemize} 
+Each of these kinds of morphisms can be composed 
+
+
+There is a theory of \emph{$(n,k)$-categories} for $0 \leq k \leq n \leq +\infty$.
+\emph{When are two mathematical objects the same?}
+Let's start with natural numbers $a$ and $b$.
+Perhaps you want to prove that $a$ and $b$ are the same.
+\emph{How might you go about that?}
+Well, it depends upon how $a$ and $b$ arose in your thinking.
+Since they are natural numbers, it's likely you found them by counting something.
+In other words, $a$ is the cardinality of a finite set $A$, and
+$b$ is the cardinality of a finite set $B$.
+
+Perhaps $A$ is the set of nontrivial ways of (correctly and nonredundantly) parenthesizing an expression like $abcd$ with two pairs of matching parentheses,
+such as $(a(bc))d$.
+Perhaps $B$ is the set of full binary trees with $4$ leaves.
+It would be perfectly valid to prove that $a=b$ by computing each of these numbers and compare the answers, but
+one feels as though one has 
+
+At first it seems a little strange to speak about the category of categories.
+These kinds of constructions seem useful and interesting.
