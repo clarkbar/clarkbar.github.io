@@ -1,23 +1,26 @@
-\contentsline {schapter}{Higher categories \& Wittgenstein's ladder}{1}{}%
-\contentsline {part}{\MakeUppercase []{Part\ ONE\relax \hskip 1em\relax Quasicategories: the ladder}}{7}{}%
-\contentsline {chapter}{\numberline {1}Grothendieck's homotopy hypothesis}{9}{}%
-\contentsline {section}{\numberline {1.1}Simplicial objects}{12}{}%
-\contentsline {subsection}{\numberline {1.1.1}The simplex category}{13}{}%
-\contentsline {subsection}{\numberline {1.1.2}Simplicial \& cosimplicial}{15}{}%
-\contentsline {subsection}{\numberline {1.1.3}Interlude: generators \& relations of categories}{17}{}%
-\contentsline {subsection}{\numberline {1.1.4}Skeletal \& coskeletal}{20}{}%
-\contentsline {subsection}{\numberline {1.1.5}Boundaries \& horns}{22}{}%
-\contentsline {subsection}{\numberline {1.1.6}Geometric realization}{23}{}%
-\contentsline {subsection}{\numberline {1.1.7}Higher groupoids \& higher categories}{23}{}%
-\contentsline {subsection}{\numberline {1.1.8}Fibrations}{23}{}%
-\contentsline {subsection}{Exercises}{23}{}%
-\contentsline {section}{\numberline {1.2}Basic constructions}{24}{}%
-\contentsline {subsection}{\numberline {1.2.1}Functor categories}{24}{}%
-\contentsline {subsection}{\numberline {1.2.2}Slice categories}{24}{}%
-\contentsline {subsection}{\numberline {1.2.3}Limits \& colimits}{24}{}%
-\contentsline {subsection}{\numberline {1.2.4}Twisted arrow categories}{24}{}%
-\contentsline {subsection}{\numberline {1.2.5}Cartesian \& cocartesian fibrations}{24}{}%
-\contentsline {subsection}{\numberline {1.2.6}Adjunctions}{24}{}%
-\contentsline {part}{\MakeUppercase []{Part\ TWO\relax \hskip 1em\relax $\infty $-categories: throwing away the ladder}}{25}{}%
+\contentsline {schapter}{Higher categories \& disposable ladders}{1}{}%
+\contentsline {subsection}{The question of sameness}{4}{}%
+\contentsline {subsection}{The homotopical turn}{8}{}%
+\contentsline {subsection}{Our approach}{10}{}%
+\contentsline {part}{\MakeUppercase []{Part\ ONE\relax \hskip 1em\relax The ladder}}{11}{}%
+\contentsline {chapter}{\numberline {1}Grothendieck's homotopy hypothesis}{13}{}%
+\contentsline {section}{\numberline {1.1}Simplicial objects}{16}{}%
+\contentsline {subsection}{\numberline {1.1.1}The simplex category}{17}{}%
+\contentsline {subsection}{\numberline {1.1.2}Simplicial \& cosimplicial}{19}{}%
+\contentsline {subsection}{\numberline {1.1.3}Interlude: generators \& relations of categories}{21}{}%
+\contentsline {subsection}{\numberline {1.1.4}Skeletal \& coskeletal}{24}{}%
+\contentsline {subsection}{\numberline {1.1.5}Boundaries \& horns}{26}{}%
+\contentsline {subsection}{\numberline {1.1.6}Geometric realization}{27}{}%
+\contentsline {subsection}{\numberline {1.1.7}Higher groupoids \& higher categories}{27}{}%
+\contentsline {subsection}{\numberline {1.1.8}Fibrations}{27}{}%
+\contentsline {subsection}{Exercises}{27}{}%
+\contentsline {section}{\numberline {1.2}Basic constructions}{28}{}%
+\contentsline {subsection}{\numberline {1.2.1}Functor categories}{28}{}%
+\contentsline {subsection}{\numberline {1.2.2}Slice categories}{28}{}%
+\contentsline {subsection}{\numberline {1.2.3}Limits \& colimits}{28}{}%
+\contentsline {subsection}{\numberline {1.2.4}Twisted arrow categories}{28}{}%
+\contentsline {subsection}{\numberline {1.2.5}Cartesian \& cocartesian fibrations}{28}{}%
+\contentsline {subsection}{\numberline {1.2.6}Adjunctions}{28}{}%
+\contentsline {part}{\MakeUppercase []{Part\ TWO\relax \hskip 1em\relax Throwing away the ladder}}{29}{}%
 \setcounter {tocdepth}{0}
-\contentsline {schapter}{References}{27}{}%
+\contentsline {schapter}{References}{31}{}%

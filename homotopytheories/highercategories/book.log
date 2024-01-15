@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023-OpenBSD_Ports) (preloaded format=xelatex 2023.6.21)  8 JAN 2024 12:59
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023-OpenBSD_Ports) (preloaded format=xelatex 2023.6.21)  15 JAN 2024 10:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1712,360 +1712,14 @@ LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18> not available
 
 ] [2
 
-] (./book.toc
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `TU/MinionMath(2)/m/n' will be
-(Font)              scaled to size 7.20076pt on input line 21.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `TU/MinionMath(2)/m/n' will be
-(Font)              scaled to size 5.20055pt on input line 21.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `TU/MinionMath(3)/m/n' will be
-(Font)              scaled to size 7.19922pt on input line 21.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `TU/MinionMath(3)/m/n' will be
-(Font)              scaled to size 5.19943pt on input line 21.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
-(microtype)             Ignoring protrusion settings for this character.
+] (./book.toc [1
 
-Overfull \hbox (8.08455pt too wide) in paragraph at lines 21--21
-[]| \TU/MinionPro(0)/b/n/10 PART TWO $[]$-CATEGORIES: THROWING AWAY THE LAD- 
- []
 
-)
+])
 \tf@toc=\write5
 \openout5 = `book.toc'.
 
- [1
-
-
-] [2
-
-]
+ [2]
 \openout2 = `introduction.aux'.
 
  (./introduction.tex
@@ -2576,19 +2230,356 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath(5)/m/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/MinionMath(1)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/MinionMath(2)/m/n' will be
+(Font)              scaled to size 7.20076pt on input line 24.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/MinionMath(2)/m/n' will be
+(Font)              scaled to size 5.20055pt on input line 24.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/MinionMath(2)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/MinionMath(3)/m/n' will be
+(Font)              scaled to size 7.19922pt on input line 24.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/MinionMath(3)/m/n' will be
+(Font)              scaled to size 5.19943pt on input line 24.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/MinionMath(3)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/MinionMath(4)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/7.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteleft ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquoteright ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblleft ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textquotedblright ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotedblbase ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/MinionMath(5)/m/n/5.2'.
+(microtype)             Ignoring protrusion settings for this character.
  [1
 
 
-] [2] [3] [4]
-Overfull \hbox (2.37798pt too wide) in paragraph at lines 161--169
-[][][][][] [][]$ \TU/MinionPro(0)/m/n/10 is actually a category, the composition law $[][][][][] [][] [] [][][][][] [][] []
- []
 
-[5]) [6] [7
+] [2] [3] [4] [5] [6] [7] [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [9]) [10] [11
 
 
-] [8
+
+] [12
 
 ]
 \openout2 = `homotopy.aux'.
@@ -2598,12 +2589,12 @@ Chapter 1.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9
+ [13
 
 
-] [10] (./simplicial.tex [11] [12] [13] [14] [15] [16]
+] [14] (./simplicial.tex [15] [16] [17] [18] [19] [20]
 
-LaTeX Warning: Reference `' on page 17 undefined on input line 324.
+LaTeX Warning: Reference `' on page 21 undefined on input line 324.
 
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath(1)/m/n/8'.
@@ -2774,221 +2765,46 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath(5)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
-[17] [18]
+[21] [22]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `HiraginoSansW3' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [19] [20] [21]
+ [23] [24] [25]
 Overfull \hbox (6.38338pt too wide) in paragraph at lines 589--590
 []\TU/MinionPro(0)/m/n/10 Families of simplicial subsets of a simplicial set $[]$ can be intersected or unioned,
  []
 
-[22]) (./constructions.tex)) [23] [24]
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(1)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `TU/MinionMath(2)/m/n' will be
-(Font)              scaled to size 16.00171pt on input line 58.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(2)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `TU/MinionMath(3)/m/n' will be
-(Font)              scaled to size 15.99829pt on input line 58.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(3)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(4)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquoteright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textquotedblright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotedblbase ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/MinionMath(5)/m/n/16'.
-(microtype)             Ignoring protrusion settings for this character.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 58.
-
-[25
+[26]) (./constructions.tex)) [27] [28] [29
 
 
 
-] [26
+] [30
 
 ] (./book.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 6.
 
-) [27
+) [31
 
 
 
 ] (./book.aux (./introduction.aux) (./homotopy.aux))
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.28pt have occurred.
+(Font)              up to 0.72pt have occurred.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 29432 strings out of 476683
- 638871 string characters out of 5807133
- 1884018 words of memory out of 5000000
- 49087 multiletter control sequences out of 15000+600000
- 520580 words of font info for 185 fonts, out of 8000000 for 9000
+ 29405 strings out of 476683
+ 637986 string characters out of 5807133
+ 1885018 words of memory out of 5000000
+ 49067 multiletter control sequences out of 15000+600000
+ 519938 words of font info for 177 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  116i,14n,148p,1001b,2766s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on book.xdv (31 pages, 544788 bytes).
+Output written on book.xdv (35 pages, 669884 bytes).

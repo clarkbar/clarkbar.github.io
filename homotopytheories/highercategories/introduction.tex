@@ -8,7 +8,7 @@
 % chktex-file 35 
 % chktex-file 42
 
-\chapter*{Higher categories \& Wittgenstein's ladder}%
+\chapter*{Higher categories \& disposable ladders}%
 \label{cha:introduction}
 
 \epigraph{
@@ -19,26 +19,19 @@
   then they will see the world aright.
 }{-- Ludwig Wittgenstein, \textit{Tractatus Logico-Philosophicus}, 6.54.}
 
-We cannot yet give a thorough and precise account of higher category theory in the same terms that experienced practitioners use it.
-Instead, we have to construct a \emph{model} of higher categories within established set-theoretic foundations.
-We will then work within that model to develop a slate of fundamental definitions, constructions, and theorems.
-Once enough of this development is complete,
-the corresponding \emph{higher category of higher categories} is then unique.
-At that point, we are free to ignore the set-level specifics of the chosen model and to work contentedly in a natively higher-categorical way.
-
-This process of abstraction permeates mathematics.
-For example, according to set theory, the number $3$ might refer to:
+\noindent%
+According to most set-theoretic foundations,
+the number $6$ might refer to:
 \begin{itemize}
-  \item a set with $3$ elements (when viewed as a natural number),
+  \item a set with $6$ elements (when viewed as a natural number),
   \item a set with countably many elements (when viewed as an integer or as a rational number), or
   \item a set with uncountably many elements (when viewed as a real number).
 \end{itemize}
-Mathematicians do not fret much about this ambiguity, because they know there are preferred injections
+Working mathematicians do not fret much about this ambiguity, because they know there are preferred injections
 \[
   \NN \inclusion \ZZ \inclusion \QQ \inclusion \RR \period
 \]
 These injections are in fact \emph{unique} with certain simple properties.
-For example, there is exactly one way to embed $\QQ$ as a subfield of $\RR$.
 
 Better still, each of these number systems satisfies a universal property:
 \begin{itemize}
@@ -53,88 +46,127 @@ To \emph{construct} these objects set-theoretically and to prove that they have 
 There are often many constructions of the same object.
 For example, are real numbers Dedekind cuts, or are they equivalence classes of Cauchy sequences of rational numbers?
 If we ask questions that involve the \emph{elements} of a real number, then we can observe differences between these two options. 
-But if the kinds of questions we study only involve the things for which we usually use real numbers -- adding, subtracting, multiplying, dividing, and taking limits -- then any differences among the various constructions of $\RR$ are unimportant.
+But if the kinds of questions we study only involve the things for which we usually use real numbers -- adding, subtracting, multiplying, dividing, and taking limits -- then any differences among the various constructions of $\RR$ become irrelevant.
 
-Even further, working mathematicians don't generally regard the question \enquote{is $3 \in \pi$?} as \emph{meaningful}, even though it technically will have an answer.
-It is precisely \emph{because} the answer depends upon the set-theoretic model one chooses of the real numbers that we aren't supposed to ask that sort of question.
+As a result, working mathematicians don't generally regard a question such as \enquote{is $3 \in \pi$?} as \emph{meaningful},
+despite the fact that in set-theory-founded mathematics, it technically will admit an answer.
+Precisely \emph{because} the answer depends upon the set-theoretic model one chooses of $\RR$,
+we know we aren't supposed to ask that sort of question.
 That is, we adopt a \emph{structuralist} attitude to the real numbers.
 Every complete ordered field has a unique element that deserves the name $\pi$, and
-what we call the \emph{meaningful} questions about $\pi$ make reference only to that structure.
-Since any pair of complete ordered fields are topologically isomorphic in exactly one way, the answers do not depend on any particular construction of the complete ordered field.
+the \emph{meaningful} questions about $\pi$ make reference only to that structure.
+Since any pair of complete ordered fields are topologically isomorphic in exactly one way, the answers to meaningful questions will not depend on any particular construction of the complete ordered field.
 
-Note that we may still \emph{answer} meaningful questions by appealing to a particular model.
-One may deduce facts about $\pi$ by understanding it as an equivalence class of Cauchy sequences.
-But those facts are only meaningful (in our sense) if they can be stated only with reference to the structures present in a complete ordered field.
+Now we may still \emph{answer} meaningful questions by appealing to a particular model. 
+One is certainly allowed to deduce facts about $\pi$ by thinking of it and working with it as an equivalence class of Cauchy sequences.
+But those facts are only taken to be meaningful if they can be stated only with reference to the structures present in a complete ordered field.
 
-This pattern of mathematical development resembles Wittgenstein's parable.
-We climb a ladder by constructing a mathematical object $X$ in a set-theoretical manner.
+This pattern of mathematical development resembles Wittgenstein's parable of the disposable ladder.
+We climb the ladder by constructing a mathematical object $X$ set-theoretically.
 Once we've done this, we identify the salient \emph{structures} and \emph{properties} of $X$.
 We write enough of these down to characterize $X$ uniquely, up to an appropriate notion of \emph{isomorphism}.
-The structures we specify will, perhaps, reveal to us a category $\CC$ of which it should be viewed as an object, and the properties will identify it uniquely up to unique isomorphism in $\CC$.
-We then restrict our attention to the questions about $X$ that can be formulated in terms provided by $\CC$,
-and we regard questions about $X$ that do not admit such formulations as meaningless.
-Details about our initial construction of $X$ become uninterrogable, and thus we throw away the ladder.
+The structures will often reveal to us a category $\CC$ of which $X$ should be viewed as an object, and
+the properties will identify $X$ uniquely up to unique isomorphism in $\CC$.
+We then restrict our attention to the questions about $X$ that can be formulated in terms provided by the category $\CC$,
+and we regard questions about $X$ that do \emph{not} admit such formulations as meaningless.
+Information about our initial construction of $X$ -- the ladder we used to climb to our understanding of it as an object of $\CC$ -- become not just irrelevant but \emph{uninterrogable}.
+We throw away the ladder.
 
-The theory of higher categories functions also follows this pattern, to a point. 
-In fact, there are many ways to construct a theory of higher categories.
+Here is another example.
+Let $R$ be a (commutative, unital) ring, and
+let $M$ and $N$ be $R$-modules.
+The first time many students see the tensor product $M \otimes_R N$,
+it is defined via generators and relations:
+given a set $S$ of generators of $M$ and a set $T$ of generators of $N$,
+define $M \otimes_R N$ as the $R$-module generated by pairs $(x,y)$ -- usually written as $x \otimes y$ and called \emph{simple tensors} -- with $x \in S$ and $y \in T$,
+subject to the relations $x \otimes (ry) = (rx) \otimes y = r(x \otimes y)$ and $x \otimes 0 = 0 \otimes y = 0$.
+This description is a disposable ladder:
+eventually students will understand it as a specific \emph{presentation} of the true object $M \otimes_R N$, 
+which is the object representing the functor that carries an $R$-module $T$ to the set of $R$-bilinear mays $M \times N \to T$.
+
+The theory of \emph{higher categories} also follows this pattern, to a point. 
+There are many ways to construct a theory of higher categories.
 These constructions vary significantly in detail.
 However, there are also today a number of different \emph{unicity theorems};
 these state that
-any two purported models of higher categories satisfying a handful of reasonable axioms are equivalent in an appropriate sense.
+any two purported models of higher categories satisfying a few sensible axioms are equivalent in an appropriate sense.
 In other words, all of these are models of the same structure.
 That structure is the \emph{higher category of higher categories}.
 We will have more to say about this below.
 
-Before we do, though, we must acknowledge that this does seem to introduce a little wrinkle in our story.
+Before we do, though, we must address the \emph{ouroboros} that makes our story unusual.
 After all, $\RR$ is not itself a real number;
-one can define complete ordered fields, without making reference to an existing theory of real numbers.
-But higher categories do form a higher category.
-Is it not paradoxical to assert that there is a unique higher category of higher categories?
+one can define complete ordered fields without making reference to an existing theory of real numbers.
+And $M \otimes_R N$ is an $R$-module, not an element of $M \otimes_R N$.
+But higher categories \emph{do} form a higher category.
+One feels a palpable sense of discomfort.
+Part of this is a response to the cautionary tale Russell told us about the dangers of self-membership.
+But there's something else:
+is it not somehow paradoxical to assert that there is a unique higher category of higher categories?
 Are we not trying to throw away our ladder while we are still standing on it?
 After all, how can one characterize the theory of higher categories as a higher category before one has fully worked out what a higher category is?
 And how can one claim to have fully worked out what a higher category is without having characterized the theory of higher categories?
 
+It's not quite as vicious a circle as it may seem.
 The strategy is to begin with a definition (in set-theoretic terms) of \emph{putative} higher categories.
 We show that putative higher categories form a putative higher category $\categ{Put}$.
+(Technically, we will need avoid Russell's paradox with large/small distinctions, but let's ignore this for now.)
 Then we uniquely characterize an object $\categ{True}$ of $\categ{Put}$, making reference only to the structure available in $\categ{Put}$.
 We call $\categ{True}$ the putative higher category of \emph{true} higher categories.
 Then we prove that $\categ{Put}$ satisfies the conditions of our characterization.
 Hence the putative higher category $\categ{Put}$ of putative higher categories is equivalent (in a unique fashion) to the putative higher category $\categ{True}$ of true higher categories.
 
-It is easy to tell a degenerate version of this story.
+But it is easy to tell a degenerate version of this story.
 I define a putative higher category to be a one-point set.
 The category $\categ{Put}$ of one-point sets is, up to equivalence, a one-point set itself.
 We characterize $\categ{True}$ as the unique object of $\categ{Put}$ (up to unique isomorphism).
 Necessarily, $\categ{Put} \cong \categ{True}$.
-Obviously, we want a theory of higher categories with more content than this one.
+We were hoping for a theory of higher categories with more content than this!
 
-We conclude that the theory of higher categories, as we can develop it today, differs from many other mathematical abstractions in one important respect.
-Whereas we are eventually able to find new (and often clearer) \emph{definitions} of many mathematical objects by adopting structuralist attitudes,
-we do not have a way of constructing a theory of higher categories without introducing a model of the theory at some point.
+So the theory of higher categories, as we can develop it today, differs from many other mathematical abstractions in one important respect.
+Whereas we eventually find new (and often clearer) structuralist definitions of many mathematical objects,
+we do not have a way of defining higher categories without introducing a model of the theory at some point.
 We can, for example, give a structuralist definition of \enquote{real number} as an element of a complete ordered field $\RR$;
 such a definition doesn't exhibit any preference for any particular construction of $\RR$.
+We can also define $M \otimes_R N$ as the object representing the functor $T \mapsto \categ{Bilin}_R(M \times N, T)$;
+no need to choose generators.
+
 By contrast, we do not currently know how to give a completely structuralist definition of \enquote{higher category}.
 What we have is a structuralist \emph{characterization} of the theory of higher categories, when this theory is regarded as an object in some extant model of higher categories.
-So it appears that we cannot avoid the difficult task of constructing and studying an explicit model of higher categories.
+So we cannot yet avoid the difficult task of constructing and studying an explicit model of higher categories.
 Such a model remains entangled with the theory of higher categories,
 even when the goal is a model-independent understanding of the theory.
 
-What this means for us is that, if we are to undertake a well-motivated study of higher categories, then we will have to spend some time developing good intuitions about these objects. 
+What this means for higher category theory:
+some tools beyond the usual arsenal of categorical techniques will have to be deployed in order to provide an account of higher category theory that is untethered from set-theoretical models.
+(Homotopy type theory is probably the most promising approach at the moment.)
 
-\section*{The landscape of higher categories}%
-\label{sec:landscape}
+What this means for us:
+if we are to undertake a well-motivated study of higher categories, then
+we will have to take a dialectical approach.
+We will spend some time experimenting with some provisional definitions in order to develop good intuitions about the kinds of structures and examples we actually want the theory to capture.
+We do not, however, intend to take a historical approach to the theory of higher categories.
+The development of higher category theory has been complex and discursive, and
+it would be easy for our narrative to degenerate into omphaloskepsis.
 
+Instead, in this book, we will focus on one essential challenge in the theory -- \emph{the question of sameness} -- which will in turn motivate \emph{the homotopical turn} in higher category theory.
+
+\section*{The question of sameness}%
+\label{sec:sameness}%
+\addcontentsline{toc}{subsection}{The question of sameness}
+
+\emph{Why is higher category subtle?}
 At first it's hard to see what all the fuss is about.
-We already know what $0$-categories are: they're sets.
-We also know what $1$-categories are: they're categories.
-So a $1$-category has a collection of objects and, between every pair $x,y$ of objects, one has a $0$-category (=set) $\Mor(x,y)$ of maps.
+We already know what $0$-categories are: they're \emph{sets}.
+We also know what $1$-categories are: they're \emph{categories}.
+So a $1$-category has a collection of objects and, between every pair $x,y$ of objects, one has a $0$-category $\Mor(x,y)$ of maps.
 Composition is then a map
 \[
   \Mor(x,y) \times \Mor(y,z) \to \Mor(x,z)
 \]
 given by $(f,g) \mapsto g \circ f$.
-The right way to iterate this definition seems uncontroversial.
 
+The way to iterate this definition seems uncontroversial.
 Let $\VV$ be a category with all finite products.
 A \emph{category $\CC$ enriched in $\VV$} consists of:
 \begin{itemize}
@@ -151,33 +183,21 @@ A \emph{category $\CC$ enriched in $\VV$} consists of:
     written $(f,g) \mapsto g \circ f$.
 \end{itemize}
 These data are subject to the usual axioms: composition is associative ($(h \circ g) \circ f = h \circ (g \circ f)$), and unital ($f \circ \id_x = \id_y \circ f = f$).
-There's an attached notion of \emph{enriched functor}, whose definition is predictable.
+There's an attached notion of \emph{$\VV$-enriched functor}, whose definition is predictable.
 
-Now we can give an easy recursive definition.
+Now we can give an easy iterative definition.
 Our base case is the notion of \emph{strict $0$-categories} and the category $\Cat^{\textit{str}}_0 \coloneq \Set$.
 Then we define a \emph{strict $n$-category} as a category enriched in $\Cat^{\textit{str}}_{n-1}$,
 and we define $\Cat^{\textit{str}}_n$ as the category of $\Cat^{\textit{str}}_{n-1}$-enriched categories and $\Cat^{\textit{str}}_{n-1}$-enriched functors.
 
-Thus a strict $2$-category consists of a set $\Obj \CC$ of objects;
-between every $a,b \in \Obj \CC$, a set $\Mor_{\CC}(a,b)$ of morphisms $a \to b$; and
-between every $f,g \in \Mor_{\CC}(a,b)$, a set $\Mor_{\Mor_{\CC}(a,b)}(f,g)$ of $2$-morphisms $f \to g$.
-Morphisms and $2$-morphisms each have composition laws, which are associative and unital.
-Since $\Mor_{\CC}(a,b)$ is actually a category, the composition law $\Mor_{\CC}(a,b) \times \Mor_{\CC}(b,c) \to \Mor_{\CC}(a,c)$ is a functor.
-In particular, if $f,g \colon a \to b$ and $u,v \colon b \to c$ are morphisms,
-and if $\eta \colon f \to g$ and $\theta \colon u \to v$ are $2$-morphisms, then we have a \emph{horizontal composition} $\theta \ast \eta \colon u \circ f \to v \circ g$. 
-The horizontal composition is related to the vertical composition by means of an \emph{interchange formula}:
-\[
-  (\nu \ast \mu) \circ (\theta \ast \eta) = (\nu \circ \theta) \ast (\mu \circ \eta) \period
-\]
-
 Unwinding the recursion, we see that a strict $n$-category $\CC$ has:
 \begin{itemize}
   \item a collection $\Obj \CC$ of \emph{objects} or \emph{$0$-morphisms};
-  \item for every pair $a,b \in \Obj(\CC)$ of objects, a collection $\Mor_{\CC}(a,b)$ of \emph{morphisms} or \emph{$1$-morphisms} with \emph{source} $a$ and \emph{target} $b$;
-  \item for every pair $f,g \in \Mor_{\CC}(a,b)$ of $1$-morphisms (which we say are \emph{parallel} because they have the same source, and they have the same target), a collection $\Mor_{\Mor_{\CC}(a,b)}(f,g)$ of \emph{$2$-morphisms} with source $f$ and target $g$;
-  \item for every parallel pair $\alpha,\beta \in \Mor_{\Mor_{\CC}(a,b)}(f,g)$ of $2$-morphisms, a collection
+  \item for every pair $x,y \in \Obj(\CC)$ of objects, a collection $\Mor_{\CC}(x,y)$ of \emph{morphisms} or \emph{$1$-morphisms} with \emph{source} $x$ and \emph{target} $y$;
+  \item for every pair $f,g \in \Mor_{\CC}(x,y)$ of $1$-morphisms (which we say are \emph{parallel} because they have the same source, and they have the same target), a collection $\Mor_{\Mor_{\CC}(x,y)}(f,g)$ of \emph{$2$-morphisms} with source $f$ and target $g$;
+  \item for every parallel pair $\alpha,\beta \in \Mor_{\Mor_{\CC}(x,y)}(f,g)$ of $2$-morphisms, a collection
     \[
-      \Mor_{\Mor_{\Mor_{\CC}(a,b)}(f,g)}(\alpha,\beta)
+      \Mor_{\Mor_{\Mor_{\CC}(x,y)}(f,g)}(\alpha,\beta)
     \]
     of \emph{$3$-morphisms} with source $\alpha$ and target $\beta$;
 \end{itemize}
@@ -187,14 +207,109 @@ Unwinding the recursion, we see that a strict $n$-category $\CC$ has:
 \begin{itemize}
   \item for every parallel pair $\phi, \psi$ of $(n-1)$-morphisms, a collection
     \[
-    \Mor_{\Mor_{\;{\ddots}_{\;\Mor_{\CC}(a,b)\;}{\revddots}\;}}(\phi,\psi)
+    \Mor_{\Mor_{\;{\ddots}_{\;\Mor_{\CC}(x,y)\;}{\revddots}\;}}(\phi,\psi)
     \]
     $\Mor(\phi,\psi)$ of \emph{$n$-morphisms} with source $\phi$ and target $\psi$.
 \end{itemize} 
-Each of these kinds of morphisms can be composed 
+Each of these kinds of morphisms can be composed, in all sorts of ways.
+As $n$ increases, the combinatorics can get a little heady, but it's nothing we can't handle.
+
+But as the word \enquote{strict} suggests, this is demanding too much.
+To see how, let's look more carefully at the case $n = 2$.
+A strict $2$-category consists of a set $\Obj \CC$ of objects;
+between every $x,y \in \Obj \CC$, a set $\Mor_{\CC}(x,y)$ of morphisms $x \to y$; and
+between every $f,g \in \Mor_{\CC}(x,y)$, a set $\Mor_{\Mor_{\CC}(x,y)}(f,g)$ of $2$-morphisms $f \to g$.
+Morphisms and $2$-morphisms each have composition laws, which are associative and unital.
+
+Associativity means that if $f \colon x \to y$, $g \colon y \to z$, and $h \colon z \to u$ are $1$-morphisms of $\CC$, then $h \circ (g \circ f) = (h \circ g) \circ f$.
+There's something strange about this.
+On either side of the equals sign here are \emph{objects} of the category $\Mor_{\CC}(x,u)$, and here we are asking them to be \emph{equal}.
+This is just the kind of unreasonable request that our structuralist disposition is supposed to deny.
+Let's illustrate this issue with an interesting class of examples that \enquote{ought} to be $2$-categories, but are not strict $2$-categories.
+
+We take our inspiration from a construction we meet early in a study of category theory:
+if $M$ is a monoid, then we define a category $BM$ with exactly one object $\pt$ and $\Mor_{BM}(\pt,\pt) = M$;
+composition in $BM$ is multiplication in $M$.
+An action of $M$ on an object of a category $\CC$ is then precisely a functor $BM \to \CC$.
+The construction $M \mapsto BM$ identifies the category of monoids with the category of categories with exactly one object.
+
+Let's try to tell this story again one \enquote{category level} up.
+There are some interesting examples that look like monoid objects in categories.
+For example, consider the category $\Mod(R)$ of modules over our ring $R$.
+The tensor product $\otimes_R$ is a multiplication law on $\Mod(R)$.
+We cannot quite call this a monoid structure though, because it's not strictly associative.
+If $A$, $B$, and $C$ are three $R$-modules, then it depends on some rather pedantic set-theoretic points of your precise definition of the tensor product as to whether we really have \emph{equality}
+\[
+  (A \otimes_R B) \otimes_R C = A \otimes_R (B \otimes_R C) \period
+\]
+More dramatically, in our preferred, ladder-free understanding of the tensor product, we came to the conclusion that we should simply \emph{define} it as the object representing the functor $T \mapsto \categ{Bilin}_R(A \times B,T)$.
+Of course, representing objects are only unique up to canonical isomorphism, not up to set-theoretic equality.
+So from this perspective, strict associativity for $\otimes_R$ is no longer \emph{meaningful}.
+
+On the other hand, there clearly is \emph{some} kind of associativity here, because we have an isomorphism
+\[
+  \alpha_{A,B,C} \colon (A \otimes_R B) \otimes_R C \cong A \otimes_R (B \otimes_R C)
+\]
+that is natural in $A$, $B$, and $C$,
+since these objects each represent the functor $T \mapsto \categ{Trilin}_R(A \times B \times C, T)$.
+In other words, associativity is no longer a \emph{property}, but a piece of \emph{structure} --
+namely, the natural isomorphism $\alpha$.
+The category $\Mod(R)$ is a \emph{monoidal category}.
+
+We might now try to construct a $2$-category $B\Mod(R)$. 
+There will be exactly one object, $\pt$.
+A $1$-morphism $A \colon \pt \to \pt$ will be a module over a ring $R$.
+A $2$-morphism $\phi \colon A \to B$ will be an $R$-linear map.
+In other words, $\Mor(\pt,\pt) = \Mod(R)$.
+The composition functor
+\[
+  \Mor(\pt, \pt) \times \Mor(\pt,\pt) \to \Mor(\pt,\pt)
+\]
+is the formation of the tensor product $(A,B) \mapsto A \otimes_R B$.
+But of course this isn't a strict $2$-category, because this composition is not strictly associative.
+
+The difference between $2$-categories and strict $2$-categories reduces, in the one-object case, to the difference between monoidal categories and monoid objects in categories.
+In order to come to grips with $2$-categories in general, it's a good start to understand monoidal $1$-categories.
+In particular, how does one deal with the failure of associativity?
+
+\emph{Why is associativity important anyhow?}
+This is not a frivilous question.
+In a monoid $M$, if we have three elements $x,y,z \in M$, then what associativity buys us is the ability to talk about the element $xyz \in M$ without ambiguity.
+More generally, for any $n$, and for any collection $\{x_1,x_2,\dots,x_n\}$, associativity lets us make unique sense of the product
+\[
+  x_1 x_2 \cdots x_n \in M \period
+\]
+This even makes sense when $n = 0$, because the empty product in $M$ is the unit for the multiplication.
+
+We are used to thinking of the \emph{structure} of a monoid as an element $e \in M$ and a binary multiplication $M \times M \to M$.
+These data are then required to satisfy two \emph{properties}: $xe=x=ex$ and $(xy)z=x(yz)$.
+From one perspective, this is a strange thing to do:
+the structure we really want out of a monoid is the ability to make sense of any product $x_1 x_2 \cdots x_n \in M$.
+We get that as a result of the associativity and unitality, but
+if we were more direct in our intentions, we would define the structure of a monoid as a set $M$ along with products
+\[
+  \prod{i \in I} \colon M^I \to M \comma
+\]
+one for every totally ordered finite set $I$, all arriving in a single packet.
+The binary multiplication map is what we get for $I = \{1,2\}$, and the unit is what we get for $I = \varnothing$.
+
+Of course, we've just introduced a lot more structure here, and
+in general we have to pay for new pieces of structure with more properties.
+In our case, we have to require that these multiplication maps satisfy a higher associativity:
+for every monotonic map $\phi \colon J \to I$ between totally ordered finite sets, we have
+\[
+  \prod_{i \in I} \prod_{j \in \phi^{-1}\{i\}} x_j = \prod_{j \in J} x_j \period
+\]
+Applied to the two monotonic surjections $\{1,2,3\} \to \{1,2\}$, we recover associativity $(xy)z = xyz = x(yz)$;
+applied to the two injections $\{1\} \to \{1,2\}$, we recover the unit condition $xe=x=ex$.
+
+This definition of \enquote{monoid} is inefficient, but
+it is equivalent to the usual definition.
+(That is, they define equivalent categories.)
+Tom Leinster calls this definition \emph{unbiased}, because
+the usual definition exhibits a bias for small totally ordered finite sets -- those of cardinality less than $3$.
 
 
-There is a theory of \emph{$(n,k)$-categories} for $0 \leq k \leq n \leq +\infty$.
 \emph{When are two mathematical objects the same?}
 Let's start with natural numbers $a$ and $b$.
 Perhaps you want to prove that $a$ and $b$ are the same.
@@ -210,5 +325,82 @@ Perhaps $B$ is the set of full binary trees with $4$ leaves.
 It would be perfectly valid to prove that $a=b$ by computing each of these numbers and compare the answers, but
 one feels as though one has 
 
-At first it seems a little strange to speak about the category of categories.
-These kinds of constructions seem useful and interesting.
+\section*{The homotopical turn}%
+\label{sec:homotopical}
+\addcontentsline{toc}{subsection}{The homotopical turn}
+
+The mission of homotopy theory is to iteratively enhance every \emph{property} of a mathematical object to \emph{structure} on it.
+The homotopy theorist deconstructs the equals sign by this process:
+they no longer regard \enquote{$x = y$} as a property that $x$ and $y$ together possess,
+but rather as piece of structure that connects $x$ and $y$.
+That structure is then a \emph{path} between $x$ and $y$.
+Semantically, we consider this path as a \enquote{reason} for -- or as a \enquote{witness} to -- the equality $x = y$.
+
+If $\alpha$ and $\beta$ are paths connecting $x$ and $y$,
+then again we do not wish to speak of \enquote{$\alpha = \beta$} as a property,
+but as a further piece of structure -- a \emph{homotopy} between $\alpha$ and $\beta$.
+We iterate: two homotopies are no longer merely \enquote{equal}, but they may be connected by \emph{higher homotopies};
+two higher homotopies may be connected by further higher homotopies, \emph{etc}., \emph{etc}., \emph{ad infinitum}.
+
+The data of all these points and paths and homotopies and higher homotopies, taken together, constitute an \emph{anima} (pl. \emph{animae}).
+Animae are also called \emph{spaces}, \emph{homotopy types}, \emph{Kan complexes}, or \emph{$\infty$-groupoids}.
+These terms each reflect a certain attitude toward these objects.
+Terms like \enquote{space} and \enquote{homotopy type} acknowledge that these objects were first modelled and understood using topological spaces and topological notions of homotopy.
+A \enquote{Kan complex} (named for Dan Kan) is then a combinatorial blueprint for these homotopies and their relations.
+The phrase \enquote{$\infty$-groupoid} then reinterprets the (higher) homotopies as (higher) \emph{symmetries}.
+The fact that these terms can all be used interchangeably is a nontrivial insight -- Grothendieck's \emph{homotopy hypothesis}.
+We will formulate and prove a version of this sentence in this chapter -- surely not the version Grothendieck had in mind,
+but one that is better-adapted to the needs of contemporary mathematicians.
+In our formulation, it becomes a theorem of Kan.
+
+Our use of the term \emph{anima} reflects our desire not to favor any one of these attitudes.
+Animae play the same role in \emph{homotopical mathematics} that sets play in `ordinary' mathematics:
+virtually all objects in homotopical mathematics are described in terms of animae.
+
+Symmetries of objects were certainly central to the mathematics of the 19th century, but
+it's a distinctly 20th century notion that symmetries might meaningfully have their own symmetries.
+(It is interesting to reflect on the origins of this idea, but
+it would be difficult to pinpoint the first person who seriously considered this possibility.)
+In any case, the 20th century provided three realizations about homotopy theory's iterative enhancement process.
+
+First was the promise of interesting new phenomena to study.
+Homological algebra appears at first to be a relatively featureless outgrowth of linear algebra.
+The Bockstein homomorphism is an early illustration that ordinary modules interact in new ways in derived settings.
+But it's the nontriviality of the Hopf element $\eta$ in the stable homotopy group $\pi^s_1$ that decisively separates \emph{homological algebra} -- ordinary algebra that is then derived -- from \emph{homotopical algebra} -- algebra done in a natively homotopical setting.
+The first signal from the mysterious world of homotopical algebra was a short message: \enquote{$\eta \neq 0$}.
+
+In spite of our vague description of homotopy theory as an inductive enhancement of properties into structure,
+this can all be made precise.
+In fact, it can be made precise in different ways.
+On one hand, we can model homotopical structures entirely via ordinary mathematical objects.
+We'll do that here: we'll adopt the Kanian approach and encode homotopy types as \emph{simplicial sets}.
+Alternatively -- and in a spirit closer to that of this introduction -- one might instead attempt to rewrite the logical foundations of mathematics in a way that bakes in our preference for structure over properties.
+This is the approach of \emph{homotopy type theory}, a stirring vision of new foundations in mathematics.
+As of this writing, homotopy type theory is still in its infancy.
+In later editions of this book, perhaps the combinatorics of simplices will be replaced by fundamental facts about type theory.
+
+Once it was understood how to model homotopical structures accurately, new questions arose:
+\emph{how do we construct models that are maximally useful?}
+\emph{what does it mean to say that two models represent the same homotopy theory?}
+\emph{shouldn't this notion of sameness, whatever it is, be subject to the same inductive refinement process that got us here?}
+These questions lay at the heart of the many foundational developments in homotopy theory starting in the 1970s.
+By the end of the millennium it was clear that one would need to take a further step, and contemplate a \emph{homotopy theory of homotopy theories}.
+Just as Grothendieck had seen that ordinary homotopy theory should be equivalent to the theory of $\infty$-groupoids,
+people like Joyal, Kan, Rezk, Simpson, and Toen recognized that the homotopy theory of homotopy theories should be equivalent to the theory of \emph{$\infty$-categories}.
+
+
+
+\section*{Our approach}%
+\label{sec:approach}
+\addcontentsline{toc}{subsection}{Our approach}
+
+Frustratingly, we can't yet give a thorough and precise account of higher category theory in the same terms that experienced practitioners use it.
+Instead, we have to construct a model of higher categories within established set-theoretic foundations.
+We will then work within that model to develop a slate of fundamental definitions, constructions, and theorems.
+Once enough of this development is complete,
+the corresponding higher category of higher categories is then unique.
+At that point, we are free to throw our ladder away, to ignore set-level specifics of the chosen model, and to work contentedly in a natively higher-categorical way.
+
+Accordingly, this text is divided into two parts.
+The first part climbs the ladder by developing the theory of quasicategories as a model of $(\infty,1)$-categories.
+The second part throws the ladder away by treating these objects with minimal reference to the explicit definitions.

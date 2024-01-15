@@ -812,10 +812,6 @@ OUTPUT book.xdv
 INPUT ./book.toc
 INPUT book.toc
 INPUT book.toc
-INPUT /usr/local/share/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
-INPUT /usr/local/share/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
-INPUT /usr/local/share/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
-INPUT /usr/local/share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 OUTPUT book.toc
 INPUT ./introduction.tex
 INPUT ./introduction.tex
@@ -831,6 +827,10 @@ INPUT /usr/local/share/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
 INPUT /usr/local/share/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
 INPUT /usr/local/share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT /usr/local/share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT /usr/local/share/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
+INPUT /usr/local/share/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
+INPUT /usr/local/share/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
 INPUT ./homotopy.tex
 OUTPUT homotopy.aux
 INPUT ./homotopy.tex
@@ -856,7 +856,6 @@ INPUT constructions.tex
 INPUT ./constructions.tex
 INPUT ./constructions.tex
 INPUT constructions.tex
-INPUT /usr/local/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT ./book.bbl
 INPUT book.bbl
 INPUT ./book.bbl
