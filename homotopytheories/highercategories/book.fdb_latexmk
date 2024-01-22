@@ -1,20 +1,20 @@
 # Fdb version 4
-["bibtex book"] 1705250285 "book.aux" "book.bbl" "book" 1705315889 0
+["bibtex book"] 1705919634 "book.aux" "book.bbl" "book" 1705919944 0
   "../cambridgeauthordate.bst" 1688571860 32813 78b2186050197f9eccd34f061097141d ""
-  "../homotopytheories.bib" 1688571860 21031 5a7adbb4c15b73172ab21247428ff660 ""
-  "book.aux" 1705315886 568 6893bddb1fbaa499f324be5e4cc6d915 "xelatex"
-  "homotopy.aux" 1705315886 3807 964fd91fd4aab4ff11dc277390407e50 "xelatex"
-  "introduction.aux" 1705315883 1203 4ab3ff302c3a129ee50d28a1b80bf9c6 "xelatex"
+  "../homotopytheories.bib" 1705686089 20967 9b4dfe4dbf1c9eaa816f587067386b0b ""
+  "book.aux" 1705919942 568 02d336f9cf5d993563245c18cd0974ba "xelatex"
+  "homotopy.aux" 1705919942 4071 1e87ef232bc673bf8a711304b5c5e1fe "xelatex"
+  "introduction.aux" 1705919939 1357 9d4f4911a26f0382796d3ecf75407053 "xelatex"
   (generated)
   "book.bbl"
   "book.blg"
   (rewritten before read)
-["xdvipdfmx"] 1705315888 "book.xdv" "book.pdf" "book" 1705315889 0
-  "book.xdv" 1705315886 669884 2c593591daa69e8f1741d3b38a5280aa "xelatex"
+["xdvipdfmx"] 1705919944 "book.xdv" "book.pdf" "book" 1705919944 0
+  "book.xdv" 1705919942 647900 7cf3ec0e82659f7a2762e4d76ec0bfae "xelatex"
   (generated)
   "book.pdf"
   (rewritten before read)
-["xelatex"] 1705315880 "book.tex" "book.xdv" "book" 1705315889 0
+["xelatex"] 1705919936 "book.tex" "book.xdv" "book" 1705919944 0
   "/home/user/texmf/tex/latex/commonstuff/boilerbook.sty" 1701256333 6525 910f5573205f5bc3bc84c72c5912a7a2 ""
   "/home/user/texmf/tex/latex/commonstuff/cambridge7A.cls" 1702068967 81616 b4d7bd720bdd97dc12097509b4709148 ""
   "/home/user/texmf/tex/latex/commonstuff/mathssymbols.sty" 1703549340 44928 03a5cc83a1c3ff562fa1ffe46d3983dd ""
@@ -173,17 +173,17 @@
   "/usr/local/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1655066402 56148 51a9a8571c07b9921892ae11063ae853 ""
   "/usr/local/share/texmf-dist/web2c/texmf.cnf" 1700490705 40888 a266755322ca1957323abd9e9bb239d9 ""
   "/usr/local/share/texmf-var/web2c/xetex/xelatex.fmt" 1687347041 10502716 7b30e9de89f580568880859057cee5c6 ""
-  "book.aux" 1705315886 568 6893bddb1fbaa499f324be5e4cc6d915 "xelatex"
-  "book.bbl" 1705250285 211 6689e1d0bfd02d851d821d2c19d1ed4c "bibtex book"
-  "book.tex" 1705153739 1210 94726ce1432bd47961c741be6ff63957 ""
-  "book.toc" 1705315886 1861 a3bb9b7b7d1c93f401b844240b292287 "xelatex"
+  "book.aux" 1705919942 568 02d336f9cf5d993563245c18cd0974ba "xelatex"
+  "book.bbl" 1705919634 211 6689e1d0bfd02d851d821d2c19d1ed4c "bibtex book"
+  "book.tex" 1705837593 1252 84bb703e0f33846c72a0037ab1f67a5f ""
+  "book.toc" 1705919942 2192 a06a80a94f46e9db0ff686e475b0b743 "xelatex"
   "book.ttl" 0 -1 0 ""
-  "constructions.tex" 1702068736 627 3e3f5414a1a04151ac1906d1d7280eb0 ""
-  "homotopy.aux" 1705315886 3807 964fd91fd4aab4ff11dc277390407e50 "xelatex"
-  "homotopy.tex" 1703623012 8674 cbe34b12d2cef81bfae43b2e150fe8b8 ""
-  "introduction.aux" 1705315883 1203 4ab3ff302c3a129ee50d28a1b80bf9c6 "xelatex"
-  "introduction.tex" 1705315879 27525 1050509761345ccc01800a989ff52bfb ""
-  "simplicial.tex" 1704190705 32056 d68c016aa0ce62d46e32de1e934afe72 ""
+  "constructions.tex" 1705837994 662 021005e62842123cae21160f5cd3779d ""
+  "homotopy.aux" 1705919942 4071 1e87ef232bc673bf8a711304b5c5e1fe "xelatex"
+  "homotopy.tex" 1705835894 2879 e6921e094df556f3427e6d76d63c4d56 ""
+  "introduction.aux" 1705919939 1357 9d4f4911a26f0382796d3ecf75407053 "xelatex"
+  "introduction.tex" 1705919936 30773 96f73a922478e36719bd1fbda2b68cd3 ""
+  "simplicial.tex" 1705837888 32067 20a5c44bf5075a3051e2ab980dcee511 ""
   (generated)
   "book.aux"
   "book.log"

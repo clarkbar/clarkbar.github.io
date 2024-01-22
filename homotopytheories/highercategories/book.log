@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023-OpenBSD_Ports) (preloaded format=xelatex 2023.6.21)  15 JAN 2024 10:51
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023-OpenBSD_Ports) (preloaded format=xelatex 2023.6.21)  22 JAN 2024 10:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1129,22 +1129,22 @@ Package csquotes Info: Redefining alias 'default' -> 'british'.
 )) (./book.aux (./introduction.aux) (./homotopy.aux))
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 
 Package unicode-math Warning: Using \overbracket and \underbracket from
@@ -1164,12 +1164,12 @@ Package unicode-math Warning: I'm going to overwrite the following commands
 (unicode-math)                colon-like commands, using them will lead to
 (unicode-math)                inconsistencies.
 
-LaTeX Info: Redefining \microtypecontext on input line 27.
-Package microtype Info: Applying patch `item' on input line 27.
-Package microtype Info: Applying patch `toc' on input line 27.
-Package microtype Info: Applying patch `eqnum' on input line 27.
-Package microtype Info: Applying patch `footnote' on input line 27.
-Package microtype Info: Applying patch `verbatim' on input line 27.
+LaTeX Info: Redefining \microtypecontext on input line 29.
+Package microtype Info: Applying patch `item' on input line 29.
+Package microtype Info: Applying patch `toc' on input line 29.
+Package microtype Info: Applying patch `eqnum' on input line 29.
+Package microtype Info: Applying patch `footnote' on input line 29.
+Package microtype Info: Applying patch `verbatim' on input line 29.
 Package microtype Info: Character protrusion enabled (level 2),
 (microtype)             factor: 1100.
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1285,7 +1285,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath(1)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath(2)/m/n' will be
-(Font)              scaled to size 18.00192pt on input line 34.
+(Font)              scaled to size 18.00192pt on input line 36.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath(2)/m/n/18'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1320,7 +1320,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath(2)/m/n/18'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 34.
+(Font)              scaled to size 12.00128pt on input line 36.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath(2)/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1355,7 +1355,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath(2)/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 34.
+(Font)              scaled to size 10.00107pt on input line 36.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath(2)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1390,7 +1390,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath(2)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath(3)/m/n' will be
-(Font)              scaled to size 17.99808pt on input line 34.
+(Font)              scaled to size 17.99808pt on input line 36.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath(3)/m/n/18'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1425,7 +1425,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath(3)/m/n/18'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 34.
+(Font)              scaled to size 11.99872pt on input line 36.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath(3)/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1460,7 +1460,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath(3)/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/MinionMath(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 34.
+(Font)              scaled to size 9.99893pt on input line 36.
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath(3)/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1700,13 +1700,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `UnifrakturMaguntia' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 34.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 36.
 (/usr/local/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 34.
+(Font)              size <17.28> substituted on input line 36.
 
 [1
 
@@ -2572,30 +2572,27 @@ Package microtype Info: Character `\guillemotright ' is missing
 
 
 
-] [2] [3] [4] [5] [6] [7] [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] [2] [3]
+Underfull \vbox (badness 2856) has occurred while \output is active []
 
- [9]) [10] [11
+ [4] [5] [6] [7] [8] [9]
+Underfull \vbox (badness 3701) has occurred while \output is active []
+
+ [10] [11]) [12] [13
 
 
 
-] [12
+] [14
 
 ]
 \openout2 = `homotopy.aux'.
 
  (./homotopy.tex
 Chapter 1.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13
+[15
 
 
-] [14] (./simplicial.tex [15] [16] [17] [18] [19] [20]
-
-LaTeX Warning: Reference `' on page 21 undefined on input line 324.
-
+] (./simplicial.tex [16] [17] [18] [19] [20] [21]
 Package microtype Info: Character `\textquoteleft ' is missing
 (microtype)             in font `\TU/MinionMath(1)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2765,7 +2762,7 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/MinionMath(5)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
-[21] [22]
+ [22]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `HiraginoSansW3' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -2775,7 +2772,7 @@ Overfull \hbox (6.38338pt too wide) in paragraph at lines 589--590
 []\TU/MinionPro(0)/m/n/10 Families of simplicial subsets of a simplicial set $[]$ can be intersected or unioned,
  []
 
-[26]) (./constructions.tex)) [27] [28] [29
+[26] [27]) (./constructions.tex)) [28] [29
 
 
 
@@ -2794,17 +2791,14 @@ Package natbib Warning: Empty `thebibliography' environment on input line 6.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.72pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 29405 strings out of 476683
- 637986 string characters out of 5807133
+ 29407 strings out of 476683
+ 638013 string characters out of 5807133
  1885018 words of memory out of 5000000
- 49067 multiletter control sequences out of 15000+600000
+ 49069 multiletter control sequences out of 15000+600000
  519938 words of font info for 177 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  116i,14n,148p,1001b,2766s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on book.xdv (35 pages, 669884 bytes).
+Output written on book.xdv (35 pages, 647900 bytes).

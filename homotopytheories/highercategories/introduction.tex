@@ -151,11 +151,11 @@ it would be easy for our narrative to degenerate into omphaloskepsis.
 
 Instead, in this book, we will focus on one essential challenge in the theory -- \emph{the question of sameness} -- which will in turn motivate \emph{the homotopical turn} in higher category theory.
 
-\section*{The question of sameness}%
-\label{sec:sameness}%
-\addcontentsline{toc}{subsection}{The question of sameness}
+\section*{From strict to weak}%
+\label{sec:strictweak}%
+\addcontentsline{toc}{subsection}{From strict to weak}
 
-\emph{Why is higher category subtle?}
+\emph{Why is higher category theory subtle?}
 At first it's hard to see what all the fuss is about.
 We already know what $0$-categories are: they're \emph{sets}.
 We also know what $1$-categories are: they're \emph{categories}.
@@ -288,14 +288,15 @@ the structure we really want out of a monoid is the ability to make sense of any
 We get that as a result of the associativity and unitality, but
 if we were more direct in our intentions, we would define the structure of a monoid as a set $M$ along with products
 \[
-  \prod{i \in I} \colon M^I \to M \comma
+  \prod_{i \in I} \colon M^I \to M \comma
 \]
 one for every totally ordered finite set $I$, all arriving in a single packet.
 The binary multiplication map is what we get for $I = \{1,2\}$, and the unit is what we get for $I = \varnothing$.
 
 Of course, we've just introduced a lot more structure here, and
 in general we have to pay for new pieces of structure with more properties.
-In our case, we have to require that these multiplication maps satisfy a higher associativity:
+In our case, we require that if $I$ is a singleton, then $\prod_{i \in I}$ is the identity.
+More importantly, we demand that these multiplication maps satisfy a higher associativity:
 for every monotonic map $\phi \colon J \to I$ between totally ordered finite sets, we have
 \[
   \prod_{i \in I} \prod_{j \in \phi^{-1}\{i\}} x_j = \prod_{j \in J} x_j \period
@@ -303,12 +304,52 @@ for every monotonic map $\phi \colon J \to I$ between totally ordered finite set
 Applied to the two monotonic surjections $\{1,2,3\} \to \{1,2\}$, we recover associativity $(xy)z = xyz = x(yz)$;
 applied to the two injections $\{1\} \to \{1,2\}$, we recover the unit condition $xe=x=ex$.
 
-This definition of \enquote{monoid} is inefficient, but
+This sort of definition of \enquote{monoid} is inefficient, but
 it is equivalent to the usual definition.
 (That is, they define equivalent categories.)
 Tom Leinster calls this definition \emph{unbiased}, because
 the usual definition exhibits a bias for small totally ordered finite sets -- those of cardinality less than $3$.
 
+Let us \emph{categorify} this story in order to make sense of monoidal categories.
+A monoidal category consists of a category $\CC$ and a family of functors
+\[
+  \otimes_I = \bigotimes_{i \in I} \colon \CC^I \to \CC \comma
+\]
+one for each totally ordered finite set $I$.
+This is not, however, all the structure we need.
+We also need to define, for every monotonic map $\phi \colon J \to I$, a natural isomorphism
+\[
+  \alpha_{\phi} \colon \bigotimes_{i \in I} \bigotimes_{j \in \phi^{-1}\{i\}} x_j \equivalence \bigotimes_{j \in J} x_j \period
+\]
+This is a great deal of structure, and
+it must be made to satisfy a great many conditions, called \emph{coherences}.
+These identify $\alpha_{\id}$ with $\id$ and express the relationship among $\alpha_{\psi \circ \phi}$,$\alpha_{\phi}$, and $\alpha_{\psi}$.
+A \emph{monoidal functor} between two monoidal categories $C$ and $D$ is then a functor $F \colon C \to D$ along with isomorphisms $\gamma_I \colon \otimes_I \circ F^I \equivalence F \circ \otimes_I$ that are suitably compatible with the associators for $C$ and $D$.
+
+Once we already \emph{have} the categorified notion -- the notion of \enquote{monoidal category} and \enquote{monoidal functor}, our unbiased definition of monoid becomes natural and trivial to state cleanly.
+We observe that \emph{concatenation} is a monoidal structure on the category $\OO$ of totally ordered finite sets.
+A monoid is then exactly a monoidal functor $\OO \to \Set$, where the monoidal structure on $\Set$ is the cartesian product.
+This phenomenon is a little expression of what Aaron Mazel-Gee calls the \emph{macrocosm/microcosm principle}.
+
+In order to establish a workable framework for \emph{weak} higher categories, we can follow a similar strategy to the one taken here to contemplate monoidal categories.
+\begin{enumerate}
+  \item We identify a large family of composition shapes we can form in a strict $n$-category.
+  \item We define a category of these composition shapes.
+    The morphisms of this category should control the higher associativity laws of these compositions.
+  \item We then weaken these associative laws from \emph{equations} to pieces of \emph{structure} (like isomorphisms) that identify the two sides of the equations.
+  \item These isomorphisms will have to satisfy coherences that are controlled by compositions in our category of composition shapes.
+    These coherences might themselves be properties that would be more naturally expressed as higher isomorphisms,
+    which would in turn be subject to yet higher coherences (controlled by composable sequences of maps), 
+    \emph{etc}.
+\end{enumerate}
+
+The transition from equations to pieces of structure to exhibit \emph{sameness} is everything.
+We will take this transition very seriously, and
+as a result, the theory of higher categories will unfolds in a more robust way for us.
+
+\section*{The question of sameness \inc}%
+\label{sec:sameness}%
+\addcontentsline{toc}{subsection}{The question of sameness \inc}
 
 \emph{When are two mathematical objects the same?}
 Let's start with natural numbers $a$ and $b$.
@@ -323,7 +364,9 @@ Perhaps $A$ is the set of nontrivial ways of (correctly and nonredundantly) pare
 such as $(a(bc))d$.
 Perhaps $B$ is the set of full binary trees with $4$ leaves.
 It would be perfectly valid to prove that $a=b$ by computing each of these numbers and compare the answers, but
-one feels as though one has 
+there's something unsatisfactory about this proof.
+More precisely, the equation $a=b$ is a shadow of something more interesting (and more general):
+a bijection between the sets $A$ and $B$.
 
 \section*{The homotopical turn}%
 \label{sec:homotopical}
