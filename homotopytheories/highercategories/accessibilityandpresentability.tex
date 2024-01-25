@@ -1,0 +1,510 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+\section{Accessibility \& presentablity}%
+\label{sec:accessibilityandpresentablity}
+\addcontentsline{toc}{section}{Accessibility \& presentability}
+
+\begin{definition}
+	Let $ \kappa $ be a regular cardinal.
+	A category $ \Lambda $ is \defn{$ \kappa $-filtered} if and only if
+	it satisfies the following equivalent conditions:
+	\begin{enumerate}
+		\item For every $ \kappa $-small category $ J $,
+			every functor $ f \colon J \to \Lambda $ can be extended
+			to a functor $ F \colon J^{\rhd} \to \Lambda $.
+		\item For every $ \kappa $-small category $ J $
+			and every functor $ H \colon \Lambda \times J \to \An^V$,
+			the natural morphism
+			\[
+				\colim_{\lambda \in \Lambda} \lim_{j \in J} H(\lambda,j)
+				\to
+				\lim_{j \in J} \colim_{\lambda \in \Lambda} H(\lambda,j)
+			\]
+			is an equivalence.
+		\item For every $ \kappa $-small category $ J $,
+			the diagonal functor
+			$ \Lambda \to \Fun(J, \Lambda) $
+			is cofinal.
+	\end{enumerate}
+\end{definition}
+
+\begin{eg}
+	For any regular cardinal $ \kappa $,
+	the ordinal $ \kappa $, regarded as a category,
+	is $ \kappa $-filtered.
+
+	More generally, a poset is $ \kappa $-filtered if and only if
+	every $ \kappa $-small subset thereof is dominated by some element.
+\end{eg}
+
+\begin{eg}
+	A $ \kappa $-small category is $ \kappa $-filtered
+	if and only if it contains a terminal object.
+\end{eg}
+
+\begin{eg}
+	Since no category is $ 0 $-small,
+	every category is $ 0 $-filtered.
+\end{eg}
+
+\begin{definition}
+	Let $ \kappa $ be a regular cardinal.
+	A functor $ f \colon C \to D $ between large-categories
+	will be said to be \defn{$ \kappa $-continuous}
+	if and only if it preserves $ \kappa $-filtered colimits.
+	
+	An object $ X $ of a locally small large-category $ C $
+	is said to be \defn{$ \kappa $-compact} if and only if
+	the functor $ \yo^X \colon C \to \An^V$ corepresented by $ X $
+	(i.e., the functor $ Y \mapsto \Map_C(X,Y) $)
+	is $ \kappa $-continuous.
+	We write $ C^{(\kappa)} \subseteq C $
+	for the full subcategory of $ \kappa $-compact objects.
+
+	A large-category $C$ is \defn{$\kappa$-accessible} if and only if
+	it satisfies the following conditions:
+	\begin{enumerate}
+		\item The category $ C $
+			is locally small.
+		\item The category $ C $
+			has all $ \kappa $-filtered colimits.
+		\item The subcategory $ C^{(\kappa)} \subseteq C $ is small. 
+		\item The subcategory $ C ^{(\kappa)} \subseteq C $ generates $ C $
+			under $ \kappa $-filtered colimits.
+	\end{enumerate}
+	
+	A $ \kappa $-accessible large-category $C$ is
+	\defn{$\kappa$-presentable}%
+	\footnote{Some authors use the phrase
+		\defn{$ \kappa $-compactly generated} instead.}
+	if and only if $ C^{(\kappa)} $
+	has all $ \kappa $-small colimits.
+\end{definition}
+
+\begin{eg}
+	A $ 0 $-continuous functor is one that preserves all colimits.
+	Hence a $ 0 $-compact object $ X $ is one in which the natural map 
+	\[
+		\Map(X, \colim_{\alpha \in A} Y_{\alpha}) \equivalence
+		\colim_{\alpha \in A} \Map(X, Y_{\alpha})
+	\]
+	is an equivalence,
+	irrespective of the category $ A $ or the diagram $ Y \colon A \to C $.
+
+	The following are equivalent for a large-category $ C $.
+	\begin{enumerate}
+		\item There exists a small full subcategory $ D \subseteq C $ whose
+			inclusion extends along the Yoneda embedding
+			to an equivalence of categories
+			\eqref{not:Vsetsanimaepresheavescategories}
+			\[ \PP^V(D) \equivalence C \period \]
+		\item The full subcategory $ C^{(0)} \subseteq C $ of $ 0 $-compact objects
+			is small, and
+			its inclusion extends along the Yoneda embedding
+			to an equivalence of categories
+			\[ \PP^V(C^{(0)}) \equivalence C \period \]
+		\item The large-category $ C $ is $ 0 $-accessible.
+		\item The large-category $ C $ is $ 0 $-presentable.
+	\end{enumerate}
+\end{eg}
+
+\begin{eg}
+	Let $ \kappa $ be an uncountable regular cardinal.
+	Then the following are equivalent for a category $ C $.
+	\begin{enumerate}
+		\item The category $ C $ is $ \kappa $-small.
+		\item The set of equivalence classes
+			of objects of $C$ is $ \kappa $-small,
+			and for every morphism
+			$ f \colon X \to Y $ of $ C $
+			and every $ n \in \NN_0$,
+			the set $ \pi_n(\Map_C(X,Y),f) $ is
+			$ \kappa $-small.
+		\item The category $ C $ is $ \kappa $-compact
+			as an object of $ \Cat^V $;
+			that is, $ \Cat^{\kappa} = \Cat^{V,(\kappa)} $.
+	\end{enumerate}
+	In particular, an anima $ X $ is $ \kappa $-small if and only if
+	all its homotopy sets are $ \kappa $-small, if and only if
+	it is $ \kappa $-compact as an object of $ \An^V $.
+\end{eg}
+
+\begin{eg}
+	The equivalence above is doubly false if $ \kappa = \aleph_0 $.
+
+	First, we certainly have a containment
+	\[ \Cat^{\aleph_0} \subset \Cat^{V,(\aleph_0)} \comma \]
+	but this containment is proper.
+	An $ \aleph_0 $-compact anima is a \emph{retract} of
+	an $ \aleph_0 $-small anima, but 
+	it may not be $ \aleph_0 $-small itself.
+	If $ X $ is $ \aleph_0 $-compact and \emph{simply connected},
+	then $ X $ is $ \aleph_0 $-small, but
+	for non-simply-connected animae,
+	we have the \emph{de Lyra--Wall finiteness obstruction},
+	which lies in the reduced $ K_0 $ of the group ring $ \ZZ[\pi_1(X)] $.
+
+	Second, the homotopy sets of an $ \aleph_0 $-small $ X $ anima
+	are not generally finite.
+	By a theorem of Serre,
+	if each connected component $ Y \subseteq X $
+	has finite fundamental group, then
+	its homotopy groups are finitely generated.
+	But if $ \pi_1(X) $ isn't finite,
+	this too fails;
+	for example, $ \pi_3(S^1 \vee S^2) $ is not finitely generated.
+
+	It is still true that the category $ \Cat^V $ is
+	$ \aleph_0 $-presentable.
+\end{eg}
+
+\begin{nul}
+	Let $ \kappa \leq \lambda $ be regular cardinals.
+	A $ \kappa $-small category is $ \lambda $-small.
+	A $ \lambda $-filtered category is $ \kappa $-filtered.
+	A $ \kappa $-continuous functor is $ \lambda $-continuous.
+	In general, however, there are $ \kappa $-accessible categories
+	that are not $ \lambda $-accessible.
+\end{nul}
+
+\begin{definition}
+	Let $ \kappa $ and $ \lambda $ be regular cardinals.
+	We write $ \kappa \ll \lambda $
+	if and only if,
+	for every pair of cardinals
+	$ \kappa_0 < \kappa $ and $ \lambda_0 < \lambda $,
+	one has $ \lambda_0^{\kappa_0} < \lambda $.
+	Equivalently, $ \kappa \ll \lambda $ if and only if,
+	for every $ \kappa $-small set $A$
+	and every $ \lambda $-small set $ B $,
+	the set $ \Map(A, B) $ is $ \lambda $-small.
+\end{definition}
+
+\begin{eg}
+	For every regular cardinal $ \kappa $,
+	one has $ 0 \ll \kappa $.
+\end{eg}
+
+\begin{eg}
+	For every infinite regular cardinal $ \kappa $,
+	one has $ \aleph_0 \ll \kappa $.
+\end{eg}
+
+\begin{nul}
+	Let $ \kappa $ and $ \lambda $ be regular cardinals.
+	How is the condition $ \kappa \ll \lambda $ used in practice?
+	The answer comes down to the following pair of manoeuvres,
+	which we can do whenever $ \kappa \ll \lambda $.
+
+	If $ J $ is a $ \lambda $-small poset,
+	then we can write
+	\[ J = \bigcup_{\el \in \Lambda} J_{\el} \comma \]
+	where $ \Lambda $ is a $ \lambda $-small and $ \kappa $-filtered poset,
+	and each $ J_{\el} \subseteq J $ is a $ \kappa $-small poset.
+	In this way, we may express
+	any $ \lambda $-small colimit as
+	a $ \lambda $-small and $ \kappa $-filtered colimit of
+	$ \kappa $-small colimits:
+	\[ \colim_{j \in J} X(j) \simeq \colim_{\el \in \Lambda} \colim_{j \in J_{\el}} X(j) \]
+	\citep[Corollary 4.2.3.11]{Lurie2009}.
+
+	On the other hand, if $ M $ is a $ \kappa $-filtered poset,
+	then we can write
+	\[ M = \bigcup_{k \in K} M_k \comma \]
+	where $ K $ is a $ \lambda $-filtered poset,
+	and each $ M_k \subseteq M $ is $ \lambda $-small and $ \kappa $-filtered.
+	In this way, we may express
+	any $ \kappa $-filtered colimit as
+	a $ \lambda $-filtered colimit of
+	$ \lambda $-small and $ \kappa $-filtered colimits:
+	\[ \colim_{m \in M} Y(m) \simeq \colim_{k \in K} \colim_{m \in M_k} Y(m) \]
+	\citep[Lemma 5.4.2.10]{Lurie2009}.
+\end{nul}
+
+\begin{proposition}[\protect{\citealp[Proposition 5.4.2.11]{Lurie2009}}]
+	If $ \kappa \ll \lambda $ are regular cardinals,
+	then every $ \kappa $-accessible category
+	is $ \lambda $-accessible.
+	Similarly, every $ \kappa $-presentable category
+	is $ \lambda $-presentable.
+\end{proposition}
+
+\begin{definition}
+	A large-category $ C $ is \defn{accessible} if and only if
+	there exists a regular cardinal $ \kappa $ such that
+	$ C $ is $ \kappa $-accessible.
+
+	We shall say that $ C $ is \defn{presentable} if and only if
+	there exists a regular cardinal $ \kappa $ such that
+	$ C $ is $ \kappa $-presentable.
+\end{definition}
+
+\begin{eg}
+	A small category is accessible if and only if it is idempotent-complete
+	\citep[Corollary 5.4.3.6]{Lurie2009}.
+\end{eg}
+
+\begin{nul}
+	A large-category is presentable if and only if
+	it is accessible and has all colimits.
+	A presentable large-category automatically has all limits as well.
+\end{nul}
+
+\begin{definition}%
+	\label{dfn:locallypresentable}
+	A large-category $ C $ is \defn{locally presentable}%
+	\footnote{In the $1$-category literature,
+		the phrase \emph{locally presentable category} is used for
+		what we call \emph{presentable category}.}
+	if and only if every object $ X \in C $
+	is contained in a presentable full large-subcategory $ C' \subseteq C $
+	such that the inclusion $ C' \inclusion C $ preserves colimits.
+\end{definition}
+
+\begin{nul}
+	In other words, a large-category $ C $ is locally presentable
+	just in case it can be expressed as
+	a class-indexed union of presentable large-categories,
+	each of which is embedded in $ C $ via
+	a colimit-preserving, fully faithful functor.
+\end{nul}
+
+\section{Presheaf categories}%
+\label{sec:presheaf_categories}
+
+Let $ C $ be a large-category.
+What happens if we seek to make sense in $ \nbg $
+of the category $ \tau_0\PP^V(C) $ of presheaves of sets
+$ C^{\op} \to \Set^V $?
+
+Right away we encounter a problem:
+if the objects of $ C $ form a proper class $ C_ 0 $,
+then there is no class of class maps $ \Map(C_0, V) $.
+Indeed, on one hand, in $ \nbg $, every element of a class is itself a set,
+and on the other hand, a class map $ f \colon C_0 \to V $ cannot be a set.%
+\footnote{Worse still, the \enquote{very large}
+	category of classes is not cartesian closed,
+	so there's no hope of defining
+	$ \Map(C_0, V) $ by means of some other artifice.}
+
+\begin{nul}
+	If $ C $ is a small category, then 
+	the large-category $ \tau_0\PP^V(C) $ is locally small,
+	and it enjoys many of the same good properties
+	enjoyed by $ \Set^V $ itself.
+	For every regular cardinal $ \kappa $,
+	it is $ \kappa $-presentable,
+	and it is \defn{cartesian closed}:
+	for every pair of presheaves $ X, Y \colon C^{\op} \to \Set^V $,
+	the morphisms $ X \to Y $
+	form a presheaf $ \MOR(X, Y) \colon D^{\op} \to \Set^V $.
+	The category $ \tau_0\PP^V(C) $ is a \defn{1-topos}.
+
+	Similarly, the category $ \PP^V(C) $ of presheaves
+	$ C^{\op} \to \An^V $
+	is a $ \kappa $-presentable topos
+	for every regular cardinal $ \kappa $.
+\end{nul}
+
+\begin{eg}
+	Let $ C $ be a locally small category.
+	If $ Y \in C $ is an object,
+	then $ \yo_Y \colon C^{\op} \to \Set^V $ is
+	the presheaf $ X \mapsto \Map_C(X,Y) $ represented by $ Y $.
+
+	Dually, if $ X \in C $ is an objects,
+	then $ \yo^X \colon C \to \Set^V $ is the functor
+	$ Y \mapsto \Map_C(X,Y) $ corepresented by $ X $.
+\end{eg}
+
+\begin{definition}
+	Let $ C $ be a locally small large-category.
+	A \defn{small presheaf} of sets on $ C $ is
+	a functor $ C^{\op} \to \Set^V $
+	that is left Kan extended from its restriction
+	to some small full subcategory $ D \subseteq C $.
+	We write $ \tau_0\PP^V(C) $
+	for the locally small large-category
+	of small presheaves of sets.
+	
+	Similarly, a \defn{small presheaf} (of animae) is
+	a functor $ C^{\op} \to \An^V $
+	that is left Kan extended from its restriction to
+	some small full subcategory $ D \subseteq C $.
+	We write $ \PP^V(C) $
+	for the locally small large-category
+	of small presheaves.
+\end{definition}
+
+\begin{eg}
+	Of course if $ C $ is a small category, then
+	every presheaf on $ C $ is small.
+	Thus the notation above does not conflict with the one established in
+	Notation \ref{not:Vsetsanimaepresheavescategories}.
+\end{eg}
+
+\begin{nul}
+	Let $ C $ be a locally small large-category.
+	For any small full subcategory $ D \subseteq C $,
+	we may contemplate the large-category $ \PP^V(D) $
+	of presheaves $ D^{\op} \to \An^V $.
+	If we have an inclusion of full subcategories
+	$ D' \subseteq D \subset C $, then
+	left Kan extension identifies $ \PP^V(D') $ with
+	a full subcategory of $ \PP^V(D) $.
+	
+	The (class-indexed) filtered union
+	$ \bigcup_D \PP^V(D) $
+	over the class of small full subcategories of $ C $
+	is precisely the large-category $ \PP^V(C) $.
+	
+	The categories $ \tau_0\PP^V(C) $ and $ \PP^V(C) $ are thus
+	locally presentable large-categories.
+\end{nul}
+
+\begin{eg}
+	Let $ C $ be a locally small large-category.
+	For any object $ Y \in C $,
+	the representable presheaf $ \yo_Y $ is left Kan extended
+	from any full subcategory that contains $ Y $.
+	In particular, $ \yo_Y $ is small.
+
+	Thus the assignment $ Y \mapsto \yo_Y $ is
+	the fully faithful \defn{Yoneda embedding}
+	\[ \yo \colon C \inclusion \PP^V(C) \period \]
+\end{eg}
+
+\begin{eg}
+	Let $ C $ be a locally small large-category.
+	If $ C^{\op} $ is accessible,
+	then $ \tau_0\PP^V(C) $ and $ \PP^V(C) $
+	are the categories of accessible functors
+	$ C^{\op} \to \Set^V $ and $ C^{\op} \to \An^V $, respectively.
+\end{eg}
+
+\begin{nul}
+	Let $ C $ be a locally small large-category.
+	The categories $ \tau_0\PP^V(C) $ and $ \PP^V(C) $
+	may not enjoy all the same good features that
+	$ \Set^V $ and $ \An^V$ have.
+	The categories $ \tau_0\PP^V(C) $ and $ \PP^V(C) $
+	possess all colimits,
+	but they do not generally have all limits.
+	For example, if $C$ has no nonidentity arrows, then
+	there is no terminal object in $ \tau_0\PP^V(C) $.
+	
+	If $ C^{\op} $ is accessible or small,
+	then $ \tau_0\PP^V(C) $ and $ \PP^V(C) $ do have all limits.
+\end{nul}
+
+\begin{definition}
+	Let $ A $ be a class of categories.
+	Let $ C $ be a locally small large-category,
+	and let $ C' \subseteq C $ be a full subcategory.
+	Then we say that
+	\defn{$ C' $ generates $ C $ freely under $ A $-shaped colimits}
+	if and only if,
+	for every large-category $ D $
+	that has all $ A $-shaped colimits,
+	the following assertions obtain.
+	\begin{enumerate}
+		\item Every functor $ C' \to D $ extends
+			to a functor $ C \to D $
+			that preserves $ A $ -shaped colimits.
+		\item For every pair of functors
+			$ F, G \colon C \to D $
+			that preserve $ A $-shaped colimits,
+			the map
+			$ \Map(F, G) \to \Map(F|C', G|C' ) $
+			is an equivalence.
+	\end{enumerate}
+	If $ f \colon C'' \inclusion C $ is a fully faithful functor,
+	then we will say that
+	\defn{$ f $ generates $ C $ freely under $ A $-shaped colimits}
+	if and only if its image $ f(C'') \subseteq C $ does so.
+\end{definition}
+
+\begin{remark}
+	If $ C $ is not small, then in $ \nbg $
+	we can make sense neither of $ \Fun(C,D) $,
+	nor of the full subcategory
+	$ \Fun^{A}(C, D) \subseteq \Fun(C,D) $
+	consisting of those functors that preserve
+	$ A $-shaped colimits.
+	If however we are in a situation in which
+	these objects \emph{can} be made sensible,
+	then $ C' $ generates $ C $ freely under
+	$ A $-shaped colimits
+	if and only if the restriction induces an equivalence
+	\[ \Fun^A(C, D) \equivalence \Fun(C', D) \period \]
+\end{remark}
+
+\begin{proposition}%
+	\label{prp:PPsmisfreelygenerated}
+	Let $ C $ be a locally small large-category.
+	Then the Yoneda embedding
+	$ \yo \colon C \inclusion \PP^V(C) $
+	generates $ \PP^V(C) $ freely under all colimits.
+\end{proposition}
+
+The theory of small presheaves can be relativized
+to a regular cardinal $ \kappa $:
+
+\begin{definition}
+	Let $ \kappa $ be a regular cardinal.
+	Let $ C $ be a locally $ \kappa $-small large-category.
+	A \defn{$ \kappa $-small presheaf} of sets on $ C $
+	is a functor $ C^{\op} \to \Set^{\kappa} $
+	that is left Kan extended from its restriction to
+	some $ \kappa $-small full subcategory $ D \subseteq C $.
+	The large-category of $ \kappa $-small presheaves of sets
+	will be denoted $ \tau_0\PP^{\kappa}(C) $.
+
+	Similarly, a \defn{$ \kappa $-small presheaf}
+	(of animae) is a functor $ C^{\op} \to \An^{\kappa} $
+	that is left Kan extended from its restriction to 
+	some $ \kappa $-small full subcategory $ D \subseteq C $.
+	The large-category of $ \kappa $-small presheaves
+	will be denoted $ \PP^{\kappa}(C) $.
+\end{definition}
+
+\begin{nul}
+	If $ C $ is small, then so is $ \PP^{\kappa}(C) $.
+\end{nul}
+
+\begin{nul}
+	Since we have assumed that $ C $ is locally $ \kappa $-small,
+	it follows that the Yoneda embedding lands in $ \PP^{\kappa}(C) $.
+	We can therefore characterize $ \PP^{\kappa}(C) $
+	as the smallest full large-subcategory of $ \PP^V(C) $
+	containing $ \yo(C) $ and closed under $ \kappa $-small colimits.
+\end{nul}
+
+\begin{proposition}%
+	\label{prp:PPkappaisfreelygenerated}
+	Let $ \kappa $ be a regular cardinal.
+	Let $ C $ be a locally $\kappa$-small large-category.
+	Then the Yoneda embedding
+	$ \yo \colon C \inclusion \PP^{\kappa}(C) $
+	generates $ \PP^{\kappa}(C) $ freely under
+	$ \kappa $-small colimits.
+\end{proposition}
+
+\begin{nul}
+	The category $ \PP^{\kappa}(C) $
+	has all $ \kappa $-small colimits, but
+	in general, it does not have $ \kappa $-small limits, and
+	it is not cartesian closed.
+	To ensure these properties as well,
+	we must turn to a discussion of inaccessible cardinals.
+\end{nul}
+
+

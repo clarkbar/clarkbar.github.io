@@ -1,0 +1,121 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+\subsection{Skeletal \& coskeletal}%
+\label{sub:skeletalandcoskeletal}
+
+The simplicial objects we have been discussing so far have all been extended from the finite subcategories $\DDelta_{\leq n}$.
+Let's understand the mechanism for these extensions.
+
+We write
+\[
+  s_{\leq n}C \coloneq \Fun(\Delta_{\leq n}^{\op}, C)
+  \andeq
+  c^{\leq n}C \coloneq \Fun(\Delta_{\leq n}, C)
+  \period
+\]
+Now restriction along the inclusion $\DDelta_{\leq n} \subset \DDelta$ defines functors
+\[
+  sC \to s_{\leq n}C
+  \andeq
+  cC \to c^{\leq n}C \comma
+\]
+which we will denote by $X \mapsto X_{\leq n}$ and $Y \mapsto Y^{\leq n}$.
+
+\begin{definition}
+  If $C$ has finite colimits, then these functors each admit a fully faithful left adjoint given by left Kan extension:
+  \[
+    \sk_n \colon s_{\leq n}C \inclusion sC
+    \andeq
+    \sk_n \colon c^{\leq n}C \inclusion cC \period
+  \]
+  These are called the \emph{$n$-skeleton} functors.
+  
+  Dually, if $C$ has finite limits, then these functors each admit a fully faithful right adjoint given by right Kan extension:
+  \[
+    \cosk_n \colon s_{\leq n}C \inclusion sC
+    \andeq
+    \cosk_n \colon c^{\leq n}C \inclusion cC \period
+  \]
+  These are called the \emph{$n$-coskeleton} functors.
+\end{definition}
+
+We have the usual formulas for these Kan extensions:
+if $X \in s_{\leq n}C$, then
+\[
+  \sk_n(X)_m = \colim_{[k] \in ((\DDelta_{\leq n})_{[m]/})^{\op}} X_k 
+  \andeq
+  \cosk_n(X)_m = \lim_{[k] \in ((\DDelta_{\leq n})_{/[m]})^{\op}} X_k \comma
+\]
+and if $Y \in c^{\leq n}C$, then
+\[
+  \sk_n(Y)^m = \colim_{[k] \in (\DDelta_{\leq n})_{/[m]}} Y^k 
+  \andeq
+  \cosk_n(Y)^m = \lim_{[k] \in (\DDelta_{\leq n})_{[m]/}} Y^k \period
+\]
+In the language of coends and ends:
+\[
+  \sk_n(X)_m = \int^{[k] \in \DDelta_{\leq n}} \Delta^k_m \times X_k
+  \andeq
+  \cosk_n(X)_m = \int_{[k] \in \DDelta_{\leq n}} X_k^{\Delta^m_k} \comma
+\]
+\[
+  \sk_n(Y)^m = \int^{[k] \in \DDelta_{\leq n}} \Delta^m_k \times Y^k
+  \andeq
+  \cosk_n(Y)^m = \int_{[k] \in \DDelta_{\leq n}} (Y^k)^{\Delta^k_m} \period
+\]
+
+We will sometimes abuse notation slightly by writing $\sk_n(X) = \sk_n(X_{\leq n})$ and $\cosk_n(X) = \cosk_n(X_{\leq n})$ for a simplicial object $X$.
+That is, we will often regard the functors $\sk_n$ and $\cosk_n$ as implicitly precomposed with the restriction $sC \to s_{\leq n}C$.
+The formulas above remain valid.
+
+If $C$ has all finite limits and colimits, and if $X,Y \in sC$, then we have natural bijections
+\[
+  \Mor_{sC}(\sk_n(X), Y) = \Mor_{s_{\leq n}C}(X_{\leq n}, Y_{\leq n}) = \Mor_{sC}(X, \cosk_n(Y)) \period
+\]
+
+\begin{definition}
+  Let $C$ be a category with all finite limits and colimits, and let $n \geq 0$ be an integer.
+  A simplicial object $X \in sC$ is \emph{$n$-skeletal} if and only if the natural map $\sk_n(X) \to X$ is an isomorphism.
+  Accordingly, $X$ is \emph{$n$-coskeletal} if and only if the natural map $X \to \cosk_n(X)$ is an isomorphism.
+
+  Similar definitions apply for cosimplicial objects.
+\end{definition}
+
+\begin{eg}
+  Let $X \in sC$ be a simplicial object.
+  Our $X$ is $0$-skeletal if and only if it is \emph{constant}.
+  It is $0$-coskeletal if and only if it is determined by $X_0$ via the formula
+  \[
+    X_m = X_0^{\times(m+1)} \period
+  \]
+\end{eg}
+
+\begin{eg}
+  The standard $n$-simplex $\Delta^n$ is $n$-skeletal.
+  For a simplicial set $X$, the $n$-skeleton $\sk_n(X)$ is the colimit of the $m$-simplices of $X$ with $m \leq n$:
+  \[
+    \sk_n(X) = \colim_{[m] \in (\DDelta_{\leq n})_{/X}} \Delta^m \period
+  \]
+  (Exercise \ref{exercise:nskeletonascolimit}.)
+\end{eg}
+
+\begin{eg}
+  If $X$ is a simplicial set, then we have a formula for the $m$-simplices of the $n$-coskeleton:
+  \[
+    \cosk_n(X)_m = \Mor_{s\Set}(\sk_n(\Delta^m), X) \period
+  \]
+\end{eg}
+
+\begin{eg}
+  The nerve of any small category is $2$-coskeletal (Exercise \ref{exercise:nerve2cosk}).
+\end{eg}
+
+

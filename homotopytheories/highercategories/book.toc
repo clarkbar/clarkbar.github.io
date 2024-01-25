@@ -1,27 +1,35 @@
 \contentsline {schapter}{Higher categories \& disposable ladders}{1}{}%
-\contentsline {subsection}{From strict to weak}{4}{}%
-\contentsline {subsection}{The question of sameness \textbf {(incomplete)}}{9}{}%
-\contentsline {subsection}{The homotopical turn}{10}{}%
-\contentsline {subsection}{Our approach}{11}{}%
 \contentsline {part}{\MakeUppercase []{Part\ ONE\relax \hskip 1em\relax The ladder}}{13}{}%
 \contentsline {chapter}{\numberline {1}Grothendieck's homotopy hypothesis}{15}{}%
 \contentsline {section}{\numberline {1.1}Simplicial objects}{16}{}%
 \contentsline {subsection}{\numberline {1.1.1}The simplex category}{17}{}%
-\contentsline {subsection}{\numberline {1.1.2}Simplicial \& cosimplicial}{19}{}%
-\contentsline {subsection}{\numberline {1.1.3}Interlude: generators \& relations of categories \textbf {(incomplete)}}{22}{}%
-\contentsline {subsection}{\numberline {1.1.4}Skeletal \& coskeletal}{24}{}%
-\contentsline {subsection}{\numberline {1.1.5}Boundaries \& horns}{26}{}%
-\contentsline {subsection}{\numberline {1.1.6}Geometric realization \textbf {(incomplete)}}{27}{}%
-\contentsline {subsection}{\numberline {1.1.7}Higher groupoids \& higher categories \textbf {(incomplete)}}{27}{}%
-\contentsline {subsection}{\numberline {1.1.8}Fibrations \textbf {(incomplete)}}{27}{}%
-\contentsline {subsection}{Exercises}{27}{}%
-\contentsline {section}{\numberline {1.2}Basic constructions \textbf {(incomplete)}}{28}{}%
-\contentsline {subsection}{\numberline {1.2.1}Functor categories \textbf {(incomplete)}}{28}{}%
-\contentsline {subsection}{\numberline {1.2.2}Slice categories \textbf {(incomplete)}}{28}{}%
-\contentsline {subsection}{\numberline {1.2.3}Limits \& colimits \textbf {(incomplete)}}{28}{}%
-\contentsline {subsection}{\numberline {1.2.4}Twisted arrow categories \textbf {(incomplete)}}{28}{}%
-\contentsline {subsection}{\numberline {1.2.5}Cartesian \& cocartesian fibrations \textbf {(incomplete)}}{28}{}%
-\contentsline {subsection}{\numberline {1.2.6}Adjunctions \textbf {(incomplete)}}{28}{}%
-\contentsline {part}{\MakeUppercase []{Part\ TWO\relax \hskip 1em\relax Throwing away the ladder}}{29}{}%
-\setcounter {tocdepth}{0}
-\contentsline {schapter}{References}{31}{}%
+\contentsline {subsection}{\numberline {1.1.2}Interlude: generators \& relations of categories \textbf {(incomplete)}}{19}{}%
+\contentsline {subsection}{\numberline {1.1.3}Skeletal \& coskeletal}{23}{}%
+\contentsline {subsection}{\numberline {1.1.4}Geometric realization \textbf {(incomplete)}}{24}{}%
+\contentsline {subsection}{\numberline {1.1.5}Higher groupoids \& higher categories \textbf {(incomplete)}}{24}{}%
+\contentsline {subsection}{\numberline {1.1.6}Fibrations \textbf {(incomplete)}}{25}{}%
+\contentsline {subsection}{Exercises}{25}{}%
+\contentsline {section}{\numberline {1.2}Basic constructions \textbf {(incomplete)}}{25}{}%
+\contentsline {subsection}{\numberline {1.2.1}Functor categories \textbf {(incomplete)}}{25}{}%
+\contentsline {subsection}{\numberline {1.2.2}Slice categories \textbf {(incomplete)}}{25}{}%
+\contentsline {subsection}{\numberline {1.2.3}Limits \& colimits \textbf {(incomplete)}}{25}{}%
+\contentsline {subsection}{\numberline {1.2.4}Twisted arrow categories \textbf {(incomplete)}}{25}{}%
+\contentsline {subsection}{\numberline {1.2.5}Cartesian \& cocartesian fibrations \textbf {(incomplete)}}{25}{}%
+\contentsline {subsection}{\numberline {1.2.6}Adjunctions \textbf {(incomplete)}}{25}{}%
+\contentsline {part}{\MakeUppercase []{Part\ TWO\relax \hskip 1em\relax Throwing away the ladder}}{27}{}%
+\contentsline {part}{\MakeUppercase []{Part\ THREE\relax \hskip 1em\relax Appendices}}{29}{}%
+\contentsline {chapter}{\AJW@numberline {A}Set theory \& cardinals}{31}{}%
+\contentsline {section}{\numberline {A.1}Regularity \& smallness}{34}{}%
+\contentsline {section}{Regularity \& smallness}{34}{}%
+\contentsline {section}{\numberline {A.2}Accessibility \& presentablity}{36}{}%
+\contentsline {section}{Accessibility \& presentability}{36}{}%
+\contentsline {section}{\numberline {A.3}Presheaf categories}{39}{}%
+\contentsline {section}{\numberline {A.4}Strong limit \& inaccessible cardinals}{42}{}%
+\contentsline {section}{Strong limit \& inaccessible cardinals}{42}{}%
+\contentsline {section}{\numberline {A.5}Echelons of accessibility}{44}{}%
+\contentsline {section}{Echelons of accessibility}{44}{}%
+\contentsline {section}{\numberline {A.6}Indization}{46}{}%
+\contentsline {section}{Indization}{46}{}%
+\contentsline {section}{\numberline {A.7}Higher inaccessibility}{47}{}%
+\contentsline {section}{Higher inaccessibility}{47}{}%
+\contentsline {schapter}{References}{51}{}%

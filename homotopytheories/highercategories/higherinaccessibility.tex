@@ -1,0 +1,200 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+\section{Higher inaccessibility}%
+\label{sec:higherinaccessibility}
+\addcontentsline{toc}{section}{Higher inaccessibility}
+
+\begin{nul}
+	We shall endow an ordinal with its order topology.
+	This may be described recursively as follows:
+	\begin{enumerate}
+		\item The ordinal $ 0 $ is the empty topological space.
+		\item For any ordinal $ \alpha $ with its order topology,
+			the order topology on the ordinal $ \alpha + 1 $
+			is the one-point compactification of $ \alpha $.
+		\item For any limit ordinal $ \alpha $,
+			the order topology is the colimit topology
+			$ \colim_{\beta < \alpha} \beta $.
+	\end{enumerate}
+\end{nul}
+
+We will use terminology 
+that treats $ \Ord $ itself as a topological space,
+even though it is not small.
+
+\begin{definition}
+	If $ W \subseteq \Ord $ is a subclass,
+	then a \defn{limit point} of $ A $ is
+	an ordinal $ \alpha $ such that $ \alpha = \sup (W \cap \alpha) $.
+	The class $ W $ will be said to be \defn{closed} if and only if
+	it contains all its limit points.
+
+	An \defn{ordinal function} is a class map $ f \colon \Ord \to \Ord $.
+	We say that $ f $ is \defn{continuous} if and only if
+	its restriction to any subset is continuous.
+	Equivalently, $ f $ is continuous if and only if,
+	for every subclass $ W \subseteq \Ord $
+	and every limit point $ \alpha $ of $ W $,
+	the ordinal $ f(\alpha) $ is a limit point of $ f(W) $.
+
+	We say that $ f $ is \defn{normal} if and only if
+	it is continuous and strictly increasing.
+\end{definition}
+
+\begin{nul}
+	If $ f $ is a normal ordinal function,
+	then its image is a closed and unbounded class%
+	\footnote{This is often abbreviated \defn{club class} in
+	set theory literature.}
+	of ordinals.
+	Conversely, if $ W \subseteq \Ord $ is a closed and unbounded class,
+	then we can define a normal ordinal function $ f $ by
+	\[
+		f(\alpha) =
+		\min \left\{ \gamma \in W :
+			(\forall \beta < \alpha)(f(\beta) < \gamma) \right\} \period
+	\]
+\end{nul}
+
+\begin{definition}
+	Let $ f $ be an ordinal function.
+	A regular cardinal $ \kappa $ is said to be
+	\defn{$ f $-inaccessible} if and only if,
+	for every ordinal $ \alpha$, if $ \alpha < \kappa $,
+	then $ f(\alpha) < \kappa $ as well.
+\end{definition}
+
+\begin{eg}
+	If $ f $ is the ordinal function that carries
+	an ordinal $ \alpha $ to the cardinal $ 2^{|\alpha|} $,
+	then an $ f $-inaccessible cardinal is precisely
+	an inaccessible cardinal.
+\end{eg}
+
+\begin{construction}
+	Let $ f $ be an increasing ordinal function
+	such that for every ordinal $ \beta $, one has $ \beta < f(\beta) $.
+	For every ordinal $ \xi $,
+	the normal ordinal function $ \alpha \mapsto f^{\alpha}(\xi) $
+	in uniquely specified by the requirements that
+	$ f^0(\xi) = \xi $ and $ f^{\alpha + 1}(\xi) =f(f^{\alpha}(\xi)) $.
+
+	\cite{Jorgensen1970} proves that an $ f $-inaccessible cardinal
+	greater than an ordinal $ \xi $
+	is precisely a regular cardinal that is a \emph{fixed point}
+	for the ordinal function $ \alpha \mapsto f^{\alpha}(\xi) $.
+\end{construction}
+
+\begin{eg}
+	If $ f $ is the ordinal function $ \beta \mapsto 2^{|\beta|} $,
+	then $ f^{\alpha}(\omega) = \beth_{\alpha} $.
+	An inaccessible cardinal is thus precisely a regular $ \beth $-fixed point.
+	
+	If $ f $ is the ordinal function $ \beta \mapsto |\beta|^+ $,
+	then $ f^{\alpha}(\omega) = \aleph_{\alpha} $. 
+	A weakly inaccessible cardinal is precisely a regular $ \aleph $-fixed  point.
+\end{eg}
+
+\begin{eg}
+	Assume $ \au $.
+	Consider the ordinal function $ f $ that carries
+	an ordinal $ \beta $ to the smallest inaccessible cardinal greater than $ \beta $.
+	For any ordinal $ \alpha $,
+	we have $ \daleth_{\alpha} = f^{\alpha}(\omega) $.
+
+	An $ f $-inaccessible cardinal is precisely a $ \daleth $-fixed point.
+	These are called \defn{$ 1 $-inaccessible cardinals}.
+	If $ \kappa $ is $ 1 $-inaccessible, then
+	$ V_{\kappa} \models (\zfc + \au) $.
+	If $ \zfc + \au $ is consistent, then
+	the existence of $ 1 $-inaccessible cardinals is not provable
+	by methods formalizable in $ \zfc + \au $.
+\end{eg}
+
+Iterating this strategy,
+one can now proceed to define $ \alpha $-inaccessibility
+for every ordinal $ \alpha $.
+Iterating the iteration,
+one can define notions of
+hyperinaccessibility, hyper${}^{\alpha}$inaccessibility, \emph{etc}.
+We cut to the chase:
+
+\begin{axiom}
+	The \defn{Lévy scheme} ($ \levy $) is the assertion that
+	for every ordinal function $ f $ and every ordinal $ \xi $,
+	there exists an $ f $-inaccessible cardinal $ \kappa $ such that $ \xi < \kappa $.
+\end{axiom}
+
+\begin{theorem}[\cite{Levy1960, Montague1962, Jorgensen1970}]
+	The following are equivalent.
+	\begin{enumerate}
+		\item The Lévy scheme.
+		\item Every normal ordinal function
+			has a regular cardinal in its image.
+		\item Every closed unbounded subclass $ W \subseteq \Ord $
+			contains a regular cardinal.
+		\item Every normal ordinal function
+			has an inaccessible cardinal in its image.
+		\item Every closed unbounded subclass $ W \subseteq \Ord $
+			contains an inaccessible cardinal.
+	\end{enumerate}
+\end{theorem}
+
+\begin{nul}
+	The Lévy scheme implies the Axiom of Universes,
+	and the consistency strength of $ \nbg + \levy $ is strictly greater
+	than that of $ \nbg + \au $.
+
+	The consistency strength of the Lévy scheme is
+	also strictly greater than
+	the existence of $ \alpha $-inaccessible, hyperinaccessible,
+	hyper${}^{\alpha}$inaccessible, \emph{etc}., cardinals.
+\end{nul}
+
+\begin{definition}
+	Let $ \kappa $ be a regular cardinal.
+	One says that $ \kappa $ is \defn{Mahlo} if and only if
+	every closed unbounded subset $ W \subseteq \kappa $
+	contains a regular cardinal.
+\end{definition}
+
+\begin{nul}
+	Assume that $ \kappa $ is a Mahlo cardinal.
+	Then $ \kappa $ is $ f $-inaccessible for every ordinal function $ f $.
+	Accordingly, $ \kappa $ is a fixed point of every normal ordinal function.
+
+	Additionally,
+	if $ \kappa $ is a Mahlo cardinal, then
+	$ V_{\kappa} \models (\zfc + \levy) $, and similarly
+	$ V_{\kappa + 1} \models (\nbg + \levy) $.
+	The consistency strength of the axiom
+	\enquote{a Mahlo cardinal exists}
+	is strictly greater than the Lévy scheme.
+\end{nul}
+
+\begin{nul}
+	The Lévy scheme and its equivalents and slight variants
+	have appeared under various names:
+	\enquote{Mahlo's principle} \citep{Gloede1973},
+	\enquote{Axiom F} \citep{Drake1974},
+	\enquote{$ \Ord $ is Mahlo} \citep{Hamkins2003}.
+\end{nul}
+
+For our purposes,
+one of the main appeals of the Lévy scheme
+is the following.
+
+\begin{theorem}
+	Assume $ \levy $.
+	
+\end{theorem}
+
+

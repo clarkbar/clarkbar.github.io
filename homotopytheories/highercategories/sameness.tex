@@ -1,0 +1,55 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+%\section*{The question of sameness \inc}%
+%\label{sec:sameness}%
+%\addcontentsline{toc}{subsection}{The question of sameness \inc}
+
+\minidiv
+
+\noindent \emph{When are two mathematical objects the same?}
+Let's start with natural numbers $a$ and $b$.
+Perhaps you want to prove that $a$ and $b$ are the same.
+\emph{How might you go about that?}
+Well, it depends upon how $a$ and $b$ arose in your thinking.
+Since they are natural numbers, it's likely you found them by counting something.
+In other words, $a$ is the cardinality of a finite set $A$, and
+$b$ is the cardinality of a finite set $B$.
+
+Perhaps $A$ is the set of nontrivial ways of (correctly and nonredundantly) parenthesizing an expression like $abcd$ with two pairs of matching parentheses,
+such as $(a(bc))d$.
+Perhaps $B$ is the set of full binary trees with $4$ leaves.
+It would be perfectly valid to prove that $a=b$ by computing each of these numbers and comparing the answers, but
+this sort of proof is unsatisfying, even contentless:
+such a proof doesn't actually inform us of anything about \emph{why} these two numbers are equal.
+The equation $a=b$ is a shadow of something more interesting (and more general):
+a \emph{bijection} between the sets $A$ and $B$.
+
+Whereas \enquote{$a=b$} is a \emph{property}, a bijection between $A$ and $B$ is \emph{structure}.
+A bijection $\phi \colon A \to B$ is an isomorphism in the category of sets;
+its inverse is map $\psi \colon B \to A$ such that $\psi\phi = \id_A$ and $\phi\psi = \id_B$.
+
+If we now want to operate in a $2$-category, these equalities are no longer a natural thing to demand.
+For example, we know we should not expect two categories to be isomorphic.
+The correct notion of sameness for categories (or any pair of objects in a $2$-category is \emph{equivalence}.
+An equivalence $\phi \colon A \to B$ has an inverse $\psi \colon B \to A$ in the sense that $\psi\phi$ is isomorphic to $\id_A$ and $\phi\psi$ is isomorphic to $\id_B$.
+That means that there are $2$-morphisms
+\[
+  \alpha \colon \id_A \to \psi\phi \comma \qquad \beta \colon \psi\phi \to \id_A 
+\]
+such that $\beta\alpha = \id_{\id_A}$ and $\alpha\beta = \id_{\psi\phi}$,
+and there are $2$-morphisms
+\[
+  \gamma \colon \id_B \to \phi\psi \comma \qquad \delta \colon \phi\psi \to \id_B 
+\]
+such that $\delta\gamma = \id_{\id_B}$ and $\gamma\delta = \id_{\phi\psi}$.
+
+
+

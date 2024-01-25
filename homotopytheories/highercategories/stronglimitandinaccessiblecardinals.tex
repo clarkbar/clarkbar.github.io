@@ -1,0 +1,156 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+\section{Strong limit \& inaccessible cardinals}%
+\label{sec:stronglimitandinaccessiblecardinals}
+\addcontentsline{toc}{section}{Strong limit \& inaccessible cardinals}
+
+\begin{definition}
+	One says that $ \kappa $ is a \defn{weak limit cardinal} if and only if,
+	for every cardinal $ \xi $,
+	if $ \xi < \kappa $, then $ \xi^+ < \kappa $.
+
+	A cardinal $\kappa$ is said to be a \defn{strong limit cardinal} if and only if,
+	for every cardinal $ \xi $,
+	if $ \xi < \kappa $, then $ 2^{\xi} < \kappa $ as well.
+	Equivalently, $ \kappa $ is a strong limit cardinal if and only if,
+	for every pair of $ \kappa $-small sets $ X $ and $ Y $,
+	the set $ \Map(X, Y) $ of maps $ X \to Y $ is $ \kappa $-small as well. 
+
+	One says that $\kappa$ is \defn{weakly inaccessible} if and only if
+	it is a regular, uncountable, weak limit cardinal.
+
+	One says that $\kappa$ is \defn{inaccessible}%
+	\footnote{Some authors say \defn{strongly inaccessible}
+	instead of \defn{inaccessible}.}
+	if and only if it is a regular, uncountable,%
+	\footnote{We include the condition of uncountability only for convenience.
+		It is not unreasonable to regard $ 0 $ and $ \aleph_0 $
+		as inaccessible as well.}
+	strong limit cardinal.
+	Equivalently, an uncountable cardinal $ \kappa $ is inaccessible if and only if
+	$ \Set^{\kappa} $ has all $ \kappa $-small colimits and is cartesian closed.
+	Equivalently again, an uncountable cardinal $ \kappa $ is inaccessible if and only if 
+	$ \Set^{\kappa} $ has all $ \kappa $-small colimits and all $ \kappa $-small colimits.
+\end{definition}
+
+The Generalized Continuum Hypothesis ($ \gch $) is equivalent to the statement that
+the classes of strong and weak limit cardinals coincide,
+and similarly the classes of inaccessible and weakly inaccessible cardinal coincide.
+
+\begin{eg}
+	A cardinal $ \kappa $ is a weak limit cardinal if and only if,
+	for some limit ordinal $ \alpha $, one has $ \kappa = \aleph_{\alpha} $.
+\end{eg}
+
+\begin{eg}
+	The $\beth$ family of cardinals is defined by a function from the class of ordinal numbers to the class of cardinal numbers.
+	It's defined by transfinite induction:
+	\begin{enumerate}
+		\item By definition, $ \beth_0 = \aleph_0 $.
+		\item For any ordinal $ \alpha $, one defines $ \beth_{\alpha+1} \coloneq 2^{\beth_{\alpha}} $.
+		\item For any limit ordinal $ \alpha $,
+			one defines $ \beth_{\alpha} \coloneq \sup \left\{ \beth_{\beta} : \beta < \alpha \right\} $.
+	\end{enumerate}
+	The cardinal $ \beth_{\alpha} $ is the cardinality of $ V_{\omega+\alpha} $.
+
+	The Generalized Continuum Hypothesis ($ \gch $) is equivalent to the statement that
+	$ \aleph_{\alpha} = \beth_{\alpha} $ for each ordinal $ \alpha $,	
+	
+	A cardinal $ \kappa $ is a strong limit cardinal if and only if,
+	for some limit ordinal $ \alpha $, one has $ \kappa = \beth_{\alpha} $.
+
+	The cardinal $ \beth_{\omega} $ is
+	the smallest uncountable strong limit cardinal.
+	It is not inaccessible, however,
+	because it is not regular.
+
+	An inaccessible cardinal $ \kappa $ is
+	a \defn{$\beth$-fixed point}:
+	that is, $ \beth_{\kappa} = \kappa $.
+\end{eg}
+
+\begin{nul}
+	A regular uncountable cardinal $ \kappa $
+	is inaccessible if and only if
+	one has $ \kappa \ll \kappa $.
+\end{nul}
+
+\begin{definition}[\protect{\citeauthor[Exposé I, \S 0 and Appendix]{SGA4-1}}]%
+\label{dfn:uni}
+	An uncountable set $ U $ is a \defn{Grothendieck universe} if it satisfies the following conditions.
+	\begin{enumerate}
+		\item The set $ U $ is \defn{transitive}:
+			if $ X \in Y \in U $, then $ X \in U $ as well.
+		\item If $ X, Y \in U $, then $ \{X,Y\} \in U $ as well.
+		\item If $ X \in U $, then the powerset $ P(X) \in U $ as well.
+		\item If $ A \in U $ and $ X \colon A \to U $ is a map, then
+		\[ \bigcup_{\alpha\in A}X(\alpha) \in U \]
+		as well.
+	\end{enumerate}
+\end{definition}
+
+Grothendieck universes are essentially the same thing as inaccessible cardinals.
+This was effectively proved by \cite{Tarski1938}.
+See also Bourbaki, \citeauthor[Exposé I, Appendix]{SGA4-1}.
+\begin{proposition}
+	If $\kappa$ is an inaccessible cardinal, then
+	the set $V_{\kappa}$ of all sets of rank less than $\kappa$ is
+	a Grothendieck universe of rank and cardinality $\kappa$.
+
+	If $ U $ is a Grothendieck universe, then
+	there exists an inaccessible cardinal $ \kappa $ such that $ U = V_{\kappa} $.
+\end{proposition}
+
+\begin{theorem}
+	If $ \kappa $ is an inaccessible cardinal,
+	then $V_{\kappa} \models \zfc $, and
+	$ V_{\kappa+1} \models \nbg $.
+	
+	Assuming that $ \zfc $ (respectively, $ \nbg $) is consistent, then
+	the existence of inaccessible cardinals is not provable
+	by methods formalizable in $ \zfc $ (resp., $ \nbg $).
+\end{theorem}
+
+\begin{axiom}%
+\label{axm:AU}
+	The \defn{Axiom of Universes} ($ \au $) is the assertion that
+	every cardinal is dominated by an inaccessible cardinal,
+	or, equivalently, every set is an element of some Grothendieck universe.
+	\defn{Tarski--Grothendieck set theory} is the schema $\tg = \nbg+\au$.
+\end{axiom}
+
+Under $ \au $, the proper class of inaccessible cardinals
+can be well ordered.
+It will be helpful for us to have a notation for this.
+
+\begin{definition}
+	Assume $ \au $.
+	Let us define the $ \daleth $ family of cardinals
+	as a function from the class of ordinal numbers
+	to the class of cardinal numbers:
+	\begin{enumerate}
+		\item By definition, $ \daleth_0 = \aleph_0 $.
+		\item For any ordinal $ \alpha $,
+			one defines $ \daleth_{\alpha+1} $ as
+			the smallest inaccessible cardinal 
+			greater than $ \daleth_{\alpha} $.
+		\item For any limit ordinal $ \alpha $,
+			one defines
+			$ \daleth_{\alpha} \coloneq \sup \left\{ \daleth_{\beta} :
+			\beta < \alpha \right\} $.
+	\end{enumerate}
+	Thus $ \daleth_0 = \aleph_0 $, and
+	for $ \alpha \geq 1$ an ordinal,
+	$ \daleth_{\alpha} $ is the
+	\enquote{$ \alpha $-th inaccessible cardinal}.
+\end{definition}
+
+

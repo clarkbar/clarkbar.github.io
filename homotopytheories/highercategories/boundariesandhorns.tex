@@ -1,0 +1,62 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+\subsection{Boundaries \& horns}%
+\label{sub:boundariesandhorns}
+
+\begin{definition}
+  Let $X$ be a simplicial set.
+  A \emph{simplicial subset} $Y \subseteq X$ is a choice of a subset $Y_n \subseteq X_n$ for each $n \geq 0$ such that for any map $\phi \colon [m] \to [n]$ in $\DDelta$, the induced map $X_n \to X_m$ carries $Y_n$ to $Y_m$.
+\end{definition}
+
+\noindent We are particularly interested here in simplicial subsets of the simplicial set $\Delta^n$.
+
+\begin{notation}
+  Let $0 \leq i_0 < i_1 < \cdots < i_k \leq n$ be integers.
+  Then we write
+  \[
+    \Delta^{\{i_0, \dots, i_k\}} \subseteq \Delta^n
+  \]
+  for the corresponding simplicial subset of $\Delta^n$.
+  This simplicial subset is itself a $k$-simplex.
+\end{notation}
+
+Families of simplicial subsets of a simplicial set $X$ can be intersected or unioned, just as with subsets of a set.
+
+\begin{definition}
+  Let $n \geq 0$ be an integer.
+  For every integer $0 \leq i \leq n$, the \emph{$i$-th face} is the simplicial subset 
+  \[
+    \Delta^{\hat{\imath}} \coloneq \Delta^{\{0,\dots,i-1,i+1,\dots,n\}} \subset \Delta^n \period
+  \]
+  This is the unique $(n-1)$-simplex of $\Delta^n$ that does not contain the vertex $\Delta^{\{i\}}$.
+
+  The \emph{boundary} of the $n$-simplex is the union of all the faces of $\Delta^n$:
+  \[
+    \partial \Delta^n \coloneq \bigcup_{0 \leq i \leq n} \Delta^{\hat{\imath}} \subset \Delta^n \period
+  \]
+
+  For every integer $0 \leq k \leq n$, the \emph{$k$-th horn} is the union of all but the $k$-th face of $\Delta^n$:
+  \[
+    \Lambda^n_k \coloneq \bigcup_{0 \leq i \leq n, i \neq k} \Delta^{\hat{\imath}} \subset \Delta^n \period
+  \]
+  This is the union of all the faces of $\Delta^n$ that contain the vertex $\Delta^{\{k\}}$. 
+\end{definition}
+
+Equivalently, $\partial \Delta^n$ can be described as the $(n-1)$-skeleton of the $n$-simplex:
+\[
+  \partial \Delta^n = \sk_{n-1}(\Delta^n) \period
+\]
+Thus
+\[
+  \Mor_{s\Set}(\partial\Delta^n, X) = \cosk_{n-1}(X)_n \period
+\]
+
+

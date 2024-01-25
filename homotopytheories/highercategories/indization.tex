@@ -1,0 +1,150 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+\section{Indization}%
+\label{sec:indization}
+\addcontentsline{toc}{section}{Indization}
+
+\begin{definition}
+	Let $ \alpha \geq 1 $ be an ordinal number, and
+	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
+	Let $ C $ be a category of echelon $ \leq \alpha $.
+
+	Then $ \Ind_{\kappa}^{\alpha}(C) $ is
+	the smallest full subcategory $ D \subseteq \PP^{\daleth_{\alpha}}(C) $
+	such that $ D $ contains the image
+	of the Yoneda embedding
+	$ \yo \colon C \inclusion \PP^{\daleth_{\alpha}}(C) $,
+	and $ D $ is stable under
+	$ \daleth_{\alpha} $-small, $ \kappa $-filtered colimits.
+
+	Accordingly, if $ C $ is a locally small large-category,
+	then $ \Ind_{\kappa}^V(C) $ is
+	the smallest full subcategory $ D \subseteq \PP^V(C) $
+	such that $ D $ contains the image
+	of the Yoneda embedding
+	$ \yo \colon C \inclusion \PP^V(C) $,
+	and $ D $ is stable under $ \kappa $-filtered colimits.
+\end{definition}
+
+\begin{eg}
+	The category $ \Ind_{0}^{\alpha}(C) $ is 
+	equivalent to the presheaf category
+	$ \PP^{\daleth_{\alpha}}(C) $.
+\end{eg}
+
+\begin{proposition}
+	Let $ \alpha \geq 1 $ be an ordinal number, and
+	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
+	Let $ C $ be a category of echelon $ \leq \alpha $.
+	Then the Yoneda embedding
+	$ \yo \colon C \inclusion \Ind_{\kappa}^{\alpha}(C) $,
+	generates $ \Ind_{\kappa}^{\alpha}(C) $ freely under
+	$ \daleth_{\alpha} $-small, $ \kappa $-filtered colimits.
+
+	Similarly, if $ C $ is a locally small large-category,
+	then the Yoneda embedding
+	$ \yo \colon C \inclusion \Ind_{\kappa}^{V}(C) $,
+	generates $ \Ind_{\kappa}^{V}(C) $ freely under
+	$ \kappa $-filtered colimits.
+\end{proposition}
+
+\begin{nul}
+	Let $ \alpha \geq 1 $ be an ordinal number, and
+	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
+	Let $ C $ and $ D $  be categories
+	that contain all $ \daleth_{\alpha} $-small, $ \kappa $-filtered colimits.
+	Denote by $ \Fun_{\kappa}^{\alpha}(C, D) $
+	the full subcategory of $ \Fun(C,D) $ consisting of
+	the functors $ C \to D $ that preserve all 
+	$ \daleth_{\alpha} $-small, $ \kappa $-filtered colimits.
+	
+	If $ C' $ is a category of echelon $ \leq \alpha $,
+	then restriction along the Yoneda embedding
+	induces an equivalence of categories
+	\[
+		\Fun_{\kappa}^{\alpha}(\Ind_{\kappa}^{\alpha}(C'), D)
+		\equivalence \Fun(C', D) \period
+	\]
+\end{nul}
+
+\begin{eg}
+	Let $ \alpha \geq 1 $ be an ordinal number, and
+	let $ \kappa < \daleth_{\alpha} $ be a regular cardinal.
+	Let $ C $ be a $ \daleth_{\alpha} $-small category.
+	Then the category $ \Ind_{\kappa}^{\alpha}(C) $ is
+	$ \kappa $-accessible of echelon $ \leq \alpha $.
+	
+	Hence we obtain a functor
+	\[
+		\Ind_{\kappa}^{\alpha} \colon
+		\Cat_{\alpha} \to \Acc_{\kappa}^{\alpha} \period
+	\]
+	This functor exhibits $ \Acc_{\kappa}^{\alpha} $ as
+	a localization of $ \Cat_{\alpha} $,
+	and it restricts to the inverse
+	\[ \Cat_{\alpha}^{\idem} \equivalence \Acc_{\kappa}^{\alpha} \]
+	of the equivalence $ C \mapsto C_{\alpha}^{(\kappa)} $
+	constructed in \eqref{nul:thetafromAcctoCat}.
+	It also restricts further to the equivalence
+	\[
+		\Cat_{\alpha}^{\kappa,\idem} \equivalence
+		\Pr^{\alpha,L}_{\kappa}
+	\]
+	inverse to the restriction of
+	$ C \mapsto C_{\alpha}^{(\kappa)} $.
+\end{eg}
+
+\begin{construction}
+	Let $ \beta > \alpha \geq 1 $ be two ordinal numbers.
+	Then we can use indization to define 
+	a change-of-universe functor
+	\[
+		\II_{\alpha}^{\beta} \coloneq
+		\Ind_{\daleth_{\alpha}}^{\beta} \period
+	\]
+	If $ \kappa < \daleth_{\alpha} $ is a regular cardinal,
+	then this is a fully faithful functor
+	\[
+		\II_{\alpha}^{\beta} \colon
+		\Acc_{\kappa}^{\alpha} \inclusion
+		\Acc_{\kappa}^{\beta} \comma
+	\]
+	which is equivalent to the inclusion
+	$ \Cat_{\alpha}^{\idem} \inclusion \Cat_{\beta}^{\idem} $.
+	The functor $ \II_{\alpha}^{\beta} $ restricts to 
+	a fully faithful functor
+	\[
+		\II_{\alpha}^{\beta} \colon
+		\Pr^{\alpha,L}_{\kappa} \inclusion
+		\Pr^{\beta,L}_{\kappa} \comma
+	\]
+	which is equivalent to the inclusion
+	$ \Cat_{\alpha}^{\kappa,\idem} \inclusion \Cat_{\beta}^{\kappa,\idem} $.
+\end{construction}
+
+\begin{eg}
+	For any category $ C $ of echelon $ \alpha $,
+	one has
+	\[
+		\II_{\alpha}^{\beta}(\PP^{\daleth_{\alpha}}(C))
+		\simeq \PP^{\daleth_{\beta}}(C) \period
+	\]
+\end{eg}
+
+\begin{notation}
+	Let $ \alpha \geq 1 $ be an ordinal number.
+	Then we will abberviate
+	\[
+		\Ind^{\alpha} \coloneq \Ind_{\aleph_0}^{\alpha} \period
+	\]
+\end{notation}
+
+

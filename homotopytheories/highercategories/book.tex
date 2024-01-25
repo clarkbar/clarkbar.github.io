@@ -26,6 +26,10 @@
 
 \newcommand{\inc}{\textbf{(incomplete)}}
 
+\newcommand*{\asterism}{\par\bigskip\noindent\hfill{\ooalign{\hfil\raise1ex\hbox{$\ast$}\hfil\cr$\ast$\kern-0.07ex$\ast$}}\hfill\null\par\bigskip}
+
+\newcommand{\minidiv}{\par\bigskip\noindent\hfill{}\hfill\null\par\bigskip}
+
 \begin{document}
 
 %-----------------------------------------------------------%
@@ -49,7 +53,7 @@
 
 \mainmatter
 
-\include{introduction}
+\include{introduction.tex}
 
 \part{The ladder}
 
@@ -62,6 +66,11 @@
 \noindent 
 
 \appendix
+
+\part{Appendices}%
+\label{cha:appendices}
+
+\include{cardinals.tex}
 
 \backmatter
 

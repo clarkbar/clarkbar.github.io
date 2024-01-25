@@ -1,0 +1,147 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+\subsection{Simplicial \& cosimplicial}%
+\label{sub:simplicialcosimplicial}
+
+\begin{definition}
+  Let $C$ be a category.
+  A \emph{simplicial object} of $C$ is a functor $\DDelta^{\op}\to C$.
+  A \emph{cosimplicial object} of $C$ is a functor $\DDelta \to C$.
+  We write
+  \[
+    sC \coloneq \Fun(\DDelta^{\op},C)
+    \andeq
+    cC \coloneq \Fun(\DDelta, C) \period
+  \]
+
+  If $X \in sC$, then we write $X_n$ for the value $X([n])$, and
+  if $Y \in cC$, then we write $Y^n$ for the value $Y([n])$.
+  At times it may be convenient to write $X_\bullet$ and $Y^\bullet$ instead of $X$ and $Y$, just to emphasize the variance.
+\end{definition}
+
+Thus a simplicial object $X_\bullet$ specifies object $X_0, X_1, \dots$, along with \emph{face maps} $d_j \colon X_n \to X_{n-1}$ for each $j \in [n]$ and \emph{degeneracy maps} $s_i \colon X_n \to X_{n+1}$ for each $i \in [n]$:
+\[
+  \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+    \cdots \arrow[r] \arrow[r, shift left=1.5ex] \arrow[r, shift right=1.5ex] \arrow[r, shift left=3ex] \arrow[r, shift right=3ex] \&
+    {X_3} \arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \arrow[r, shift right=2.25ex] \arrow[r, shift left=2.25ex] \arrow[l, shift left=0.75ex] \arrow[l, shift right=0.75ex] \arrow[l, shift left=2.25ex] \arrow[l, shift right=2.25ex] \&
+    {X_2} \arrow[l] \arrow[l, shift left=1.5ex] \arrow[l, shift right=1.5ex] \arrow[r] \arrow[r, shift left=1.5ex] \arrow[r, shift right=1.5ex] \&
+    {X_1} \arrow[l, shift left=0.75ex] \arrow[l, shift right=0.75ex] \arrow[r, shift left=0.75ex] \arrow[r, shift right=0.75ex] \&
+    {X_0} \arrow[l]
+  \end{tikzcd}%
+  \period
+\]
+
+We will be interested in simplicial objects of a number of different categories, but our big interest is the theory of simplicial \emph{sets}.
+
+\begin{eg}
+  If $[m], [n] \in \DDelta$, then let us write
+  \[
+    \Delta_m^n \coloneq \Mor_{\DDelta}([m],[n]) \period
+  \]
+  Thus for each $[n] \in \DDelta$, we have the simplicial set it represents
+  \[
+    \Delta^n \coloneq \Mor_{\DDelta}(-,[n]) \colon \DDelta^{\op} \to \Set \period
+  \]
+  We call $\Delta^n$ the \emph{standard $n$-simplex}.
+  The assignment $[n] \mapsto \Delta^n$ is a functor $\DDelta \to s\Set$.
+  Equally, for each $[m] \in \DDelta$, we have the cosimplicial set it corepresents
+  \[
+    \Delta_m \coloneq \Mor_{\DDelta}([m],-) \colon \DDelta \to \Set \comma
+  \]
+  and the assignment $[m] \mapsto \Delta_m$ is a functor $\DDelta^{\op} \to c\Set$.
+\end{eg}
+
+The standard simplices play a critical role in the theory of simplicial sets.
+The Yoneda lemma implies that for every simplicial set $X$, we have a natural isomorphism
+\[
+  X_n = \Mor_{s\Set}(\Delta^n, X) \period
+\]
+An element $\sigma \in X_n$ -- or equivalently a map $\sigma \colon \Delta^n \to X$ -- is called an \emph{$n$-simplex of $X$}.
+If $n=0$, we may call this a \emph{vertex};
+if $n=1$, we may call this an \emph{edge}.
+
+Every simplicial set $X \in s\Set$ is the colimit of its simplices.
+More precisely, consider the Yoneda embedding $\DDelta \to s\Set$ given by $[n] \mapsto \Delta^n$, and let
+\[
+  \DDelta_{/X} \coloneq \DDelta \times_{s\Set} s\Set_{/X} \period
+\]
+We call $\DDelta_{/X}$ the \emph{category of simplices} of $X$.
+We now have a canonical isomorphism
+\[
+  \colim_{[n]\in\DDelta_{/X}} \Delta^n = X \period
+\]
+Said differently, the left Kan extension of the Yoneda embedding $\DDelta \to s\Set$ is the identity functor on $s\Set$. 
+We will discuss this much more carefully in \ref{sub:generatorsrelations}.
+
+\begin{eg}
+  Let $A$ be a small category.
+  The \emph{nerve} $N_\bullet A$ is the simplicial set that carries $[n]$ to the \emph{set} of functors $[n] \to A$.
+
+  In other words, by regarding each nonempty totally ordered finite set $[n]$ as a category, we obtain a fully faithful inclusion $\DDelta \inclusion \Cat$.
+  The nerve $N_\bullet A$ is the composite of $\DDelta^{\op} \inclusion \Cat^{\op}$ with the functor $\Cat^{\op} \to \Set$ represented by $A$.
+
+  Thus $N_0A$ is the set of objects of $A$, and $N_1A$ is the set of morphims.
+  If $f \colon x \to y$ is a morphism of $A$, then $d_0(f)=y$, and $d_1(f)=x$.
+  For any object $x$ of $A$, the degenerate $1$-simplex $s_0(x)$ is the identity at $x$.
+
+  The set $N_2A$ of $2$-simplices is the set of commutative triangles 
+  \[
+    \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+      \& y \arrow[dr, "g"] \& \\
+      x \arrow[ur, "f"] \arrow[rr, "h"'] \& \& z 
+    \end{tikzcd}
+  \]
+  in $A$.
+  If we call this $2$-simplex $\alpha$, then $d_0(\alpha) = g$, $d_1(\alpha) = h$, and $d_2(\alpha) = f$.
+  For every morphism $f \colon x \to y$ of $A$, we also have two degenerate $2$-simplices $s_0(f)$ and $s_1(f)$, which correspond to the commutative triangles
+  \[
+    \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+      \& x \arrow[dr, "f"] \& \\
+      x \arrow[ur, "\id"] \arrow[rr, "f"'] \& \& y 
+    \end{tikzcd}
+    \andeq
+    \begin{tikzcd}[sep=1.5em, ampersand replacement=\&]
+      \& y \arrow[dr, "\id"] \& \\
+      x \arrow[ur, "f"] \arrow[rr, "f"'] \& \& y 
+    \end{tikzcd}
+    \comma
+  \]
+  respectively.
+
+  If $S$ is the set of objects of $A$ and $R$ is its set of morphisms, then
+  we find that $N_n A$ is the $n$-fold fiber product $R^{\times_S n}$.
+  The simplicial objects we extracted from relations and groupoids are therefore examples of nerves.
+
+  In particular, the standard $n$-simplex $\Delta^n$ is precisely the nerve $N_\bullet [n]$.
+\end{eg}
+
+\begin{proposition}
+  The nerve functor $N_\bullet \colon \Cat \to s\Set$ is fully faithful.
+\end{proposition}
+
+\begin{proof}
+  Let $C$ and $D$ be categories, and let $f \colon N_\bullet C \to N_\bullet D$ be a morphism of simplicial sets.
+  We aim to show that there exists a unique functor $F \colon C \to D$ such that $f = N_\bullet F$.
+
+  If $F \colon C \to D$ is a functor such that $N_\bullet F=f$, then
+  on objects, $F$ is the map $f_0 \colon N_0C \to N_0D$, and
+  on morphisms, $F$ is the map $f_1 \colon N_1C \to N_1D$.
+  So our $F$ is certainly unique if it exists.
+
+  So define $F$ accordingly: on objects, take the map $f_0$, and on morphisms, take the map $f_1$.
+  The compatibility of $f$ with the face map $d_1 \colon N_2 \to N_1$ shows that $F$ respects composition.
+  The compatibility of $f$ with the degeneracy map $s_0 \colon N_0 \to N_1$ shows that $F$ respects identities.
+  Hence $F$ is indeed a functor.
+\end{proof}
+
+\noindent This proposition guarantees that we lose no information when we pass from categories to simplicial sets.
+
+

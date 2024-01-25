@@ -1,0 +1,206 @@
+%!TEX root = book.tex 
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 18
+% chktex-file 24
+% chktex-file 35 
+% chktex-file 42
+
+%\section*{From strict to weak}%
+%\label{sec:strictweak}%
+%\addcontentsline{toc}{subsection}{From strict to weak}
+
+\minidiv
+
+\noindent \emph{Why is higher category theory subtle?}
+At first it's hard to see what all the fuss is about.
+We already know what $0$-categories are: they're \emph{sets}.
+We also know what $1$-categories are: they're \emph{categories}.
+So a $1$-category has a collection of objects and, between every pair $x,y$ of objects, one has a $0$-category $\Mor(x,y)$ of maps.
+Composition is then a map
+\[
+  \Mor(x,y) \times \Mor(y,z) \to \Mor(x,z)
+\]
+given by $(f,g) \mapsto g \circ f$.
+
+The way to iterate this definition seems uncontroversial.
+Let $\VV$ be a category with all finite products.
+A \emph{category $\CC$ enriched in $\VV$} consists of:
+\begin{itemize}
+  \item a collection $\Obj \CC$ of objects;
+  \item between every pair $x,y \in \Obj \CC$, an object
+  \[
+    \Mor_{\CC}(x,y) \in \Obj \VV \semicolon
+  \]
+  \item for every $x \in \Obj \CC$, a morphism $\id_x \colon 1_{\VV} \to \Mor_{\CC}(x,x)$ (where $1_{\VV}$ denotes the terminal object of $\VV$); and
+  \item for every $x,y,z \in \Obj \CC$, a morphism
+    \[
+      \Mor_{\CC}(x,y) \times \Mor_{\CC}(y,z) \to \Mor_{\CC}(x,z) \comma
+    \]
+    written $(f,g) \mapsto g \circ f$.
+\end{itemize}
+These data are subject to the usual axioms: composition is associative ($(h \circ g) \circ f = h \circ (g \circ f)$), and unital ($f \circ \id_x = \id_y \circ f = f$).
+There's an attached notion of \emph{$\VV$-enriched functor}, whose definition is predictable.
+
+Now we can give an easy iterative definition.
+Our base case is the notion of \emph{strict $0$-categories} and the category $\Cat^{\textit{str}}_0 \coloneq \Set$.
+Then we define a \emph{strict $n$-category} as a category enriched in $\Cat^{\textit{str}}_{n-1}$,
+and we define $\Cat^{\textit{str}}_n$ as the category of $\Cat^{\textit{str}}_{n-1}$-enriched categories and $\Cat^{\textit{str}}_{n-1}$-enriched functors.
+
+Unwinding the recursion, we see that a strict $n$-category $\CC$ has:
+\begin{itemize}
+  \item a collection $\Obj \CC$ of \emph{objects} or \emph{$0$-morphisms};
+  \item for every pair $x,y \in \Obj(\CC)$ of objects, a collection $\Mor_{\CC}(x,y)$ of \emph{morphisms} or \emph{$1$-morphisms} with \emph{source} $x$ and \emph{target} $y$;
+  \item for every pair $f,g \in \Mor_{\CC}(x,y)$ of $1$-morphisms (which we say are \emph{parallel} because they have the same source, and they have the same target), a collection $\Mor_{\Mor_{\CC}(x,y)}(f,g)$ of \emph{$2$-morphisms} with source $f$ and target $g$;
+  \item for every parallel pair $\alpha,\beta \in \Mor_{\Mor_{\CC}(x,y)}(f,g)$ of $2$-morphisms, a collection
+    \[
+      \Mor_{\Mor_{\Mor_{\CC}(x,y)}(f,g)}(\alpha,\beta)
+    \]
+    of \emph{$3$-morphisms} with source $\alpha$ and target $\beta$;
+\end{itemize}
+
+\dots
+
+\begin{itemize}
+  \item for every parallel pair $\phi, \psi$ of $(n-1)$-morphisms, a collection
+    \[
+    \Mor_{\Mor_{\;{\ddots}_{\;\Mor_{\CC}(x,y)\;}{\revddots}\;}}(\phi,\psi)
+    \]
+    $\Mor(\phi,\psi)$ of \emph{$n$-morphisms} with source $\phi$ and target $\psi$.
+\end{itemize} 
+Each of these kinds of morphisms can be composed, in all sorts of ways.
+As $n$ increases, the combinatorics can get a little heady, but it's nothing we can't handle.
+
+But as the word \enquote{strict} suggests, this is demanding too much.
+To see how, let's look more carefully at the case $n = 2$.
+A strict $2$-category consists of a set $\Obj \CC$ of objects;
+between every $x,y \in \Obj \CC$, a set $\Mor_{\CC}(x,y)$ of morphisms $x \to y$; and
+between every $f,g \in \Mor_{\CC}(x,y)$, a set $\Mor_{\Mor_{\CC}(x,y)}(f,g)$ of $2$-morphisms $f \to g$.
+Morphisms and $2$-morphisms each have composition laws, which are associative and unital.
+
+Associativity means that if $f \colon x \to y$, $g \colon y \to z$, and $h \colon z \to u$ are $1$-morphisms of $\CC$, then $h \circ (g \circ f) = (h \circ g) \circ f$.
+There's something strange about this.
+On either side of the equals sign here are \emph{objects} of the category $\Mor_{\CC}(x,u)$, and here we are asking them to be \emph{equal}.
+This is just the kind of unreasonable request that our structuralist disposition is supposed to deny.
+Let's illustrate this issue with an interesting class of examples that \enquote{ought} to be $2$-categories, but are not strict $2$-categories.
+
+We take our inspiration from a construction we meet early in a study of category theory:
+if $M$ is a monoid, then we define a category $BM$ with exactly one object $\pt$ and $\Mor_{BM}(\pt,\pt) = M$;
+composition in $BM$ is multiplication in $M$.
+An action of $M$ on an object of a category $\CC$ is then precisely a functor $BM \to \CC$.
+The construction $M \mapsto BM$ identifies the category of monoids with the category of categories with exactly one object.
+
+Let's try to tell this story again one \enquote{category level} up.
+There are some interesting examples that look like monoid objects in categories.
+For example, consider the category $\Mod(R)$ of modules over our ring $R$.
+The tensor product $\otimes_R$ is a multiplication law on $\Mod(R)$.
+We cannot quite call this a monoid structure though, because it's not strictly associative.
+If $A$, $B$, and $C$ are three $R$-modules, then it depends on some rather pedantic set-theoretic points of your precise definition of the tensor product as to whether we really have \emph{equality}
+\[
+  (A \otimes_R B) \otimes_R C = A \otimes_R (B \otimes_R C) \period
+\]
+More dramatically, in our preferred, ladder-free understanding of the tensor product, we came to the conclusion that we should simply \emph{define} it as the object representing the functor $T \mapsto \categ{Bilin}_R(A \times B,T)$.
+Of course, representing objects are only unique up to canonical isomorphism, not up to set-theoretic equality.
+So from this perspective, strict associativity for $\otimes_R$ is no longer \emph{meaningful}.
+
+On the other hand, there clearly is \emph{some} kind of associativity here, because we have an isomorphism
+\[
+  \alpha_{A,B,C} \colon (A \otimes_R B) \otimes_R C \cong A \otimes_R (B \otimes_R C)
+\]
+that is natural in $A$, $B$, and $C$,
+since these objects each represent the functor $T \mapsto \categ{Trilin}_R(A \times B \times C, T)$.
+In other words, associativity is no longer a \emph{property}, but a piece of \emph{structure} --
+namely, the natural isomorphism $\alpha$.
+The category $\Mod(R)$ is a \emph{monoidal category}.
+
+We might now try to construct a $2$-category $B\Mod(R)$. 
+There will be exactly one object, $\pt$.
+A $1$-morphism $A \colon \pt \to \pt$ will be a module over a ring $R$.
+A $2$-morphism $\phi \colon A \to B$ will be an $R$-linear map.
+In other words, $\Mor(\pt,\pt) = \Mod(R)$.
+The composition functor
+\[
+  \Mor(\pt, \pt) \times \Mor(\pt,\pt) \to \Mor(\pt,\pt)
+\]
+is the formation of the tensor product $(A,B) \mapsto A \otimes_R B$.
+But of course this isn't a strict $2$-category, because this composition is not strictly associative.
+
+The difference between $2$-categories and strict $2$-categories reduces, in the one-object case, to the difference between monoidal categories and monoid objects in categories.
+In order to come to grips with $2$-categories in general, it's a good start to understand monoidal $1$-categories.
+In particular, how does one deal with the failure of associativity?
+
+\emph{Why is associativity important anyhow?}
+This is not a frivilous question.
+In a monoid $M$, if we have three elements $x,y,z \in M$, then what associativity buys us is the ability to talk about the element $xyz \in M$ without ambiguity.
+More generally, for any $n$, and for any collection $\{x_1,x_2,\dots,x_n\}$, associativity lets us make unique sense of the product
+\[
+  x_1 x_2 \cdots x_n \in M \period
+\]
+This even makes sense when $n = 0$, because the empty product in $M$ is the unit for the multiplication.
+
+We are used to thinking of the \emph{structure} of a monoid as an element $e \in M$ and a binary multiplication $M \times M \to M$.
+These data are then required to satisfy two \emph{properties}: $xe=x=ex$ and $(xy)z=x(yz)$.
+From one perspective, this is a strange thing to do:
+the structure we really want out of a monoid is the ability to make sense of any product $x_1 x_2 \cdots x_n \in M$.
+We get that as a result of the associativity and unitality, but
+if we were more direct in our intentions, we would define the structure of a monoid as a set $M$ along with products
+\[
+  \prod_{i \in I} \colon M^I \to M \comma
+\]
+one for every totally ordered finite set $I$, all arriving in a single packet.
+The binary multiplication map is what we get for $I = \{1,2\}$, and the unit is what we get for $I = \varnothing$.
+
+Of course, we've just introduced a lot more structure here, and
+in general we have to pay for new pieces of structure with more properties.
+In our case, we require that if $I$ is a singleton, then $\prod_{i \in I}$ is the identity.
+More importantly, we demand that these multiplication maps satisfy a higher associativity:
+for every monotonic map $\phi \colon J \to I$ between totally ordered finite sets, we have
+\[
+  \prod_{i \in I} \prod_{j \in \phi^{-1}\{i\}} x_j = \prod_{j \in J} x_j \period
+\]
+Applied to the two monotonic surjections $\{1,2,3\} \to \{1,2\}$, we recover associativity $(xy)z = xyz = x(yz)$;
+applied to the two injections $\{1\} \to \{1,2\}$, we recover the unit condition $xe=x=ex$.
+
+This sort of definition of \enquote{monoid} is inefficient, but
+it is equivalent to the usual definition.
+(That is, they define equivalent categories.)
+Tom Leinster calls this definition \emph{unbiased}, because
+the usual definition exhibits a bias for small totally ordered finite sets -- those of cardinality less than $3$.
+
+Let us \emph{categorify} this story in order to make sense of monoidal categories.
+A monoidal category consists of a category $\CC$ and a family of functors
+\[
+  \otimes_I = \bigotimes_{i \in I} \colon \CC^I \to \CC \comma
+\]
+one for each totally ordered finite set $I$.
+This is not, however, all the structure we need.
+We also need to define, for every monotonic map $\phi \colon J \to I$, a natural isomorphism
+\[
+  \alpha_{\phi} \colon \bigotimes_{i \in I} \bigotimes_{j \in \phi^{-1}\{i\}} x_j \equivalence \bigotimes_{j \in J} x_j \period
+\]
+This is a great deal of structure, and
+it must be made to satisfy a great many conditions, called \emph{coherences}.
+These identify $\alpha_{\id}$ with $\id$ and express the relationship among $\alpha_{\psi \circ \phi}$,$\alpha_{\phi}$, and $\alpha_{\psi}$.
+A \emph{monoidal functor} between two monoidal categories $C$ and $D$ is then a functor $F \colon C \to D$ along with isomorphisms $\gamma_I \colon \otimes_I \circ F^I \equivalence F \circ \otimes_I$ that are suitably compatible with the associators for $C$ and $D$.
+
+Once we already \emph{have} the categorified notion -- the notion of \enquote{monoidal category} and \enquote{monoidal functor}, our unbiased definition of monoid becomes natural and trivial to state cleanly.
+We observe that \emph{concatenation} is a monoidal structure on the category $\OO$ of totally ordered finite sets.
+A monoid is then exactly a monoidal functor $\OO \to \Set$, where the monoidal structure on $\Set$ is the cartesian product.
+This phenomenon is a little expression of what John Baez called the \emph{macrocosm/microcosm principle}.
+
+In order to establish a workable framework for \emph{weak} higher categories, we can follow a similar strategy to the one taken here to contemplate monoidal categories.
+\begin{enumerate}
+  \item We identify a large family of composition shapes we can form in a strict $n$-category.
+  \item We define a category of these composition shapes.
+    The morphisms of this category should control the higher associativity laws of these compositions.
+  \item We then weaken these associative laws from \emph{equations} to pieces of \emph{structure} (like isomorphisms) that identify the two sides of the equations.
+  \item These isomorphisms will have to satisfy coherences that are controlled by compositions in our category of composition shapes.
+    These coherences might themselves be properties that would be more naturally expressed as higher isomorphisms,
+    which would in turn be subject to yet higher coherences (controlled by composable sequences of maps), 
+    \emph{etc}.
+\end{enumerate}
+The transition from equations to pieces of structure to exhibit \emph{sameness} is the heart of our approach.
+This is what we call the \emph{homotopical turn} in higher category theory.
+As a result of this transition, the theory of higher categories will unfold in a more robust and appealing way than the more direct approach -- explicitly weakening the theory of $n$-categories -- can achieve.
