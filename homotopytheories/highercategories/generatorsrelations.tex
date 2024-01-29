@@ -149,24 +149,29 @@ In fact, if $A$ generates $\CC$ under colimits, then it need not even be the cas
   Write $i \colon A \inclusion \CC$ for the inclusion functor.
   Then $A$ is dense in $\CC$ if and only if the restricted Yoneda
   \[
-    \yo^{\ast} i \colon \CC \to \PP(A) \comma
+    i^{\ast} \yo \colon \CC \to \PP(A) \comma
   \]
   which carries $X \in \CC$ to the functor $Y \mapsto \Mor_{\CC}(Y,X)$, is fully faithful.
 \end{proposition}
 
 \begin{proof}
-  The left Kan extension of $i \colon A \to \CC$ along the Yoneda embedding is a left adjoint $\yo_!i \colon \PP(A) \to \CC$ to the functor $\yo^{\ast}i$.
+  The left Kan extension of $i \colon A \to \CC$ along the Yoneda embedding is a left adjoint $\yo_!i \colon \PP(A) \to \CC$ to the functor $i^{\ast} \yo$.
   This functor can be evaluated as
   \[
     (\yo_!i)(F) = \colim_{Y \in A_{/(F \circ i)}} Y = \int^{Y \in A} F(Y) \times Y \period
   \]
-  The functor $\yo^{\ast}i$ is fully faithful if and only if the counit $(\yo_!i)(\yo^{\ast}i) \to \id_{\CC}$ is an isomorphism.
+  The functor $i^{\ast}\yo$ is fully faithful if and only if the counit $\eta \colon (\yo_!i)(i^{\ast}\yo) \to \id_{\CC}$ is an isomorphism.
   For every object $X \in \CC$, we observe that the category
   \[
-    A_{/(\yo_X \circ i)}
+    A_{/i^{\ast}\yo_X}
   \]
-
-
+  is equivalent to $A_{/X}$;
+  hence
+  \[
+    (\yo_!i)(i^{\ast}\yo_X) \cong \colim_{Y \in A_{/X}} Y \comma
+  \]
+  and the morphism $\eta_X$ is the natural maps.
+  Since $A \subseteq \CC$ is dense, it follows that this map is an isomorphism.
 \end{proof}
 
 Suppose that $\CC$ is a category with colimits, and
@@ -174,21 +179,22 @@ let us suppose that we want to write down a functor $s\Set \to \CC$ that preserv
 We can restrict this functor along Yoneda to a functor $\DDelta \to \CC$ along the Yoneda embedding.
 It turns out that this restriction loses no information.
 
-\begin{proposition}
-  Let $\CC$ be a category with all colimits,
+\begin{proposition}%
+  \label{prp:PAfreelygeneratedbyA}
+  Let $\DD$ be a category with all colimits,
   and let $A$ be a small category.
   Let
   \[
-    \Fun^L(\PP(A),\CC) \subseteq \Fun(\PP(A),\CC)
+    \Fun^L(\PP(A),\DD) \subseteq \Fun(\PP(A),\DD)
   \]
   be the full subcategory spanned by those functors that preserve colimits.
   Then the restriction along the Yoneda embedding
   \[
-    \Fun^L(\PP(A),\CC) \to \Fun(A,\CC)
+    \Fun^L(\PP(A),\DD) \to \Fun(A,\DD)
   \]
   is an equivalence of categories.
 \end{proposition}
 
 \begin{proof}
-  Con
+  Exercise \ref{exercise:PAfreelygenerated}.
 \end{proof}
