@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023-OpenBSD_Ports) (preloaded format=xelatex 2023.6.21)  29 JAN 2024 09:09
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023-OpenBSD_Ports) (preloaded format=xelatex 2023.6.21)  1 FEB 2024 10:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1712,10 +1712,7 @@ LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18> not available
 
 ] [2
 
-] (./book.toc
-Underfull \vbox (badness 3514) has occurred while \output is active []
-
- [1
+] (./book.toc [1
 
 
 ])
@@ -2789,17 +2786,17 @@ Appendix A.
 
 
 ] [34]
-Overfull \hbox (3.48041pt too wide) in paragraph at lines 126--132
+Overfull \hbox (3.48041pt too wide) in paragraph at lines 131--137
 \TU/MinionPro(0)/m/n/10 for the Yoneda embedding $[] [] [][]$. Thus if $[]$ is an object of $[]$, then $[][] [] [] [][] []
  []
 
 
-Overfull \hbox (0.78339pt too wide) in paragraph at lines 138--143
+Overfull \hbox (0.78339pt too wide) in paragraph at lines 143--148
 []\TU/MinionPro(0)/m/n/10 The Class Comprehension Axiom Schema implies the \TU/MinionPro(0)/m/it/10 Axiom of Global Choice\TU/MinionPro(0)/m/n/10 ,
  []
 
 
-LaTeX Warning: Reference `sec:reflection_principles' on page 35 undefined on input line 174.
+LaTeX Warning: Reference `sec:reflection_principles' on page 35 undefined on input line 179.
 
 (./regularityandsmallness.tex [35] [36]) (./accessibilityandpresentability.tex [37] [38] [39] [40] [41]
 Overfull \hbox (5.51569pt too wide) in paragraph at lines 369--371
@@ -2848,4 +2845,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  116i,14n,148p,1001b,2766s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on book.xdv (57 pages, 1103376 bytes).
+Output written on book.xdv (57 pages, 1105628 bytes).

@@ -1,21 +1,21 @@
 # Fdb version 4
-["bibtex book"] 1706519305 "book.aux" "book.bbl" "book" 1706519397 0
+["bibtex book"] 1706784912 "book.aux" "book.bbl" "book" 1706785028 0
   "../cambridgeauthordate.bst" 1688571860 32813 78b2186050197f9eccd34f061097141d ""
   "../homotopytheories.bib" 1705686089 20967 9b4dfe4dbf1c9eaa816f587067386b0b ""
-  "book.aux" 1706519394 1246 c91e4cffab98cfd47624f65abc94b97b "xelatex"
-  "cardinals.aux" 1706519394 3290 7e6c6da887eb72c1787987f8a4d1fd51 "xelatex"
-  "homotopy.aux" 1706519393 3961 cd7c37cabef27c7a8ad58d1f5b262db4 "xelatex"
-  "introduction.aux" 1706519390 821 8f26faaa241fff6b8fd37815d5e1a680 "xelatex"
+  "book.aux" 1706785026 1246 c91e4cffab98cfd47624f65abc94b97b "xelatex"
+  "cardinals.aux" 1706785026 3290 3bc823b0b83708ba52f1314113aa52ae "xelatex"
+  "homotopy.aux" 1706785025 3948 cd90abc60c1ca898300b65d83610cfb9 "xelatex"
+  "introduction.aux" 1706785022 821 8f26faaa241fff6b8fd37815d5e1a680 "xelatex"
   (generated)
   "book.bbl"
   "book.blg"
   (rewritten before read)
-["xdvipdfmx"] 1706519396 "book.xdv" "book.pdf" "book" 1706519397 0
-  "book.xdv" 1706519394 1103376 9498e80a6ac3298f92decdbb3e65563b "xelatex"
+["xdvipdfmx"] 1706785027 "book.xdv" "book.pdf" "book" 1706785028 0
+  "book.xdv" 1706785026 1105628 3af50e7c9e153993db62e7ac44494a16 "xelatex"
   (generated)
   "book.pdf"
   (rewritten before read)
-["xelatex"] 1706519384 "book.tex" "book.xdv" "book" 1706519397 0
+["xelatex"] 1706785019 "book.tex" "book.xdv" "book" 1706785028 0
   "/home/user/texmf/tex/latex/commonstuff/boilerbook.sty" 1701256333 6525 910f5573205f5bc3bc84c72c5912a7a2 ""
   "/home/user/texmf/tex/latex/commonstuff/cambridge7A.cls" 1706199073 81617 1d9f35462e3ed8fda78adc722c6d70b6 ""
   "/home/user/texmf/tex/latex/commonstuff/mathssymbols.sty" 1703549340 44928 03a5cc83a1c3ff562fa1ffe46d3983dd ""
@@ -176,25 +176,25 @@
   "/usr/local/share/texmf-var/web2c/xetex/xelatex.fmt" 1687347041 10502716 7b30e9de89f580568880859057cee5c6 ""
   "accessibilityandpresentability.tex" 1706108730 17457 6a5b38ce42d1edc960d6877d92f17131 ""
   "approach.tex" 1706202193 1206 dcbccd48084b572a95f0a22c617cca9f ""
-  "book.aux" 1706519394 1246 c91e4cffab98cfd47624f65abc94b97b "xelatex"
-  "book.bbl" 1706519305 2742 630f2852cb2b0dd31dd3640816c1703f "bibtex book"
+  "book.aux" 1706785026 1246 c91e4cffab98cfd47624f65abc94b97b "xelatex"
+  "book.bbl" 1706784913 2742 630f2852cb2b0dd31dd3640816c1703f "bibtex book"
   "book.tex" 1706201778 1552 7769258fdc0099528b38b91fd52869c7 ""
-  "book.toc" 1706519394 2885 2e6febf7ca17f48419cd8a21edf3bba6 "xelatex"
+  "book.toc" 1706785026 2872 c3e80d459ebecaedc9fcfda28dbbda51 "xelatex"
   "book.ttl" 0 -1 0 ""
-  "cardinals.aux" 1706519394 3290 7e6c6da887eb72c1787987f8a4d1fd51 "xelatex"
-  "cardinals.tex" 1706094665 9283 5ba2eb67a4f453d3c2db60c86c839dd3 ""
+  "cardinals.aux" 1706785026 3290 3bc823b0b83708ba52f1314113aa52ae "xelatex"
+  "cardinals.tex" 1706785019 9605 5faa87add8c0633d98920408ec631954 ""
   "constructions.tex" 1705837994 662 021005e62842123cae21160f5cd3779d ""
   "echelonsofaccessibility.tex" 1706108499 6468 081f90ba38f75dff9b043bbac69f4396 ""
   "fibrations.tex" 1706092585 212 36b8d4d90bec3ff35f58856ad5f29f64 ""
-  "generatorsrelations.tex" 1706519367 10041 34816311ee2dfecf92267a80c0146738 ""
+  "generatorsrelations.tex" 1706784613 10028 94dab841e77b39898e99bcc17f16b841 ""
   "geometricrealization.tex" 1706092404 305 7d7728373f57693cb24a5f699896571e ""
   "highergroupoidshighercategories.tex" 1706092502 521 43394c0974e52eb7cabc059ab804abc4 ""
   "higherinaccessibility.tex" 1706108585 6618 b21445a5ede62d3d178a9959c0f238f3 ""
   "homotopicalturn.tex" 1706202135 5622 bec5b7b6d93ee9b57c03424b7ed7acdf ""
-  "homotopy.aux" 1706519393 3961 cd7c37cabef27c7a8ad58d1f5b262db4 "xelatex"
+  "homotopy.aux" 1706785025 3948 cd90abc60c1ca898300b65d83610cfb9 "xelatex"
   "homotopy.tex" 1706091575 2877 67a1ebf73f986dcd37aaf7b1a19692d7 ""
   "indization.tex" 1706108561 4566 1b70ab9a0447087a583723d09684fa13 ""
-  "introduction.aux" 1706519390 821 8f26faaa241fff6b8fd37815d5e1a680 "xelatex"
+  "introduction.aux" 1706785022 821 8f26faaa241fff6b8fd37815d5e1a680 "xelatex"
   "introduction.tex" 1706092833 10731 d156304c43f50cc9b1241199d1b1b18f ""
   "regularityandsmallness.tex" 1706108648 5712 88fe26b4499f498e1122b0de5f97aef7 ""
   "sameness.tex" 1706201985 2516 ac53ec838904bc918d6fb75e7f63e031 ""

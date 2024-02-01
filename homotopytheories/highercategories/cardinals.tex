@@ -19,7 +19,12 @@ there is no surjection of a set onto its powerset.
 This is ultimately why no one can contemplate a set of all sets,
 and it's also the key to Freyd's observation that
 if $C$ is a category and $\kappa$ is the cardinality of its set of arrows,
-then $C$ has all $\kappa$-indexed products only if $C$ is a poset.
+then $C$ has all $\kappa$-indexed coproducts only if $C$ is equivalent to a poset.%
+\footnote{
+  If $\kappa$ is the cardinality of the set of morphisms of $C$, and consider the coproduct $\kappa \cdot x = \coprod_{\alpha < \kappa} x$.
+  Now $C(\kappa \cdot x, y) = C(x,y)^{\kappa}$.
+  If $\# C(x,y) \geq 2$, then $\# C(\kappa\cdot x, y) \geq 2^\kappa > \kappa$ by Cantor. Contradiction.
+}
 This, in turn, is what's behind the \enquote{solution set condition}
 in representability theorems or the Adjoint Functor Theorem.
 Hence one really must distinguish between \enquote{large} and \enquote{small} objects.
