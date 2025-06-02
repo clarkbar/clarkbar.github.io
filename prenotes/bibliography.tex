@@ -1,0 +1,119 @@
+%!TeX program = xelatex
+%-*- program: xelatex -*-
+%-*- encoding: utf-8 -*-
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 24
+% chktex-file 42
+\documentclass[draft=false, leqno]{article}
+\usepackage[minionmath]{boilerart}
+\usepackage{booktabs}
+\usepackage{isodate}
+\usetikzlibrary{backgrounds,decorations.markings,hobby,fit}
+
+\hypersetup{
+    urlcolor = slate,
+}
+
+\isodate
+\isodash{.}
+
+\setcounter{secnumdepth}{2}
+
+\definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
+\definecolor{pakistangreen}{rgb}{0.0, 0.4, 0.0}
+\definecolor{rosewood}{rgb}{0.4, 0.0, 0.04}
+\definecolor{sangria}{rgb}{0.57, 0.0, 0.04}
+\definecolor{taupe}{rgb}{0.28, 0.24, 0.2}
+\definecolor{tealgreen}{rgb}{0.0, 0.51, 0.5}
+\definecolor{ultramarine}{rgb}{0.07, 0.04, 0.56}
+
+\hyphenation{mon-oid-al}
+\hyphenation{Grun-dlehren}
+\hyphenation{Birkhäus-er} % Comment out when using PDFLaTeX
+
+% Does sectioning and addition of references to table of contents correctly.
+\defbibheading{references}[\refname]{%
+	\section*{#1}%
+	\addcontentsline{toc}{part}{References} %
+	\markboth{#1}{#1}
+	}
+
+\addbibresource{universal.bib} % To add the bibliography resource
+
+\title{Annotated bibliography}
+
+\author{Clark Barwick}
+
+\date{Draft: \today}
+
+\begin{document}
+
+\maketitle
+
+\section{Foreword}%
+\label{sec:Foreword}
+This is a resource list for my Ph.D students.
+As such, it's biased toward stuff I like:
+large-scale structures, big concepts, that kind of thing.
+I include some comments about how I think these works may be read.
+
+\section{Foundations}%
+\label{sec:Foundations}
+
+\subsection{Simplicial structures}%
+\label{sub:Simplicial structures}
+Simplicial structures are a key technical tool in homotopical mathematics.
+In the 1950s, Dan Kan noticed that essentially the whole of homotopy theory can be expressed in combinatorial terms.
+Once this became available, it was a simple matter to transport homotopical thinking to lots of new contexts.
+
+There is no one perfect reference for this material.
+
+If you know nothing of simplicial sets, but are comfortable with the basic technology of (ordinary) category theory, then the starting place is this short note:
+\begin{quotation}
+  Riehl, Emily. \enquote{A leisurely introduction to simplicial sets}. \href{https://math.jhu.edu/~eriehl/ssets.pdf}.
+\end{quotation}
+Riehl is a celebrated expositor, and this is as good an invitation as any to simplicial constructions.
+
+After that, the next thing to read is probably sections 1.1--1.3 of
+\begin{quotation}
+  Lurie, Jacob. \emph{Kerodon}. \href{https://kerodon.net}.
+\end{quotation}
+This is an online text that is still under construction.
+It will eventually cover a big chunk of higher category theory, but
+at this point, the main thing is to get comfortable with these objects.
+
+A more complete reference is
+\begin{quotation}
+  Goerss, Paul G.; Jardine, John F. \emph{Simplicial homotopy theory}. Progress in Mathematics. Vol. 174. Birkhäuser.
+\end{quotation}
+This book has some rough patches, but it's certainly the best book on the subject I know of.
+
+An old but still wonderful text on simplicial stuff is
+\begin{quotation}
+  Curtis, Edward B. \enquote{Simplicial Homotopy Theory}. Advances in Mathematics 6, 107--209 (1971).
+\end{quotation}
+The notation is oldfashioned, but the emphasis on the connection to unstable homotopy theory is fantastic.
+A serious homotopy theory student should feel at home with the first six sections of this paper.
+Reading this will  
+
+\bookmark[page=1,level=1]{Contents}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+%=========================================================%
+%=========================================================%
+%=========================================================%
+%=========================================================%
+
+\newpage
+
+% Separates bibliography into two parts: the specially labeled references followed by the numbered references. The specially labeled references appear with just the label; numbered references appear as "n."
+\DeclareFieldFormat{labelnumberwidth}{#1}
+\printbibliography[keyword=alph, heading=references]
+% \addcontentsline{toc}{part}{References} % Adds References to table of contents
+\DeclareFieldFormat{labelnumberwidth}{{#1\adddot\midsentence}}
+\printbibliography[heading=none, notkeyword=alph]
+
+\end{document}
