@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1751578621 "Barwick-LMS.tex" "Barwick-LMS.pdf" "Barwick-LMS" 1751578626 0
+["pdflatex"] 1751580479 "Barwick-LMS.tex" "Barwick-LMS.pdf" "Barwick-LMS" 1751580484 0
   "/home/user/texmf/tex/latex/commonstuff/presentation.sty" 1751358545 6441 18539ddf7dc7a0b37ee79fcff7fd88bd ""
   "/usr/local/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc" 1177804218 3341 78e600b269762aa2a25a5293cc4535c0 ""
   "/usr/local/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc" 1177804218 3275 8d7166dfdbc31ffdc8aba0c31b3bd5c8 ""
@@ -334,11 +334,11 @@
   "/usr/local/share/texmf-dist/web2c/texmf.cnf" 1737489312 41792 3c38899774371d5a51960ff9faeffa3d ""
   "/usr/local/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1727982844 5467631 928a92e2df3363bc1957655c380c802f ""
   "/usr/local/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1727982845 8221565 066e6eef3c737f5c4b16afd89f704ea2 ""
-  "Barwick-LMS.aux" 1751578625 3145 914307be551cacf707a14803978ec93e "pdflatex"
-  "Barwick-LMS.nav" 1751578625 2136 67a98e6043387f48341a6f4080c79dce "pdflatex"
-  "Barwick-LMS.out" 1751578625 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Barwick-LMS.tex" 1751578620 11915 505edccfbadbd97085dd5604fb4fdfd9 ""
-  "figures.pdf" 1751575236 4499817 17512a7180cfe261d2fbfc32bf3e524d ""
+  "Barwick-LMS.aux" 1751580484 3016 3dbb15046a18ac22f4a01d606dbb0ac3 "pdflatex"
+  "Barwick-LMS.nav" 1751580484 2043 c6c2da50cb5a1f6b2fa3e6ea7a990297 "pdflatex"
+  "Barwick-LMS.out" 1751580484 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Barwick-LMS.tex" 1751580472 11866 3c6e984ca8a771458a0ed6dd925bc9ae ""
+  "figures.pdf" 1751578837 4595890 6bf69421f07a6523a424391bcffe769c ""
   (generated)
   "Barwick-LMS.aux"
   "Barwick-LMS.log"

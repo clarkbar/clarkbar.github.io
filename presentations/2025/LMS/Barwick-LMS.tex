@@ -46,7 +46,7 @@
 }
 
 \newcommand{\pointedplane}{%
-  \begin{tikzpicture}[decoration={markings, mark=at position 0.5 with {\arrow{stealth}}}]
+  \begin{tikzpicture}[baseline=0,decoration={markings, mark=at position 0.5 with {\arrow{stealth}}}]
     \tikzstyle{vertex}=[circle,fill=black,minimum size=4pt,inner sep=0pt]
     \node[vertex] (v_1) at (0,0) {};
     \node[vertex] (v_2) at (1,0) {};
@@ -57,12 +57,12 @@
 }
 
 \newcommand{\spherestratone}{%
-  \begin{tikzpicture}[decoration={markings, mark=at position 0.5 with {\arrow{stealth}}}]
+  \begin{tikzpicture}[baseline=0,decoration={markings, mark=at position 0.5 with {\arrow{stealth}}}]
     \tikzstyle{vertex}=[circle,fill=black,minimum size=4pt,inner sep=0pt]
     \node[vertex] (v_1) at (0,0) {};
     \node[vertex] (v_2) at (0.5,-0.5) {};
     \node[vertex] (v_3) at (0.5,0.5) {};
-    \draw[,postaction=decorate] (v_1) to[in=-45,out=45,loop] (v_1); 
+    \draw[postaction=decorate] (v_1) to[in=135,out=-135,loop] (v_1); 
     \draw[postaction=decorate] (v_1) -- (v_2);
     \draw[postaction=decorate] (v_1) -- (v_3);
     \node[fit=(current bounding box),inner sep=1mm]{};
@@ -70,14 +70,14 @@
 }
 
 \newcommand{\spherestrattwo}{%
-  \begin{tikzpicture}[decoration={markings, mark=at position 0.5 with {\arrow{stealth}}}]
+  \begin{tikzpicture}[baseline=0,decoration={markings, mark=at position 0.5 with {\arrow{stealth}}}]
     \tikzstyle{vertex}=[circle,fill=black,minimum size=4pt,inner sep=0pt]
-    \node[vertex] (v_1) at (0,-0.5) {};
-    \node[vertex] (v_2) at (0,0.5) {};
-    \node[vertex] (v_3) at (1,-0.5) {};
-    \node[vertex] (v_4) at (1,0.5) {};
-    \node[vertex] (v_5) at (2,-0.5) {};
-    \node[vertex] (v_6) at (2,0.5) {};
+    \node[vertex] (v_1) at (-1,0) {};
+    \node[vertex] (v_2) at (1,0) {};
+    \node[vertex] (v_5) at (0,-1) {};
+    \node[vertex] (v_6) at (0,1) {};
+    \node[vertex] (v_3) at (0.25,-0.25) {};
+    \node[vertex] (v_4) at (-0.25,0.25) {};
     \draw[postaction=decorate] (v_1) -- (v_3);
     \draw[postaction=decorate] (v_1) -- (v_4);
     \draw[postaction=decorate] (v_2) -- (v_3);
@@ -86,6 +86,10 @@
     \draw[postaction=decorate] (v_3) -- (v_6);
     \draw[postaction=decorate] (v_4) -- (v_5);
     \draw[postaction=decorate] (v_4) -- (v_6);
+    \draw[postaction=decorate] (v_1) -- (v_5);
+    \draw[postaction=decorate] (v_1) -- (v_6);
+    \draw[postaction=decorate] (v_2) -- (v_5);
+    \draw[postaction=decorate] (v_2) -- (v_6);
     \node[fit=(current bounding box),inner sep=1mm]{};
   \end{tikzpicture}
 }
@@ -239,11 +243,12 @@
   \begin{itemize}
     \item an object is a point of $X$
     \item a morphism from one point to another is an \textsb{exit path}:
-      \includegraphics[scale=0.2,page=11]{\pdf}%
     \item a $2$-morphism is a \textsb{homotopy} of exit paths
     \item etc.
   \end{itemize}
   This is the \textsb{exit-path $\infty$-category} $\Exit(X/P)$.
+
+  \includegraphics[scale=0.2,page=11]{\pdf}%
 \end{frame}
 
 \begin{frame}
@@ -283,19 +288,17 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{These aren't all $1$-categories}
-    \includegraphics[scale=0.2,page=14]{\pdf}
+  \frametitle{Exit paths: not all $1$-categories}
+    Let's stratify $S^2 \to [1]$ as a point and its complement.
+    The space of ways to exit from the point into the complement is an $S^1$.
 
-    There are two strata, each of which is contractible.
-    That means there are two objects, neither of which has automorphisms.
-    But the space of ways to exit from the yellow point into the green region is an $S^1$.
-
-    In other words, $\Exit(S^2/[1])$ is a $2$-category with
+    $\Exit(S^2/[1])$ is a $2$-category with
     \begin{itemize}
       \item two objects $x_0$ and $x_1$
       \item only one interesting morphism, which goes $\gamma \colon x_0 \to x_1$
       \item countably many $2$-isomorphisms from $\gamma$ to itself.
     \end{itemize}
+    \includegraphics[scale=0.2,page=14]{\pdf}
 \end{frame}
 
 \begin{frame}
@@ -331,7 +334,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Exodromy}
+  \frametitle{The exodromy theorem}
   \begin{theorem}[Lurie (2012), Haine--Porta--Teyssier (2024)]
     Let $X/P$ be a \textsb{reasonable} stratified topological space, and
 
@@ -342,23 +345,16 @@
       \text{Constr}(X/P, C) \simeq \text{Fun}(\Exit(X/P),C)
     \]
   \end{theorem}
-  \includegraphics[scale=0.1,page=11]{\pdf}%
+  We can think of this as an exceptionally general form of the \textsb{fundamental theorem of covering space theory}.
 \end{frame}
 
 \begin{frame}
   \frametitle{Beyond}
   Stratified homotopy types also make sense in \textsb{algebraic geometry}, particularly for the \textsb{étale topology}.
 
-  $\text{Spec}\ \mathbf{Z}$ looks something like this as a stratified space:
-  \includegraphics[scale=0.1,page=13]{\pdf}%
-\end{frame}
+  $\text{Spec}\ \mathbf{Z}$ turns out to look something like this as a stratified space:
 
-\begin{frame}
-\frametitle{Collection of figures (one figure per click)}
-\includegraphics<1>[scale=0.275,page=1]{\pdf}%
-\includegraphics<2>[scale=0.275,page=2]{\pdf}%
-\includegraphics<3>[scale=0.275,page=3]{\pdf}%
-\includegraphics<4>[scale=0.275,page=5]{\pdf}%
+  \includegraphics[scale=0.3,page=15]{\pdf}%
 \end{frame}
 
 \end{document}
