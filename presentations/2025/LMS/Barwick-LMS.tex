@@ -19,24 +19,24 @@
 
 \newcommand{\Exit}{\text{Exit}}
 
-\newcommand{\S1strat1}{%
+\newcommand{\circlestratone}{%
   \begin{tikzpicture}[baseline=0,decoration={markings, mark=at position 0.5 with {\arrow{stealth}}}]
     \tikzstyle{vertex}=[circle,fill=black,minimum size=4pt,inner sep=0pt]
-    \node[vertex] (v_1) at (-0,5,0) {};
+    \node[vertex] (v_1) at (-0.5,0) {};
     \node[vertex] (v_2) at (0.5,0) {};
-    \draw[postaction=decorate,bend right] (v_1) -- (v_2);
-    \draw[postaction=decorate,bend left] (v_1) -- (v_2);
+    \draw[postaction=decorate] (v_1) to[out=20,in=160] (v_2);
+    \draw[postaction=decorate] (v_1) to[out=-20,in=-160] (v_2);
     \node[fit=(current bounding box),inner sep=1mm]{};
   \end{tikzpicture}%
 }
 
-\newcommand{\S1strat2}{%
+\newcommand{\circlestrattwo}{%
   \begin{tikzpicture}[baseline=0,decoration={markings, mark=at position 0.5 with {\arrow{stealth}}}]
     \tikzstyle{vertex}=[circle,fill=black,minimum size=4pt,inner sep=0pt]
-    \node[vertex] (v_1) at (-0,5,0) {};
-    \node[vertex] (v_2) at (0.5,0) {};
-    \node[vertex] (v_3) at (0,-0.5) {};
-    \node[vertex] (v_4) at (0,0.5) {};
+    \node[vertex] (v_3) at (-0.5,0) {};
+    \node[vertex] (v_4) at (0.5,0) {};
+    \node[vertex] (v_1) at (0,-0.5) {};
+    \node[vertex] (v_2) at (0,0.5) {};
     \draw[postaction=decorate] (v_1) -- (v_3);
     \draw[postaction=decorate] (v_2) -- (v_3);
     \draw[postaction=decorate] (v_1) -- (v_4);
@@ -50,24 +50,26 @@
     \tikzstyle{vertex}=[circle,fill=black,minimum size=4pt,inner sep=0pt]
     \node[vertex] (v_1) at (0,0) {};
     \node[vertex] (v_2) at (1,0) {};
-    \draw[in=30,out=-30,loop,postaction=decorate] (v_2) -- (v_2); 
+    \draw[postaction=decorate] (v_2) to[in=45,out=-45,loop] (v_2); 
     \draw[postaction=decorate] (v_1) -- (v_2);
     \node[fit=(current bounding box),inner sep=1mm]{};
   \end{tikzpicture}
+}
 
-\newcommand{\S2strat1}{%
+\newcommand{\spherestratone}{%
   \begin{tikzpicture}[decoration={markings, mark=at position 0.5 with {\arrow{stealth}}}]
     \tikzstyle{vertex}=[circle,fill=black,minimum size=4pt,inner sep=0pt]
     \node[vertex] (v_1) at (0,0) {};
     \node[vertex] (v_2) at (0.5,-0.5) {};
     \node[vertex] (v_3) at (0.5,0.5) {};
-    \draw[in=30,out=-30,loop,postaction=decorate] (v_1) -- (v_1); 
+    \draw[,postaction=decorate] (v_1) to[in=-45,out=45,loop] (v_1); 
     \draw[postaction=decorate] (v_1) -- (v_2);
     \draw[postaction=decorate] (v_1) -- (v_3);
     \node[fit=(current bounding box),inner sep=1mm]{};
   \end{tikzpicture}
+}
 
-\newcommand{\S2strat2}{%
+\newcommand{\spherestrattwo}{%
   \begin{tikzpicture}[decoration={markings, mark=at position 0.5 with {\arrow{stealth}}}]
     \tikzstyle{vertex}=[circle,fill=black,minimum size=4pt,inner sep=0pt]
     \node[vertex] (v_1) at (0,-0.5) {};
@@ -115,7 +117,7 @@
 \begin{frame}
   \frametitle{A crease}
   Take a piece of paper; fold it down the middle, creating a sharp crease.
-  \includegraphics[scale=0.1,page=1]{\pdf}
+  \includegraphics[scale=0.2,page=1]{\pdf}
   
   The \textsb{topology} of the paper has not changed, but the \textsb{geometry} has:
 
@@ -127,7 +129,7 @@
 \begin{frame}
   \frametitle{Two creases}
   Fold your piece of paper again, perpindicular to the original fold.
-  \includegraphics[scale=0.1,page=2]{\pdf}
+  \includegraphics[scale=0.2,page=2]{\pdf}
 
   Still the topology hasn't changed.
 
@@ -142,13 +144,12 @@
   into locally closed subsets $X_i \subseteq X$ -- called \emph{strata}.
 
   These arose in work of Whitney, Thom, and Mather in order to cope with complicated singular loci in higher dimensions. 
-  \includegraphics[scale=0.1,page=3]{\pdf}%
 \end{frame}
 
 \begin{frame}
   \frametitle{Stratifications: pictures}  
-  \includegraphics<1>[scale=0.1,page=4]{\pdf}%
-  \includegraphics<2>[scale=0.1,page=5]{\pdf}%
+  \includegraphics<1>[scale=0.4,page=4]{\pdf}%
+  \includegraphics<2>[scale=0.4,page=5]{\pdf}%
 \end{frame}
 
 \begin{frame}
@@ -180,7 +181,7 @@
       \item the $0$-th stratum $X_0$ is closed, and
       \item the $1$-st stratum $X_1$ is the open complement.
     \end{itemize}
-    \includegraphics[scale=0.1,page=6]{\pdf}%
+    \includegraphics[scale=0.2,page=6]{\pdf}%
   \end{example}
 \end{frame}
 
@@ -189,7 +190,8 @@
   \begin{example}
     If $P$ is a trivial poset (i.e., every pair of elements is incomparable), then
     a stratification of $X$ over $P$ is a decomposition of $X$ as a disjoint union of clopens $X_a$ for $a \in P$.
-    \includegraphics[scale=0.1,page=7]{\pdf}%
+
+    \includegraphics[scale=0.25,page=7]{\pdf}%
   \end{example}
 \end{frame}
 
@@ -197,43 +199,47 @@
   \frametitle{Stratifications: less trivial example}
   \begin{example}
     We can stratify the \textsb{corner} $[0,1)^n$ via the map
-    \[
-      [0,1)^n \to [n] \coloneq \{0 < \dots < n\} 
-    \]
+    $[0,1)^n \to [n] \coloneq \{0 < \dots < n\}$
     that carries $t$ to the largest $i$ such that $t_i \neq 0$.
-    \includegraphics[scale=0.1,page=8]{\pdf}%
+
+    \includegraphics[scale=0.3,page=8]{\pdf}%
   \end{example}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Stratifications: example (spheres)}
+  \frametitle{Stratifications: circle}
   \begin{example}
     Stratify $S^0$ over the trivial poset $\{-1, +1\}$.
 
-    Now let's \textsb{suspend} this to stratify $S^1$ over the poset
+    Now let's \textsb{suspend} this to stratify $S^1$:
+
+    \includegraphics[scale=0.2,page=9]{\pdf}
     \[
-      \S1strat2
+       \circlestrattwo
     \]
-    \includegraphics[scale=0.1,page=9]{\pdf}%
+  \end{example}
+\end{frame}
    
-    Let's do it again!
-    Now we have a stratification of $S^2$ over the poset
+\begin{frame}
+  \frametitle{Stratifications: sphere}
+  \begin{example}
+    Let's suspend again.
+    Now we have a stratification of $S^2$:
+
+    \includegraphics[scale=0.2,page=10]{\pdf}%
     \[
-      \S2strat2
+      \spherestrattwo
     \]
-    \includegraphics[scale=0.1,page=10]{\pdf}%
   \end{example}
 \end{frame}
 
 \begin{frame}
   \frametitle{Exit paths}
-  Let $X/P$ be a stratified topological space.
-  Then it turns out that we can build an \textsb{$\infty$-category} attached to it:
+  There's an \textsb{$\infty$-category} attached to $X/P$:
   \begin{itemize}
     \item an object is a point of $X$
     \item a morphism from one point to another is an \textsb{exit path}:
-      \includegraphics[scale=0.1,page=8]{\pdf}%
-      \includegraphics[scale=0.1,page=11]{\pdf}%
+      \includegraphics[scale=0.2,page=11]{\pdf}%
     \item a $2$-morphism is a \textsb{homotopy} of exit paths
     \item etc.
   \end{itemize}
@@ -246,20 +252,39 @@
   \toprule
     Poset & Stratification & Exit-path $\infty$-category\\
   \midrule
-    $[n]$ & \includegraphics[scale=0.1,page=8]{\pdf} & $[n]$ \\ 
-    $[1]$ & \includegraphics[scale=0.1,page=12]{\pdf} & $\S1strat1$\\ 
-    $\S1strat2$ & \includegraphics[scale=0.1,page=9]{\pdf} & $\S1strat2$\\ 
-    $[1]$ & \includegraphics[scale=0.1,page=13]{\pdf} & $\pointedplane$ \\
-    $[1]$ & \includegraphics[scale=0.1,page=6]{\pdf} & $\S2strat1$ \\
-    $\S2strat2$ & \includegraphics[scale=0.1,page=10]{\pdf} & $\S2strat2$ \\
+    $[n]$ & \raisebox{-0.5\totalheight}{\includegraphics[scale=0.15,page=8]{\pdf}} & $[n]$ \\ 
+    $[1]$ & \raisebox{-0.5\totalheight}{\includegraphics[scale=0.15,page=12]{\pdf}} & $\circlestratone$\\ 
+  \bottomrule
+  \end{tabular*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exit paths: examples}
+  \begin{tabular*}{\textwidth}{@{\extracolsep\fill}lcccc}
+  \toprule
+    Poset & Stratification & Exit-path $\infty$-category\\
+  \midrule
+    $\circlestrattwo$ & \raisebox{-0.5\totalheight}{\includegraphics[scale=0.15,page=9]{\pdf}} & $\circlestrattwo$\\ 
+    $[1]$ & \raisebox{-0.5\totalheight}{\includegraphics[scale=0.15,page=13]{\pdf}} & $\pointedplane$ \\
+  \bottomrule
+  \end{tabular*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exit paths: examples}
+  \begin{tabular*}{\textwidth}{@{\extracolsep\fill}lcccc}
+  \toprule
+    Poset & Stratification & Exit-path $\infty$-category\\
+  \midrule
+    $[1]$ & \raisebox{-0.5\totalheight}{\includegraphics[scale=0.15,page=6]{\pdf}} & $\spherestratone$ \\
+    $\spherestrattwo$ & \raisebox{-0.5\totalheight}{\includegraphics[scale=0.15,page=10]{\pdf}} & $\spherestrattwo$ \\
   \bottomrule
   \end{tabular*}
 \end{frame}
 
 \begin{frame}
   \frametitle{These aren't all $1$-categories}
-    Here is the stratification corresponding to a cuspidal singularity on the sphere:
-    \includegraphics[scale=0.1,page=13]{\pdf}
+    \includegraphics[scale=0.2,page=14]{\pdf}
 
     There are two strata, each of which is contractible.
     That means there are two objects, neither of which has automorphisms.
@@ -283,7 +308,7 @@
     \item the $1$-st stratum is everything else.
   \end{itemize}
   Now $\Exit(S^n/[1])$ has two objects $x_0$ and $x_1$,
-  with $\Map(x_0, x_1) = S^{n-1}$ and no other nontrivial maps.
+  with $\text{Map}(x_0, x_1) = S^{n-1}$ and no other nontrivial maps.
 
   In particular, for $n \geq 3$,
   \textsb{these are not $n$-categories for any finite $n$}!
@@ -324,7 +349,7 @@
   \frametitle{Beyond}
   Stratified homotopy types also make sense in \textsb{algebraic geometry}, particularly for the \textsb{étale topology}.
 
-  $\Spec \ZZ$ looks something like this as a stratified space:
+  $\text{Spec}\ \mathbf{Z}$ looks something like this as a stratified space:
   \includegraphics[scale=0.1,page=13]{\pdf}%
 \end{frame}
 
