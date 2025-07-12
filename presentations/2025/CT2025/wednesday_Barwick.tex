@@ -25,15 +25,16 @@
 \definecolor{tealgreen}{rgb}{0.0, 0.51, 0.5}
 \definecolor{ultramarine}{rgb}{0.07, 0.04, 0.56}
 
-\renewcommand{\AA}{\mathbf{A}}
-\newcommand{\BB}{\mathbf{B}}
-\newcommand{\CC}{\mathbf{C}}
-\newcommand{\DD}{\mathbf{D}}
-\newcommand{\EE}{\mathbf{E}}
-\newcommand{\FF}{\mathbf{F}}
-\newcommand{\GG}{\mathbf{G}}
-\newcommand{\RR}{\mathbf{R}}
-\newcommand{\XX}{\mathbf{X}}
+\renewcommand{\AA}{\textsb{A}}
+\newcommand{\BB}{\textsb{B}}
+\newcommand{\CC}{\textsb{C}}
+\newcommand{\DD}{\textsb{D}}
+\newcommand{\EE}{\textsb{E}}
+\newcommand{\FF}{\textsb{F}}
+\newcommand{\GG}{\textsb{G}}
+\newcommand{\RR}{\textsb{R}}
+\newcommand{\VV}{\textsb{V}}
+\newcommand{\XX}{\textsb{X}}
 
 \newcommand{\angs}[1]{\langle #1 \rangle}
 \newcommand{\enquine}[1]{\ulcorner {#1} \urcorner}
@@ -78,7 +79,7 @@
 
   \bigskip
 
-  \textsb{Factorization algebras} allow us to combine observables in spacetime regions that are sufficiently \textsb{apart}.
+  \textsb{Factorization algebras} (Beilinson--Drinfeld, Francis--Gaitsgory, Costello--Gwilliam, Raskin) allow us to combine observables in spacetime regions that are sufficiently \textsb{apart}.
 \end{frame}
 
 \begin{frame}
@@ -111,7 +112,7 @@
   \end{tikzcd}
   \]
 
-  Note: if $M = \mathbf{R}^n$, then $\enquine{x \sim y}$ is always contractible, even if $x \neq y$.
+  Note: if $M = \textsb{R}^n$, then $\enquine{x \sim y}$ is always contractible, even if $x \neq y$.
 \end{frame}
 
 \begin{frame}
@@ -124,7 +125,7 @@
   \end{tikzcd}
   \]
 
-  Note: if $M = \mathbf{R}^n$, then $\enquine{x \nsim y}$ is always $S^{n-1}$, even if $x = y$.
+  Note: if $M = \RR^n$, then $\enquine{x \nsim y}$ is always $S^{n-1}$, even if $x = y$.
 
   \bigskip
 
@@ -242,6 +243,7 @@
   \end{itemize}
 
   In other words, the category of graphs is a \textsb{twofold symmetric monoidal category}.
+  (Balteanu--Fiedorowicz--Schwänzl--Vogt)
 \end{frame}
 
 \begin{frame}
@@ -298,7 +300,7 @@
   \[
     M^{\lambda} = \{ x \in M^{V\angs{\lambda}} : \{a,b\} \in E\angs{\lambda} \implies x_a \neq x_b\}
   \]
-  The assignment $\angs{\lambda} \mapsto M^{\lambda}$ is a functor $\DD^{\op} \to \textbf{Man}$.
+  The assignment $\angs{\lambda} \mapsto M^{\lambda}$ is a functor $\DD^{\op} \to \textsb{Man}$.
 
   \[
     M^n = M \times \cdots \times M
@@ -326,22 +328,102 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{isolability objects}
-  An \textsb{isolability object} of a category $\XX$ is a functor $\DD^{\op} \to \XX$ such that all pushout squares as above in $\DD$ are carried to pullback squares in $\XX$.
+  \frametitle{isolability spaces from manifolds}
+  Let $M$ be a manifold.
 
   The assignment $\angs{\lambda} \to M^{\lambda}$ is an isolability manifold.
 
-  Passing to (stratified) homotopy types gives us an isolability (stratified) \textsb{anima}.
+  Passing to homotopy types gives us an \textsb{isolability $\infty$-groupoid}.
 
+  Passing to stratified homotopy types gives us an \textsb{isolability $\infty$-category}.
 
+  \bigskip
+
+  In the case $M = \RR^n$, the corresponding isolability $\infty$-category admits a combinatorial description:
+  it carries $\angs{\lambda}$ to the category of `$n$-structures' on $\angs{\lambda}$. 
 \end{frame}
 
 \begin{frame}
-  \frametitle{Sheaves on isolability spaces}
+  \frametitle{isolability structures on Hilbert schemes}
+  Let $X$ be a variety over a field.
+
+  Let $H$ be the moduli space of closed subvarieties of $X$ (the `Hilbert algebraic space').
+
+  For every cograph $\angs{\lambda}$, we let $H^{\lambda}$ be the moduli space of tuples $(Z_a)_{a \in V \angs{\lambda}}$ of closed subvarieties such that if $\{a,b\} \in E\angs{\lambda}$, then $Z_a \cap Z_b = \varnothing$.
+
+  Now $\angs{\lambda} \mapsto H^{\angs{\lambda}}$ is an isolability object in algebraic spaces.
 \end{frame}
 
 \begin{frame}
-  \frametitle{Factorization algebras in quite a lot of generality}
+  \frametitle{geometry of isolability spaces}
+  Let's now assume that we are working with a site or topos $\XX$.
+
+  We equip the objects of $\XX$ with a notion of \textsb{sheaf}:
+  a lax symmetric monoidal sheaf
+  \[
+    \AA \colon \XX^{\op} \to \textsb{Pr}^L
+  \]
+
+  Perhaps the simplest example is $\XX = \textsb{An}$, and $\AA = \mathop{Fun}(-,\textsb{An})$.
+
+  Other sheaf theories that can be represented this way include:
+  stacks, constructible sheaves, $D$-modules, etc.
+
+  \bigskip
+
+  We want to extend our sheaf theory to isolability objects.
+\end{frame}
+
+\begin{frame}
+  \frametitle{geometry of isolability spaces -- continued}
+  Applying $\AA$ objectwise to an isolability object $X^{\bullet} \colon \DD^{\op} \to \XX$, we get a lax twofold symmetric monoidal functor
+  \[
+    \AA(X^{\bullet}) \colon \DD \to \textsb{Pr}^L
+  \]
+  In concrete terms, we have two external tensor products
+  \[
+    \rightboxtensor \colon \AA(X^{\lambda}) \otimes \AA(X^{\mu}) \to \AA(X^{\lambda \leftsum \mu})
+  \]
+  which is where the symmetric monoidal structure on each individual $\AA(X^{\lambda})$ comes from, and
+  \[
+    \leftboxtensor \colon \AA(X^{\lambda}) \otimes \AA(X^{\mu}) \to \AA(X^{\lambda \rightsum \mu})
+  \]
+  which is something \textsb{new} that comes from isolation theory.
+\end{frame}
+
+\begin{frame}
+  \frametitle{factorization algebras -- informally}
+  Recall that we have a category $\XX$ and a sheaf theory $\AA \colon \XX^{\op} \to \textsb{Pr}^L$.
+
+  Let $X^{\bullet} \colon \DD^{\op} \to \XX$ be an isolability object.
+  We obtain a lax twofold symmetric monoidal functor $\AA(X^{\bullet}) \colon \DD \to \textsb{Pr}^L$.
+
+  Informally, a \textsb{factorization algebras on $X^{\bullet}$ with coefficients in $\AA$} now consists of the following:
+  \begin{itemize}
+    \item for every cograph $\angs{\lambda}$, a sheaf $F_{\lambda} \in \AA(X^{\lambda})$
+    \item for every surjective map of cographs $\phi \colon \angs{\lambda} \to \angs{\mu}$, an identification $\phi^{\ast\ast}F_{\lambda} = F_{\mu}$
+    \item for every pair of cographs $\angs{\lambda}$ and $\angs{\mu}$, an identification 
+      \[
+        F_{\lambda \rightsum \mu} = F_{\lambda} \leftboxtensor F_{\mu}
+      \]
+    \item plus all coherence \ldots
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{factorization algebras -- formally}
+  To define this precisely we remember $\AA(X^{\bullet})$ only as a nonunital lax symmetric monoidal functor $(\DD_s,\rightsum) \to \textsb{Pr}^L$.
+  Now a factorization algebra is a nonunital lax symmetric monoidal transformation from the constant diagram $\textsb{An}$ to $\AA(X^{\bullet})$.
+
+  This recovers existing versions of this notion, and it works in quite a lot of generality.
+
+  \bigskip
+
+  \textsb{Two questions.}
+  \begin{itemize}
+    \item How should one deal with units as treated by Gaitsgory and Raskin?
+    \item Factorization algebras make sense as a functor from the bicategory of lax twofold symmetric monoidal functors $\DD \to \textsb{Pr}^L$ to the bicategory of categories. Is it representable?
+  \end{itemize}
 \end{frame}
 
 \end{document}
