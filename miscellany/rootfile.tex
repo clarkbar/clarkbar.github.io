@@ -1,0 +1,100 @@
+% !TeX program = xelatex
+%-*- program: xelatex -*-
+%-*- encoding: utf-8 -*-
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 24
+% chktex-file 42
+\documentclass[draft=false, leqno]{article}
+\usepackage[minionmath]{boilerart}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+% Document Macros                                                   %
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+
+\hypersetup{
+    urlcolor = slate,
+}
+
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+% Referencing                                                       %
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+
+\setcounter{secnumdepth}{0}
+
+\hyphenation{mon-oid-al}
+\hyphenation{Grun-dlehren}
+\hyphenation{Birkhäus-er} % Comment out when using PDFLaTeX
+
+%-------------------------------------------------------------------%
+%  Title data                                                       %
+%-------------------------------------------------------------------%
+
+\title{Miscellany}
+
+\author{Clark Barwick}
+
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+
+\begin{document}
+
+\maketitle
+
+\bookmark[page=1,level=1]{Contents}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\section{Balmer spectrum}
+
+Let $C$ be a symmetric monoidal stable presentable category.
+
+An \emph{idempotent algebra} in $C$ is an object $A$ along with a map $\eta \colon 1 \to A$ such that $\eta \otimes A \colon A \equivalence A \otimes A$.
+The category of idempotent algebras forms a poset, which is the poset of closeds in a locale $\Spec C$.
+So an idempotent algebra $A$ corresponds to a closed $Z_A \subseteq \Spec C$, which corresponds to an open complement $U_A \subseteq \Spec C$. 
+
+The category $C$ now localizes over $\Spec C$:
+for every open set $U_A \subseteq \Spec C$, let
+\[
+  O_{\Spec C}(U_A) = C/\Mod(A) \period
+\]
+Accordingly, $\Gamma(\Spec C, O) = C$.
+
+The pair $(\Spec C, O)$ is 
+
+\section{Geometric backgrounds}
+
+Let $\XX$ be a topos, and
+let $\XX_0 \subseteq \XX$ be a subcategory that is stable under pullback.
+Let $\CC$ be a symmetric monoidal stable presentable category.
+
+A \emph{six functor formalism} for $(\XX,\XX_0)$ valued in $\CC$-modules is a lax symmetric monoidal functor
+\[
+  \AA \colon \Span(\XX; \XX,\XX_0) \to \Mod(\CC)
+\]
+that restricts to a sheaf
+\[
+  \XX^{\op} = \Span(\XX; \XX,\XX^{\simeq}) \to \Mod(\CC)
+\]
+Such a triple $(\XX,\XX_0,\AA)$ is what we call a \emph{geometric background}.
+
+
+
+%-------------------------------------------------------------------%
+%--i-----------------------------------------------------------------%
+%-------------------------------------------------------------------%
+%  References                                                       %
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+%-------------------------------------------------------------------%
+
+\end{document}

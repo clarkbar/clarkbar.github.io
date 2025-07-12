@@ -1,0 +1,2 @@
+\contentsline {section}{Balmer spectrum}{1}{section*.2}%
+\contentsline {section}{Geometric backgrounds}{1}{section*.3}%
