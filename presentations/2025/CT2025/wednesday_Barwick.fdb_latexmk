@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1752351116 "wednesday_Barwick.tex" "wednesday_Barwick.pdf" "wednesday_Barwick" 1752351120 0
+["pdflatex"] 1752351257 "wednesday_Barwick.tex" "wednesday_Barwick.pdf" "wednesday_Barwick" 1752351262 0
   "/home/user/texmf/tex/latex/commonstuff/presentation.sty" 1751358545 6441 18539ddf7dc7a0b37ee79fcff7fd88bd ""
   "/usr/local/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc" 1177804218 3341 78e600b269762aa2a25a5293cc4535c0 ""
   "/usr/local/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc" 1177804218 3275 8d7166dfdbc31ffdc8aba0c31b3bd5c8 ""
@@ -335,10 +335,10 @@
   "/usr/local/share/texmf-dist/web2c/texmf.cnf" 1737489312 41792 3c38899774371d5a51960ff9faeffa3d ""
   "/usr/local/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1727982844 5467631 928a92e2df3363bc1957655c380c802f ""
   "/usr/local/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1727982845 8221565 066e6eef3c737f5c4b16afd89f704ea2 ""
-  "wednesday_Barwick.aux" 1752351119 3012 036faa90b20a45022c4224774976b10a "pdflatex"
-  "wednesday_Barwick.nav" 1752351119 2039 5a4196ea47006e239fc20568aaec1af6 "pdflatex"
-  "wednesday_Barwick.out" 1752351119 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "wednesday_Barwick.tex" 1752351115 14961 2dff4921fb5d5d89d2e89fafa5115ad5 ""
+  "wednesday_Barwick.aux" 1752351261 3012 036faa90b20a45022c4224774976b10a "pdflatex"
+  "wednesday_Barwick.nav" 1752351261 2039 5a4196ea47006e239fc20568aaec1af6 "pdflatex"
+  "wednesday_Barwick.out" 1752351261 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "wednesday_Barwick.tex" 1752351256 14979 75fa9f912cfd0a67d2b8be53d3b27dbb ""
   (generated)
   "wednesday_Barwick.aux"
   "wednesday_Barwick.log"
